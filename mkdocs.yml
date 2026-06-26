@@ -1,0 +1,171 @@
+# ============================================================
+# mkdocs.yml — BUAA Hangzhou INSA Institute Self-Help Guide
+# 北航中法未来科技学院（杭州）学习生活自助指南
+# ============================================================
+
+site_name: 北航中法未来科技学院自助指南
+site_description: >
+  北京航空航天大学中法未来科技学院（杭州）学习生活自助指南 —
+  汇集课程学习资料、重难点解析与校园生活实用信息
+site_author: Noct-BUAA
+site_url: https://noct-buaa.github.io/Self-Help-Guide-of-BIFAST-BUAA/
+
+repo_url: https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA
+repo_name: Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA
+edit_uri: edit/main/docs/
+
+copyright: >
+  Copyright &copy; 2026 Noct-BUAA
+
+# ============================================================
+# THEME
+# ============================================================
+theme:
+  name: material
+  language: zh
+
+  # --- Palette (Light / Dark) ---
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换至暗色模式
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至亮色模式
+
+  # --- Fonts ---
+  font:
+    text: Noto Sans SC
+    code: JetBrains Mono
+
+  # --- Features ---
+  features:
+    - navigation.tabs          # 顶部标签页导航
+    - navigation.tabs.sticky   # 标签页滚动时固定
+    - navigation.sections      # 侧边栏分组标题
+    - navigation.indexes       # 章节 index 页可直接点击
+    - navigation.top           # 返回顶部按钮
+    - navigation.tracking      # URL hash 跟踪滚动位置
+    - content.code.copy        # 代码块复制按钮
+    - content.code.annotate    # 代码注释
+    - search.suggest           # 搜索建议
+    - search.highlight         # 搜索结果高亮
+    - search.share             # 可分享的搜索结果链接
+
+  # --- Icons ---
+  icon:
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+
+# ============================================================
+# NAVIGATION
+# ============================================================
+nav:
+  - 首页: index.md
+
+  - 前言:
+    - preface/index.md
+
+  - 课程学习资料:
+    - 课程总览: courses/index.md
+    - 教学大纲: courses/syllabi.md
+    - 学习资源: courses/resources.md
+    - 重难点解析: courses/concepts.md
+
+  - 校园生活指南:
+    - 生活指南概览: campus-life/index.md
+    - 住宿: campus-life/housing.md
+    - 餐饮: campus-life/dining.md
+    - 交通出行: campus-life/transportation.md
+    - 文化与活动: campus-life/culture.md
+
+  - 后记:
+    - postscript/index.md
+
+not_in_nav: |
+  includes/*
+
+# ============================================================
+# MARKDOWN EXTENSIONS
+# ============================================================
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      title: 页面目录
+
+  # PyMdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# ============================================================
+# PLUGINS
+# ============================================================
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+        - fr
+
+# ============================================================
+# EXTRA
+# ============================================================
+extra:
+  generator: false
+
+extra_css:
+  - assets/stylesheets/extra.css

@@ -1,0 +1,516 @@
+/*
+ * extra.css — BUAA INSA Institute Self-Help Guide
+ * Modern, clean design with smooth animations
+ */
+
+/* ============================================================
+ * BASE & TYPOGRAPHY
+ * ============================================================ */
+
+:root {
+  --buaa-blue: #3f51b5;
+  --buaa-blue-light: rgba(63, 81, 181, 0.08);
+  --buaa-blue-glow: rgba(63, 81, 181, 0.15);
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.md-content {
+  font-size: 0.95rem;
+}
+
+.md-content p {
+  margin: 0.8em 0;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* ============================================================
+ * HEADINGS — Refined indigo accent style
+ * ============================================================ */
+
+.md-content h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--md-primary-fg-color);
+  color: var(--md-primary-fg-color);
+}
+
+.md-content h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+  padding-left: 0.8rem;
+  border-left: 4px solid var(--md-primary-fg-color);
+  transition: border-color var(--transition-smooth);
+}
+
+.md-content h2:hover {
+  border-left-color: var(--md-accent-fg-color);
+}
+
+.md-content h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+/* ============================================================
+ * NAVIGATION — Enhanced sidebar
+ * ============================================================ */
+
+.md-nav__item .md-nav__link--active {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+  background: linear-gradient(90deg, var(--buaa-blue-light) 0%, transparent 100%);
+  border-radius: 0 6px 6px 0;
+}
+
+.md-nav__link:hover {
+  color: var(--md-primary-fg-color);
+  transition: color var(--transition-fast);
+}
+
+/* ============================================================
+ * TABLES — Modern card-like style
+ * ============================================================ */
+
+.md-typeset table:not([class]) {
+  font-size: 0.875rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow var(--transition-smooth);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.md-typeset table:not([class]):hover {
+  box-shadow: var(--card-shadow-hover);
+}
+
+.md-typeset table:not([class]) th {
+  background: linear-gradient(135deg, var(--md-primary-fg-color), #5c6bc0);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.7rem 1rem;
+  white-space: nowrap;
+  border: none;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.md-typeset table:not([class]) tr:last-child td {
+  border-bottom: none;
+}
+
+.md-typeset table:not([class]) tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background-color: var(--buaa-blue-light) !important;
+}
+
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+/* ============================================================
+ * CODE BLOCKS
+ * ============================================================ */
+
+.md-typeset code {
+  font-size: 0.8em;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  background-color: rgba(63, 81, 181, 0.06);
+}
+
+.md-typeset pre > code {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  border-radius: 8px;
+}
+
+/* ============================================================
+ * ADMONITIONS — Smooth entrance + rounded style
+ * ============================================================ */
+
+.md-typeset .admonition {
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  border: none;
+  transition: box-shadow var(--transition-smooth), transform var(--transition-fast);
+  animation: admonitionIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.md-typeset .admonition:hover {
+  box-shadow: var(--card-shadow-hover);
+}
+
+@keyframes admonitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for multiple admonitions */
+.md-typeset .admonition:nth-child(2) { animation-delay: 0.05s; }
+.md-typeset .admonition:nth-child(3) { animation-delay: 0.1s; }
+.md-typeset .admonition:nth-child(4) { animation-delay: 0.15s; }
+
+/* ============================================================
+ * HERO SECTION — Homepage gradient banner with subtle animation
+ * ============================================================ */
+
+.hero-section {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  margin: -1.5rem -0.8rem 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(63, 81, 181, 0.03) 0%,
+    rgba(63, 81, 181, 0.1) 40%,
+    rgba(92, 107, 192, 0.06) 100%
+  );
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(63, 81, 181, 0.03) 0%,
+    transparent 70%
+  );
+  animation: heroGlow 8s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(2%, 1%); }
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--md-primary-fg-color);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  position: relative;
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-description {
+  font-size: 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+  opacity: 0.75;
+  line-height: 1.8;
+  position: relative;
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================
+ * CARD GRID — Enhanced hover effects
+ * ============================================================ */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--md-default-bg-color);
+  box-shadow: var(--card-shadow);
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(63, 81, 181, 0.03) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--md-primary-fg-color);
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: var(--md-primary-fg-color);
+  border: none;
+  padding: 0;
+  position: relative;
+}
+
+.card p {
+  margin: 0 0 1.2rem;
+  font-size: 0.88rem;
+  color: var(--md-typeset-color);
+  opacity: 0.75;
+  flex: 1;
+  line-height: 1.6;
+}
+
+.card-link {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--md-primary-fg-color);
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.card:hover .card-link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Card entrance animation */
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-grid .card:nth-child(1) { animation: cardIn 0.5s ease 0.1s both; }
+.card-grid .card:nth-child(2) { animation: cardIn 0.5s ease 0.2s both; }
+.card-grid .card:nth-child(3) { animation: cardIn 0.5s ease 0.3s both; }
+.card-grid .card:nth-child(4) { animation: cardIn 0.5s ease 0.4s both; }
+
+/* ============================================================
+ * TABS — Navigation tabs enhancement
+ * ============================================================ */
+
+.md-tabs__link {
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.md-tabs__link--active {
+  font-weight: 600;
+}
+
+.md-tabs__item {
+  transition: background-color var(--transition-fast);
+}
+
+/* ============================================================
+ * SEARCH — Enhanced search bar
+ * ============================================================ */
+
+.md-search__input {
+  transition: all var(--transition-smooth);
+  border-radius: 6px;
+}
+
+.md-search__input:focus {
+  box-shadow: 0 0 0 2px var(--buaa-blue-glow);
+}
+
+/* ============================================================
+ * SCROLL TO TOP — Smooth
+ * ============================================================ */
+
+.md-top {
+  transition: all var(--transition-smooth);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.md-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================
+ * CONTENT TRANSITIONS
+ * ============================================================ */
+
+.md-content__inner {
+  animation: contentFadeIn 0.4s ease;
+}
+
+@keyframes contentFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ============================================================
+ * Mermaid Diagram Styling
+ * ============================================================ */
+
+.mermaid {
+  text-align: center;
+}
+
+/* ============================================================
+ * FOOTER — Refined style
+ * ============================================================ */
+
+.md-footer-meta {
+  background: linear-gradient(
+    135deg,
+    var(--md-primary-fg-color) 0%,
+    #3949ab 100%
+  );
+}
+
+.md-footer {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* ============================================================
+ * RESPONSIVE — Mobile adaptations
+ * ============================================================ */
+
+@media screen and (max-width: 76.1875em) {
+  .hero-section {
+    padding: 2rem 1rem;
+    margin: -0.8rem -0.8rem 1.5rem;
+    border-radius: 8px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* ============================================================
+ * DARK MODE — Overrides for slate scheme
+ * ============================================================ */
+
+[data-md-color-scheme="slate"] .card {
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+[data-md-color-scheme="slate"] .card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-md-color-scheme="slate"] .hero-section {
+  background: linear-gradient(
+    135deg,
+    rgba(63, 81, 181, 0.05) 0%,
+    rgba(63, 81, 181, 0.12) 40%,
+    rgba(92, 107, 192, 0.07) 100%
+  );
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
+  border-bottom-color: rgba(255, 255, 255, 0.04);
+}
+
+/* ============================================================
+ * PRINT — Clean output
+ * ============================================================ */
+
+@media print {
+  .md-header,
+  .md-tabs,
+  .md-footer,
+  .md-sidebar,
+  .md-top {
+    display: none !important;
+  }
+
+  .md-content {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    break-inside: avoid;
+  }
+}
