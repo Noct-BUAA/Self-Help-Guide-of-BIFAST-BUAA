@@ -37,10 +37,10 @@ hide:
   <span class="card-arrow">了解更多 &rarr;</span>
 </a>
 
-<a class="card" href="courses/">
+<a class="card" href="courses/resources/">
   <span class="card-icon">&#127891;</span>
   <h3>课程学习资料</h3>
-  <p>专业介绍、学习资源链接、重难点解析，助力学业提升</p>
+  <p>在线学习平台、教材推荐、学习工具与实用技巧</p>
   <span class="card-arrow">了解更多 &rarr;</span>
 </a>
 

@@ -90,10 +90,7 @@ nav:
   - 前言:
     - preface/index.md
 
-  - 课程学习资料:
-    - 课程总览: courses/index.md
-    - 教学大纲: courses/syllabi.md
-    - 学习资源: courses/resources.md
+  - 课程学习资料: courses/resources.md
 
   - 校园生活指南:
     - 生活指南概览: campus-life/index.md
