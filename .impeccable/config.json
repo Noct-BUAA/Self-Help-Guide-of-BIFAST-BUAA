@@ -1,0 +1,11 @@
+{
+  "detector": {
+    "ignoreRules": [
+      "side-tab"
+    ],
+    "ignoreFiles": [
+      "Desktop/Self-Help-Guide-of-BIFAST-BUAA/docs/assets/stylesheets/extra.css"
+    ],
+    "ignoreValues": []
+  }
+}

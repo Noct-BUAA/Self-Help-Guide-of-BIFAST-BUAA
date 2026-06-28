@@ -177,3 +177,5 @@ extra_css:
 extra_javascript:
   - assets/javascripts/gsap.min.js
   - assets/javascripts/extra.js
+  - assets/javascripts/border-glow.js
+  - assets/javascripts/text-type.js
