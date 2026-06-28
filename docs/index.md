@@ -37,7 +37,7 @@ hide:
   <span class="card-arrow">了解更多 &rarr;</span>
 </a>
 
-<a class="card" href="courses/year1/">
+<a class="card" href="courses/overview/">
   <span class="card-icon">&#127891;</span>
   <h3>课程学习资料</h3>
   <p>大一 · 大二学年课程资料目录</p>
