@@ -90,7 +90,10 @@ nav:
   - 前言:
     - preface/index.md
 
-  - 课程学习资料: courses/resources.md
+  - 课程学习资料:
+    - 课程目录: courses/resources.md
+    - 大一学年: courses/year1/index.md
+    - 大二学年: courses/year2/index.md
 
   - 校园生活指南:
     - 生活指南概览: campus-life/index.md
