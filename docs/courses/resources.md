@@ -4,21 +4,19 @@
 
 ---
 
-## 内容速览
-
 <div class="card-grid">
 
 <a class="card" href="year1/">
   <span class="card-icon">&#127891;</span>
   <h3>大一学年</h3>
-  <p>大一上 6 门 + 大一下 8 门课程资料目录</p>
+  <p>大一上 6 门 · 大一下 8 门</p>
   <span class="card-arrow">浏览大一课程 &rarr;</span>
 </a>
 
 <a class="card" href="year2/">
   <span class="card-icon">&#128218;</span>
   <h3>大二学年</h3>
-  <p>大二下 2 门课程资料目录，持续更新中</p>
+  <p>大二上待补充 · 大二下 2 门</p>
   <span class="card-arrow">浏览大二课程 &rarr;</span>
 </a>
 

@@ -11,12 +11,14 @@
 ## 大二下学期
 
 ### 数学分析（3）
-:material-folder-outline: 课程讲义（6 章）
-:material-folder-outline: TD 习题课（7 次）
+
+- :material-folder: 课程讲义（6 章）
+- :material-folder: TD 习题课（8 份）
 
 ### 几何
-:material-folder-outline: 课程讲义（7 章）
-:material-folder-outline: TD 习题课（6 次）
+
+- :material-folder: 课程讲义（7 章）
+- :material-folder: TD 习题课（6 份）
 
 ---
 *最后更新：2026年6月*
