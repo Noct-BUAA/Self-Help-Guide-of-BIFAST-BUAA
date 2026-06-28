@@ -9,7 +9,7 @@
 <div class="card-grid">
 
 <a class="card" href="housing/">
-  <span class="card-icon">&#127719;</span>
+  <span class="card-icon">&#127968;</span>
   <h3>住宿</h3>
   <p>双人间宿舍设施、住宿管理、周边租房指南</p>
   <span class="card-arrow">了解住宿 &rarr;</span>
