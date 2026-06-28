@@ -13,6 +13,13 @@
   <span class="card-arrow">浏览大一课程 &rarr;</span>
 </a>
 
+<a class="card" href="year2/">
+  <span class="card-icon">&#128218;</span>
+  <h3>大二学年课程资料</h3>
+  <p>大二上待补充 · 大二下 2 门</p>
+  <span class="card-arrow">浏览大二课程 &rarr;</span>
+</a>
+
 </div>
 
 ---
