@@ -106,8 +106,8 @@ nav:
   - 后记:
     - postscript/index.md
 
-not_in_nav:
-  - includes/*
+not_in_nav: |
+  includes/*
 
 # ============================================================
 # MARKDOWN EXTENSIONS
