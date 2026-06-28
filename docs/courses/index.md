@@ -21,12 +21,6 @@
 <a href="resources/">浏览学习资源</a>
 </div>
 
-<div class="card" markdown>
-<h3>重难点解析</h3>
-<p>数学基础、编程思维、物理概念 — 核心课程深入解析与解题方法</p>
-<a href="concepts/">攻克重难点</a>
-</div>
-
 </div>
 
 ---
