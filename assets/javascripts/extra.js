@@ -93,21 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================================
-  // 5. CARD CLICK NAVIGATION
-  // ============================================================
-  document.querySelectorAll('.card').forEach((card) => {
-    const link = card.querySelector('a');
-    if (link) {
-      card.addEventListener('click', (e) => {
-        // Don't trigger if user clicked the link itself or selected text
-        if (e.target.closest('a') || window.getSelection().toString()) return;
-        link.click();
-      });
-    }
-  });
-
-  // ============================================================
-  // 6. MERMAID DIAGRAMS — Reveal on scroll
+  // 5. MERMAID DIAGRAMS — Reveal on scroll
   // ============================================================
   const mermaids = document.querySelectorAll('.mermaid');
   mermaids.forEach((m, i) => {

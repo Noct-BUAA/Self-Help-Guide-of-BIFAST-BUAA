@@ -29,7 +29,6 @@ body {
   margin: 0.8em 0;
   text-align: justify;
   line-height: 1.8;
-  max-width: 65ch;
 }
 
 /* ============================================================
@@ -67,6 +66,15 @@ body {
   font-size: 1.2rem;
   margin-top: 1.3em;
   margin-bottom: 0.5em;
+}
+
+/* ============================================================
+ * HEADER LOGO
+ * ============================================================ */
+
+.md-header__button.md-logo img {
+  height: 3rem;
+  width: auto;
 }
 
 /* ============================================================
@@ -182,18 +190,39 @@ body {
 .md-typeset .admonition:nth-child(4) { animation-delay: 0.15s; }
 
 /* ============================================================
+ * HERO TITLE — Prominent homepage heading
+ * ============================================================ */
+
+.hero-title {
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin: 1rem 0 1.5rem;
+  color: var(--md-primary-fg-color);
+  line-height: 1.3;
+  border: none;
+  padding: 0;
+}
+
+.hero-title .text-type-cursor {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 300;
+}
+
+/* ============================================================
  * HERO SECTION — Homepage gradient banner with subtle animation
  * ============================================================ */
 
 .hero-section {
   text-align: center;
-  padding: 4rem 2rem;
-  margin: -1.5rem -0.8rem 2.5rem;
+  padding: 3rem 2rem;
+  margin: 0 -0.8rem 2.5rem;
   background: linear-gradient(
     135deg,
-    rgba(63, 81, 181, 0.06) 0%,
-    rgba(63, 81, 181, 0.14) 40%,
-    rgba(92, 107, 192, 0.08) 100%
+    rgba(63, 81, 181, 0.04) 0%,
+    rgba(63, 81, 181, 0.1) 40%,
+    rgba(92, 107, 192, 0.05) 100%
   );
   border-radius: 12px;
   position: relative;
@@ -212,6 +241,21 @@ body {
   background: var(--md-primary-fg-color);
   border-radius: 0 0 3px 3px;
   opacity: 0.7;
+}
+
+/* Campus lineart background */
+.hero-lineart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  max-width: 500px;
+  opacity: 0.08;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  mask-image: linear-gradient(to left, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%);
 }
 
 .hero-section::before {
@@ -270,10 +314,10 @@ body {
  * ============================================================ */
 
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem -0.8rem;
 }
 
 .card {
@@ -288,9 +332,11 @@ body {
     transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .card::after {
@@ -310,12 +356,23 @@ body {
   transform: translateY(-6px);
   box-shadow: var(--card-shadow-hover);
   border-color: var(--md-primary-fg-color);
+  text-decoration: none;
+  color: inherit;
 }
 
 .card:hover::after {
   opacity: 1;
 }
 
+/* Card icon */
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+  display: block;
+}
+
+/* Card heading */
 .card h3 {
   margin: 0 0 0.5rem;
   font-size: 1.2rem;
@@ -325,6 +382,7 @@ body {
   position: relative;
 }
 
+/* Card body text */
 .card p {
   margin: 0 0 1.2rem;
   font-size: 0.88rem;
@@ -334,18 +392,18 @@ body {
   line-height: 1.6;
 }
 
-.card a {
+/* Card arrow link */
+.card-arrow {
   font-weight: 600;
   font-size: 0.85rem;
   color: var(--md-primary-fg-color);
-  text-decoration: none;
-  transition: color var(--transition-fast);
   position: relative;
+  transition: transform 0.2s ease;
+  display: inline-block;
 }
 
-.card a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.card:hover .card-arrow {
+  transform: translateX(4px);
 }
 
 /* Card entrance animation */
@@ -410,6 +468,15 @@ body {
 }
 
 /* ============================================================
+ * TEXT TYPE — Typing animation
+ * ============================================================ */
+
+.text-type-cursor {
+  color: var(--md-primary-fg-color);
+  font-weight: 400;
+}
+
+/* ============================================================
  * CONTENT TRANSITIONS
  * ============================================================ */
 
@@ -457,17 +524,29 @@ body {
     border-radius: 8px;
   }
 
+  .card-grid {
+    margin: 2rem -0.8rem;
+  }
+
+  .hero-lineart {
+    width: 40%;
+    opacity: 0.04;
+  }
+
+    max-width: 220px;
+    width: 70%;
+  }
+
+    width: 50vw;
+    opacity: 0.025;
+  }
+
   .hero-subtitle {
     font-size: 1rem;
   }
 
   .hero-description {
     font-size: 0.9rem;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
   }
 
   .card:hover {
@@ -490,11 +569,24 @@ body {
 [data-md-color-scheme="slate"] .card {
   border-color: rgba(255, 255, 255, 0.06);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: inherit;
 }
 
 [data-md-color-scheme="slate"] .card:hover {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   border-color: rgba(255, 255, 255, 0.12);
+  color: inherit;
+}
+
+[data-md-color-scheme="slate"] .hero-title {
+  color: #7986cb;
+}
+
+[data-md-color-scheme="slate"] .hero-lineart {
+  opacity: 0.10;
+}
+
+  filter: brightness(0.9);
 }
 
 [data-md-color-scheme="slate"] .hero-section {
@@ -504,6 +596,10 @@ body {
     rgba(63, 81, 181, 0.12) 40%,
     rgba(92, 107, 192, 0.07) 100%
   );
+}
+
+[data-md-color-scheme="slate"] .hero-lineart {
+  opacity: 0.08;
 }
 
 [data-md-color-scheme="slate"] .md-typeset table:not([class]) {
@@ -562,5 +658,9 @@ body {
 
   .card {
     break-inside: avoid;
+  }
+
+  .hero-lineart,
+    display: none !important;
   }
 }
