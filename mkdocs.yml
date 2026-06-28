@@ -80,6 +80,7 @@ theme:
       quote: fontawesome/solid/quote-left
 
   favicon: assets/images/favicon.svg
+  logo: assets/images/buaa-emblem.png
 
 # ============================================================
 # NAVIGATION
@@ -91,11 +92,36 @@ nav:
     - preface/index.md
 
   - 课程学习资料:
-    - 内容速览: courses/overview.md
     - 大一学年:
-      - 大一上学期: courses/year1/semester1/index.md
-      - 大一下学期: courses/year1/semester2/index.md
-    - 大二学年: courses/year2/index.md
+      - 学年概览: courses/year1/index.md
+      - 大一上学期:
+        - 学期概览: courses/year1/semester1/index.md
+        - 基础数学: courses/year1/semester1/基础数学/index.md
+        - 基础英语: courses/year1/semester1/基础英语/index.md
+        - 大学计算机基础: courses/year1/semester1/大学计算机基础/index.md
+        - 数理基础法语（1）: courses/year1/semester1/数理基础法语（1）/index.md
+        - 综合法语（1）: courses/year1/semester1/综合法语（1）/index.md
+        - 航空航天概论: courses/year1/semester1/航空航天概论/index.md
+      - 大一下学期:
+        - 学期概览: courses/year1/semester2/index.md
+        - 中国近现代史纲要: courses/year1/semester2/中国近现代史纲要/index.md
+        - 人工智能导论: courses/year1/semester2/人工智能导论/index.md
+        - 力学: courses/year1/semester2/力学/index.md
+        - 基础英语（2）: courses/year1/semester2/基础英语（2）/index.md
+        - 大学化学:
+          - 课程总览: courses/year1/semester2/大学化学/index.md
+          - 课程讲义: courses/year1/semester2/大学化学/课程讲义/index.md
+        - 数学分析（1）: courses/year1/semester2/数学分析（1）/index.md
+        - 数理基础法语（2）: courses/year1/semester2/数理基础法语（2）/index.md
+        - 综合法语（2）: courses/year1/semester2/综合法语（2）/index.md
+    - 大二学年:
+      - 学年概览: courses/year2/index.md
+      - 大二上学期:
+        - 学期概览: courses/year2/semester1/index.md
+      - 大二下学期:
+        - 学期概览: courses/year2/semester2/index.md
+        - 数学分析（3）: courses/year2/semester2/数学分析（3）/index.md
+        - 几何: courses/year2/semester2/几何/index.md
 
   - 校园生活指南:
     - 生活指南概览: campus-life/index.md

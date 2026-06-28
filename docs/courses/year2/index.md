@@ -1,19 +1,19 @@
-# 大二学年课程资料
+# 大二学年
 
----
+## 学期
 
-## 大二上学期
+<div class="card-grid">
 
-待补充
+<a class="card" href="semester1/">
+  <h3>大二上学期</h3>
+  <p>待补充</p>
+  <span class="card-arrow">浏览课程 &rarr;</span>
+</a>
 
-## 大二下学期
+<a class="card" href="semester2/">
+  <h3>大二下学期</h3>
+  <p>数学分析（3）、几何等 2 门课程</p>
+  <span class="card-arrow">浏览课程 &rarr;</span>
+</a>
 
-- 数学分析（3）
-    - 课程讲义
-    - TD 习题课
-- 几何
-    - 课程讲义
-    - TD 习题课
-
----
-*最后更新：2026年6月*
+</div>

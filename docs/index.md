@@ -20,6 +20,7 @@ hide:
 </h1>
 
 <div class="hero-section">
+<img class="hero-lineart" src="assets/images/campus-lineart.png" alt="北航杭州校区建筑线稿">
 <p class="hero-subtitle">
 北京航空航天大学 &middot; 中法未来科技学院 &middot; 杭州国际校园
 </p>
@@ -31,28 +32,24 @@ hide:
 <div class="card-grid">
 
 <a class="card" href="preface/">
-  <span class="card-icon">&#128218;</span>
   <h3>前言</h3>
   <p>项目背景、编写目的与使用说明，了解本指南的来龙去脉</p>
   <span class="card-arrow">了解更多 &rarr;</span>
 </a>
 
-<a class="card" href="courses/overview/">
-  <span class="card-icon">&#127891;</span>
+<a class="card" href="courses/year1/">
   <h3>课程学习资料</h3>
   <p>大一 · 大二学年课程资料目录</p>
   <span class="card-arrow">了解更多 &rarr;</span>
 </a>
 
 <a class="card" href="campus-life/">
-  <span class="card-icon">&#127968;</span>
   <h3>校园生活指南</h3>
   <p>住宿、餐饮、交通、文化活动，全方位杭州校园实用信息</p>
   <span class="card-arrow">了解更多 &rarr;</span>
 </a>
 
 <a class="card" href="postscript/">
-  <span class="card-icon">&#128172;</span>
   <h3>后记</h3>
   <p>项目总结、致谢与未来展望，了解项目的后续发展计划</p>
   <span class="card-arrow">了解更多 &rarr;</span>
