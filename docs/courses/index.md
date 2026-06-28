@@ -12,19 +12,19 @@
 <div class="card" markdown>
 <h3>专业与课程体系</h3>
 <p>五大专业方向概览、培养方案解读、INSA 课程对接</p>
-<span class="card-link">查看课程体系</span>
+<a href="syllabi.md">查看课程体系</a>
 </div>
 
 <div class="card" markdown>
 <h3>学习资源</h3>
 <p>在线学习平台推荐、教材与参考书指南、学习工具与技巧</p>
-<span class="card-link">浏览学习资源</span>
+<a href="resources.md">浏览学习资源</a>
 </div>
 
 <div class="card" markdown>
 <h3>重难点解析</h3>
 <p>数学基础、编程思维、物理概念 — 核心课程深入解析与解题方法</p>
-<span class="card-link">攻克重难点</span>
+<a href="concepts.md">攻克重难点</a>
 </div>
 
 </div>

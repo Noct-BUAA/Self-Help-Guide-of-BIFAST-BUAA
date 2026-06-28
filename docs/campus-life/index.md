@@ -11,25 +11,25 @@
 <div class="card" markdown>
 <h3>住宿</h3>
 <p>双人间宿舍设施、住宿管理、周边租房指南</p>
-<span class="card-link">了解住宿</span>
+<a href="housing.md">了解住宿</a>
 </div>
 
 <div class="card" markdown>
 <h3>餐饮</h3>
 <p>校内食堂、校园周边美食、杭州特色饮食</p>
-<span class="card-link">探索美食</span>
+<a href="dining.md">探索美食</a>
 </div>
 
 <div class="card" markdown>
 <h3>交通出行</h3>
 <p>地铁与公交线路、杭州西站、市区出行攻略</p>
-<span class="card-link">出行攻略</span>
+<a href="transportation.md">出行攻略</a>
 </div>
 
 <div class="card" markdown>
 <h3>文化与活动</h3>
 <p>社团活动、法语角、杭州特色文化体验</p>
-<span class="card-link">参与活动</span>
+<a href="culture.md">参与活动</a>
 </div>
 
 </div>

@@ -63,6 +63,8 @@ theme:
 
   # --- Icons ---
   icon:
+    logo: material/book-open-page-variant
+    repo: fontawesome/brands/github
     admonition:
       note: fontawesome/solid/note-sticky
       abstract: fontawesome/solid/book
@@ -76,6 +78,8 @@ theme:
       bug: fontawesome/solid/robot
       example: fontawesome/solid/flask
       quote: fontawesome/solid/quote-left
+
+  favicon: assets/images/favicon.svg
 
 # ============================================================
 # NAVIGATION
@@ -102,8 +106,8 @@ nav:
   - 后记:
     - postscript/index.md
 
-not_in_nav: |
-  includes/*
+not_in_nav:
+  - includes/*
 
 # ============================================================
 # MARKDOWN EXTENSIONS
@@ -169,3 +173,7 @@ extra:
 
 extra_css:
   - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/gsap.min.js
+  - assets/javascripts/extra.js

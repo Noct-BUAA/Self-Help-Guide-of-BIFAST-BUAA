@@ -22,13 +22,14 @@ body {
 }
 
 .md-content {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .md-content p {
   margin: 0.8em 0;
   text-align: justify;
   line-height: 1.8;
+  max-width: 65ch;
 }
 
 /* ============================================================
@@ -38,6 +39,7 @@ body {
 .md-content h1 {
   font-weight: 700;
   font-size: 2rem;
+  letter-spacing: 0.02em;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   padding-bottom: 0.3em;
@@ -48,6 +50,7 @@ body {
 .md-content h2 {
   font-weight: 600;
   font-size: 1.5rem;
+  letter-spacing: 0.01em;
   margin-top: 1.6em;
   margin-bottom: 0.5em;
   padding-left: 0.8rem;
@@ -184,17 +187,31 @@ body {
 
 .hero-section {
   text-align: center;
-  padding: 3rem 1.5rem;
-  margin: -1.5rem -0.8rem 2rem;
+  padding: 4rem 2rem;
+  margin: -1.5rem -0.8rem 2.5rem;
   background: linear-gradient(
     135deg,
-    rgba(63, 81, 181, 0.03) 0%,
-    rgba(63, 81, 181, 0.1) 40%,
-    rgba(92, 107, 192, 0.06) 100%
+    rgba(63, 81, 181, 0.06) 0%,
+    rgba(63, 81, 181, 0.14) 40%,
+    rgba(92, 107, 192, 0.08) 100%
   );
   border-radius: 12px;
   position: relative;
   overflow: hidden;
+}
+
+/* Decorative accent bar at top of hero */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--md-primary-fg-color);
+  border-radius: 0 0 3px 3px;
+  opacity: 0.7;
 }
 
 .hero-section::before {
@@ -317,15 +334,16 @@ body {
   line-height: 1.6;
 }
 
-.card-link {
+.card a {
   font-weight: 600;
   font-size: 0.85rem;
   color: var(--md-primary-fg-color);
+  text-decoration: none;
   transition: color var(--transition-fast);
   position: relative;
 }
 
-.card:hover .card-link {
+.card a:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -455,6 +473,14 @@ body {
   .card:hover {
     transform: translateY(-3px);
   }
+
+  /* Scrollable tables on mobile */
+  .md-typeset table:not([class]) {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
 }
 
 /* ============================================================
@@ -490,6 +516,30 @@ body {
 
 [data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
   border-bottom-color: rgba(255, 255, 255, 0.04);
+}
+
+/* ============================================================
+ * REDUCED MOTION — Accessibility
+ * ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hero-section::before,
+  .hero-section::after,
+  .card,
+  .card-grid .card,
+  .md-content__inner,
+  .md-typeset .admonition {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 /* ============================================================

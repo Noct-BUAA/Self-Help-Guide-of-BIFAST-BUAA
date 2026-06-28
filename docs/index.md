@@ -23,25 +23,25 @@ hide:
 <div class="card" markdown>
 <h3>前言</h3>
 <p>项目背景、编写目的与使用说明，了解本指南的来龙去脉</p>
-<span class="card-link">了解更多</span>
+<a href="preface/index.md">了解更多</a>
 </div>
 
 <div class="card" markdown>
 <h3>课程学习资料</h3>
 <p>专业介绍、学习资源链接、重难点解析，助力学业提升</p>
-<span class="card-link">了解更多</span>
+<a href="courses/index.md">了解更多</a>
 </div>
 
 <div class="card" markdown>
 <h3>校园生活指南</h3>
 <p>住宿、餐饮、交通、文化活动，全方位杭州校园实用信息</p>
-<span class="card-link">了解更多</span>
+<a href="campus-life/index.md">了解更多</a>
 </div>
 
 <div class="card" markdown>
 <h3>后记</h3>
 <p>项目总结、致谢与未来展望，了解项目的后续发展计划</p>
-<span class="card-link">了解更多</span>
+<a href="postscript/index.md">了解更多</a>
 </div>
 
 </div>
