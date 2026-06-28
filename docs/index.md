@@ -37,10 +37,10 @@ hide:
   <span class="card-arrow">了解更多 &rarr;</span>
 </a>
 
-<a class="card" href="courses/resources/">
+<a class="card" href="courses/year1/">
   <span class="card-icon">&#127891;</span>
   <h3>课程学习资料</h3>
-  <p>在线学习平台、教材推荐、学习工具与实用技巧</p>
+  <p>大一 · 大二学年课程资料目录</p>
   <span class="card-arrow">了解更多 &rarr;</span>
 </a>
 
