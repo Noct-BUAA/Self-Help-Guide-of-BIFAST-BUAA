@@ -6,26 +6,34 @@
 
 ## 内容速览
 
-<div class="submenu-grid">
+<div class="card-grid">
 
-<a class="submenu-item" href="housing/">
-  <span class="submenu-icon">&#127968;</span>
-  <span class="submenu-label">住宿</span>
+<a class="card" href="housing/">
+  <span class="card-icon">&#127968;</span>
+  <h3>住宿</h3>
+  <p>双人间宿舍设施、住宿管理、周边租房指南</p>
+  <span class="card-arrow">了解住宿 &rarr;</span>
 </a>
 
-<a class="submenu-item" href="dining/">
-  <span class="submenu-icon">&#127860;</span>
-  <span class="submenu-label">餐饮</span>
+<a class="card" href="dining/">
+  <span class="card-icon">&#127860;</span>
+  <h3>餐饮</h3>
+  <p>校内食堂、校园周边美食、杭州特色饮食</p>
+  <span class="card-arrow">探索美食 &rarr;</span>
 </a>
 
-<a class="submenu-item" href="transportation/">
-  <span class="submenu-icon">&#128652;</span>
-  <span class="submenu-label">交通出行</span>
+<a class="card" href="transportation/">
+  <span class="card-icon">&#128652;</span>
+  <h3>交通出行</h3>
+  <p>地铁与公交线路、杭州西站、市区出行攻略</p>
+  <span class="card-arrow">出行攻略 &rarr;</span>
 </a>
 
-<a class="submenu-item" href="culture/">
-  <span class="submenu-icon">&#127917;</span>
-  <span class="submenu-label">文化与活动</span>
+<a class="card" href="culture/">
+  <span class="card-icon">&#127917;</span>
+  <h3>文化与活动</h3>
+  <p>社团活动、法语角、杭州特色文化体验</p>
+  <span class="card-arrow">参与活动 &rarr;</span>
 </a>
 
 </div>
