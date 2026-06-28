@@ -6,56 +6,61 @@ hide:
   - toc
 ---
 
-# 北航中法未来科技学院自助指南
+<h1 class="hero-title">
+  <span class="text-type"
+    data-texts='["北航中法未来科技学院自助指南","你的学习生活实用手册","中法融合 · 卓越工程师之路"]'
+    data-typing-speed="50"
+    data-deleting-speed="30"
+    data-pause-duration="2500"
+    data-show-cursor="true"
+    data-cursor-char="|"
+    data-cursor-blink="0.5">
+  北航中法未来科技学院自助指南
+  </span>
+</h1>
 
-<div class="hero-section" markdown>
+<div class="hero-section">
 <p class="hero-subtitle">
-<span class="text-type"
-  data-texts='["北京航空航天大学 · 中法未来科技学院 · 杭州国际校园","BIFAST — 你的学习生活自助指南","中法融合 · 卓越工程师之路"]'
-  data-typing-speed="60"
-  data-deleting-speed="35"
-  data-pause-duration="2000"
-  data-show-cursor="true"
-  data-cursor-char="|"
-  data-cursor-blink="0.6">
-北京航空航天大学 · 中法未来科技学院 · 杭州国际校园
-</span>
+北京航空航天大学 &middot; 中法未来科技学院 &middot; 杭州国际校园
 </p>
 <p class="hero-description">
-本指南汇集了中法未来科技学院各门课程的学习资料、重难点解析以及杭州校园生活实用信息，<br>
-旨在帮助同学们更快适应中法教学体系，提高学习效率，享受校园生活。
+汇集课程学习资料、重难点解析与杭州校园生活实用信息，帮助同学们更快适应中法教学体系。
 </p>
 </div>
 
-<div class="card-grid" markdown>
+<div class="card-grid">
 
-<div class="card" markdown>
-<h3>前言</h3>
-<p>项目背景、编写目的与使用说明，了解本指南的来龙去脉</p>
-<a href="preface/">了解更多</a>
+<a class="card" href="preface/">
+  <span class="card-icon">&#128218;</span>
+  <h3>前言</h3>
+  <p>项目背景、编写目的与使用说明，了解本指南的来龙去脉</p>
+  <span class="card-arrow">了解更多 &rarr;</span>
+</a>
+
+<a class="card" href="courses/">
+  <span class="card-icon">&#127891;</span>
+  <h3>课程学习资料</h3>
+  <p>专业介绍、学习资源链接、重难点解析，助力学业提升</p>
+  <span class="card-arrow">了解更多 &rarr;</span>
+</a>
+
+<a class="card" href="campus-life/">
+  <span class="card-icon">&#127968;</span>
+  <h3>校园生活指南</h3>
+  <p>住宿、餐饮、交通、文化活动，全方位杭州校园实用信息</p>
+  <span class="card-arrow">了解更多 &rarr;</span>
+</a>
+
+<a class="card" href="postscript/">
+  <span class="card-icon">&#128172;</span>
+  <h3>后记</h3>
+  <p>项目总结、致谢与未来展望，了解项目的后续发展计划</p>
+  <span class="card-arrow">了解更多 &rarr;</span>
+</a>
+
 </div>
 
-<div class="card" markdown>
-<h3>课程学习资料</h3>
-<p>专业介绍、学习资源链接、重难点解析，助力学业提升</p>
-<a href="courses/">了解更多</a>
-</div>
-
-<div class="card" markdown>
-<h3>校园生活指南</h3>
-<p>住宿、餐饮、交通、文化活动，全方位杭州校园实用信息</p>
-<a href="campus-life/">了解更多</a>
-</div>
-
-<div class="card" markdown>
-<h3>后记</h3>
-<p>项目总结、致谢与未来展望，了解项目的后续发展计划</p>
-<a href="postscript/">了解更多</a>
-</div>
-
-</div>
-
-<div class="border-glow" style="--glow-color: 63 81 181; --glow-bg: transparent; --glow-radius: 16px; --glow-size: 80px; --glow-intensity: 0.8; --glow-spread: 30; padding: 1.5rem; margin: 1.5rem 0;" markdown>
+---
 
 ## 快速开始
 
@@ -64,8 +69,6 @@ hide:
     如果你是**新生**，建议从 [前言](preface/) 开始阅读，
     了解本项目的背景和使用方法。然后根据你的需求，选择
     [课程学习资料](courses/) 或 [校园生活指南](campus-life/)。
-
-</div>
 
 ---
 
