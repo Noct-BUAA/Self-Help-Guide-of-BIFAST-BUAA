@@ -1,27 +1,22 @@
-# 大一学年课程资料
+# 大一学年
 
----
+<div class="card-grid">
 
-## 大一上学期
+<a class="card" href="semester1/">
+  <span class="card-icon">&#127889;</span>
+  <h3>大一上学期</h3>
+  <p>基础数学、法语（1）、综合法语（1）、计算机基础等 6 门课程</p>
+  <span class="card-arrow">浏览课程 &rarr;</span>
+</a>
 
-- 基础数学
-- 数理基础法语（1）
-- 综合法语（1）
-- 大学计算机基础
-- 基础英语
-- 航空航天概论
+<a class="card" href="semester2/">
+  <span class="card-icon">&#127891;</span>
+  <h3>大一下学期</h3>
+  <p>数学分析（1）、大学化学、AI导论等 8 门课程</p>
+  <span class="card-arrow">浏览课程 &rarr;</span>
+</a>
 
-## 大一下学期
-
-- 数学分析（1）
-- 大学化学
-    - 课程讲义
-- 力学
-- 人工智能导论
-- 中国近现代史纲要
-- 数理基础法语（2）
-- 综合法语（2）
-- 基础英语（2）
+</div>
 
 ---
 *最后更新：2026年6月*
