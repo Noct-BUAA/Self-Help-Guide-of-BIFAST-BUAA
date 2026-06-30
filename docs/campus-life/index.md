@@ -6,7 +6,7 @@
 
 ## 内容速览
 
-<div class="card-grid">
+<div class="card-grid card-grid--four">
 
 <a class="card" href="housing/">
   <span class="card-icon">&#127968;</span>

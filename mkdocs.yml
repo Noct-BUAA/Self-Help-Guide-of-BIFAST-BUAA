@@ -49,11 +49,12 @@ theme:
 
   # --- Features ---
   features:
+    - header.autohide          # 向下滚动时隐藏页眉
     - navigation.tabs          # 顶部标签页导航
     - navigation.tabs.sticky   # 标签页滚动时固定
     - navigation.sections      # 侧边栏分组标题
     - navigation.indexes       # 章节 index 页可直接点击
-    - navigation.top           # 返回顶部按钮
+
     - navigation.tracking      # URL hash 跟踪滚动位置
     - content.code.copy        # 代码块复制按钮
     - content.code.annotate    # 代码注释
@@ -80,16 +81,15 @@ theme:
       quote: fontawesome/solid/quote-left
 
   favicon: assets/images/favicon.svg
-  logo: assets/images/buaa-emblem.png
+  logo: assets/images/buaa-emblem-blue.png
+
+  custom_dir: overrides
 
 # ============================================================
 # NAVIGATION
 # ============================================================
 nav:
   - 首页: index.md
-
-  - 前言:
-    - preface/index.md
 
   - 课程学习资料:
     - 大一学年:
@@ -135,6 +135,7 @@ nav:
 
 not_in_nav: |
   includes/*
+  preface/*
 
 # ============================================================
 # MARKDOWN EXTENSIONS
@@ -202,6 +203,7 @@ extra_css:
   - assets/stylesheets/extra.css
 
 extra_javascript:
+  - assets/javascripts/hero-scroll.js
   - assets/javascripts/gsap.min.js
   - assets/javascripts/extra.js
   - assets/javascripts/text-type.js

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    /* 供 MkDocs Material document$ 生命周期钩子使用 */
+    window.__mkdocs_site = "{{ config.site_url }}";
+  </script>
+{% endblock %}
