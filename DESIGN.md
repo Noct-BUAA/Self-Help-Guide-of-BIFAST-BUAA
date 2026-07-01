@@ -95,7 +95,7 @@ ad-hoc 系统（待建立 scale）:
 - CSS: `@media (prefers-reduced-motion: reduce)` 关闭所有动画
 
 ## 已知改进项
-- [ ] Accent 色与 Primary 相同——应选用互补色
-- [ ] 间距系统未标准化（ad-hoc 值）
-- [ ] 子页面主要为纯文本+表格，缺少视觉变化
-- [ ] 无图片/图标素材（有意识地保持轻量）
+- [x] Accent 色与 Primary 相同——应选用互补色 → 已改用 Amber/Gold (#FFB300 / #FFD54F)
+- [x] 间距系统未标准化（ad-hoc 值）→ 已引入 9 级 `--space-*` + 4 级 `--radius-*` CSS 变量
+- [x] 子页面主要为纯文本+表格，缺少视觉变化 → 已添加 emoji 图标、info-card 组件、课程 placeholder、Mermaid 图表
+- [x] 无图片/图标素材（有意识地保持轻量）→ 已通过 emoji + Material 内置 icon + CSS 装饰线实现零图片增强
