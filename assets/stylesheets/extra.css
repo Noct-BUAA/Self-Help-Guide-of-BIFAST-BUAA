@@ -6,6 +6,23 @@
 /* ─── Google Fonts ─────────────────────────────────────── */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap');
 
+/* ─── Design Tokens: Spacing & Radius ────────────────── */
+:root {
+  --space-3xs: 0.125rem;   /*  2px */
+  --space-2xs: 0.25rem;    /*  4px */
+  --space-xs:  0.5rem;     /*  8px */
+  --space-sm:  0.75rem;    /* 12px */
+  --space-md:  1rem;       /* 16px */
+  --space-lg:  1.5rem;     /* 24px */
+  --space-xl:  2rem;       /* 32px */
+  --space-2xl: 3rem;       /* 48px */
+  --space-3xl: 4rem;       /* 64px */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 24px;
+}
+
 /* ═══════════════════════════════════════════════════════════
    DESIGN-FINAL: Dual-mode homepage
    Night = indigo/dark | Day = Navy editorial
@@ -150,7 +167,7 @@
 .df-linner {
   flex: 1 1 0%;
   min-width: 0;
-  padding: 2rem 1.5rem 3rem;
+  padding: var(--space-xl) var(--space-lg) var(--space-2xl);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -162,7 +179,7 @@
   letter-spacing: .16em;
   text-transform: uppercase;
   color: #1a48a8;
-  margin-bottom: 1.4rem;
+  margin-bottom: var(--space-lg);
   font-family: "Inter","Noto Sans SC",sans-serif;
 }
 .df-lhl {
@@ -171,7 +188,7 @@
   letter-spacing: -.04em !important;
   line-height: 1.0 !important;
   color: #0D1B3E !important;
-  margin: 0 0 1.5rem !important;
+  margin: 0 0 var(--space-lg) !important;
   border: none !important; padding: 0 !important;
   font-family: "Noto Sans SC",sans-serif !important;
 }
@@ -245,7 +262,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 2rem 1.2rem 2rem 0;
+  padding: var(--space-xl) var(--space-md) var(--space-xl) 0;
   gap: 0;
   background: transparent;
   border-left: 1px solid rgba(26,72,168,.08);
@@ -256,7 +273,7 @@
 }
 .df-lnc {
   display: block;
-  padding: 1rem 1.1rem 1.05rem;
+  padding: var(--space-md);
   border: none;
   border-bottom: 1px solid rgba(26,72,168,.10);
   text-decoration: none !important;
@@ -272,7 +289,7 @@
   letter-spacing: .10em;
   color: rgba(26,72,168,.42) !important;
   font-family: "Inter","Noto Sans SC",sans-serif;
-  margin-bottom: .28rem;
+  margin-bottom: var(--space-2xs);
 }
 .df-lnc-t {
   display: block;
@@ -331,29 +348,29 @@
 .df-below .md-typeset p {
   text-indent: 2em;
   line-height: 1.9;
-  margin: .6em 0;
+  margin: var(--space-xs) 0;
 }
 
 .df-below .md-typeset li p {
   text-indent: 0;
-  margin: .3em 0;
+  margin: var(--space-3xs) 0;
 }
 
 .df-below .md-typeset ul {
-  padding-left: 1.5em;
+  padding-left: var(--space-lg);
   line-height: 1.8;
 }
 
 .df-below .md-typeset ul li {
-  margin: .35em 0;
+  margin: var(--space-2xs) 0;
 }
 
 .df-below .md-typeset h2 {
-  margin-top: 2em;
+  margin-top: var(--space-xl);
 }
 
 .df-below .md-typeset h3 {
-  margin-top: 1.5em;
+  margin-top: var(--space-lg);
 }
 
 @media (max-width: 767px) {
@@ -365,8 +382,8 @@
   border: none !important;
   border-left: 2px solid rgba(26,72,168,.2) !important;
   border-radius: 0 !important;
-  padding: 0 0 0 1.25rem !important;
-  margin: 1.8rem 0 !important;
+  padding: 0 0 0 var(--space-md) !important;
+  margin: var(--space-xl) 0 !important;
   background: transparent !important;
   box-shadow: none !important;
   color: inherit !important;
@@ -386,14 +403,14 @@
   background: transparent !important;
   border: none !important;
   border-radius: 0 !important;
-  padding: .2rem 0 !important;
+  padding: var(--space-3xs) 0 !important;
   color: rgba(26,72,168,.5) !important;
   font-size: .88rem !important;
   font-style: italic !important;
   cursor: pointer !important;
   display: flex !important;
   align-items: center !important;
-  gap: .4rem !important;
+  gap: var(--space-2xs) !important;
   margin: 0 !important;
   -webkit-user-select: none !important;
   user-select: none !important;
@@ -431,8 +448,8 @@
   --md-primary-fg-color:       #0D1B3E;
   --md-primary-fg-color--light:#1a48a8;
   --md-primary-fg-color--dark: #080D1A;
-  --md-accent-fg-color:        #1a48a8;
-  --md-accent-fg-color--transparent: rgba(26,72,168,.12);
+  --md-accent-fg-color:        #FFB300;
+  --md-accent-fg-color--transparent: rgba(255,179,0,.12);
   --md-default-bg-color:       #ffffff;
 }
 [data-md-color-scheme="default"] .md-header {
@@ -461,8 +478,8 @@
    ════════════════════════════════════════════════════════ */
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color:       #0B0B0E;
-  --md-accent-fg-color:        #5C6BC0;
-  --md-accent-fg-color--transparent: rgba(92,107,192,.12);
+  --md-accent-fg-color:        #FFD54F;
+  --md-accent-fg-color--transparent: rgba(255,213,79,.15);
 }
 [data-md-color-scheme="slate"] .md-tabs__link--active { color: #9FA8DA !important; }
 [data-md-color-scheme="slate"] .md-tabs__link:hover {
@@ -496,7 +513,7 @@
   font-size: .95rem;
   letter-spacing: .03em;
   height: auto !important;
-  padding: .1rem 2rem .35rem !important;
+  padding: var(--space-3xs) var(--space-xl) var(--space-2xs) !important;
   display: flex !important;
   align-items: center !important;
   border-radius: 6px 6px 0 0;
@@ -555,11 +572,11 @@ body .md-typeset,
 
 /* ─── 标题左侧色条 ──────────────────────────────────── */
 .md-typeset h2 {
-  padding-left: .7em;
+  padding-left: var(--space-sm);
   border-left: 4px solid #1a48a8;
 }
 .md-typeset h3 {
-  padding-left: .55em;
+  padding-left: var(--space-xs);
   border-left: 3px solid #1a48a8;
 }
 
@@ -596,7 +613,7 @@ body .md-typeset,
   display: table;
   width: 100%;
   font-size: .8rem;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--md-default-fg-color--lightest);
   box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
@@ -863,14 +880,14 @@ html { scroll-behavior: smooth; }
 .df-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: .9rem;
-  margin: 2.5rem 0 4rem;
+  gap: var(--space-sm);
+  margin: var(--space-2xl) 0 var(--space-3xl);
 }
 .df-card {
-  border-radius: 12px;
-  padding: 1.4rem 1.3rem;
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-md);
   text-decoration: none !important;
-  display: flex; flex-direction: column; gap: .35rem;
+  display: flex; flex-direction: column; gap: var(--space-2xs);
   transition: background .2s, border-color .2s, transform .2s;
   position: relative;
 }
@@ -970,8 +987,8 @@ html { scroll-behavior: smooth; }
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0 2rem;
+  gap: var(--space-md);
+  margin: var(--space-lg) 0 var(--space-xl);
 }
 
 .card-grid--four {
@@ -993,8 +1010,8 @@ html { scroll-behavior: smooth; }
 .card {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 1.4rem;
-  border-radius: 8px;
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
   border: 1px solid rgba(0, 0, 0, .08);
   background: var(--md-default-bg-color);
   box-shadow: 0 1px 3px rgba(0, 0, 0, .04);
@@ -1012,7 +1029,7 @@ html { scroll-behavior: smooth; }
 .card-icon {
   font-size: 1.5rem;
   line-height: 1;
-  margin-bottom: .5rem;
+  margin-bottom: var(--space-xs);
   opacity: .85;
 }
 
@@ -1020,7 +1037,7 @@ html { scroll-behavior: smooth; }
   font-size: 1rem !important;
   font-weight: 600 !important;
   color: #0D1B3E !important;
-  margin: 0 0 .35rem !important;
+  margin: 0 0 var(--space-2xs) !important;
   padding: 0 !important;
   border: none !important;
   letter-spacing: .01em;
@@ -1029,7 +1046,7 @@ html { scroll-behavior: smooth; }
 .card p {
   font-size: .85rem !important;
   color: rgba(13, 27, 62, .6) !important;
-  margin: 0 0 .8rem !important;
+  margin: 0 0 var(--space-xs) !important;
   line-height: 1.65 !important;
   flex: 1;
   text-indent: 0;
@@ -1067,4 +1084,119 @@ html { scroll-behavior: smooth; }
 
 [data-md-color-scheme="slate"] .card-arrow {
   color: #9FA8DA;
+}
+
+/* ════════════════════════════════════════════════════════
+   COURSE PLACEHOLDER — 空课程页面状态指示器
+   ════════════════════════════════════════════════════════ */
+.course-placeholder {
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+  margin: var(--space-lg) 0;
+  border: 2px dashed var(--md-default-fg-color--lightest);
+  border-radius: var(--radius-md);
+  background: var(--md-default-bg-color);
+  transition: border-color .2s ease;
+}
+.course-placeholder:hover {
+  border-color: var(--md-accent-fg-color);
+}
+.course-placeholder-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+  opacity: .55;
+}
+.course-placeholder p {
+  text-indent: 0 !important;
+  margin: var(--space-2xs) 0 !important;
+  color: var(--md-default-fg-color--light);
+  font-size: .88rem;
+}
+.course-placeholder-action {
+  font-size: .80rem !important;
+  opacity: .65;
+}
+
+/* ════════════════════════════════════════════════════════
+   INFO CARDS — 紧凑数据展示
+   ════════════════════════════════════════════════════════ */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-sm);
+  margin: var(--space-lg) 0;
+}
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-bg-color);
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.info-card-icon {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+.info-card-icon:empty {
+  display: none;
+}
+.info-card h4 {
+  font-size: .82rem !important;
+  font-weight: 600 !important;
+  margin: 0 0 .15rem !important;
+  padding: 0 !important;
+  border: none !important;
+}
+.info-card-value {
+  display: block;
+  font-size: .95rem;
+  font-weight: 500;
+  color: var(--md-default-fg-color);
+}
+.info-card-label {
+  display: block;
+  font-size: .72rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: .1rem;
+}
+[data-md-color-scheme="slate"] .info-card {
+  background: rgba(255,255,255,.03);
+  border-color: rgba(255,255,255,.08);
+}
+
+/* ════════════════════════════════════════════════════════
+   SECTION DIVIDER — 渐变分隔线
+   ════════════════════════════════════════════════════════ */
+.md-typeset hr {
+  height: 2px;
+  border: none;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--md-default-fg-color--lightest) 20%,
+    var(--md-default-fg-color--lightest) 80%,
+    transparent 100%
+  );
+  margin: var(--space-2xl) 0;
+}
+
+/* ─── Content area subtle top accent line ──────────── */
+.md-content {
+  position: relative;
+}
+.md-content::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--md-accent-fg-color--transparent) 50%,
+    transparent 100%
+  );
+  opacity: 0.3;
 }
