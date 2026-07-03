@@ -1,0 +1,3253 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="北京航空航天大学中法未来科技学院（杭州）学习生活自助指南 — 汇集课程学习资料、重难点解析与校园生活实用信息
+">
+      
+      
+        <meta name="author" content="Noct-BUAA">
+      
+      
+        <link rel="canonical" href="https://noct-buaa.github.io/Self-Help-Guide-of-BIFAST-BUAA/courses/year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/03-trig-complex/">
+      
+      
+        <link rel="prev" href="../02-maps-relations/">
+      
+      
+        <link rel="next" href="../04-induction-sequences/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>第三章 三角函数与复数 - 北航中法未来科技学院自助指南</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%20480c-35.3%200-64-28.7-64-64V96c0-35.3%2028.7-64%2064-64h320c35.3%200%2064%2028.7%2064%2064v213.5c0%2017-6.7%2033.3-18.7%2045.3L322.7%20461.3c-12%2012-28.3%2018.7-45.3%2018.7zm325.5-176H296c-13.3%200-24%2010.7-24%2024v93.5z%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M384%20512H96c-53%200-96-43-96-96V96C0%2043%2043%200%2096%200h304c26.5%200%2048%2021.5%2048%2048v288c0%2020.9-13.4%2038.7-32%2045.3V448c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032zM96%20384c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032h256v-64zm32-232c0%2013.3%2010.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24H152c-13.3%200-24%2010.7-24%2024m24%2072c-13.3%200-24%2010.7-24%2024s10.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24z%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-32-352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200m-8%2064h48c13.3%200%2024%2010.7%2024%2024v88h8c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-80c-13.3%200-24-10.7-24-24s10.7-24%2024-24h24v-64h-24c-13.3%200-24-10.7-24-24s10.7-24%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M461.2%2018.9C472.7%2024%20480%2035.4%20480%2048v416c0%2012.6-7.3%2024-18.8%2029.1s-24.8%203.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63V480c0%2017.7-14.3%2032-32%2032h-32c-17.7%200-32-14.3-32-32v-96C57.3%20384%200%20326.7%200%20256s57.3-128%20128-128h84.5c61.8-.2%20121.4-22.7%20167.9-63.3L427%2024c9.4-8.3%2022.9-10.2%2034.3-5.1zM224%20320v.2c70.3%202.7%20137.8%2028.5%20192%2073.4V118.3c-54.2%2044.9-121.7%2070.7-192%2073.4z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M434.8%2070.1c14.3%2010.4%2017.5%2030.4%207.1%2044.7l-256%20352c-5.5%207.6-14%2012.3-23.4%2013.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200l101.5%20101.5%20234-321.7c10.4-14.3%2030.4-17.5%2044.7-7.1z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m0-336c-17.7%200-32%2014.3-32%2032%200%2013.3-10.7%2024-24%2024s-24-10.7-24-24c0-44.2%2035.8-80%2080-80s80%2035.8%2080%2080c0%2047.2-36%2067.2-56%2074.5v3.8c0%2013.3-10.7%2024-24%2024s-24-10.7-24-24v-8.1c0-20.5%2014.8-35.2%2030.1-40.2%206.4-2.1%2013.2-5.5%2018.2-10.3%204.3-4.2%207.7-10%207.7-19.6%200-17.7-14.3-32-32-32zm-32%20192a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%200c14.7%200%2028.2%208.1%2035.2%2021l216%20400c6.7%2012.4%206.4%2027.4-.8%2039.5S486.1%20480%20472%20480H40c-14.1%200-27.2-7.4-34.4-19.5s-7.5-27.1-.8-39.5l216-400c7-12.9%2020.5-21%2035.2-21m0%20352a32%2032%200%201%200%200%2064%2032%2032%200%201%200%200-64m0-192c-18.2%200-32.7%2015.5-31.4%2033.7l7.4%20104c.9%2012.5%2011.4%2022.3%2023.9%2022.3%2012.6%200%2023-9.7%2023.9-22.3l7.4-104c1.3-18.2-13.1-33.7-31.4-33.7z%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M480-16c6.9%200%2013%204.4%2015.2%2010.9l13.5%2040.4%2040.4%2013.5C555.6%2051%20560%2057.1%20560%2064s-4.4%2013-10.9%2015.2l-40.4%2013.5-13.5%2040.4c-2.2%206.5-8.3%2010.9-15.2%2010.9s-13-4.4-15.2-10.9l-13.5-40.4-40.4-13.5C404.4%2077%20400%2070.9%20400%2064s4.4-13%2010.9-15.2l40.4-13.5%2013.5-40.4C467-11.6%20473.1-16%20480-16M321.4%2097.4c12.5-12.5%2032.8-12.5%2045.3%200l80%2080c12.5%2012.5%2012.5%2032.8%200%2045.3l-10.9%2010.9c7.9%2022%2012.2%2045.7%2012.2%2070.5%200%20114.9-93.1%20208-208%20208S32%20418.9%2032%20304%20125.1%2096%20240%2096c24.7%200%2048.5%204.3%2070.5%2012.3zM144%20304c0-53%2043-96%2096-96%2013.3%200%2024-10.7%2024-24s-10.7-24-24-24c-79.5%200-144%2064.5-144%20144%200%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M416%20427.4c58.5-44%2096-111.6%2096-187.4C512%20107.5%20397.4%200%20256%200S0%20107.5%200%20240c0%2075.8%2037.5%20143.4%2096%20187.4V464c0%2026.5%2021.5%2048%2048%2048h32v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h64v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h32c26.5%200%2048-21.5%2048-48zM96%20256a64%2064%200%201%201%20128%200%2064%2064%200%201%201-128%200m256-64a64%2064%200%201%201%200%20128%2064%2064%200%201%201%200-128%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M352%200c0-17.7-14.3-32-32-32s-32%2014.3-32%2032v64h-96c-53%200-96%2043-96%2096v224c0%2053%2043%2096%2096%2096h256c53%200%2096-43%2096-96V160c0-53-43-96-96-96h-96zM160%20368c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24M224%20176a48%2048%200%201%201%200%2096%2048%2048%200%201%201%200-96m144%2048a48%2048%200%201%201%2096%200%2048%2048%200%201%201-96%200m-304%200c0-17.7-14.3-32-32-32S0%20206.3%200%20224v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32zm544-32c-17.7%200-32%2014.3-32%2032v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32v-96c0-17.7-14.3-32-32-32%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M288%200H128c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032v151.5L7.5%20426.3C2.6%20435%200%20444.7%200%20454.7%200%20486.4%2025.6%20512%2057.3%20512h333.4c31.6%200%2057.3-25.6%2057.3-57.3%200-10-2.6-19.8-7.5-28.4L320%20215.5V64c17.7%200%2032-14.3%2032-32S337.7%200%20320%200zm-96%20215.5V64h64v151.5c0%2011.1%202.9%2022.1%208.4%2031.8L306%20320H142l41.6-72.7c5.5-9.7%208.4-20.6%208.4-31.8%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%20216C0%20149.7%2053.7%2096%20120%2096h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064H64c-35.3%200-64-28.7-64-64zm256%200c0-66.3%2053.7-120%20120-120h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064h-64c-35.3%200-64-28.7-64-64z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans SC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../../.." title="北航中法未来科技学院自助指南" class="md-header__button md-logo" aria-label="北航中法未来科技学院自助指南" data-md-component="logo">
+      
+  <img src="../../../../../../assets/images/buaa-emblem-blue.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            北航中法未来科技学院自助指南
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第三章 三角函数与复数
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程学习资料
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../campus-life/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  校园生活指南
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../postscript/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  后记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="北航中法未来科技学院自助指南" class="md-nav__button md-logo" aria-label="北航中法未来科技学院自助指南" data-md-component="logo">
+      
+  <img src="../../../../../../assets/images/buaa-emblem-blue.png" alt="logo">
+
+    </a>
+    北航中法未来科技学院自助指南
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程学习资料
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程学习资料
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一学年
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一学年
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一上学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一上学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础数学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2_2" id="__nav_2_1_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    基础数学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2_2_2" id="__nav_2_1_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_2_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-logic-sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逻辑与集合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-maps-relations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    映射与等价关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    三角函数与复数
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    三角函数与复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="页面目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      页面目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 三角函数与反三角函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 三角函数与反三角函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 三角函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 三角函数的基本恒等式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 反三角函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 复数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 复数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 复数的定义与表示
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 欧拉公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 复数的表示方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 复数的应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心公式速查表
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-induction-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学归纳法与数列
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-sums-products-counting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    求和求积与计数原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-divisibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整除关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9F%BA%E7%A1%80%E8%8B%B1%E8%AF%AD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础英语
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学计算机基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理基础法语（1）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    综合法语（1）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9%E6%A6%82%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    航空航天概论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../semester2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一下学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一下学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E4%B8%AD%E5%9B%BD%E8%BF%91%E7%8E%B0%E4%BB%A3%E5%8F%B2%E7%BA%B2%E8%A6%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国近现代史纲要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人工智能导论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E5%8A%9B%E5%AD%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    力学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E5%9F%BA%E7%A1%80%E8%8B%B1%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础英语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学化学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_3_6" id="__nav_2_1_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大学化学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%EF%BC%881%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学分析（1）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80%E6%B3%95%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理基础法语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    综合法语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二学年
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二学年
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year2/semester1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二上学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二上学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year2/semester2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二下学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二下学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year2/semester2/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%EF%BC%883%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学分析（3）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year2/semester2/%E5%87%A0%E4%BD%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    几何
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../campus-life/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    校园生活指南
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    校园生活指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/housing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    住宿
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/dining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    餐饮
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/transportation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    交通出行
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/culture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文化与活动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../postscript/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    后记
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    后记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="页面目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      页面目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 三角函数与反三角函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 三角函数与反三角函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 三角函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 三角函数的基本恒等式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 反三角函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 复数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 复数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 复数的定义与表示
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 欧拉公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 复数的表示方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 复数的应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心公式速查表
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">第三章 三角函数与复数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">学习目标</p>
+<p><strong>三角函数与反三角函数部分：</strong></p>
+<ul>
+<li>三角函数的定义、图像以及基本性质</li>
+<li>回忆毕达哥拉斯恒等式</li>
+<li>回忆和差角公式、和差化积公式、积化和差公式、万能变换</li>
+<li>反三角函数的定义</li>
+</ul>
+<p><strong>复数部分：</strong></p>
+<ul>
+<li>复数的定义以及表示方式（相互转化）</li>
+<li>复数运算的基本性质</li>
+<li>欧拉公式及其应用（三角函数和解方程）</li>
+</ul>
+</div>
+<hr />
+<h2 id="1">1 三角函数与反三角函数<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 三角函数<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Mathshell 1.1</p>
+<p>我们描述角度，一般分为下列的角度制和弧度制。</p>
+<ul>
+<li><strong>（角度制）</strong> 将圆周定为 <span class="arithmatex">\(360^\circ\)</span>，则 <span class="arithmatex">\(1^\circ = \frac{1}{360}\)</span> 周角。起源于古巴比伦的 60 进制系统，符合人类对周天的直观认知（如一年约 360 天）。适合直观描述与日常应用，例如，工程测量、导航。</li>
+<li><strong>（弧度制）</strong> 设圆半径为 <span class="arithmatex">\(r\)</span>，对圆心角 <span class="arithmatex">\(\theta\)</span> 所对弧长为 <span class="arithmatex">\(s\)</span>，则 <span class="arithmatex">\(\theta (\text{rad}) = \frac{s}{r}\)</span>。（rad 表示弧度）当 <span class="arithmatex">\(r = 1\)</span> 时，<span class="arithmatex">\(\theta = s\)</span>。弧度制反映几何本质（弧长/半径），揭示三角函数的本质规律。在弧度制下，三角函数的自变量为"纯数"（无量纲），直接适用微积分公式。</li>
+<li><strong>（转换关系）</strong> <span class="arithmatex">\(180^\circ = \pi \text{ rad}\)</span>.</li>
+</ul>
+<p>数学上，我们一般使用弧度表示角度。</p>
+</div>
+<hr />
+<p><strong>Définition 1.2 — 锐角三角函数</strong></p>
+<p>在直角三角形 <span class="arithmatex">\(ABC\)</span> 中（<span class="arithmatex">\(C = \frac{\pi}{2}\)</span>），对于锐角 <span class="arithmatex">\(A\)</span>，定义：</p>
+<div class="arithmatex">\[\sin A = \frac{\text{对边}}{\text{斜边}} = \frac{a}{c}, \quad \cos A = \frac{\text{邻边}}{\text{斜边}} = \frac{b}{c}, \quad \tan A = \frac{\text{对边}}{\text{邻边}} = \frac{a}{b},\]</div>
+<div class="arithmatex">\[\cot A = \frac{\text{邻边}}{\text{对边}} = \frac{b}{a}, \quad \sec A = \frac{\text{斜边}}{\text{邻边}} = \frac{c}{b}, \quad \csc A = \frac{\text{斜边}}{\text{对边}} = \frac{c}{a}.\]</div>
+<ul>
+<li>正角：逆时针旋转形成的角</li>
+<li>负角：顺时针旋转形成的角</li>
+</ul>
+<p>若 <span class="arithmatex">\(\theta\)</span> 是钝角，甚至大于 <span class="arithmatex">\(\pi\)</span>，三角函数应如何定义？</p>
+<hr />
+<p><strong>Définition 1.3 — 单位圆定义</strong></p>
+<p>在直角坐标系中，设角 <span class="arithmatex">\(\alpha\)</span> 的终边与单位圆交于点 <span class="arithmatex">\(P(x, y)\)</span>，则定义：</p>
+<div class="arithmatex">\[\sin \alpha = y, \quad \cos \alpha = x, \quad \tan \alpha = \frac{y}{x} \; (x \neq 0), \quad \cot \alpha = \frac{x}{y} \; (y \neq 0),\]</div>
+<div class="arithmatex">\[\sec \alpha = \frac{1}{x} \; (x \neq 0), \quad \csc \alpha = \frac{1}{y} \; (y \neq 0).\]</div>
+<p>（注：PDF 原文 sec/csc 定义互换，此处已修正——<span class="arithmatex">\(\sec = 1/\cos = 1/x\)</span>，<span class="arithmatex">\(\csc = 1/\sin = 1/y\)</span>）</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>定义域</th>
+<th>值域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\sin x\)</span></td>
+<td><span class="arithmatex">\(\mathbb{R}\)</span></td>
+<td><span class="arithmatex">\([-1, 1]\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\cos x\)</span></td>
+<td><span class="arithmatex">\(\mathbb{R}\)</span></td>
+<td><span class="arithmatex">\([-1, 1]\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\tan x\)</span></td>
+<td><span class="arithmatex">\(\{x \mid x \neq \frac{\pi}{2} + k\pi, k \in \mathbb{Z}\}\)</span></td>
+<td><span class="arithmatex">\(\mathbb{R}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\cot x\)</span></td>
+<td><span class="arithmatex">\(\{x \mid x \neq k\pi, k \in \mathbb{Z}\}\)</span></td>
+<td><span class="arithmatex">\(\mathbb{R}\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Proposition 1.4 — 三角函数的性质</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>有界性</th>
+<th>单调性（一个周期内）</th>
+<th>奇偶性</th>
+<th>最小正周期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\sin x\)</span></td>
+<td><span class="arithmatex">\(-1 \leq \sin x \leq 1\)</span></td>
+<td>在 <span class="arithmatex">\(\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]\)</span> 上严格增</td>
+<td>奇</td>
+<td><span class="arithmatex">\(2\pi\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\cos x\)</span></td>
+<td><span class="arithmatex">\(-1 \leq \cos x \leq 1\)</span></td>
+<td>在 <span class="arithmatex">\([0, \pi]\)</span> 上严格减</td>
+<td>偶</td>
+<td><span class="arithmatex">\(2\pi\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\tan x\)</span></td>
+<td>无界：<span class="arithmatex">\((-\infty, +\infty)\)</span></td>
+<td>在 <span class="arithmatex">\(\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)\)</span> 上严格增</td>
+<td>奇</td>
+<td><span class="arithmatex">\(\pi\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\cot x\)</span></td>
+<td>无界：<span class="arithmatex">\((-\infty, +\infty)\)</span></td>
+<td>在 <span class="arithmatex">\((0, \pi)\)</span> 上严格减</td>
+<td>奇</td>
+<td><span class="arithmatex">\(\pi\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sec x\)</span></td>
+<td><span class="arithmatex">\(\lvert\sec x\rvert \geq 1\)</span></td>
+<td>在 <span class="arithmatex">\([0, \pi] \setminus \{\frac{\pi}{2}\}\)</span> 上严格增</td>
+<td>偶</td>
+<td><span class="arithmatex">\(2\pi\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\csc x\)</span></td>
+<td><span class="arithmatex">\(\lvert\csc x\rvert \geq 1\)</span></td>
+<td>在 <span class="arithmatex">\(\left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \setminus \{0\}\)</span> 上严格减</td>
+<td>奇</td>
+<td><span class="arithmatex">\(2\pi\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Remarque 1.5</p>
+<ul>
+<li><strong>正弦函数 <span class="arithmatex">\(y = \sin x\)</span>：</strong> 定义域 <span class="arithmatex">\(\mathbb{R}\)</span>，值域 <span class="arithmatex">\([-1, 1]\)</span>，周期 <span class="arithmatex">\(2\pi\)</span>，奇函数。零点 <span class="arithmatex">\(x = k\pi, k \in \mathbb{Z}\)</span>。最大值点 <span class="arithmatex">\(x = \frac{\pi}{2} + 2k\pi\)</span>，最小值点 <span class="arithmatex">\(x = \frac{3\pi}{2} + 2k\pi\)</span>。</li>
+<li><strong>余弦函数 <span class="arithmatex">\(y = \cos x\)</span>：</strong> 定义域 <span class="arithmatex">\(\mathbb{R}\)</span>，值域 <span class="arithmatex">\([-1, 1]\)</span>，周期 <span class="arithmatex">\(2\pi\)</span>，偶函数。零点 <span class="arithmatex">\(x = \frac{\pi}{2} + k\pi\)</span>。最大值点 <span class="arithmatex">\(x = 2k\pi\)</span>，最小值点 <span class="arithmatex">\(x = \pi + 2k\pi\)</span>。</li>
+<li><strong>正切函数 <span class="arithmatex">\(y = \tan x\)</span>：</strong> 定义域 <span class="arithmatex">\(\{x \mid x \neq \frac{\pi}{2} + k\pi\}\)</span>，值域 <span class="arithmatex">\(\mathbb{R}\)</span>，周期 <span class="arithmatex">\(\pi\)</span>，奇函数。零点 <span class="arithmatex">\(x = k\pi\)</span>。渐近线 <span class="arithmatex">\(x = \frac{\pi}{2} + k\pi\)</span>。</li>
+</ul>
+</div>
+<hr />
+<h3 id="12">1.2 三角函数的基本恒等式<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Théorème 1.6 — 毕达哥拉斯恒等式</p>
+<div class="arithmatex">\[\sin^2 \theta + \cos^2 \theta = 1, \quad 1 + \tan^2 \theta = \sec^2 \theta, \quad 1 + \cot^2 \theta = \csc^2 \theta.\]</div>
+<p>（相似三角形证明）</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">诱导公式</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th style="text-align: center;"><span class="arithmatex">\(\frac{\pi}{2} \pm \alpha\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\pi \pm \alpha\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\frac{3\pi}{2} \pm \alpha\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(2\pi \pm \alpha\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\sin\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cos \alpha\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mp \sin \alpha\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\cos \alpha\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\pm \sin \alpha\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\cos\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mp \sin \alpha\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\cos \alpha\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\pm \sin \alpha\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cos \alpha\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\tan\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mp \cot \alpha\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\pm \tan \alpha\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mp \cot \alpha\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\pm \tan \alpha\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>口诀："奇变偶不变，符号看象限"</p>
+<p>下面我们回忆高中的公式（都不用记忆）。</p>
+</div>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Théorème 1.7 — 和差角公式</p>
+<div class="arithmatex">\[\begin{aligned}
+\sin(\alpha + \beta) &amp;= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+\sin(\alpha - \beta) &amp;= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
+\cos(\alpha + \beta) &amp;= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
+\cos(\alpha - \beta) &amp;= \cos \alpha \cos \beta + \sin \alpha \sin \beta \\
+\tan(\alpha + \beta) &amp;= \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \\
+\tan(\alpha - \beta) &amp;= \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}
+\end{aligned}\]</div>
+</div>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Théorème 1.8 — 和差化积公式</p>
+<div class="arithmatex">\[\begin{aligned}
+\sin \alpha + \sin \beta &amp;= 2 \sin\left(\frac{\alpha + \beta}{2}\right) \cos\left(\frac{\alpha - \beta}{2}\right) \\
+\sin \alpha - \sin \beta &amp;= 2 \cos\left(\frac{\alpha + \beta}{2}\right) \sin\left(\frac{\alpha - \beta}{2}\right) \\
+\cos \alpha + \cos \beta &amp;= 2 \cos\left(\frac{\alpha + \beta}{2}\right) \cos\left(\frac{\alpha - \beta}{2}\right) \\
+\cos \alpha - \cos \beta &amp;= -2 \sin\left(\frac{\alpha + \beta}{2}\right) \sin\left(\frac{\alpha - \beta}{2}\right)
+\end{aligned}\]</div>
+</div>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Théorème 1.9 — 积化和差公式</p>
+<div class="arithmatex">\[\begin{aligned}
+\sin \alpha \cos \beta &amp;= \tfrac{1}{2}[\sin(\alpha + \beta) + \sin(\alpha - \beta)] \\
+\cos \alpha \sin \beta &amp;= \tfrac{1}{2}[\sin(\alpha + \beta) - \sin(\alpha - \beta)] \\
+\cos \alpha \cos \beta &amp;= \tfrac{1}{2}[\cos(\alpha + \beta) + \cos(\alpha - \beta)] \\
+\sin \alpha \sin \beta &amp;= -\tfrac{1}{2}[\cos(\alpha + \beta) - \cos(\alpha - \beta)]
+\end{aligned}\]</div>
+</div>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Théorème 1.10 — 万能变换</p>
+<p>令 <span class="arithmatex">\(t = \tan \frac{\alpha}{2}\)</span>（<span class="arithmatex">\(-\pi &lt; \alpha &lt; \pi\)</span> 或取主值），则</p>
+<div class="arithmatex">\[\begin{aligned}
+\sin \alpha &amp;= \frac{2t}{1 + t^2}, &amp; \cos \alpha &amp;= \frac{1 - t^2}{1 + t^2}, &amp; \tan \alpha &amp;= \frac{2t}{1 - t^2} \; (t^2 \neq 1), \\
+\cot \alpha &amp;= \frac{1 - t^2}{2t} \; (t \neq 0), &amp; \sec \alpha &amp;= \frac{1 + t^2}{1 - t^2} \; (t^2 \neq 1), &amp; \csc \alpha &amp;= \frac{1 + t^2}{2t} \; (t \neq 0).
+\end{aligned}\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Remarque 1.11</p>
+<p>毕达哥拉斯恒等式以及万能变换，经常在计算积分中出现。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Remarque 1.12 — 辅助角公式</p>
+<p>对任意正实数 <span class="arithmatex">\(a, b\)</span> 及任意角 <span class="arithmatex">\(\theta\)</span>，有</p>
+<div class="arithmatex">\[a \sin \theta + b \cos \theta = \sqrt{a^2 + b^2} \sin(\theta + \alpha), \quad \text{其中 } \alpha = \arctan \frac{b}{a}.\]</div>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p>令 <span class="arithmatex">\(R = \sqrt{a^2 + b^2}\)</span>，则 <span class="arithmatex">\(a \sin \theta + b \cos \theta = R\left(\frac{a}{R} \sin \theta + \frac{b}{R} \cos \theta\right)\)</span>. 取 <span class="arithmatex">\(\alpha = \arctan \frac{b}{a}\)</span>，则 <span class="arithmatex">\(\cos \alpha = \frac{a}{R}, \sin \alpha = \frac{b}{R}\)</span>. 于是 <span class="arithmatex">\(a \sin \theta + b \cos \theta = R(\cos \alpha \sin \theta + \sin \alpha \cos \theta) = R \sin(\theta + \alpha)\)</span>.</p>
+</details>
+<hr />
+<h3 id="13">1.3 反三角函数<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p><strong>Définition 1.13 — 反三角函数</strong></p>
+<ul>
+<li>函数 <span class="arithmatex">\(y = \sin x\)</span> 在 <span class="arithmatex">\(\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]\)</span> 上的反函数称为**反正弦函数**，记作 <span class="arithmatex">\(y = \arcsin x\)</span>, <span class="arithmatex">\(x \in [-1, 1]\)</span>, <span class="arithmatex">\(y \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]\)</span>.</li>
+<li>函数 <span class="arithmatex">\(y = \cos x\)</span> 在 <span class="arithmatex">\([0, \pi]\)</span> 上的反函数称为**反余弦函数**，记作 <span class="arithmatex">\(y = \arccos x\)</span>, <span class="arithmatex">\(x \in [-1, 1]\)</span>, <span class="arithmatex">\(y \in [0, \pi]\)</span>.</li>
+<li>函数 <span class="arithmatex">\(y = \tan x\)</span> 在 <span class="arithmatex">\(\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)\)</span> 上的反函数称为**反正切函数**，记作 <span class="arithmatex">\(y = \arctan x\)</span>, <span class="arithmatex">\(x \in \mathbb{R}\)</span>, <span class="arithmatex">\(y \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right)\)</span>.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Remarque 1.14</p>
+<p>注意反三角函数的值域。例如 <span class="arithmatex">\(\arctan\left(\tan\frac{7\pi}{3}\right) = \frac{\pi}{3} \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right)\)</span>.</p>
+</div>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">Exemple 1.15</p>
+<p>计算 <span class="arithmatex">\(\cos(\arctan x), \cos(\arcsin x), \tan(\arcsin x)\)</span>（用 <span class="arithmatex">\(x\)</span> 的代数运算表示）。</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<ul>
+<li><strong>计算 <span class="arithmatex">\(\cos(\arctan x)\)</span>：</strong> 设 <span class="arithmatex">\(\theta = \arctan x\)</span>，则 <span class="arithmatex">\(\tan \theta = x\)</span> 且 <span class="arithmatex">\(\theta \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right)\)</span>。注意到 <span class="arithmatex">\(\cos \theta = \frac{1}{\sqrt{1 + \tan^2 \theta}}\)</span>，则 <span class="arithmatex">\(\cos(\arctan x) = \frac{1}{\sqrt{1 + (\tan(\arctan x))^2}} = \frac{1}{\sqrt{1 + x^2}}\)</span>.</li>
+<li><strong>计算 <span class="arithmatex">\(\cos(\arcsin x)\)</span>：</strong> 设 <span class="arithmatex">\(\phi = \arcsin x\)</span>，则 <span class="arithmatex">\(\sin \phi = x\)</span> 且 <span class="arithmatex">\(\phi \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]\)</span>。注意到 <span class="arithmatex">\(\cos \phi = \sqrt{1 - \sin^2 \phi}\)</span>，则 <span class="arithmatex">\(\cos(\arcsin x) = \sqrt{1 - (\sin(\arcsin x))^2} = \sqrt{1 - x^2}\)</span>.</li>
+<li><strong>计算 <span class="arithmatex">\(\tan(\arcsin x)\)</span>：</strong> 设 <span class="arithmatex">\(\phi = \arcsin x\)</span>，则 <span class="arithmatex">\(\sin \phi = x\)</span> 且 <span class="arithmatex">\(\phi \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right)\)</span>。由上述结果，<span class="arithmatex">\(\tan \phi = \frac{\sin \phi}{\cos \phi} = \frac{x}{\sqrt{1 - x^2}}\)</span>，即 <span class="arithmatex">\(\tan(\arcsin x) = \frac{x}{\sqrt{1 - x^2}}\)</span>.</li>
+</ul>
+</details>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">Exemple 1.16</p>
+<p>证明：对任意 <span class="arithmatex">\(x \in [-1, 1]\)</span>，我们有 <span class="arithmatex">\(\arccos x + \arcsin x = \frac{\pi}{2}\)</span>.</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p>令 <span class="arithmatex">\(x \in [-1, 1]\)</span>，设 <span class="arithmatex">\(\theta = \arcsin x\)</span>，则 <span class="arithmatex">\(\sin \theta = x, \theta \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]\)</span>. 由于 <span class="arithmatex">\(\cos \theta \geq 0\)</span> 在此区间，有 <span class="arithmatex">\(\cos \theta = \sqrt{1 - \sin^2 \theta} = \sqrt{1 - x^2}\)</span>.</p>
+<p>考虑 <span class="arithmatex">\(\arccos x\)</span> 的定义：<span class="arithmatex">\(\arccos x\)</span> 是 <span class="arithmatex">\([0, \pi]\)</span> 内唯一满足 <span class="arithmatex">\(\cos \varphi = x\)</span> 的角。由 <span class="arithmatex">\(\cos\left(\frac{\pi}{2} - \theta\right) = \sin \theta = x\)</span>，且 <span class="arithmatex">\(\frac{\pi}{2} - \theta \in [0, \pi]\)</span>（因为 <span class="arithmatex">\(\theta \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]\)</span>），故 <span class="arithmatex">\(\arccos x = \frac{\pi}{2} - \theta\)</span>. 因此 <span class="arithmatex">\(\arccos x + \arcsin x = \left(\frac{\pi}{2} - \theta\right) + \theta = \frac{\pi}{2}\)</span>.</p>
+</details>
+<hr />
+<h2 id="2">2 复数<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 复数的定义与表示<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>实数集 <span class="arithmatex">\(\mathbb{R}\)</span> 足以处理许多问题，但它有一个根本的局限性：不存在实数 <span class="arithmatex">\(x\)</span> 使得 <span class="arithmatex">\(x^2 = -1\)</span>。为了克服这一局限性，我们通过引入一个名为虚数单位的新数来扩展实数系。</p>
+<p><strong>Définition 2.1 — 虚数单位</strong></p>
+<p>虚数单位，记作 <span class="arithmatex">\(i\)</span>，定义为：<span class="arithmatex">\(i^2 = -1\)</span>。相应地，<span class="arithmatex">\(i = \sqrt{-1}\)</span>.</p>
+<hr />
+<p><strong>Définition 2.2 — 复数</strong></p>
+<p>一个复数 <span class="arithmatex">\(z\)</span> 是一个可以写成以下形式的数：<span class="arithmatex">\(z = a + bi\)</span>，其中 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 是实数。</p>
+<ul>
+<li><span class="arithmatex">\(a\)</span> 称为 <span class="arithmatex">\(z\)</span> 的**实部**，记作 <span class="arithmatex">\(\RE(z)\)</span>。</li>
+<li><span class="arithmatex">\(b\)</span> 称为 <span class="arithmatex">\(z\)</span> 的**虚部**，记作 <span class="arithmatex">\(\IM(z)\)</span>。</li>
+</ul>
+<p>注意到 <span class="arithmatex">\(b = \IM(z) = 0\)</span> 时，<span class="arithmatex">\(z\)</span> 是实数，即 <span class="arithmatex">\(z \in \mathbb{R}\)</span>。当 <span class="arithmatex">\(b \neq 0\)</span> 时，我们称 <span class="arithmatex">\(z\)</span> 为**虚数**；进一步地，若 <span class="arithmatex">\(a = \IM(z) = 0\)</span>，我们称 <span class="arithmatex">\(z = bi\)</span> 为**纯虚数**。所有复数的集合用 <span class="arithmatex">\(\mathbb{C}\)</span> 表示。</p>
+<div class="admonition tip">
+<p class="admonition-title">Remarque 2.3</p>
+<p>注意到我们引入 <span class="arithmatex">\(i\)</span> 与 <span class="arithmatex">\(\mathbb{R}\)</span> 没有任意"线性关系"，即 <span class="arithmatex">\(a + bi = 0\)</span> 当且仅当 <span class="arithmatex">\(a = b = 0\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Remarque 2.4</p>
+<p>由上述注记，我们可以证明下述映射 <span class="arithmatex">\(\mathbb{R}^2 \to \mathbb{C}, (a, b) \mapsto a + bi\)</span> 为双射。由此可知一个复数 <span class="arithmatex">\(z = a + bi\)</span> 由一对实数 <span class="arithmatex">\((a, b)\)</span> 唯一确定。因此我们可以在一个二维平面上表示它们，这个平面称为**复平面**。</p>
+<ul>
+<li>横轴（实轴）表示实部。</li>
+<li>纵轴（虚轴）表示虚部。</li>
+</ul>
+<p>在复平面上，点 <span class="arithmatex">\(z = a + bi\)</span> 可以用其到原点的距离和与正实轴的夹角来定位。</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple 2.5</p>
+<ul>
+<li><span class="arithmatex">\(3 + 2i\)</span>（实部为 <span class="arithmatex">\(3\)</span>，虚部为 <span class="arithmatex">\(2\)</span>）</li>
+<li><span class="arithmatex">\(5\)</span>（可视为 <span class="arithmatex">\(5 + 0i\)</span>，是实数）</li>
+<li><span class="arithmatex">\(-4i\)</span>（可视为 <span class="arithmatex">\(0 - 4i\)</span>，是纯虚数）</li>
+</ul>
+</div>
+<hr />
+<p><strong>Définition 2.6 — 模</strong></p>
+<p>复数 <span class="arithmatex">\(z = a + bi\)</span> 的**模**（或绝对值），记作 <span class="arithmatex">\(\lvert z\rvert\)</span>，定义为 <span class="arithmatex">\(\lvert z\rvert = \sqrt{a^2 + b^2}\)</span>. 它表示 <span class="arithmatex">\(z\)</span> 到原点的距离。</p>
+<hr />
+<p><strong>Définition 2.7 — 辐角</strong></p>
+<p>复数 <span class="arithmatex">\(z = a + bi\)</span> 的**辐角**，记作 <span class="arithmatex">\(\arg(z)\)</span>，是正实轴与向量 <span class="arithmatex">\(\overrightarrow{Oz}\)</span> 之间的夹角（以弧度为单位）。它满足 <span class="arithmatex">\(\tan(\theta) = \frac{b}{a}\)</span>，并且需要根据 <span class="arithmatex">\(a, b\)</span> 的符号确定象限。通常取主值 <span class="arithmatex">\(\arg(z) \in (-\pi, \pi]\)</span>.</p>
+<hr />
+<p><strong>Définition 2.8 — 四则运算</strong></p>
+<p>设 <span class="arithmatex">\(z_1 = a + bi\)</span>, <span class="arithmatex">\(z_2 = c + di\)</span>.</p>
+<ul>
+<li><strong>共轭：</strong> <span class="arithmatex">\(\overline{z_1} = a - bi\)</span>.</li>
+<li><strong>加法/减法：</strong> <span class="arithmatex">\((a + bi) \pm (c + di) = (a \pm c) + (b \pm d)i\)</span>.</li>
+<li><strong>乘法：</strong> <span class="arithmatex">\((a + bi)(c + di) = (ac - bd) + (ad + bc)i\)</span>（应用分配律并利用 <span class="arithmatex">\(i^2 = -1\)</span>）.</li>
+<li><strong>除法：</strong> <span class="arithmatex">\(\frac{z_1}{z_2} = \frac{a + bi}{c + di} = \frac{(a + bi)(c - di)}{(c + di)(c - di)} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}\)</span>（分子分母同时乘以分母的共轭）.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Remarque 2.9</p>
+<p>由定义，不难证明复数的加法和乘法具有结合律和交换律，即对任意 <span class="arithmatex">\(z_1, z_2, z_3 \in \mathbb{C}\)</span>，</p>
+<div class="arithmatex">\[z_1 + z_2 = z_2 + z_1, \quad (z_1 + z_2) + z_3 = z_1 + (z_2 + z_3), \quad z_1 z_2 = z_2 z_1, \quad (z_1 z_2) z_3 = z_1 (z_2 z_3).\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Mathshell 2.10（选读）</p>
+<p>有了四则运算，我们才能用来求方程组的解。我们有下列"代数基本定理"：每个非常数的复系数多项式至少有一个复数根。等价地，一个 <span class="arithmatex">\(n\)</span> 次复系数多项式恰好有 <span class="arithmatex">\(n\)</span> 个根（计入重数）。（复数域 <span class="arithmatex">\(\mathbb{C}\)</span> 是代数闭域。）</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple 2.11</p>
+<p>考虑方程 <span class="arithmatex">\(x^2 + 4x + 8 = 0\)</span>. 判别式 <span class="arithmatex">\(\Delta = 4^2 - 4 \cdot 1 \cdot 8 = 16 - 32 = -16 &lt; 0\)</span>，故方程无实根。由求根公式得共轭复根 <span class="arithmatex">\(x = \frac{-4 \pm \sqrt{-16}}{2} = \frac{-4 \pm 4i}{2} = -2 \pm 2i\)</span>. 因此两个复数解为 <span class="arithmatex">\(x_1 = -2 + 2i, x_2 = -2 - 2i\)</span>.</p>
+</div>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Proposition 2.12 — 共轭与模的基本性质</p>
+<p>设 <span class="arithmatex">\(z, z_1, z_2 \in \mathbb{C}\)</span>。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(i)</td>
+<td><span class="arithmatex">\(z_1 = z_2 \iff \RE(z_1) = \RE(z_2),\; \IM(z_1) = \IM(z_2)\)</span></td>
+</tr>
+<tr>
+<td>(ii)</td>
+<td><span class="arithmatex">\(z \in \mathbb{R} \iff z = \overline{z}\)</span>；<span class="arithmatex">\(z \in i\mathbb{R} \iff z = -\overline{z}\)</span></td>
+</tr>
+<tr>
+<td>(iii)</td>
+<td><span class="arithmatex">\(\overline{z_1 + z_2} = \overline{z_1} + \overline{z_2}\)</span>，<span class="arithmatex">\(\RE(z_1 + z_2) = \RE(z_1) + \RE(z_2)\)</span>，<span class="arithmatex">\(\IM(z_1 + z_2) = \IM(z_1) + \IM(z_2)\)</span></td>
+</tr>
+<tr>
+<td>(iv)</td>
+<td><span class="arithmatex">\(\overline{z_1 \cdot z_2} = \overline{z_1} \cdot \overline{z_2}\)</span>，<span class="arithmatex">\(\overline{\left(\frac{z_1}{z_2}\right)} = \frac{\overline{z_1}}{\overline{z_2}} \; (z_2 \neq 0)\)</span></td>
+</tr>
+<tr>
+<td>(v)</td>
+<td><span class="arithmatex">\(\lvert z\rvert = \sqrt{z \overline{z}}\)</span></td>
+</tr>
+<tr>
+<td>(vi)</td>
+<td><span class="arithmatex">\(\lvert z\rvert = 0 \iff z = 0\)</span></td>
+</tr>
+<tr>
+<td>(vii)</td>
+<td><span class="arithmatex">\(\lvert z_1 \cdot z_2\rvert = \lvert z_1\rvert \cdot \lvert z_2\rvert\)</span>，<span class="arithmatex">\(\left\lvert\frac{z_1}{z_2}\right\rvert = \frac{\lvert z_1\rvert}{\lvert z_2\rvert} \; (z_2 \neq 0)\)</span></td>
+</tr>
+<tr>
+<td>(viii)</td>
+<td><span class="arithmatex">\(\lvert z_1 + z_2\rvert \leq \lvert z_1\rvert + \lvert z_2\rvert\)</span>，<span class="arithmatex">\(\lvert z_1 - z_2\rvert \geq \bigl\lvert\lvert z_1\rvert - \lvert z_2\rvert\bigr\rvert\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(z = a + bi\)</span>, <span class="arithmatex">\(z_1 = a_1 + b_1 i\)</span>, <span class="arithmatex">\(z_2 = a_2 + b_2 i\)</span>.</p>
+<p><strong>(i)</strong> 由定义（<span class="arithmatex">\(i\)</span> 与 <span class="arithmatex">\(\mathbb{R}\)</span> 线性无关）<span class="arithmatex">\(z_1 - z_2 = (a_1 - a_2) + i(b_1 - b_2) = 0\)</span> 当且仅当实部、虚部同时为零。</p>
+<p><strong>(ii)</strong> 若 <span class="arithmatex">\(z = \overline{z}\)</span>，则 <span class="arithmatex">\(b = 0\)</span>，因此 <span class="arithmatex">\(z \in \mathbb{R}\)</span>；反之显然。若 <span class="arithmatex">\(z = -\overline{z}\)</span>，即 <span class="arithmatex">\(a - ib = -a - ib\)</span>，则 <span class="arithmatex">\(a = 0\)</span>，因此 <span class="arithmatex">\(z \in i\mathbb{R}\)</span>；反之亦然。</p>
+<p><strong>(iii)</strong> 直接展开：<span class="arithmatex">\(\overline{z_1 + z_2} = (a_1 + a_2) + i(b_1 + b_2) = (a_1 + a_2) - i(b_1 + b_2) = (a_1 - ib_1) + (a_2 - ib_2) = \overline{z_1} + \overline{z_2}\)</span>. 实部、虚部分别对应相加即得后两式。</p>
+<p><strong>(iv)</strong> <span class="arithmatex">\(z_1 z_2 = (a_1 + ib_1)(a_2 + ib_2) = (a_1 a_2 - b_1 b_2) + i(a_1 b_2 + a_2 b_1)\)</span>，取共轭得 <span class="arithmatex">\((a_1 a_2 - b_1 b_2) - i(a_1 b_2 + a_2 b_1)\)</span>. 另一方面 <span class="arithmatex">\(\overline{z_1} \cdot \overline{z_2} = (a_1 - ib_1)(a_2 - ib_2) = (a_1 a_2 - b_1 b_2) - i(a_1 b_2 + a_2 b_1)\)</span>. 两式相等。对 <span class="arithmatex">\(z_2 \neq 0\)</span>，利用已证的乘积性质得 <span class="arithmatex">\(\overline{\left(\frac{z_1}{z_2}\right)} = \frac{\overline{z_1}}{\overline{z_2}}\)</span>.</p>
+<p><strong>(v)</strong> <span class="arithmatex">\(z \overline{z} = (a + ib)(a - ib) = a^2 + b^2 = \lvert z\rvert^2\)</span>，从而 <span class="arithmatex">\(\lvert z\rvert = \sqrt{z \overline{z}}\)</span>.</p>
+<p><strong>(vi)</strong> <span class="arithmatex">\(\lvert z\rvert = 0 \iff a^2 + b^2 = 0 \iff a = b = 0 \iff z = 0\)</span>.</p>
+<p><strong>(vii)</strong> 利用 (v)：<span class="arithmatex">\(\lvert z_1 z_2\rvert^2 = (z_1 z_2)(\overline{z_1 z_2}) = z_1 \overline{z_1} \cdot z_2 \overline{z_2} = \lvert z_1\rvert^2 \lvert z_2\rvert^2\)</span>，则 <span class="arithmatex">\(\lvert z_1 z_2\rvert = \lvert z_1\rvert \lvert z_2\rvert\)</span>. 商的情形同理。</p>
+<p><strong>(viii)</strong> 主不等式：<span class="arithmatex">\(\lvert z_1 + z_2\rvert^2 = (z_1 + z_2)(\overline{z_1} + \overline{z_2}) = \lvert z_1\rvert^2 + \lvert z_2\rvert^2 + 2\RE(z_1 \overline{z_2}) \leq \lvert z_1\rvert^2 + \lvert z_2\rvert^2 + 2\lvert z_1\rvert\lvert z_2\rvert = (\lvert z_1\rvert + \lvert z_2\rvert)^2\)</span>，取平方根即得。反向不等式：<span class="arithmatex">\(\lvert z_1\rvert \leq \lvert z_1 - z_2\rvert + \lvert z_2\rvert \Rightarrow \lvert z_1 - z_2\rvert \geq \lvert z_1\rvert - \lvert z_2\rvert\)</span>，同理 <span class="arithmatex">\(\lvert z_1 - z_2\rvert \geq \lvert z_2\rvert - \lvert z_1\rvert\)</span>，合起来即 <span class="arithmatex">\(\lvert z_1 - z_2\rvert \geq \bigl\lvert\lvert z_1\rvert - \lvert z_2\rvert\bigr\rvert\)</span>.</p>
+</details>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">Exemple 2.13</p>
+<p>求 <span class="arithmatex">\(z = \frac{2+i}{7-i}\)</span> 的实部和虚部。</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p>分子分母同乘分母的共轭：</p>
+<div class="arithmatex">\[z = \frac{2 + i}{7 - i} \cdot \frac{7 + i}{7 + i} = \frac{(2 + i)(7 + i)}{7^2 + 1^2} = \frac{14 + 2i + 7i + i^2}{50} = \frac{14 - 1 + 9i}{50} = \frac{13 + 9i}{50}.\]</div>
+<p>故 <span class="arithmatex">\(\RE(z) = \frac{13}{50}\)</span>，<span class="arithmatex">\(\IM(z) = \frac{9}{50}\)</span>.</p>
+</details>
+<hr />
+<h3 id="22">2.2 欧拉公式<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Remarque 2.14</p>
+<p>回顾高中自然常数 <span class="arithmatex">\(e\)</span> 的定义：把 <span class="arithmatex">\(1\)</span> 元钱存入银行，年利率 <span class="arithmatex">\(100\%\)</span>，结算周期越来越密，一年后本息和为 <span class="arithmatex">\(A_n = \left(1 + \frac{1}{n}\right)^n\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th>结算周期</th>
+<th>本息和 <span class="arithmatex">\(A_n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一年一次</td>
+<td><span class="arithmatex">\(2\)</span></td>
+</tr>
+<tr>
+<td>半年一次</td>
+<td><span class="arithmatex">\(2.25\)</span></td>
+</tr>
+<tr>
+<td>一季一次</td>
+<td><span class="arithmatex">\(\approx 2.4414\)</span></td>
+</tr>
+<tr>
+<td>一月一次</td>
+<td><span class="arithmatex">\(\approx 2.6130\)</span></td>
+</tr>
+<tr>
+<td>一日一次</td>
+<td><span class="arithmatex">\(\approx 2.7146\)</span></td>
+</tr>
+<tr>
+<td>实时结算（<span class="arithmatex">\(n \to \infty\)</span>）</td>
+<td><span class="arithmatex">\(e \approx 2.71828\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>我们有 <span class="arithmatex">\(e := \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n\)</span>. 由于我们尚未涉及到微积分，我们用欧拉公式来定义 <span class="arithmatex">\(e^{i\theta}\)</span>.</p>
+</div>
+<hr />
+<p><strong>Définition 2.15 — 欧拉公式</strong></p>
+<p>对任意 <span class="arithmatex">\(\theta \in \mathbb{R}\)</span>，我们定义 <span class="arithmatex">\(e^{i\theta} := \cos \theta + i \sin \theta\)</span>. 对任意 <span class="arithmatex">\(z = x + iy \in \mathbb{C}\)</span>，我们定义 <span class="arithmatex">\(e^z = e^{x+iy} := e^x \cdot e^{iy}\)</span>. 所以我们定义了一个映射 <span class="arithmatex">\(\mathbb{C} \to \mathbb{C}, z \mapsto e^z\)</span>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Remarque 2.16</p>
+<p>(i) <span class="arithmatex">\(f: \mathbb{C} \to \mathbb{C}, z \mapsto e^z\)</span> 是 <span class="arithmatex">\(g: \mathbb{R} \to \mathbb{R}, x \mapsto e^x\)</span> 的"延拓"，即对任意 <span class="arithmatex">\(x \in \mathbb{R}\)</span>，有 <span class="arithmatex">\(f(x) = g(x)\)</span>.</p>
+<p>(ii) 对任意 <span class="arithmatex">\(z \in \mathbb{C}\)</span>，<span class="arithmatex">\(e^z \neq 0\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Mathshell 2.17（选读）</p>
+<p>（<span class="arithmatex">\(e^z\)</span> 的另一种定义）对任意 <span class="arithmatex">\(z \in \mathbb{C}\)</span>，我们定义 <span class="arithmatex">\(e^z := \lim_{n \to \infty} \left(1 + \frac{z}{n}\right)^n\)</span>. 可以证明对任意 <span class="arithmatex">\(z \in \mathbb{C}\)</span>，这个极限存在且有限。我们下面证明欧拉公式：<span class="arithmatex">\(e^{i\theta} = \cos \theta + i \sin \theta, \forall \theta \in \mathbb{R}\)</span>.</p>
+<p><strong>证明：</strong> 固定 <span class="arithmatex">\(\theta \in \mathbb{R}\)</span>，记 <span class="arithmatex">\(w_n = 1 + \frac{i\theta}{n}\)</span>. 将 <span class="arithmatex">\(w_n\)</span> 写成极坐标形式：</p>
+<div class="arithmatex">\[w_n = \sqrt{1 + \frac{\theta^2}{n^2}}\,(\cos \varphi_n + i \sin \varphi_n), \quad \varphi_n = \arctan \frac{\theta}{n}.\]</div>
+<p>于是</p>
+<div class="arithmatex">\[w_n^n = \left(1 + \frac{\theta^2}{n^2}\right)^{n/2} (\cos(n\varphi_n) + i \sin(n\varphi_n)).\]</div>
+<ul>
+<li><strong>模长极限：</strong> <span class="arithmatex">\(\lim_{n \to \infty} \left(1 + \frac{\theta^2}{n^2}\right)^{n/2} = \lim_{n \to \infty} \left[\left(1 + \frac{\theta^2}{n^2}\right)^{n^2/\theta^2}\right]^{\theta^2/(2n)} = e^0 = 1\)</span>.</li>
+<li><strong>辐角极限：</strong> 当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(\arctan \frac{\theta}{n} \sim \frac{\theta}{n}\)</span>，故 <span class="arithmatex">\(\lim_{n \to \infty} n\varphi_n = \lim_{n \to \infty} \left(n \arctan \frac{\theta}{n}\right) = \theta\)</span>. 由 <span class="arithmatex">\(\cos, \sin\)</span> 的连续性得 <span class="arithmatex">\(\cos(n\varphi_n) \to \cos \theta\)</span>, <span class="arithmatex">\(\sin(n\varphi_n) \to \sin \theta\)</span>.</li>
+<li><strong>合并结果：</strong> 把模与幅角代回极限：<span class="arithmatex">\(e^{i\theta} = \lim_{n \to \infty} w_n^n = 1 \cdot (\cos \theta + i \sin \theta) = \cos \theta + i \sin \theta\)</span>.</li>
+</ul>
+</div>
+<hr />
+<h3 id="23">2.3 复数的表示方法<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<p>利用模和辐角，我们可以得到复数更强大的表示形式。</p>
+<div class="admonition success">
+<p class="admonition-title">Remarque 2.18 — 四种表示形式与相互转换</p>
+<p>设复数 <span class="arithmatex">\(z\)</span> 对应复平面上的点，模长 <span class="arithmatex">\(r \geq 0\)</span>，辐角 <span class="arithmatex">\(\theta \in \mathbb{R}\)</span>。</p>
+<ul>
+<li><strong>(代数形式)</strong> <span class="arithmatex">\(z = x + iy\)</span>（<span class="arithmatex">\(x, y \in \mathbb{R}\)</span>）</li>
+<li><strong>(几何形式)</strong> <span class="arithmatex">\(z = (x, y)\)</span> 复平面上的向量</li>
+<li><strong>(三角形式)</strong> <span class="arithmatex">\(z = r(\cos \theta + i \sin \theta)\)</span>, <span class="arithmatex">\(r = \lvert z\rvert = \sqrt{x^2 + y^2}\)</span>, <span class="arithmatex">\(\tan \theta = y/x\)</span></li>
+<li><strong>(指数形式)</strong> <span class="arithmatex">\(z = r e^{i\theta}\)</span></li>
+</ul>
+<p><strong>相互转换：</strong> <span class="arithmatex">\(\begin{cases} x = r \cos \theta, \\ y = r \sin \theta; \end{cases}\)</span> <span class="arithmatex">\(\begin{cases} r = \sqrt{x^2 + y^2}, \\ \theta = \arg z. \end{cases}\)</span></p>
+<p><strong>运算优势：</strong> 加减法用代数形式最简；乘除法、乘方、开方用指数形式最简。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Remarque 2.19</p>
+<p><span class="arithmatex">\(r_1 e^{i\theta_1} = r_2 e^{i\theta_2} \iff r_1 = r_2,\; \theta_1 - \theta_2 \in 2\pi\mathbb{Z}\)</span>.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exemple 2.20</p>
+<p>将 <span class="arithmatex">\(z = 1 + i\)</span> 化为三角形式和指数形式。</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\(r = \lvert 1 + i\rvert = \sqrt{1^2 + 1^2} = \sqrt{2}\)</span>，<span class="arithmatex">\(\theta = \arg(1 + i) = \arctan(1) = \frac{\pi}{4}\)</span>.</p>
+<p>三角形式：<span class="arithmatex">\(z = \sqrt{2}\left(\cos \frac{\pi}{4} + i \sin \frac{\pi}{4}\right)\)</span>. 指数形式：<span class="arithmatex">\(z = \sqrt{2} e^{i\pi/4}\)</span>.</p>
+</details>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Proposition 2.21 — 指数形式下的运算</p>
+<p>设 <span class="arithmatex">\(z = re^{i\theta}, z_1 = r_1 e^{i\theta_1}, z_2 = r_2 e^{i\theta_2} \in \mathbb{C}\)</span>。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>运算</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(i)</td>
+<td>共轭</td>
+<td><span class="arithmatex">\(\overline{z} = re^{-i\theta}\)</span></td>
+</tr>
+<tr>
+<td>(ii)</td>
+<td>乘法</td>
+<td><span class="arithmatex">\(z_1 z_2 = (r_1 r_2) e^{i(\theta_1 + \theta_2)}\)</span>（模相乘，辐角相加）</td>
+</tr>
+<tr>
+<td>(iii)</td>
+<td>除法</td>
+<td><span class="arithmatex">\(\frac{z_1}{z_2} = \frac{r_1}{r_2} e^{i(\theta_1 - \theta_2)}\)</span>（模相除，辐角相减）</td>
+</tr>
+<tr>
+<td>(iv)</td>
+<td>De Moivre</td>
+<td><span class="arithmatex">\(z^n = r^n(\cos n\theta + i \sin n\theta)\)</span></td>
+</tr>
+<tr>
+<td>(v)</td>
+<td>开方</td>
+<td><span class="arithmatex">\(z^{1/n} = r^{1/n} e^{i(\theta + 2k\pi)/n}, k = 0, 1, \ldots, n-1\)</span>（<span class="arithmatex">\(n\)</span> 个不同值）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p><strong>(i)</strong> <span class="arithmatex">\(\overline{z} = \overline{re^{i\theta}} = r(\cos \theta - i \sin \theta) = re^{-i\theta}\)</span>.</p>
+<p><strong>(ii)</strong> <span class="arithmatex">\(z_1 z_2 = r_1 e^{i\theta_1} r_2 e^{i\theta_2} = (r_1 r_2) e^{i(\theta_1 + \theta_2)}\)</span>.</p>
+<p><strong>(iii)</strong> <span class="arithmatex">\(\frac{z_1}{z_2} = \frac{r_1 e^{i\theta_1}}{r_2 e^{i\theta_2}} = \frac{r_1}{r_2} e^{i(\theta_1 - \theta_2)}, r_2 \neq 0\)</span>.</p>
+<p><strong>(iv)</strong> 对 <span class="arithmatex">\(n \in \mathbb{Z}\)</span>，<span class="arithmatex">\(z^n = (re^{i\theta})^n = r^n e^{in\theta} = r^n(\cos n\theta + i \sin n\theta)\)</span>. 当 <span class="arithmatex">\(r = 1\)</span> 时即经典的 De Moivre 公式。</p>
+<p><strong>(v)</strong> 对正整数 <span class="arithmatex">\(n\)</span>，解 <span class="arithmatex">\(w^n = z\)</span>。设 <span class="arithmatex">\(w = \rho e^{i\phi}\)</span>，则 <span class="arithmatex">\(\rho^n e^{in\phi} = re^{i\theta}\)</span>。由此 <span class="arithmatex">\(\rho = r^{1/n}\)</span>, <span class="arithmatex">\(n\phi = \theta + 2k\pi, k = 0, 1, \ldots, n-1\)</span>. 故 <span class="arithmatex">\(\sqrt[n]{z} = r^{1/n} \exp\left(i\frac{\theta + 2k\pi}{n}\right)\)</span>. 共 <span class="arithmatex">\(n\)</span> 个根，模均为 <span class="arithmatex">\(r^{1/n}\)</span>，辐角等差 <span class="arithmatex">\(2\pi/n\)</span>.</p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Remarque 2.22</p>
+<p>注意 <span class="arithmatex">\(z^{1/n}\)</span> 表示 <span class="arithmatex">\(x^n = z\)</span> 的解。</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exercise 2.23</p>
+<p>设 <span class="arithmatex">\(z_1, z_2 \in \mathbb{C}\)</span>，证明：<span class="arithmatex">\(e^{z_1 + z_2} = e^{z_1} \cdot e^{z_2}\)</span>.</p>
+</div>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">Exemple 2.24</p>
+<p>将 <span class="arithmatex">\(z = (-3 + \sqrt{3}i)^{19}\)</span> 化为三角形式和指数形式。</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p><span class="arithmatex">\((-3 + \sqrt{3}i) = 2\sqrt{3} \cdot \left(-\frac{\sqrt{3}}{2} + \frac{1}{2}i\right) = 2\sqrt{3} e^{-\frac{\pi}{6}i}\)</span>.</p>
+<p>指数形式：<span class="arithmatex">\(z = \left(2\sqrt{3} e^{-\frac{\pi}{6}i}\right)^{19} = (2\sqrt{3})^{19} \cdot e^{-\frac{19\pi}{6}i} = (2\sqrt{3})^{19} \cdot e^{\frac{5\pi}{6}i}\)</span>.</p>
+<p>三角形式：<span class="arithmatex">\(z = (2\sqrt{3})^{19} \cdot \left(\cos \frac{5\pi}{6} + i \sin \frac{5\pi}{6}\right)\)</span>.</p>
+</details>
+<hr />
+<h3 id="24">2.4 复数的应用<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<p>利用欧拉公式，我们可以解决大部分三角函数的算术问题。由欧拉公式，我们有</p>
+<div class="arithmatex">\[\cos(\theta) = \RE(e^{i\theta}) = \frac{e^{i\theta} + e^{-i\theta}}{2}, \quad \sin(\theta) = \IM(e^{i\theta}) = \frac{e^{i\theta} - e^{-i\theta}}{2i}.\]</div>
+<p>（注：PDF 原文误写为 <span class="arithmatex">\(\cos(\theta) = \IM(e^{i\theta})\)</span>，此处已修正）</p>
+<div class="admonition question">
+<p class="admonition-title">Exemple 2.25</p>
+<p>令 <span class="arithmatex">\(\theta \in \mathbb{R} \setminus 2\pi\mathbb{Z}\)</span>，<span class="arithmatex">\(n \in \mathbb{N}_{\geq 1}\)</span>。求：</p>
+<p>(1) <span class="arithmatex">\(\sum_{k=0}^{n} \cos(k\theta)\)</span>，(2) <span class="arithmatex">\(\sum_{k=0}^{n} \sin(k\theta)\)</span>.</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p>我们只求第一个式子：</p>
+<div class="arithmatex">\[\begin{aligned}
+\sum_{k=0}^{n} \cos(k\theta) &amp;= \sum_{k=0}^{n} \RE(e^{ik\theta})
+= \RE\left(\sum_{k=0}^{n} e^{ik\theta}\right)
+= \RE\left(\frac{1 - e^{i(n+1)\theta}}{1 - e^{i\theta}}\right) \\
+&amp;= \RE\left(\frac{(1 - e^{-i\theta})(1 - e^{i(n+1)\theta})}{(1 - e^{-i\theta})(1 - e^{i\theta})}\right)
+= \RE\left(\frac{1 - e^{-i\theta} + e^{in\theta} - e^{i(n+1)\theta}}{2 - 2\cos\theta}\right) \\
+&amp;= \frac{1 - \cos\theta + \cos n\theta - \cos(n+1)\theta}{2 - 2\cos\theta}.
+\end{aligned}\]</div>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Remarque 2.26</p>
+<p>对于复数域上的等比数列 <span class="arithmatex">\(a, aq, aq^2, \ldots (q \neq 1)\)</span>，我们也有求和公式 <span class="arithmatex">\(\sum_{k=0}^{n} aq^k = \frac{a(1 - q^{n+1})}{1 - q}\)</span>. 我们将在数列的部分证明。</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exemple 2.27 — <span class="arithmatex">\(n\)</span> 次单位根</p>
+<p>方程 <span class="arithmatex">\(z^n = 1\)</span> 的解称为 <strong><span class="arithmatex">\(n\)</span> 次单位根</strong>：</p>
+<div class="arithmatex">\[z_k = e^{2\pi i k / n} = \cos\left(\frac{2\pi k}{n}\right) + i \sin\left(\frac{2\pi k}{n}\right), \quad k = 0, 1, \ldots, n-1.\]</div>
+<p>（见 Proposition 2.21）在复平面上，它们位于单位圆上，并将圆 <span class="arithmatex">\(n\)</span> 等分。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remarque 2.28</p>
+<p>代数基本定理说 <span class="arithmatex">\(n\)</span> 次方程有 <span class="arithmatex">\(n\)</span> 个复数根，但一般的 <span class="arithmatex">\(n\)</span> 次方程的解并不能用方程的系数利用四则运算和开方得到（Abel, Galois）。</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exercise 2.29</p>
+<p>设 <span class="arithmatex">\(\omega_1, \ldots, \omega_n\)</span> 为 <span class="arithmatex">\(n\)</span> 次单位根，证明 <span class="arithmatex">\(\omega_1 + \cdots + \omega_n = 0\)</span>.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exemple 2.30</p>
+<p>求解方程 <span class="arithmatex">\(z^3 - 3z^2 + 3z - 28 = 0\)</span>.</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p>注意到原方程可转化为 <span class="arithmatex">\(\left(\frac{z-1}{3}\right)^3 = 1\)</span>. 则 <span class="arithmatex">\(\frac{z-1}{3}\)</span> 为 <span class="arithmatex">\(3\)</span> 次单位根：</p>
+<div class="arithmatex">\[\frac{z-1}{3} = e^{2\pi i k / 3}, \quad k = 0, 1, 2,\]</div>
+<p>即 <span class="arithmatex">\(z = 4,\; 1 + 3e^{2\pi i/3},\; 1 + 3e^{4\pi i/3}\)</span>. 从而可知</p>
+<div class="arithmatex">\[z_1 = 4, \quad z_2 = \frac{1}{2} + \frac{3\sqrt{3}}{3}i, \quad z_3 = \frac{1}{2} - \frac{3\sqrt{3}}{3}i\]</div>
+<p>为方程的三个根。</p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Exercise 2.31</p>
+<p>求解方程 <span class="arithmatex">\(z^6 + (3z - 1)^6 = 0\)</span>.</p>
+</div>
+<hr />
+<h2 id="_2">核心公式速查表<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>毕达哥拉斯恒等式</td>
+<td><span class="arithmatex">\(\sin^2\theta + \cos^2\theta = 1\)</span>，<span class="arithmatex">\(1 + \tan^2\theta = \sec^2\theta\)</span></td>
+</tr>
+<tr>
+<td>和差角</td>
+<td><span class="arithmatex">\(\sin(\alpha \pm \beta) = \sin\alpha\cos\beta \pm \cos\alpha\sin\beta\)</span></td>
+</tr>
+<tr>
+<td>和差化积</td>
+<td><span class="arithmatex">\(\sin\alpha + \sin\beta = 2\sin\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}\)</span></td>
+</tr>
+<tr>
+<td>万能变换</td>
+<td><span class="arithmatex">\(t = \tan\frac{\alpha}{2}\)</span>，<span class="arithmatex">\(\sin\alpha = \frac{2t}{1+t^2}\)</span>，<span class="arithmatex">\(\cos\alpha = \frac{1-t^2}{1+t^2}\)</span></td>
+</tr>
+<tr>
+<td>辅助角</td>
+<td><span class="arithmatex">\(a\sin\theta + b\cos\theta = \sqrt{a^2+b^2}\sin(\theta + \arctan\frac{b}{a})\)</span></td>
+</tr>
+<tr>
+<td>欧拉公式</td>
+<td><span class="arithmatex">\(e^{i\theta} = \cos\theta + i\sin\theta\)</span></td>
+</tr>
+<tr>
+<td>De Moivre</td>
+<td><span class="arithmatex">\((\cos\theta + i\sin\theta)^n = \cos n\theta + i\sin n\theta\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(n\)</span> 次单位根</td>
+<td><span class="arithmatex">\(z_k = e^{2\pi i k / n}, \; k = 0, 1, \ldots, n-1\)</span></td>
+</tr>
+<tr>
+<td>复数模运算</td>
+<td><span class="arithmatex">\(\lvert z_1 z_2\rvert = \lvert z_1\rvert\lvert z_2\rvert\)</span>，<span class="arithmatex">\(\lvert z_1 + z_2\rvert \leq \lvert z_1\rvert + \lvert z_2\rvert\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\cos\)</span>/<span class="arithmatex">\(\sin\)</span> 指数表示</td>
+<td><span class="arithmatex">\(\cos\theta = \frac{e^{i\theta}+e^{-i\theta}}{2}\)</span>，<span class="arithmatex">\(\sin\theta = \frac{e^{i\theta}-e^{-i\theta}}{2i}\)</span></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<h2 id="__comments">评论</h2>
+<script src="https://giscus.app/client.js"
+  data-repo="Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA"
+  data-repo-id="R_kgDOTFxXaw"
+  data-category="General"
+  data-category-id="DIC_kwDOTFxXa84DAMmT"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async>
+</script>
+<script>
+  var giscus = document.querySelector("script[src*='giscus']");
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+    giscus.setAttribute("data-theme", theme);
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+    var ref = document.querySelector("[data-md-component='palette']");
+    if (ref) {
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette");
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+          var frame = document.querySelector(".giscus-frame");
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme: theme } } },
+            "https://giscus.app"
+          );
+        }
+      });
+    }
+  });
+</script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Noct-BUAA
+
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["header.autohide", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.tracking", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+  
+      <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/hero-scroll.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/gsap.min.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/extra.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/text-type.js"></script>
+      
+    
+  <script>
+    /* 供 MkDocs Material document$ 生命周期钩子使用 */
+    window.__mkdocs_site = "https://noct-buaa.github.io/Self-Help-Guide-of-BIFAST-BUAA/";
+  </script>
+
+  </body>
+</html>

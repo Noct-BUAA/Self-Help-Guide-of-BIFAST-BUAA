@@ -995,14 +995,22 @@ html { scroll-behavior: smooth; }
   grid-template-columns: repeat(4, 1fr);
 }
 
+.card-grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 @media (max-width: 900px) {
   .card-grid--four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-grid--three {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 500px) {
-  .card-grid--four {
+  .card-grid--four,
+  .card-grid--three {
     grid-template-columns: 1fr;
   }
 }
@@ -1031,6 +1039,21 @@ html { scroll-behavior: smooth; }
   line-height: 1;
   margin-bottom: var(--space-xs);
   opacity: .85;
+}
+
+.card-num {
+  font-family: "Inter", "Noto Sans SC", sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: #1a48a8;
+  opacity: .45;
+  margin-bottom: var(--space-2xs);
+}
+
+[data-md-color-scheme="slate"] .card-num {
+  color: #9FA8DA;
+  opacity: .5;
 }
 
 .card h3 {

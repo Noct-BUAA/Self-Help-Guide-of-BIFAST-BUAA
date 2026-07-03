@@ -1,0 +1,3096 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="北京航空航天大学中法未来科技学院（杭州）学习生活自助指南 — 汇集课程学习资料、重难点解析与校园生活实用信息
+">
+      
+      
+        <meta name="author" content="Noct-BUAA">
+      
+      
+        <link rel="canonical" href="https://noct-buaa.github.io/Self-Help-Guide-of-BIFAST-BUAA/courses/year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/06-divisibility/">
+      
+      
+        <link rel="prev" href="../05-sums-products-counting/">
+      
+      
+        <link rel="next" href="../../../%E5%9F%BA%E7%A1%80%E8%8B%B1%E8%AF%AD/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>第六章 整除关系 - 北航中法未来科技学院自助指南</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%20480c-35.3%200-64-28.7-64-64V96c0-35.3%2028.7-64%2064-64h320c35.3%200%2064%2028.7%2064%2064v213.5c0%2017-6.7%2033.3-18.7%2045.3L322.7%20461.3c-12%2012-28.3%2018.7-45.3%2018.7zm325.5-176H296c-13.3%200-24%2010.7-24%2024v93.5z%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M384%20512H96c-53%200-96-43-96-96V96C0%2043%2043%200%2096%200h304c26.5%200%2048%2021.5%2048%2048v288c0%2020.9-13.4%2038.7-32%2045.3V448c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032zM96%20384c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032h256v-64zm32-232c0%2013.3%2010.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24H152c-13.3%200-24%2010.7-24%2024m24%2072c-13.3%200-24%2010.7-24%2024s10.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24z%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-32-352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200m-8%2064h48c13.3%200%2024%2010.7%2024%2024v88h8c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-80c-13.3%200-24-10.7-24-24s10.7-24%2024-24h24v-64h-24c-13.3%200-24-10.7-24-24s10.7-24%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M461.2%2018.9C472.7%2024%20480%2035.4%20480%2048v416c0%2012.6-7.3%2024-18.8%2029.1s-24.8%203.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63V480c0%2017.7-14.3%2032-32%2032h-32c-17.7%200-32-14.3-32-32v-96C57.3%20384%200%20326.7%200%20256s57.3-128%20128-128h84.5c61.8-.2%20121.4-22.7%20167.9-63.3L427%2024c9.4-8.3%2022.9-10.2%2034.3-5.1zM224%20320v.2c70.3%202.7%20137.8%2028.5%20192%2073.4V118.3c-54.2%2044.9-121.7%2070.7-192%2073.4z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M434.8%2070.1c14.3%2010.4%2017.5%2030.4%207.1%2044.7l-256%20352c-5.5%207.6-14%2012.3-23.4%2013.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200l101.5%20101.5%20234-321.7c10.4-14.3%2030.4-17.5%2044.7-7.1z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m0-336c-17.7%200-32%2014.3-32%2032%200%2013.3-10.7%2024-24%2024s-24-10.7-24-24c0-44.2%2035.8-80%2080-80s80%2035.8%2080%2080c0%2047.2-36%2067.2-56%2074.5v3.8c0%2013.3-10.7%2024-24%2024s-24-10.7-24-24v-8.1c0-20.5%2014.8-35.2%2030.1-40.2%206.4-2.1%2013.2-5.5%2018.2-10.3%204.3-4.2%207.7-10%207.7-19.6%200-17.7-14.3-32-32-32zm-32%20192a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%200c14.7%200%2028.2%208.1%2035.2%2021l216%20400c6.7%2012.4%206.4%2027.4-.8%2039.5S486.1%20480%20472%20480H40c-14.1%200-27.2-7.4-34.4-19.5s-7.5-27.1-.8-39.5l216-400c7-12.9%2020.5-21%2035.2-21m0%20352a32%2032%200%201%200%200%2064%2032%2032%200%201%200%200-64m0-192c-18.2%200-32.7%2015.5-31.4%2033.7l7.4%20104c.9%2012.5%2011.4%2022.3%2023.9%2022.3%2012.6%200%2023-9.7%2023.9-22.3l7.4-104c1.3-18.2-13.1-33.7-31.4-33.7z%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M480-16c6.9%200%2013%204.4%2015.2%2010.9l13.5%2040.4%2040.4%2013.5C555.6%2051%20560%2057.1%20560%2064s-4.4%2013-10.9%2015.2l-40.4%2013.5-13.5%2040.4c-2.2%206.5-8.3%2010.9-15.2%2010.9s-13-4.4-15.2-10.9l-13.5-40.4-40.4-13.5C404.4%2077%20400%2070.9%20400%2064s4.4-13%2010.9-15.2l40.4-13.5%2013.5-40.4C467-11.6%20473.1-16%20480-16M321.4%2097.4c12.5-12.5%2032.8-12.5%2045.3%200l80%2080c12.5%2012.5%2012.5%2032.8%200%2045.3l-10.9%2010.9c7.9%2022%2012.2%2045.7%2012.2%2070.5%200%20114.9-93.1%20208-208%20208S32%20418.9%2032%20304%20125.1%2096%20240%2096c24.7%200%2048.5%204.3%2070.5%2012.3zM144%20304c0-53%2043-96%2096-96%2013.3%200%2024-10.7%2024-24s-10.7-24-24-24c-79.5%200-144%2064.5-144%20144%200%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M416%20427.4c58.5-44%2096-111.6%2096-187.4C512%20107.5%20397.4%200%20256%200S0%20107.5%200%20240c0%2075.8%2037.5%20143.4%2096%20187.4V464c0%2026.5%2021.5%2048%2048%2048h32v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h64v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h32c26.5%200%2048-21.5%2048-48zM96%20256a64%2064%200%201%201%20128%200%2064%2064%200%201%201-128%200m256-64a64%2064%200%201%201%200%20128%2064%2064%200%201%201%200-128%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M352%200c0-17.7-14.3-32-32-32s-32%2014.3-32%2032v64h-96c-53%200-96%2043-96%2096v224c0%2053%2043%2096%2096%2096h256c53%200%2096-43%2096-96V160c0-53-43-96-96-96h-96zM160%20368c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24M224%20176a48%2048%200%201%201%200%2096%2048%2048%200%201%201%200-96m144%2048a48%2048%200%201%201%2096%200%2048%2048%200%201%201-96%200m-304%200c0-17.7-14.3-32-32-32S0%20206.3%200%20224v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32zm544-32c-17.7%200-32%2014.3-32%2032v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32v-96c0-17.7-14.3-32-32-32%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M288%200H128c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032v151.5L7.5%20426.3C2.6%20435%200%20444.7%200%20454.7%200%20486.4%2025.6%20512%2057.3%20512h333.4c31.6%200%2057.3-25.6%2057.3-57.3%200-10-2.6-19.8-7.5-28.4L320%20215.5V64c17.7%200%2032-14.3%2032-32S337.7%200%20320%200zm-96%20215.5V64h64v151.5c0%2011.1%202.9%2022.1%208.4%2031.8L306%20320H142l41.6-72.7c5.5-9.7%208.4-20.6%208.4-31.8%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%20216C0%20149.7%2053.7%2096%20120%2096h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064H64c-35.3%200-64-28.7-64-64zm256%200c0-66.3%2053.7-120%20120-120h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064h-64c-35.3%200-64-28.7-64-64z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans SC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../../.." title="北航中法未来科技学院自助指南" class="md-header__button md-logo" aria-label="北航中法未来科技学院自助指南" data-md-component="logo">
+      
+  <img src="../../../../../../assets/images/buaa-emblem-blue.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            北航中法未来科技学院自助指南
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第六章 整除关系
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程学习资料
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../campus-life/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  校园生活指南
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../postscript/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  后记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="北航中法未来科技学院自助指南" class="md-nav__button md-logo" aria-label="北航中法未来科技学院自助指南" data-md-component="logo">
+      
+  <img src="../../../../../../assets/images/buaa-emblem-blue.png" alt="logo">
+
+    </a>
+    北航中法未来科技学院自助指南
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程学习资料
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程学习资料
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一学年
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一学年
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一上学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一上学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础数学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2_2" id="__nav_2_1_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    基础数学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2_2_2" id="__nav_2_1_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_2_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-logic-sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逻辑与集合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-maps-relations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    映射与等价关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-trig-complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    三角函数与复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-induction-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学归纳法与数列
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-sums-products-counting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    求和求积与计数原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整除关系
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整除关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="页面目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      页面目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 整除关系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 整除关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 因子与倍数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 带余除法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 素数、最大公约数与最小公倍数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 素数、最大公约数与最小公倍数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 素数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 最大公约数与最小公倍数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-bezout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 辗转相除法与 Bézout 恒等式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 唯一素因子分解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心公式速查表
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9F%BA%E7%A1%80%E8%8B%B1%E8%AF%AD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础英语
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学计算机基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理基础法语（1）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    综合法语（1）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9%E6%A6%82%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    航空航天概论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../semester2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一下学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一下学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E4%B8%AD%E5%9B%BD%E8%BF%91%E7%8E%B0%E4%BB%A3%E5%8F%B2%E7%BA%B2%E8%A6%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国近现代史纲要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人工智能导论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E5%8A%9B%E5%AD%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    力学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E5%9F%BA%E7%A1%80%E8%8B%B1%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础英语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学化学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_3_6" id="__nav_2_1_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大学化学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%EF%BC%881%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学分析（1）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80%E6%B3%95%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理基础法语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../semester2/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    综合法语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二学年
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二学年
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year2/semester1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二上学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二上学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year2/semester2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二下学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二下学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year2/semester2/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%EF%BC%883%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学分析（3）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year2/semester2/%E5%87%A0%E4%BD%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    几何
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../campus-life/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    校园生活指南
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    校园生活指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/housing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    住宿
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/dining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    餐饮
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/transportation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    交通出行
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/culture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文化与活动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../postscript/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    后记
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    后记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="页面目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      页面目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 整除关系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 整除关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 因子与倍数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 带余除法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 素数、最大公约数与最小公倍数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 素数、最大公约数与最小公倍数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 素数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 最大公约数与最小公倍数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-bezout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 辗转相除法与 Bézout 恒等式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 唯一素因子分解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心公式速查表
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">第六章 整除关系<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">学习目标</p>
+<ul>
+<li>整除的定义与性质。</li>
+<li>带余除法（注意负数的情况）。</li>
+<li>素数与唯一分解定理。</li>
+<li>辗转相除法在最大公约数以及 Bézout 恒等式的应用。</li>
+</ul>
+</div>
+<hr />
+<h2 id="1">1 整除关系<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 因子与倍数<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Remark 1.1 — 良序原理</p>
+<p>任意子集 <span class="arithmatex">\(S \subseteq \mathbb{N}\)</span> 均含有最小元，即存在 <span class="arithmatex">\(m \in S\)</span> 使得 <span class="arithmatex">\(\forall x \in S, m \leq x\)</span>.</p>
+</div>
+<hr />
+<p><strong>Definition 1.2 — 整除</strong></p>
+<p>设 <span class="arithmatex">\(a, b \in \mathbb{Z}\)</span>。若存在 <span class="arithmatex">\(k \in \mathbb{Z}\)</span> 使 <span class="arithmatex">\(a = kb\)</span>，则称 <span class="arithmatex">\(b\)</span> <strong>整除</strong> <span class="arithmatex">\(a\)</span>，记作 <span class="arithmatex">\(b \mid a\)</span>（否则记作 <span class="arithmatex">\(b \nmid a\)</span>）。此时也称 <span class="arithmatex">\(b\)</span> 是 <span class="arithmatex">\(a\)</span> 的**因子**（或因数），<span class="arithmatex">\(a\)</span> 是 <span class="arithmatex">\(b\)</span> 的**倍数**。</p>
+<div class="admonition tip">
+<p class="admonition-title">Remark 1.3</p>
+<ul>
+<li>全体倍数记作 <span class="arithmatex">\(b\mathbb{Z} = \{bq \mid q \in \mathbb{Z}\}\)</span>。</li>
+<li><span class="arithmatex">\(1\)</span> 与 <span class="arithmatex">\(-1\)</span> 整除所有整数；<span class="arithmatex">\(0\)</span> 是任何整数的倍数，但只被自身整除。</li>
+</ul>
+</div>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Proposition 1.4 — 整除的基本性质</p>
+<p>设 <span class="arithmatex">\(a, b, d \in \mathbb{Z}\)</span>。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(i) 自反性</td>
+<td><span class="arithmatex">\(a \mid a\)</span></td>
+</tr>
+<tr>
+<td>(ii) 传递性</td>
+<td>若 <span class="arithmatex">\(d \mid a\)</span> 且 <span class="arithmatex">\(a \mid b\)</span>，则 <span class="arithmatex">\(d \mid b\)</span></td>
+</tr>
+<tr>
+<td>(iii) 线性组合</td>
+<td>若 <span class="arithmatex">\(d \mid a\)</span> 且 <span class="arithmatex">\(d \mid b\)</span>，则对任意 <span class="arithmatex">\(u, v \in \mathbb{Z}\)</span> 有 <span class="arithmatex">\(d \mid (au + bv)\)</span></td>
+</tr>
+<tr>
+<td>(iv) 消去律</td>
+<td>设 <span class="arithmatex">\(n \in \mathbb{N}_{\geq 1}\)</span>，则 <span class="arithmatex">\(bn \mid an \iff b \mid a\)</span></td>
+</tr>
+<tr>
+<td>(v) 大小估计</td>
+<td>若 <span class="arithmatex">\(a \neq 0\)</span> 且 <span class="arithmatex">\(b \mid a\)</span>，则 <span class="arithmatex">\(\lvert b\rvert \leq \lvert a\rvert\)</span>，故非零整数的因子有限</td>
+</tr>
+<tr>
+<td>(vi) 互为整除</td>
+<td><span class="arithmatex">\(a \mid b\)</span> 且 <span class="arithmatex">\(b \mid a \iff \lvert a\rvert = \lvert b\rvert\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p><strong>(i)</strong> <span class="arithmatex">\(a = a \cdot 1\)</span>，因此 <span class="arithmatex">\(a \mid a\)</span>。</p>
+<p><strong>(ii)</strong> 由 <span class="arithmatex">\(d \mid a\)</span>, <span class="arithmatex">\(a \mid b\)</span>，存在 <span class="arithmatex">\(k, \ell \in \mathbb{Z}\)</span> 使得 <span class="arithmatex">\(a = dk\)</span>, <span class="arithmatex">\(b = a\ell\)</span>。故 <span class="arithmatex">\(b = d(k\ell)\)</span>，因此 <span class="arithmatex">\(d \mid b\)</span>。</p>
+<p><strong>(iii)</strong> 若 <span class="arithmatex">\(d \mid a\)</span>, <span class="arithmatex">\(d \mid b\)</span>，则存在 <span class="arithmatex">\(k, \ell \in \mathbb{Z}\)</span> 使得 <span class="arithmatex">\(a = dk\)</span>, <span class="arithmatex">\(b = d\ell\)</span>，于是 <span class="arithmatex">\(au + bv = d(ku + \ell v)\)</span>。因此 <span class="arithmatex">\(d \mid (au + bv)\)</span>。</p>
+<p><strong>(iv)</strong> 若 <span class="arithmatex">\(bn \mid an\)</span>，则存在 <span class="arithmatex">\(k \in \mathbb{Z}\)</span> 使得 <span class="arithmatex">\(an = bn \cdot k\)</span>，所以 <span class="arithmatex">\(a = bk\)</span>（因 <span class="arithmatex">\(n \neq 0\)</span>），反之显然。</p>
+<p><strong>(v)</strong> 若 <span class="arithmatex">\(a \neq 0\)</span> 且 <span class="arithmatex">\(b \mid a\)</span>，则存在 <span class="arithmatex">\(k \in \mathbb{Z} \setminus \{0\}\)</span> 使得 <span class="arithmatex">\(a = bk\)</span>。故 <span class="arithmatex">\(\lvert a\rvert = \lvert b\rvert \cdot \lvert k\rvert \geq \lvert b\rvert\)</span>。</p>
+<p><strong>(vi)</strong> 若 <span class="arithmatex">\(a \mid b\)</span>, <span class="arithmatex">\(b \mid a\)</span>，则存在 <span class="arithmatex">\(k, \ell \in \mathbb{Z}\)</span> 使得 <span class="arithmatex">\(b = ak\)</span>, <span class="arithmatex">\(a = b\ell\)</span>。于是 <span class="arithmatex">\(a = a(k\ell)\)</span>。若 <span class="arithmatex">\(a \neq 0\)</span> 则 <span class="arithmatex">\(k\ell = 1\)</span>，因此 <span class="arithmatex">\(\lvert k\rvert = \lvert \ell\rvert = 1\)</span>，由此可知 <span class="arithmatex">\(\lvert a\rvert = \lvert b\rvert\)</span>；若 <span class="arithmatex">\(a = 0\)</span> 则 <span class="arithmatex">\(b = 0\)</span>，亦满足。反之，若 <span class="arithmatex">\(\lvert a\rvert = \lvert b\rvert\)</span> 显然互相整除。</p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Remark 1.5</p>
+<p>由 (v) 可知，若 <span class="arithmatex">\(\lvert b\rvert &gt; \lvert a\rvert\)</span>，则 <span class="arithmatex">\(b \nmid a\)</span>。</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 1.6 — 平凡与非平凡分解</p>
+<p>整数 <span class="arithmatex">\(220\)</span> 可写成</p>
+<div class="arithmatex">\[220 = 2 \times 110,\; 220 = (-1) \times (-220),\; 220 = 220 \times 1,\; 220 = 20 \times 11.\]</div>
+<p>其中 <span class="arithmatex">\(220 = (-1) \times (-220)\)</span> 与 <span class="arithmatex">\(220 = 220 \times 1\)</span> 称为**平凡分解**，其余为**非平凡分解**。</p>
+</div>
+<hr />
+<h3 id="12">1.2 带余除法<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 1.7 — 带余除法</p>
+<p>对任意 <span class="arithmatex">\(a \in \mathbb{Z}\)</span> 与 <span class="arithmatex">\(b \in \mathbb{Z}\)</span>，存在唯一的 <span class="arithmatex">\((q, r) \in \mathbb{Z} \times \mathbb{N}\)</span> 满足</p>
+<div class="arithmatex">\[a = bq + r, \quad 0 \leq r &lt; \lvert b\rvert.\]</div>
+<p><span class="arithmatex">\(q\)</span> 称为**商**，<span class="arithmatex">\(r\)</span> 称为**余数**。特别地，<span class="arithmatex">\(b \mid a \iff\)</span> 余数 <span class="arithmatex">\(r = 0\)</span>。</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p><strong>存在性：</strong> 令 <span class="arithmatex">\(q = \left\lfloor \frac{a}{\lvert b\rvert} \right\rfloor \cdot \sgn(b)\)</span>, <span class="arithmatex">\(r = a - bq\)</span>. 由向下取整定义有 <span class="arithmatex">\(0 \leq \frac{a}{\lvert b\rvert} - \left\lfloor \frac{a}{\lvert b\rvert} \right\rfloor &lt; 1\)</span>，两边乘以正数 <span class="arithmatex">\(\lvert b\rvert\)</span> 得 <span class="arithmatex">\(0 \leq a - \lvert b\rvert\left\lfloor \frac{a}{\lvert b\rvert} \right\rfloor &lt; \lvert b\rvert\)</span>. 注意到 <span class="arithmatex">\(b = \lvert b\rvert \cdot \sgn(b)\)</span>，于是 <span class="arithmatex">\(r = a - bq = a - \lvert b\rvert\left\lfloor \frac{a}{\lvert b\rvert} \right\rfloor\)</span> 满足 <span class="arithmatex">\(0 \leq r &lt; \lvert b\rvert\)</span>。</p>
+<p><strong>唯一性：</strong> 假设另有 <span class="arithmatex">\((q', r')\)</span> 满足 <span class="arithmatex">\(a = bq' + r'\)</span>, <span class="arithmatex">\(0 \leq r' &lt; \lvert b\rvert\)</span>. 两式相减得 <span class="arithmatex">\(b(q - q') = r' - r\)</span>. 于是 <span class="arithmatex">\(b \mid r' - r\)</span>. 但 <span class="arithmatex">\(\lvert r' - r\rvert &lt; \lvert b\rvert\)</span>，由 Remark 1.5，必有 <span class="arithmatex">\(r' - r = 0\)</span>，即 <span class="arithmatex">\(r' = r\)</span>，进而 <span class="arithmatex">\(q' = q\)</span>。</p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Remark 1.8</p>
+<p>注意这边我们不要求 <span class="arithmatex">\(a\)</span>、<span class="arithmatex">\(b\)</span> 为正整数。</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 1.9</p>
+<p>对 <span class="arithmatex">\(a = -17\)</span>, <span class="arithmatex">\(b = 5\)</span>：<span class="arithmatex">\(-17 = 5 \cdot (-4) + 3\)</span>，<span class="arithmatex">\(0 \leq 3 &lt; 5\)</span>. 故商 <span class="arithmatex">\(q = -4\)</span>，余数 <span class="arithmatex">\(r = 3\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 1.10</p>
+<p>对 <span class="arithmatex">\(a = 53\)</span>, <span class="arithmatex">\(b = -7\)</span>：<span class="arithmatex">\(53 = (-7) \cdot (-7) + 4\)</span>，<span class="arithmatex">\(0 \leq 4 &lt; 7\)</span>. 故商 <span class="arithmatex">\(q = -7\)</span>，余数 <span class="arithmatex">\(r = 4\)</span>.</p>
+</div>
+<hr />
+<h2 id="2">2 素数、最大公约数与最小公倍数<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 素数<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p><strong>Definition 2.1 — 素数</strong></p>
+<p>若整数 <span class="arithmatex">\(p \geq 2\)</span> 的正因子只有 <span class="arithmatex">\(1\)</span> 与 <span class="arithmatex">\(p\)</span>，则称 <span class="arithmatex">\(p\)</span> 为**素数**。</p>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Theorem 2.2 — 欧几里得</p>
+<p>(i) 任何 <span class="arithmatex">\(n \geq 2\)</span> 都有素因子。</p>
+<p>(ii) 素数集合无限。</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p><strong>(i)</strong> 对 <span class="arithmatex">\(n \geq 2\)</span>，设 <span class="arithmatex">\(P(n): n\)</span> 有素因子。用第二数学归纳法证明。</p>
+<ul>
+<li><strong>初始：</strong> <span class="arithmatex">\(n = 2\)</span> 时，<span class="arithmatex">\(p = 2\)</span> 本身就是 <span class="arithmatex">\(n\)</span> 的素因子。</li>
+<li><strong>归纳：</strong> 设 <span class="arithmatex">\(n \geq 2\)</span>，并假设所有 <span class="arithmatex">\(k \in \{2, 3, \ldots, n\}\)</span> 都有素因子。下证 <span class="arithmatex">\(n+1\)</span> 也满足：<ul>
+<li>若 <span class="arithmatex">\(n+1\)</span> 是素数，则 <span class="arithmatex">\(p = n+1\)</span> 就是素因子。</li>
+<li>若 <span class="arithmatex">\(n+1\)</span> 不是素数，则存在正因子 <span class="arithmatex">\(d\)</span>（<span class="arithmatex">\(d \neq 1\)</span> 且 <span class="arithmatex">\(d \neq n+1\)</span>）。于是 <span class="arithmatex">\(d \in \{2, \ldots, n\}\)</span>。由归纳假设，可取素数 <span class="arithmatex">\(p \mid d\)</span>。由传递性 <span class="arithmatex">\(p \mid n+1\)</span>。</li>
+</ul>
+</li>
+</ul>
+<p>综上，<span class="arithmatex">\(n+1\)</span> 必有素因子。</p>
+<p><strong>(ii)</strong> 反证法。假设素数只有有限个 <span class="arithmatex">\(p_1, p_2, \ldots, p_k\)</span>。构造 <span class="arithmatex">\(N = p_1 p_2 \cdots p_k + 1\)</span>. 由于 <span class="arithmatex">\(N \geq 2\)</span>，由 (i) 知存在素数 <span class="arithmatex">\(p \mid N\)</span>。按假设 <span class="arithmatex">\(p\)</span> 必等于某个 <span class="arithmatex">\(p_i\)</span>，于是 <span class="arithmatex">\(p \mid p_1 p_2 \cdots p_k\)</span>。从而 <span class="arithmatex">\(p \mid (N - p_1 p_2 \cdots p_k) = 1\)</span>，矛盾。</p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Example 2.3</p>
+<ul>
+<li><span class="arithmatex">\(2\)</span> 是唯一的偶素数。</li>
+<li><span class="arithmatex">\(3\)</span> 是最小的奇素数。</li>
+<li><span class="arithmatex">\(4\)</span> 不是素数（有额外正因子 <span class="arithmatex">\(2\)</span>）；<span class="arithmatex">\(6\)</span> 也不是素数（正因子为 <span class="arithmatex">\(1, 2, 3, 6\)</span>）。</li>
+</ul>
+</div>
+<hr />
+<h3 id="22">2.2 最大公约数与最小公倍数<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p><strong>Definition 2.4 — 最大公约数（法语缩写 PGCD）</strong></p>
+<p>对任意 <span class="arithmatex">\(a, b \in \mathbb{Z}\)</span>，若整数 <span class="arithmatex">\(d \in \mathbb{N}\)</span> 满足</p>
+<ul>
+<li><span class="arithmatex">\(d \mid a\)</span> 且 <span class="arithmatex">\(d \mid b\)</span>（<span class="arithmatex">\(d\)</span> 是公约数）；</li>
+<li>对任意整数 <span class="arithmatex">\(c\)</span>，若 <span class="arithmatex">\(c \mid a\)</span> 且 <span class="arithmatex">\(c \mid b\)</span>，则 <span class="arithmatex">\(c \mid d\)</span>（<span class="arithmatex">\(d\)</span> 被所有公约数整除），</li>
+</ul>
+<p>则称 <span class="arithmatex">\(d\)</span> 为 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(b\)</span> 的**最大公约数**，记作 <span class="arithmatex">\(\gcd(a, b)\)</span>。若 <span class="arithmatex">\(\gcd(a, b) = 1\)</span>，则称 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(b\)</span> <strong>互素</strong>（或互质）。</p>
+<hr />
+<p><strong>Definition 2.5 — 最小公倍数（法语缩写 PPCM）</strong></p>
+<p>对任意整数 <span class="arithmatex">\(a, b \in \mathbb{Z}\)</span>，若整数 <span class="arithmatex">\(m \in \mathbb{N}\)</span> 满足</p>
+<ul>
+<li><span class="arithmatex">\(a \mid m\)</span> 且 <span class="arithmatex">\(b \mid m\)</span>（<span class="arithmatex">\(m\)</span> 是公倍数）；</li>
+<li>对任意整数 <span class="arithmatex">\(k\)</span>，若 <span class="arithmatex">\(a \mid k\)</span> 且 <span class="arithmatex">\(b \mid k\)</span>，则 <span class="arithmatex">\(m \mid k\)</span>（<span class="arithmatex">\(m\)</span> 整除所有公倍数），</li>
+</ul>
+<p>则称 <span class="arithmatex">\(m\)</span> 为 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(b\)</span> 的**最小公倍数**，记作 <span class="arithmatex">\(\lcm(a, b)\)</span>。</p>
+<div class="admonition tip">
+<p class="admonition-title">Remark 2.6</p>
+<p><span class="arithmatex">\(a = b = 0 \iff \gcd(a, b) = 0\)</span>. 因此，若 <span class="arithmatex">\(a, b\)</span> 不全为 <span class="arithmatex">\(0\)</span>，则 <span class="arithmatex">\(\gcd(a, b) \geq 1\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 2.7</p>
+<p>设 <span class="arithmatex">\(a, b \in \mathbb{Z}\)</span>。若 <span class="arithmatex">\(a \mid b\)</span>，则 <span class="arithmatex">\(\gcd(a, b) = \lvert a\rvert\)</span>, <span class="arithmatex">\(\lcm(a, b) = \lvert b\rvert\)</span>. 例如：</p>
+<div class="arithmatex">\[\gcd(3, -9) = 3, \;\lcm(3, -9) = 9; \quad \gcd(123, 0) = 123, \;\lcm(123, 0) = 0; \quad \gcd(0, 0) = 0, \;\lcm(0, 0) = 0.\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Remark 2.8</p>
+<p>对任意 <span class="arithmatex">\(a \in \mathbb{Z}\)</span>，<span class="arithmatex">\(\gcd(a, 0) = \lvert a\rvert\)</span>, <span class="arithmatex">\(\lcm(a, 0) = 0\)</span>. 因此我们可以考虑两者都不为 <span class="arithmatex">\(0\)</span> 的情况。</p>
+</div>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Theorem 2.9 — 大小刻画</p>
+<p>对整数 <span class="arithmatex">\(a, b \in \mathbb{Z} \setminus \{0\}\)</span>，</p>
+<p>(i) <span class="arithmatex">\(\gcd(a, b)\)</span> 是集合 <span class="arithmatex">\(\{d \in \mathbb{N}_{\geq 1} : d \mid a \text{ 且 } d \mid b\}\)</span> 中的最大元（按通常大小序 <span class="arithmatex">\(\leq\)</span>）。</p>
+<p>(ii) <span class="arithmatex">\(\lcm(a, b)\)</span> 是集合 <span class="arithmatex">\(\{m \in \mathbb{N}_{\geq 1} : a \mid m \text{ 且 } b \mid m\}\)</span> 中的最小元（按同样大小序 <span class="arithmatex">\(\leq\)</span>）。</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p><strong>(i)</strong> 该集合非空（含 <span class="arithmatex">\(1\)</span>）且有上界 <span class="arithmatex">\(\lvert a\rvert\)</span>（因任何公约数不超过 <span class="arithmatex">\(\lvert a\rvert\)</span>），故必存在最大元，记为 <span class="arithmatex">\(g\)</span>。由最大性，任何公约数 <span class="arithmatex">\(d\)</span> 满足 <span class="arithmatex">\(d \leq g\)</span>，因此 <span class="arithmatex">\(g\)</span> 满足最大公约数的定义，且最大元唯一。</p>
+<p><strong>(ii)</strong> 该集合非空（含 <span class="arithmatex">\(\lvert ab\rvert\)</span>）且良序，故存在最小元，记为 <span class="arithmatex">\(\ell\)</span>。由最小性，任何公倍数 <span class="arithmatex">\(m\)</span> 满足 <span class="arithmatex">\(\ell \leq m\)</span>，因此 <span class="arithmatex">\(\ell\)</span> 满足最小公倍数的定义，且最小元唯一。</p>
+</details>
+<hr />
+<h3 id="23-bezout">2.3 辗转相除法与 Bézout 恒等式<a class="headerlink" href="#23-bezout" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Lemma 2.10 — 欧几里得引理</p>
+<p>若 <span class="arithmatex">\(a = bq + r\)</span>（<span class="arithmatex">\(0 \leq r &lt; \lvert b\rvert\)</span>），则 <span class="arithmatex">\(\gcd(a, b) = \gcd(b, r)\)</span>.</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p>令 <span class="arithmatex">\(d = \gcd(a, b)\)</span>, <span class="arithmatex">\(d' = \gcd(b, r)\)</span>.</p>
+<ol>
+<li>因 <span class="arithmatex">\(d \mid a\)</span> 且 <span class="arithmatex">\(d \mid b\)</span>，由 <span class="arithmatex">\(r = a - bq\)</span> 得 <span class="arithmatex">\(d \mid r\)</span>，故 <span class="arithmatex">\(d\)</span> 是 <span class="arithmatex">\(b, r\)</span> 的公约数。由 Proposition 1.4 (v)，<span class="arithmatex">\(d \leq d'\)</span>.</li>
+<li>反之，<span class="arithmatex">\(d' \mid b\)</span> 且 <span class="arithmatex">\(d' \mid r\)</span>，故 <span class="arithmatex">\(d' \mid bq + r = a\)</span>，于是 <span class="arithmatex">\(d'\)</span> 也是 <span class="arithmatex">\(a, b\)</span> 的公约数，从而 <span class="arithmatex">\(d' \leq d\)</span>.</li>
+</ol>
+<p>综上 <span class="arithmatex">\(d = d'\)</span>.</p>
+</details>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Remark 2.11 — 辗转相除法（欧几里得算法）</p>
+<ul>
+<li><strong>输入：</strong> 整数 <span class="arithmatex">\(a, b\)</span>，不全为零。</li>
+<li><strong>输出：</strong> <span class="arithmatex">\(\gcd(a, b)\)</span>。</li>
+</ul>
+<p>步骤：</p>
+<p>(i) 关键思路：反复执行带余除法 <span class="arithmatex">\(a = bq + r\)</span>, <span class="arithmatex">\(0 \leq r &lt; \lvert b\rvert\)</span>，直至余数为零；此时以 <span class="arithmatex">\(\lvert b\rvert\)</span> 作为当前最大公约数。</p>
+<p>(ii) 更新规则：每次迭代令 <span class="arithmatex">\((a, b) \leftarrow (b, r)\)</span>.</p>
+<p>(iii) 终止条件：当 <span class="arithmatex">\(b = 0\)</span> 时停止，输出 <span class="arithmatex">\(\lvert a\rvert\)</span>.</p>
+</div>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">典型例题 — Example 2.12</p>
+<p>求 <span class="arithmatex">\(a = 1071\)</span> 与 <span class="arithmatex">\(b = 462\)</span> 的最大公约数。</p>
+</div>
+<details class="note">
+<summary>题目解析</summary>
+<p>由辗转相除法：</p>
+<div class="arithmatex">\[\begin{aligned}
+1071 &amp;= 2 \cdot 462 + 147, \\
+462 &amp;= 3 \cdot 147 + 21, \\
+147 &amp;= 7 \cdot 21 + 0.
+\end{aligned}\]</div>
+<p>末次非零余数为 <span class="arithmatex">\(21\)</span>，故 <span class="arithmatex">\(\gcd(1071, 462) = 21\)</span>。由 Proposition 2.23，<span class="arithmatex">\(\lcm(1071, 462) = \frac{1071 \times 462}{\gcd(1071, 462)} = 23562\)</span>.</p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Remark 2.13</p>
+<p>也可以写成：<span class="arithmatex">\(\gcd(1071, 462) = \gcd(1071 - 2 \times 462, 462) = \gcd(147, 462) = \gcd(147, 462 - 3 \times 147) = \gcd(147, 21) = 21\)</span>.</p>
+</div>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">典型例题 — Example 2.14</p>
+<p>求 <span class="arithmatex">\(a = 884\)</span> 与 <span class="arithmatex">\(b = -260\)</span> 的最大公约数。</p>
+</div>
+<details class="note">
+<summary>题目解析</summary>
+<p>由辗转相除法：</p>
+<div class="arithmatex">\[\begin{aligned}
+884 &amp;= (-3) \cdot (-260) + 104, \\
+-260 &amp;= (-3) \cdot 104 + 52, \\
+104 &amp;= 2 \cdot 52 + 0.
+\end{aligned}\]</div>
+<p>末次非零余数为 <span class="arithmatex">\(52\)</span>，故 <span class="arithmatex">\(\gcd(884, -260) = 52\)</span>。<span class="arithmatex">\(\lcm(884, -260) = \frac{884 \times 260}{52} = 4420\)</span>.</p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Remark 2.15</p>
+<p>也可以写成：<span class="arithmatex">\(\gcd(884, -260) = \gcd(884, 260) = \gcd(884 - 3 \times 260, 260) = \gcd(104, 260) = \gcd(104, 260 - 2 \times 104) = \gcd(104, 52) = 52\)</span>.</p>
+</div>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Theorem 2.16 — Bézout 定理</p>
+<p>对任意 <span class="arithmatex">\(a, b \in \mathbb{Z}\)</span>，存在 <span class="arithmatex">\((u, v) \in \mathbb{Z}^2\)</span> 使得</p>
+<div class="arithmatex">\[au + bv = \gcd(a, b).\]</div>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p>不妨设 <span class="arithmatex">\(b \neq 0\)</span>（否则 <span class="arithmatex">\(\gcd(a, 0) = \lvert a\rvert\)</span>，取 <span class="arithmatex">\(u = \sgn(a), v = 0\)</span> 即可）。对整数 <span class="arithmatex">\(b\)</span> 做欧几里得算法：</p>
+<div class="arithmatex">\[\begin{aligned}
+a &amp;= bq_0 + r_1, &amp; 0 &amp;&lt; r_1 &lt; \lvert b\rvert, \\
+b &amp;= r_1 q_1 + r_2, &amp; 0 &amp;&lt; r_2 &lt; r_1, \\
+r_1 &amp;= r_2 q_2 + r_3, &amp; 0 &amp;&lt; r_3 &lt; r_2, \\
+&amp;\;\;\vdots \\
+r_{k-2} &amp;= r_{k-1} q_{k-1} + r_k, &amp; 0 &amp;&lt; r_k &lt; r_{k-1}, \\
+r_{k-1} &amp;= r_k q_k + 0.
+\end{aligned}\]</div>
+<p>末次非零余数 <span class="arithmatex">\(r_k\)</span> 即为 <span class="arithmatex">\(\gcd(a, b)\)</span>。从倒数第二式开始，依次把 <span class="arithmatex">\(r_k\)</span> 表成前两项的整系数线性组合：<span class="arithmatex">\(r_k = r_{k-2} - r_{k-1} q_{k-1}\)</span>. 再向上回代，每次消去中间余数，最终得到 <span class="arithmatex">\(r_k = au + bv\)</span>, <span class="arithmatex">\(u, v \in \mathbb{Z}\)</span>.</p>
+</details>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Corollary 2.17</p>
+<p>令 <span class="arithmatex">\(a, b, m \in \mathbb{Z}\)</span>。则 <span class="arithmatex">\(\gcd(a, b) \mid m \iff\)</span> 存在 <span class="arithmatex">\((u, v) \in \mathbb{Z}^2\)</span> 使得 <span class="arithmatex">\(au + bv = m\)</span>.</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(d = \gcd(a, b)\)</span>。</p>
+<ul>
+<li><strong><span class="arithmatex">\(\Longrightarrow\)</span>：</strong> 若 <span class="arithmatex">\(d \mid m\)</span>，则存在 <span class="arithmatex">\(k \in \mathbb{Z}\)</span> 使得 <span class="arithmatex">\(m = dk\)</span>。根据 Bézout 定理，存在 <span class="arithmatex">\(u_0, v_0 \in \mathbb{Z}\)</span> 使得 <span class="arithmatex">\(au_0 + bv_0 = d\)</span>. 两边乘以 <span class="arithmatex">\(k\)</span> 得 <span class="arithmatex">\(a(u_0 k) + b(v_0 k) = m\)</span>.</li>
+<li><strong><span class="arithmatex">\(\Longleftarrow\)</span>：</strong> 若存在 <span class="arithmatex">\(u, v \in \mathbb{Z}\)</span> 使 <span class="arithmatex">\(au + bv = m\)</span>。因为 <span class="arithmatex">\(d \mid a\)</span> 且 <span class="arithmatex">\(d \mid b\)</span>，所以 <span class="arithmatex">\(d \mid (au + bv)\)</span>，从而 <span class="arithmatex">\(d \mid m\)</span>.</li>
+</ul>
+</details>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Corollary 2.18</p>
+<p>设 <span class="arithmatex">\(a, b \in \mathbb{Z}\)</span> 不全为 <span class="arithmatex">\(0\)</span>。则 <span class="arithmatex">\(a, b\)</span> 互素 <span class="arithmatex">\(\iff\)</span> 存在 <span class="arithmatex">\(m, n \in \mathbb{Z}\)</span> 使 <span class="arithmatex">\(am + bn = 1\)</span>.</p>
+</div>
+<hr />
+<div class="admonition info">
+<p class="admonition-title">Remark 2.19 — 扩展欧几里得算法</p>
+<p>对任意非零 <span class="arithmatex">\(a, b \in \mathbb{Z}\)</span>，按下表迭代可得到 <span class="arithmatex">\(\gcd(a, b)\)</span> 及 Bézout 系数 <span class="arithmatex">\(x, y\)</span>：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(x\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(y\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(q\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(ax+by\)</span></th>
+<th>辗转相除法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(a\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(b\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-q_0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(q_0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(r_1\)</span></td>
+<td><span class="arithmatex">\(a = bq_0 + r_1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\cdots\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cdots\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cdots\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cdots\)</span></td>
+<td><span class="arithmatex">\(\cdots\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(x_{k-1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(y_{k-1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(q_{k-1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(r_k\)</span></td>
+<td><span class="arithmatex">\(r_{k-2} = r_{k-1}q_{k-1} + r_k\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(x_k\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(y_k\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(q_k\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(r_{k+1}\)</span></td>
+<td><span class="arithmatex">\(r_{k-1} = r_k q_k + r_{k+1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>每一步用上一行对当前行做带余除法，直至余数为 <span class="arithmatex">\(0\)</span>。倒数第二行的 <span class="arithmatex">\(x, y\)</span> 即为所求。</p>
+</div>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">典型例题 — Example 2.20</p>
+<p>求 <span class="arithmatex">\(\gcd(19, 7)\)</span> 及 Bézout 系数。</p>
+</div>
+<details class="note">
+<summary>题目解析</summary>
+<div class="arithmatex">\[\begin{aligned}
+19 &amp;= 2 \cdot 7 + 5, \\
+7 &amp;= 1 \cdot 5 + 2, \\
+5 &amp;= 2 \cdot 2 + 1.
+\end{aligned}\]</div>
+<p>倒代得 <span class="arithmatex">\(1 = 3 \cdot 19 - 8 \cdot 7\)</span>，故 <span class="arithmatex">\((u, v) = (3, -8)\)</span> 是一组 Bézout 系数。</p>
+</details>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">典型例题 — Example 2.21</p>
+<p>求 <span class="arithmatex">\(\gcd(437, 667)\)</span> 及 Bézout 系数。</p>
+</div>
+<details class="note">
+<summary>题目解析</summary>
+<p>迭代过程如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(x\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(y\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(q\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(ax+by\)</span></th>
+<th>辗转相除法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(437\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(667\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(437\)</span></td>
+<td><span class="arithmatex">\(437 = 667 \times 0 + 437\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(-1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(230\)</span></td>
+<td><span class="arithmatex">\(667 = 437 \times 1 + 230\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(207\)</span></td>
+<td><span class="arithmatex">\(437 = 230 \times 1 + 207\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(-3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(23\)</span></td>
+<td><span class="arithmatex">\(230 = 207 \times 1 + 23\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="arithmatex">\(9\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td><span class="arithmatex">\(207 = 23 \times 9\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>得到 <span class="arithmatex">\(\gcd(437, 667) = 23\)</span>，且 <span class="arithmatex">\((-3) \cdot 437 + 2 \cdot 667 = 23\)</span>.</p>
+</details>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Lemma 2.22 — 高斯引理</p>
+<p>设 <span class="arithmatex">\(a, b, d \in \mathbb{Z}\)</span>。若 <span class="arithmatex">\(d \mid ab\)</span> 且 <span class="arithmatex">\(\gcd(a, d) = 1\)</span>，则 <span class="arithmatex">\(d \mid b\)</span>.</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p>由 <span class="arithmatex">\(\gcd(a, d) = 1\)</span> 知存在整数 <span class="arithmatex">\(x, y\)</span> 使 <span class="arithmatex">\(ax + dy = 1\)</span>. 两边同乘 <span class="arithmatex">\(b\)</span> 得 <span class="arithmatex">\((ab)x + (bd)y = b\)</span>. 因 <span class="arithmatex">\(d \mid ab\)</span>，故 <span class="arithmatex">\(d\)</span> 整除左侧两项，从而 <span class="arithmatex">\(d \mid b\)</span>.</p>
+</details>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Proposition 2.23 — gcd 与 lcm 的数量关系</p>
+<p>对 <span class="arithmatex">\(a, b \in \mathbb{Z}\)</span> 有</p>
+<div class="arithmatex">\[\gcd(a, b) \cdot \lcm(a, b) = \lvert ab\rvert.\]</div>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p>令 <span class="arithmatex">\(d = \gcd(a, b)\)</span>。由定义，存在 <span class="arithmatex">\(x, y \in \mathbb{Z}\)</span> 使得 <span class="arithmatex">\(a = dx\)</span>, <span class="arithmatex">\(b = dy\)</span>, <span class="arithmatex">\(\gcd(x, y) = 1\)</span>.</p>
+<p>下面证明 <span class="arithmatex">\(\lcm(a, b) = \lvert dxy\rvert\)</span>。首先 <span class="arithmatex">\(a \mid \lvert dxy\rvert = \lvert ay\rvert\)</span>, <span class="arithmatex">\(b \mid \lvert dxy\rvert\)</span>，则 <span class="arithmatex">\(\lvert dxy\rvert\)</span> 是 <span class="arithmatex">\(a, b\)</span> 的公倍数。令 <span class="arithmatex">\(m\)</span> 是 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(b\)</span> 的任一公倍数，设 <span class="arithmatex">\(m = aa_1 = bb_1\)</span>，其中 <span class="arithmatex">\(a_1, b_1 \in \mathbb{Z}\)</span>。则 <span class="arithmatex">\(m = dxa_1 = dyb_1\)</span>，<span class="arithmatex">\(xa_1 = yb_1\)</span>. 由 <span class="arithmatex">\(\gcd(x, y) = 1\)</span> 且 <span class="arithmatex">\(x \mid yb_1\)</span>，得 <span class="arithmatex">\(x \mid b_1\)</span>（高斯引理）。设 <span class="arithmatex">\(b_1 = xt\)</span>，则 <span class="arithmatex">\(m = bb_1 = (dy)(xt) = dxyt\)</span>. 所以 <span class="arithmatex">\(\lvert dxy\rvert \mid m\)</span>. 上述过程对任意公倍数 <span class="arithmatex">\(m\)</span> 成立，所以 <span class="arithmatex">\(\lcm(a, b) = \lvert dxy\rvert\)</span>，从而 <span class="arithmatex">\(\gcd(a, b) \cdot \lcm(a, b) = d \cdot \lvert dxy\rvert = \lvert d^2 xy\rvert = \lvert ab\rvert\)</span>.</p>
+</details>
+<hr />
+<h3 id="24">2.4 唯一素因子分解<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Proposition 2.24 — 素数整除乘积</p>
+<p>设 <span class="arithmatex">\(p\)</span> 为素数，<span class="arithmatex">\(k \geq 1\)</span>，<span class="arithmatex">\(n_1, \ldots, n_k \in \mathbb{Z}\)</span>。若 <span class="arithmatex">\(p \mid n_1 \cdots n_k\)</span>，则 <span class="arithmatex">\(\exists i, p \mid n_i\)</span>.</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p>对 <span class="arithmatex">\(k \in \mathbb{N}_{\geq 1}\)</span>，设 <span class="arithmatex">\(P(k)\)</span>: 对任意 <span class="arithmatex">\(n_1, \ldots, n_k \in \mathbb{Z}\)</span>，若 <span class="arithmatex">\(p \mid n_1 \cdots n_k\)</span>，则存在 <span class="arithmatex">\(i\)</span> 使得 <span class="arithmatex">\(p \mid n_i\)</span>.</p>
+<ul>
+<li><strong>初始：</strong> <span class="arithmatex">\(k = 1\)</span> 时显然成立。</li>
+<li><strong>归纳：</strong> 设结论对 <span class="arithmatex">\(k\)</span> 成立，考虑 <span class="arithmatex">\(N = n_1 \cdots n_k \cdot n_{k+1}\)</span>. 记 <span class="arithmatex">\(A = n_1 \cdots n_k\)</span>，则 <span class="arithmatex">\(N = A \cdot n_{k+1}\)</span>.</li>
+</ul>
+<p>若 <span class="arithmatex">\(p \mid n_{k+1}\)</span>，则已得证；否则 <span class="arithmatex">\(p \nmid n_{k+1}\)</span>，因 <span class="arithmatex">\(p\)</span> 为素数，故 <span class="arithmatex">\(\gcd(p, n_{k+1}) = 1\)</span>. 由高斯引理得 <span class="arithmatex">\(p \mid A\)</span>. 由归纳假设，存在 <span class="arithmatex">\(i \in \{1, \ldots, k\}\)</span> 使 <span class="arithmatex">\(p \mid n_i\)</span>. 综上所述，<span class="arithmatex">\(P(k+1)\)</span> 成立。</p>
+</details>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Theorem 2.25 — 唯一素因子分解（算术基本定理）</p>
+<p>任何整数 <span class="arithmatex">\(n \in \mathbb{Z} \setminus \{0, -1, 1\}\)</span> 可唯一地写成</p>
+<div class="arithmatex">\[n = \varepsilon p_1 p_2 \cdots p_m,\]</div>
+<p>其中 <span class="arithmatex">\(\varepsilon \in \{-1, 1\}\)</span>，<span class="arithmatex">\(m \geq 1\)</span>，<span class="arithmatex">\(p_i\)</span> 为素数（不计顺序唯一）。</p>
+</div>
+<details class="note">
+<summary>证明</summary>
+<p>只需证明 <span class="arithmatex">\(n \in \mathbb{N}_{\geq 2}\)</span> 的情况（负数情况由 <span class="arithmatex">\(-n\)</span> 可得）。</p>
+<p><strong>存在性：</strong> 对 <span class="arithmatex">\(n \geq 2\)</span> 做第二数学归纳法。</p>
+<ul>
+<li><strong>初始：</strong> <span class="arithmatex">\(n = 2\)</span> 已是素数，成立。</li>
+<li><strong>归纳：</strong> 设所有 <span class="arithmatex">\(2 \leq k &lt; n\)</span> 皆可表为素数乘积。若 <span class="arithmatex">\(n\)</span> 为素数，则自身即为一项；若 <span class="arithmatex">\(n\)</span> 为合数，则 <span class="arithmatex">\(n = ab\)</span>（<span class="arithmatex">\(1 &lt; a, b &lt; n\)</span>）。由归纳假设，<span class="arithmatex">\(a, b\)</span> 皆可表为素数乘积，合并即得 <span class="arithmatex">\(n\)</span> 的分解。</li>
+</ul>
+<p><strong>唯一性：</strong> 假设存在反例，取最小反例 <span class="arithmatex">\(n \geq 2\)</span>：<span class="arithmatex">\(n = p_1 \cdots p_r = q_1 \cdots q_s\)</span>（两组素因子不完全相同）。因 <span class="arithmatex">\(p_1 \mid n\)</span>，故 <span class="arithmatex">\(p_1 \mid q_1 \cdots q_s\)</span>。由 Proposition 2.24，存在 <span class="arithmatex">\(q_j\)</span> 使 <span class="arithmatex">\(p_1 \mid q_j\)</span>，于是 <span class="arithmatex">\(p_1 = q_j\)</span>. 两边约去 <span class="arithmatex">\(p_1\)</span> 后得到比 <span class="arithmatex">\(n\)</span> 小且仍有两组不同素因子的整数，与"最小反例"假设矛盾。</p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Example 2.26</p>
+<ul>
+<li><span class="arithmatex">\(360 = 2^3 \times 3^2 \times 5\)</span></li>
+<li><span class="arithmatex">\(60 = 2 \times 2 \times 3 \times 5 = 2^2 \times 3 \times 5\)</span></li>
+<li><span class="arithmatex">\(1001 = 7 \times 11 \times 13\)</span></li>
+<li><span class="arithmatex">\(-84 = -1 \times 2^2 \times 3 \times 7\)</span></li>
+</ul>
+</div>
+<hr />
+<h2 id="_2">核心公式速查表<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>公式/定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整除定义</td>
+<td><span class="arithmatex">\(b \mid a \iff \exists k \in \mathbb{Z}, a = kb\)</span></td>
+</tr>
+<tr>
+<td>带余除法</td>
+<td><span class="arithmatex">\(a = bq + r\)</span>, <span class="arithmatex">\(0 \leq r &lt; \lvert b\rvert\)</span></td>
+</tr>
+<tr>
+<td>欧几里得引理</td>
+<td><span class="arithmatex">\(\gcd(a, b) = \gcd(b, r)\)</span> 其中 <span class="arithmatex">\(a = bq + r\)</span></td>
+</tr>
+<tr>
+<td>Bézout 定理</td>
+<td><span class="arithmatex">\(\exists u, v \in \mathbb{Z}, au + bv = \gcd(a, b)\)</span></td>
+</tr>
+<tr>
+<td>互素刻画</td>
+<td><span class="arithmatex">\(\gcd(a, b) = 1 \iff \exists m, n, am + bn = 1\)</span></td>
+</tr>
+<tr>
+<td>高斯引理</td>
+<td><span class="arithmatex">\(\gcd(a, d) = 1\)</span> 且 <span class="arithmatex">\(d \mid ab \Rightarrow d \mid b\)</span></td>
+</tr>
+<tr>
+<td>gcd·lcm 关系</td>
+<td><span class="arithmatex">\(\gcd(a, b) \cdot \lcm(a, b) = \lvert ab\rvert\)</span></td>
+</tr>
+<tr>
+<td>唯一素因子分解</td>
+<td><span class="arithmatex">\(n = \varepsilon p_1 \cdots p_m\)</span>（不计顺序唯一）</td>
+</tr>
+<tr>
+<td>素数无限</td>
+<td>欧几里得反证法：<span class="arithmatex">\(p_1 \cdots p_k + 1\)</span></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<h2 id="__comments">评论</h2>
+<script src="https://giscus.app/client.js"
+  data-repo="Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA"
+  data-repo-id="R_kgDOTFxXaw"
+  data-category="General"
+  data-category-id="DIC_kwDOTFxXa84DAMmT"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async>
+</script>
+<script>
+  var giscus = document.querySelector("script[src*='giscus']");
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+    giscus.setAttribute("data-theme", theme);
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+    var ref = document.querySelector("[data-md-component='palette']");
+    if (ref) {
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette");
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+          var frame = document.querySelector(".giscus-frame");
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme: theme } } },
+            "https://giscus.app"
+          );
+        }
+      });
+    }
+  });
+</script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Noct-BUAA
+
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["header.autohide", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.tracking", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+  
+      <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/hero-scroll.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/gsap.min.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/extra.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/text-type.js"></script>
+      
+    
+  <script>
+    /* 供 MkDocs Material document$ 生命周期钩子使用 */
+    window.__mkdocs_site = "https://noct-buaa.github.io/Self-Help-Guide-of-BIFAST-BUAA/";
+  </script>
+
+  </body>
+</html>
