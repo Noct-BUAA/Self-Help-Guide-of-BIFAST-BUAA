@@ -106,9 +106,30 @@ nav:
             - 求和求积与计数原理: courses/year1/semester1/基础数学/课程讲义/05-sums-products-counting.md
             - 整除关系: courses/year1/semester1/基础数学/课程讲义/06-divisibility.md
         - 基础英语: courses/year1/semester1/基础英语/index.md
-        - 大学计算机基础: courses/year1/semester1/大学计算机基础/index.md
+        - 大学计算机基础:
+          - 课程总览: courses/year1/semester1/大学计算机基础/index.md
+          - 课程讲义:
+            - 第一次作业: courses/year1/semester1/大学计算机基础/课程讲义/第一次作业.md
+            - 第二次作业: courses/year1/semester1/大学计算机基础/课程讲义/第二次作业.md
+            - 第三次作业: courses/year1/semester1/大学计算机基础/课程讲义/第三次作业.md
+            - 第四次作业: courses/year1/semester1/大学计算机基础/课程讲义/第四次作业.md
+            - 第五次作业: courses/year1/semester1/大学计算机基础/课程讲义/第五次作业.md
+            - 第六次作业: courses/year1/semester1/大学计算机基础/课程讲义/第六次作业.md
+            - 第七次作业: courses/year1/semester1/大学计算机基础/课程讲义/第七次作业.md
         - 数理基础法语（1）: courses/year1/semester1/数理基础法语（1）/index.md
-        - 综合法语（1）: courses/year1/semester1/综合法语（1）/index.md
+        - 综合法语（1）:
+          - 课程总览: courses/year1/semester1/综合法语（1）/index.md
+          - 课程讲义:
+            - Unité 1 探索: courses/year1/semester1/综合法语（1）/课程讲义/01-unite1-decouvrez.md
+            - Unité 2 建立联系: courses/year1/semester1/综合法语（1）/课程讲义/02-unite2-entrez-en-contact.md
+            - Unité 3 互相认识: courses/year1/semester1/综合法语（1）/课程讲义/03-unite3-faites-connaissance.md
+            - Unité 4 组织外出: courses/year1/semester1/综合法语（1）/课程讲义/04-unite4-organisez-une-sortie.md
+            - Unité 5 日常生活: courses/year1/semester1/综合法语（1）/课程讲义/05-unite5-parlez-de-votre-quotidien.md
+            - Unité 6 分享经验: courses/year1/semester1/综合法语（1）/课程讲义/06-unite6-partagez-vos-experiences.md
+            - Unité 7 给出意见: courses/year1/semester1/综合法语（1）/课程讲义/07-unite7-donnez-votre-avis.md
+            - Unité 8 获取信息: courses/year1/semester1/综合法语（1）/课程讲义/08-unite8-informez-vous.md
+            - 口语考试指南: courses/year1/semester1/综合法语（1）/课程讲义/09-production-orale-a1.md
+            - 语法概要: courses/year1/semester1/综合法语（1）/课程讲义/10-precis-grammatical.md
         - 航空航天概论: courses/year1/semester1/航空航天概论/index.md
       - 大一下学期:
         - 学期概览: courses/year1/semester2/index.md
@@ -118,7 +139,16 @@ nav:
         - 基础英语（2）: courses/year1/semester2/基础英语（2）/index.md
         - 大学化学:
           - 课程总览: courses/year1/semester2/大学化学/index.md
-          - 课程讲义: courses/year1/semester2/大学化学/课程讲义/index.md
+          - 第1章 物质的状态与转化: courses/year1/semester2/大学化学/课程讲义/chapters/01-states-of-matter.md
+          - 第2章 原子结构和元素周期律: courses/year1/semester2/大学化学/课程讲义/chapters/02-atomic-structure.md
+          - 第3章 分子结构和共价键理论: courses/year1/semester2/大学化学/课程讲义/chapters/03-molecular-structure.md
+          - 第4章 晶体结构: courses/year1/semester2/大学化学/课程讲义/chapters/04-crystal-structure.md
+          - 第5章 化学热力学: courses/year1/semester2/大学化学/课程讲义/chapters/05-thermodynamics.md
+          - 第6章 化学反应速率: courses/year1/semester2/大学化学/课程讲义/chapters/06-reaction-rate.md
+          - 第7章 化学平衡: courses/year1/semester2/大学化学/课程讲义/chapters/07-chemical-equilibrium.md
+          - 第8章 酸碱平衡: courses/year1/semester2/大学化学/课程讲义/chapters/08-acid-base.md
+          - 第9章 沉淀溶解平衡: courses/year1/semester2/大学化学/课程讲义/chapters/09-precipitation.md
+          - 第10章 氧化还原反应与电化学: courses/year1/semester2/大学化学/课程讲义/chapters/10-redox-electrochemistry.md
         - 数学分析（1）: courses/year1/semester2/数学分析（1）/index.md
         - 数理基础法语（2）: courses/year1/semester2/数理基础法语（2）/index.md
         - 综合法语（2）: courses/year1/semester2/综合法语（2）/index.md
