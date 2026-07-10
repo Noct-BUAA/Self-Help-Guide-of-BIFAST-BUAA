@@ -11,23 +11,9 @@ title: 航空航天概论
 <p class="course-placeholder-action">欢迎通过 <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA">GitHub</a> 提交学习笔记或资源推荐。</p>
 </div>
 
-## 课程讲义
-
-<div class="course-placeholder" markdown>
-<p>讲义尚未上传。</p>
-<p class="course-placeholder-action">如果你有讲义笔记，欢迎贡献分享。</p>
-</div>
-
-## 学习资源
-
-<div class="course-placeholder" markdown>
-<p>暂无推荐学习资源。</p>
-<p class="course-placeholder-action">知道好的学习平台或参考书？通过 <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA">GitHub</a> 告诉我们。</p>
-</div>
-
 ## 备考建议
 
-<div class="course-placeholder" markdown>
-<p>备考建议正在收集中。</p>
-<p class="course-placeholder-action">欢迎分享你的备考经验和应试技巧。</p>
+<div class="admonition tip">
+<p class="admonition-title">考试备考</p>
+<p>请在<strong>航概信息查询小程序</strong>里完成航空航天概论相关题库练习，熟悉题型与知识点，这是备考的重要途径。</p>
 </div>
