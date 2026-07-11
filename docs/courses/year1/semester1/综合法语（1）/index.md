@@ -50,6 +50,20 @@ title: 综合法语（1）
 
 </div>
 
+!!! tip "📚 找书提示"
+    以上教材与练习册文件较大（20–30 MB），直链下载可能较慢。推荐前往 **Z-Library** 或镜像站（如 `zh.kgb101.ru`）搜索 *Inspire A1*，可获取更完整的电子版资源及配套音频。
+  <span class="card-arrow">查看详情 →</span>
+</a>
+
+<a class="card" href="课程讲义/10-precis-grammatical/">
+  <span class="card-num">语法</span>
+  <h3>Précis grammatical — 语法概要</h3>
+  <p>10大板块：冠词、名词、形容词、疑问、否定、比较、代词、动词变位、不规则动词总表、介词</p>
+  <span class="card-arrow">查看详情 →</span>
+</a>
+
+</div>
+
 ## 学习资源
 
 <div class="course-placeholder" markdown>
