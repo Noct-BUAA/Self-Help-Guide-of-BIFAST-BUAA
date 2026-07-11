@@ -1,28 +1,15 @@
 /**
  * pdf-download.js — jsDelivr CDN PDF download handler
- * All PDF links with class="pdf-download" will trigger a direct browser download
- * via jsDelivr CDN (China-optimized).
+ * Triggers browser-native download dialog via cross-origin <a download>,
+ * no file-size limit (works with 30MB+ PDFs).
  *
- * Usage in Markdown (raw HTML):
- *   <a class="pdf-download" data-file="01-logic-sets.pdf">📥 下载讲义 PDF（1.0 MB）</a>
+ * Usage:
+ *   <a class="pdf-download" data-file="01-logic-sets.pdf">📥 下载 PDF</a>
  */
 (function () {
   'use strict';
 
   var CDN_BASE = 'https://cdn.jsdelivr.net/gh/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA@e968cd5/';
-
-  function downloadBlob(url, filename) {
-    var a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    a.style.display = 'none';
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(function () {
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }, 1000);
-  }
 
   function handleClick(e) {
     e.preventDefault();
@@ -30,36 +17,27 @@
     var filename = link.getAttribute('data-file');
     if (!filename) return;
 
-    var cdnUrl = CDN_BASE + filename;
     var originalText = link.textContent;
-
-    // Show loading state
     link.textContent = '⏳ 下载中...';
     link.style.pointerEvents = 'none';
     link.style.opacity = '0.7';
 
-    fetch(cdnUrl)
-      .then(function (response) {
-        if (!response.ok) throw new Error('HTTP ' + response.status);
-        return response.blob();
-      })
-      .then(function (blob) {
-        var blobUrl = URL.createObjectURL(blob);
-        downloadBlob(blobUrl, filename);
-        link.textContent = '✅ 下载完成';
-      })
-      .catch(function () {
-        // Fallback: open in new tab
-        window.open(cdnUrl, '_blank');
-        link.textContent = originalText;
-      })
-      .finally(function () {
-        setTimeout(function () {
-          link.textContent = originalText;
-          link.style.pointerEvents = '';
-          link.style.opacity = '';
-        }, 2000);
-      });
+    var cdnUrl = CDN_BASE + filename;
+
+    // Try cross-origin download attribute first
+    var a = document.createElement('a');
+    a.href = cdnUrl;
+    a.download = filename;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+
+    setTimeout(function () {
+      document.body.removeChild(a);
+      link.textContent = originalText;
+      link.style.pointerEvents = '';
+      link.style.opacity = '';
+    }, 1500);
   }
 
   function init() {
