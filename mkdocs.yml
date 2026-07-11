@@ -240,4 +240,3 @@ extra_javascript:
   - assets/javascripts/hero-scroll.js
   - assets/javascripts/extra.js
   - assets/javascripts/text-type.js
-  - assets/javascripts/pdf-download.js

@@ -8,7 +8,7 @@ comments: true
 !!! info "📄 课件下载"
     点击下方链接下载本课程讲义 PDF 原件：
     
-    <a class="pdf-download" data-file="06-divisibility.pdf">📥 下载讲义 PDF（0.8 MB）</a>
+    <a href="https://raw.githubusercontent.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA/e968cd5/06-divisibility.pdf">📥 下载讲义 PDF（0.8 MB）</a>
 
 !!! abstract "学习目标"
 
