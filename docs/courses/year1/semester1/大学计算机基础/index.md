@@ -69,13 +69,6 @@ title: 大学计算机基础
 
 </div>
 
-## 学习资源
-
-<div class="course-placeholder" markdown>
-<p>暂无推荐学习资源。</p>
-<p class="course-placeholder-action">知道好的学习平台或参考书？通过 <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA">GitHub</a> 告诉我们。</p>
-</div>
-
 ## 备考建议
 
 <div class="admonition tip">

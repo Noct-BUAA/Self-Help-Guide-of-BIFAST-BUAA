@@ -32,13 +32,6 @@ comments: true
 <a class="card" href="课程讲义/chapters/10-redox-electrochemistry"><div class="card-num">10</div><h3>氧化还原反应与电化学</h3><p>Nernst 方程、电池热力学、电极电势、元素电势图</p></a>
 </div>
 
-## 学习资源
-
-<div class="course-placeholder" markdown>
-<p>暂无推荐学习资源。</p>
-<p class="course-placeholder-action">知道好的学习平台或参考书？通过 <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA">GitHub</a> 告诉我们。</p>
-</div>
-
 ## 备考建议
 
 !!! success "期末考试说明"

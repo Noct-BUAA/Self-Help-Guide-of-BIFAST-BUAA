@@ -50,30 +50,17 @@ title: 综合法语（1）
 
 </div>
 
-!!! tip "📚 找书提示"
-    以上教材与练习册文件较大（20–30 MB），直链下载可能较慢。推荐前往 **Z-Library** 或镜像站（如 `zh.kgb101.ru`）搜索 *Inspire A1*，可获取更完整的电子版资源及配套音频。
-  <span class="card-arrow">查看详情 →</span>
-</a>
-
-<a class="card" href="课程讲义/10-precis-grammatical/">
-  <span class="card-num">语法</span>
-  <h3>Précis grammatical — 语法概要</h3>
-  <p>10大板块：冠词、名词、形容词、疑问、否定、比较、代词、动词变位、不规则动词总表、介词</p>
-  <span class="card-arrow">查看详情 →</span>
-</a>
-
-</div>
-
-## 学习资源
-
-<div class="course-placeholder" markdown>
-<p>暂无推荐学习资源。</p>
-<p class="course-placeholder-action">知道好的学习平台或参考书？通过 <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA">GitHub</a> 告诉我们。</p>
-</div>
+!!! tip "📚 更多学习素材"
+    建议使用 **Z-Library** 或其镜像站 [zh.kgb101.ru](https://zh.kgb101.ru) 检索下载本课程配套电子讲义、课后习题参考资料等相关学习素材。
 
 ## 备考建议
 
-<div class="course-placeholder" markdown>
-<p>备考建议正在收集中。</p>
-<p class="course-placeholder-action">欢迎分享你的备考经验和应试技巧。</p>
-</div>
+综合法语（1）学分高达 8 分，是绩点的"压舱石"，备考策略直接影响总成绩排名。
+
+1. **重视平时成绩。** 听写（dictée）和课堂小测占据了相当大的平时分数权重。每次听写前务必提前复习词汇和动词变位，错一个单词都可能拉低整次成绩。不要寄希望于期末突击——平时积累才是王道。
+
+2. **语法基础要打牢。** 动词变位（ présent、passé composé、impératif、futur proche 等）、冠词配合、形容词性数一致、疑问句结构、代词位置——这些是期末笔试的必考内容。建议每天花 15 分钟默写常用动词的变位形式，形成肌肉记忆。
+
+3. **口语考试提前练。** Production Orale A1 包含引导式面试和情景模拟对话两个环节。面试部分重点准备自我介绍（姓名、年龄、住址、国籍、爱好）、家庭介绍、日常生活描述等高频话题；情景对话部分熟悉餐厅点餐、服装店购物、问路指路、酒店入住、看病就诊五个常见场景。可以和室友组成口语搭子，每周练习 2-3 次。
+
+4. **跟上课堂节奏。** 教师全法语授课，走神就听不懂。课前花 5 分钟预习当天要讲的内容，课上积极回应老师的问题，课后当天复习笔记。语言学习没有捷径，每天 1-2 小时的持续投入远比考前通宵有效。

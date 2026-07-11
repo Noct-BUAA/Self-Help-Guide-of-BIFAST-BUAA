@@ -10,12 +10,6 @@
   <span class="card-arrow">浏览课程 &rarr;</span>
 </a>
 
-<a class="card" href="基础英语/">
-  <h3>基础英语</h3>
-  <p>英语基础课程</p>
-  <span class="card-arrow">浏览课程 &rarr;</span>
-</a>
-
 <a class="card" href="大学计算机基础/">
   <h3>大学计算机基础</h3>
   <p>计算机入门课程</p>
