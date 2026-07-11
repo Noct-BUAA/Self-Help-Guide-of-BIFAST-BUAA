@@ -7,6 +7,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
+  // Register ScrollTrigger plugin if available
+  if (typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReduced) return;
 

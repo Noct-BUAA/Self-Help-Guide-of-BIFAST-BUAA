@@ -5,13 +5,21 @@ comments: true
 
 # 第一章 逻辑与集合
 
-## 1 逻辑
+!!! info "📄 课件下载"
+    点击下方链接下载本课程讲义 PDF 原件：
+    
+    [:fontawesome-solid-file-pdf: 下载讲义 PDF（1.0 MB）](../../../../../assets/pdfs/courses/year1/semester1/基础数学/01-logic-sets.pdf)
 
-**目标:**
-- （逻辑）命题的定义
-- 逻辑联结词（命题的运算）：$\lnot$（否定）$\lor$（析取）$\land$（合取）$\Rightarrow$（蕴含）$\Leftrightarrow$（等价）
-- 命题公式（或命题形式）的定义
-- 指派、真值表，用真值表解决证明逻辑等价（De Morgan 律、重要等价等）、解决逻辑问题
+!!! abstract "学习目标"
+
+    **逻辑部分：**
+
+    - （逻辑）命题的定义
+    - 逻辑联结词（命题的运算）：$\lnot$（否定）$\lor$（析取）$\land$（合取）$\Rightarrow$（蕴含）$\Leftrightarrow$（等价）
+    - 命题公式（或命题形式）的定义
+    - 指派、真值表，用真值表解决证明逻辑等价（De Morgan 律、重要等价等）、解决逻辑问题
+
+## 1 逻辑
 
 !!! question "Exercise 1.1"
 
@@ -323,14 +331,17 @@ $(\lnot P) = \lnot$("今天下雨") $\Leftrightarrow$ 1 $\Leftrightarrow$ ("今�
 
     $$\lnot(P \Rightarrow Q) \equiv (P \land \lnot Q).$$
 
-## 2 集合
+!!! abstract "学习目标"
 
-**目标:**
-- 集合的定义和表示方法，证明两个集合相等的思路
-- 集合的运算：$\cap$（交集）$\cup$（并集）$\setminus$（差集）$(\cdot)^c$（补集）
-- 基本运算定律与证明思路
-- 笛卡尔积
-- 逻辑谓词及其否定
+    **集合部分：**
+
+    - 集合的定义和表示方法，证明两个集合相等的思路
+    - 集合的运算：$\cap$（交集）$\cup$（并集）$\setminus$（差集）$(\cdot)^c$（补集）
+    - 基本运算定律与证明思路
+    - 笛卡尔积
+    - 逻辑谓词及其否定
+
+## 2 集合
 
 !!! question "Exercise 2.1"
 

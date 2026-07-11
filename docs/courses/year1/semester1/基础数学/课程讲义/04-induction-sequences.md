@@ -5,6 +5,11 @@ comments: true
 
 # 第四章 数学归纳法与数列
 
+!!! info "📄 课件下载"
+    点击下方链接下载本课程讲义 PDF 原件：
+    
+    [:fontawesome-solid-file-pdf: 下载讲义 PDF（1.1 MB）](../../../../../assets/pdfs/courses/year1/semester1/基础数学/04-induction-sequences.pdf)
+
 !!! abstract "学习目标"
 
     **数学归纳法部分：**

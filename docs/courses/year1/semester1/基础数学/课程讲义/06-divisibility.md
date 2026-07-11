@@ -5,6 +5,11 @@ comments: true
 
 # 第六章 整除关系
 
+!!! info "📄 课件下载"
+    点击下方链接下载本课程讲义 PDF 原件：
+    
+    [:fontawesome-solid-file-pdf: 下载讲义 PDF（0.8 MB）](../../../../../assets/pdfs/courses/year1/semester1/基础数学/06-divisibility.pdf)
+
 !!! abstract "学习目标"
 
     - 整除的定义与性质。

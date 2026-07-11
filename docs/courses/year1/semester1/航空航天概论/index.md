@@ -6,10 +6,11 @@ title: 航空航天概论
 
 ## 课程简介
 
-<div class="course-placeholder" markdown>
-<p>本课程的详细资料正在整理中。</p>
-<p class="course-placeholder-action">欢迎通过 <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA">GitHub</a> 提交学习笔记或资源推荐。</p>
-</div>
+航空航天概论是北航中法未来科技学院大一上学期的通识课程，旨在帮助新生建立对航空航天工程的整体认知，了解北京航空航天大学的核心学科方向。
+
+课程内容涵盖航空航天发展简史、飞行器分类与基本结构、空气动力学基础、飞行原理、推进系统、航天器轨道力学等入门知识，为后续专业分流和深入学习提供知识框架。
+
+本课程由中方教师中文授课，期末考试请关注航概信息查询小程序完成题库练习。
 
 ## 备考建议
 

@@ -5,6 +5,11 @@ comments: true
 
 # 第三章 三角函数与复数
 
+!!! info "📄 课件下载"
+    点击下方链接下载本课程讲义 PDF 原件：
+    
+    [:fontawesome-solid-file-pdf: 下载讲义 PDF（1.7 MB）](../../../../../assets/pdfs/courses/year1/semester1/基础数学/03-trig-complex.pdf)
+
 !!! abstract "学习目标"
 
     **三角函数与反三角函数部分：**

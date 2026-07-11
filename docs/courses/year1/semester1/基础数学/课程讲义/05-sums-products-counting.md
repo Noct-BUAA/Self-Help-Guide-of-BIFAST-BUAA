@@ -5,6 +5,11 @@ comments: true
 
 # 第五章 求和求积与计数原理
 
+!!! info "📄 课件下载"
+    点击下方链接下载本课程讲义 PDF 原件：
+    
+    [:fontawesome-solid-file-pdf: 下载讲义 PDF（1.3 MB）](../../../../../assets/pdfs/courses/year1/semester1/基础数学/05-sums-products-counting.pdf)
+
 !!! abstract "学习目标"
 
     **求和、求积部分：**

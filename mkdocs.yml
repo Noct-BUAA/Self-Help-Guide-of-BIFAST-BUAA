@@ -108,14 +108,14 @@ nav:
         - 基础英语: courses/year1/semester1/基础英语/index.md
         - 大学计算机基础:
           - 课程总览: courses/year1/semester1/大学计算机基础/index.md
-          - 课程讲义:
-            - 第一次作业: courses/year1/semester1/大学计算机基础/课程讲义/第一次作业.md
-            - 第二次作业: courses/year1/semester1/大学计算机基础/课程讲义/第二次作业.md
-            - 第三次作业: courses/year1/semester1/大学计算机基础/课程讲义/第三次作业.md
-            - 第四次作业: courses/year1/semester1/大学计算机基础/课程讲义/第四次作业.md
-            - 第五次作业: courses/year1/semester1/大学计算机基础/课程讲义/第五次作业.md
-            - 第六次作业: courses/year1/semester1/大学计算机基础/课程讲义/第六次作业.md
-            - 第七次作业: courses/year1/semester1/大学计算机基础/课程讲义/第七次作业.md
+          - 课程作业:
+            - 第一次作业: courses/year1/semester1/大学计算机基础/课程作业/第一次作业.md
+            - 第二次作业: courses/year1/semester1/大学计算机基础/课程作业/第二次作业.md
+            - 第三次作业: courses/year1/semester1/大学计算机基础/课程作业/第三次作业.md
+            - 第四次作业: courses/year1/semester1/大学计算机基础/课程作业/第四次作业.md
+            - 第五次作业: courses/year1/semester1/大学计算机基础/课程作业/第五次作业.md
+            - 第六次作业: courses/year1/semester1/大学计算机基础/课程作业/第六次作业.md
+            - 第七次作业: courses/year1/semester1/大学计算机基础/课程作业/第七次作业.md
         - 数理基础法语（1）: courses/year1/semester1/数理基础法语（1）/index.md
         - 综合法语（1）:
           - 课程总览: courses/year1/semester1/综合法语（1）/index.md
@@ -235,7 +235,8 @@ extra_css:
 extra_javascript:
   - assets/javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - assets/javascripts/hero-scroll.js
   - assets/javascripts/gsap.min.js
+  - https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js
+  - assets/javascripts/hero-scroll.js
   - assets/javascripts/extra.js
   - assets/javascripts/text-type.js
