@@ -8,7 +8,7 @@ comments: true
 !!! info "📄 课件下载"
     点击下方链接下载本课程讲义 PDF 原件：
     
-    <a href="../../../../../assets/pdfs/05-sums-products-counting.pdf">📥 下载讲义 PDF（1.3 MB）</a>
+    <a href="http://ti0spzzyd.hd-bkt.clouddn.com/05-sums-products-counting.pdf">📥 下载讲义 PDF（1.3 MB）</a>
 
 !!! abstract "学习目标"
 

@@ -8,7 +8,7 @@ comments: true
 !!! info "📄 课件下载"
     点击下方链接下载本课程讲义 PDF 原件：
     
-    <a href="../../../../../assets/pdfs/06-divisibility.pdf">📥 下载讲义 PDF（0.8 MB）</a>
+    <a href="http://ti0spzzyd.hd-bkt.clouddn.com/06-divisibility.pdf">📥 下载讲义 PDF（0.8 MB）</a>
 
 !!! abstract "学习目标"
 
