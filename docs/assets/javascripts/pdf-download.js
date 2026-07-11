@@ -9,7 +9,7 @@
 (function () {
   'use strict';
 
-  var CDN_BASE = 'https://cdn.jsdelivr.net/gh/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA@assets/';
+  var CDN_BASE = 'https://cdn.jsdelivr.net/gh/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA@e968cd5/';
 
   function downloadBlob(url, filename) {
     var a = document.createElement('a');

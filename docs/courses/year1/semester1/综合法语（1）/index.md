@@ -24,7 +24,7 @@ title: 综合法语（1）
   <span class="card-num">📖</span>
   <h3>Inspire A1 — 教材</h3>
   <p>课堂正式教材，全彩印刷，涵盖 A1 级别全部教学单元</p>
-  <span class="card-arrow">下载 PDF（18.5 MB）↓</span>
+  <span class="card-arrow">下载 PDF（30.5 MB）↓</span>
 </a>
 
 <a class="card pdf-download" href="#" data-file="Inspire-A1-cahier-dactivites.pdf">
