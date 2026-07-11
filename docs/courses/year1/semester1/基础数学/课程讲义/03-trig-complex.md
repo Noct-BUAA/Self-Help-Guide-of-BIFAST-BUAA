@@ -8,7 +8,7 @@ comments: true
 !!! info "📄 课件下载"
     点击下方链接下载本课程讲义 PDF 原件：
     
-    [:fontawesome-solid-file-pdf: 下载讲义 PDF（1.7 MB）](../../../../../assets/pdfs/courses/year1/semester1/基础数学/03-trig-complex.pdf)
+    <a class="pdf-download" data-file="03-trig-complex.pdf">📥 下载讲义 PDF（1.7 MB）</a>
 
 !!! abstract "学习目标"
 

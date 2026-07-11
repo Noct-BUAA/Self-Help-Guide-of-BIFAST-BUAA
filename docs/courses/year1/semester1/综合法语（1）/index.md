@@ -20,14 +20,14 @@ title: 综合法语（1）
 
 <div class="card-grid card-grid--three">
 
-<a class="card" href="../../../../assets/pdfs/courses/year1/semester1/综合法语（1）/Inspire-A1-textbook.pdf">
+<a class="card pdf-download" href="#" data-file="Inspire-A1-textbook.pdf">
   <span class="card-num">📖</span>
   <h3>Inspire A1 — 教材</h3>
   <p>课堂正式教材，全彩印刷，涵盖 A1 级别全部教学单元</p>
-  <span class="card-arrow">下载 PDF（30.5 MB）↓</span>
+  <span class="card-arrow">下载 PDF（18.5 MB）↓</span>
 </a>
 
-<a class="card" href="../../../../assets/pdfs/courses/year1/semester1/综合法语（1）/Inspire-A1-cahier-dactivites.pdf">
+<a class="card pdf-download" href="#" data-file="Inspire-A1-cahier-dactivites.pdf">
   <span class="card-num">✏️</span>
   <h3>Inspire A1 — 练习册</h3>
   <p>配套练习册（cahier d'activités），课后巩固词汇、语法与听力</p>
