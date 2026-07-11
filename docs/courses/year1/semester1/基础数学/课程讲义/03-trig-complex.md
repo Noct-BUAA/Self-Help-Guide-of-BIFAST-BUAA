@@ -8,7 +8,7 @@ comments: true
 !!! info "📄 课件下载"
     点击下方链接下载本课程讲义 PDF 原件：
     
-    <a href="https://cdn.jsdelivr.net/gh/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA@9ca3f16/03-trig-complex.pdf">📥 下载讲义 PDF（1.7 MB）</a>
+    <a href="../../../../../assets/pdfs/03-trig-complex.pdf">📥 下载讲义 PDF（1.7 MB）</a>
 
 !!! abstract "学习目标"
 
