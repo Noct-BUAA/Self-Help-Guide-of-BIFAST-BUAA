@@ -157,7 +157,11 @@ nav:
     - 住宿: campus-life/housing.md
     - 餐饮: campus-life/dining.md
     - 交通出行: campus-life/transportation.md
-    - 文化与活动: campus-life/culture.md
+    - 校园服务: campus-life/campus-services.md
+    - 体育设施: campus-life/sports.md
+    - 图书馆: campus-life/library.md
+    - 生活便利: campus-life/daily-life.md
+    - 常用信息: campus-life/contacts.md
 
   - 后记:
     - postscript/index.md
