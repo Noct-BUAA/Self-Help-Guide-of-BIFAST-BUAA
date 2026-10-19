@@ -1,0 +1,5434 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="北京航空航天大学中法未来科技学院（杭州）学习生活自助指南 — 汇集课程学习资料、重难点解析与校园生活实用信息
+">
+      
+      
+        <meta name="author" content="Noct-BUAA">
+      
+      
+        <link rel="canonical" href="https://noct-buaa.github.io/Self-Help-Guide-of-BIFAST-BUAA/courses/year2/semester1/%E5%AE%9E%E5%88%86%E6%9E%90/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/02-suites-numeriques/">
+      
+      
+        <link rel="prev" href="../01-topologie-de-r/">
+      
+      
+        <link rel="next" href="../../%E4%B9%A0%E9%A2%98%E8%AF%BE/td1-topologie/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>第 2 章 数列 - 北航中法未来科技学院自助指南</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%20480c-35.3%200-64-28.7-64-64V96c0-35.3%2028.7-64%2064-64h320c35.3%200%2064%2028.7%2064%2064v213.5c0%2017-6.7%2033.3-18.7%2045.3L322.7%20461.3c-12%2012-28.3%2018.7-45.3%2018.7zm325.5-176H296c-13.3%200-24%2010.7-24%2024v93.5z%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M384%20512H96c-53%200-96-43-96-96V96C0%2043%2043%200%2096%200h304c26.5%200%2048%2021.5%2048%2048v288c0%2020.9-13.4%2038.7-32%2045.3V448c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032zM96%20384c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032h256v-64zm32-232c0%2013.3%2010.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24H152c-13.3%200-24%2010.7-24%2024m24%2072c-13.3%200-24%2010.7-24%2024s10.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24z%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-32-352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200m-8%2064h48c13.3%200%2024%2010.7%2024%2024v88h8c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-80c-13.3%200-24-10.7-24-24s10.7-24%2024-24h24v-64h-24c-13.3%200-24-10.7-24-24s10.7-24%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M461.2%2018.9C472.7%2024%20480%2035.4%20480%2048v416c0%2012.6-7.3%2024-18.8%2029.1s-24.8%203.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63V480c0%2017.7-14.3%2032-32%2032h-32c-17.7%200-32-14.3-32-32v-96C57.3%20384%200%20326.7%200%20256s57.3-128%20128-128h84.5c61.8-.2%20121.4-22.7%20167.9-63.3L427%2024c9.4-8.3%2022.9-10.2%2034.3-5.1zM224%20320v.2c70.3%202.7%20137.8%2028.5%20192%2073.4V118.3c-54.2%2044.9-121.7%2070.7-192%2073.4z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M434.8%2070.1c14.3%2010.4%2017.5%2030.4%207.1%2044.7l-256%20352c-5.5%207.6-14%2012.3-23.4%2013.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200l101.5%20101.5%20234-321.7c10.4-14.3%2030.4-17.5%2044.7-7.1z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m0-336c-17.7%200-32%2014.3-32%2032%200%2013.3-10.7%2024-24%2024s-24-10.7-24-24c0-44.2%2035.8-80%2080-80s80%2035.8%2080%2080c0%2047.2-36%2067.2-56%2074.5v3.8c0%2013.3-10.7%2024-24%2024s-24-10.7-24-24v-8.1c0-20.5%2014.8-35.2%2030.1-40.2%206.4-2.1%2013.2-5.5%2018.2-10.3%204.3-4.2%207.7-10%207.7-19.6%200-17.7-14.3-32-32-32zm-32%20192a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%200c14.7%200%2028.2%208.1%2035.2%2021l216%20400c6.7%2012.4%206.4%2027.4-.8%2039.5S486.1%20480%20472%20480H40c-14.1%200-27.2-7.4-34.4-19.5s-7.5-27.1-.8-39.5l216-400c7-12.9%2020.5-21%2035.2-21m0%20352a32%2032%200%201%200%200%2064%2032%2032%200%201%200%200-64m0-192c-18.2%200-32.7%2015.5-31.4%2033.7l7.4%20104c.9%2012.5%2011.4%2022.3%2023.9%2022.3%2012.6%200%2023-9.7%2023.9-22.3l7.4-104c1.3-18.2-13.1-33.7-31.4-33.7z%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M480-16c6.9%200%2013%204.4%2015.2%2010.9l13.5%2040.4%2040.4%2013.5C555.6%2051%20560%2057.1%20560%2064s-4.4%2013-10.9%2015.2l-40.4%2013.5-13.5%2040.4c-2.2%206.5-8.3%2010.9-15.2%2010.9s-13-4.4-15.2-10.9l-13.5-40.4-40.4-13.5C404.4%2077%20400%2070.9%20400%2064s4.4-13%2010.9-15.2l40.4-13.5%2013.5-40.4C467-11.6%20473.1-16%20480-16M321.4%2097.4c12.5-12.5%2032.8-12.5%2045.3%200l80%2080c12.5%2012.5%2012.5%2032.8%200%2045.3l-10.9%2010.9c7.9%2022%2012.2%2045.7%2012.2%2070.5%200%20114.9-93.1%20208-208%20208S32%20418.9%2032%20304%20125.1%2096%20240%2096c24.7%200%2048.5%204.3%2070.5%2012.3zM144%20304c0-53%2043-96%2096-96%2013.3%200%2024-10.7%2024-24s-10.7-24-24-24c-79.5%200-144%2064.5-144%20144%200%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M416%20427.4c58.5-44%2096-111.6%2096-187.4C512%20107.5%20397.4%200%20256%200S0%20107.5%200%20240c0%2075.8%2037.5%20143.4%2096%20187.4V464c0%2026.5%2021.5%2048%2048%2048h32v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h64v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h32c26.5%200%2048-21.5%2048-48zM96%20256a64%2064%200%201%201%20128%200%2064%2064%200%201%201-128%200m256-64a64%2064%200%201%201%200%20128%2064%2064%200%201%201%200-128%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M352%200c0-17.7-14.3-32-32-32s-32%2014.3-32%2032v64h-96c-53%200-96%2043-96%2096v224c0%2053%2043%2096%2096%2096h256c53%200%2096-43%2096-96V160c0-53-43-96-96-96h-96zM160%20368c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24M224%20176a48%2048%200%201%201%200%2096%2048%2048%200%201%201%200-96m144%2048a48%2048%200%201%201%2096%200%2048%2048%200%201%201-96%200m-304%200c0-17.7-14.3-32-32-32S0%20206.3%200%20224v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32zm544-32c-17.7%200-32%2014.3-32%2032v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32v-96c0-17.7-14.3-32-32-32%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M288%200H128c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032v151.5L7.5%20426.3C2.6%20435%200%20444.7%200%20454.7%200%20486.4%2025.6%20512%2057.3%20512h333.4c31.6%200%2057.3-25.6%2057.3-57.3%200-10-2.6-19.8-7.5-28.4L320%20215.5V64c17.7%200%2032-14.3%2032-32S337.7%200%20320%200zm-96%20215.5V64h64v151.5c0%2011.1%202.9%2022.1%208.4%2031.8L306%20320H142l41.6-72.7c5.5-9.7%208.4-20.6%208.4-31.8%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%20216C0%20149.7%2053.7%2096%20120%2096h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064H64c-35.3%200-64-28.7-64-64zm256%200c0-66.3%2053.7-120%20120-120h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064h-64c-35.3%200-64-28.7-64-64z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../../.." title="北航中法未来科技学院自助指南" class="md-header__button md-logo" aria-label="北航中法未来科技学院自助指南" data-md-component="logo">
+      
+  <img src="../../../../../../assets/images/buaa-emblem-blue.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            北航中法未来科技学院自助指南
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第 2 章 数列
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../../year1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程学习资料
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../campus-life/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  校园生活指南
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../postscript/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  后记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="北航中法未来科技学院自助指南" class="md-nav__button md-logo" aria-label="北航中法未来科技学院自助指南" data-md-component="logo">
+      
+  <img src="../../../../../../assets/images/buaa-emblem-blue.png" alt="logo">
+
+    </a>
+    北航中法未来科技学院自助指南
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程学习资料
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程学习资料
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一学年
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一学年
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一上学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一上学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础数学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2_2" id="__nav_2_1_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    基础数学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2_2_2" id="__nav_2_1_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/01-logic-sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逻辑与集合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/02-maps-relations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    映射与等价关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/03-trig-complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    三角函数与复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/04-induction-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学归纳法与数列
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/05-sums-products-counting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    求和求积与计数原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/06-divisibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整除关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学计算机基础
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2_3" id="__nav_2_1_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大学计算机基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2_3_2" id="__nav_2_1_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程作业
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程作业
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E5%85%AD%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%B8%83%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理基础法语（1）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester1/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    综合法语（1）
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2_5" id="__nav_2_1_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    综合法语（1）
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2_5_2" id="__nav_2_1_2_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/09-production-orale-a1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    口语考试指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/10-precis-grammatical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    语法概要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9%E6%A6%82%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    航空航天概论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一下学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一下学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E4%B8%AD%E5%9B%BD%E8%BF%91%E7%8E%B0%E4%BB%A3%E5%8F%B2%E7%BA%B2%E8%A6%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国近现代史纲要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人工智能导论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%8A%9B%E5%AD%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    力学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%9F%BA%E7%A1%80%E8%8B%B1%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础英语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学化学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_3_6" id="__nav_2_1_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大学化学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/01-states-of-matter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 物质的状态与转化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/02-atomic-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章 原子结构和元素周期律
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/03-molecular-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第3章 分子结构和共价键理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/04-crystal-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第4章 晶体结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/05-thermodynamics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第5章 化学热力学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/06-reaction-rate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第6章 化学反应速率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/07-chemical-equilibrium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第7章 化学平衡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/08-acid-base/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第8章 酸碱平衡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/09-precipitation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第9章 沉淀溶解平衡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/10-redox-electrochemistry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第10章 氧化还原反应与电化学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%EF%BC%881%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学分析（1）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80%E6%B3%95%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理基础法语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    综合法语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二学年
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二学年
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二上学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二上学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%9F%E4%B8%AD%E8%80%83%E8%AF%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中考试信息与复习建议
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实分析
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_2_3" id="__nav_2_2_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    实分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_3_2" id="__nav_2_2_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-topologie-de-r/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 章 拓扑学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 章 数列
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 章 数列
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="页面目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      页面目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectifs 学习目标
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notations 记号
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suites-usuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suites usuelles 常用数列
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suites-reelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suites réelles 实数列
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suites-reelles-convergentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suites réelles convergentes 收敛实数列
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suites-reelles-divergentes-vers-linfini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suites réelles divergentes vers l'infini 发散到无穷的实数列
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nature-de-suites-reelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nature de suites réelles 实数列的性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theoreme-de-limite-monotone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Théorème de limite monotone 单调极限定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_3_3" id="__nav_2_2_2_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    习题课讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    习题课讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B9%A0%E9%A2%98%E8%AF%BE/td1-topologie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD1 拓扑学解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B9%A0%E9%A2%98%E8%AF%BE/td2-suites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD2 数列解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B9%A0%E9%A2%98%E8%AF%BE/td3-limites-suites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD3 数列极限解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%95%B0%E5%AD%A6%E5%B7%A5%E5%85%B7/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工程师数学工具
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_2_4" id="__nav_2_2_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    工程师数学工具
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_4_2" id="__nav_2_2_2_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%95%B0%E5%AD%A6%E5%B7%A5%E5%85%B7/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/01-nombres-complexes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 章 复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%95%B0%E5%AD%A6%E5%B7%A5%E5%85%B7/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/02-trigonometrie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 章 三角学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%95%B0%E5%AD%A6%E5%B7%A5%E5%85%B7/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/03-polynomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 3 章 多项式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%95%B0%E5%AD%A6%E5%B7%A5%E5%85%B7/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/04-fiche5-suites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 5 研究实数数列
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_4_3" id="__nav_2_2_2_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    习题课讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    习题课讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%95%B0%E5%AD%A6%E5%B7%A5%E5%85%B7/%E4%B9%A0%E9%A2%98%E8%AF%BE/td1-nombres-complexes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD1 复数解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%95%B0%E5%AD%A6%E5%B7%A5%E5%85%B7/%E4%B9%A0%E9%A2%98%E8%AF%BE/td2-trigonometrie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD2 三角学解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%95%B0%E5%AD%A6%E5%B7%A5%E5%85%B7/%E4%B9%A0%E9%A2%98%E8%AF%BE/td3-fonctions-reciproques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD3 反三角函数解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../semester2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二下学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二下学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../campus-life/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    校园生活指南
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    校园生活指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/housing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    住宿
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/dining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    餐饮
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/transportation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    交通出行
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/campus-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    校园服务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/sports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    体育设施
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图书馆
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/daily-life/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生活便利
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/contacts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常用信息
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../postscript/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    后记
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    后记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="页面目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      页面目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectifs 学习目标
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notations 记号
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suites-usuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suites usuelles 常用数列
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suites-reelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suites réelles 实数列
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suites-reelles-convergentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suites réelles convergentes 收敛实数列
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suites-reelles-divergentes-vers-linfini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suites réelles divergentes vers l'infini 发散到无穷的实数列
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nature-de-suites-reelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nature de suites réelles 实数列的性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theoreme-de-limite-monotone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Théorème de limite monotone 单调极限定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="2">第 2 章　数列<a class="headerlink" href="#2" title="Permanent link">&para;</a></h1>
+<div class="lecture-hero">
+<p class="lecture-hero__fr">Chapitre n°2 — Suites numériques</p>
+<p class="lecture-hero__meta">中法对照讲义 · 由 LaTeX 源文件渲染</p>
+</div>
+
+<div class="admonition info">
+<p class="admonition-title">阅读说明</p>
+<p>每段先列法语原文；其下缩进、带深蓝竖条的小字号段落为中文翻译。<strong>加粗</strong>为关键词，括号内为中文释义。</p>
+</div>
+<h3 id="objectifs">Objectifs <span class="heading-zh">学习目标</span><a class="headerlink" href="#objectifs" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Connaître les suites usuelles.</p>
+<p class="zh">掌握常用数列。</p>
+</li>
+<li>
+<p>Savoir étudier des suites numériques.</p>
+<p class="zh">会研究数列。</p>
+</li>
+<li>
+<p>Déterminer la nature de suites réelles.</p>
+<p class="zh">会判定实数列的性质（nature）。</p>
+</li>
+</ol>
+<h3 id="notations">Notations <span class="heading-zh">记号</span><a class="headerlink" href="#notations" title="Permanent link">&para;</a></h3>
+<p>On rappelle que <span class="arithmatex">\(\mathbb{N}\)</span> désigne l'ensemble des entiers <strong>naturels</strong>, <span class="arithmatex">\(\mathbb{Z}\)</span> désigne l'ensemble des entiers <strong>relatifs</strong>, <span class="arithmatex">\(\mathbb{R}\)</span> désigne l'ensemble des nombres <strong>réels</strong> et <span class="arithmatex">\(\mathbb{C}\)</span> désigne l'ensemble des nombres <strong>complexes</strong>.</p>
+<p class="zh">回忆：<span class="arithmatex">\(\mathbb{N}\)</span> 表示<strong>自然数</strong>集，<span class="arithmatex">\(\mathbb{Z}\)</span> 表示<strong>整数</strong>集（entiers relatifs）， <span class="arithmatex">\(\mathbb{R}\)</span> 表示<strong>实数</strong>集，<span class="arithmatex">\(\mathbb{C}\)</span> 表示<strong>复数</strong>集。</p>
+<p>Pour tout ce chapitre on fixe un entier <span class="arithmatex">\(n_0 \in \mathbb{Z}\)</span>.</p>
+<p class="zh">本章自始至终固定一个整数 <span class="arithmatex">\(n_0 \in \mathbb{Z}\)</span>。</p>
+<h2 id="suites-usuelles">Suites usuelles <span class="heading-zh">常用数列</span><a class="headerlink" href="#suites-usuelles" title="Permanent link">&para;</a></h2>
+<p>Dans cette section, <span class="arithmatex">\(\mathbb{K}\)</span> désigne <span class="arithmatex">\(\mathbb{R}\)</span> ou <span class="arithmatex">\(\mathbb{C}\)</span>.</p>
+<p class="zh">本节中，<span class="arithmatex">\(\mathbb{K}\)</span> 表示 <span class="arithmatex">\(\mathbb{R}\)</span> 或 <span class="arithmatex">\(\mathbb{C}\)</span>。</p>
+<div class="admonition success">
+<p class="admonition-title">Définition 1.1 : suite numérique<br><span class='zh-title'>定义 1.1：数列（suite numérique）</span></p>
+<p>Une <strong>suite numérique</strong> est une liste infinie de nombres de <span class="arithmatex">\(\mathbb{K}\)</span> de la forme :</p>
+<p class="zh">一个<strong>数列</strong>是 <span class="arithmatex">\(\mathbb{K}\)</span> 中一列无穷多个数，形如：</p>
+<div class="arithmatex">\[
+u = (u_n)_{n\geqslant n_0} = \bigl(u_{n_0},\ u_{n_0+1},\ u_{n_0+2},\ u_{n_0+3},\ u_{n_0+4},\ u_{n_0+5},\ \dots\bigr).
+\]</div>
+<ul>
+<li>
+<p><span class="arithmatex">\(n_0\)</span> est un entier appelé l'<strong>indice initial</strong> ou le <strong>rang initial</strong>,</p>
+<p class="zh"><span class="arithmatex">\(n_0\)</span> 是一个整数，称为<strong>起始下标</strong>（indice initial）或<strong>起始序号</strong>（rang initial）；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(u_{n_0} \in \mathbb{K}\)</span> est un nombre appelé le <strong>terme initial</strong> ou le <strong>premier terme</strong>,</p>
+<p class="zh"><span class="arithmatex">\(u_{n_0} \in \mathbb{K}\)</span> 是一个数，称为<strong>首项</strong>（terme initial）或<strong>第一项</strong>（premier terme）；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{n \in \mathbb{Z} \mid n \geqslant n_0\}\)</span> est appelé l'ensemble des <strong>indices</strong> ou l'ensemble des <strong>rangs</strong>,</p>
+<p class="zh"><span class="arithmatex">\(\{n \in \mathbb{Z} \mid n \geqslant n_0\}\)</span> 称为<strong>下标集</strong>（ensemble des indices）或<strong>序号集</strong>（ensemble des rangs）；</p>
+</li>
+<li>
+<p>pour tout <span class="arithmatex">\(n \geqslant n_0\)</span>, <span class="arithmatex">\(u_n \in \mathbb{K}\)</span> est un nombre appelé le terme d'<strong>indice</strong> <span class="arithmatex">\(n\)</span> ou de <strong>rang</strong> <span class="arithmatex">\(n\)</span>.</p>
+<p class="zh">对任意 <span class="arithmatex">\(n \geqslant n_0\)</span>，<span class="arithmatex">\(u_n \in \mathbb{K}\)</span> 是数列 <span class="arithmatex">\(u\)</span> 中<strong>下标</strong>为 <span class="arithmatex">\(n\)</span> 的项（terme d'indice <span class="arithmatex">\(n\)</span>），或称<strong>序号</strong>为 <span class="arithmatex">\(n\)</span> 的项（terme de rang <span class="arithmatex">\(n\)</span>）。</p>
+</li>
+</ul>
+<p>Lorsque <span class="arithmatex">\(n_0 = 0\)</span>, on note <span class="arithmatex">\(\mathbb{K}^{\mathbb{N}} = \{(u_n)_{n\geqslant 0} \mid \forall n \in \mathbb{N},\ u_n \in \mathbb{K}\}\)</span> l'ensemble des suites numériques.</p>
+<p class="zh">当 <span class="arithmatex">\(n_0 = 0\)</span> 时，记 <span class="arithmatex">\(\mathbb{K}^{\mathbb{N}} = \{(u_n)_{n\geqslant 0} \mid \forall n \in \mathbb{N},\ u_n \in \mathbb{K}\}\)</span> 为全体数列之集。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Remarque<br><span class='zh-title'>注（Remarque）</span></p>
+<ul>
+<li>
+<p>Une suite <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est donc une application <span class="arithmatex">\(u : \{n \in \mathbb{Z} \mid n \geqslant n_0\} \to \mathbb{K}\)</span>, <span class="arithmatex">\(n \mapsto u(n) = u_n\)</span>.</p>
+<p class="zh">因此，数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 就是一个<strong>映射</strong> <span class="arithmatex">\(u : \{n \in \mathbb{Z} \mid n \geqslant n_0\} \to \mathbb{K}\)</span>，<span class="arithmatex">\(n \mapsto u(n) = u_n\)</span>。</p>
+</li>
+<li>
+<p>Lorsqu'il n'y a pas d'ambiguïté, on note plus simplement <span class="arithmatex">\(u = (u_n)\)</span>.</p>
+<p class="zh">当不产生歧义时，简记为 <span class="arithmatex">\(u = (u_n)\)</span>。</p>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention<br><span class='zh-title'>注意（Attention）</span></p>
+<p>Ne pas confondre la <u>suite</u> <span class="arithmatex">\((u_n)\)</span> et le <u>nombre</u> <span class="arithmatex">\(u_n\)</span> !</p>
+<p class="zh">不要把<u>数列</u> <span class="arithmatex">\((u_n)\)</span> 与<u>数</u> <span class="arithmatex">\(u_n\)</span> 混为一谈！</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Définition 1.2 : suite constante, périodique, bornée<br><span class='zh-title'>定义 1.2：常数列、周期数列、有界数列</span></p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite.</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是一个数列。</p>
+<ul>
+<li>
+<p>On dit que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est <strong>constante</strong> lorsque tous ses termes sont égaux (au premier terme) :</p>
+<p class="zh">若各项都（与首项）相等，则称 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是<strong>常数列</strong>（constante）：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_{n+1} = u_n.
+\]</div>
+</li>
+<li>
+<p>On dit que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est <strong>périodique</strong> lorsque :</p>
+<p class="zh">若满足下述条件，则称 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是<strong>周期数列</strong>（périodique）：</p>
+<div class="arithmatex">\[
+\exists p \in \mathbb{N}^*,\ \forall n \geqslant n_0,\ u_{n+p} = u_n.
+\]</div>
+<p>On dit aussi que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est <strong><span class="arithmatex">\(p\)</span>-périodique</strong>. Le plus petit entier <span class="arithmatex">\(p \in \mathbb{N}^*\)</span> vérifiant cette propriété est appelé la <strong>période</strong> de la suite.</p>
+<p class="zh">也称 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是 <strong><span class="arithmatex">\(p\)</span>-周期的</strong>（<span class="arithmatex">\(p\)</span>-périodique）。满足该性质的最小整数 <span class="arithmatex">\(p \in \mathbb{N}^*\)</span> 称为该数列的<strong>周期</strong>（période）。</p>
+</li>
+<li>
+<p>On dit que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est <strong>bornée</strong> lorsque :</p>
+<p class="zh">若满足下述条件，则称 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是<strong>有界数列</strong>（bornée）：</p>
+<div class="arithmatex">\[
+\exists R \in \mathbb{R}_+,\ \forall n \geqslant n_0,\ |u_n| \leqslant R.
+\]</div>
+</li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 1.3<br><span class='zh-title'>性质 1.3</span></p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite. Alors :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是一个数列。则：</p>
+<div class="arithmatex">\[
+(u_n)_{n\geqslant n_0} \text{ est constante} \implies (u_n)_{n\geqslant n_0} \text{ est périodique} \implies (u_n)_{n\geqslant n_0} \text{ est bornée.}
+\]</div>
+</div>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong> La première implication est vraie car les suites 1-périodiques sont les suites constantes. Pour la deuxième implication, si <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est périodique de période <span class="arithmatex">\(p \in \mathbb{N}^*\)</span>, alors il suffit de poser :</p>
+<p class="zh"><strong>证明.</strong> 第一个蕴含式成立，因为 1-周期的数列就是常数列。对于第二个蕴含式，若 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是以 <span class="arithmatex">\(p \in \mathbb{N}^*\)</span> 为周期的周期数列，则只需取：</p>
+<div class="arithmatex">\[
+R = \max\bigl\{|u_{n_0}|,\ |u_{n_0+1}|,\ |u_{n_0+2}|,\ \dots,\ |u_{n_0+p-1}|\bigr\}.
+\]</div>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Définition 1.4 : suite arithmétique<br><span class='zh-title'>定义 1.4：等差数列（suite arithmétique）</span></p>
+<p>Une <strong>suite arithmétique</strong> <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> de <strong>raison</strong> <span class="arithmatex">\(r \in \mathbb{K}\)</span> est une suite définie par la donnée de son premier terme <span class="arithmatex">\(u_{n_0} \in \mathbb{K}\)</span> et d'une <strong>relation de récurrence</strong> de la forme :</p>
+<p class="zh"><strong>等差数列</strong> <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 的<strong>公差</strong>（raison）为 <span class="arithmatex">\(r \in \mathbb{K}\)</span>，它由给定的首项 <span class="arithmatex">\(u_{n_0} \in \mathbb{K}\)</span> 和如下<strong>递推关系式</strong>（relation de récurrence）定义：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_{n+1} = u_n + r.
+\]</div>
+</div>
+<p>En particulier, les seules suites arithmétiques bornées sont les suites constantes (de raison nulle).</p>
+<p class="zh">特别地，唯一有界的等差数列是常数列（公差为零）。</p>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 1.5 : terme général d'une suite arithmétique<br><span class='zh-title'>性质 1.5：等差数列的通项公式</span></p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite arithmétique de raison <span class="arithmatex">\(r \in \mathbb{K}\)</span>. Alors :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是公差为 <span class="arithmatex">\(r \in \mathbb{K}\)</span> 的等差数列。则：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_n = u_{n_0} + (n-n_0)r.
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Définition 1.6 : suite géométrique<br><span class='zh-title'>定义 1.6：等比数列（suite géométrique）</span></p>
+<p>Une <strong>suite géométrique</strong> <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> de <strong>raison</strong> <span class="arithmatex">\(q \in \mathbb{K}\)</span> est une suite définie par la donnée de son premier terme <span class="arithmatex">\(u_{n_0} \in \mathbb{K}\)</span> et d'une relation de récurrence de la forme :</p>
+<p class="zh"><strong>等比数列</strong> <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 的<strong>公比</strong>（raison）为 <span class="arithmatex">\(q \in \mathbb{K}\)</span>，它由给定的首项 <span class="arithmatex">\(u_{n_0} \in \mathbb{K}\)</span> 和如下递推关系式定义：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_{n+1} = qu_n.
+\]</div>
+</div>
+<p>En particulier, si <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est une suite géométrique de raison <span class="arithmatex">\(q \in \mathbb{K}\)</span>, alors :</p>
+<p class="zh">特别地，若 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是公比为 <span class="arithmatex">\(q \in \mathbb{K}\)</span> 的等比数列，则：</p>
+<div class="arithmatex">\[
+(u_n)_{n\geqslant n_0} \text{ est bornée} \iff \bigl(u_{n_0} = 0 \quad\text{ou}\quad |q| \leqslant 1\bigr).
+\]</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 1.7 : terme général d'une suite géométrique<br><span class='zh-title'>性质 1.7：等比数列的通项公式</span></p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite géométrique de raison <span class="arithmatex">\(q \in \mathbb{K}\)</span>. Alors :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是公比为 <span class="arithmatex">\(q \in \mathbb{K}\)</span> 的等比数列。则：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_n = u_{n_0}q^{n-n_0}.
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 1.8<br><span class='zh-title'>例 1.8</span></p>
+<p>Soit <span class="arithmatex">\((r,q) \in \mathbb{K}^2\)</span>. On considère une suite <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> qui vérifie la relation de récurrence :</p>
+<p class="zh">设 <span class="arithmatex">\((r,q) \in \mathbb{K}^2\)</span>。考虑满足下述递推关系的数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span>：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_{n+1} = qu_n + r.
+\]</div>
+<p>Une telle suite est dite <strong>arithmético-géométrique</strong>.</p>
+<p class="zh">这样的数列称为<strong>等差等比数列</strong>（arithmético-géométrique，即一阶线性非齐次递推数列）。</p>
+<ul>
+<li>
+<p>Si <span class="arithmatex">\(q = 1\)</span>, on reconnaît une suite arithmétique de raison <span class="arithmatex">\(r\)</span>, donc :</p>
+<p class="zh">若 <span class="arithmatex">\(q = 1\)</span>，可辨认出这是公差为 <span class="arithmatex">\(r\)</span> 的等差数列，于是：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_n = u_{n_0} + (n-n_0)r.
+\]</div>
+</li>
+<li>
+<p>Si <span class="arithmatex">\(q \neq 1\)</span>, on remarque que l'équation <span class="arithmatex">\(\alpha = q\alpha + r\)</span> d'inconnue <span class="arithmatex">\(\alpha \in \mathbb{K}\)</span> admet une <strong>unique solution</strong> notée <span class="arithmatex">\(\alpha = \frac{r}{1-q}\)</span>. Par conséquent, la <strong>suite auxiliaire</strong> <span class="arithmatex">\((w_n = u_n-\alpha)_{n\geqslant n_0}\)</span> vérifie :</p>
+<p class="zh">若 <span class="arithmatex">\(q \neq 1\)</span>，注意到以 <span class="arithmatex">\(\alpha \in \mathbb{K}\)</span> 为未知数的方程 <span class="arithmatex">\(\alpha = q\alpha + r\)</span> 有<strong>唯一解</strong>，记为 <span class="arithmatex">\(\alpha = \frac{r}{1-q}\)</span>。因此，<strong>辅助数列</strong>（suite auxiliaire）<span class="arithmatex">\((w_n = u_n-\alpha)_{n\geqslant n_0}\)</span> 满足：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ w_{n+1} = u_{n+1}-\alpha = (qu_n+r)-(q\alpha+r) = q(u_n-\alpha) = qw_n.
+\]</div>
+<p>On reconnaît une suite géométrique de raison <span class="arithmatex">\(q\)</span>, donc :</p>
+<p class="zh">可辨认出这是公比为 <span class="arithmatex">\(q\)</span> 的等比数列，于是：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_n = w_n + \alpha = w_{n_0}q^{n-n_0} + \alpha = (u_{n_0}-\alpha)q^{n-n_0} + \alpha
+\]</div>
+</li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 1.9 : terme général d'une suite réelle récurrente linéaire d'ordre 2<br><span class='zh-title'>定理 1.9：二阶线性递推实数列的通项公式</span></p>
+<p>On considère une suite réelle <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> qui vérifie la relation de récurrence :</p>
+<p class="zh">考虑满足下述递推关系的实数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span>：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_{n+2} = au_{n+1} + bu_n
+\]</div>
+<p>où <span class="arithmatex">\((a,b) \in \mathbb{R}^2\)</span> et <span class="arithmatex">\(b \neq 0\)</span>. On distingue trois cas selon le signe du discriminant <span class="arithmatex">\(\Delta = a^2+4b\)</span> de l'<strong>équation caractéristique</strong> <span class="arithmatex">\(q^2 = aq+b\)</span> d'inconnue <span class="arithmatex">\(q \in \mathbb{C}\)</span>.</p>
+<p class="zh">其中 <span class="arithmatex">\((a,b) \in \mathbb{R}^2\)</span> 且 <span class="arithmatex">\(b \neq 0\)</span>。按<strong>特征方程</strong>（équation caractéristique）<span class="arithmatex">\(q^2 = aq+b\)</span>（未知数 <span class="arithmatex">\(q \in \mathbb{C}\)</span>）的<strong>判别式</strong> <span class="arithmatex">\(\Delta = a^2+4b\)</span> 的符号分三种情形讨论。</p>
+<ul>
+<li>
+<p>Si <span class="arithmatex">\(\Delta &gt; 0\)</span>, l'équation caractéristique admet deux solutions réelles notées <span class="arithmatex">\(q_1\)</span> et <span class="arithmatex">\(q_2\)</span>. Alors il existe deux constantes <span class="arithmatex">\((\lambda_1,\lambda_2) \in \mathbb{R}^2\)</span> telles que :</p>
+<p class="zh">若 <span class="arithmatex">\(\Delta &gt; 0\)</span>，特征方程有两个实根，记为 <span class="arithmatex">\(q_1\)</span> 与 <span class="arithmatex">\(q_2\)</span>。则存在两个常数 <span class="arithmatex">\((\lambda_1,\lambda_2) \in \mathbb{R}^2\)</span> 使得：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_n = \lambda_1 q_1^{n-n_0} + \lambda_2 q_2^{n-n_0}.
+\]</div>
+</li>
+<li>
+<p>Si <span class="arithmatex">\(\Delta = 0\)</span>, l'équation caractéristique admet une seule solution réelle notée <span class="arithmatex">\(q_0\)</span>. Alors il existe deux constantes <span class="arithmatex">\((\lambda,\mu) \in \mathbb{R}^2\)</span> telles que :</p>
+<p class="zh">若 <span class="arithmatex">\(\Delta = 0\)</span>，特征方程只有一个实根，记为 <span class="arithmatex">\(q_0\)</span>。则存在两个常数 <span class="arithmatex">\((\lambda,\mu) \in \mathbb{R}^2\)</span> 使得：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_n = \bigl(\lambda + \mu(n-n_0)\bigr)q_0^{n-n_0}.
+\]</div>
+</li>
+<li>
+<p>Si <span class="arithmatex">\(\Delta &lt; 0\)</span>, l'équation caractéristique admet deux solutions complexes conjuguées notées <span class="arithmatex">\(\rho e^{i\theta}\)</span> et <span class="arithmatex">\(\rho e^{-i\theta}\)</span>. Alors il existe deux constantes <span class="arithmatex">\((A,B) \in \mathbb{R}^2\)</span> telles que :</p>
+<p class="zh">若 <span class="arithmatex">\(\Delta &lt; 0\)</span>，特征方程有两个共轭复根，记为 <span class="arithmatex">\(\rho e^{i\theta}\)</span> 与 <span class="arithmatex">\(\rho e^{-i\theta}\)</span>。则存在两个常数 <span class="arithmatex">\((A,B) \in \mathbb{R}^2\)</span> 使得：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_n = \rho^{n-n_0}\bigl(A\cos\bigl((n-n_0)\theta\bigr) + B\sin\bigl((n-n_0)\theta\bigr)\bigr).
+\]</div>
+</li>
+</ul>
+</div>
+<p>Dans les trois cas, on peut déterminer les constantes à l'aide des premiers termes <span class="arithmatex">\(u_{n_0}\)</span> et <span class="arithmatex">\(u_{n_0+1}\)</span>.</p>
+<p class="zh">三种情形下，都可利用前两项 <span class="arithmatex">\(u_{n_0}\)</span> 与 <span class="arithmatex">\(u_{n_0+1}\)</span> 确定这些常数。</p>
+<div class="admonition info">
+<p class="admonition-title">Exemple 1.10<br><span class='zh-title'>例 1.10</span></p>
+<ul>
+<li>
+<p>La suite de Fibonacci <span class="arithmatex">\((F_n)_{n\geqslant 1} = (1,1,2,3,5,8,13,21,\dots)\)</span> est définie par <span class="arithmatex">\(F_1 = F_2 = 1\)</span> et la relation de récurrence <span class="arithmatex">\(\forall n \geqslant 1\)</span>, <span class="arithmatex">\(F_{n+2} = F_{n+1}+F_n\)</span>. On reconnaît une suite réelle récurrente linéaire d'ordre 2. Son équation caractéristique <span class="arithmatex">\(q^2-q-1 = 0\)</span> admet deux solutions réelles : <span class="arithmatex">\(q_1 = \frac{1+\sqrt{5}}{2} = \varphi\)</span> (appelé le <strong>nombre d'or</strong>) et <span class="arithmatex">\(q_2 = \frac{1-\sqrt{5}}{2} = -1/\varphi\)</span>. Par conséquent, il existe deux constantes <span class="arithmatex">\((\lambda_1,\lambda_2) \in \mathbb{R}^2\)</span> telles que :</p>
+<p class="zh">斐波那契数列 <span class="arithmatex">\((F_n)_{n\geqslant 1} = (1,1,2,3,5,8,13,21,\dots)\)</span> 由 <span class="arithmatex">\(F_1 = F_2 = 1\)</span> 及递推关系 <span class="arithmatex">\(\forall n \geqslant 1\)</span>，<span class="arithmatex">\(F_{n+2} = F_{n+1}+F_n\)</span> 定义。可辨认出这是二阶线性递推实数列。其特征方程 <span class="arithmatex">\(q^2-q-1 = 0\)</span> 有两个实根：<span class="arithmatex">\(q_1 = \frac{1+\sqrt{5}}{2} = \varphi\)</span>（称为<strong>黄金数</strong>，nombre d'or）与 <span class="arithmatex">\(q_2 = \frac{1-\sqrt{5}}{2} = -1/\varphi\)</span>。因此，存在两个常数 <span class="arithmatex">\((\lambda_1,\lambda_2) \in \mathbb{R}^2\)</span> 使得：</p>
+<div class="arithmatex">\[
+\forall n \geqslant 1,\ F_n = \lambda_1\varphi^{n-1} + \frac{\lambda_2}{(-\varphi)^{n-1}}.
+\]</div>
+<p>En particulier, pour <span class="arithmatex">\(n = 1\)</span> et <span class="arithmatex">\(n = 2\)</span>, on obtient :</p>
+<p class="zh">特别地，取 <span class="arithmatex">\(n = 1\)</span> 与 <span class="arithmatex">\(n = 2\)</span>，得到：</p>
+<div class="arithmatex">\[
+\begin{cases}
+1 = \lambda_1 + \lambda_2 \\[2pt]
+1 = \varphi\lambda_1 - \dfrac{\lambda_2}{\varphi}
+\end{cases}
+\qquad\text{donc}\qquad
+\begin{cases}
+\lambda_1 = \dfrac{\frac{1}{\varphi}+1}{\frac{1}{\varphi}+\varphi} = \dfrac{\varphi}{\sqrt{5}} \\[10pt]
+\lambda_2 = \dfrac{\varphi-1}{\varphi+\frac{1}{\varphi}} = \dfrac{1}{\varphi\sqrt{5}}
+\end{cases}
+\]</div>
+<p>Finalement :</p>
+<p class="zh">最终：</p>
+<div class="arithmatex">\[
+\forall n \geqslant 1,\ F_n = \frac{\sqrt{5}}{5}\left(\varphi^n - \frac{1}{(-\varphi)^n}\right).
+\]</div>
+</li>
+<li>
+<p>On considère la suite <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> définie par <span class="arithmatex">\(u_0 = 2\)</span>, <span class="arithmatex">\(u_1 = 3\)</span> et la relation de récurrence <span class="arithmatex">\(\forall n \geqslant 0\)</span>, <span class="arithmatex">\(u_{n+2} = u_{n+1}-u_n\)</span>. On reconnaît une suite réelle récurrente linéaire d'ordre 2. Son équation caractéristique <span class="arithmatex">\(q^2-q+1 = 0\)</span> admet deux solutions complexes conjuguées : <span class="arithmatex">\(\frac{1\pm i\sqrt{3}}{2} = e^{\pm i\pi/3}\)</span>. Par conséquent, il existe deux constantes <span class="arithmatex">\((A,B) \in \mathbb{R}^2\)</span> telles que :</p>
+<p class="zh">考虑由 <span class="arithmatex">\(u_0 = 2\)</span>、<span class="arithmatex">\(u_1 = 3\)</span> 及递推关系 <span class="arithmatex">\(\forall n \geqslant 0\)</span>，<span class="arithmatex">\(u_{n+2} = u_{n+1}-u_n\)</span> 定义的数列 <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span>。可辨认出这是二阶线性递推实数列。其特征方程 <span class="arithmatex">\(q^2-q+1 = 0\)</span> 有两个共轭复根：<span class="arithmatex">\(\frac{1\pm i\sqrt{3}}{2} = e^{\pm i\pi/3}\)</span>。因此，存在两个常数 <span class="arithmatex">\((A,B) \in \mathbb{R}^2\)</span> 使得：</p>
+<div class="arithmatex">\[
+\forall n \geqslant 0,\ u_n = 1^n\left(A\cos\left(\frac{n\pi}{3}\right) + B\sin\left(\frac{n\pi}{3}\right)\right).
+\]</div>
+<p>En particulier, pour <span class="arithmatex">\(n = 0\)</span> et <span class="arithmatex">\(n = 1\)</span>, on obtient :</p>
+<p class="zh">特别地，取 <span class="arithmatex">\(n = 0\)</span> 与 <span class="arithmatex">\(n = 1\)</span>，得到：</p>
+<div class="arithmatex">\[
+\begin{cases}
+2 = A \\[2pt]
+3 = \dfrac{A}{2} + \dfrac{B\sqrt{3}}{2}
+\end{cases}
+\qquad\text{donc}\qquad
+B = \frac{2}{\sqrt{3}}\left(3 - \frac{2}{2}\right) = \frac{4\sqrt{3}}{3}.
+\]</div>
+<p>Finalement :</p>
+<p class="zh">最终：</p>
+<div class="arithmatex">\[
+\forall n \geqslant 0,\ u_n = 2\cos\left(\frac{n\pi}{3}\right) + \frac{4\sqrt{3}}{3}\sin\left(\frac{n\pi}{3}\right).
+\]</div>
+<p>En particulier, <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> est 6-périodique.</p>
+<p class="zh">特别地，<span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> 是 6-周期的。</p>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Vocabulaire clé &nbsp;&nbsp; 重点词汇<br><span class='zh-title'>第一节核心术语</span></p>
+<ul>
+<li><strong>suite numérique</strong>：数列</li>
+<li><strong>indice initial / rang initial</strong>：起始下标 / 起始序号</li>
+<li><strong>terme initial / premier terme</strong>：首项 / 第一项</li>
+<li><strong>terme d'indice <span class="arithmatex">\(n\)</span> / de rang <span class="arithmatex">\(n\)</span></strong>：第 <span class="arithmatex">\(n\)</span> 项（下标为 <span class="arithmatex">\(n\)</span> 的项）</li>
+<li><strong>terme général</strong>：通项（公式）</li>
+<li><strong>suite constante</strong>：常数列</li>
+<li><strong>suite périodique；période</strong>：周期数列；周期</li>
+<li><strong>suite bornée</strong>：有界数列</li>
+<li><strong>suite arithmétique；raison</strong>：等差数列；公差</li>
+<li><strong>suite géométrique；raison</strong>：等比数列；公比</li>
+<li><strong>relation de récurrence</strong>：递推关系式</li>
+<li><strong>arithmético-géométrique</strong>：等差等比数列（一阶线性非齐次递推数列）</li>
+<li><strong>suite auxiliaire</strong>：辅助数列</li>
+<li><strong>équation caractéristique</strong>：特征方程</li>
+<li><strong>discriminant</strong>：判别式</li>
+<li><strong>nombre d'or <span class="arithmatex">\(\varphi\)</span></strong>：黄金数 <span class="arithmatex">\(\varphi\)</span></li>
+<li><strong>vérifier</strong>：满足（方程、关系）；验证 —— 数学高频词</li>
+<li><strong>admettre une unique solution</strong>：有唯一解</li>
+<li><strong>on reconnaît…</strong>：可辨认出……（解题套语）</li>
+</ul>
+</div>
+<h2 id="suites-reelles">Suites réelles <span class="heading-zh">实数列</span><a class="headerlink" href="#suites-reelles" title="Permanent link">&para;</a></h2>
+<p>Dans la suite du chapitre, on considère seulement des <strong>suites réelles</strong>, c'est-à-dire <span class="arithmatex">\(\mathbb{K} = \mathbb{R}\)</span>.</p>
+<p class="zh">本章余下部分只考虑<strong>实数列</strong>，即 <span class="arithmatex">\(\mathbb{K} = \mathbb{R}\)</span>。</p>
+<div class="admonition success">
+<p class="admonition-title">Définition 2.1 : suite majorée, minorée<br><span class='zh-title'>定义 2.1：有上界的数列、有下界的数列</span></p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite réelle.</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是一个实数列。</p>
+<ul>
+<li>
+<p>On dit qu'un nombre réel <span class="arithmatex">\(M \in \mathbb{R}\)</span> est un <strong>majorant</strong> de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> lorsque :</p>
+<p class="zh">若实数 <span class="arithmatex">\(M \in \mathbb{R}\)</span> 满足下述条件，则称 <span class="arithmatex">\(M\)</span> 为 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 的一个<strong>上界</strong>（majorant）：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_n \leqslant M.
+\]</div>
+<p>Si <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> admet au moins un majorant, on dit que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est <strong>majorée</strong>.</p>
+<p class="zh">若 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 至少有一个上界，则称 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> <strong>有上界</strong>（majorée）。</p>
+</li>
+<li>
+<p>On dit qu'un nombre réel <span class="arithmatex">\(m \in \mathbb{R}\)</span> est un <strong>minorant</strong> de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> lorsque :</p>
+<p class="zh">若实数 <span class="arithmatex">\(m \in \mathbb{R}\)</span> 满足下述条件，则称 <span class="arithmatex">\(m\)</span> 为 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 的一个<strong>下界</strong>（minorant）：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_n \geqslant m.
+\]</div>
+<p>Si <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> admet au moins un minorant, on dit que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est <strong>minorée</strong>.</p>
+<p class="zh">若 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 至少有一个下界，则称 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> <strong>有下界</strong>（minorée）。</p>
+</li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 2.2<br><span class='zh-title'>性质 2.2</span></p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite réelle. Alors :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是一个实数列。则：</p>
+<div class="arithmatex">\[
+(u_n)_{n\geqslant n_0} \text{ est bornée} \iff (u_n)_{n\geqslant n_0} \text{ est majorée et minorée.}
+\]</div>
+</div>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong></p>
+<p class="zh"><strong>证明.</strong></p>
+<p><span class="arithmatex">\(\Rightarrow\)</span> Si <span class="arithmatex">\(\exists R \in \mathbb{R}_+\)</span>, <span class="arithmatex">\(\forall n \geqslant n_0\)</span>, <span class="arithmatex">\(|u_n| \leqslant R\)</span>, alors il suffit de poser <span class="arithmatex">\(M = R\)</span> et <span class="arithmatex">\(m = -R\)</span>.</p>
+<p class="zh"><span class="arithmatex">\(\Rightarrow\)</span> 若 <span class="arithmatex">\(\exists R \in \mathbb{R}_+\)</span>，<span class="arithmatex">\(\forall n \geqslant n_0\)</span>，<span class="arithmatex">\(|u_n| \leqslant R\)</span>，则只需取 <span class="arithmatex">\(M = R\)</span>，<span class="arithmatex">\(m = -R\)</span>。</p>
+<p><span class="arithmatex">\(\Leftarrow\)</span> Si <span class="arithmatex">\(\exists (m,M) \in \mathbb{R}^2\)</span>, <span class="arithmatex">\(\forall n \geqslant n_0\)</span>, <span class="arithmatex">\(m \leqslant u_n \leqslant M\)</span>, alors il suffit de poser <span class="arithmatex">\(R = \max\{-m, M\}\)</span>.</p>
+<p class="zh"><span class="arithmatex">\(\Leftarrow\)</span> 若 <span class="arithmatex">\(\exists (m,M) \in \mathbb{R}^2\)</span>，<span class="arithmatex">\(\forall n \geqslant n_0\)</span>，<span class="arithmatex">\(m \leqslant u_n \leqslant M\)</span>，则只需取 <span class="arithmatex">\(R = \max\{-m, M\}\)</span>。</p>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Définition 2.3 : suite croissante, décroissante<br><span class='zh-title'>定义 2.3：递增数列、递减数列</span></p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite réelle.</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是一个实数列。</p>
+<ul>
+<li>
+<p>On dit que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est <strong>croissante</strong> (respectivement <strong>strictement croissante</strong>) lorsque :</p>
+<p class="zh">若满足下述条件，则称 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是<strong>递增的</strong>（croissante，相应地<strong>严格递增的</strong>）：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_{n+1} \geqslant u_n \quad (\text{respectivement } u_{n+1} &gt; u_n).
+\]</div>
+</li>
+<li>
+<p>On dit que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est <strong>décroissante</strong> (respectivement <strong>strictement décroissante</strong>) lorsque :</p>
+<p class="zh">若满足下述条件，则称 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是<strong>递减的</strong>（décroissante，相应地<strong>严格递减的</strong>）：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ u_{n+1} \leqslant u_n \quad (\text{respectivement } u_{n+1} &lt; u_n).
+\]</div>
+</li>
+<li>
+<p>On dit que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est <strong>monotone</strong> (respectivement <strong>strictement monotone</strong>) lorsque <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est croissante ou décroissante (respectivement strictement croissante ou strictement décroissante).</p>
+<p class="zh">若 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 递增或递减（相应地严格递增或严格递减），则称它是<strong>单调的</strong>（monotone，相应地<strong>严格单调的</strong>）。</p>
+</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 2.4<br><span class='zh-title'>例 2.4</span></p>
+<ul>
+<li>
+<p>Les seules suites croissantes et décroissantes sont les suites constantes.</p>
+<p class="zh">既递增又递减的数列只有常数列。</p>
+</li>
+<li>
+<p>La suite 2-périodique <span class="arithmatex">\(((-1)^n)_{n\geqslant 0}\)</span> n'est pas monotone.</p>
+<p class="zh">2-周期数列 <span class="arithmatex">\(((-1)^n)_{n\geqslant 0}\)</span> 不是单调的。</p>
+</li>
+<li>
+<p>Toute suite réelle arithmétique de raison <span class="arithmatex">\(r &gt; 0\)</span> (respectivement <span class="arithmatex">\(r &lt; 0\)</span>) est strictement croissante (respectivement strictement décroissante).</p>
+<p class="zh">任何公差 <span class="arithmatex">\(r &gt; 0\)</span>（相应地 <span class="arithmatex">\(r &lt; 0\)</span>）的实等差数列都是严格递增（相应地严格递减）的。</p>
+</li>
+<li>
+<p>Soit <span class="arithmatex">\(q \in \mathbb{R}^*\)</span>. La suite géométrique <span class="arithmatex">\((q^n)_{n\geqslant 0}\)</span> est strictement croissante si <span class="arithmatex">\(q &gt; 1\)</span>, constante si <span class="arithmatex">\(q = 1\)</span>, strictement décroissante si <span class="arithmatex">\(q \in ]0,1[\)</span> et non monotone si <span class="arithmatex">\(q &lt; 0\)</span>.</p>
+<p class="zh">设 <span class="arithmatex">\(q \in \mathbb{R}^*\)</span>。等比数列 <span class="arithmatex">\((q^n)_{n\geqslant 0}\)</span>：当 <span class="arithmatex">\(q &gt; 1\)</span> 时严格递增；当 <span class="arithmatex">\(q = 1\)</span> 时为常数列；当 <span class="arithmatex">\(q \in ]0,1[\)</span> 时严格递减；当 <span class="arithmatex">\(q &lt; 0\)</span> 时不单调。</p>
+</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 2.5<br><span class='zh-title'>例 2.5</span></p>
+<p>On considère la suite <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> définie par <span class="arithmatex">\(u_0 = 1\)</span> et <span class="arithmatex">\(\forall n \geqslant 0\)</span>, <span class="arithmatex">\(u_{n+1} = \sqrt{1+u_n}\)</span>. On pose la fonction <span class="arithmatex">\(f : x \mapsto \sqrt{1+x}\)</span> afin que la relation de récurrence soit de la forme <span class="arithmatex">\(\forall n \geqslant 0\)</span>, <span class="arithmatex">\(u_{n+1} = f(u_n)\)</span>. La fonction <span class="arithmatex">\(f\)</span> est définie et strictement croissante sur <span class="arithmatex">\([-1,+\infty[\)</span>. De plus, on peut montrer que :</p>
+<p class="zh">考虑由 <span class="arithmatex">\(u_0 = 1\)</span> 及 <span class="arithmatex">\(\forall n \geqslant 0\)</span>，<span class="arithmatex">\(u_{n+1} = \sqrt{1+u_n}\)</span> 定义的数列 <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span>。令函数 <span class="arithmatex">\(f : x \mapsto \sqrt{1+x}\)</span>，使递推关系写成 <span class="arithmatex">\(\forall n \geqslant 0\)</span>，<span class="arithmatex">\(u_{n+1} = f(u_n)\)</span> 的形式。函数 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([-1,+\infty[\)</span> 上有定义且严格递增。此外，可以证明：</p>
+<div class="arithmatex">\[
+\forall x \in [-1,+\infty[,\quad
+\begin{cases}
+f(x) &gt; x &amp; \text{si } x \in [-1,\varphi[,\\
+f(x) = x &amp; \text{si } x = \varphi,\\
+f(x) &lt; x &amp; \text{si } x &gt; \varphi,
+\end{cases}
+\qquad\text{où } \varphi = \frac{1+\sqrt{5}}{2} \text{ (le nombre d'or).}
+\]</div>
+<p>On peut alors tracer sur un même graphique : la droite d'équation <span class="arithmatex">\(y = x\)</span>, la courbe représentative de <span class="arithmatex">\(f\)</span> et les premiers termes de <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span>.</p>
+<p class="zh">于是可以在同一张图上画出：直线 <span class="arithmatex">\(y = x\)</span>、<span class="arithmatex">\(f\)</span> 的图像以及 <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> 的前几项。</p>
+<p><span class="lecture-figure"><img class="fig-light" src="../../../../../../assets/images/lectures/analyse-reelle/02-suites-numeriques/fig-01.svg" alt="讲义插图 1"><img class="fig-dark" src="../../../../../../assets/images/lectures/analyse-reelle/02-suites-numeriques/fig-01-dark.svg" alt="讲义插图 1"></span></p>
+<p>On conjecture que <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> est bornée et strictement croissante. Plus précisément, on va montrer par récurrence que :</p>
+<p class="zh">猜测 <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> 有界且严格递增。更确切地说，我们用归纳法证明：</p>
+<div class="arithmatex">\[
+\forall n \geqslant 0,\quad 1 \leqslant u_n &lt; u_{n+1} &lt; \varphi.
+\]</div>
+<ul>
+<li>
+<p><u>Initialisation.</u> On a <span class="arithmatex">\(u_0 = 1\)</span> et <span class="arithmatex">\(u_1 = \sqrt{2}\)</span>. Or <span class="arithmatex">\(1 &lt; \sqrt{2}\)</span>, et <span class="arithmatex">\(\varphi = \frac{1+\sqrt{5}}{2} &gt; \frac{1+\sqrt{1}}{2} = 1\)</span> donc <span class="arithmatex">\(\varphi = \sqrt{1+\varphi} &gt; \sqrt{1+1} = \sqrt{2}\)</span>. Ainsi, le résultat est vrai pour <span class="arithmatex">\(n = 0\)</span> : <span class="arithmatex">\(1 \leqslant u_0 &lt; u_1 &lt; \varphi\)</span>.</p>
+<p class="zh"><u>初始步.</u> 有 <span class="arithmatex">\(u_0 = 1\)</span>，<span class="arithmatex">\(u_1 = \sqrt{2}\)</span>。因为 <span class="arithmatex">\(1 &lt; \sqrt{2}\)</span>，且 <span class="arithmatex">\(\varphi = \frac{1+\sqrt{5}}{2} &gt; \frac{1+\sqrt{1}}{2} = 1\)</span>，所以 <span class="arithmatex">\(\varphi = \sqrt{1+\varphi} &gt; \sqrt{1+1} = \sqrt{2}\)</span>。因此，结论对 <span class="arithmatex">\(n = 0\)</span> 成立：<span class="arithmatex">\(1 \leqslant u_0 &lt; u_1 &lt; \varphi\)</span>。</p>
+</li>
+<li>
+<p><u>Hérédité.</u> On suppose que <span class="arithmatex">\(1 \leqslant u_n &lt; u_{n+1} &lt; \varphi\)</span> est vrai pour un rang <span class="arithmatex">\(n \geqslant 0\)</span> fixé. Puisque <span class="arithmatex">\(f\)</span> est strictement croissante, on en déduit que :</p>
+<p class="zh"><u>归纳步.</u> 设结论对某个固定的 <span class="arithmatex">\(n \geqslant 0\)</span> 成立，即 <span class="arithmatex">\(1 \leqslant u_n &lt; u_{n+1} &lt; \varphi\)</span>。由于 <span class="arithmatex">\(f\)</span> 严格递增，可得：</p>
+<div class="arithmatex">\[
+1 &lt; \underbrace{f(1)}_{=\sqrt{2}} \leqslant \underbrace{f(u_n)}_{=u_{n+1}}
+  &lt; \underbrace{f(u_{n+1})}_{=u_{n+2}} &lt; \underbrace{f(\varphi)}_{=\varphi}.
+\]</div>
+<p>Ainsi, le résultat est vrai aussi au rang <span class="arithmatex">\(n+1\)</span>.</p>
+<p class="zh">因此，结论对 <span class="arithmatex">\(n+1\)</span> 也成立。</p>
+</li>
+<li>
+<p><u>Conclusion.</u> D'après le principe de récurrence, le résultat est vrai pour tout rang <span class="arithmatex">\(n \geqslant 0\)</span>. En particulier, on a montré que <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> est bornée et strictement croissante.</p>
+<p class="zh"><u>结论.</u> 由归纳法原理，结论对一切 <span class="arithmatex">\(n \geqslant 0\)</span> 成立。特别地，我们证明了 <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> 有界且严格递增。</p>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Important<br><span class='zh-title'>重要（Important）</span></p>
+<p>Plus généralement, pour étudier une suite <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> définie par une relation de récurrence de la forme <span class="arithmatex">\(\forall n \geqslant n_0\)</span>, <span class="arithmatex">\(u_{n+1} = f(u_n)\)</span>, on peut :</p>
+<p class="zh">更一般地，研究由 <span class="arithmatex">\(\forall n \geqslant n_0\)</span>，<span class="arithmatex">\(u_{n+1} = f(u_n)\)</span> 这种递推关系定义的数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 时，可以：</p>
+<ul>
+<li>
+<p>étudier les variations de <span class="arithmatex">\(f\)</span> et le signe de la fonction <span class="arithmatex">\(x \mapsto f(x)-x\)</span>,</p>
+<p class="zh">研究 <span class="arithmatex">\(f\)</span> 的单调性以及函数 <span class="arithmatex">\(x \mapsto f(x)-x\)</span> 的符号，</p>
+</li>
+<li>
+<p>tracer sur un même graphique la droite d'équation <span class="arithmatex">\(y = x\)</span>, la courbe représentative de <span class="arithmatex">\(f\)</span> et les premiers termes de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span>,</p>
+<p class="zh">在同一张图上画直线 <span class="arithmatex">\(y = x\)</span>、<span class="arithmatex">\(f\)</span> 的图像以及 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 的前几项，</p>
+</li>
+<li>
+<p>conjecturer des propriétés de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> puis les démontrer par récurrence.</p>
+<p class="zh">猜想 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 的性质，再用归纳法证明。</p>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Vocabulaire clé &nbsp;&nbsp; 重点词汇<br><span class='zh-title'>第二节核心术语</span></p>
+<ul>
+<li><strong>suite réelle</strong>：实数列</li>
+<li><strong>majorant / minorant</strong>：上界 / 下界</li>
+<li><strong>suite majorée / minorée</strong>：有上界的数列 / 有下界的数列</li>
+<li><strong>suite bornée</strong>：有界数列（既有上界又有下界）</li>
+<li><strong>croissante / décroissante</strong>：递增的 / 递减的</li>
+<li><strong>strictement croissante / strictement décroissante</strong>：严格递增的 / 严格递减的</li>
+<li><strong>monotone</strong>：单调的</li>
+<li><strong>suite définie par récurrence</strong>：递推定义的数列</li>
+<li><strong>conjecturer</strong>：猜想</li>
+<li><strong>démontrer par récurrence</strong>：用归纳法证明</li>
+<li><strong>principe de récurrence</strong>：归纳法原理</li>
+<li><strong>initialisation / hérédité / conclusion</strong>：初始步 / 归纳步 / 结论</li>
+<li><strong>la nature d'une suite</strong>：数列的性质（敛散性等）</li>
+<li><strong>étudier une suite</strong>：研究一个数列（单调性、有界性、极限）</li>
+</ul>
+</div>
+<h2 id="suites-reelles-convergentes">Suites réelles convergentes <span class="heading-zh">收敛实数列</span><a class="headerlink" href="#suites-reelles-convergentes" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Définition 3.1 : suite convergente<br><span class='zh-title'>定义 3.1：收敛数列（suite convergente）</span></p>
+<p>Une suite réelle <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est dite <strong>convergente</strong> lorsque :</p>
+<div class="arithmatex">\[
+\exists \ell \in \mathbb{R},\ \forall \varepsilon &gt; 0,\ \exists N \geqslant n_0,\ \forall n \geqslant N,\ |u_n-\ell| &lt; \varepsilon.
+\]</div>
+<p class="zh">若存在 <span class="arithmatex">\(\ell \in \mathbb{R}\)</span>，使得对任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，都存在 <span class="arithmatex">\(N \geqslant n_0\)</span>，当 <span class="arithmatex">\(n \geqslant N\)</span> 时都有 <span class="arithmatex">\(|u_n-\ell| &lt; \varepsilon\)</span>，则称实数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是<strong>收敛的</strong>（convergente）。</p>
+<p>Autrement dit, <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est convergente s'il existe un nombre réel <span class="arithmatex">\(\ell\)</span> tel que tout voisinage de <span class="arithmatex">\(\ell\)</span> contient tous les termes de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> à partir d'un certain rang.</p>
+<p class="zh">换言之，若存在实数 <span class="arithmatex">\(\ell\)</span>，使得 <span class="arithmatex">\(\ell\)</span> 的每个<strong>邻域</strong>（voisinage）都包含 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 从某一项起的所有项，则 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 3.2<br><span class='zh-title'>例 3.2</span></p>
+<p>Soit <span class="arithmatex">\(\varepsilon &gt; 0\)</span>. On a :</p>
+<div class="arithmatex">\[
+\forall n \in \mathbb{N}^*,\quad \left|\frac{n+1}{n}-1\right| = \frac{1}{n} &lt; \varepsilon
+\iff n &gt; \frac{1}{\varepsilon}.
+\]</div>
+<p class="zh">设 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>。有：</p>
+<p>Ainsi, en posant <span class="arithmatex">\(\ell = 1\)</span> et <span class="arithmatex">\(N = \left\lfloor \frac{1}{\varepsilon} \right\rfloor + 1 \in \mathbb{N}^*\)</span>, on a montré que <span class="arithmatex">\(\left(\frac{n+1}{n}\right)_{n\geqslant 1}\)</span> est convergente.</p>
+<p class="zh">于是，取 <span class="arithmatex">\(\ell = 1\)</span>、<span class="arithmatex">\(N = \left\lfloor \frac{1}{\varepsilon} \right\rfloor + 1 \in \mathbb{N}^*\)</span>，就证明了 <span class="arithmatex">\(\left(\frac{n+1}{n}\right)_{n\geqslant 1}\)</span> 收敛。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Important<br><span class='zh-title'>重要（Important）</span></p>
+<p>En général, <span class="arithmatex">\(N\)</span> dépend de <span class="arithmatex">\(\varepsilon\)</span> : plus <span class="arithmatex">\(\varepsilon\)</span> est proche de <span class="arithmatex">\(0\)</span>, plus le rang <span class="arithmatex">\(N\)</span> à partir duquel tous les termes de la suite appartiennent au voisinage <span class="arithmatex">\(]\ell-\varepsilon,\ell+\varepsilon[\)</span> doit être grand.</p>
+<p class="zh">一般来说，<span class="arithmatex">\(N\)</span> 依赖于 <span class="arithmatex">\(\varepsilon\)</span>：<span class="arithmatex">\(\varepsilon\)</span> 越接近 <span class="arithmatex">\(0\)</span>，使数列从某一项起的所有项都落入邻域 <span class="arithmatex">\(]\ell-\varepsilon,\ell+\varepsilon[\)</span> 所需的序号 <span class="arithmatex">\(N\)</span> 就越大。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention<br><span class='zh-title'>注意（Attention）</span></p>
+<p>Par contre, <span class="arithmatex">\(\ell\)</span> ne dépend pas de <span class="arithmatex">\(n\)</span> !</p>
+<p class="zh">但 <span class="arithmatex">\(\ell\)</span> 并不依赖于 <span class="arithmatex">\(n\)</span>！</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 3.3 : unicité de la limite<br><span class='zh-title'>定理 3.3：极限的唯一性</span></p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite convergente. Alors le nombre réel <span class="arithmatex">\(\ell\)</span> de la définition 3.1 est unique. On l'appelle la <strong>limite</strong> de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span>. On dit aussi que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> <strong>converge vers</strong> <span class="arithmatex">\(\ell\)</span> ou que <span class="arithmatex">\(u_n\)</span> <strong>tend vers</strong> <span class="arithmatex">\(\ell\)</span> quand <span class="arithmatex">\(n\)</span> tend vers <span class="arithmatex">\(+\infty\)</span>, et on note :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是收敛数列。则定义 3.1 中的实数 <span class="arithmatex">\(\ell\)</span> 是唯一的，称它为 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 的<strong>极限</strong>（limite）。也说 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> <strong>收敛于</strong> <span class="arithmatex">\(\ell\)</span>，或当 <span class="arithmatex">\(n\)</span> 趋于 <span class="arithmatex">\(+\infty\)</span> 时 <span class="arithmatex">\(u_n\)</span> <strong>趋于</strong> <span class="arithmatex">\(\ell\)</span>，并记作：</p>
+<div class="arithmatex">\[
+\ell = \lim_{n\to+\infty} u_n.
+\]</div>
+</div>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong> Par l'absurde, on suppose qu'il existe deux nombres réels <span class="arithmatex">\(\ell_1 &lt; \ell_2\)</span> tels que :</p>
+<div class="arithmatex">\[
+\begin{cases}
+\forall \varepsilon &gt; 0,\ \exists N_1 \geqslant n_0,\ \forall n \geqslant N_1,\ |u_n-\ell_1| &lt; \varepsilon,\\[2pt]
+\forall \varepsilon &gt; 0,\ \exists N_2 \geqslant n_0,\ \forall n \geqslant N_2,\ |u_n-\ell_2| &lt; \varepsilon.
+\end{cases}
+\]</div>
+<p class="zh"><strong>证明.</strong> 用反证法，假设存在两个实数 <span class="arithmatex">\(\ell_1 &lt; \ell_2\)</span> 使得：</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention<br><span class='zh-title'>注意（Attention）</span></p>
+<p>Le rang <span class="arithmatex">\(N\)</span> pour <span class="arithmatex">\(\ell_1\)</span> n'est pas nécessairement égal au rang <span class="arithmatex">\(N\)</span> pour <span class="arithmatex">\(\ell_2\)</span> !</p>
+<p class="zh">对应于 <span class="arithmatex">\(\ell_1\)</span> 的序号 <span class="arithmatex">\(N\)</span> 不一定等于对应于 <span class="arithmatex">\(\ell_2\)</span> 的序号 <span class="arithmatex">\(N\)</span>！</p>
+</div>
+<p>Il suffit de choisir <span class="arithmatex">\(\varepsilon &gt; 0\)</span> afin que <span class="arithmatex">\(\varepsilon &lt; \frac{\ell_2-\ell_1}{2}\)</span>, par exemple <span class="arithmatex">\(\varepsilon = \frac{\ell_2-\ell_1}{3}\)</span>. En effet, on a alors pour tout <span class="arithmatex">\(n \geqslant \max\{N_1,N_2\}\)</span>, <span class="arithmatex">\(u_n \in\,]\ell_1-\varepsilon,\ell_1+\varepsilon[\,\cap\,]\ell_2-\varepsilon,\ell_2+\varepsilon[\)</span>. En particulier :</p>
+<p class="zh">只需选取 <span class="arithmatex">\(\varepsilon &gt; 0\)</span> 使 <span class="arithmatex">\(\varepsilon &lt; \frac{\ell_2-\ell_1}{2}\)</span>，例如取 <span class="arithmatex">\(\varepsilon = \frac{\ell_2-\ell_1}{3}\)</span>。事实上，此时对一切 <span class="arithmatex">\(n \geqslant \max\{N_1,N_2\}\)</span>，都有 <span class="arithmatex">\(u_n \in\,]\ell_1-\varepsilon,\ell_1+\varepsilon[\,\cap\,]\ell_2-\varepsilon,\ell_2+\varepsilon[\)</span>。特别地：</p>
+<div class="arithmatex">\[
+\ell_2-\varepsilon &lt; u_n &lt; \ell_1+\varepsilon
+\quad\text{donc}\quad
+\ell_2-\ell_1 &lt; 2\varepsilon = \frac{2}{3}(\ell_2-\ell_1)
+\]</div>
+<p>ce qui est absurde car <span class="arithmatex">\(\ell_2-\ell_1 &gt; 0\)</span>.</p>
+<p class="zh">这与 <span class="arithmatex">\(\ell_2-\ell_1 &gt; 0\)</span> 矛盾，故为荒谬。</p>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 3.4<br><span class='zh-title'>定理 3.4</span></p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite réelle. Alors :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是实数列。则：</p>
+<div class="arithmatex">\[
+(u_n)_{n\geqslant n_0} \text{ est convergente} \implies (u_n)_{n\geqslant n_0} \text{ est bornée.}
+\]</div>
+</div>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong></p>
+<p class="zh"><strong>证明.</strong></p>
+<div class="admonition danger">
+<p class="admonition-title">Lemme 3.5<br><span class='zh-title'>引理 3.5</span></p>
+<p>Soit <span class="arithmatex">\((a,b) \in \mathbb{R}^2\)</span> tel que <span class="arithmatex">\(a &lt; b\)</span>. Si <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est une suite réelle qui converge vers <span class="arithmatex">\(\ell \in\,]a,b[\)</span>, alors <span class="arithmatex">\(]a,b[\)</span> contient tous les termes de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> à partir d'un certain rang :</p>
+<p class="zh">设 <span class="arithmatex">\((a,b) \in \mathbb{R}^2\)</span> 且 <span class="arithmatex">\(a &lt; b\)</span>。若实数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛于 <span class="arithmatex">\(\ell \in\,]a,b[\)</span>，则 <span class="arithmatex">\(]a,b[\)</span> 包含 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 从某一项起的所有项：</p>
+<div class="arithmatex">\[
+\exists N \geqslant n_0,\ \forall n \geqslant N,\ u_n \in\,]a,b[.
+\]</div>
+</div>
+<p><strong>Démonstration.</strong> Il suffit de poser <span class="arithmatex">\(\varepsilon = \min\{b-\ell,\ell-a\} &gt; 0\)</span> dans la définition.</p>
+<p class="zh"><strong>证明.</strong> 只需在定义中取 <span class="arithmatex">\(\varepsilon = \min\{b-\ell,\ell-a\} &gt; 0\)</span>。</p>
+<p><p class="cqfd">∎</p></p>
+<p>On suppose que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> converge et on note <span class="arithmatex">\(\ell\)</span> sa limite. Puisque <span class="arithmatex">\(\ell \in\,]-\lvert\ell\rvert-1,\lvert\ell\rvert+1[\)</span>, on sait d'après le lemme 3.5 que :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛，记其极限为 <span class="arithmatex">\(\ell\)</span>。因为 <span class="arithmatex">\(\ell \in\,]-\lvert\ell\rvert-1,\lvert\ell\rvert+1[\)</span>，由引理 3.5 可知：</p>
+<div class="arithmatex">\[
+\exists N \geqslant n_0,\ \forall n \geqslant N,\ |u_n| &lt; |\ell|+1.
+\]</div>
+<p>Par conséquent :</p>
+<p class="zh">因此：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\ |u_n| \leqslant R
+\quad\text{en posant}\quad
+R = \max\bigl\{|u_{n_0}|,\ |u_{n_0+1}|,\ \dots,\ |u_{N-1}|,\ |\ell|+1\bigr\}.
+\]</div>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 3.6<br><span class='zh-title'>性质 3.6</span></p>
+<p>Si <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est une suite réelle qui converge vers <span class="arithmatex">\(\ell &gt; 0\)</span>, alors tous ses termes sont strictement positifs à partir d'un certain rang :</p>
+<p class="zh">若实数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛于 <span class="arithmatex">\(\ell &gt; 0\)</span>，则从某一项起它的所有项都严格为正：</p>
+<div class="arithmatex">\[
+\exists N \geqslant n_0,\ \forall n \geqslant N,\ u_n &gt; 0.
+\]</div>
+</div>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong> D'après le lemme 3.5, en posant <span class="arithmatex">\(a = 0\)</span>.</p>
+<p class="zh"><strong>证明.</strong> 由引理 3.5，取 <span class="arithmatex">\(a = 0\)</span> 即可。</p>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Vocabulaire clé &nbsp;&nbsp; 重点词汇<br><span class='zh-title'>第三节核心术语</span></p>
+<ul>
+<li><strong>suite convergente</strong>：收敛数列</li>
+<li><strong>limite</strong>：极限</li>
+<li><strong>converger vers <span class="arithmatex">\(\ell\)</span></strong>：收敛于 <span class="arithmatex">\(\ell\)</span></li>
+<li><strong>tendre vers <span class="arithmatex">\(\ell\)</span></strong>：趋于 <span class="arithmatex">\(\ell\)</span></li>
+<li><strong>voisinage</strong>：邻域</li>
+<li><strong><span class="arithmatex">\(\varepsilon\)</span> arbitraire</strong>：任意 <span class="arithmatex">\(\varepsilon\)</span></li>
+<li><strong>à partir d'un certain rang</strong>：从某一项起</li>
+<li><strong>unicité de la limite</strong>：极限的唯一性</li>
+<li><strong>suite bornée</strong>：有界数列</li>
+<li><strong>lemme</strong>：引理</li>
+<li><strong>par l'absurde</strong>：反证法</li>
+<li><strong>ce qui est absurde</strong>：这是矛盾的（反证法套语）</li>
+<li><strong>borne supérieure</strong>：上确界</li>
+</ul>
+</div>
+<h2 id="suites-reelles-divergentes-vers-linfini">Suites réelles divergentes vers l'infini <span class="heading-zh">发散到无穷的实数列</span><a class="headerlink" href="#suites-reelles-divergentes-vers-linfini" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Définition 4.1 : suite divergente vers l'infini<br><span class='zh-title'>定义 4.1：发散到无穷的数列</span></p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite réelle.</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是实数列。</p>
+<ul>
+<li>
+<p>On dit que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> <strong>diverge vers</strong> <span class="arithmatex">\(+\infty\)</span>, ou que <span class="arithmatex">\(u_n\)</span> <strong>tend vers</strong> <span class="arithmatex">\(+\infty\)</span> quand <span class="arithmatex">\(n\)</span> tend vers <span class="arithmatex">\(+\infty\)</span>, lorsque :</p>
+<div class="arithmatex">\[
+\forall A \in \mathbb{R},\ \exists N \geqslant n_0,\ \forall n \geqslant N,\ u_n &gt; A.
+\]</div>
+<p class="zh">若对任意 <span class="arithmatex">\(A \in \mathbb{R}\)</span>，都存在 <span class="arithmatex">\(N \geqslant n_0\)</span>，使得当 <span class="arithmatex">\(n \geqslant N\)</span> 时 <span class="arithmatex">\(u_n &gt; A\)</span>，则称 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> <strong>发散到</strong> <span class="arithmatex">\(+\infty\)</span>，或说当 <span class="arithmatex">\(n\)</span> 趋于 <span class="arithmatex">\(+\infty\)</span> 时 <span class="arithmatex">\(u_n\)</span> <strong>趋于</strong> <span class="arithmatex">\(+\infty\)</span>：</p>
+<p>Dans ce cas, on note <span class="arithmatex">\(\lim_{n\to+\infty} u_n = +\infty\)</span>.</p>
+<p class="zh">此时记 <span class="arithmatex">\(\lim_{n\to+\infty} u_n = +\infty\)</span>。</p>
+</li>
+<li>
+<p>On dit que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> <strong>diverge vers</strong> <span class="arithmatex">\(-\infty\)</span>, ou que <span class="arithmatex">\(u_n\)</span> <strong>tend vers</strong> <span class="arithmatex">\(-\infty\)</span> quand <span class="arithmatex">\(n\)</span> tend vers <span class="arithmatex">\(+\infty\)</span>, lorsque <span class="arithmatex">\(\lim_{n\to+\infty} -u_n = +\infty\)</span>, c'est-à-dire :</p>
+<div class="arithmatex">\[
+\forall B \in \mathbb{R},\ \exists N \geqslant n_0,\ \forall n \geqslant N,\ u_n &lt; B.
+\]</div>
+<p class="zh">若 <span class="arithmatex">\(\lim_{n\to+\infty} -u_n = +\infty\)</span>，亦即对任意 <span class="arithmatex">\(B \in \mathbb{R}\)</span>，都存在 <span class="arithmatex">\(N \geqslant n_0\)</span>，使得当 <span class="arithmatex">\(n \geqslant N\)</span> 时 <span class="arithmatex">\(u_n &lt; B\)</span>，则称 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> <strong>发散到</strong> <span class="arithmatex">\(-\infty\)</span>，或说当 <span class="arithmatex">\(n\)</span> 趋于 <span class="arithmatex">\(+\infty\)</span> 时 <span class="arithmatex">\(u_n\)</span> <strong>趋于</strong> <span class="arithmatex">\(-\infty\)</span>：</p>
+<p>Dans ce cas, on note <span class="arithmatex">\(\lim_{n\to+\infty} u_n = -\infty\)</span>.</p>
+<p class="zh">此时记 <span class="arithmatex">\(\lim_{n\to+\infty} u_n = -\infty\)</span>。</p>
+</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 4.2<br><span class='zh-title'>例 4.2</span></p>
+<p>Soit <span class="arithmatex">\(A \in \mathbb{R}\)</span>. On a :</p>
+<div class="arithmatex">\[
+\forall n \in \mathbb{N},\quad 2n+3 &gt; A \iff n &gt; \frac{A-3}{2}.
+\]</div>
+<p class="zh">设 <span class="arithmatex">\(A \in \mathbb{R}\)</span>。有：</p>
+<p>Ainsi, en posant <span class="arithmatex">\(N = \max\left\{\left\lfloor \frac{A-3}{2} \right\rfloor + 1,\ 0\right\} \in \mathbb{N}\)</span>, on a montré que <span class="arithmatex">\((2n+3)_{n\geqslant 0}\)</span> diverge vers <span class="arithmatex">\(+\infty\)</span>.</p>
+<p class="zh">于是，取 <span class="arithmatex">\(N = \max\left\{\left\lfloor \frac{A-3}{2} \right\rfloor + 1,\ 0\right\} \in \mathbb{N}\)</span>，就证明了 <span class="arithmatex">\((2n+3)_{n\geqslant 0}\)</span> 发散到 <span class="arithmatex">\(+\infty\)</span>。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Important<br><span class='zh-title'>重要（Important）</span></p>
+<p>En général, <span class="arithmatex">\(N\)</span> dépend de <span class="arithmatex">\(A\)</span> : plus <span class="arithmatex">\(A\)</span> est grand, plus le rang <span class="arithmatex">\(N\)</span> à partir duquel tous les termes de la suite appartiennent à <span class="arithmatex">\(]A,+\infty[\)</span> doit être grand.</p>
+<p class="zh">一般来说，<span class="arithmatex">\(N\)</span> 依赖于 <span class="arithmatex">\(A\)</span>：<span class="arithmatex">\(A\)</span> 越大，使数列从某一项起的所有项都落入 <span class="arithmatex">\(]A,+\infty[\)</span> 所需的序号 <span class="arithmatex">\(N\)</span> 就越大。</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 4.3<br><span class='zh-title'>性质 4.3</span></p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite réelle. Alors :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是实数列。则：</p>
+<div class="arithmatex">\[
+\begin{cases}
+(u_n)_{n\geqslant n_0} \text{ diverge vers } +\infty \implies (u_n)_{n\geqslant n_0} \text{ n'est pas majorée,}\\[3pt]
+(u_n)_{n\geqslant n_0} \text{ diverge vers } -\infty \implies (u_n)_{n\geqslant n_0} \text{ n'est pas minorée.}
+\end{cases}
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Définition 4.4 : droite réelle achevée<br><span class='zh-title'>定义 4.4：扩充实直线（droite réelle achevée）</span></p>
+<p>On note <span class="arithmatex">\(\overline{\mathbb{R}} = \mathbb{R} \cup \{-\infty,+\infty\} = [-\infty,+\infty]\)</span> l'ensemble des limites possibles, appelé la <strong>droite réelle achevée</strong>.</p>
+<p class="zh">记 <span class="arithmatex">\(\overline{\mathbb{R}} = \mathbb{R} \cup \{-\infty,+\infty\} = [-\infty,+\infty]\)</span> 为一切可能极限之集，称为<strong>扩充实直线</strong>（droite réelle achevée）。</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 4.5 : opérations avec les limites<br><span class='zh-title'>性质 4.5：极限的运算</span></p>
+<p>Soient <span class="arithmatex">\((a_n)\)</span> et <span class="arithmatex">\((b_n)\)</span> deux suites réelles telles que <span class="arithmatex">\(a = \lim_{n\to+\infty} a_n\)</span> et <span class="arithmatex">\(b = \lim_{n\to+\infty} b_n\)</span> existent dans <span class="arithmatex">\(\overline{\mathbb{R}}\)</span>.</p>
+<p class="zh">设 <span class="arithmatex">\((a_n)\)</span> 与 <span class="arithmatex">\((b_n)\)</span> 是两个实数列，且 <span class="arithmatex">\(a = \lim_{n\to+\infty} a_n\)</span>、<span class="arithmatex">\(b = \lim_{n\to+\infty} b_n\)</span> 在 <span class="arithmatex">\(\overline{\mathbb{R}}\)</span> 中存在。</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\displaystyle\lim_{n\to+\infty}(a_n+b_n)\)</span> est donnée par le tableau suivant :</p>
+<p class="zh"><span class="arithmatex">\(\displaystyle\lim_{n\to+\infty}(a_n+b_n)\)</span> 由下表给出：</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(+\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(b\in\mathbb{R}\)</span> &amp; <span class="arithmatex">\(+\infty\)</span></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(??\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a\in\mathbb{R}\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(a+b\)</span> &amp; <span class="arithmatex">\(+\infty\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(??\)</span> &amp; <span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(+\infty\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle\lim_{n\to+\infty}a_nb_n\)</span> est donnée par le tableau suivant :</p>
+<p class="zh"><span class="arithmatex">\(\displaystyle\lim_{n\to+\infty}a_nb_n\)</span> 由下表给出：</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(\times\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(b\in\mathbb{R}^*_-\)</span> &amp; <span class="arithmatex">\(0\)</span> &amp; <span class="arithmatex">\(b\in\mathbb{R}^*_+\)</span> &amp; <span class="arithmatex">\(+\infty\)</span></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(??\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(-\infty\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a\in\mathbb{R}^*_-\)</span> &amp; <span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(ab\)</span> &amp; <span class="arithmatex">\(0\)</span> &amp; <span class="arithmatex">\(ab\)</span> &amp; <span class="arithmatex">\(-\infty\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(0\)</span> &amp; <span class="arithmatex">\(??\)</span> &amp; <span class="arithmatex">\(0\)</span> &amp; <span class="arithmatex">\(0\)</span> &amp; <span class="arithmatex">\(0\)</span> &amp; <span class="arithmatex">\(??\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a\in\mathbb{R}^*_+\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(ab\)</span> &amp; <span class="arithmatex">\(0\)</span> &amp; <span class="arithmatex">\(ab\)</span> &amp; <span class="arithmatex">\(+\infty\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(??\)</span> &amp; <span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(+\infty\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>si <span class="arithmatex">\((b_n)\)</span> ne s'annule pas à partir d'un certain rang, <span class="arithmatex">\(\displaystyle\lim_{n\to+\infty}\frac{a_n}{b_n}\)</span> est donnée par le tableau suivant :</p>
+<p class="zh">若 <span class="arithmatex">\((b_n)\)</span> 从某一项起不为零，则 <span class="arithmatex">\(\displaystyle\lim_{n\to+\infty}\frac{a_n}{b_n}\)</span> 由下表给出：</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(/\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(b\in\mathbb{R}^*_-\)</span> &amp; <span class="arithmatex">\(0^-\)</span> &amp; <span class="arithmatex">\(0^+\)</span> &amp; <span class="arithmatex">\(b\in\mathbb{R}^*_+\)</span> &amp; <span class="arithmatex">\(+\infty\)</span></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(??\)</span> &amp; <span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(??\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a\in\mathbb{R}^*_-\)</span> &amp; <span class="arithmatex">\(0^+\)</span> &amp; <span class="arithmatex">\(\dfrac{a}{b}\)</span> &amp; <span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(\dfrac{a}{b}\)</span> &amp; <span class="arithmatex">\(0^-\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(0\)</span> &amp; <span class="arithmatex">\(0\)</span> &amp; <span class="arithmatex">\(0\)</span> &amp; <span class="arithmatex">\(??\)</span> &amp; <span class="arithmatex">\(??\)</span> &amp; <span class="arithmatex">\(0\)</span> &amp; <span class="arithmatex">\(0\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a\in\mathbb{R}^*_+\)</span> &amp; <span class="arithmatex">\(0^-\)</span> &amp; <span class="arithmatex">\(\dfrac{a}{b}\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(\dfrac{a}{b}\)</span> &amp; <span class="arithmatex">\(0^+\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(??\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(-\infty\)</span> &amp; <span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(+\infty\)</span> &amp; <span class="arithmatex">\(??\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p>où <span class="arithmatex">\(0^+\)</span> (respectivement <span class="arithmatex">\(0^-\)</span>) indique que la suite converge vers <span class="arithmatex">\(0\)</span> avec des termes positifs (respectivement négatifs) à partir d'un certain rang.</p>
+<p class="zh">其中 <span class="arithmatex">\(0^+\)</span>（相应地 <span class="arithmatex">\(0^-\)</span>）表示该数列从某一项起以正项（相应地负项）收敛于 <span class="arithmatex">\(0\)</span>。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Important<br><span class='zh-title'>重要（Important）</span></p>
+<p>Dans ces tableaux, <span class="arithmatex">\(??\)</span> indique une <strong>forme indéterminée</strong> : <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(b\)</span> ne suffisent pas à déterminer la limite considérée. Il faut alors utiliser d'autres méthodes.</p>
+<p class="zh">这些表中的 <span class="arithmatex">\(??\)</span> 表示<strong>未定式</strong>（forme indéterminée）：仅凭 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(b\)</span> 不足以确定所考虑的极限，此时必须使用其他方法。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 4.6<br><span class='zh-title'>例 4.6</span></p>
+<p>-</p>
+<div class="language-text highlight"><pre><span></span><code>\[
+\lim_{n\to+\infty}\underbrace{\sqrt{n^2+1}-n}_{\text{forme indéterminée }\infty-\infty}
+=\lim_{n\to+\infty}\frac{\overbrace{\bigl(\sqrt{n^2+1}-n\bigr)\bigl(\sqrt{n^2+1}+n\bigr)}^{=1}}
+{\underbrace{\sqrt{n^2+1}}_{\to+\infty}+\underbrace{n}_{\to+\infty}}=0.
+\]
+</code></pre></div>
+<p>-</p>
+<div class="language-text highlight"><pre><span></span><code>\[
+\lim_{n\to+\infty}\underbrace{n\sin\left(\frac{1}{n}\right)}_{\text{forme indéterminée }\infty\times0}
+=\lim_{n\to+\infty}\frac{\sin\left(\frac{1}{n}\right)}{\frac{1}{n}}
+=\lim_{\theta\to0}\frac{\sin(\theta)}{\theta}=1
+\quad
+\begin{array}{l}
+\text{en posant } \theta=\frac{1}{n}\to0\\
+\text{quand } n\to+\infty.
+\end{array}
+\]
+</code></pre></div>
+<p>-</p>
+<div class="language-text highlight"><pre><span></span><code>\[
+\lim_{n\to+\infty}\underbrace{\frac{n^3+2n+3}{n^2+4n+5}}_{\text{forme indéterminée }\infty/\infty}
+=\lim_{n\to+\infty}\frac{\overbrace{n}^{\to+\infty}+\overbrace{\frac{2}{n}}^{\to0}+\overbrace{\frac{3}{n^2}}^{\to0}}
+{1+\underbrace{\frac{4}{n}}_{\to0}+\underbrace{\frac{5}{n^2}}_{\to0}}=+\infty.
+\]
+</code></pre></div>
+<p>-</p>
+<div class="language-text highlight"><pre><span></span><code>\[
+\lim_{n\to+\infty}\underbrace{\frac{\sin^2\left(\frac{1}{n}\right)}{1-\cos\left(\frac{1}{n}\right)}}_{\text{forme indéterminée }0/0}
+=\lim_{n\to+\infty}\frac{1-\cos^2\left(\frac{1}{n}\right)}{1-\cos\left(\frac{1}{n}\right)}
+=\lim_{n\to+\infty}\underbrace{1+\cos\left(\frac{1}{n}\right)}_{\to1}=2.
+\]
+</code></pre></div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 4.7 : composition de limites<br><span class='zh-title'>性质 4.7：极限的复合</span></p>
+<p>Soient <span class="arithmatex">\(f : \mathcal{D} \to \mathbb{R}\)</span> une fonction et <span class="arithmatex">\((a_n)\)</span> une suite dont les termes appartiennent à <span class="arithmatex">\(\mathcal{D} \subset \mathbb{R}\)</span> telles que <span class="arithmatex">\(a = \lim_{n\to+\infty} a_n\)</span> et <span class="arithmatex">\(\ell = \lim_{x\to a} f(x)\)</span> existent dans <span class="arithmatex">\(\overline{\mathbb{R}}\)</span>. Alors <span class="arithmatex">\(\lim_{n\to+\infty} f(a_n) = \ell\)</span>.</p>
+<p class="zh">设 <span class="arithmatex">\(f : \mathcal{D} \to \mathbb{R}\)</span> 是函数，<span class="arithmatex">\((a_n)\)</span> 是各项属于 <span class="arithmatex">\(\mathcal{D} \subset \mathbb{R}\)</span> 的数列，且 <span class="arithmatex">\(a = \lim_{n\to+\infty} a_n\)</span> 与 <span class="arithmatex">\(\ell = \lim_{x\to a} f(x)\)</span> 在 <span class="arithmatex">\(\overline{\mathbb{R}}\)</span> 中存在。则 <span class="arithmatex">\(\lim_{n\to+\infty} f(a_n) = \ell\)</span>。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 4.8<br><span class='zh-title'>例 4.8</span></p>
+<p>On a :</p>
+<div class="arithmatex">\[
+\lim_{n\to+\infty}\left(1+\frac{1}{n}\right)^n
+=\lim_{n\to+\infty}\overbrace{e^{n\ln\left(1+\frac{1}{n}\right)}}^{\text{forme indéterminée }\infty\times0}.
+\]</div>
+<p class="zh">有：</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention<br><span class='zh-title'>注意（Attention）</span></p>
+<p><span class="arithmatex">\(1^\infty\)</span> est une forme indéterminée !</p>
+<p class="zh"><span class="arithmatex">\(1^\infty\)</span> 是未定式！</p>
+</div>
+<p>Or, en posant <span class="arithmatex">\(h = \frac{1}{n} \to 0\)</span> quand <span class="arithmatex">\(n \to +\infty\)</span> :</p>
+<div class="arithmatex">\[
+\lim_{n\to+\infty} n\ln\left(1+\frac{1}{n}\right)
+=\lim_{n\to+\infty}\frac{\ln\left(1+\frac{1}{n}\right)}{\frac{1}{n}}
+=\lim_{h\to0}\frac{\ln(1+h)-\ln(1)}{h}=\frac{1}{1+0}=1.
+\]</div>
+<p class="zh">而令 <span class="arithmatex">\(h = \frac{1}{n} \to 0\)</span>（当 <span class="arithmatex">\(n \to +\infty\)</span> 时）：</p>
+<p>Donc, par composition de limites :</p>
+<p class="zh">因此，由极限的复合：</p>
+<div class="arithmatex">\[
+\lim_{n\to+\infty}\left(1+\frac{1}{n}\right)^n
+=\lim_{x\to1} e^x = e.
+\]</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 4.9 : comparaison de limites<br><span class='zh-title'>性质 4.9：极限的比较</span></p>
+<p>Soient <span class="arithmatex">\((a_n)\)</span> et <span class="arithmatex">\((b_n)\)</span> deux suites réelles telles que <span class="arithmatex">\(a = \lim_{n\to+\infty} a_n\)</span> et <span class="arithmatex">\(b = \lim_{n\to+\infty} b_n\)</span> existent dans <span class="arithmatex">\(\overline{\mathbb{R}}\)</span>. S'il existe un rang <span class="arithmatex">\(N\)</span> tel que :</p>
+<p class="zh">设 <span class="arithmatex">\((a_n)\)</span> 与 <span class="arithmatex">\((b_n)\)</span> 是两个实数列，且 <span class="arithmatex">\(a = \lim_{n\to+\infty} a_n\)</span>、<span class="arithmatex">\(b = \lim_{n\to+\infty} b_n\)</span> 在 <span class="arithmatex">\(\overline{\mathbb{R}}\)</span> 中存在。若存在序号 <span class="arithmatex">\(N\)</span> 使得：</p>
+<div class="arithmatex">\[
+\forall n \geqslant N,\ a_n \leqslant b_n,
+\]</div>
+<p>alors <span class="arithmatex">\(a \leqslant b\)</span>.</p>
+<p class="zh">则 <span class="arithmatex">\(a \leqslant b\)</span>。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Remarque<br><span class='zh-title'>注（Remarque）</span></p>
+<ul>
+<li>
+<p>En particulier, la limite d'une suite convergente à termes positifs (respectivement négatifs) est positive (respectivement négative).</p>
+<p class="zh">特别地，各项为正（相应地负）的收敛数列，其极限为正（相应地负）。</p>
+</li>
+<li>
+<p>Cette propriété ne permet pas de justifier l'existence des limites.</p>
+<p class="zh">该性质不能用来证明极限的存在性。</p>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention<br><span class='zh-title'>注意（Attention）</span></p>
+<p>En général, cette propriété est fausse pour les inégalités strictes. Par exemple :</p>
+<p class="zh">一般来说，对于严格不等式，该性质不成立。例如：</p>
+<div class="arithmatex">\[
+\forall n \geqslant 1,\quad 0 &lt; \frac{1}{n}
+\quad\text{mais}\quad
+0 = \lim_{n\to+\infty}\frac{1}{n}.
+\]</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Vocabulaire clé &nbsp;&nbsp; 重点词汇<br><span class='zh-title'>第四节核心术语</span></p>
+<ul>
+<li><strong>diverge vers <span class="arithmatex">\(+\infty\)</span> / <span class="arithmatex">\(-\infty\)</span></strong>：发散到 <span class="arithmatex">\(+\infty\)</span> / <span class="arithmatex">\(-\infty\)</span></li>
+<li><strong>suite non majorée / non minorée</strong>：无上界的数列 / 无下界的数列</li>
+<li><strong>droite réelle achevée <span class="arithmatex">\(\overline{\mathbb{R}}\)</span></strong>：扩充实直线 <span class="arithmatex">\(\overline{\mathbb{R}}\)</span></li>
+<li><strong>opérations avec les limites</strong>：极限的运算</li>
+<li><strong>forme indéterminée</strong>：未定式</li>
+<li><strong>lever une indétermination</strong>：消去未定式</li>
+<li><strong>composition de limites</strong>：极限的复合</li>
+<li><strong>comparaison de limites</strong>：极限的比较</li>
+<li><strong>inégalité stricte</strong>：严格不等式</li>
+<li><strong>en posant…</strong>：令……（换元套语）</li>
+<li><strong>par conséquent</strong>：因此</li>
+</ul>
+</div>
+<h2 id="nature-de-suites-reelles">Nature de suites réelles <span class="heading-zh">实数列的性质</span><a class="headerlink" href="#nature-de-suites-reelles" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Définition 5.1 : nature de suites réelles<br><span class='zh-title'>定义 5.1：实数列的性质</span></p>
+<p>Déterminer la <strong>nature</strong> d'une suite réelle <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span>, c'est préciser dans lequel des trois cas suivants elle se trouve.</p>
+<p class="zh">确定实数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 的<strong>性质</strong>（nature），就是指出它属于以下三种情形中的哪一种。</p>
+<ul>
+<li>
+<p><strong>Convergence</strong> : <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> converge vers une limite <span class="arithmatex">\(\ell \in \mathbb{R}\)</span>.</p>
+<p class="zh"><strong>收敛</strong>（convergence）：<span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛于某个极限 <span class="arithmatex">\(\ell \in \mathbb{R}\)</span>。</p>
+</li>
+<li>
+<p><strong>Divergence de 1<sup>re</sup> espèce</strong> : <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> diverge vers <span class="arithmatex">\(+\infty\)</span> ou vers <span class="arithmatex">\(-\infty\)</span>.</p>
+<p class="zh"><strong>第一类发散</strong>（divergence de 1<sup>re</sup> espèce）：<span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 发散到 <span class="arithmatex">\(+\infty\)</span> 或 <span class="arithmatex">\(-\infty\)</span>。</p>
+</li>
+<li>
+<p><strong>Divergence de 2<sup>e</sup> espèce</strong> : <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> n'admet pas de limite (dans <span class="arithmatex">\(\overline{\mathbb{R}}\)</span>).</p>
+<p class="zh"><strong>第二类发散</strong>（divergence de 2<sup>e</sup> espèce）：<span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span>（在 <span class="arithmatex">\(\overline{\mathbb{R}}\)</span> 中）没有极限。</p>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Important<br><span class='zh-title'>重要（Important）</span></p>
+<p>La nature d'une suite ne dépend pas de ses premiers termes : pour tout <span class="arithmatex">\(n_1 \geqslant n_0\)</span>, les suites <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> et <span class="arithmatex">\((u_n)_{n\geqslant n_1}\)</span> ont même nature.</p>
+<p class="zh">数列的性质与其前几项无关：对任意 <span class="arithmatex">\(n_1 \geqslant n_0\)</span>，数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 与 <span class="arithmatex">\((u_n)_{n\geqslant n_1}\)</span> 具有相同的性质。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 5.2<br><span class='zh-title'>例 5.2</span></p>
+<ul>
+<li>
+<p>Toute suite réelle arithmétique de raison <span class="arithmatex">\(r \in \mathbb{R}^*\)</span> est divergente de 1<sup>re</sup> espèce.</p>
+<p class="zh">任何公差 <span class="arithmatex">\(r \in \mathbb{R}^*\)</span> 的实等差数列都是第一类发散的。</p>
+</li>
+<li>
+<p>Soit <span class="arithmatex">\(q \in \mathbb{R}\)</span>. La suite géométrique <span class="arithmatex">\((q^n)\)</span> est divergente de 1<sup>re</sup> espèce si <span class="arithmatex">\(q &gt; 1\)</span>, convergente si <span class="arithmatex">\(q \in\,]-1,1]\)</span> (vers <span class="arithmatex">\(0\)</span> si <span class="arithmatex">\(q \in\,]-1,1[\)</span>) et divergente de 2<sup>e</sup> espèce si <span class="arithmatex">\(q \leqslant -1\)</span>.</p>
+<p class="zh">设 <span class="arithmatex">\(q \in \mathbb{R}\)</span>。等比数列 <span class="arithmatex">\((q^n)\)</span>：当 <span class="arithmatex">\(q &gt; 1\)</span> 时第一类发散；当 <span class="arithmatex">\(q \in\,]-1,1]\)</span> 时收敛（当 <span class="arithmatex">\(q \in\,]-1,1[\)</span> 时收敛于 <span class="arithmatex">\(0\)</span>）；当 <span class="arithmatex">\(q \leqslant -1\)</span> 时第二类发散。</p>
+</li>
+<li>
+<p>En particulier, la limite de <span class="arithmatex">\((-1)^n\)</span> quand <span class="arithmatex">\(n \to +\infty\)</span> n'existe pas.</p>
+<p class="zh">特别地，当 <span class="arithmatex">\(n \to +\infty\)</span> 时 <span class="arithmatex">\((-1)^n\)</span> 的极限不存在。</p>
+</li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 5.3 : théorème de limite par encadrement<br><span class='zh-title'>定理 5.3：夹逼定理（极限的夹逼）</span></p>
+<p>Soient <span class="arithmatex">\((a_n)\)</span>, <span class="arithmatex">\((b_n)\)</span> et <span class="arithmatex">\((u_n)\)</span> trois suites réelles telles qu'à partir d'un certain rang <span class="arithmatex">\(N\)</span> :</p>
+<p class="zh">设 <span class="arithmatex">\((a_n)\)</span>、<span class="arithmatex">\((b_n)\)</span>、<span class="arithmatex">\((u_n)\)</span> 是三个实数列，且从某一序号 <span class="arithmatex">\(N\)</span> 起有：</p>
+<div class="arithmatex">\[
+\forall n \geqslant N,\ a_n \leqslant u_n \leqslant b_n.
+\]</div>
+<p>Si <span class="arithmatex">\((a_n)\)</span> et <span class="arithmatex">\((b_n)\)</span> convergent vers la même limite <span class="arithmatex">\(\ell \in \overline{\mathbb{R}}\)</span>, alors <span class="arithmatex">\((u_n)\)</span> converge aussi vers <span class="arithmatex">\(\ell\)</span>.</p>
+<p class="zh">若 <span class="arithmatex">\((a_n)\)</span> 与 <span class="arithmatex">\((b_n)\)</span> 收敛于同一极限 <span class="arithmatex">\(\ell \in \overline{\mathbb{R}}\)</span>，则 <span class="arithmatex">\((u_n)\)</span> 也收敛于 <span class="arithmatex">\(\ell\)</span>。</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 5.4 : théorème de limite par comparaison<br><span class='zh-title'>定理 5.4：比较定理（极限的比较）</span></p>
+<ul>
+<li>
+<p>Soient <span class="arithmatex">\((a_n)\)</span> et <span class="arithmatex">\((u_n)\)</span> deux suites réelles telles qu'à partir d'un certain rang <span class="arithmatex">\(N\)</span> :</p>
+<p class="zh">设 <span class="arithmatex">\((a_n)\)</span> 与 <span class="arithmatex">\((u_n)\)</span> 是两个实数列，且从某一序号 <span class="arithmatex">\(N\)</span> 起有：</p>
+<div class="arithmatex">\[
+\forall n \geqslant N,\ a_n \leqslant u_n.
+\]</div>
+<p>Si <span class="arithmatex">\((a_n)\)</span> diverge vers <span class="arithmatex">\(+\infty\)</span>, alors <span class="arithmatex">\((u_n)\)</span> diverge aussi vers <span class="arithmatex">\(+\infty\)</span>.</p>
+<p class="zh">若 <span class="arithmatex">\((a_n)\)</span> 发散到 <span class="arithmatex">\(+\infty\)</span>，则 <span class="arithmatex">\((u_n)\)</span> 也发散到 <span class="arithmatex">\(+\infty\)</span>。</p>
+</li>
+<li>
+<p>Soient <span class="arithmatex">\((u_n)\)</span> et <span class="arithmatex">\((b_n)\)</span> deux suites réelles telles qu'à partir d'un certain rang <span class="arithmatex">\(N\)</span> :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)\)</span> 与 <span class="arithmatex">\((b_n)\)</span> 是两个实数列，且从某一序号 <span class="arithmatex">\(N\)</span> 起有：</p>
+<div class="arithmatex">\[
+\forall n \geqslant N,\ u_n \leqslant b_n.
+\]</div>
+<p>Si <span class="arithmatex">\((b_n)\)</span> diverge vers <span class="arithmatex">\(-\infty\)</span>, alors <span class="arithmatex">\((u_n)\)</span> diverge aussi vers <span class="arithmatex">\(-\infty\)</span>.</p>
+<p class="zh">若 <span class="arithmatex">\((b_n)\)</span> 发散到 <span class="arithmatex">\(-\infty\)</span>，则 <span class="arithmatex">\((u_n)\)</span> 也发散到 <span class="arithmatex">\(-\infty\)</span>。</p>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Important<br><span class='zh-title'>重要（Important）</span></p>
+<p>Contrairement à la propriété 4.9, ces deux théorèmes permettent de déterminer la nature de <span class="arithmatex">\((u_n)\)</span> et de justifier l'existence de sa limite. Ils sont donc très utiles en pratique.</p>
+<p class="zh">与性质 4.9 不同，这两个定理可以确定 <span class="arithmatex">\((u_n)\)</span> 的性质并证明其极限存在，因此在实践中非常有用。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 5.5<br><span class='zh-title'>例 5.5</span></p>
+<ul>
+<li>
+<p>Pour tout <span class="arithmatex">\(n \in \mathbb{N}^*\)</span>, on pose <span class="arithmatex">\(S_n = \sum_{k=1}^{n} \frac{n}{n^2+k}\)</span>. On a :</p>
+<p class="zh">对任意 <span class="arithmatex">\(n \in \mathbb{N}^*\)</span>，令 <span class="arithmatex">\(S_n = \sum_{k=1}^{n} \frac{n}{n^2+k}\)</span>。有：</p>
+<div class="arithmatex">\[
+\forall k \in \llbracket 1,n \rrbracket,\quad
+\frac{n}{n^2+n} \leqslant \frac{n}{n^2+k} \leqslant \frac{n}{n^2+1}.
+\]</div>
+<p>Par conséquent :</p>
+<p class="zh">因此：</p>
+<div class="arithmatex">\[
+\underbrace{\frac{1}{1+\frac{1}{n}}}_{\to1}
+= n\frac{n}{n^2+n}
+= \sum_{k=1}^{n}\frac{n}{n^2+n}
+\leqslant S_n
+\leqslant \sum_{k=1}^{n}\frac{n}{n^2+1}
+= n\frac{n}{n^2+1}
+= \underbrace{\frac{1}{1+\frac{1}{n^2}}}_{\to1}.
+\]</div>
+<p>D'après le théorème de limite par encadrement, on en déduit que <span class="arithmatex">\((S_n)\)</span> converge vers <span class="arithmatex">\(1\)</span>.</p>
+<p class="zh">由夹逼定理可得，<span class="arithmatex">\((S_n)\)</span> 收敛于 <span class="arithmatex">\(1\)</span>。</p>
+</li>
+<li>
+<p>Pour tout <span class="arithmatex">\(n \in \mathbb{N}^*\)</span>, on pose <span class="arithmatex">\(R_n = \sum_{k=1}^{n} \frac{1}{\sqrt{n+k}}\)</span>. On a :</p>
+<p class="zh">对任意 <span class="arithmatex">\(n \in \mathbb{N}^*\)</span>，令 <span class="arithmatex">\(R_n = \sum_{k=1}^{n} \frac{1}{\sqrt{n+k}}\)</span>。有：</p>
+<div class="arithmatex">\[
+R_n = \sum_{k=1}^{n}\frac{1}{\sqrt{n+k}}
+\geqslant \sum_{k=1}^{n}\frac{1}{\sqrt{n+n}}
+= \frac{n}{\sqrt{2n}}
+= \sqrt{\frac{n}{2}}
+\to +\infty \quad\text{quand } n \to +\infty.
+\]</div>
+<p>D'après le théorème de limite par comparaison, on en déduit que <span class="arithmatex">\((R_n)\)</span> diverge vers <span class="arithmatex">\(+\infty\)</span>.</p>
+<p class="zh">由比较定理可得，<span class="arithmatex">\((R_n)\)</span> 发散到 <span class="arithmatex">\(+\infty\)</span>。</p>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Important<br><span class='zh-title'>重要（Important）</span></p>
+<p>Avant de parler de la limite d'une suite, il faut justifier son existence. Ainsi, dans les exemples précédents, il faut utiliser les théorèmes de limite par encadrement et de limite par comparaison avant d'écrire <span class="arithmatex">\(\lim_{n\to+\infty} S_n = 1\)</span> et <span class="arithmatex">\(\lim_{n\to+\infty} R_n = +\infty\)</span>.</p>
+<p class="zh">在谈论数列的极限之前，必须先证明极限存在。因此，在上面的例子中，必须先使用夹逼定理与比较定理，才能写 <span class="arithmatex">\(\lim_{n\to+\infty} S_n = 1\)</span> 与 <span class="arithmatex">\(\lim_{n\to+\infty} R_n = +\infty\)</span>。</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Corollaire 5.6<br><span class='zh-title'>推论 5.6</span></p>
+<p>Si <span class="arithmatex">\((\varepsilon_n)\)</span> est une suite qui converge vers <span class="arithmatex">\(0\)</span> et <span class="arithmatex">\((u_n)\)</span> est une suite bornée, alors la suite <span class="arithmatex">\((\varepsilon_n u_n)\)</span> converge aussi vers <span class="arithmatex">\(0\)</span>.</p>
+<p class="zh">若 <span class="arithmatex">\((\varepsilon_n)\)</span> 是收敛于 <span class="arithmatex">\(0\)</span> 的数列，<span class="arithmatex">\((u_n)\)</span> 是有界数列，则数列 <span class="arithmatex">\((\varepsilon_n u_n)\)</span> 也收敛于 <span class="arithmatex">\(0\)</span>。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 5.7<br><span class='zh-title'>例 5.7</span></p>
+<div class="arithmatex">\[
+\lim_{n\to+\infty}\frac{\cos(n)}{n}
+=\lim_{n\to+\infty}\underbrace{\frac{1}{n}}_{\to0}\underbrace{\cos(n)}_{\in[-1,1]}=0.
+\]</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 5.8 : théorème des suites extraites d'indices pairs et impairs<br><span class='zh-title'>定理 5.8：偶、奇下标子列定理</span></p>
+<p>Soit <span class="arithmatex">\((u_n)\)</span> une suite réelle. Alors <span class="arithmatex">\((u_n)\)</span> admet une limite <span class="arithmatex">\(\ell \in \overline{\mathbb{R}}\)</span> si et seulement si les deux <strong>suites extraites</strong> <span class="arithmatex">\((u_{2k})\)</span> et <span class="arithmatex">\((u_{2k+1})\)</span> admettent aussi la même limite <span class="arithmatex">\(\ell\)</span> :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)\)</span> 是实数列。则 <span class="arithmatex">\((u_n)\)</span> 有极限 <span class="arithmatex">\(\ell \in \overline{\mathbb{R}}\)</span> 当且仅当两个<strong>子列</strong>（suites extraites）<span class="arithmatex">\((u_{2k})\)</span> 与 <span class="arithmatex">\((u_{2k+1})\)</span> 也有相同的极限 <span class="arithmatex">\(\ell\)</span>：</p>
+<div class="arithmatex">\[
+\lim_{n\to+\infty} u_n = \ell
+\iff
+\lim_{k\to+\infty} u_{2k} = \lim_{k\to+\infty} u_{2k+1} = \ell.
+\]</div>
+</div>
+<p>On remarque que <span class="arithmatex">\((u_{2k})\)</span> est la suite de tous les termes d'indices pairs de <span class="arithmatex">\((u_n)\)</span>, et que <span class="arithmatex">\((u_{2k+1})\)</span> est la suite de tous les termes d'indices impairs de <span class="arithmatex">\((u_n)\)</span>.</p>
+<p class="zh">注意：<span class="arithmatex">\((u_{2k})\)</span> 是 <span class="arithmatex">\((u_n)\)</span> 中所有偶下标项组成的子列，<span class="arithmatex">\((u_{2k+1})\)</span> 是所有奇下标项组成的子列。</p>
+<div class="admonition warning">
+<p class="admonition-title">Remarque<br><span class='zh-title'>注（Remarque）</span></p>
+<p>Ce théorème est en particulier très pratique pour justifier une divergence de 2<sup>e</sup> espèce : si les suites extraites <span class="arithmatex">\((u_{2k})\)</span> et <span class="arithmatex">\((u_{2k+1})\)</span> ne sont pas de même nature, ou si elles admettent des limites différentes, alors <span class="arithmatex">\((u_n)\)</span> n'admet pas de limite (dans <span class="arithmatex">\(\overline{\mathbb{R}}\)</span>).</p>
+<p class="zh">该定理特别适合用来证明第二类发散：若子列 <span class="arithmatex">\((u_{2k})\)</span> 与 <span class="arithmatex">\((u_{2k+1})\)</span> 的性质不同，或它们的极限不同，则 <span class="arithmatex">\((u_n)\)</span>（在 <span class="arithmatex">\(\overline{\mathbb{R}}\)</span> 中）没有极限。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 5.9<br><span class='zh-title'>例 5.9</span></p>
+<p>On a :</p>
+<div class="arithmatex">\[
+\lim_{k\to+\infty}(-1)^{2k} = 1 \neq -1 = \lim_{k\to+\infty}(-1)^{2k+1}.
+\]</div>
+<p class="zh">有：</p>
+<p>D'après le théorème des suites extraites, on en déduit que <span class="arithmatex">\(((-1)^n)\)</span> n'admet pas de limite.</p>
+<p class="zh">由子列定理可得，<span class="arithmatex">\(((-1)^n)\)</span> 没有极限。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Vocabulaire clé &nbsp;&nbsp; 重点词汇<br><span class='zh-title'>第五节核心术语</span></p>
+<ul>
+<li><strong>nature d'une suite</strong>：数列的性质（收敛 / 第一类发散 / 第二类发散）</li>
+<li><strong>convergence</strong>：收敛</li>
+<li><strong>divergence de 1<sup>re</sup> espèce</strong>：第一类发散（趋于 <span class="arithmatex">\(\pm\infty\)</span>）</li>
+<li><strong>divergence de 2<sup>e</sup> espèce</strong>：第二类发散（无极限）</li>
+<li><strong>théorème de limite par encadrement</strong>：夹逼定理</li>
+<li><strong>théorème de limite par comparaison</strong>：比较定理</li>
+<li><strong>suite extraite</strong>：子列</li>
+<li><strong>indices pairs / impairs</strong>：偶下标 / 奇下标</li>
+<li><strong>corollaire</strong>：推论</li>
+<li><strong>on en déduit que</strong>：由此推出</li>
+<li><strong>si et seulement si</strong>：当且仅当</li>
+</ul>
+</div>
+<h2 id="theoreme-de-limite-monotone">Théorème de limite monotone <span class="heading-zh">单调极限定理</span><a class="headerlink" href="#theoreme-de-limite-monotone" title="Permanent link">&para;</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 6.1 : théorème de limite monotone<br><span class='zh-title'>定理 6.1：单调极限定理</span></p>
+<ul>
+<li>
+<p>Soit <span class="arithmatex">\((u_n)\)</span> une suite croissante (à partir d'un certain rang).</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)\)</span> 是（从某一项起）递增的数列。</p>
+<ul>
+<li>
+<p>Si <span class="arithmatex">\((u_n)\)</span> est majorée, alors <span class="arithmatex">\((u_n)\)</span> converge.</p>
+<p class="zh">若 <span class="arithmatex">\((u_n)\)</span> 有上界，则 <span class="arithmatex">\((u_n)\)</span> 收敛。</p>
+</li>
+<li>
+<p>Si <span class="arithmatex">\((u_n)\)</span> n'est pas majorée, alors <span class="arithmatex">\((u_n)\)</span> diverge vers <span class="arithmatex">\(+\infty\)</span>.</p>
+<p class="zh">若 <span class="arithmatex">\((u_n)\)</span> 无上界，则 <span class="arithmatex">\((u_n)\)</span> 发散到 <span class="arithmatex">\(+\infty\)</span>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Soit <span class="arithmatex">\((u_n)\)</span> une suite décroissante (à partir d'un certain rang).</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)\)</span> 是（从某一项起）递减的数列。</p>
+<ul>
+<li>
+<p>Si <span class="arithmatex">\((u_n)\)</span> est minorée, alors <span class="arithmatex">\((u_n)\)</span> converge.</p>
+<p class="zh">若 <span class="arithmatex">\((u_n)\)</span> 有下界，则 <span class="arithmatex">\((u_n)\)</span> 收敛。</p>
+</li>
+<li>
+<p>Si <span class="arithmatex">\((u_n)\)</span> n'est pas minorée, alors <span class="arithmatex">\((u_n)\)</span> diverge vers <span class="arithmatex">\(-\infty\)</span>.</p>
+<p class="zh">若 <span class="arithmatex">\((u_n)\)</span> 无下界，则 <span class="arithmatex">\((u_n)\)</span> 发散到 <span class="arithmatex">\(-\infty\)</span>。</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>En particulier, toute suite monotone admet une limite (dans <span class="arithmatex">\(\overline{\mathbb{R}}\)</span>). Autrement dit, il n'existe pas de suite monotone divergente de 2<sup>e</sup> espèce.</p>
+<p class="zh">特别地，任何单调数列都有极限（在 <span class="arithmatex">\(\overline{\mathbb{R}}\)</span> 中）。换言之，不存在第二类发散的单调数列。</p>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong></p>
+<p class="zh"><strong>证明.</strong></p>
+<ul>
+<li>
+<p>Puisque la nature de <span class="arithmatex">\((u_n)\)</span> ne dépend pas de ses premiers termes, on peut supposer que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est croissante à partir de son rang initial.</p>
+<p class="zh">由于 <span class="arithmatex">\((u_n)\)</span> 的性质与其前几项无关，可假设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 从其起始序号起递增。</p>
+<ul>
+<li>
+<p>On suppose que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est majorée, donc <span class="arithmatex">\(\{u_n \mid n \geqslant n_0\}\)</span> est une partie non vide et majorée de <span class="arithmatex">\(\mathbb{R}\)</span>. D'après la propriété de la borne supérieure, on sait que <span class="arithmatex">\(s = \sup\{u_n \mid n \geqslant n_0\}\)</span> existe. Soit <span class="arithmatex">\(\varepsilon &gt; 0\)</span>. Puisque <span class="arithmatex">\(s-\varepsilon\)</span> n'est pas un majorant de <span class="arithmatex">\(\{u_n \mid n \geqslant n_0\}\)</span>, on sait qu'il existe un rang <span class="arithmatex">\(N \geqslant n_0\)</span> tel que <span class="arithmatex">\(s-\varepsilon &lt; u_N\)</span>. Puisque <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est croissante et que <span class="arithmatex">\(s\)</span> est un majorant de <span class="arithmatex">\(\{u_n \mid n \geqslant n_0\}\)</span>, on a :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 有上界，因此 <span class="arithmatex">\(\{u_n \mid n \geqslant n_0\}\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span> 的非空有上界子集。由上确界性质，<span class="arithmatex">\(s = \sup\{u_n \mid n \geqslant n_0\}\)</span> 存在。设 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>。由于 <span class="arithmatex">\(s-\varepsilon\)</span> 不是 <span class="arithmatex">\(\{u_n \mid n \geqslant n_0\}\)</span> 的上界，存在序号 <span class="arithmatex">\(N \geqslant n_0\)</span> 使得 <span class="arithmatex">\(s-\varepsilon &lt; u_N\)</span>。又因 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 递增且 <span class="arithmatex">\(s\)</span> 是 <span class="arithmatex">\(\{u_n \mid n \geqslant n_0\}\)</span> 的上界，有：</p>
+<div class="arithmatex">\[
+\forall n \geqslant N,\quad s-\varepsilon &lt; u_N \leqslant u_n \leqslant s &lt; s+\varepsilon.
+\]</div>
+<p>Ainsi, on a montré que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> converge vers <span class="arithmatex">\(s\)</span> :</p>
+<p class="zh">于是证明了 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛于 <span class="arithmatex">\(s\)</span>：</p>
+<div class="arithmatex">\[
+\forall \varepsilon &gt; 0,\ \exists N \geqslant n_0,\ \forall n \geqslant N,\ |u_n-s| &lt; \varepsilon.
+\]</div>
+</li>
+<li>
+<p>On suppose que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> n'est pas majorée. Soit <span class="arithmatex">\(A \in \mathbb{R}\)</span>. Puisque <span class="arithmatex">\(A\)</span> n'est pas un majorant de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span>, on sait qu'il existe un rang <span class="arithmatex">\(N \geqslant n_0\)</span> tel que <span class="arithmatex">\(A &lt; u_N\)</span>. Puisque <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est croissante, on a :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 无上界。任取 <span class="arithmatex">\(A \in \mathbb{R}\)</span>。由于 <span class="arithmatex">\(A\)</span> 不是 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 的上界，存在序号 <span class="arithmatex">\(N \geqslant n_0\)</span> 使得 <span class="arithmatex">\(A &lt; u_N\)</span>。又因 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 递增，有：</p>
+<div class="arithmatex">\[
+\forall n \geqslant N,\quad u_n \geqslant u_N &gt; A.
+\]</div>
+<p>Ainsi, on a montré que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> diverge vers <span class="arithmatex">\(+\infty\)</span> :</p>
+<p class="zh">于是证明了 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 发散到 <span class="arithmatex">\(+\infty\)</span>：</p>
+<div class="arithmatex">\[
+\forall A \in \mathbb{R},\ \exists N \geqslant n_0,\ \forall n \geqslant N,\ u_n &gt; A.
+\]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Si <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est décroissante, alors il suffit de considérer la suite <span class="arithmatex">\((-u_n)_{n\geqslant n_0}\)</span> qui est croissante, car <span class="arithmatex">\((-u_n)_{n\geqslant n_0}\)</span> est majorée si et seulement si <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est minorée.</p>
+<p class="zh">若 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 递减，则只需考虑递增数列 <span class="arithmatex">\((-u_n)_{n\geqslant n_0}\)</span>，因为 <span class="arithmatex">\((-u_n)_{n\geqslant n_0}\)</span> 有上界当且仅当 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 有下界。</p>
+</li>
+</ul>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 6.2<br><span class='zh-title'>例 6.2</span></p>
+<p>Dans l'exemple 2.5, on a montré que la suite <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span>, définie par <span class="arithmatex">\(u_0 = 1\)</span> et la relation de récurrence <span class="arithmatex">\(\forall n \geqslant 0\)</span>, <span class="arithmatex">\(u_{n+1} = \sqrt{1+u_n}\)</span>, est bornée et strictement croissante. En particulier, <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> converge d'après le théorème de limite monotone. On pose <span class="arithmatex">\(\ell = \lim_{n\to+\infty} u_n \in \mathbb{R}\)</span>. Alors :</p>
+<p class="zh">在例 2.5 中，我们证明了由 <span class="arithmatex">\(u_0 = 1\)</span> 及递推关系 <span class="arithmatex">\(\forall n \geqslant 0\)</span>，<span class="arithmatex">\(u_{n+1} = \sqrt{1+u_n}\)</span> 定义的数列 <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> 有界且严格递增。特别地，由单调极限定理，<span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> 收敛。令 <span class="arithmatex">\(\ell = \lim_{n\to+\infty} u_n \in \mathbb{R}\)</span>。则：</p>
+<div class="arithmatex">\[
+\ell = \lim_{n\to+\infty} u_{n+1}
+= \lim_{n\to+\infty}\sqrt{1+u_n}
+= \sqrt{1+\ell} = f(\ell)
+\quad\text{donc}\quad
+\ell = \varphi \ \text{(voir l'exemple 2.5)}.
+\]</div>
+<p>Finalement, on a montré que :</p>
+<p class="zh">最终，我们证明了：</p>
+<div class="arithmatex">\[
+\varphi = \lim_{n\to+\infty} u_n = \sqrt{1+\sqrt{1+\sqrt{1+\dots}}}.
+\]</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 6.3 : théorème des suites adjacentes<br><span class='zh-title'>定理 6.3：相邻数列定理</span></p>
+<p>Soient <span class="arithmatex">\((a_n)_{n\geqslant n_0}\)</span> et <span class="arithmatex">\((b_n)_{n\geqslant n_0}\)</span> deux suites <strong>adjacentes</strong>, c'est-à-dire telles que :</p>
+<p class="zh">设 <span class="arithmatex">\((a_n)_{n\geqslant n_0}\)</span> 与 <span class="arithmatex">\((b_n)_{n\geqslant n_0}\)</span> 是两个<strong>相邻数列</strong>（suites adjacentes），即满足：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\((a_n)_{n\geqslant n_0}\)</span> est croissante,</p>
+<p class="zh"><span class="arithmatex">\((a_n)_{n\geqslant n_0}\)</span> 递增，</p>
+</li>
+<li>
+<p><span class="arithmatex">\((b_n)_{n\geqslant n_0}\)</span> est décroissante,</p>
+<p class="zh"><span class="arithmatex">\((b_n)_{n\geqslant n_0}\)</span> 递减，</p>
+</li>
+<li>
+<p>et <span class="arithmatex">\(\lim_{n\to+\infty}(b_n-a_n) = 0\)</span>.</p>
+<p class="zh">且 <span class="arithmatex">\(\lim_{n\to+\infty}(b_n-a_n) = 0\)</span>。</p>
+</li>
+</ul>
+<p>Alors <span class="arithmatex">\((a_n)_{n\geqslant n_0}\)</span> et <span class="arithmatex">\((b_n)_{n\geqslant n_0}\)</span> convergent vers une même limite <span class="arithmatex">\(\ell \in \mathbb{R}\)</span> et :</p>
+<p class="zh">则 <span class="arithmatex">\((a_n)_{n\geqslant n_0}\)</span> 与 <span class="arithmatex">\((b_n)_{n\geqslant n_0}\)</span> 收敛于同一极限 <span class="arithmatex">\(\ell \in \mathbb{R}\)</span>，且：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\quad a_n \leqslant \ell \leqslant b_n.
+\]</div>
+</div>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong> Puisque <span class="arithmatex">\((a_n)_{n\geqslant n_0}\)</span> est croissante et <span class="arithmatex">\((b_n)_{n\geqslant n_0}\)</span> est décroissante, on a :</p>
+<p class="zh"><strong>证明.</strong> 由于 <span class="arithmatex">\((a_n)_{n\geqslant n_0}\)</span> 递增、<span class="arithmatex">\((b_n)_{n\geqslant n_0}\)</span> 递减，有：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\quad (b_{n+1}-a_{n+1})-(b_n-a_n)
+= (b_{n+1}-b_n)+(a_n-a_{n+1}) \leqslant 0.
+\]</div>
+<p>Ainsi, <span class="arithmatex">\((b_n-a_n)_{n\geqslant n_0}\)</span> est décroissante. Par conséquent :</p>
+<p class="zh">因此，<span class="arithmatex">\((b_n-a_n)_{n\geqslant n_0}\)</span> 递减。从而：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\quad b_n-a_n \geqslant \lim_{k\to+\infty}(b_{n+k}-a_{n+k}) = 0
+\quad\text{donc}\quad a_n \leqslant b_n.
+\]</div>
+<p>On en déduit que <span class="arithmatex">\((a_n)_{n\geqslant n_0}\)</span> est majorée par <span class="arithmatex">\(b_{n_0}\)</span> et que <span class="arithmatex">\((b_n)_{n\geqslant n_0}\)</span> est minorée par <span class="arithmatex">\(a_{n_0}\)</span>. Donc <span class="arithmatex">\((a_n)_{n\geqslant n_0}\)</span> et <span class="arithmatex">\((b_n)_{n\geqslant n_0}\)</span> convergent d'après le théorème de limite monotone. On pose <span class="arithmatex">\(\ell_1 = \lim_{n\to+\infty} a_n \in \mathbb{R}\)</span> et <span class="arithmatex">\(\ell_2 = \lim_{n\to+\infty} b_n \in \mathbb{R}\)</span>. Alors :</p>
+<p class="zh">由此可知 <span class="arithmatex">\((a_n)_{n\geqslant n_0}\)</span> 以 <span class="arithmatex">\(b_{n_0}\)</span> 为上界，<span class="arithmatex">\((b_n)_{n\geqslant n_0}\)</span> 以 <span class="arithmatex">\(a_{n_0}\)</span> 为下界。因此由单调极限定理，二者都收敛。令 <span class="arithmatex">\(\ell_1 = \lim_{n\to+\infty} a_n \in \mathbb{R}\)</span>，<span class="arithmatex">\(\ell_2 = \lim_{n\to+\infty} b_n \in \mathbb{R}\)</span>。则：</p>
+<div class="arithmatex">\[
+\ell_2-\ell_1 = \lim_{n\to+\infty}(b_n-a_n) = 0
+\quad\text{donc}\quad \ell_1 = \ell_2.
+\]</div>
+<p>Ainsi, <span class="arithmatex">\((a_n)_{n\geqslant n_0}\)</span> et <span class="arithmatex">\((b_n)_{n\geqslant n_0}\)</span> convergent vers la même limite <span class="arithmatex">\(\ell = \ell_1 = \ell_2\)</span>. De plus :</p>
+<p class="zh">于是 <span class="arithmatex">\((a_n)_{n\geqslant n_0}\)</span> 与 <span class="arithmatex">\((b_n)_{n\geqslant n_0}\)</span> 收敛于同一极限 <span class="arithmatex">\(\ell = \ell_1 = \ell_2\)</span>。此外：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\quad
+a_n \leqslant \lim_{k\to+\infty} a_{n+k} = \ell = \lim_{k\to+\infty} b_{n+k} \leqslant b_n.
+\]</div>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 6.4<br><span class='zh-title'>例 6.4</span></p>
+<p>On considère la suite <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> définie par <span class="arithmatex">\(u_0 = 1\)</span> et <span class="arithmatex">\(\forall n \geqslant 0\)</span>, <span class="arithmatex">\(u_{n+1} = 1+\frac{1}{u_n}\)</span>. En utilisant la même méthode qu'à l'exemple 2.5 avec la fonction <span class="arithmatex">\(f : x \mapsto 1+\frac{1}{x}\)</span>, on obtient le graphique suivant.</p>
+<p class="zh">考虑由 <span class="arithmatex">\(u_0 = 1\)</span> 及 <span class="arithmatex">\(\forall n \geqslant 0\)</span>，<span class="arithmatex">\(u_{n+1} = 1+\frac{1}{u_n}\)</span> 定义的数列 <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span>。用与例 2.5 相同的方法，取函数 <span class="arithmatex">\(f : x \mapsto 1+\frac{1}{x}\)</span>，得到下图。</p>
+<p><span class="lecture-figure"><img class="fig-light" src="../../../../../../assets/images/lectures/analyse-reelle/02-suites-numeriques/fig-02.svg" alt="讲义插图 2"><img class="fig-dark" src="../../../../../../assets/images/lectures/analyse-reelle/02-suites-numeriques/fig-02-dark.svg" alt="讲义插图 2"></span></p>
+<p>On conjecture que :</p>
+<p class="zh">猜测：</p>
+<div class="arithmatex">\[
+\forall k \geqslant 0,\quad
+1 \leqslant u_{2k} &lt; u_{2(k+1)} &lt; \varphi &lt; u_{2(k+1)+1} &lt; u_{2k+1} \leqslant 2
+\]</div>
+<p>et on peut démontrer cette conjecture par récurrence comme dans l'exemple 2.5. En particulier, on obtient que <span class="arithmatex">\((u_{2k})_{k\geqslant 0}\)</span> est croissante et que <span class="arithmatex">\((u_{2k+1})_{k\geqslant 0}\)</span> est décroissante. De plus, on peut aussi montrer par récurrence que :</p>
+<p class="zh">并且可以像例 2.5 那样用归纳法证明这一猜想。特别地，可得 <span class="arithmatex">\((u_{2k})_{k\geqslant 0}\)</span> 递增、<span class="arithmatex">\((u_{2k+1})_{k\geqslant 0}\)</span> 递减。此外，还可以用归纳法证明：</p>
+<div class="arithmatex">\[
+\forall k \geqslant 0,\quad 0 &lt; u_{2k+1}-u_{2k} \leqslant \frac{1}{4^k}.
+\]</div>
+<ul>
+<li>
+<p><u>Initialisation.</u> On a <span class="arithmatex">\(u_0 = 1\)</span> et <span class="arithmatex">\(u_1 = 2\)</span>, donc <span class="arithmatex">\(0 &lt; u_1-u_0 \leqslant \frac{1}{4^0}\)</span>.</p>
+<p class="zh"><u>初始步.</u> 有 <span class="arithmatex">\(u_0 = 1\)</span>，<span class="arithmatex">\(u_1 = 2\)</span>，因此 <span class="arithmatex">\(0 &lt; u_1-u_0 \leqslant \frac{1}{4^0}\)</span>。</p>
+</li>
+<li>
+<p><u>Hérédité.</u> On suppose que <span class="arithmatex">\(0 &lt; u_{2k+1}-u_{2k} \leqslant \frac{1}{4^k}\)</span> est vrai pour un rang <span class="arithmatex">\(k \geqslant 0\)</span> fixé. On a :</p>
+<p class="zh"><u>归纳步.</u> 设 <span class="arithmatex">\(0 &lt; u_{2k+1}-u_{2k} \leqslant \frac{1}{4^k}\)</span> 对某个固定的 <span class="arithmatex">\(k \geqslant 0\)</span> 成立。有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+0 &lt; u_{2(k+1)+1}-u_{2(k+1)}
+&amp;= u_{2k+3}-u_{2k+2}
+= 1+\frac{1}{u_{2k+2}}-1-\frac{1}{u_{2k+1}}\\
+&amp;= \frac{1}{1+\frac{1}{u_{2k+1}}}-\frac{1}{1+\frac{1}{u_{2k}}}
+= \frac{u_{2k+1}-u_{2k}}{(1+u_{2k+1})(1+u_{2k})}\\
+&amp;&lt; \frac{1/4^k}{(1+1)(1+1)} = \frac{1}{4^{k+1}}.
+\end{aligned}
+\]</div>
+<p>Ainsi, le résultat est vrai aussi au rang <span class="arithmatex">\(k+1\)</span>.</p>
+<p class="zh">因此，结论对 <span class="arithmatex">\(k+1\)</span> 也成立。</p>
+</li>
+<li>
+<p><u>Conclusion.</u> D'après le principe de récurrence, le résultat est vrai pour tout rang <span class="arithmatex">\(k \geqslant 0\)</span>.</p>
+<p class="zh"><u>结论.</u> 由归纳法原理，结论对一切 <span class="arithmatex">\(k \geqslant 0\)</span> 成立。</p>
+</li>
+</ul>
+<p>D'après le théorème de limite par encadrement, on en déduit que <span class="arithmatex">\(\lim_{k\to+\infty}(u_{2k+1}-u_{2k}) = 0\)</span>. Puis, d'après le théorème des suites adjacentes, on en déduit que <span class="arithmatex">\((u_{2k})_{k\geqslant 0}\)</span> et <span class="arithmatex">\((u_{2k+1})_{k\geqslant 0}\)</span> convergent vers la même limite, qui est égale à <span class="arithmatex">\(\varphi\)</span>. Enfin, d'après le théorème des suites extraites, on en déduit que <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> converge vers <span class="arithmatex">\(\varphi\)</span>. Finalement, on a montré que :</p>
+<p class="zh">由夹逼定理可得 <span class="arithmatex">\(\lim_{k\to+\infty}(u_{2k+1}-u_{2k}) = 0\)</span>。再由相邻数列定理，<span class="arithmatex">\((u_{2k})_{k\geqslant 0}\)</span> 与 <span class="arithmatex">\((u_{2k+1})_{k\geqslant 0}\)</span> 收敛于同一极限，该极限等于 <span class="arithmatex">\(\varphi\)</span>。最后由子列定理，<span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> 收敛于 <span class="arithmatex">\(\varphi\)</span>。最终，我们证明了：</p>
+<div class="arithmatex">\[
+\varphi = \lim_{n\to+\infty} u_n = 1+\frac{1}{1+\frac{1}{1+\frac{1}{\dots}}}.
+\]</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Vocabulaire clé &nbsp;&nbsp; 重点词汇<br><span class='zh-title'>第六节核心术语</span></p>
+<ul>
+<li><strong>théorème de limite monotone</strong>：单调极限定理</li>
+<li><strong>suite croissante / décroissante</strong>：递增 / 递减数列</li>
+<li><strong>suite majorée / minorée</strong>：有上界 / 有下界的数列</li>
+<li><strong>borne supérieure</strong>：上确界</li>
+<li><strong>suites adjacentes</strong>：相邻数列</li>
+<li><strong>théorème des suites adjacentes</strong>：相邻数列定理</li>
+<li><strong>suite extraite</strong>：子列</li>
+<li><strong>théorème de limite par encadrement</strong>：夹逼定理</li>
+<li><strong>converger vers</strong>：收敛于</li>
+<li><strong>on en déduit que</strong>：由此推出</li>
+<li><strong>montrer par récurrence</strong>：用归纳法证明</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<h2 id="__comments">评论</h2>
+<script src="https://giscus.app/client.js"
+  data-repo="Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA"
+  data-repo-id="R_kgDOTFxXaw"
+  data-category="General"
+  data-category-id="DIC_kwDOTFxXa84DAMmT"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async>
+</script>
+<script>
+  var giscus = document.querySelector("script[src*='giscus']");
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+    giscus.setAttribute("data-theme", theme);
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+    var ref = document.querySelector("[data-md-component='palette']");
+    if (ref) {
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette");
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+          var frame = document.querySelector(".giscus-frame");
+          if (frame && frame.contentWindow) {
+            frame.contentWindow.postMessage(
+              { giscus: { setConfig: { theme: theme } } },
+              "https://giscus.app"
+            );
+          }
+        }
+      });
+    }
+  });
+</script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Noct-BUAA
+
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["header.autohide", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.tracking", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/gsap.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/hero-scroll.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/extra.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/text-type.js"></script>
+      
+    
+  </body>
+</html>
