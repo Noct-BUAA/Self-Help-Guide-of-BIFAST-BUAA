@@ -6,13 +6,13 @@
 
 <a class="card" href="semester1/">
   <h3>大二上学期</h3>
-  <p>待补充</p>
+  <p>实分析、工程师数学工具等 2 门课程</p>
   <span class="card-arrow">浏览课程 &rarr;</span>
 </a>
 
 <a class="card" href="semester2/">
   <h3>大二下学期</h3>
-  <p>数学分析（3）、几何等 2 门课程</p>
+  <p>待补充</p>
   <span class="card-arrow">浏览课程 &rarr;</span>
 </a>
 
