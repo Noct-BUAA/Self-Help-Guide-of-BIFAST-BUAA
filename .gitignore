@@ -2,3 +2,7 @@ site/
 .cache/
 __pycache__/
 .DS_Store
+.impeccable/
+.claude/settings.local.json
+_venv/
+.venv/

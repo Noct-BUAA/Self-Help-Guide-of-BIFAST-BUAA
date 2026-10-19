@@ -43,9 +43,8 @@ theme:
         name: 切换至亮色模式
 
   # --- Fonts ---
-  font:
-    text: Noto Sans SC
-    code: JetBrains Mono
+  # 统一在 extra.css 中加载，避免主题与自定义样式重复请求 Google Fonts
+  font: false
 
   # --- Features ---
   features:
@@ -149,8 +148,26 @@ nav:
         - 学期概览: courses/year2/semester1/index.md
       - 大二下学期:
         - 学期概览: courses/year2/semester2/index.md
-        - 数学分析（3）: courses/year2/semester2/数学分析（3）/index.md
-        - 几何: courses/year2/semester2/几何/index.md
+        - 实分析:
+          - 课程总览: courses/year2/semester2/实分析/index.md
+          - 课程讲义:
+            - 第 1 章 拓扑学: courses/year2/semester2/实分析/课程讲义/01-topologie-de-r.md
+            - 第 2 章 数列: courses/year2/semester2/实分析/课程讲义/02-suites-numeriques.md
+          - 习题课讲义:
+            - TD1 拓扑学解答: courses/year2/semester2/实分析/习题课/td1-topologie.md
+            - TD2 数列解答: courses/year2/semester2/实分析/习题课/td2-suites.md
+            - TD3 数列极限解答: courses/year2/semester2/实分析/习题课/td3-limites-suites.md
+        - 工程师数学工具:
+          - 课程总览: courses/year2/semester2/工程师数学工具/index.md
+          - 课程讲义:
+            - 第 1 章 复数: courses/year2/semester2/工程师数学工具/课程讲义/01-nombres-complexes.md
+            - 第 2 章 三角学: courses/year2/semester2/工程师数学工具/课程讲义/02-trigonometrie.md
+            - 第 3 章 多项式: courses/year2/semester2/工程师数学工具/课程讲义/03-polynomes.md
+            - Fiche 5 研究实数数列: courses/year2/semester2/工程师数学工具/课程讲义/04-fiche5-suites.md
+          - 习题课讲义:
+            - TD1 复数解答: courses/year2/semester2/工程师数学工具/习题课/td1-nombres-complexes.md
+            - TD2 三角学解答: courses/year2/semester2/工程师数学工具/习题课/td2-trigonometrie.md
+            - TD3 反三角函数解答: courses/year2/semester2/工程师数学工具/习题课/td3-fonctions-reciproques.md
 
   - 校园生活指南:
     - 生活指南概览: campus-life/index.md
@@ -168,7 +185,6 @@ nav:
 
 not_in_nav: |
   includes/*
-  preface/*
 
 # ============================================================
 # MARKDOWN EXTENSIONS

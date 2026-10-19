@@ -33,8 +33,6 @@ comments: true
 
 <!-- ══════════════ NIGHT MODE HERO (slate only) ══════════════ -->
 <div class="df-dark">
-<div class="df-bg"></div>
-<div class="df-gridlines"></div>
 <div class="df-lwrap">
 <div class="df-linner">
 <div class="df-lmark">北航中法未来科技学院 · BUAA INSA</div>

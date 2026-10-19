@@ -17,7 +17,7 @@
 
 ```bash
 # 安装依赖
-pip install mkdocs-material
+pip install -r requirements.txt
 
 # 启动本地开发服务器
 mkdocs serve
@@ -44,13 +44,14 @@ mkdocs gh-deploy
 ```
 .
 ├── mkdocs.yml              # MkDocs 配置文件
+├── requirements.txt        # Python 依赖（固定版本）
+├── overrides/              # 主题覆盖（评论组件等）
 ├── docs/
-│   ├── index.md            # 首页
-│   ├── preface/            # 前言
+│   ├── index.md            # 首页（含前言）
 │   ├── courses/            # 课程学习资料
 │   ├── campus-life/        # 杭州校园生活指南
 │   ├── postscript/         # 后记
-│   ├── assets/             # 静态资源（CSS、图片等）
+│   ├── assets/             # 静态资源（CSS、JS、图片等）
 │   └── includes/           # 缩写表等全局引用
 └── site/                   # 构建输出（不纳入版本控制）
 ```

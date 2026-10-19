@@ -4,7 +4,7 @@
 
 ### 亮色模式
 - **Primary** (#3f51b5) — Material Indigo 500
-- **Accent** (#3f51b5) — 同 Primary（已知问题：下一步优化应区分 accent）
+- **Accent** (#FFB300) — Amber 600（暗色下使用 #FFD54F）
 - **Surface** (#ffffff) — 白色背景
 - **Ink** (#1a1a1a) — 正文颜色
 - **Muted** — 各透明度层级的 indigo（用于卡片背景、悬停效果）
@@ -26,8 +26,8 @@
 ## 排版
 
 ### 字体
-- **正文**（CJK + Latin）: Noto Sans SC — 300/400/700
-- **代码**: JetBrains Mono — 400/700
+- **正文**（CJK + Latin）: Noto Sans SC — 300–900
+- **代码**: JetBrains Mono — 400/500/700
 - **字号基准**: 1rem (16px)
 - **行高**: 正文 1.8，标题 1.3–1.4
 - **栏宽**: `max-width: 65ch`
@@ -43,12 +43,12 @@
 - 标题 `letter-spacing: 0.01–0.02em`
 
 ## 间距
-ad-hoc 系统（待建立 scale）:
-- xs: 0.25rem
-- sm: 0.5rem
-- md: 1rem
-- lg: 2rem
-- xl: 4rem
+统一使用 `--space-*` 9 级变量（定义于 `extra.css`）:
+- 3xs: 0.125rem · 2xs: 0.25rem · xs: 0.5rem
+- sm: 0.75rem · md: 1rem · lg: 1.5rem
+- xl: 2rem · 2xl: 3rem · 3xl: 4rem
+
+圆角使用 `--radius-sm/md/lg/xl`（4/8/12/24px）。
 
 ## 组件
 
@@ -88,7 +88,6 @@ ad-hoc 系统（待建立 scale）:
 - 卡片网格滚动揭示（top 85%）
 - 表格批量淡入（top 90%）
 - 返回顶部按钮弹性弹出
-- Mermaid 图表滚动揭示
 
 ### 减速运动
 - JS: `prefers-reduced-motion: reduce` 时完全跳过 GSAP
@@ -97,5 +96,5 @@ ad-hoc 系统（待建立 scale）:
 ## 已知改进项
 - [x] Accent 色与 Primary 相同——应选用互补色 → 已改用 Amber/Gold (#FFB300 / #FFD54F)
 - [x] 间距系统未标准化（ad-hoc 值）→ 已引入 9 级 `--space-*` + 4 级 `--radius-*` CSS 变量
-- [x] 子页面主要为纯文本+表格，缺少视觉变化 → 已添加 emoji 图标、info-card 组件、课程 placeholder、Mermaid 图表
+- [x] 子页面主要为纯文本+表格，缺少视觉变化 → 已添加 emoji 图标、课程 placeholder、卡片网格与 Mermaid 图表
 - [x] 无图片/图标素材（有意识地保持轻量）→ 已通过 emoji + Material 内置 icon + CSS 装饰线实现零图片增强
