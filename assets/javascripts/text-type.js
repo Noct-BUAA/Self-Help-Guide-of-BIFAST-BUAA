@@ -15,9 +15,15 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 静音模式下保留静态落款文字，不启动动画
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
   const typeElements = document.querySelectorAll('.text-type');
 
   typeElements.forEach((el) => {
+    // 日/夜两套 Hero 只有一套可见；隐藏的那套不启动计时器
+    if (el.offsetParent === null) return;
+
     const texts = JSON.parse(el.dataset.texts || '[""]');
     const typingSpeed = parseInt(el.dataset.typingSpeed || 75);
     const deletingSpeed = parseInt(el.dataset.deletingSpeed || 50);

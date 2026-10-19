@@ -1,6 +1,6 @@
 /**
  * extra.js — GSAP-powered animations for BIFAST Self-Help Guide
- * Purposeful motion: hero entrance, card reveals, table fade-in, scroll-to-top.
+ * Purposeful motion: card reveals, table fade-in, scroll-to-top.
  * Respects prefers-reduced-motion.
  */
 
@@ -16,26 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (prefersReduced) return;
 
   // ============================================================
-  // 1. HERO TEXT ENTRANCE
-  // ============================================================
-  const hero = document.querySelector('.hero-section');
-  if (hero) {
-    const heroChildren = hero.querySelectorAll('.hero-subtitle, .hero-description');
-    gsap.fromTo(
-      heroChildren,
-      { opacity: 0, y: 20 },
-      {
-        opacity: 1, y: 0,
-        duration: 0.7,
-        stagger: 0.15,
-        ease: 'power3.out',
-        delay: 0.1,
-      }
-    );
-  }
-
-  // ============================================================
-  // 2. CARD GRID — Scroll-triggered reveal
+  // 1. CARD GRID — Scroll-triggered reveal
   // ============================================================
   const cardGrids = document.querySelectorAll('.card-grid .card');
   if (cardGrids.length) {
@@ -57,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================================
-  // 3. TABLES — Single batch scroll reveal per page
+  // 2. TABLES — Single batch scroll reveal per page
   // ============================================================
   const tables = document.querySelectorAll('.md-typeset table:not([class])');
   if (tables.length) {
@@ -79,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================================
-  // 4. SCROLL-TO-TOP BUTTON — Elastic entrance on first appearance
+  // 3. SCROLL-TO-TOP BUTTON — Elastic entrance on first appearance
   // ============================================================
   const topButton = document.querySelector('.md-top');
   let topButtonShown = false;
@@ -96,26 +77,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     observer.observe(topButton, { attributes: true, attributeFilter: ['hidden'] });
   }
-
-  // ============================================================
-  // 5. MERMAID DIAGRAMS — Reveal on scroll
-  // ============================================================
-  const mermaids = document.querySelectorAll('.mermaid');
-  mermaids.forEach((m, i) => {
-    gsap.fromTo(
-      m,
-      { opacity: 0, y: 20 },
-      {
-        opacity: 1, y: 0,
-        duration: 0.5,
-        delay: i * 0.1,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: m,
-          start: 'top 90%',
-          once: true,
-        },
-      }
-    );
-  });
 });

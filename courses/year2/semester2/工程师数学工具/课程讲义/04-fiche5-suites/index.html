@@ -1,0 +1,4611 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="北京航空航天大学中法未来科技学院（杭州）学习生活自助指南 — 汇集课程学习资料、重难点解析与校园生活实用信息
+">
+      
+      
+        <meta name="author" content="Noct-BUAA">
+      
+      
+        <link rel="canonical" href="https://noct-buaa.github.io/Self-Help-Guide-of-BIFAST-BUAA/courses/year2/semester2/%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%95%B0%E5%AD%A6%E5%B7%A5%E5%85%B7/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/04-fiche5-suites/">
+      
+      
+        <link rel="prev" href="../03-polynomes/">
+      
+      
+        <link rel="next" href="../../%E4%B9%A0%E9%A2%98%E8%AF%BE/td1-nombres-complexes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Fiche 5 研究实数列 - 北航中法未来科技学院自助指南</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%20480c-35.3%200-64-28.7-64-64V96c0-35.3%2028.7-64%2064-64h320c35.3%200%2064%2028.7%2064%2064v213.5c0%2017-6.7%2033.3-18.7%2045.3L322.7%20461.3c-12%2012-28.3%2018.7-45.3%2018.7zm325.5-176H296c-13.3%200-24%2010.7-24%2024v93.5z%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M384%20512H96c-53%200-96-43-96-96V96C0%2043%2043%200%2096%200h304c26.5%200%2048%2021.5%2048%2048v288c0%2020.9-13.4%2038.7-32%2045.3V448c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032zM96%20384c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032h256v-64zm32-232c0%2013.3%2010.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24H152c-13.3%200-24%2010.7-24%2024m24%2072c-13.3%200-24%2010.7-24%2024s10.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24z%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-32-352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200m-8%2064h48c13.3%200%2024%2010.7%2024%2024v88h8c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-80c-13.3%200-24-10.7-24-24s10.7-24%2024-24h24v-64h-24c-13.3%200-24-10.7-24-24s10.7-24%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M461.2%2018.9C472.7%2024%20480%2035.4%20480%2048v416c0%2012.6-7.3%2024-18.8%2029.1s-24.8%203.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63V480c0%2017.7-14.3%2032-32%2032h-32c-17.7%200-32-14.3-32-32v-96C57.3%20384%200%20326.7%200%20256s57.3-128%20128-128h84.5c61.8-.2%20121.4-22.7%20167.9-63.3L427%2024c9.4-8.3%2022.9-10.2%2034.3-5.1zM224%20320v.2c70.3%202.7%20137.8%2028.5%20192%2073.4V118.3c-54.2%2044.9-121.7%2070.7-192%2073.4z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M434.8%2070.1c14.3%2010.4%2017.5%2030.4%207.1%2044.7l-256%20352c-5.5%207.6-14%2012.3-23.4%2013.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200l101.5%20101.5%20234-321.7c10.4-14.3%2030.4-17.5%2044.7-7.1z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m0-336c-17.7%200-32%2014.3-32%2032%200%2013.3-10.7%2024-24%2024s-24-10.7-24-24c0-44.2%2035.8-80%2080-80s80%2035.8%2080%2080c0%2047.2-36%2067.2-56%2074.5v3.8c0%2013.3-10.7%2024-24%2024s-24-10.7-24-24v-8.1c0-20.5%2014.8-35.2%2030.1-40.2%206.4-2.1%2013.2-5.5%2018.2-10.3%204.3-4.2%207.7-10%207.7-19.6%200-17.7-14.3-32-32-32zm-32%20192a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%200c14.7%200%2028.2%208.1%2035.2%2021l216%20400c6.7%2012.4%206.4%2027.4-.8%2039.5S486.1%20480%20472%20480H40c-14.1%200-27.2-7.4-34.4-19.5s-7.5-27.1-.8-39.5l216-400c7-12.9%2020.5-21%2035.2-21m0%20352a32%2032%200%201%200%200%2064%2032%2032%200%201%200%200-64m0-192c-18.2%200-32.7%2015.5-31.4%2033.7l7.4%20104c.9%2012.5%2011.4%2022.3%2023.9%2022.3%2012.6%200%2023-9.7%2023.9-22.3l7.4-104c1.3-18.2-13.1-33.7-31.4-33.7z%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M480-16c6.9%200%2013%204.4%2015.2%2010.9l13.5%2040.4%2040.4%2013.5C555.6%2051%20560%2057.1%20560%2064s-4.4%2013-10.9%2015.2l-40.4%2013.5-13.5%2040.4c-2.2%206.5-8.3%2010.9-15.2%2010.9s-13-4.4-15.2-10.9l-13.5-40.4-40.4-13.5C404.4%2077%20400%2070.9%20400%2064s4.4-13%2010.9-15.2l40.4-13.5%2013.5-40.4C467-11.6%20473.1-16%20480-16M321.4%2097.4c12.5-12.5%2032.8-12.5%2045.3%200l80%2080c12.5%2012.5%2012.5%2032.8%200%2045.3l-10.9%2010.9c7.9%2022%2012.2%2045.7%2012.2%2070.5%200%20114.9-93.1%20208-208%20208S32%20418.9%2032%20304%20125.1%2096%20240%2096c24.7%200%2048.5%204.3%2070.5%2012.3zM144%20304c0-53%2043-96%2096-96%2013.3%200%2024-10.7%2024-24s-10.7-24-24-24c-79.5%200-144%2064.5-144%20144%200%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M416%20427.4c58.5-44%2096-111.6%2096-187.4C512%20107.5%20397.4%200%20256%200S0%20107.5%200%20240c0%2075.8%2037.5%20143.4%2096%20187.4V464c0%2026.5%2021.5%2048%2048%2048h32v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h64v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h32c26.5%200%2048-21.5%2048-48zM96%20256a64%2064%200%201%201%20128%200%2064%2064%200%201%201-128%200m256-64a64%2064%200%201%201%200%20128%2064%2064%200%201%201%200-128%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M352%200c0-17.7-14.3-32-32-32s-32%2014.3-32%2032v64h-96c-53%200-96%2043-96%2096v224c0%2053%2043%2096%2096%2096h256c53%200%2096-43%2096-96V160c0-53-43-96-96-96h-96zM160%20368c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24M224%20176a48%2048%200%201%201%200%2096%2048%2048%200%201%201%200-96m144%2048a48%2048%200%201%201%2096%200%2048%2048%200%201%201-96%200m-304%200c0-17.7-14.3-32-32-32S0%20206.3%200%20224v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32zm544-32c-17.7%200-32%2014.3-32%2032v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32v-96c0-17.7-14.3-32-32-32%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M288%200H128c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032v151.5L7.5%20426.3C2.6%20435%200%20444.7%200%20454.7%200%20486.4%2025.6%20512%2057.3%20512h333.4c31.6%200%2057.3-25.6%2057.3-57.3%200-10-2.6-19.8-7.5-28.4L320%20215.5V64c17.7%200%2032-14.3%2032-32S337.7%200%20320%200zm-96%20215.5V64h64v151.5c0%2011.1%202.9%2022.1%208.4%2031.8L306%20320H142l41.6-72.7c5.5-9.7%208.4-20.6%208.4-31.8%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%20216C0%20149.7%2053.7%2096%20120%2096h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064H64c-35.3%200-64-28.7-64-64zm256%200c0-66.3%2053.7-120%20120-120h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064h-64c-35.3%200-64-28.7-64-64z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#5" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../../.." title="北航中法未来科技学院自助指南" class="md-header__button md-logo" aria-label="北航中法未来科技学院自助指南" data-md-component="logo">
+      
+  <img src="../../../../../../assets/images/buaa-emblem-blue.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            北航中法未来科技学院自助指南
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fiche 5 研究实数列
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../../year1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程学习资料
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../campus-life/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  校园生活指南
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../postscript/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  后记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="北航中法未来科技学院自助指南" class="md-nav__button md-logo" aria-label="北航中法未来科技学院自助指南" data-md-component="logo">
+      
+  <img src="../../../../../../assets/images/buaa-emblem-blue.png" alt="logo">
+
+    </a>
+    北航中法未来科技学院自助指南
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程学习资料
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程学习资料
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一学年
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一学年
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一上学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一上学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础数学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2_2" id="__nav_2_1_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    基础数学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2_2_2" id="__nav_2_1_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/01-logic-sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逻辑与集合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/02-maps-relations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    映射与等价关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/03-trig-complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    三角函数与复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/04-induction-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学归纳法与数列
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/05-sums-products-counting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    求和求积与计数原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/06-divisibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整除关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学计算机基础
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2_3" id="__nav_2_1_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大学计算机基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2_3_2" id="__nav_2_1_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程作业
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程作业
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E5%85%AD%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%B8%83%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理基础法语（1）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester1/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    综合法语（1）
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2_5" id="__nav_2_1_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    综合法语（1）
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2_5_2" id="__nav_2_1_2_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/09-production-orale-a1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    口语考试指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/10-precis-grammatical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    语法概要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9%E6%A6%82%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    航空航天概论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一下学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一下学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E4%B8%AD%E5%9B%BD%E8%BF%91%E7%8E%B0%E4%BB%A3%E5%8F%B2%E7%BA%B2%E8%A6%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国近现代史纲要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人工智能导论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%8A%9B%E5%AD%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    力学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%9F%BA%E7%A1%80%E8%8B%B1%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础英语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学化学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_3_6" id="__nav_2_1_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大学化学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/01-states-of-matter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 物质的状态与转化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/02-atomic-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章 原子结构和元素周期律
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/03-molecular-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第3章 分子结构和共价键理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/04-crystal-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第4章 晶体结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/05-thermodynamics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第5章 化学热力学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/06-reaction-rate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第6章 化学反应速率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/07-chemical-equilibrium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第7章 化学平衡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/08-acid-base/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第8章 酸碱平衡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/09-precipitation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第9章 沉淀溶解平衡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/10-redox-electrochemistry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第10章 氧化还原反应与电化学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%EF%BC%881%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学分析（1）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80%E6%B3%95%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理基础法语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    综合法语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二学年
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二学年
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../semester1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二上学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二上学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二下学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二下学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../%E5%AE%9E%E5%88%86%E6%9E%90/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实分析
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_3_2" id="__nav_2_2_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    实分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3_2_2" id="__nav_2_2_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%9E%E5%88%86%E6%9E%90/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/01-topologie-de-r/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 章 拓扑学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%9E%E5%88%86%E6%9E%90/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/02-suites-numeriques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 章 数列
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3_2_3" id="__nav_2_2_3_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    习题课讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    习题课讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%9E%E5%88%86%E6%9E%90/%E4%B9%A0%E9%A2%98%E8%AF%BE/td1-topologie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD1 拓扑学解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%9E%E5%88%86%E6%9E%90/%E4%B9%A0%E9%A2%98%E8%AF%BE/td2-suites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD2 数列解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%9E%E5%88%86%E6%9E%90/%E4%B9%A0%E9%A2%98%E8%AF%BE/td3-limites-suites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD3 数列极限解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工程师数学工具
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_3_3" id="__nav_2_2_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    工程师数学工具
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3_3_2" id="__nav_2_2_3_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_3_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-nombres-complexes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 章 复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-trigonometrie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 章 三角学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-polynomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 3 章 多项式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 5 研究实数数列
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 5 研究实数数列
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="页面目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      页面目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#calculer-le-terme-general-dune-suite-usuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculer le terme général d'une suite usuelle
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculer le terme général d&#39;une suite usuelle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suite-arithmetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suite arithmétique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 1 应用练习 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 2 应用练习 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suite-geometrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suite géométrique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-3-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 3 应用练习 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-4-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 4 应用练习 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suite-arithmetico-geometrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suite arithmético-géométrique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-5-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 5 应用练习 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-6-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 6 应用练习 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suite-recurrente-lineaire-dordre-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suite récurrente linéaire d'ordre 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-7-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 7 应用练习 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-8-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 8 应用练习 8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-9-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 9 应用练习 9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-10-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 10 应用练习 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etudier-une-suite-definie-par-recurrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étudier une suite définie par récurrence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étudier une suite définie par récurrence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple 1 例 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-11-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 11 应用练习 11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-12-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 12 应用练习 12
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3_3_3" id="__nav_2_2_3_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    习题课讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    习题课讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B9%A0%E9%A2%98%E8%AF%BE/td1-nombres-complexes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD1 复数解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B9%A0%E9%A2%98%E8%AF%BE/td2-trigonometrie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD2 三角学解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B9%A0%E9%A2%98%E8%AF%BE/td3-fonctions-reciproques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD3 反三角函数解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../campus-life/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    校园生活指南
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    校园生活指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/housing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    住宿
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/dining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    餐饮
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/transportation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    交通出行
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/campus-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    校园服务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/sports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    体育设施
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图书馆
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/daily-life/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生活便利
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/contacts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常用信息
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../postscript/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    后记
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    后记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="页面目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      页面目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#calculer-le-terme-general-dune-suite-usuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculer le terme général d'une suite usuelle
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculer le terme général d&#39;une suite usuelle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suite-arithmetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suite arithmétique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 1 应用练习 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 2 应用练习 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suite-geometrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suite géométrique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-3-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 3 应用练习 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-4-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 4 应用练习 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suite-arithmetico-geometrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suite arithmético-géométrique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-5-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 5 应用练习 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-6-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 6 应用练习 6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suite-recurrente-lineaire-dordre-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suite récurrente linéaire d'ordre 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-7-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 7 应用练习 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-8-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 8 应用练习 8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-9-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 9 应用练习 9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-10-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 10 应用练习 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etudier-une-suite-definie-par-recurrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étudier une suite définie par récurrence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Étudier une suite définie par récurrence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple 1 例 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-11-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 11 应用练习 11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-dapplication-12-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercice d'application 12 应用练习 12
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="5">方法论讲义 第 5 讲　研究实数列<a class="headerlink" href="#5" title="Permanent link">&para;</a></h1>
+<div class="lecture-hero">
+<p class="lecture-hero__fr">Fiche méthodologique n°5 — Étudier des suites réelles</p>
+<p class="lecture-hero__meta">中法对照讲义 · 由 LaTeX 源文件渲染</p>
+</div>
+
+<div class="admonition info">
+<p class="admonition-title">阅读说明</p>
+<p>每段先列法语原文；其下缩进、带深蓝竖条的小字号段落为中文翻译。<strong>加粗</strong>为关键词，括号内为中文释义。</p>
+</div>
+<p>说明：每段法语原文下方、缩进并带深蓝竖条的小字，是紧随其后的中文翻译。</p>
+<h2 id="calculer-le-terme-general-dune-suite-usuelle">Calculer le terme général d'une suite usuelle<a class="headerlink" href="#calculer-le-terme-general-dune-suite-usuelle" title="Permanent link">&para;</a></h2>
+<p>计算常见数列的通项</p>
+<p>Si une suite réelle <span class="arithmatex">\((u_n)\)</span> est définie par récurrence, on peut calculer tous ses termes les uns après les autres à partir d'un terme initial <span class="arithmatex">\(u_{n_0}\)</span> donné. Mais cette méthode peut être très longue pour calculer un terme de rang beaucoup plus grand que le rang initial <span class="arithmatex">\(n_0\)</span>.</p>
+<p class="zh">若实数列 <span class="arithmatex">\((u_n)\)</span> 由递推关系定义，那么从给定的初始项 <span class="arithmatex">\(u_{n_0}\)</span> 出发，可以逐项算出它的所有项。 但若要计算序号远大于初始序号 <span class="arithmatex">\(n_0\)</span> 的项，这种方法可能非常冗长。</p>
+<p>Calculer le terme général de <span class="arithmatex">\((u_n)\)</span> consiste à exprimer directement <span class="arithmatex">\(u_n\)</span> en fonction du rang <span class="arithmatex">\(n\)</span> afin de surmonter ce problème.</p>
+<p class="zh">计算 <span class="arithmatex">\((u_n)\)</span> 的<strong>通项</strong>（terme général），就是直接把 <span class="arithmatex">\(u_n\)</span> 表示成序号 <span class="arithmatex">\(n\)</span> 的表达式， 以此克服上述困难。</p>
+<p><em>Conseil.</em> La relation de récurrence définissant une suite permet surtout de raisonner par récurrence. Dès qu'on connaît une propriété de la suite à démontrer (par exemple une majoration, une minoration ou sa monotonie), on peut la prouver par récurrence.</p>
+<p class="zh"><strong>建议</strong>（Conseil）。数列的递推关系最主要的用处，是让人能进行<strong>递推推理</strong> （raisonnement par récurrence）。一旦知道了要证明的数列性质（例如有上界、有下界或单调性）， 就可以用递推法把它证出来。</p>
+<h3 id="suite-arithmetique">Suite arithmétique<a class="headerlink" href="#suite-arithmetique" title="Permanent link">&para;</a></h3>
+<p>等差数列</p>
+<p>Une suite <span class="arithmatex">\((u_n)\)</span> est <strong>arithmétique</strong> lorsqu'elle vérifie une relation de récurrence du type :</p>
+<p class="zh">数列 <span class="arithmatex">\((u_n)\)</span> 若满足如下形式的递推关系式，就称为<strong>等差数列</strong>（suite arithmétique）：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0, \qquad \boxed{u_{n+1} = u_n + r}
+\]</div>
+<p>où <span class="arithmatex">\(r \in \mathbb{R}\)</span> est appelée la <strong>raison arithmétique</strong> de la suite. Son <strong>terme général</strong> est égal à :</p>
+<p class="zh">其中 <span class="arithmatex">\(r \in \mathbb{R}\)</span> 称为该数列的<strong>公差</strong>（raison arithmétique）。 它的<strong>通项</strong>为：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0, \qquad \boxed{u_n = u_{n_0} + (n-n_0)r}.
+\]</div>
+<h3 id="exercice-dapplication-1-1">Exercice d'application 1 <span class="heading-zh">应用练习 1</span><a class="headerlink" href="#exercice-dapplication-1-1" title="Permanent link">&para;</a></h3>
+<p>Soit <span class="arithmatex">\(n \in \mathbb{N}^*\)</span>. Déterminer le <span class="arithmatex">\(n\)</span>-ième entier impair positif.</p>
+<p class="zh">设 <span class="arithmatex">\(n \in \mathbb{N}^*\)</span>。求第 <span class="arithmatex">\(n\)</span> 个正的奇整数。</p>
+<h3 id="exercice-dapplication-2-2">Exercice d'application 2 <span class="heading-zh">应用练习 2</span><a class="headerlink" href="#exercice-dapplication-2-2" title="Permanent link">&para;</a></h3>
+<p>Soit <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> une suite arithmétique telle que <span class="arithmatex">\(u_{13} = 13^2\)</span> et <span class="arithmatex">\(u_{29} = 29^2\)</span>. Calculer le terme général de <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span>.</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 是等差数列，满足 <span class="arithmatex">\(u_{13} = 13^2\)</span> 且 <span class="arithmatex">\(u_{29} = 29^2\)</span>。 计算 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 的通项。</p>
+<h3 id="suite-geometrique">Suite géométrique<a class="headerlink" href="#suite-geometrique" title="Permanent link">&para;</a></h3>
+<p>等比数列</p>
+<p>Une suite <span class="arithmatex">\((u_n)\)</span> est <strong>géométrique</strong> lorsqu'elle vérifie une relation de récurrence du type :</p>
+<p class="zh">数列 <span class="arithmatex">\((u_n)\)</span> 若满足如下形式的递推关系式，就称为<strong>等比数列</strong>（suite géométrique）：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0, \qquad \boxed{u_{n+1} = qu_n}
+\]</div>
+<p>où <span class="arithmatex">\(q \in \mathbb{R}\)</span> est appelée la <strong>raison géométrique</strong> de la suite. Son <strong>terme général</strong> est égal à :</p>
+<p class="zh">其中 <span class="arithmatex">\(q \in \mathbb{R}\)</span> 称为该数列的<strong>公比</strong>（raison géométrique）。它的<strong>通项</strong>为：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0, \qquad \boxed{u_n = u_{n_0}q^{n-n_0}}.
+\]</div>
+<h3 id="exercice-dapplication-3-3">Exercice d'application 3 <span class="heading-zh">应用练习 3</span><a class="headerlink" href="#exercice-dapplication-3-3" title="Permanent link">&para;</a></h3>
+<p>Soit <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> la suite définie par <span class="arithmatex">\(u_0 = 3\)</span> et <span class="arithmatex">\(\forall n \geqslant 0,\ u_{n+1} = u_n^2\)</span>. Justifier que les termes de <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> sont strictement positifs puis calculer son terme général en considérant la suite auxiliaire <span class="arithmatex">\((v_n = \ln(u_n))_{n\in\mathbb{N}}\)</span>.</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 是由 <span class="arithmatex">\(u_0 = 3\)</span> 和 <span class="arithmatex">\(\forall n \geqslant 0,\ u_{n+1} = u_n^2\)</span> 定义的数列。证明 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 的各项都严格为正，然后借助<strong>辅助数列</strong> （suite auxiliaire）<span class="arithmatex">\((v_n = \ln(u_n))_{n\in\mathbb{N}}\)</span> 计算它的通项。</p>
+<h3 id="exercice-dapplication-4-4">Exercice d'application 4 <span class="heading-zh">应用练习 4</span><a class="headerlink" href="#exercice-dapplication-4-4" title="Permanent link">&para;</a></h3>
+<p>Soit <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> une suite telle que <span class="arithmatex">\(u_0 = 3\)</span> et <span class="arithmatex">\(u_{n+1} - u_n \geqslant u_n\)</span> pour tout <span class="arithmatex">\(n \in \mathbb{N}\)</span>. Montrer que les termes de <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> sont supérieurs à ceux d'une suite géométrique <span class="arithmatex">\((v_n)_{n\in\mathbb{N}}\)</span> dont on calculera le terme général.</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 是满足 <span class="arithmatex">\(u_0 = 3\)</span>，且对一切 <span class="arithmatex">\(n \in \mathbb{N}\)</span> 都有 <span class="arithmatex">\(u_{n+1} - u_n \geqslant u_n\)</span> 的数列。证明 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 的各项都大于某个等比数列 <span class="arithmatex">\((v_n)_{n\in\mathbb{N}}\)</span> 的对应项，并求出该等比数列的通项。</p>
+<h3 id="suite-arithmetico-geometrique">Suite arithmético-géométrique<a class="headerlink" href="#suite-arithmetico-geometrique" title="Permanent link">&para;</a></h3>
+<p>算术-等比数列</p>
+<p>Une suite <span class="arithmatex">\((u_n)\)</span> est <strong>arithmético-géométrique</strong> lorsqu'elle vérifie une relation de récurrence du type :</p>
+<p class="zh">数列 <span class="arithmatex">\((u_n)\)</span> 若满足如下形式的递推关系式，就称为<strong>算术-等比数列</strong> （suite arithmético-géométrique）：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0, \qquad \boxed{u_{n+1} = qu_n + r}
+\]</div>
+<p>où <span class="arithmatex">\(q \in \mathbb{R}\setminus\{1\}\)</span> et <span class="arithmatex">\(r \in \mathbb{R}\)</span> sont appelées les <strong>raisons</strong> de la suite. Pour calculer son terme général, on commence par chercher une suite constante vérifiant la même relation de récurrence, c'est-à-dire par résoudre l'équation <span class="arithmatex">\(\alpha = q\alpha + r\)</span> d'inconnue <span class="arithmatex">\(\alpha \in \mathbb{R}\)</span>. Puis on remarque que la suite auxiliaire <span class="arithmatex">\((v_n = u_n - \alpha)\)</span> est géométrique (de raison <span class="arithmatex">\(q\)</span>) et on peut donc calculer son terme général. Enfin, on en déduit le terme général de <span class="arithmatex">\((u_n = v_n + \alpha)\)</span>.</p>
+<p class="zh">其中 <span class="arithmatex">\(q \in \mathbb{R}\setminus\{1\}\)</span> 和 <span class="arithmatex">\(r \in \mathbb{R}\)</span> 称为该数列的<strong>公比与公差</strong>。 要计算它的通项，先寻找一个满足同一递推关系的常数列，也就是解以 <span class="arithmatex">\(\alpha \in \mathbb{R}\)</span> 为未知量的方程 <span class="arithmatex">\(\alpha = q\alpha + r\)</span>。接着注意到辅助数列 <span class="arithmatex">\((v_n = u_n - \alpha)\)</span> 是等比数列（公比为 <span class="arithmatex">\(q\)</span>），于是可以算出它的通项。最后由此推出 <span class="arithmatex">\((u_n = v_n + \alpha)\)</span> 的通项。</p>
+<h3 id="exercice-dapplication-5-5">Exercice d'application 5 <span class="heading-zh">应用练习 5</span><a class="headerlink" href="#exercice-dapplication-5-5" title="Permanent link">&para;</a></h3>
+<p>Soit <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span> une suite arithmético-géométrique telle que <span class="arithmatex">\(u_1 = 1\)</span>, <span class="arithmatex">\(u_2 = 4\)</span> et <span class="arithmatex">\(u_3 = 9\)</span>. Calculer le terme général de <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span>.</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span> 是算术-等比数列，满足 <span class="arithmatex">\(u_1 = 1\)</span>、<span class="arithmatex">\(u_2 = 4\)</span>、<span class="arithmatex">\(u_3 = 9\)</span>。 计算 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span> 的通项。</p>
+<h3 id="exercice-dapplication-6-6">Exercice d'application 6 <span class="heading-zh">应用练习 6</span><a class="headerlink" href="#exercice-dapplication-6-6" title="Permanent link">&para;</a></h3>
+<p>Soient <span class="arithmatex">\(\lambda \in \mathbb{R}\)</span> et <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> la suite définie par <span class="arithmatex">\(u_0 = 1\)</span> et <span class="arithmatex">\(\forall n \geqslant 0,\ u_{n+1} - u_n = \lambda u_n + 1\)</span>. Calculer le terme général de <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> en fonction des valeurs de <span class="arithmatex">\(\lambda\)</span>.</p>
+<p class="zh">设 <span class="arithmatex">\(\lambda \in \mathbb{R}\)</span>，<span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 是由 <span class="arithmatex">\(u_0 = 1\)</span> 和 <span class="arithmatex">\(\forall n \geqslant 0,\ u_{n+1} - u_n = \lambda u_n + 1\)</span> 定义的数列。按 <span class="arithmatex">\(\lambda\)</span> 的取值 计算 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 的通项。</p>
+<h3 id="suite-recurrente-lineaire-dordre-2">Suite récurrente linéaire d'ordre 2<a class="headerlink" href="#suite-recurrente-lineaire-dordre-2" title="Permanent link">&para;</a></h3>
+<p>二阶线性递推数列</p>
+<p>Une suite <span class="arithmatex">\((u_n)\)</span> est <strong>récurrente linéaire d'ordre 2</strong> lorsqu'elle vérifie une relation de récurrence double du type :</p>
+<p class="zh">数列 <span class="arithmatex">\((u_n)\)</span> 若满足如下形式的二阶递推关系式，就称为<strong>二阶线性递推数列</strong> （suite récurrente linéaire d'ordre 2）：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0, \qquad \boxed{u_{n+2} = au_{n+1} + bu_n}
+\]</div>
+<p>où <span class="arithmatex">\((a,b) \in \mathbb{R}^2\)</span>.</p>
+<p class="zh">其中 <span class="arithmatex">\((a,b) \in \mathbb{R}^2\)</span>。</p>
+<p><em>Attention.</em> Pour qu'une suite récurrente linéaire d'ordre 2 soit bien définie (c'est-à-dire pour pouvoir calculer tous ses termes), il est nécessaire de connaître deux termes initiaux.</p>
+<p class="zh"><strong>注意</strong>（Attention）。要使二阶线性递推数列<strong>良定义</strong>（即能够算出它的所有项）， 必须知道两个初始项。</p>
+<p>Pour calculer son terme général, on commence par résoudre l'équation caractéristique associée d'inconnue <span class="arithmatex">\(q \in \mathbb{C}\)</span> :</p>
+<p class="zh">要计算它的通项，先解与之相伴的<strong>特征方程</strong>（équation caractéristique）， 未知量为 <span class="arithmatex">\(q \in \mathbb{C}\)</span>：</p>
+<div class="arithmatex">\[
+\boxed{q^2 = aq + b}.
+\]</div>
+<p>On reconnaît une équation du second degré à coefficients réels. Il y a alors trois cas selon le signe du discriminant <span class="arithmatex">\(\Delta\)</span>.</p>
+<p class="zh">可以辨认出这是一个实系数一元二次方程。于是按判别式 <span class="arithmatex">\(\Delta\)</span> 的符号分三种情形。</p>
+<ul>
+<li>
+<p>Si <span class="arithmatex">\(\Delta &gt; 0\)</span> : l'équation caractéristique admet deux solutions réelles (distinctes) qu'on note <span class="arithmatex">\(q_1\)</span> et <span class="arithmatex">\(q_2\)</span>. Alors il existe deux constantes <span class="arithmatex">\((\lambda_1,\lambda_2) \in \mathbb{R}^2\)</span> telles que :</p>
+<p class="zh">若 <span class="arithmatex">\(\Delta &gt; 0\)</span>：特征方程有两个（互异的）实根，记为 <span class="arithmatex">\(q_1\)</span> 和 <span class="arithmatex">\(q_2\)</span>。则存在两个常数 <span class="arithmatex">\((\lambda_1,\lambda_2) \in \mathbb{R}^2\)</span>，使得：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0, \qquad \boxed{u_n = \lambda_1q_1^{n-n_0} + \lambda_2q_2^{n-n_0}}.
+\]</div>
+</li>
+<li>
+<p>Si <span class="arithmatex">\(\Delta = 0\)</span> : l'équation caractéristique admet une seule solution réelle (double) qu'on note <span class="arithmatex">\(q_0\)</span>. Alors il existe deux constantes <span class="arithmatex">\((\lambda,\mu) \in \mathbb{R}^2\)</span> telles que :</p>
+<p class="zh">若 <span class="arithmatex">\(\Delta = 0\)</span>：特征方程只有一个（二重的）实根，记为 <span class="arithmatex">\(q_0\)</span>。则存在两个常数 <span class="arithmatex">\((\lambda,\mu) \in \mathbb{R}^2\)</span>，使得：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0, \qquad \boxed{u_n = \left(\lambda + \mu(n-n_0)\right)q_0^{n-n_0}}.
+\]</div>
+</li>
+<li>
+<p>Si <span class="arithmatex">\(\Delta &lt; 0\)</span> : l'équation caractéristique admet deux solutions complexes conjuguées (distinctes) qu'on note <span class="arithmatex">\(\rho e^{i\theta}\)</span> et <span class="arithmatex">\(\rho e^{-i\theta}\)</span>. Alors il existe deux constantes <span class="arithmatex">\((A,B) \in \mathbb{R}^2\)</span> telles que :</p>
+<p class="zh">若 <span class="arithmatex">\(\Delta &lt; 0\)</span>：特征方程有两个（互异的）共轭复根，记为 <span class="arithmatex">\(\rho e^{i\theta}\)</span> 和 <span class="arithmatex">\(\rho e^{-i\theta}\)</span>。则存在两个常数 <span class="arithmatex">\((A,B) \in \mathbb{R}^2\)</span>，使得：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0, \qquad \boxed{u_n = \rho^{n-n_0}\left(A\cos\left((n-n_0)\theta\right)
+   + B\sin\left((n-n_0)\theta\right)\right)}.
+\]</div>
+</li>
+</ul>
+<p><em>Conseil.</em> Pour déterminer le couple de constantes <span class="arithmatex">\((\lambda_1,\lambda_2)\)</span>, <span class="arithmatex">\((\lambda,\mu)\)</span> ou <span class="arithmatex">\((A,B)\)</span> selon le cas considéré, il suffit d'utiliser deux termes initiaux de la suite puis de résoudre un système de deux équations à deux inconnues.</p>
+<p class="zh"><strong>建议</strong>。要按所讨论的情形确定常数对 <span class="arithmatex">\((\lambda_1,\lambda_2)\)</span>、<span class="arithmatex">\((\lambda,\mu)\)</span> 或 <span class="arithmatex">\((A,B)\)</span>，只需用数列的两个初始项，再解一个二元一次方程组即可。</p>
+<h3 id="exercice-dapplication-7-7">Exercice d'application 7 <span class="heading-zh">应用练习 7</span><a class="headerlink" href="#exercice-dapplication-7-7" title="Permanent link">&para;</a></h3>
+<p>Soit <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> la suite définie par <span class="arithmatex">\(u_0 = u_1 = 1\)</span> et <span class="arithmatex">\(\forall n \geqslant 0,\ u_{n+2} = 6(u_{n+1} - 2u_n)\)</span>. Calculer le terme général de <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span>.</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 是由 <span class="arithmatex">\(u_0 = u_1 = 1\)</span> 和 <span class="arithmatex">\(\forall n \geqslant 0,\ u_{n+2} = 6(u_{n+1} - 2u_n)\)</span> 定义的数列。 计算 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 的通项。</p>
+<h3 id="exercice-dapplication-8-8">Exercice d'application 8 <span class="heading-zh">应用练习 8</span><a class="headerlink" href="#exercice-dapplication-8-8" title="Permanent link">&para;</a></h3>
+<p>Soit <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span> une suite telle que <span class="arithmatex">\(u_1 = 4\)</span>, <span class="arithmatex">\(u_3 = 2\)</span> et chacun de ses autres termes est la moyenne du terme suivant et du terme précédent (ainsi, <span class="arithmatex">\(u_2 = (u_3+u_1)/2 = 3\)</span>). Calculer le terme général de <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span>.</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span> 是满足 <span class="arithmatex">\(u_1 = 4\)</span>、<span class="arithmatex">\(u_3 = 2\)</span>，且其余每一项都等于它后一项 与前一项的平均值的数列（于是 <span class="arithmatex">\(u_2 = (u_3+u_1)/2 = 3\)</span>）。计算 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span> 的通项。</p>
+<h3 id="exercice-dapplication-9-9">Exercice d'application 9 <span class="heading-zh">应用练习 9</span><a class="headerlink" href="#exercice-dapplication-9-9" title="Permanent link">&para;</a></h3>
+<p>Soient <span class="arithmatex">\((a_n)_{n\in\mathbb{N}}\)</span> et <span class="arithmatex">\((b_n)_{n\in\mathbb{N}}\)</span> deux suites définies par <span class="arithmatex">\(a_0 = 1\)</span>, <span class="arithmatex">\(b_0 = 0\)</span> et :</p>
+<p class="zh">设 <span class="arithmatex">\((a_n)_{n\in\mathbb{N}}\)</span> 和 <span class="arithmatex">\((b_n)_{n\in\mathbb{N}}\)</span> 是由 <span class="arithmatex">\(a_0 = 1\)</span>、<span class="arithmatex">\(b_0 = 0\)</span> 以及下式定义的两个数列：</p>
+<div class="arithmatex">\[
+\forall n \geqslant 0, \qquad
+\left\{
+\begin{array}{l}
+a_{n+1} = 4a_n - b_n\\
+b_{n+1} = 2a_n + b_n
+\end{array}
+\right.
+\]</div>
+<p>Montrer que <span class="arithmatex">\((a_n)_{n\in\mathbb{N}}\)</span> et <span class="arithmatex">\((b_n)_{n\in\mathbb{N}}\)</span> sont récurrentes linéaires d'ordre 2 puis calculer leur terme général.</p>
+<p class="zh">证明 <span class="arithmatex">\((a_n)_{n\in\mathbb{N}}\)</span> 和 <span class="arithmatex">\((b_n)_{n\in\mathbb{N}}\)</span> 都是二阶线性递推数列， 然后计算它们的通项。</p>
+<h3 id="exercice-dapplication-10-10">Exercice d'application 10 <span class="heading-zh">应用练习 10</span><a class="headerlink" href="#exercice-dapplication-10-10" title="Permanent link">&para;</a></h3>
+<p>Soit <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span> une suite récurrente linéaire d'ordre 2 telle que <span class="arithmatex">\(u_1 = -4\)</span>, <span class="arithmatex">\(u_2 = 5\)</span>, <span class="arithmatex">\(u_3 = 10\)</span> et <span class="arithmatex">\(u_4 = 7\)</span>. Calculer le terme général de <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span>.</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span> 是二阶线性递推数列，满足 <span class="arithmatex">\(u_1 = -4\)</span>、<span class="arithmatex">\(u_2 = 5\)</span>、 <span class="arithmatex">\(u_3 = 10\)</span>、<span class="arithmatex">\(u_4 = 7\)</span>。计算 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span> 的通项。</p>
+<div class="admonition warning">
+<p class="admonition-title">Vocabulaire clé<br><span class='zh-title'>重点词汇</span></p>
+<ul>
+<li><strong>terme général</strong>：通项 &nbsp;&nbsp; 计算通项 = exprimer <span class="arithmatex">\(u_n\)</span> en fonction du rang <span class="arithmatex">\(n\)</span></li>
+<li><strong>suite arithmétique / géométrique</strong>：等差数列（公差 raison <span class="arithmatex">\(r\)</span>）/ 等比数列（公比 raison <span class="arithmatex">\(q\)</span>）</li>
+<li><strong>suite arithmético-géométrique</strong>：算术-等比数列 &nbsp;&nbsp; <span class="arithmatex">\(u_{n+1} = qu_n + r\)</span>，<span class="arithmatex">\(q \neq 1\)</span></li>
+<li><strong>suite récurrente linéaire d'ordre 2</strong>：二阶线性递推数列 &nbsp;&nbsp; <span class="arithmatex">\(u_{n+2} = au_{n+1} + bu_n\)</span></li>
+<li><strong>relation de récurrence</strong>：递推关系式 &nbsp;&nbsp; 动词：vérifier une relation「满足某关系式」</li>
+<li><strong>terme initial</strong>：初始项 &nbsp;&nbsp; 原版提示：二阶递推必须知道<em>两个</em>初始项</li>
+<li><strong>suite auxiliaire</strong>：辅助数列 &nbsp;&nbsp; <span class="arithmatex">\(v_n = \ln(u_n)\)</span>、<span class="arithmatex">\(v_n = u_n - \alpha\)</span> 之类</li>
+<li><strong>équation caractéristique</strong>：特征方程 &nbsp;&nbsp; 未知量 d'inconnue <span class="arithmatex">\(q \in \mathbb{C}\)</span></li>
+<li><strong>discriminant <span class="arithmatex">\(\Delta\)</span></strong>：判别式 &nbsp;&nbsp; 三种情形：deux solutions réelles (distinctes) / une solution double / deux solutions complexes conjuguées</li>
+<li><strong>il existe … tel que</strong>：存在……使得 &nbsp;&nbsp; 引入待定常数 <span class="arithmatex">\((\lambda_1,\lambda_2)\)</span> 等</li>
+<li><strong>on reconnaît …</strong>：可辨认出…… &nbsp;&nbsp; 原版套语：on reconnaît une équation du second degré</li>
+<li><strong>Exercice d'application</strong>：应用题、随堂练习 &nbsp;&nbsp; 原版共 12 道</li>
+</ul>
+</div>
+<h2 id="etudier-une-suite-definie-par-recurrence">Étudier une suite définie par récurrence<a class="headerlink" href="#etudier-une-suite-definie-par-recurrence" title="Permanent link">&para;</a></h2>
+<p>研究由递推关系定义的数列</p>
+<p>Pour étudier une suite réelle <span class="arithmatex">\((u_n)\)</span> non usuelle vérifiant une relation de récurrence du type :</p>
+<p class="zh">要研究一个满足如下形式递推关系的<strong>非标准</strong>实数列 <span class="arithmatex">\((u_n)\)</span>：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0, \qquad u_{n+1} = f(u_n)
+\]</div>
+<p>où <span class="arithmatex">\(f\)</span> est une fonction réelle, le principe général est de conjecturer des propriétés de la suite (par exemple une majoration, une minoration et sa monotonie) puis de démontrer ces propriétés par récurrence.</p>
+<p class="zh">其中 <span class="arithmatex">\(f\)</span> 是实值函数。一般做法是先<strong>猜测</strong>（conjecturer）数列的一些性质 （例如有上界、有下界以及它的单调性），再用递推法把这些性质证明出来。</p>
+<p>Pour établir ces conjectures, il suffit de calculer un nombre suffisant de premiers termes. Mais les calculs peuvent être longs et la moindre erreur va se répercuter dans les termes suivants.</p>
+<p class="zh">为了提出这些猜测，只需算出足够多的前几项。但计算可能很长，而且稍有差错就会影响到后面的项。</p>
+<p>Une autre méthode plus efficace consiste à représenter graphiquement les premiers termes de <span class="arithmatex">\((u_n)\)</span>. Pour cela, on procède ainsi :</p>
+<p class="zh">另一种更有效的方法，是把 <span class="arithmatex">\((u_n)\)</span> 的前几项<strong>作图</strong>表示出来。做法如下：</p>
+<ul>
+<li>
+<p>on commence par étudier les variations de <span class="arithmatex">\(f\)</span> (donc le signe de sa dérivée <span class="arithmatex">\(f'\)</span>) ;</p>
+<p class="zh">先研究 <span class="arithmatex">\(f\)</span> 的单调性（也就是其导数 <span class="arithmatex">\(f'\)</span> 的符号）；</p>
+</li>
+<li>
+<p>puis on étudie le signe de la fonction <span class="arithmatex">\(x \mapsto f(x) - x\)</span> afin de connaître la position relative de la courbe représentative de <span class="arithmatex">\(f\)</span> par rapport à la droite d'équation <span class="arithmatex">\(y = x\)</span> ;</p>
+<p class="zh">再研究函数 <span class="arithmatex">\(x \mapsto f(x) - x\)</span> 的符号，以确定 <span class="arithmatex">\(f\)</span> 的曲线相对于直线 <span class="arithmatex">\(y = x\)</span> 的 <strong>位置关系</strong>；</p>
+</li>
+<li>
+<p>on trace sur un même graphique la courbe représentative de la fonction <span class="arithmatex">\(f\)</span> et la droite d'équation <span class="arithmatex">\(y = x\)</span> à l'aide des éléments précédents ;</p>
+<p class="zh">借助前面得到的信息，在同一张图上画出函数 <span class="arithmatex">\(f\)</span> 的曲线与直线 <span class="arithmatex">\(y = x\)</span>；</p>
+</li>
+<li>
+<p>on place le point de coordonnées <span class="arithmatex">\((u_{n_0},0)\)</span> sur le graphique ;</p>
+<p class="zh">在图上标出坐标为 <span class="arithmatex">\((u_{n_0},0)\)</span> 的点；</p>
+</li>
+<li>
+<p>en se déplaçant verticalement, on obtient à l'intersection de la courbe représentative de <span class="arithmatex">\(f\)</span> le point de coordonnées <span class="arithmatex">\((u_{n_0},f(u_{n_0})) = (u_{n_0},u_{n_0+1})\)</span> ;</p>
+<p class="zh">竖直移动，在 <span class="arithmatex">\(f\)</span> 的曲线上得到坐标为 <span class="arithmatex">\((u_{n_0},f(u_{n_0})) = (u_{n_0},u_{n_0+1})\)</span> 的点；</p>
+</li>
+<li>
+<p>en se déplaçant horizontalement, on obtient à l'intersection de la droite d'équation <span class="arithmatex">\(y = x\)</span> le point de coordonnées <span class="arithmatex">\((u_{n_0+1},u_{n_0+1})\)</span> ;</p>
+<p class="zh">水平移动，在直线 <span class="arithmatex">\(y = x\)</span> 上得到坐标为 <span class="arithmatex">\((u_{n_0+1},u_{n_0+1})\)</span> 的点；</p>
+</li>
+<li>
+<p>en se déplaçant verticalement, on obtient à l'intersection de la courbe représentative de <span class="arithmatex">\(f\)</span> le point de coordonnées <span class="arithmatex">\((u_{n_0+1},f(u_{n_0+1})) = (u_{n_0+1},u_{n_0+2})\)</span> ;</p>
+<p class="zh">竖直移动，在 <span class="arithmatex">\(f\)</span> 的曲线上得到坐标为 <span class="arithmatex">\((u_{n_0+1},f(u_{n_0+1})) = (u_{n_0+1},u_{n_0+2})\)</span> 的点；</p>
+</li>
+<li>
+<p>en se déplaçant horizontalement, on obtient à l'intersection de la droite d'équation <span class="arithmatex">\(y = x\)</span> le point de coordonnées <span class="arithmatex">\((u_{n_0+2},u_{n_0+2})\)</span> ;</p>
+<p class="zh">水平移动，在直线 <span class="arithmatex">\(y = x\)</span> 上得到坐标为 <span class="arithmatex">\((u_{n_0+2},u_{n_0+2})\)</span> 的点；</p>
+</li>
+<li>
+<p>en se déplaçant verticalement, on obtient à l'intersection de la courbe représentative de <span class="arithmatex">\(f\)</span> le point de coordonnées <span class="arithmatex">\((u_{n_0+2},f(u_{n_0+2})) = (u_{n_0+2},u_{n_0+3})\)</span> ;</p>
+<p class="zh">竖直移动，在 <span class="arithmatex">\(f\)</span> 的曲线上得到坐标为 <span class="arithmatex">\((u_{n_0+2},f(u_{n_0+2})) = (u_{n_0+2},u_{n_0+3})\)</span> 的点；</p>
+</li>
+<li>
+<p>etc.</p>
+<p class="zh">依此类推。</p>
+</li>
+</ul>
+<p>Ainsi, les abscisses des points obtenus sont égaux aux premiers terrmes de la suite : <span class="arithmatex">\(u_{n_0}\)</span>, <span class="arithmatex">\(u_{n_0+1}\)</span>, <span class="arithmatex">\(u_{n_0+2}\)</span>, <span class="arithmatex">\(u_{n_0+3}\)</span>, <span class="arithmatex">\(u_{n_0+4}\)</span>, etc. Une observation graphique de ces abscisses permet de formuler des conjectures sur <span class="arithmatex">\((u_n)\)</span> qu'on démontre ensuite par récurrence.</p>
+<p class="zh">这样，所得各点的横坐标就等于数列的前几项：<span class="arithmatex">\(u_{n_0}\)</span>、<span class="arithmatex">\(u_{n_0+1}\)</span>、<span class="arithmatex">\(u_{n_0+2}\)</span>、 <span class="arithmatex">\(u_{n_0+3}\)</span>、<span class="arithmatex">\(u_{n_0+4}\)</span> 等等。对这些横坐标作图形观察，可以对 <span class="arithmatex">\((u_n)\)</span> 提出猜测， 然后再用递推法加以证明。</p>
+<p><em>Attention.</em> La monotonie de la suite <span class="arithmatex">\((u_n)\)</span> n'est en général pas la même que la monotonie de la fonction <span class="arithmatex">\(f\)</span> !</p>
+<p class="zh"><strong>注意</strong>。数列 <span class="arithmatex">\((u_n)\)</span> 的单调性一般与函数 <span class="arithmatex">\(f\)</span> 的单调性<em>不同</em>！</p>
+<p><em>Conseil.</em> Si <span class="arithmatex">\(f\)</span> n'est pas définie sur <span class="arithmatex">\(\mathbb{R}\)</span>, il faut démontrer (par récurrence) que chaque terme de <span class="arithmatex">\((u_n)\)</span> appartient à l'ensemble de définition de <span class="arithmatex">\(f\)</span> pour justifier que la suite <span class="arithmatex">\((u_n)\)</span> est bien définie (c'est-à-dire qu'on peut calculer tous ses termes à l'aide de la relation de récurrence).</p>
+<p class="zh"><strong>建议</strong>。若 <span class="arithmatex">\(f\)</span> 不是定义在 <span class="arithmatex">\(\mathbb{R}\)</span> 上，就必须（用递推法）证明 <span class="arithmatex">\((u_n)\)</span> 的每一项 都属于 <span class="arithmatex">\(f\)</span> 的<strong>定义域</strong>（ensemble de définition），以说明数列 <span class="arithmatex">\((u_n)\)</span> 是良定义的 （即可以用递推关系算出它的所有项）。</p>
+<div class="admonition warning">
+<p class="admonition-title">Vocabulaire clé<br><span class='zh-title'>重点词汇</span></p>
+<ul>
+<li><strong>suite majorée / minorée</strong>：有上界的 / 有下界的数列 &nbsp;&nbsp; être majorée par 3「以 3 为上界」</li>
+<li><strong>monotonie, croissante</strong>：单调性、递增 &nbsp;&nbsp; strictement croissante 严格递增</li>
+<li><strong>conjecturer</strong>：猜测 &nbsp;&nbsp; 原版：conjecturer des propriétés puis les démontrer</li>
+<li><strong>raisonner par récurrence</strong>：用递推法推理</li>
+<li><strong>initialisation / hérédité / conclusion</strong>：初始步 / 递推步 / 结论 &nbsp;&nbsp; 递推证明的三段式</li>
+<li><strong>l'assertion <span class="arithmatex">\(P(n)\)</span></strong>：命题 <span class="arithmatex">\(P(n)\)</span> &nbsp;&nbsp; «…» 引号内写命题内容</li>
+<li><strong>ensemble de définition</strong>：定义域 &nbsp;&nbsp; 判断数列是否 bien définie「良定义」的依据</li>
+<li><strong>courbe représentative</strong>：（函数）曲线、图像</li>
+<li><strong>droite d'équation <span class="arithmatex">\(y = x\)</span></strong>：方程为 <span class="arithmatex">\(y = x\)</span> 的直线 &nbsp;&nbsp; au-dessus / en-dessous de 「在……上方 / 下方」</li>
+<li><strong>position relative</strong>：相对位置</li>
+<li><strong>raisonner par disjonction de cas</strong>：分类讨论、分情况讨论</li>
+<li><strong>être bien définie</strong>：（数列）良定义，即所有项都能算出来</li>
+<li><strong>la fonction racine carrée</strong>：平方根函数 &nbsp;&nbsp; 原版用它说明 <span class="arithmatex">\(\sqrt{\ }\)</span> 保持不等号</li>
+</ul>
+</div>
+<h3 id="exemple-1-1">Exemple 1 <span class="heading-zh">例 1</span><a class="headerlink" href="#exemple-1-1" title="Permanent link">&para;</a></h3>
+<p>Étudier la suite <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> définie par <span class="arithmatex">\(u_0 = 1\)</span> et <span class="arithmatex">\(\forall n \geqslant 0,\ u_{n+1} = \sqrt{2u_n + 3}\)</span>.</p>
+<p class="zh">研究由 <span class="arithmatex">\(u_0 = 1\)</span> 和 <span class="arithmatex">\(\forall n \geqslant 0,\ u_{n+1} = \sqrt{2u_n + 3}\)</span> 定义的数列 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span>。</p>
+<p><em>Solution.</em> On pose la fonction <span class="arithmatex">\(f : x \mapsto \sqrt{2x+3}\)</span> qui est définie sur <span class="arithmatex">\(\left[-\frac{3}{2},+\infty\right[\)</span> et dérivable sur <span class="arithmatex">\(\left]-\frac{3}{2},+\infty\right[\)</span>. On a :</p>
+<p class="zh"><strong>解答</strong>（Solution）。令函数 <span class="arithmatex">\(f : x \mapsto \sqrt{2x+3}\)</span>，它定义在 <span class="arithmatex">\(\left[-\frac{3}{2},+\infty\right[\)</span> 上，并在 <span class="arithmatex">\(\left]-\frac{3}{2},+\infty\right[\)</span> 上可导。有：</p>
+<div class="arithmatex">\[
+\forall x &gt; -\frac{3}{2}, \qquad
+f'(x) = \frac{2}{2\sqrt{2x+3}} = \frac{1}{\sqrt{2x+3}} &gt; 0.
+\]</div>
+<p>Donc <span class="arithmatex">\(f\)</span> est strictement croissante sur <span class="arithmatex">\(\left[-\frac{3}{2},+\infty\right[\)</span>. De plus :</p>
+<p class="zh">因此 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(\left[-\frac{3}{2},+\infty\right[\)</span> 上严格递增。此外：</p>
+<div class="arithmatex">\[
+f(x) - x \geqslant 0 \iff \sqrt{2x+3} \geqslant x.
+\]</div>
+<p>On raisonne par disjonction de cas.</p>
+<p class="zh">下面用分情况讨论来推理。</p>
+<p><span class="arithmatex">\(1\)</span><sup>er</sup> cas : <span class="arithmatex">\(x \in \left[-\frac{3}{2},0\right[\)</span>, alors <span class="arithmatex">\(x &lt; 0 \leqslant \sqrt{2x+3}\)</span> donc <span class="arithmatex">\(f(x) - x \geqslant 0\)</span>.</p>
+<p class="zh">第 1 种情形：<span class="arithmatex">\(x \in \left[-\frac{3}{2},0\right[\)</span>，此时 <span class="arithmatex">\(x &lt; 0 \leqslant \sqrt{2x+3}\)</span>，故 <span class="arithmatex">\(f(x) - x \geqslant 0\)</span>。</p>
+<p><span class="arithmatex">\(2\)</span><sup>e</sup> cas : <span class="arithmatex">\(x \in [0,+\infty[\)</span>, alors on peut appliquer la fonction carrée qui est strictement croissante sur <span class="arithmatex">\([0,+\infty[\)</span> :</p>
+<p class="zh">第 2 种情形：<span class="arithmatex">\(x \in [0,+\infty[\)</span>，此时可以两边平方（平方函数在 <span class="arithmatex">\([0,+\infty[\)</span> 上 严格递增）：</p>
+<div class="arithmatex">\[
+f(x) - x \geqslant 0 \iff 2x + 3 \geqslant x^2 \iff
+\underbrace{x^2 - 2x - 3}_{=(x+1)(x-3)} \leqslant 0 \iff
+x \in \underbrace{[-1,3] \cap [0,+\infty[}_{=[0,3]}.
+\]</div>
+<p><em>Conclusion.</em> La courbe représentative de <span class="arithmatex">\(f\)</span> est au-dessus de la droite d'équation <span class="arithmatex">\(y = x\)</span> sur <span class="arithmatex">\(\left[-\frac{3}{2},0\right[ \cup [0,3] = \left[-\frac{3}{2},3\right]\)</span>, et donc en-dessous sur <span class="arithmatex">\([3,+\infty[\)</span>. On peut maintenant représenter graphiquement les premiers termes de <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> (voir ci-dessous).</p>
+<p class="zh"><strong>结论</strong>。<span class="arithmatex">\(f\)</span> 的曲线在 <span class="arithmatex">\(\left[-\frac{3}{2},0\right[ \cup [0,3] = \left[-\frac{3}{2},3\right]\)</span> 上位于直线 <span class="arithmatex">\(y = x\)</span> 的上方，因此在 <span class="arithmatex">\([3,+\infty[\)</span> 上位于其下方。现在可以把 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 的前几项作图表示出来（见下图）。</p>
+<p><span class="lecture-figure"><img class="fig-light" src="../../../../../../assets/images/lectures/outils-mathematiques/04-fiche5-suites/fig-01.svg" alt="讲义插图 1"><img class="fig-dark" src="../../../../../../assets/images/lectures/outils-mathematiques/04-fiche5-suites/fig-01-dark.svg" alt="讲义插图 1"></span></p>
+<p>On conjecture que la suite <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> est majorée par 3, minorée par <span class="arithmatex">\(u_0 = 1\)</span> et strictement croissante. Pour tout <span class="arithmatex">\(n \in \mathbb{N}\)</span>, on pose l'assertion <span class="arithmatex">\(P(n)\)</span> : «<span class="arithmatex">\(1 \leqslant u_n &lt; u_{n+1} &lt; 3\)</span>» et on raisonne par récurrence.</p>
+<p class="zh">我们猜测数列 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 以 3 为上界、以 <span class="arithmatex">\(u_0 = 1\)</span> 为下界，并且严格递增。 对一切 <span class="arithmatex">\(n \in \mathbb{N}\)</span>，记命题 <span class="arithmatex">\(P(n)\)</span>：«<span class="arithmatex">\(1 \leqslant u_n &lt; u_{n+1} &lt; 3\)</span>»， 然后用递推法推理。</p>
+<p><em>Initialisation.</em> On a <span class="arithmatex">\(u_0 = 1\)</span> et <span class="arithmatex">\(u_1 = f(u_0) = \sqrt{2 \times 1 + 3} = \sqrt{5}\)</span>. Or <span class="arithmatex">\(2 &lt; \sqrt{5} &lt; 3\)</span> (car <span class="arithmatex">\(4 &lt; 5 &lt; 9\)</span> et la fonction racine carrée est strictement croissante) donc <span class="arithmatex">\(1 \leqslant u_0 &lt; u_1 &lt; 3\)</span>. On a bien montré que <span class="arithmatex">\(P(0)\)</span> est vraie.</p>
+<p class="zh"><strong>初始步</strong>（Initialisation）。<span class="arithmatex">\(u_0 = 1\)</span>，<span class="arithmatex">\(u_1 = f(u_0) = \sqrt{2 \times 1 + 3} = \sqrt{5}\)</span>。 而 <span class="arithmatex">\(2 &lt; \sqrt{5} &lt; 3\)</span>（因为 <span class="arithmatex">\(4 &lt; 5 &lt; 9\)</span>，且平方根函数严格递增），所以 <span class="arithmatex">\(1 \leqslant u_0 &lt; u_1 &lt; 3\)</span>。这就证明了 <span class="arithmatex">\(P(0)\)</span> 成立。</p>
+<p><em>Hérédité.</em> On fixe <span class="arithmatex">\(n \in \mathbb{N}\)</span> et on suppose que <span class="arithmatex">\(P(n)\)</span> est vraie, donc que <span class="arithmatex">\(1 \leqslant u_n &lt; u_{n+1} &lt; 3\)</span>. Puisque <span class="arithmatex">\(f\)</span> est strictement croissante, on a :</p>
+<p class="zh"><strong>递推步</strong>（Hérédité）。固定 <span class="arithmatex">\(n \in \mathbb{N}\)</span>，假设 <span class="arithmatex">\(P(n)\)</span> 成立，即 <span class="arithmatex">\(1 \leqslant u_n &lt; u_{n+1} &lt; 3\)</span>。由于 <span class="arithmatex">\(f\)</span> 严格递增，有：</p>
+<div class="arithmatex">\[
+\underbrace{f(1)}_{=\sqrt{5}&gt;1} \leqslant \underbrace{f(u_n)}_{=u_{n+1}}
+&lt; \underbrace{f(u_{n+1})}_{=u_{n+2}} &lt; \underbrace{f(3)}_{=\sqrt{2\times3+3}=3}
+\qquad\text{donc}\qquad
+\underbrace{1 \leqslant u_{n+1} &lt; u_{n+2} &lt; 3}_{P(n+1)}
+\]</div>
+<p class="zh gloss">式中 donc 意为「因此」：即由左边的不等式推出右边的不等式。</p>
+<p>On a bien montré que <span class="arithmatex">\(P(n) \implies P(n+1)\)</span> pour tout <span class="arithmatex">\(n \in \mathbb{N}\)</span>.</p>
+<p class="zh">这就证明了对一切 <span class="arithmatex">\(n \in \mathbb{N}\)</span> 都有 <span class="arithmatex">\(P(n) \implies P(n+1)\)</span>。</p>
+<p><em>Conclusion.</em> D'après le principe de récurrence, on en déduit que <span class="arithmatex">\(P(n)\)</span> est vraie pour tout <span class="arithmatex">\(n \in \mathbb{N}\)</span>. Par conséquent, on a démontré que la suite <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> est majorée par 3, minorée par 1 et strictement croissante. En particulier, la suite <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> bien définie car <span class="arithmatex">\(2u_n + 3 \geqslant 0\)</span> (autrement dit <span class="arithmatex">\(u_n \in \left[-\frac{3}{2},+\infty\right[\)</span> puisque <span class="arithmatex">\(u_n \geqslant 1\)</span>) pour tout <span class="arithmatex">\(n \in \mathbb{N}\)</span>. ∎</p>
+<p class="zh"><strong>结论</strong>。根据递推原理，可知 <span class="arithmatex">\(P(n)\)</span> 对一切 <span class="arithmatex">\(n \in \mathbb{N}\)</span> 成立。因此我们证明了 数列 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 以 3 为上界、以 1 为下界，并且严格递增。特别地，数列 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> 是良定义的，因为对一切 <span class="arithmatex">\(n \in \mathbb{N}\)</span> 都有 <span class="arithmatex">\(2u_n + 3 \geqslant 0\)</span>（换句话说，由于 <span class="arithmatex">\(u_n \geqslant 1\)</span>，故 <span class="arithmatex">\(u_n \in \left[-\frac{3}{2},+\infty\right[\)</span>）。∎</p>
+<h3 id="exercice-dapplication-11-11">Exercice d'application 11 <span class="heading-zh">应用练习 11</span><a class="headerlink" href="#exercice-dapplication-11-11" title="Permanent link">&para;</a></h3>
+<p>Étudier la suite <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span> définie par <span class="arithmatex">\(u_1 = 2\)</span> et <span class="arithmatex">\(\forall n \geqslant 1,\ u_{n+1} = \dfrac{u_n^2 + 3}{4}\)</span>.</p>
+<p class="zh">研究由 <span class="arithmatex">\(u_1 = 2\)</span> 和 <span class="arithmatex">\(\forall n \geqslant 1,\ u_{n+1} = \dfrac{u_n^2 + 3}{4}\)</span> 定义的数列 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}^*}\)</span>。</p>
+<h3 id="exercice-dapplication-12-12">Exercice d'application 12 <span class="heading-zh">应用练习 12</span><a class="headerlink" href="#exercice-dapplication-12-12" title="Permanent link">&para;</a></h3>
+<p>Étudier la suite <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span> définie par <span class="arithmatex">\(u_0 = 1\)</span> et <span class="arithmatex">\(\forall n \geqslant 0,\ u_{n+1} = \dfrac{1}{1 + u_n}\)</span>.</p>
+<p class="zh">研究由 <span class="arithmatex">\(u_0 = 1\)</span> 和 <span class="arithmatex">\(\forall n \geqslant 0,\ u_{n+1} = \dfrac{1}{1 + u_n}\)</span> 定义的数列 <span class="arithmatex">\((u_n)_{n\in\mathbb{N}}\)</span>。</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<h2 id="__comments">评论</h2>
+<script src="https://giscus.app/client.js"
+  data-repo="Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA"
+  data-repo-id="R_kgDOTFxXaw"
+  data-category="General"
+  data-category-id="DIC_kwDOTFxXa84DAMmT"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async>
+</script>
+<script>
+  var giscus = document.querySelector("script[src*='giscus']");
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+    giscus.setAttribute("data-theme", theme);
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+    var ref = document.querySelector("[data-md-component='palette']");
+    if (ref) {
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette");
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+          var frame = document.querySelector(".giscus-frame");
+          if (frame && frame.contentWindow) {
+            frame.contentWindow.postMessage(
+              { giscus: { setConfig: { theme: theme } } },
+              "https://giscus.app"
+            );
+          }
+        }
+      });
+    }
+  });
+</script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Noct-BUAA
+
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["header.autohide", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.tracking", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/gsap.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/hero-scroll.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/extra.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/text-type.js"></script>
+      
+    
+  </body>
+</html>
