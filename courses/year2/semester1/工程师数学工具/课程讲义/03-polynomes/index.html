@@ -3122,6 +3122,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-racines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 Racines 根
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-interpolation-de-lagrange" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Interpolation de Lagrange 拉格朗日插值
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-theoreme-fondamental-de-lalgebre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 Théorème fondamental de l'algèbre 代数基本定理
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3175,6 +3208,8 @@
   
     
     
+      
+        
       
         
       
@@ -3298,6 +3333,34 @@
     
   
     TD3 反三角函数解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B9%A0%E9%A2%98%E8%AF%BE/td4-polynomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD4 多项式解答
   
 
     
@@ -3886,6 +3949,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-racines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 Racines 根
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-interpolation-de-lagrange" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Interpolation de Lagrange 拉格朗日插值
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-theoreme-fondamental-de-lalgebre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 Théorème fondamental de l'algèbre 代数基本定理
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4057,10 +4153,10 @@ X^mX^n
 <p class="zh">特别地，我们回忆以下结果，它可推广到多项式。</p>
 <div class="admonition danger">
 <p class="admonition-title">Théorème 1.6 : formule du binôme de Newton<br><span class='zh-title'>定理 1.6：牛顿二项式公式</span></p>
-<p>Pour tout <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span> et tout <span class="arithmatex">\(Q\in\mathbb{K}[X]\)</span> :</p>
-<p class="zh">对任意 <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span> 与 <span class="arithmatex">\(Q\in\mathbb{K}[X]\)</span>：</p>
+<p>Pour tout <span class="arithmatex">\((P,Q)\in\mathbb{K}[X]^2\)</span> et tout <span class="arithmatex">\(n\in\mathbb{N}\)</span> :</p>
+<p class="zh">对任意 <span class="arithmatex">\((P,Q)\in\mathbb{K}[X]^2\)</span> 与任意 <span class="arithmatex">\(n\in\mathbb{N}\)</span>：</p>
 <div class="arithmatex">\[
-\forall n\in\mathbb{N},\quad (P+Q)^n=\sum_{k=0}^{n}\binom{n}{k}P^kQ^{n-k}
+(P+Q)^n=\sum_{k=0}^{n}\binom{n}{k}P^kQ^{n-k}
 \quad\text{où}\quad \binom{n}{k}=\frac{n!}{k!(n-k)!}.
 \]</div>
 </div>
@@ -4088,10 +4184,10 @@ X^mX^n
 <h2 id="2-fonctions-polynomiales">2　Fonctions polynomiales <span class="heading-zh">多项式函数</span><a class="headerlink" href="#2-fonctions-polynomiales" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">Définition 2.1 : fonction polynomiale<br><span class='zh-title'>定义 2.1：多项式函数（fonction polynomiale）</span></p>
-<p>Une fonction <span class="arithmatex">\(f:\mathscr{D}_f\to\mathbb{K}\)</span> définie sur <span class="arithmatex">\(\mathscr{D}_f\subset\mathbb{K}\)</span> est dite <strong>polynomiale</strong> lorsqu'il existe un polynôme <span class="arithmatex">\(P=\sum_{n=0}^{N}a_nX^n\in\mathbb{K}[X]\)</span> tel que :</p>
-<p class="zh">定义在 <span class="arithmatex">\(\mathscr{D}_f\subset\mathbb{K}\)</span> 上的函数 <span class="arithmatex">\(f:\mathscr{D}_f\to\mathbb{K}\)</span> 称为<strong>多项式函数</strong>（fonction polynomiale），若存在多项式 <span class="arithmatex">\(P=\sum_{n=0}^{N}a_nX^n\in\mathbb{K}[X]\)</span> 使得：</p>
+<p>Une fonction <span class="arithmatex">\(f:\mathscr{D}\to\mathbb{K}\)</span> définie sur <span class="arithmatex">\(\mathscr{D}\subset\mathbb{K}\)</span> est dite <strong>polynomiale</strong> lorsqu'il existe un polynôme <span class="arithmatex">\(P=\sum_{n=0}^{N}a_nX^n\in\mathbb{K}[X]\)</span> tel que :</p>
+<p class="zh">定义在 <span class="arithmatex">\(\mathscr{D}\subset\mathbb{K}\)</span> 上的函数 <span class="arithmatex">\(f:\mathscr{D}\to\mathbb{K}\)</span> 称为<strong>多项式函数</strong>（fonction polynomiale），若存在多项式 <span class="arithmatex">\(P=\sum_{n=0}^{N}a_nX^n\in\mathbb{K}[X]\)</span> 使得：</p>
 <div class="arithmatex">\[
-\forall x\in\mathscr{D}_f,\quad f(x)=a_0+a_1x+a_2x^2+\cdots+a_Nx^N=\sum_{n=0}^{N}a_nx^n=P(x).
+\forall x\in\mathscr{D},\quad f(x)=a_0+a_1x+a_2x^2+\cdots+a_Nx^N=\sum_{n=0}^{N}a_nx^n=P(x).
 \]</div>
 </div>
 <div class="admonition warning">
@@ -4278,8 +4374,13 @@ P=a_0+a_1X+a_2X^2+\cdots+a_{\deg(P)}X^{\deg(P)}
 <p class="zh">若 <span class="arithmatex">\(\deg(Q)&lt;1\)</span>，即 <span class="arithmatex">\(Q=b\in\mathbb{K}\)</span> 是常数多项式，则 <span class="arithmatex">\(\deg(P\circ Q)=\deg(P(b))\)</span>：当 <span class="arithmatex">\(P(b)\neq0\)</span> 时等于 0，当 <span class="arithmatex">\(P(b)=0\)</span> 时等于 <span class="arithmatex">\(-\infty\)</span>。</p>
 </li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Exemple 3.5<br><span class='zh-title'>例 3.5</span></p>
+<p>La fonction <span class="arithmatex">\(\exp:x\mapsto e^x\)</span> n'est pas polynomiale. En effet, si on suppose qu'il existe <span class="arithmatex">\(P\in\mathbb{R}[X]\)</span> tel que <span class="arithmatex">\(\forall x\in\mathbb{R},\ P(x)=e^x\)</span>, alors pour <span class="arithmatex">\(d=\deg(P)\geqslant1\)</span> (car <span class="arithmatex">\(\exp\)</span> n'est pas constante) on a <span class="arithmatex">\(P^{(d+1)}=0\)</span>, ce qui est absurde car <span class="arithmatex">\(\exp'=\exp\)</span>.</p>
+<p class="zh">函数 <span class="arithmatex">\(\exp:x\mapsto e^x\)</span> 不是多项式函数。事实上，若假设存在 <span class="arithmatex">\(P\in\mathbb{R}[X]\)</span> 使得 <span class="arithmatex">\(\forall x\in\mathbb{R},\ P(x)=e^x\)</span>，则对 <span class="arithmatex">\(d=\deg(P)\geqslant1\)</span>（因为 <span class="arithmatex">\(\exp\)</span> 不是常数函数），有 <span class="arithmatex">\(P^{(d+1)}=0\)</span>，这是荒谬的，因为 <span class="arithmatex">\(\exp'=\exp\)</span>。</p>
+</div>
 <div class="admonition danger">
-<p class="admonition-title">Théorème 3.5 : intégrité dans <span class="arithmatex">\(\mathbb{K}[X]\)</span><br><span class='zh-title'>定理 3.5：<span class="arithmatex">\(\mathbb{K}[X]\)</span> 的整性</span></p>
+<p class="admonition-title">Théorème 3.6 : intégrité dans <span class="arithmatex">\(\mathbb{K}[X]\)</span><br><span class='zh-title'>定理 3.6：<span class="arithmatex">\(\mathbb{K}[X]\)</span> 的整性</span></p>
 <div class="arithmatex">\[
 \forall(P,Q)\in\mathbb{K}[X]^2,\quad PQ=0\iff(P=0\ \text{ou}\ Q=0).
 \]</div>
@@ -4315,6 +4416,377 @@ PQ=0 &amp;\iff \deg(PQ)=-\infty \iff \deg(P)+\deg(Q)=-\infty\\
 <li><strong>avec égalité si …</strong>：当……时取等号</li>
 <li><strong>si et seulement si</strong>：当且仅当</li>
 <li><strong>autrement dit</strong>：换言之</li>
+</ul>
+</div>
+<h2 id="4-racines">4　Racines <span class="heading-zh">根</span><a class="headerlink" href="#4-racines" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Définition 4.1 : racine<br><span class='zh-title'>定义 4.1：根（racine）</span></p>
+<p>On dit qu'un nombre <span class="arithmatex">\(\alpha\in\mathbb{K}\)</span> est une <strong>racine</strong> d'un polynôme <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span> lorsque <span class="arithmatex">\(P(\alpha)=0\)</span>.</p>
+<p class="zh">若 <span class="arithmatex">\(P(\alpha)=0\)</span>，则称数 <span class="arithmatex">\(\alpha\in\mathbb{K}\)</span> 是多项式 <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span> 的一个<strong>根</strong>（racine）。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 4.2<br><span class='zh-title'>例 4.2</span></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(X^2+1\)</span> n'a pas de racines réelles, mais admet deux racines complexes : <span class="arithmatex">\(i\)</span> et <span class="arithmatex">\(-i\)</span>.</p>
+<p class="zh"><span class="arithmatex">\(X^2+1\)</span> 没有实根，但有两个复根：<span class="arithmatex">\(i\)</span> 与 <span class="arithmatex">\(-i\)</span>。</p>
+</li>
+<li>
+<p>Tout nombre <span class="arithmatex">\(\alpha\in\mathbb{K}\)</span> est racine du polynôme nul.</p>
+<p class="zh">任意数 <span class="arithmatex">\(\alpha\in\mathbb{K}\)</span> 都是零多项式的根。</p>
+</li>
+<li>
+<p>Soit <span class="arithmatex">\(n\in\mathbb{N}^*\)</span>. Les racines de <span class="arithmatex">\(X^n-1\in\mathbb{C}[X]\)</span> sont les racines <span class="arithmatex">\(n\)</span>-ièmes de l'unité.</p>
+<p class="zh">设 <span class="arithmatex">\(n\in\mathbb{N}^*\)</span>。<span class="arithmatex">\(X^n-1\in\mathbb{C}[X]\)</span> 的根是 <span class="arithmatex">\(n\)</span> 次单位根（racines <span class="arithmatex">\(n\)</span>-ièmes de l'unité）。</p>
+</li>
+</ul>
+</div>
+<p>On dit qu'un polynôme <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span> est <strong>factorisable</strong> par un polynôme <span class="arithmatex">\(Q\in\mathbb{K}[X]\)</span> lorsqu'il existe un polynôme <span class="arithmatex">\(R\in\mathbb{K}[X]\)</span> tel que <span class="arithmatex">\(P=QR\)</span>.</p>
+<p class="zh">若存在多项式 <span class="arithmatex">\(R\in\mathbb{K}[X]\)</span> 使得 <span class="arithmatex">\(P=QR\)</span>，则称多项式 <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span> 可被多项式 <span class="arithmatex">\(Q\in\mathbb{K}[X]\)</span> <strong>因式分解</strong>（factorisable）。</p>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 4.3 : factorisation à l'aide d'une racine<br><span class='zh-title'>定理 4.3：利用根进行因式分解</span></p>
+<p>Soient <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span> et <span class="arithmatex">\(\alpha\in\mathbb{K}\)</span>. Alors <span class="arithmatex">\(\alpha\)</span> est une racine de <span class="arithmatex">\(P\)</span> si et seulement si <span class="arithmatex">\(P\)</span> est <strong>factorisable</strong> par <span class="arithmatex">\(X-\alpha\)</span> :</p>
+<p class="zh">设 <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span> 且 <span class="arithmatex">\(\alpha\in\mathbb{K}\)</span>。则 <span class="arithmatex">\(\alpha\)</span> 是 <span class="arithmatex">\(P\)</span> 的根当且仅当 <span class="arithmatex">\(P\)</span> 可被 <span class="arithmatex">\(X-\alpha\)</span> <strong>因式分解</strong>：</p>
+<div class="arithmatex">\[
+P(\alpha)=0\iff\exists R\in\mathbb{K}[X],\quad P=(X-\alpha)R.
+\]</div>
+</div>
+<div class="admonition demo">
+<p><span class="arithmatex">\(\Leftarrow\)</span> S'il existe <span class="arithmatex">\(R\in\mathbb{K}[X]\)</span> tel que <span class="arithmatex">\(P=(X-\alpha)R\)</span>, alors <span class="arithmatex">\(P(\alpha)=(\alpha-\alpha)R(\alpha)=0\)</span>.</p>
+<p class="zh"><span class="arithmatex">\(\Leftarrow\)</span> 若存在 <span class="arithmatex">\(R\in\mathbb{K}[X]\)</span> 使得 <span class="arithmatex">\(P=(X-\alpha)R\)</span>，则 <span class="arithmatex">\(P(\alpha)=(\alpha-\alpha)R(\alpha)=0\)</span>。</p>
+<p><span class="arithmatex">\(\Rightarrow\)</span> On note <span class="arithmatex">\(P=\sum_{n=0}^{N}a_nX^n\)</span> et on suppose que <span class="arithmatex">\(P(\alpha)=0\)</span>. D'après la formule de Taylor pour les polynômes, on a :</p>
+<p class="zh"><span class="arithmatex">\(\Rightarrow\)</span> 记 <span class="arithmatex">\(P=\sum_{n=0}^{N}a_nX^n\)</span>，并假设 <span class="arithmatex">\(P(\alpha)=0\)</span>。根据多项式的泰勒公式，有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P&amp;=\sum_{n=0}^{N}\frac{P^{(n)}(\alpha)}{n!}(X-\alpha)^n
+ =\sum_{n=1}^{N}\frac{P^{(n)}(\alpha)}{n!}(X-\alpha)^n
+ &amp;&amp;\text{car } P^{(0)}(\alpha)=P(\alpha)=0\\
+&amp;=(X-\alpha)\sum_{n=1}^{N}\frac{P^{(n)}(\alpha)}{n!}(X-\alpha)^{n-1}\\
+&amp;=(X-\alpha)\underbrace{\sum_{n=0}^{N-1}\frac{P^{(n+1)}(\alpha)}{(n+1)!}(X-\alpha)^{n}}_{=R\in\mathbb{K}[X]}.
+\end{aligned}
+\]</div>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Remarque<br><span class='zh-title'>注</span></p>
+<p>En particulier, si un polynôme <span class="arithmatex">\(P\neq0\)</span> admet une racine, alors <span class="arithmatex">\(\deg(P)\geqslant1\)</span>.</p>
+<p class="zh">特别地，若多项式 <span class="arithmatex">\(P\neq0\)</span> 有一个根，则 <span class="arithmatex">\(\deg(P)\geqslant1\)</span>。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 4.4<br><span class='zh-title'>例 4.4</span></p>
+<p>Puisque <span class="arithmatex">\(-1\)</span> est une racine de <span class="arithmatex">\(P=X^4-X-2\)</span>, on sait qu'il existe <span class="arithmatex">\(R\in\mathbb{R}[X]\)</span> tel que <span class="arithmatex">\(P=(X+1)R\)</span>. En particulier, <span class="arithmatex">\(4=\deg(P)=1+\deg(R)\)</span>, donc <span class="arithmatex">\(\deg(R)=3\)</span>. On pose <span class="arithmatex">\(R=aX^3+bX^2+cX+d\)</span> où <span class="arithmatex">\((a,b,c,d)\in\mathbb{R}^4\)</span>. Alors :</p>
+<p class="zh">由于 <span class="arithmatex">\(-1\)</span> 是 <span class="arithmatex">\(P=X^4-X-2\)</span> 的根，可知存在 <span class="arithmatex">\(R\in\mathbb{R}[X]\)</span> 使得 <span class="arithmatex">\(P=(X+1)R\)</span>。特别地，<span class="arithmatex">\(4=\deg(P)=1+\deg(R)\)</span>，故 <span class="arithmatex">\(\deg(R)=3\)</span>。令 <span class="arithmatex">\(R=aX^3+bX^2+cX+d\)</span>，其中 <span class="arithmatex">\((a,b,c,d)\in\mathbb{R}^4\)</span>。则：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P=X^4-X-2&amp;=(X+1)(aX^3+bX^2+cX+d)\\
+&amp;=aX^4+(b+a)X^3+(c+b)X^2+(d+c)X+d.
+\end{aligned}
+\]</div>
+<p>En identifiant les coefficients, on en déduit que <span class="arithmatex">\((a,b,c,d)=(1,-1,1,-2)\)</span>, donc :</p>
+<p class="zh">比较系数可得 <span class="arithmatex">\((a,b,c,d)=(1,-1,1,-2)\)</span>，因此：</p>
+<div class="arithmatex">\[
+P=X^4-X-2=(X+1)(X^3-X^2+X-2).
+\]</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 4.5 : factorisation à l'aide d'une racine multiple<br><span class='zh-title'>定理 4.5：利用重根进行因式分解</span></p>
+<p>Soient <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span>, <span class="arithmatex">\(\alpha\in\mathbb{K}\)</span> et <span class="arithmatex">\(m\in\mathbb{N}^*\)</span>. Alors :</p>
+<p class="zh">设 <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span>，<span class="arithmatex">\(\alpha\in\mathbb{K}\)</span>，<span class="arithmatex">\(m\in\mathbb{N}^*\)</span>。则：</p>
+<div class="arithmatex">\[
+P(\alpha)=P'(\alpha)=\cdots=P^{(m-1)}(\alpha)=0
+\iff\exists R\in\mathbb{K}[X],\quad P=(X-\alpha)^mR.
+\]</div>
+</div>
+<div class="admonition demo">
+<p><span class="arithmatex">\(\Rightarrow\)</span> On note <span class="arithmatex">\(P=\sum_{n=0}^{N}a_nX^n\)</span> et on suppose que <span class="arithmatex">\(P(\alpha)=P'(\alpha)=\cdots=P^{(m-1)}(\alpha)=0\)</span>. D'après la formule de Taylor pour les polynômes, on a :</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P&amp;=\sum_{n=0}^{N}\frac{P^{(n)}(\alpha)}{n!}(X-\alpha)^n
+ =\sum_{n=m}^{N}\frac{P^{(n)}(\alpha)}{n!}(X-\alpha)^n\\
+&amp;=(X-\alpha)^m\sum_{n=m}^{N}\frac{P^{(n)}(\alpha)}{n!}(X-\alpha)^{n-m}
+ =(X-\alpha)^m\underbrace{\sum_{n=0}^{N-m}\frac{P^{(n+m)}(\alpha)}{(n+m)!}(X-\alpha)^n}_{=R\in\mathbb{K}[X]}.
+\end{aligned}
+\]</div>
+<p class="zh"><span class="arithmatex">\(\Rightarrow\)</span> 记 <span class="arithmatex">\(P=\sum_{n=0}^{N}a_nX^n\)</span>，并假设 <span class="arithmatex">\(P(\alpha)=P'(\alpha)=\cdots=P^{(m-1)}(\alpha)=0\)</span>。根据多项式的泰勒公式，有：</p>
+<p><span class="arithmatex">\(\Leftarrow\)</span> On suppose qu'il existe <span class="arithmatex">\(R\in\mathbb{K}[X]\)</span> tel que <span class="arithmatex">\(P=(X-\alpha)^mR\)</span>.</p>
+<p class="zh"><span class="arithmatex">\(\Leftarrow\)</span> 假设存在 <span class="arithmatex">\(R\in\mathbb{K}[X]\)</span> 使得 <span class="arithmatex">\(P=(X-\alpha)^mR\)</span>。</p>
+<div class="admonition danger">
+<p class="admonition-title">Lemme 4.6 : formule de Leibniz<br><span class='zh-title'>引理 4.6：莱布尼茨公式</span></p>
+<p>Pour tout <span class="arithmatex">\((P,Q)\in\mathbb{K}[X]^2\)</span> et tout <span class="arithmatex">\(k\in\mathbb{N}\)</span> :</p>
+<p class="zh">对任意 <span class="arithmatex">\((P,Q)\in\mathbb{K}[X]^2\)</span> 与任意 <span class="arithmatex">\(k\in\mathbb{N}\)</span>：</p>
+<div class="arithmatex">\[
+(PQ)^{(k)}=\sum_{j=0}^{k}\binom{k}{j}P^{(j)}Q^{(k-j)}.
+\]</div>
+</div>
+<p>D'après la formule de Leibniz, on a pour tout <span class="arithmatex">\(k\in\llbracket0,m-1\rrbracket\)</span> :</p>
+<div class="arithmatex">\[
+P^{(k)}(\alpha)=\sum_{j=0}^{k}\binom{k}{j}\frac{m!}{(m-j)!}(\alpha-\alpha)^{\overbrace{m-j}^{\geqslant1}}R^{(k-j)}(\alpha)=0
+\quad\text{car } j\leqslant k\leqslant m-1.
+\]</div>
+<p class="zh">根据莱布尼茨公式，对任意 <span class="arithmatex">\(k\in\llbracket0,m-1\rrbracket\)</span>：由于 <span class="arithmatex">\(j\leqslant k\leqslant m-1\)</span>，故 <span class="arithmatex">\(m-j\geqslant1\)</span>，从而 <span class="arithmatex">\((\alpha-\alpha)^{m-j}=0\)</span>，即 <span class="arithmatex">\(P^{(k)}(\alpha)=0\)</span>。</p>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Définition 4.7 : multiplicité d'une racine<br><span class='zh-title'>定义 4.7：根的重数（multiplicité）</span></p>
+<p>On dit qu'un nombre <span class="arithmatex">\(\alpha\in\mathbb{K}\)</span> est une racine de <strong>multiplicité</strong> <span class="arithmatex">\(m\in\mathbb{N}^*\)</span> d'un polynôme <span class="arithmatex">\(P\in\mathbb{K}[X]\setminus\{0\}\)</span> lorsque :</p>
+<p class="zh">若对多项式 <span class="arithmatex">\(P\in\mathbb{K}[X]\setminus\{0\}\)</span> 有：</p>
+<div class="arithmatex">\[
+P(\alpha)=P'(\alpha)=\cdots=P^{(m-1)}(\alpha)=0
+\quad\text{et}\quad P^{(m)}(\alpha)\neq0,
+\]</div>
+<p>Autrement dit, la <strong>multiplicité</strong> d'une racine <span class="arithmatex">\(\alpha\)</span> de <span class="arithmatex">\(P\)</span> est le plus grand entier <span class="arithmatex">\(m\in\mathbb{N}^*\)</span> tel que <span class="arithmatex">\(P\)</span> est factorisable par <span class="arithmatex">\((X-\alpha)^m\)</span>. Une racine de multiplicité 1 est dite <strong>simple</strong> alors qu'une racine de multiplicité au moins égale à 2 est dite <strong>multiple</strong>.</p>
+<p class="zh">则称数 <span class="arithmatex">\(\alpha\in\mathbb{K}\)</span> 是 <span class="arithmatex">\(P\)</span> 的一个<strong>重数</strong>（multiplicité）为 <span class="arithmatex">\(m\in\mathbb{N}^*\)</span> 的根。换言之，<span class="arithmatex">\(P\)</span> 的根 <span class="arithmatex">\(\alpha\)</span> 的<strong>重数</strong>是使得 <span class="arithmatex">\(P\)</span> 可被 <span class="arithmatex">\((X-\alpha)^m\)</span> 因式分解的最大整数 <span class="arithmatex">\(m\in\mathbb{N}^*\)</span>。重数为 1 的根称为<strong>单根</strong>（simple），而重数至少为 2 的根称为<strong>重根</strong>（multiple）。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 4.8<br><span class='zh-title'>例 4.8</span></p>
+<p><span class="arithmatex">\(1\)</span> est une racine de <span class="arithmatex">\(P=X^5-3X^4+4X^3-4X^2+3X-1\)</span>, de <span class="arithmatex">\(P'=5X^4-12X^3+12X^2-8X+3\)</span>, de <span class="arithmatex">\(P''=20X^3-36X^2+24X-8\)</span>, mais pas de <span class="arithmatex">\(P'''=60X^2-72X+24\)</span>. Donc <span class="arithmatex">\(1\)</span> est une racine de multiplicité 3 de <span class="arithmatex">\(P\)</span> et on sait qu'il existe <span class="arithmatex">\(R\in\mathbb{R}[X]\)</span> tel que <span class="arithmatex">\(P=(X-1)^3R\)</span>. En particulier, <span class="arithmatex">\(5=\deg(P)=3+\deg(R)\)</span>, donc <span class="arithmatex">\(\deg(R)=2\)</span>. On pose <span class="arithmatex">\(R=aX^2+bX+c\)</span> où <span class="arithmatex">\((a,b,c)\in\mathbb{R}^3\)</span>. Alors :</p>
+<p class="zh"><span class="arithmatex">\(1\)</span> 是 <span class="arithmatex">\(P=X^5-3X^4+4X^3-4X^2+3X-1\)</span> 的根，是 <span class="arithmatex">\(P'=5X^4-12X^3+12X^2-8X+3\)</span> 的根，是 <span class="arithmatex">\(P''=20X^3-36X^2+24X-8\)</span> 的根，但不是 <span class="arithmatex">\(P'''=60X^2-72X+24\)</span> 的根。因此 <span class="arithmatex">\(1\)</span> 是 <span class="arithmatex">\(P\)</span> 的重数为 3 的根，且已知存在 <span class="arithmatex">\(R\in\mathbb{R}[X]\)</span> 使得 <span class="arithmatex">\(P=(X-1)^3R\)</span>。特别地，<span class="arithmatex">\(5=\deg(P)=3+\deg(R)\)</span>，故 <span class="arithmatex">\(\deg(R)=2\)</span>。令 <span class="arithmatex">\(R=aX^2+bX+c\)</span>，其中 <span class="arithmatex">\((a,b,c)\in\mathbb{R}^3\)</span>。则：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P&amp;=X^5-3X^4+4X^3-4X^2+3X-1\\
+&amp;=(X-1)^3(aX^2+bX+c)=(X^3-3X^2+3X-1)(aX^2+bX+c)\\
+&amp;=aX^5+(b-3a)X^4+(c-3b+3a)X^3+(-3c+3b-a)X^2+(3c-b)X-c.
+\end{aligned}
+\]</div>
+<p>En identifiant les coefficients, on en déduit que <span class="arithmatex">\((a,b,c)=(1,0,1)\)</span>, donc :</p>
+<p class="zh">比较系数可得 <span class="arithmatex">\((a,b,c)=(1,0,1)\)</span>，因此：</p>
+<div class="arithmatex">\[
+P=X^5-3X^4+4X^3-4X^2+3X-1=(X-1)^3(X^2+1)=(X-1)^3(X-i)(X+i).
+\]</div>
+<p>Ainsi, <span class="arithmatex">\(P\)</span> a 3 racines différentes : <span class="arithmatex">\(1\)</span> de multiplicité 3, et <span class="arithmatex">\(i\)</span> et <span class="arithmatex">\(-i\)</span> qui sont des racines simples.</p>
+<p class="zh">于是，<span class="arithmatex">\(P\)</span> 有 3 个不同的根：<span class="arithmatex">\(1\)</span>（重数为 3），以及 <span class="arithmatex">\(i\)</span> 与 <span class="arithmatex">\(-i\)</span>（单根）。</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 4.9 : nombre de racines<br><span class='zh-title'>定理 4.9：根的个数</span></p>
+<p>Tout polynôme <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span> de degré <span class="arithmatex">\(d=\deg(P)\geqslant0\)</span> (donc <span class="arithmatex">\(P\neq0\)</span>) admet au plus <span class="arithmatex">\(d\)</span> racines comptées avec leurs multiplicités, c'est-à-dire que si <span class="arithmatex">\(m_1,m_2,\dots,m_r\)</span> sont les multiplicités des racines de <span class="arithmatex">\(P\)</span> alors <span class="arithmatex">\(m_1+m_2+\cdots+m_r\leqslant d\)</span>.</p>
+<p class="zh">任意次数为 <span class="arithmatex">\(d=\deg(P)\geqslant0\)</span>（故 <span class="arithmatex">\(P\neq0\)</span>）的多项式 <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span> 至多有 <span class="arithmatex">\(d\)</span> 个按重数计算的根，即若 <span class="arithmatex">\(m_1,m_2,\dots,m_r\)</span> 是 <span class="arithmatex">\(P\)</span> 的各根的重数，则 <span class="arithmatex">\(m_1+m_2+\cdots+m_r\leqslant d\)</span>。</p>
+</div>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong> Soient <span class="arithmatex">\(\alpha_1,\alpha_2,\dots,\alpha_r\)</span> des racines de <span class="arithmatex">\(P\)</span>, toutes différentes, de multiplicité <span class="arithmatex">\(m_1,m_2,\dots,m_r\)</span> respectivement. En appliquant <span class="arithmatex">\(r\)</span> fois le théorème 4.5, on sait qu'il existe <span class="arithmatex">\(R\in\mathbb{K}[X]\)</span> tel que :</p>
+<div class="arithmatex">\[
+P=(X-\alpha_1)^{m_1}(X-\alpha_2)^{m_2}\dots(X-\alpha_r)^{m_r}R.
+\]</div>
+<p class="zh"><strong>证明.</strong> 设 <span class="arithmatex">\(\alpha_1,\alpha_2,\dots,\alpha_r\)</span> 是 <span class="arithmatex">\(P\)</span> 的互不相同的根，重数分别为 <span class="arithmatex">\(m_1,m_2,\dots,m_r\)</span>。应用 <span class="arithmatex">\(r\)</span> 次定理 4.5，可知存在 <span class="arithmatex">\(R\in\mathbb{K}[X]\)</span> 使得：</p>
+<p>Donc <span class="arithmatex">\(d=\deg(P)=m_1+m_2+\cdots+m_r+\deg(R)\geqslant m_1+m_2+\cdots+m_r\)</span> car <span class="arithmatex">\(R\neq0\)</span>.</p>
+<p class="zh">因此 <span class="arithmatex">\(d=\deg(P)=m_1+m_2+\cdots+m_r+\deg(R)\geqslant m_1+m_2+\cdots+m_r\)</span>，因为 <span class="arithmatex">\(R\neq0\)</span>。</p>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 4.10<br><span class='zh-title'>例 4.10</span></p>
+<p>La fonction <span class="arithmatex">\(\cos:x\mapsto\cos(x)\)</span> n'est pas polynomiale. En effet, si on suppose qu'il existe <span class="arithmatex">\(P\in\mathbb{R}[X]\)</span> tel que <span class="arithmatex">\(\forall x\in\mathbb{R},\ P(x)=\cos(x)\)</span>, alors <span class="arithmatex">\(P\)</span> admet une infinité de racines car <span class="arithmatex">\(\forall n\in\mathbb{Z},\ \cos\bigl(\frac{\pi}{2}+n\pi\bigr)=0\)</span>, donc <span class="arithmatex">\(P=0\)</span> ce qui est absurde. De même, la fonction sinus n'est pas polynomiale.</p>
+<p class="zh">函数 <span class="arithmatex">\(\cos:x\mapsto\cos(x)\)</span> 不是多项式函数。事实上，若假设存在 <span class="arithmatex">\(P\in\mathbb{R}[X]\)</span> 使得 <span class="arithmatex">\(\forall x\in\mathbb{R},\ P(x)=\cos(x)\)</span>，则 <span class="arithmatex">\(P\)</span> 有无穷多个根，因为 <span class="arithmatex">\(\forall n\in\mathbb{Z},\ \cos\bigl(\frac{\pi}{2}+n\pi\bigr)=0\)</span>，所以 <span class="arithmatex">\(P=0\)</span>，这是荒谬的。同样，正弦函数也不是多项式函数。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Important<br><span class='zh-title'>要点</span></p>
+<p>Ainsi, si un polynôme <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span> admet plus de racines (comptées avec leurs multiplicités) que son degré, alors <span class="arithmatex">\(P=0\)</span>. En particulier, pour démontrer que deux polynômes <span class="arithmatex">\((P,Q)\in\mathbb{K}[X]^2\)</span> sont égaux, il suffit de montrer que <span class="arithmatex">\(P-Q\)</span> admet plus de racines que son degré. Par exemple, deux fonctions polynomiales qui sont égales sur un ensemble infini (comme un intervalle contenant au moins deux points) sont nécessairement définies par le même polynôme.</p>
+<p class="zh">因此，若多项式 <span class="arithmatex">\(P\in\mathbb{K}[X]\)</span> 的根（按重数计算）多于其次数，则 <span class="arithmatex">\(P=0\)</span>。特别地，要证明两个多项式 <span class="arithmatex">\((P,Q)\in\mathbb{K}[X]^2\)</span> 相等，只需证明 <span class="arithmatex">\(P-Q\)</span> 的根多于其次数。例如，两个在无限集（如至少包含两个点的区间）上相等的多项式函数，必然由同一个多项式定义。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Vocabulaire clé<br><span class='zh-title'>重点词汇</span></p>
+<ul>
+<li><strong>racine</strong>：根</li>
+<li><strong>factorisable par …</strong>：可被……因式分解</li>
+<li><strong>multiplicité / racine simple / racine multiple</strong>：重数 / 单根 / 重根</li>
+<li><strong>racines <span class="arithmatex">\(n\)</span>-ièmes de l'unité</strong>：<span class="arithmatex">\(n\)</span> 次单位根</li>
+<li><strong>en identifiant les coefficients</strong>：比较系数</li>
+<li><strong>on en déduit</strong>：由此推出</li>
+<li><strong>si et seulement si</strong>：当且仅当</li>
+<li><strong>autrement dit</strong>：换言之</li>
+</ul>
+</div>
+<h2 id="5-interpolation-de-lagrange">5　Interpolation de Lagrange <span class="heading-zh">拉格朗日插值</span><a class="headerlink" href="#5-interpolation-de-lagrange" title="Permanent link">&para;</a></h2>
+<p>Les problèmes d'<strong>interpolation</strong> consistent à chercher des courbes passant par un nombre fini de points donnés. Ils ont de nombreuses applications en sciences.</p>
+<p class="zh"><strong>插值</strong>（interpolation）问题在于寻找经过有限个给定点的曲线。这类问题在科学中有许多应用。</p>
+<p>Par exemple, il existe une unique droite qui passe par deux points du plan d'abscisses différentes. On remarque que cette droite est la courbe représentative d'une fonction polynomiale de degré inférieur ou égal à 1.</p>
+<p class="zh">例如，存在唯一一条经过平面上两个横坐标不同的点的直线。我们注意到这条直线是次数小于或等于 1 的多项式函数的图像。</p>
+<p>Le théorème suivant généralise ce résultat aux polynômes de degré supérieur. L'unicité repose sur le résultat concernant le nombre de racines d'un polynôme (théorème 4.9).</p>
+<p class="zh">下面的定理将此结果推广到更高次的多项式。唯一性依赖于关于多项式根数的结果（定理 4.9）。</p>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 5.1 : interpolation de Lagrange<br><span class='zh-title'>定理 5.1：拉格朗日插值</span></p>
+<p>Soit <span class="arithmatex">\(n\in\mathbb{N}\)</span>. On considère <span class="arithmatex">\(n+1\)</span> points <span class="arithmatex">\((x_0,y_0),(x_1,y_1),\dots,(x_n,y_n)\)</span> dans le plan <span class="arithmatex">\(\mathbb{R}^2\)</span>, tels que <span class="arithmatex">\(x_0&lt;x_1&lt;\cdots&lt;x_n\)</span>. Alors il existe un unique polynôme <span class="arithmatex">\(P\in\mathbb{R}_n[X]\)</span> de degré inférieur ou égal à <span class="arithmatex">\(n\)</span> dont la courbe représentative passe par ces points, c'est-à-dire tel que :</p>
+<p class="zh">设 <span class="arithmatex">\(n\in\mathbb{N}\)</span>。考虑平面 <span class="arithmatex">\(\mathbb{R}^2\)</span> 中 <span class="arithmatex">\(n+1\)</span> 个点 <span class="arithmatex">\((x_0,y_0),(x_1,y_1),\dots,(x_n,y_n)\)</span>，满足 <span class="arithmatex">\(x_0&lt;x_1&lt;\cdots&lt;x_n\)</span>。则存在唯一的次数小于或等于 <span class="arithmatex">\(n\)</span> 的多项式 <span class="arithmatex">\(P\in\mathbb{R}_n[X]\)</span>，其图像经过这些点，即满足：</p>
+<div class="arithmatex">\[
+\forall i\in\llbracket0,n\rrbracket,\quad P(x_i)=y_i.
+\]</div>
+<p>De plus :</p>
+<p class="zh">此外：</p>
+<div class="arithmatex">\[
+P=\sum_{j=0}^{n}y_jL_j
+\qquad\text{où}\qquad
+L_j=\prod_{\substack{i=0\\i\neq j}}^{n}\frac{X-x_i}{x_j-x_i}.
+\]</div>
+<p>Les polynômes <span class="arithmatex">\(L_0,L_1,\dots,L_n\)</span> sont appelés les <strong>polynômes interpolateurs de Lagrange</strong> associés à <span class="arithmatex">\(x_0,x_1,\dots,x_n\)</span>.</p>
+<p class="zh">多项式 <span class="arithmatex">\(L_0,L_1,\dots,L_n\)</span> 称为与 <span class="arithmatex">\(x_0,x_1,\dots,x_n\)</span> 相关联的<strong>拉格朗日插值多项式</strong>（polynômes interpolateurs de Lagrange）。</p>
+</div>
+<div class="admonition demo">
+<ul>
+<li>
+<p><strong>Unicité.</strong> On suppose qu'il existe deux polynômes <span class="arithmatex">\((P,Q)\in\mathbb{R}_n[X]^2\)</span> tels que :</p>
+<p class="zh"><strong>唯一性。</strong> 假设存在两个多项式 <span class="arithmatex">\((P,Q)\in\mathbb{R}_n[X]^2\)</span> 使得：</p>
+<div class="arithmatex">\[
+\forall i\in\llbracket0,n\rrbracket,\quad P(x_i)=Q(x_i)=y_i.
+\]</div>
+<p>Alors <span class="arithmatex">\(x_0,x_1,\dots,x_n\)</span> sont <span class="arithmatex">\(n+1\)</span> racines du polynôme <span class="arithmatex">\(P-Q\in\mathbb{R}_n[X]\)</span>. On en déduit que <span class="arithmatex">\(P-Q\)</span> est le polynôme nul, donc que <span class="arithmatex">\(P=Q\)</span>.</p>
+<p class="zh">则 <span class="arithmatex">\(x_0,x_1,\dots,x_n\)</span> 是多项式 <span class="arithmatex">\(P-Q\in\mathbb{R}_n[X]\)</span> 的 <span class="arithmatex">\(n+1\)</span> 个根。由此推出 <span class="arithmatex">\(P-Q\)</span> 是零多项式，故 <span class="arithmatex">\(P=Q\)</span>。</p>
+</li>
+<li>
+<p><strong>Existence.</strong> Puisque les polynômes <span class="arithmatex">\(L_0,L_1,\dots,L_n\)</span> sont tous de degré <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(P=\sum_{j=0}^{n}y_jL_j\)</span> est bien de degré inférieur ou égal à <span class="arithmatex">\(n\)</span>. On remarque que pour tout <span class="arithmatex">\((i,j)\in\llbracket0,n\rrbracket^2\)</span> :</p>
+<p class="zh"><strong>存在性。</strong> 由于多项式 <span class="arithmatex">\(L_0,L_1,\dots,L_n\)</span> 的次数均为 <span class="arithmatex">\(n\)</span>，<span class="arithmatex">\(P=\sum_{j=0}^{n}y_jL_j\)</span> 的次数确实小于或等于 <span class="arithmatex">\(n\)</span>。注意到对任意 <span class="arithmatex">\((i,j)\in\llbracket0,n\rrbracket^2\)</span>：</p>
+<div class="arithmatex">\[
+L_j(x_i)=\prod_{\substack{k=0\\k\neq j}}^{n}\frac{x_i-x_k}{x_j-x_k}
+=
+\begin{cases}
+\displaystyle\prod_{\substack{k=0\\k\neq j}}^{n}\frac{x_j-x_k}{x_j-x_k}=1 &amp; \text{si } i=j,\\[20pt]
+\displaystyle\frac{x_i-x_i}{x_j-x_i}\prod_{\substack{k=0\\k\notin\{i,j\}}}^{n}\frac{x_i-x_k}{x_j-x_k}=0 &amp; \text{si } i\neq j.
+\end{cases}
+\]</div>
+<p>Par conséquent :</p>
+<p class="zh">因此：</p>
+<div class="arithmatex">\[
+\forall i\in\llbracket0,n\rrbracket,\quad P(x_i)=\sum_{j=0}^{n}y_jL_j(x_i)
+= \underbrace{y_iL_i(x_i)}_{=1}
++ \underbrace{\sum_{\substack{j=0\\j\neq i}}^{n}y_jL_j(x_i)}_{=0}
+= y_i.
+\]</div>
+</li>
+</ul>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 5.2<br><span class='zh-title'>例 5.2</span></p>
+<p>Dans le plan <span class="arithmatex">\(\mathbb{R}^2\)</span>, on considère les points de coordonnées <span class="arithmatex">\((-1,3)\)</span>, <span class="arithmatex">\((0,1)\)</span> et <span class="arithmatex">\((2,5)\)</span>. D'après l'interpolation de Lagrange, on sait qu'il existe un unique polynôme <span class="arithmatex">\(P\in\mathbb{R}_2[X]\)</span> dont la courbe représentative passe par ces points. De plus, <span class="arithmatex">\(P=3L_0+L_1+5L_2\)</span> où :</p>
+<p class="zh">在平面 <span class="arithmatex">\(\mathbb{R}^2\)</span> 中，考虑坐标为 <span class="arithmatex">\((-1,3)\)</span>、<span class="arithmatex">\((0,1)\)</span> 与 <span class="arithmatex">\((2,5)\)</span> 的点。根据拉格朗日插值，存在唯一的多项式 <span class="arithmatex">\(P\in\mathbb{R}_2[X]\)</span>，其图像经过这些点。此外，<span class="arithmatex">\(P=3L_0+L_1+5L_2\)</span>，其中：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+L_0 &amp;= \left(\frac{X-0}{-1-0}\right)\left(\frac{X-2}{-1-2}\right)=\frac{1}{3}X^2-\frac{2}{3}X,\\
+L_1 &amp;= \left(\frac{X+1}{0+1}\right)\left(\frac{X-2}{0-2}\right)=-\frac{1}{2}X^2+\frac{1}{2}X+1,\\
+L_2 &amp;= \left(\frac{X+1}{2+1}\right)\left(\frac{X-0}{2-0}\right)=\frac{1}{6}X^2+\frac{1}{6}X.
+\end{aligned}
+\]</div>
+<p>On en déduit que la courbe d'équation</p>
+<p class="zh">由此推出，方程</p>
+<div class="arithmatex">\[
+y=P(x)=\left(1-\frac{1}{2}+\frac{5}{6}\right)x^2+\left(-2+\frac{1}{2}+\frac{5}{6}\right)x+1=\frac{4}{3}x^2-\frac{2}{3}x+1
+\]</div>
+<p>est une <strong>parabole</strong> qui passe par les points <span class="arithmatex">\((-1,3)\)</span>, <span class="arithmatex">\((0,1)\)</span> et <span class="arithmatex">\((2,5)\)</span>.</p>
+<p class="zh">所表示的曲线是一条经过点 <span class="arithmatex">\((-1,3)\)</span>、<span class="arithmatex">\((0,1)\)</span> 与 <span class="arithmatex">\((2,5)\)</span> 的<strong>抛物线</strong>（parabole）。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Vocabulaire clé<br><span class='zh-title'>重点词汇</span></p>
+<ul>
+<li><strong>interpolation</strong>：插值</li>
+<li><strong>courbe représentative</strong>：图像（曲线）</li>
+<li><strong>droite</strong>：直线</li>
+<li><strong>parabole</strong>：抛物线</li>
+<li><strong>point de coordonnées …</strong>：坐标为……的点</li>
+<li><strong>abscisse</strong>：横坐标</li>
+<li><strong>il existe un unique …</strong>：存在唯一的……</li>
+<li><strong>c'est-à-dire</strong>：即</li>
+<li><strong>on en déduit</strong>：由此推出</li>
+</ul>
+</div>
+<h2 id="6-theoreme-fondamental-de-lalgebre">6　Théorème fondamental de l'algèbre <span class="heading-zh">代数基本定理</span><a class="headerlink" href="#6-theoreme-fondamental-de-lalgebre" title="Permanent link">&para;</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 6.1 : théorème fondamental de l'algèbre (de d'Alembert-Gauss)<br><span class='zh-title'>定理 6.1：代数基本定理（达朗贝尔--高斯定理）</span></p>
+<p>Tout polynôme <span class="arithmatex">\(P\in\mathbb{C}[X]\)</span> qui n'est pas constant admet au moins une racine complexe.</p>
+<p class="zh">任意非常数多项式 <span class="arithmatex">\(P\in\mathbb{C}[X]\)</span> 至少有一个复根。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Remarque<br><span class='zh-title'>注</span></p>
+<p>On admet ce théorème, dont les démonstrations classiques utilisent des résultats d'analyse alors que ses conséquences en algèbre sont fondamentales.</p>
+<p class="zh">我们承认这个定理；其经典证明使用分析学的结果，而它在代数中的推论是根本性的。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention<br><span class='zh-title'>注意</span></p>
+<p>Ce résultat est faux dans <span class="arithmatex">\(\mathbb{R}\)</span>. Par exemple, le polynôme <span class="arithmatex">\(X^2+1\)</span> qui n'est pas constant n'a pas de racines réelles (mais admet deux racines complexes : <span class="arithmatex">\(i\)</span> et <span class="arithmatex">\(-i\)</span>).</p>
+<p class="zh">此结果在 <span class="arithmatex">\(\mathbb{R}\)</span> 中不成立。例如，非常数多项式 <span class="arithmatex">\(X^2+1\)</span> 没有实根（但有两个复根：<span class="arithmatex">\(i\)</span> 与 <span class="arithmatex">\(-i\)</span>）。</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Corollaire 6.2 : factorisation dans <span class="arithmatex">\(\mathbb{C}[X]\)</span><br><span class='zh-title'>推论 6.2：<span class="arithmatex">\(\mathbb{C}[X]\)</span> 中的因式分解</span></p>
+<p>Tout polynôme <span class="arithmatex">\(P\in\mathbb{C}[X]\)</span> de degré <span class="arithmatex">\(d=\deg(P)\geqslant0\)</span> (donc <span class="arithmatex">\(P\neq0\)</span>) admet exactement <span class="arithmatex">\(d\)</span> racines complexes comptées avec leurs multiplicités. De plus, si on note <span class="arithmatex">\(\alpha_1,\alpha_2,\dots,\alpha_r\)</span> les racines complexes de <span class="arithmatex">\(P\)</span>, toutes différentes, et <span class="arithmatex">\(m_1,m_2,\dots,m_r\)</span> leurs multiplicités respectives, alors on peut <strong>factoriser</strong> <span class="arithmatex">\(P\)</span> sous la forme :</p>
+<p class="zh">任意次数为 <span class="arithmatex">\(d=\deg(P)\geqslant0\)</span>（故 <span class="arithmatex">\(P\neq0\)</span>）的多项式 <span class="arithmatex">\(P\in\mathbb{C}[X]\)</span> 恰有 <span class="arithmatex">\(d\)</span> 个按重数计算的复根。此外，若记 <span class="arithmatex">\(\alpha_1,\alpha_2,\dots,\alpha_r\)</span> 为 <span class="arithmatex">\(P\)</span> 的互不相同的复根，<span class="arithmatex">\(m_1,m_2,\dots,m_r\)</span> 为它们各自的重数，则可将 <span class="arithmatex">\(P\)</span> <strong>因式分解</strong>为：</p>
+<div class="arithmatex">\[
+P=a_d(X-\alpha_1)^{m_1}(X-\alpha_2)^{m_2}\dots(X-\alpha_r)^{m_r}
+\]</div>
+<p>où <span class="arithmatex">\(a_d\neq0\)</span> est le coefficient dominant de <span class="arithmatex">\(P\)</span> et <span class="arithmatex">\(m_1+m_2+\cdots+m_r=d\)</span>.</p>
+<p class="zh">其中 <span class="arithmatex">\(a_d\neq0\)</span> 是 <span class="arithmatex">\(P\)</span> 的首项系数，且 <span class="arithmatex">\(m_1+m_2+\cdots+m_r=d\)</span>。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 6.3<br><span class='zh-title'>例 6.3</span></p>
+<p><span class="arithmatex">\(\frac{1}{2}\)</span> est une racine de <span class="arithmatex">\(P=4X^4+X^2-3X+1\)</span>, de <span class="arithmatex">\(P'=16X^3+2X-3\)</span>, mais pas de <span class="arithmatex">\(P''=48X^2+2\)</span>. Donc <span class="arithmatex">\(\frac{1}{2}\)</span> est une racine de multiplicité 2 de <span class="arithmatex">\(P\)</span>. En raisonnant comme dans les exemples 4.4 et 4.8, on obtient :</p>
+<p class="zh"><span class="arithmatex">\(\frac{1}{2}\)</span> 是 <span class="arithmatex">\(P=4X^4+X^2-3X+1\)</span> 的根，是 <span class="arithmatex">\(P'=16X^3+2X-3\)</span> 的根，但不是 <span class="arithmatex">\(P''=48X^2+2\)</span> 的根。因此 <span class="arithmatex">\(\frac{1}{2}\)</span> 是 <span class="arithmatex">\(P\)</span> 的重数为 2 的根。仿照例 4.4 与 4.8 的推理，可得：</p>
+<div class="arithmatex">\[
+P=4X^4+X^2-3X+1=\left(X-\frac{1}{2}\right)^2(4X^2+4X+4)=4\left(X-\frac{1}{2}\right)^2(X^2+X+1).
+\]</div>
+<p>Pour trouver les racines complexes de <span class="arithmatex">\(X^2+X+1\)</span>, il suffit de résoudre l'équation <span class="arithmatex">\(z^2+z+1=0\)</span> d'inconnue <span class="arithmatex">\(z\in\mathbb{C}\)</span>. Puisque le discriminant est égal à <span class="arithmatex">\(\Delta=1^2-4=-3&lt;0\)</span>, les solutions sont <span class="arithmatex">\(z_1=\frac{-1+i\sqrt{3}}{2}=j\)</span> et <span class="arithmatex">\(z_2=\overline{j}\)</span>. Finalement, la factorisation de <span class="arithmatex">\(P\)</span> dans <span class="arithmatex">\(\mathbb{C}[X]\)</span> est :</p>
+<p class="zh">为求 <span class="arithmatex">\(X^2+X+1\)</span> 的复根，只需解未知数 <span class="arithmatex">\(z\in\mathbb{C}\)</span> 的方程 <span class="arithmatex">\(z^2+z+1=0\)</span>。由于判别式 <span class="arithmatex">\(\Delta=1^2-4=-3&lt;0\)</span>，其解为 <span class="arithmatex">\(z_1=\frac{-1+i\sqrt{3}}{2}=j\)</span> 与 <span class="arithmatex">\(z_2=\overline{j}\)</span>。最终，<span class="arithmatex">\(P\)</span> 在 <span class="arithmatex">\(\mathbb{C}[X]\)</span> 中的因式分解为：</p>
+<div class="arithmatex">\[
+P=4X^4+X^2-3X+1=4\left(X-\frac{1}{2}\right)^2(X-j)(X-\overline{j}).
+\]</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Corollaire 6.4 : factorisation dans <span class="arithmatex">\(\mathbb{R}[X]\)</span><br><span class='zh-title'>推论 6.4：<span class="arithmatex">\(\mathbb{R}[X]\)</span> 中的因式分解</span></p>
+<p>Tout polynôme <span class="arithmatex">\(P\in\mathbb{R}[X]\setminus\{0\}\)</span> peut se factoriser sous la forme d'un produit de son coefficient dominant, de polynômes unitaires de degré 1 à coefficients réels (qui correspondent aux racines réelles de <span class="arithmatex">\(P\)</span>), et de polynômes unitaires de degré 2 à coefficients réels de discriminant strictement négatif.</p>
+<p class="zh">任意多项式 <span class="arithmatex">\(P\in\mathbb{R}[X]\setminus\{0\}\)</span> 都可分解为其首项系数、次数为 1 的实系数首一多项式（对应于 <span class="arithmatex">\(P\)</span> 的实根）以及判别式严格为负的次数为 2 的实系数首一多项式的乘积。</p>
+</div>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong> Soit <span class="arithmatex">\(P\in\mathbb{R}[X]\setminus\{0\}\)</span>. Dans la factorisation de <span class="arithmatex">\(P\)</span> dans <span class="arithmatex">\(\mathbb{C}[X]\)</span>, on conserve le coefficient dominant et les facteurs associés aux racines réelles de <span class="arithmatex">\(P\)</span> (qui sont bien des polynômes unitaires de degré 1 à coefficients réels). Il reste les facteurs associés aux racines complexes non réelles de <span class="arithmatex">\(P\)</span>.</p>
+<p class="zh"><strong>证明.</strong> 设 <span class="arithmatex">\(P\in\mathbb{R}[X]\setminus\{0\}\)</span>。在 <span class="arithmatex">\(P\)</span> 于 <span class="arithmatex">\(\mathbb{C}[X]\)</span> 中的因式分解中，保留首项系数以及与 <span class="arithmatex">\(P\)</span> 的实根相关联的因子（它们确实是次数为 1 的实系数首一多项式）。剩下的是与 <span class="arithmatex">\(P\)</span> 的非实复根相关联的因子。</p>
+<div class="admonition danger">
+<p class="admonition-title">Lemme 6.5<br><span class='zh-title'>引理 6.5</span></p>
+<div class="arithmatex">\[
+\forall P\in\mathbb{R}[X],\ \forall\alpha\in\mathbb{C},\quad P(\alpha)=0\iff P(\overline{\alpha})=0.
+\]</div>
+<p class="zh">即：实系数多项式 <span class="arithmatex">\(P\)</span> 在 <span class="arithmatex">\(\alpha\)</span> 处为零，当且仅当它在 <span class="arithmatex">\(\overline{\alpha}\)</span> 处为零。</p>
+</div>
+<p>En appliquant le lemme à <span class="arithmatex">\(P\)</span> et à ses dérivées, on en déduit que les racines complexes non réelles de <span class="arithmatex">\(P\)</span> sont conjuguées deux à deux avec la même multiplicité. On peut donc regrouper deux à deux les facteurs associés aux racines complexes non réelles conjuguées. Pour chaque racine <span class="arithmatex">\(\alpha\in\mathbb{C}\setminus\mathbb{R}\)</span>, on obtient un facteur de la forme :</p>
+<p class="zh">将该引理应用于 <span class="arithmatex">\(P\)</span> 及其各阶导数，可推出 <span class="arithmatex">\(P\)</span> 的非实复根两两共轭且重数相同。因此可以将与共轭非实复根相关联的因子两两合并。对每个根 <span class="arithmatex">\(\alpha\in\mathbb{C}\setminus\mathbb{R}\)</span>，得到一个形如上的因子。</p>
+<div class="arithmatex">\[
+(X-\alpha)(X-\overline{\alpha})=X^2-2\operatorname{Re}(\alpha)X+|\alpha|^2.
+\]</div>
+<p>Ce polynôme est bien unitaire, de degré 2, à coefficients réels, et de discriminant <span class="arithmatex">\(\Delta=4\operatorname{Re}(\alpha)^2-4|\alpha|^2=-4\operatorname{Im}(\alpha)^2&lt;0\)</span>.</p>
+<p class="zh">这个多项式确实是首一的、次数为 2、系数为实数，且判别式 <span class="arithmatex">\(\Delta=4\operatorname{Re}(\alpha)^2-4|\alpha|^2=-4\operatorname{Im}(\alpha)^2&lt;0\)</span>。</p>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 6.6<br><span class='zh-title'>例 6.6</span></p>
+<ul>
+<li>
+<p>Revoir les exemples 4.8 et 6.3.</p>
+<p class="zh">回顾例 4.8 与 6.3。</p>
+</li>
+<li>
+<p>Puisque les racines de <span class="arithmatex">\(P=X^5-1\)</span> sont les racines 5-ièmes de l'unité, on a :</p>
+<p class="zh">由于 <span class="arithmatex">\(P=X^5-1\)</span> 的根是 5 次单位根，有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+X^5-1&amp;=(X-1)\bigl(X-e^{2i\pi/5}\bigr)\bigl(X-e^{4i\pi/5}\bigr)
+\bigl(X-\underbrace{e^{6i\pi/5}}_{=e^{-4i\pi/5}}\bigr)
+\bigl(X-\underbrace{e^{8i\pi/5}}_{=e^{-2i\pi/5}}\bigr)
+&amp;&amp;\text{dans } \mathbb{C}[X]\\
+&amp;=(X-1)\underbrace{\Bigl(X^2-2\cos\Bigl(\frac{2\pi}{5}\Bigr)X+1\Bigr)}_{=a}
+\underbrace{\Bigl(X^2-2\cos\Bigl(\frac{4\pi}{5}\Bigr)X+1\Bigr)}_{=b}
+&amp;&amp;\text{dans } \mathbb{R}[X]\\
+&amp;=(X-1)\bigl(X^4-(a+b)X^3+(ab+2)X^2-(a+b)X+1\bigr).
+\end{aligned}
+\]</div>
+<p>D'autre part, on sait que <span class="arithmatex">\(X^5-1=(X-1)(X^4+X^3+X^2+X+1)\)</span>. En identifiant les coefficients, on obtient <span class="arithmatex">\(a+b=-1\)</span> et <span class="arithmatex">\(ab=-1\)</span>, donc <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(b\)</span> sont les solutions de l'équation <span class="arithmatex">\(x^2+x-1=0\)</span> d'inconnue <span class="arithmatex">\(x\in\mathbb{R}\)</span>, c'est-à-dire <span class="arithmatex">\(\{a,b\}=\left\{\frac{-1+\sqrt{5}}{2},\frac{-1-\sqrt{5}}{2}\right\}\)</span>. Puisque <span class="arithmatex">\(\frac{2\pi}{5}\in\left]0,\frac{\pi}{2}\right[\)</span>, on en déduit que <span class="arithmatex">\(a=2\cos\left(\frac{2\pi}{5}\right)&gt;0\)</span>, donc <span class="arithmatex">\(\cos\left(\frac{2\pi}{5}\right)=\frac{-1+\sqrt{5}}{4}\)</span>.</p>
+<p class="zh">另一方面，已知 <span class="arithmatex">\(X^5-1=(X-1)(X^4+X^3+X^2+X+1)\)</span>。比较系数可得 <span class="arithmatex">\(a+b=-1\)</span> 且 <span class="arithmatex">\(ab=-1\)</span>，故 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(b\)</span> 是方程 <span class="arithmatex">\(x^2+x-1=0\)</span>（未知数 <span class="arithmatex">\(x\in\mathbb{R}\)</span>）的解，即 <span class="arithmatex">\(\{a,b\}=\left\{\frac{-1+\sqrt{5}}{2},\frac{-1-\sqrt{5}}{2}\right\}\)</span>。由于 <span class="arithmatex">\(\frac{2\pi}{5}\in\left]0,\frac{\pi}{2}\right[\)</span>，可推出 <span class="arithmatex">\(a=2\cos\left(\frac{2\pi}{5}\right)&gt;0\)</span>，因此 <span class="arithmatex">\(\cos\left(\frac{2\pi}{5}\right)=\frac{-1+\sqrt{5}}{4}\)</span>。</p>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Vocabulaire clé<br><span class='zh-title'>重点词汇</span></p>
+<ul>
+<li><strong>théorème fondamental de l'algèbre</strong>：代数基本定理</li>
+<li><strong>corollaire</strong>：推论</li>
+<li><strong>factorisation</strong>：因式分解</li>
+<li><strong>racine complexe / racine réelle</strong>：复根 / 实根</li>
+<li><strong>conjugué</strong>：共轭</li>
+<li><strong>discriminant</strong>：判别式</li>
+<li><strong>on admet …</strong>：承认……（不加证明地接受）</li>
+<li><strong>d'autre part</strong>：另一方面</li>
+<li><strong>en identifiant les coefficients</strong>：比较系数</li>
 </ul>
 </div>
 
