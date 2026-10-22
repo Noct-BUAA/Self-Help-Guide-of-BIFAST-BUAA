@@ -31,10 +31,17 @@ comments: true
 <aside class="df-announce" aria-label="公告栏">
   <div class="df-announce__head">
     <span class="df-announce__kicker">公告栏 · ANNONCES</span>
-    <time class="df-announce__date" datetime="2026-10-20">2026-10-20</time>
+    <time class="df-announce__date" datetime="2026-10-23">2026-10-23</time>
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
+    <a class="df-announce__item" href="courses/year2/semester1/工程师数学工具/习题课/td4-polynomes/">
+      <span class="df-announce__tag df-announce__tag--new">更新</span>
+      <span class="df-announce__body">
+        <strong>多项式讲义扩充，TD4 上线</strong>
+        <span>第 3 章新增根与重根、拉格朗日插值、代数基本定理</span>
+      </span>
+    </a>
     <a class="df-announce__item" href="courses/year2/semester1/期中考试/">
       <span class="df-announce__tag df-announce__tag--exam">考试</span>
       <span class="df-announce__body">
@@ -79,10 +86,17 @@ comments: true
 <aside class="df-announce" aria-label="公告栏">
   <div class="df-announce__head">
     <span class="df-announce__kicker">公告栏 · ANNONCES</span>
-    <time class="df-announce__date" datetime="2026-10-20">2026-10-20</time>
+    <time class="df-announce__date" datetime="2026-10-23">2026-10-23</time>
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
+    <a class="df-announce__item" href="courses/year2/semester1/工程师数学工具/习题课/td4-polynomes/">
+      <span class="df-announce__tag df-announce__tag--new">更新</span>
+      <span class="df-announce__body">
+        <strong>多项式讲义扩充，TD4 上线</strong>
+        <span>第 3 章新增根与重根、拉格朗日插值、代数基本定理</span>
+      </span>
+    </a>
     <a class="df-announce__item" href="courses/year2/semester1/期中考试/">
       <span class="df-announce__tag df-announce__tag--exam">考试</span>
       <span class="df-announce__body">

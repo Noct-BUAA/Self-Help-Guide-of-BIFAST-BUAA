@@ -20,7 +20,7 @@
 
 <a class="card" href="工程师数学工具/">
   <h3>工程师数学工具</h3>
-  <p>Outils mathématiques pour les ingénieurs · 复数、三角学与多项式。收录三章正课、Fiche 5 与 TD1–TD3 参考解答。</p>
+  <p>Outils mathématiques pour les ingénieurs · 复数、三角学与多项式。收录三章正课、Fiche 5 与 TD1–TD4 参考解答。</p>
   <span class="card-arrow">浏览课程 &rarr;</span>
 </a>
 
