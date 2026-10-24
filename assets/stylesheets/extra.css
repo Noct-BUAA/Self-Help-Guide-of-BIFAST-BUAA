@@ -1498,3 +1498,275 @@ html { scroll-behavior: smooth; }
   }
   .df-announce__items { grid-template-columns: 1fr; }
 }
+
+/* ════════════════════════════════════════════════════════
+   党校学习资料 — 材料列表 / 选择题 / 填空题 / 简答题
+   ════════════════════════════════════════════════════════ */
+
+/* ─── 第三部分：延伸阅读材料 ─────────────────────────── */
+.material-list {
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+  margin: var(--space-lg) 0 var(--space-xl);
+}
+
+.material-item {
+  display: flex;
+  align-items: flex-start;
+  gap: .85rem;
+  padding: .8rem 1rem;
+  border: 1px solid rgba(0, 0, 0, .08);
+  border-radius: var(--radius-md);
+  background: var(--md-default-bg-color);
+  box-shadow: var(--card-shadow);
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.material-item:hover {
+  transform: translateY(-2px);
+  border-color: #3f51b5;
+  box-shadow: var(--card-shadow-hover);
+}
+
+.material-num {
+  flex: 0 0 auto;
+  padding-top: .1rem;
+  font-family: "JetBrains Mono", "Noto Sans SC", monospace;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  color: #3f51b5;
+  opacity: .55;
+}
+
+.material-body { flex: 1 1 auto; min-width: 0; }
+
+.material-title {
+  display: block;
+  font-size: .88rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #0D1B3E;
+}
+
+.material-source {
+  display: block;
+  margin-top: .15rem;
+  font-size: .72rem;
+  color: rgba(13, 27, 62, .5);
+}
+
+.material-arrow {
+  flex: 0 0 auto;
+  color: #3f51b5;
+  opacity: .45;
+  font-size: .9rem;
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+.material-item:hover .material-arrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+[data-md-color-scheme="slate"] .material-item {
+  background: var(--night-surface);
+  border-color: var(--night-border);
+}
+[data-md-color-scheme="slate"] .material-item:hover {
+  background: var(--night-surface-hover);
+  border-color: rgba(154, 172, 255, .38);
+}
+[data-md-color-scheme="slate"] .material-num,
+[data-md-color-scheme="slate"] .material-arrow { color: var(--night-accent); }
+[data-md-color-scheme="slate"] .material-title { color: var(--night-text); }
+[data-md-color-scheme="slate"] .material-source { color: var(--night-text-muted); }
+
+/* ─── 题目通用外观 ───────────────────────────────────── */
+.quiz-list,
+.fill-list,
+.qa-list {
+  margin: var(--space-md) 0 var(--space-xl);
+}
+
+.quiz-item,
+.fill-item,
+.qa-item {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: var(--radius-md);
+  background: var(--md-default-bg-color);
+}
+
+.quiz-item {
+  padding: .9rem 1.1rem .85rem;
+  margin: 0 0 .7rem;
+  border-left: 3px solid #3f51b5;
+}
+
+.fill-item {
+  padding: .8rem 1.05rem;
+  margin: 0 0 .55rem;
+}
+
+.qa-item {
+  padding: .95rem 1.1rem;
+  margin: 0 0 .8rem;
+  border-left: 3px solid rgba(63, 81, 181, .35);
+}
+
+.quiz-q,
+.fill-q,
+.qa-q,
+.quiz-answer,
+.qa-answer p {
+  text-indent: 0 !important;
+}
+
+.quiz-q,
+.qa-q {
+  margin: 0 0 .55rem !important;
+  line-height: 1.75;
+}
+
+.fill-q {
+  margin: 0 !important;
+  font-size: .86rem;
+  line-height: 1.9;
+}
+
+.quiz-num,
+.fill-num,
+.qa-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.45rem;
+  height: 1.45rem;
+  padding: 0 .35rem;
+  margin-right: .45rem;
+  border-radius: 999px;
+  background: rgba(63, 81, 181, .10);
+  color: #3f51b5;
+  font-family: "JetBrains Mono", "Noto Sans SC", monospace;
+  font-size: .68rem;
+  font-weight: 700;
+  vertical-align: .08em;
+}
+
+.quiz-blank {
+  display: inline-block;
+  min-width: 4.2em;
+  height: 1em;
+  margin: 0 .08em;
+  border-bottom: 1.5px solid currentColor;
+  vertical-align: -.08em;
+  opacity: .55;
+}
+
+.quiz-options {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .3rem .75rem;
+  list-style: none !important;
+  margin: .35rem 0 .5rem !important;
+  padding: 0 !important;
+}
+
+.quiz-options li {
+  margin: 0 !important;
+  padding: .3rem .55rem;
+  border-radius: 6px;
+  background: rgba(63, 81, 181, .045);
+  font-size: .8rem;
+  line-height: 1.65;
+}
+
+.quiz-options li.wide { grid-column: 1 / -1; }
+
+.opt-key {
+  margin-right: .15rem;
+  font-weight: 700;
+  color: #3f51b5;
+}
+
+.quiz-answer {
+  margin: .4rem 0 0 !important;
+  font-size: .76rem;
+  color: #2e7d32;
+}
+
+.quiz-answer strong { color: #2e7d32; }
+
+/* ─── 填空 / 简答的下划线答案 ─────────────────────────── */
+.fill-q u,
+.qa-answer u {
+  text-decoration-line: underline;
+  text-decoration-color: rgba(63, 81, 181, .55);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  color: inherit;
+}
+
+.qa-answer {
+  margin: .35rem 0 0 !important;
+  padding: .55rem .85rem;
+  border-left: 2px solid rgba(63, 81, 181, .22);
+  border-radius: 0 6px 6px 0;
+  background: rgba(63, 81, 181, .035);
+  text-indent: 0 !important;
+}
+
+.qa-answer p {
+  margin: .2rem 0 !important;
+  line-height: 1.9;
+}
+
+/* ─── 暗色模式 ───────────────────────────────────────── */
+[data-md-color-scheme="slate"] .quiz-item,
+[data-md-color-scheme="slate"] .fill-item,
+[data-md-color-scheme="slate"] .qa-item {
+  background: var(--night-surface);
+  border-color: var(--night-border);
+}
+
+[data-md-color-scheme="slate"] .quiz-item,
+[data-md-color-scheme="slate"] .qa-item {
+  border-left-color: var(--night-accent);
+}
+
+[data-md-color-scheme="slate"] .quiz-num,
+[data-md-color-scheme="slate"] .fill-num,
+[data-md-color-scheme="slate"] .qa-num,
+[data-md-color-scheme="slate"] .opt-key {
+  background: rgba(154, 172, 255, .12);
+  color: var(--night-accent);
+}
+
+[data-md-color-scheme="slate"] .quiz-options li {
+  background: rgba(154, 172, 255, .07);
+}
+
+[data-md-color-scheme="slate"] .quiz-answer,
+[data-md-color-scheme="slate"] .quiz-answer strong {
+  color: #8fd694;
+}
+
+[data-md-color-scheme="slate"] .qa-answer {
+  background: rgba(154, 172, 255, .06);
+  border-left-color: rgba(154, 172, 255, .28);
+}
+
+[data-md-color-scheme="slate"] .fill-q u,
+[data-md-color-scheme="slate"] .qa-answer u {
+  text-decoration-color: rgba(154, 172, 255, .6);
+}
+
+/* ─── 手机端 ─────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .quiz-options { grid-template-columns: 1fr; }
+  .quiz-item, .fill-item, .qa-item { padding: .75rem .85rem; }
+  .material-item { padding: .7rem .8rem; }
+}
