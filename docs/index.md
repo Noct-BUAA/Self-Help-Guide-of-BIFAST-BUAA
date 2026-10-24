@@ -31,10 +31,17 @@ comments: true
 <aside class="df-announce" aria-label="公告栏">
   <div class="df-announce__head">
     <span class="df-announce__kicker">公告栏 · ANNONCES</span>
-    <time class="df-announce__date" datetime="2026-10-23">2026-10-23</time>
+    <time class="df-announce__date" datetime="2026-10-25">2026-10-25</time>
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
+    <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td5-racines-polynomes/">
+      <span class="df-announce__tag df-announce__tag--new">更新</span>
+      <span class="df-announce__body">
+        <strong>TD5 多项式的根上线</strong>
+        <span>重数判别、拉格朗日插值、根与系数的关系、tan 七倍角</span>
+      </span>
+    </a>
     <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td4-polynomes/">
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
@@ -47,13 +54,6 @@ comments: true
       <span class="df-announce__body">
         <strong>数学期中考试通知</strong>
         <span>10 月 28 日（周三）14:00–17:00，实分析与工程数学</span>
-      </span>
-    </a>
-    <a class="df-announce__item" href="courses/year2/semester1/">
-      <span class="df-announce__tag df-announce__tag--new">新课</span>
-      <span class="df-announce__body">
-        <strong>大二上学期课程上线</strong>
-        <span>实分析、工程数学 · 中法对照讲义与 TD 参考解答</span>
       </span>
     </a>
   </div>
@@ -86,10 +86,17 @@ comments: true
 <aside class="df-announce" aria-label="公告栏">
   <div class="df-announce__head">
     <span class="df-announce__kicker">公告栏 · ANNONCES</span>
-    <time class="df-announce__date" datetime="2026-10-23">2026-10-23</time>
+    <time class="df-announce__date" datetime="2026-10-25">2026-10-25</time>
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
+    <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td5-racines-polynomes/">
+      <span class="df-announce__tag df-announce__tag--new">更新</span>
+      <span class="df-announce__body">
+        <strong>TD5 多项式的根上线</strong>
+        <span>重数判别、拉格朗日插值、根与系数的关系、tan 七倍角</span>
+      </span>
+    </a>
     <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td4-polynomes/">
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
@@ -102,13 +109,6 @@ comments: true
       <span class="df-announce__body">
         <strong>数学期中考试通知</strong>
         <span>10 月 28 日（周三）14:00–17:00，实分析与工程数学</span>
-      </span>
-    </a>
-    <a class="df-announce__item" href="courses/year2/semester1/">
-      <span class="df-announce__tag df-announce__tag--new">新课</span>
-      <span class="df-announce__body">
-        <strong>大二上学期课程上线</strong>
-        <span>实分析、工程数学 · 中法对照讲义与 TD 参考解答</span>
       </span>
     </a>
   </div>
