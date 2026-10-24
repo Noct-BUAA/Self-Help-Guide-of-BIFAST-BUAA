@@ -771,9 +771,9 @@ Résoudre les équations et les inéquations d'inconnue \(x\) réelle suivantes 
     考察符号变化
     {: .zh }
 
-    | \(x\) &amp; \(-\infty\) &amp; &amp; \(-4\) &amp; &amp; \(-2\) &amp; &amp; \(-1\) &amp; &amp; \(1\) &amp; &amp; \(+\infty\) |  |  |  |  |  |  |  |  |  |  |  |
+    | \(x\) | \(-\infty\) |  | \(-4\) |  | \(-2\) |  | \(-1\) |  | \(1\) |  | \(+\infty\) |
     |---|---|---|---|---|---|---|---|---|---|---|---|
-    | \[2pt\] \((x+1)(x+4)(x-1)(x+2)\) &amp; &amp; \(+\) &amp; \(0\) &amp; \(-\) &amp; \(0\) &amp; \(+\) &amp; \(0\) &amp; \(-\) &amp; \(0\) &amp; \(+\) &amp; |  |  |  |  |  |  |  |  |  |  |  |
+    | \((x+1)(x+4)(x-1)(x+2)\) |  | \(+\) | \(0\) | \(-\) | \(0\) | \(+\) | \(0\) | \(-\) | \(0\) | \(+\) |  |
 
     Donc \(|x^2+3x+1| \geqslant |2x+3| \iff \boxed{x \in \,]-\infty,-4] \cup [-2,-1] \cup [1,+\infty[}\).
 
@@ -806,9 +806,9 @@ Résoudre les équations et les inéquations d'inconnue \(x\) réelle suivantes 
     考察该表达式的符号
     {: .zh }
 
-    | \(x\) &amp; \(0\) &amp; &amp; \(1\) &amp; &amp; \(2\) &amp; &amp; \(+\infty\) |  |  |  |  |  |  |  |
+    | \(x\) | \(0\) |  | \(1\) |  | \(2\) |  | \(+\infty\) |
     |---|---|---|---|---|---|---|---|
-    | \[2pt\] \((\ln x)\,x\,(x-2)(x+2)\) &amp; &amp; \(+\) &amp; \(0\) &amp; \(-\) &amp; \(0\) &amp; \(+\) &amp; |  |  |  |  |  |  |  |
+    | \((\ln x)\,x\,(x-2)(x+2)\) |  | \(+\) | \(0\) | \(-\) | \(0\) | \(+\) |  |
 
     D'où, si \(x > 0\),
 
@@ -1044,11 +1044,11 @@ On veut résoudre l'équation \((E)\) \(\left\lfloor \sqrt{x} \right\rfloor = \l
     <strong>解.</strong>
     {: .zh }
 
-    | \(x\) &amp; \(0\) &amp; \(1\) &amp; \(2\) &amp; \(4\) &amp; \(6\) &amp; \(8\) |  |  |  |  |  |  |
+    | \(x\) | \(0\) | \(1\) | \(2\) | \(4\) | \(6\) | \(8\) |
     |---|---|---|---|---|---|---|
-    | \[1pt\] \(\sqrt{x}\) &amp; \(0\) &amp; \(1\) &amp; \(\sqrt{2}\) &amp; \(2\) &amp; \(\sqrt{6}\) &amp; \(\sqrt{8}\) |  |  |  |  |  |  |
-    | \[1pt\] \(\lfloor \sqrt{x} \rfloor\) &amp; \(0\) &amp; \(1\) &amp; \(1\) &amp; \(2\) &amp; \(2\) &amp; \(2\) |  |  |  |  |  |  |
-    | \[1pt\] \(\left\lfloor \frac{x}{2} \right\rfloor\) &amp; \(0\) &amp; \(0\) &amp; \(1\) &amp; \(2\) &amp; \(3\) &amp; \(4\) |  |  |  |  |  |  |
+    | \(\sqrt{x}\) | \(0\) | \(1\) | \(\sqrt{2}\) | \(2\) | \(\sqrt{6}\) | \(\sqrt{8}\) |
+    | \(\lfloor \sqrt{x} \rfloor\) | \(0\) | \(1\) | \(1\) | \(2\) | \(2\) | \(2\) |
+    | \(\left\lfloor \frac{x}{2} \right\rfloor\) | \(0\) | \(0\) | \(1\) | \(2\) | \(3\) | \(4\) |
 
 <strong>4.</strong> Conclure.
 {: .fr-exo }

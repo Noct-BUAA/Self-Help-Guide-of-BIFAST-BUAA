@@ -38,25 +38,29 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================================
-  // 2. TABLES — Single batch scroll reveal per page
+  // 2. TABLES — Per-table scroll reveal
+  // Tables stay visible by default; the reveal only runs when the
+  // table actually enters the viewport. This avoids leaving tables
+  // at opacity 0 when the page is opened via an anchor or when
+  // ScrollTrigger is unavailable.
   // ============================================================
   const tables = document.querySelectorAll('.md-typeset table:not([class])');
-  if (tables.length) {
-    gsap.fromTo(
-      tables,
-      { opacity: 0, y: 16 },
-      {
-        opacity: 1, y: 0,
-        duration: 0.5,
-        stagger: 0.08,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: tables[0],
-          start: 'top 90%',
-          once: true,
+  if (tables.length && typeof ScrollTrigger !== 'undefined') {
+    tables.forEach((table) => {
+      ScrollTrigger.create({
+        trigger: table,
+        start: 'top 100%',
+        once: true,
+        onEnter: () => {
+          gsap.from(table, {
+            opacity: 0,
+            y: 16,
+            duration: 0.5,
+            ease: 'power2.out',
+          });
         },
-      }
-    );
+      });
+    });
   }
 
   // ============================================================

@@ -212,11 +212,11 @@ D'après le théorème de Thalès, on retrouve les formules connues dans un tria
 
 !!! danger "Propriété 2.3 : valeurs remarquables<br><span class='zh-title'>性质 2.3：特殊角的三角函数值</span>"
 
-    | \(\theta\) &amp; \(0\) &amp; \(\dfrac{\pi}{6}\) &amp; \(\dfrac{\pi}{4}\) &amp; \(\dfrac{\pi}{3}\) &amp; \(\dfrac{\pi}{2}\) |  |  |  |  |  |
+    | \(\theta\) | \(0\) | \(\dfrac{\pi}{6}\) | \(\dfrac{\pi}{4}\) | \(\dfrac{\pi}{3}\) | \(\dfrac{\pi}{2}\) |
     |---|---|---|---|---|---|
-    | \(\cos(\theta)\) &amp; \(\dfrac{\sqrt{4}}{2}=1\) &amp; \(\dfrac{\sqrt{3}}{2}\) &amp; \(\dfrac{\sqrt{2}}{2}\) &amp; \(\dfrac{\sqrt{1}}{2}=\dfrac{1}{2}\) &amp; \(\dfrac{\sqrt{0}}{2}=0\) |  |  |  |  |  |
-    | \(\sin(\theta)\) &amp; \(\dfrac{\sqrt{0}}{2}=0\) &amp; \(\dfrac{\sqrt{1}}{2}=\dfrac{1}{2}\) &amp; \(\dfrac{\sqrt{2}}{2}\) &amp; \(\dfrac{\sqrt{3}}{2}\) &amp; \(\dfrac{\sqrt{4}}{2}=1\) |  |  |  |  |  |
-    | \(\tan(\theta)\) &amp; \(\dfrac{0}{1}=0\) &amp; \(\dfrac{1/2}{\sqrt{3}/2}=\dfrac{1}{\sqrt{3}}\) &amp; \(\dfrac{\sqrt{2}/2}{\sqrt{2}/2}=1\) &amp; \(\dfrac{\sqrt{3}/2}{1/2}=\sqrt{3}\) &amp; |  |  |  |  |  |
+    | \(\cos(\theta)\) | \(\dfrac{\sqrt{4}}{2}=1\) | \(\dfrac{\sqrt{3}}{2}\) | \(\dfrac{\sqrt{2}}{2}\) | \(\dfrac{\sqrt{1}}{2}=\dfrac{1}{2}\) | \(\dfrac{\sqrt{0}}{2}=0\) |
+    | \(\sin(\theta)\) | \(\dfrac{\sqrt{0}}{2}=0\) | \(\dfrac{\sqrt{1}}{2}=\dfrac{1}{2}\) | \(\dfrac{\sqrt{2}}{2}\) | \(\dfrac{\sqrt{3}}{2}\) | \(\dfrac{\sqrt{4}}{2}=1\) |
+    | \(\tan(\theta)\) | \(\dfrac{0}{1}=0\) | \(\dfrac{1/2}{\sqrt{3}/2}=\dfrac{1}{\sqrt{3}}\) | \(\dfrac{\sqrt{2}/2}{\sqrt{2}/2}=1\) | \(\dfrac{\sqrt{3}/2}{1/2}=\sqrt{3}\) |  |
 
 !!! danger "Propriété 2.4<br><span class='zh-title'>性质 2.4</span>"
 

@@ -922,37 +922,37 @@ Dans les sections suivantes, on considère seulement des suites réelles, c'est-
         \(\displaystyle\lim_{n\to+\infty}(a_n+b_n)\) 由下表给出：
         {: .zh }
 
-        | \(+\) &amp; \(-\infty\) &amp; \(b\in\mathbb{R}\) &amp; \(+\infty\) |  |  |  |
+        | \(+\) | \(-\infty\) | \(b\in\mathbb{R}\) | \(+\infty\) |
         |---|---|---|---|
-        | \(-\infty\) &amp; \(-\infty\) &amp; \(-\infty\) &amp; \(??\) |  |  |  |
-        | \(a\in\mathbb{R}\) &amp; \(-\infty\) &amp; \(a+b\) &amp; \(+\infty\) |  |  |  |
-        | \(+\infty\) &amp; \(??\) &amp; \(+\infty\) &amp; \(+\infty\) |  |  |  |
+        | \(-\infty\) | \(-\infty\) | \(-\infty\) | \(??\) |
+        | \(a\in\mathbb{R}\) | \(-\infty\) | \(a+b\) | \(+\infty\) |
+        | \(+\infty\) | \(??\) | \(+\infty\) | \(+\infty\) |
 
     - \(\displaystyle\lim_{n\to+\infty}a_nb_n\) est donnée par le tableau suivant :
 
         \(\displaystyle\lim_{n\to+\infty}a_nb_n\) 由下表给出：
         {: .zh }
 
-        | \(\times\) &amp; \(-\infty\) &amp; \(b\in\mathbb{R}^*_-\) &amp; \(0\) &amp; \(b\in\mathbb{R}^*_+\) &amp; \(+\infty\) |  |  |  |  |  |
+        | \(\times\) | \(-\infty\) | \(b\in\mathbb{R}^*_-\) | \(0\) | \(b\in\mathbb{R}^*_+\) | \(+\infty\) |
         |---|---|---|---|---|---|
-        | \(-\infty\) &amp; \(+\infty\) &amp; \(+\infty\) &amp; \(??\) &amp; \(-\infty\) &amp; \(-\infty\) |  |  |  |  |  |
-        | \(a\in\mathbb{R}^*_-\) &amp; \(+\infty\) &amp; \(ab\) &amp; \(0\) &amp; \(ab\) &amp; \(-\infty\) |  |  |  |  |  |
-        | \(0\) &amp; \(??\) &amp; \(0\) &amp; \(0\) &amp; \(0\) &amp; \(??\) |  |  |  |  |  |
-        | \(a\in\mathbb{R}^*_+\) &amp; \(-\infty\) &amp; \(ab\) &amp; \(0\) &amp; \(ab\) &amp; \(+\infty\) |  |  |  |  |  |
-        | \(+\infty\) &amp; \(-\infty\) &amp; \(-\infty\) &amp; \(??\) &amp; \(+\infty\) &amp; \(+\infty\) |  |  |  |  |  |
+        | \(-\infty\) | \(+\infty\) | \(+\infty\) | \(??\) | \(-\infty\) | \(-\infty\) |
+        | \(a\in\mathbb{R}^*_-\) | \(+\infty\) | \(ab\) | \(0\) | \(ab\) | \(-\infty\) |
+        | \(0\) | \(??\) | \(0\) | \(0\) | \(0\) | \(??\) |
+        | \(a\in\mathbb{R}^*_+\) | \(-\infty\) | \(ab\) | \(0\) | \(ab\) | \(+\infty\) |
+        | \(+\infty\) | \(-\infty\) | \(-\infty\) | \(??\) | \(+\infty\) | \(+\infty\) |
 
     - si \((b_n)\) ne s'annule pas à partir d'un certain rang, \(\displaystyle\lim_{n\to+\infty}\frac{a_n}{b_n}\) est donnée par le tableau suivant :
 
         若 \((b_n)\) 从某一项起不为零，则 \(\displaystyle\lim_{n\to+\infty}\frac{a_n}{b_n}\) 由下表给出：
         {: .zh }
 
-        | \(/\) &amp; \(-\infty\) &amp; \(b\in\mathbb{R}^*_-\) &amp; \(0^-\) &amp; \(0^+\) &amp; \(b\in\mathbb{R}^*_+\) &amp; \(+\infty\) |  |  |  |  |  |  |
+        | \(/\) | \(-\infty\) | \(b\in\mathbb{R}^*_-\) | \(0^-\) | \(0^+\) | \(b\in\mathbb{R}^*_+\) | \(+\infty\) |
         |---|---|---|---|---|---|---|
-        | \(-\infty\) &amp; \(??\) &amp; \(+\infty\) &amp; \(+\infty\) &amp; \(-\infty\) &amp; \(-\infty\) &amp; \(??\) |  |  |  |  |  |  |
-        | \(a\in\mathbb{R}^*_-\) &amp; \(0^+\) &amp; \(\dfrac{a}{b}\) &amp; \(+\infty\) &amp; \(-\infty\) &amp; \(\dfrac{a}{b}\) &amp; \(0^-\) |  |  |  |  |  |  |
-        | \(0\) &amp; \(0\) &amp; \(0\) &amp; \(??\) &amp; \(??\) &amp; \(0\) &amp; \(0\) |  |  |  |  |  |  |
-        | \(a\in\mathbb{R}^*_+\) &amp; \(0^-\) &amp; \(\dfrac{a}{b}\) &amp; \(-\infty\) &amp; \(+\infty\) &amp; \(\dfrac{a}{b}\) &amp; \(0^+\) |  |  |  |  |  |  |
-        | \(+\infty\) &amp; \(??\) &amp; \(-\infty\) &amp; \(-\infty\) &amp; \(+\infty\) &amp; \(+\infty\) &amp; \(??\) |  |  |  |  |  |  |
+        | \(-\infty\) | \(??\) | \(+\infty\) | \(+\infty\) | \(-\infty\) | \(-\infty\) | \(??\) |
+        | \(a\in\mathbb{R}^*_-\) | \(0^+\) | \(\dfrac{a}{b}\) | \(+\infty\) | \(-\infty\) | \(\dfrac{a}{b}\) | \(0^-\) |
+        | \(0\) | \(0\) | \(0\) | \(??\) | \(??\) | \(0\) | \(0\) |
+        | \(a\in\mathbb{R}^*_+\) | \(0^-\) | \(\dfrac{a}{b}\) | \(-\infty\) | \(+\infty\) | \(\dfrac{a}{b}\) | \(0^+\) |
+        | \(+\infty\) | \(??\) | \(-\infty\) | \(-\infty\) | \(+\infty\) | \(+\infty\) | \(??\) |
 
     où \(0^+\) (respectivement \(0^-\)) indique que la suite converge vers \(0\) avec des termes positifs (respectivement négatifs) à partir d'un certain rang.
 
@@ -975,39 +975,31 @@ Dans les sections suivantes, on considère seulement des suites réelles, c'est-
 
 !!! info "Exemple 4.6<br><span class='zh-title'>例 4.6</span>"
 
-    -
-
-        \[
-        \lim_{n\to+\infty}\underbrace{\sqrt{n^2+1}-n}_{\text{forme indéterminée }\infty-\infty}
-        =\lim_{n\to+\infty}\frac{\overbrace{\bigl(\sqrt{n^2+1}-n\bigr)\bigl(\sqrt{n^2+1}+n\bigr)}^{=1}}
-        {\underbrace{\sqrt{n^2+1}}_{\to+\infty}+\underbrace{n}_{\to+\infty}}=0.
-        \]
-    -
-
-        \[
-        \lim_{n\to+\infty}\underbrace{n\sin\left(\frac{1}{n}\right)}_{\text{forme indéterminée }\infty\times0}
-        =\lim_{n\to+\infty}\frac{\sin\left(\frac{1}{n}\right)}{\frac{1}{n}}
-        =\lim_{\theta\to0}\frac{\sin(\theta)}{\theta}=1
-        \quad
-        \begin{array}{l}
-        \text{en posant } \theta=\frac{1}{n}\to0\\
-        \text{quand } n\to+\infty.
-        \end{array}
-        \]
-    -
-
-        \[
-        \lim_{n\to+\infty}\underbrace{\frac{n^3+2n+3}{n^2+4n+5}}_{\text{forme indéterminée }\infty/\infty}
-        =\lim_{n\to+\infty}\frac{\overbrace{n}^{\to+\infty}+\overbrace{\frac{2}{n}}^{\to0}+\overbrace{\frac{3}{n^2}}^{\to0}}
-        {1+\underbrace{\frac{4}{n}}_{\to0}+\underbrace{\frac{5}{n^2}}_{\to0}}=+\infty.
-        \]
-    -
-
-        \[
-        \lim_{n\to+\infty}\underbrace{\frac{\sin^2\left(\frac{1}{n}\right)}{1-\cos\left(\frac{1}{n}\right)}}_{\text{forme indéterminée }0/0}
-        =\lim_{n\to+\infty}\frac{1-\cos^2\left(\frac{1}{n}\right)}{1-\cos\left(\frac{1}{n}\right)}
-        =\lim_{n\to+\infty}\underbrace{1+\cos\left(\frac{1}{n}\right)}_{\to1}=2.
-        \]
+    - \[
+      \lim_{n\to+\infty}\underbrace{\sqrt{n^2+1}-n}_{\text{forme indéterminée }\infty-\infty}
+      =\lim_{n\to+\infty}\frac{\overbrace{\bigl(\sqrt{n^2+1}-n\bigr)\bigl(\sqrt{n^2+1}+n\bigr)}^{=1}}
+      {\underbrace{\sqrt{n^2+1}}_{\to+\infty}+\underbrace{n}_{\to+\infty}}=0.
+      \]
+    - \[
+      \lim_{n\to+\infty}\underbrace{n\sin\left(\frac{1}{n}\right)}_{\text{forme indéterminée }\infty\times0}
+      =\lim_{n\to+\infty}\frac{\sin\left(\frac{1}{n}\right)}{\frac{1}{n}}
+      =\lim_{\theta\to0}\frac{\sin(\theta)}{\theta}=1
+      \quad
+      \begin{array}{l}
+      \text{en posant } \theta=\frac{1}{n}\to0\\
+      \text{quand } n\to+\infty.
+      \end{array}
+      \]
+    - \[
+      \lim_{n\to+\infty}\underbrace{\frac{n^3+2n+3}{n^2+4n+5}}_{\text{forme indéterminée }\infty/\infty}
+      =\lim_{n\to+\infty}\frac{\overbrace{n}^{\to+\infty}+\overbrace{\frac{2}{n}}^{\to0}+\overbrace{\frac{3}{n^2}}^{\to0}}
+      {1+\underbrace{\frac{4}{n}}_{\to0}+\underbrace{\frac{5}{n^2}}_{\to0}}=+\infty.
+      \]
+    - \[
+      \lim_{n\to+\infty}\underbrace{\frac{\sin^2\left(\frac{1}{n}\right)}{1-\cos\left(\frac{1}{n}\right)}}_{\text{forme indéterminée }0/0}
+      =\lim_{n\to+\infty}\frac{1-\cos^2\left(\frac{1}{n}\right)}{1-\cos\left(\frac{1}{n}\right)}
+      =\lim_{n\to+\infty}\underbrace{1+\cos\left(\frac{1}{n}\right)}_{\to1}=2.
+      \]
 
 !!! danger "Propriété 4.7 : composition de limites<br><span class='zh-title'>性质 4.7：极限的复合</span>"
 
