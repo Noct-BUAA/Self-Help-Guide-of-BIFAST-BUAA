@@ -1936,6 +1936,9 @@ body:has(.party-handout) .qa-answer {
 /* 第三部分：材料标题与链接更紧凑 */
 body:has(.party-handout) .md-typeset h3 + p a {
   font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 /* 暗色模式 */
