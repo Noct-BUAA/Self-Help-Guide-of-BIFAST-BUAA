@@ -38,23 +38,18 @@ On rappelle que \(\mathbb{N}\) désigne l'ensemble des entiers <strong>naturels<
 回忆：\(\mathbb{N}\) 表示<strong>自然数</strong>集，\(\mathbb{Z}\) 表示<strong>整数</strong>集（entiers relatifs）， \(\mathbb{R}\) 表示<strong>实数</strong>集，\(\mathbb{C}\) 表示<strong>复数</strong>集。
 {: .zh }
 
-Pour tout ce chapitre on fixe un entier \(n_0 \in \mathbb{Z}\).
+Pour tout ce chapitre, \(\mathbb{K}\) désigne \(\mathbb{R}\) ou \(\mathbb{C}\) et on fixe un entier \(n_0 \in \mathbb{Z}\).
 
-本章自始至终固定一个整数 \(n_0 \in \mathbb{Z}\)。
+本章自始至终，\(\mathbb{K}\) 表示 \(\mathbb{R}\) 或 \(\mathbb{C}\)，并固定一个整数 \(n_0 \in \mathbb{Z}\)。
 {: .zh }
 
 ## Suites usuelles <span class="heading-zh">常用数列</span>
 
-Dans cette section, \(\mathbb{K}\) désigne \(\mathbb{R}\) ou \(\mathbb{C}\).
-
-本节中，\(\mathbb{K}\) 表示 \(\mathbb{R}\) 或 \(\mathbb{C}\)。
-{: .zh }
-
 !!! success "Définition 1.1 : suite numérique<br><span class='zh-title'>定义 1.1：数列（suite numérique）</span>"
 
-    Une <strong>suite numérique</strong> est une liste infinie de nombres de \(\mathbb{K}\) de la forme :
+    Une <strong>suite numérique</strong>, ou simplement <strong>suite</strong>, est une liste infinie de nombres de \(\mathbb{K}\) de la forme :
 
-    一个<strong>数列</strong>是 \(\mathbb{K}\) 中一列无穷多个数，形如：
+    一个<strong>数列</strong>（suite numérique，或简称 suite）是 \(\mathbb{K}\) 中一列无穷多个数，形如：
     {: .zh }
 
     \[
@@ -319,13 +314,13 @@ Dans les trois cas, on peut déterminer les constantes à l'aide des premiers te
 
 !!! info "Exemple 1.10<br><span class='zh-title'>例 1.10</span>"
 
-    - La suite de Fibonacci \((F_n)_{n\geqslant 1} = (1,1,2,3,5,8,13,21,\dots)\) est définie par \(F_1 = F_2 = 1\) et la relation de récurrence \(\forall n \geqslant 1\), \(F_{n+2} = F_{n+1}+F_n\). On reconnaît une suite réelle récurrente linéaire d'ordre 2. Son équation caractéristique \(q^2-q-1 = 0\) admet deux solutions réelles : \(q_1 = \frac{1+\sqrt{5}}{2} = \varphi\) (appelé le <strong>nombre d'or</strong>) et \(q_2 = \frac{1-\sqrt{5}}{2} = -1/\varphi\). Par conséquent, il existe deux constantes \((\lambda_1,\lambda_2) \in \mathbb{R}^2\) telles que :
+    - La suite de Fibonacci \((F_n)_{n\geqslant 1} = (1,1,2,3,5,8,13,21,\dots)\) est définie par \(F_1 = F_2 = 1\) et la relation de récurrence \(\forall n \geqslant 1\), \(F_{n+2} = F_{n+1}+F_n\). On reconnaît une suite réelle récurrente linéaire d'ordre 2. Son équation caractéristique \(q^2-q-1 = 0\) admet deux solutions réelles : \(q_1 = \frac{1+\sqrt{5}}{2} = \phi\) (appelé le <strong>nombre d'or</strong>) et \(q_2 = \frac{1-\sqrt{5}}{2} = -1/\phi\). Par conséquent, il existe deux constantes \((\lambda_1,\lambda_2) \in \mathbb{R}^2\) telles que :
 
-        斐波那契数列 \((F_n)_{n\geqslant 1} = (1,1,2,3,5,8,13,21,\dots)\) 由 \(F_1 = F_2 = 1\) 及递推关系 \(\forall n \geqslant 1\)，\(F_{n+2} = F_{n+1}+F_n\) 定义。可辨认出这是二阶线性递推实数列。其特征方程 \(q^2-q-1 = 0\) 有两个实根：\(q_1 = \frac{1+\sqrt{5}}{2} = \varphi\)（称为<strong>黄金数</strong>，nombre d'or）与 \(q_2 = \frac{1-\sqrt{5}}{2} = -1/\varphi\)。因此，存在两个常数 \((\lambda_1,\lambda_2) \in \mathbb{R}^2\) 使得：
+        斐波那契数列 \((F_n)_{n\geqslant 1} = (1,1,2,3,5,8,13,21,\dots)\) 由 \(F_1 = F_2 = 1\) 及递推关系 \(\forall n \geqslant 1\)，\(F_{n+2} = F_{n+1}+F_n\) 定义。可辨认出这是二阶线性递推实数列。其特征方程 \(q^2-q-1 = 0\) 有两个实根：\(q_1 = \frac{1+\sqrt{5}}{2} = \phi\)（称为<strong>黄金数</strong>，nombre d'or）与 \(q_2 = \frac{1-\sqrt{5}}{2} = -1/\phi\)。因此，存在两个常数 \((\lambda_1,\lambda_2) \in \mathbb{R}^2\) 使得：
         {: .zh }
 
         \[
-        \forall n \geqslant 1,\ F_n = \lambda_1\varphi^{n-1} + \frac{\lambda_2}{(-\varphi)^{n-1}}.
+        \forall n \geqslant 1,\ F_n = \lambda_1\phi^{n-1} + \frac{\lambda_2}{(-\phi)^{n-1}}.
         \]
 
         En particulier, pour \(n = 1\) et \(n = 2\), on obtient :
@@ -336,12 +331,12 @@ Dans les trois cas, on peut déterminer les constantes à l'aide des premiers te
         \[
         \begin{cases}
         1 = \lambda_1 + \lambda_2 \\[2pt]
-        1 = \varphi\lambda_1 - \dfrac{\lambda_2}{\varphi}
+        1 = \phi\lambda_1 - \dfrac{\lambda_2}{\phi}
         \end{cases}
         \qquad\text{donc}\qquad
         \begin{cases}
-        \lambda_1 = \dfrac{\frac{1}{\varphi}+1}{\frac{1}{\varphi}+\varphi} = \dfrac{\varphi}{\sqrt{5}} \\[10pt]
-        \lambda_2 = \dfrac{\varphi-1}{\varphi+\frac{1}{\varphi}} = \dfrac{1}{\varphi\sqrt{5}}
+        \lambda_1 = \dfrac{\frac{1}{\phi}+1}{\frac{1}{\phi}+\phi} = \dfrac{\phi}{\sqrt{5}} \\[10pt]
+        \lambda_2 = \dfrac{\phi-1}{\phi+\frac{1}{\phi}} = \dfrac{1}{\phi\sqrt{5}}
         \end{cases}
         \]
 
@@ -351,7 +346,7 @@ Dans les trois cas, on peut déterminer les constantes à l'aide des premiers te
         {: .zh }
 
         \[
-        \forall n \geqslant 1,\ F_n = \frac{\sqrt{5}}{5}\left(\varphi^n - \frac{1}{(-\varphi)^n}\right).
+        \forall n \geqslant 1,\ F_n = \frac{\sqrt{5}}{5}\left(\phi^n - \frac{1}{(-\phi)^n}\right).
         \]
 
     - On considère la suite \((u_n)_{n\geqslant 0}\) définie par \(u_0 = 2\), \(u_1 = 3\) et la relation de récurrence \(\forall n \geqslant 0\), \(u_{n+2} = u_{n+1}-u_n\). On reconnaît une suite réelle récurrente linéaire d'ordre 2. Son équation caractéristique \(q^2-q+1 = 0\) admet deux solutions complexes conjuguées : \(\frac{1\pm i\sqrt{3}}{2} = e^{\pm i\pi/3}\). Par conséquent, il existe deux constantes \((A,B) \in \mathbb{R}^2\) telles que :
@@ -408,16 +403,16 @@ Dans les trois cas, on peut déterminer les constantes à l'aide des premiers te
     - <strong>suite auxiliaire</strong>：辅助数列
     - <strong>équation caractéristique</strong>：特征方程
     - <strong>discriminant</strong>：判别式
-    - <strong>nombre d'or \(\varphi\)</strong>：黄金数 \(\varphi\)
+    - <strong>nombre d'or \(\phi\)</strong>：黄金数 \(\phi\)
     - <strong>vérifier</strong>：满足（方程、关系）；验证 —— 数学高频词
     - <strong>admettre une unique solution</strong>：有唯一解
     - <strong>on reconnaît…</strong>：可辨认出……（解题套语）
 
 ## Suites réelles <span class="heading-zh">实数列</span>
 
-Dans la suite du chapitre, on considère seulement des <strong>suites réelles</strong>, c'est-à-dire \(\mathbb{K} = \mathbb{R}\).
+Dans cette section, on considère seulement des <strong>suites réelles</strong>, c'est-à-dire \(\mathbb{K} = \mathbb{R}\).
 
-本章余下部分只考虑<strong>实数列</strong>，即 \(\mathbb{K} = \mathbb{R}\)。
+本节只考虑<strong>实数列</strong>，即 \(\mathbb{K} = \mathbb{R}\)。
 {: .zh }
 
 !!! success "Définition 2.1 : suite majorée, minorée<br><span class='zh-title'>定义 2.1：有上界的数列、有下界的数列</span>"
@@ -547,11 +542,11 @@ Dans la suite du chapitre, on considère seulement des <strong>suites réelles</
     \[
     \forall x \in [-1,+\infty[,\quad
     \begin{cases}
-    f(x) > x & \text{si } x \in [-1,\varphi[,\\
-    f(x) = x & \text{si } x = \varphi,\\
-    f(x) < x & \text{si } x > \varphi,
+    f(x) > x & \text{si } x \in [-1,\phi[,\\
+    f(x) = x & \text{si } x = \phi,\\
+    f(x) < x & \text{si } x > \phi,
     \end{cases}
-    \qquad\text{où } \varphi = \frac{1+\sqrt{5}}{2} \text{ (le nombre d'or).}
+    \qquad\text{où } \phi = \frac{1+\sqrt{5}}{2} \text{ (le nombre d'or).}
     \]
 
     On peut alors tracer sur un même graphique : la droite d'équation \(y = x\), la courbe représentative de \(f\) et les premiers termes de \((u_n)_{n\geqslant 0}\).
@@ -567,22 +562,22 @@ Dans la suite du chapitre, on considère seulement des <strong>suites réelles</
     {: .zh }
 
     \[
-    \forall n \geqslant 0,\quad 1 \leqslant u_n < u_{n+1} < \varphi.
+    \forall n \geqslant 0,\quad 1 \leqslant u_n < u_{n+1} < \phi.
     \]
 
-    - <u>Initialisation.</u> On a \(u_0 = 1\) et \(u_1 = \sqrt{2}\). Or \(1 < \sqrt{2}\), et \(\varphi = \frac{1+\sqrt{5}}{2} > \frac{1+\sqrt{1}}{2} = 1\) donc \(\varphi = \sqrt{1+\varphi} > \sqrt{1+1} = \sqrt{2}\). Ainsi, le résultat est vrai pour \(n = 0\) : \(1 \leqslant u_0 < u_1 < \varphi\).
+    - <u>Initialisation.</u> On a \(u_0 = 1\) et \(u_1 = \sqrt{2}\). Or \(1 < \sqrt{2}\), et \(\phi = \frac{1+\sqrt{5}}{2} > \frac{1+\sqrt{1}}{2} = 1\) donc \(\phi = \sqrt{1+\phi} > \sqrt{1+1} = \sqrt{2}\). Ainsi, le résultat est vrai pour \(n = 0\) : \(1 \leqslant u_0 < u_1 < \phi\).
 
-        <u>初始步.</u> 有 \(u_0 = 1\)，\(u_1 = \sqrt{2}\)。因为 \(1 < \sqrt{2}\)，且 \(\varphi = \frac{1+\sqrt{5}}{2} > \frac{1+\sqrt{1}}{2} = 1\)，所以 \(\varphi = \sqrt{1+\varphi} > \sqrt{1+1} = \sqrt{2}\)。因此，结论对 \(n = 0\) 成立：\(1 \leqslant u_0 < u_1 < \varphi\)。
+        <u>初始步.</u> 有 \(u_0 = 1\)，\(u_1 = \sqrt{2}\)。因为 \(1 < \sqrt{2}\)，且 \(\phi = \frac{1+\sqrt{5}}{2} > \frac{1+\sqrt{1}}{2} = 1\)，所以 \(\phi = \sqrt{1+\phi} > \sqrt{1+1} = \sqrt{2}\)。因此，结论对 \(n = 0\) 成立：\(1 \leqslant u_0 < u_1 < \phi\)。
         {: .zh }
 
-    - <u>Hérédité.</u> On suppose que \(1 \leqslant u_n < u_{n+1} < \varphi\) est vrai pour un rang \(n \geqslant 0\) fixé. Puisque \(f\) est strictement croissante, on en déduit que :
+    - <u>Hérédité.</u> On suppose que \(1 \leqslant u_n < u_{n+1} < \phi\) est vrai pour un rang \(n \geqslant 0\) fixé. Puisque \(f\) est strictement croissante, on en déduit que :
 
-        <u>归纳步.</u> 设结论对某个固定的 \(n \geqslant 0\) 成立，即 \(1 \leqslant u_n < u_{n+1} < \varphi\)。由于 \(f\) 严格递增，可得：
+        <u>归纳步.</u> 设结论对某个固定的 \(n \geqslant 0\) 成立，即 \(1 \leqslant u_n < u_{n+1} < \phi\)。由于 \(f\) 严格递增，可得：
         {: .zh }
 
         \[
         1 < \underbrace{f(1)}_{=\sqrt{2}} \leqslant \underbrace{f(u_n)}_{=u_{n+1}}
-          < \underbrace{f(u_{n+1})}_{=u_{n+2}} < \underbrace{f(\varphi)}_{=\varphi}.
+          < \underbrace{f(u_{n+1})}_{=u_{n+2}} < \underbrace{f(\phi)}_{=\phi}.
         \]
 
         Ainsi, le résultat est vrai aussi au rang \(n+1\).
@@ -634,22 +629,22 @@ Dans la suite du chapitre, on considère seulement des <strong>suites réelles</
     - <strong>la nature d'une suite</strong>：数列的性质（敛散性等）
     - <strong>étudier une suite</strong>：研究一个数列（单调性、有界性、极限）
 
-## Suites réelles convergentes <span class="heading-zh">收敛实数列</span>
+## Suites convergentes <span class="heading-zh">收敛数列</span>
 
 !!! success "Définition 3.1 : suite convergente<br><span class='zh-title'>定义 3.1：收敛数列（suite convergente）</span>"
 
-    Une suite réelle \((u_n)_{n\geqslant n_0}\) est dite <strong>convergente</strong> lorsque :
+    Une suite \((u_n)_{n\geqslant n_0}\) est dite <strong>convergente</strong> lorsque :
 
     \[
-    \exists \ell \in \mathbb{R},\ \forall \varepsilon > 0,\ \exists N \geqslant n_0,\ \forall n \geqslant N,\ |u_n-\ell| < \varepsilon.
+    \exists \ell \in \mathbb{K},\ \forall \varepsilon > 0,\ \exists N \geqslant n_0,\ \forall n \geqslant N,\ |u_n-\ell| < \varepsilon.
     \]
 
-    若存在 \(\ell \in \mathbb{R}\)，使得对任意 \(\varepsilon > 0\)，都存在 \(N \geqslant n_0\)，当 \(n \geqslant N\) 时都有 \(|u_n-\ell| < \varepsilon\)，则称实数列 \((u_n)_{n\geqslant n_0}\) 是<strong>收敛的</strong>（convergente）。
+    若存在 \(\ell \in \mathbb{K}\)，使得对任意 \(\varepsilon > 0\)，都存在 \(N \geqslant n_0\)，当 \(n \geqslant N\) 时都有 \(|u_n-\ell| < \varepsilon\)，则称数列 \((u_n)_{n\geqslant n_0}\) 是<strong>收敛的</strong>（convergente）。
     {: .zh }
 
-    Autrement dit, \((u_n)_{n\geqslant n_0}\) est convergente s'il existe un nombre réel \(\ell\) tel que tout voisinage de \(\ell\) contient tous les termes de \((u_n)_{n\geqslant n_0}\) à partir d'un certain rang.
+    Autrement dit, \((u_n)_{n\geqslant n_0}\) est convergente s'il existe un nombre \(\ell\) tel que tout voisinage de \(\ell\) contient tous les termes de \((u_n)_{n\geqslant n_0}\) à partir d'un certain rang.
 
-    换言之，若存在实数 \(\ell\)，使得 \(\ell\) 的每个<strong>邻域</strong>（voisinage）都包含 \((u_n)_{n\geqslant n_0}\) 从某一项起的所有项，则 \((u_n)_{n\geqslant n_0}\) 收敛。
+    换言之，若存在数 \(\ell\)，使得 \(\ell\) 的每个<strong>邻域</strong>（voisinage）都包含 \((u_n)_{n\geqslant n_0}\) 从某一项起的所有项，则 \((u_n)_{n\geqslant n_0}\) 收敛。
     {: .zh }
 
 !!! info "Exemple 3.2<br><span class='zh-title'>例 3.2</span>"
@@ -671,9 +666,9 @@ Dans la suite du chapitre, on considère seulement des <strong>suites réelles</
 
 !!! warning "Important<br><span class='zh-title'>重要（Important）</span>"
 
-    En général, \(N\) dépend de \(\varepsilon\) : plus \(\varepsilon\) est proche de \(0\), plus le rang \(N\) à partir duquel tous les termes de la suite appartiennent au voisinage \(]\ell-\varepsilon,\ell+\varepsilon[\) doit être grand.
+    En général, \(N\) dépend de \(\varepsilon\) : plus \(\varepsilon\) est proche de \(0\), plus il faut aller loin dans la suite pour que tous les termes soient à une distance de \(\ell\) inférieure à \(\varepsilon\).
 
-    一般来说，\(N\) 依赖于 \(\varepsilon\)：\(\varepsilon\) 越接近 \(0\)，使数列从某一项起的所有项都落入邻域 \(]\ell-\varepsilon,\ell+\varepsilon[\) 所需的序号 \(N\) 就越大。
+    一般来说，\(N\) 依赖于 \(\varepsilon\)：\(\varepsilon\) 越接近 \(0\)，就需要在数列中走得越远，才能使从某一项起的所有项与 \(\ell\) 的距离都小于 \(\varepsilon\)。
     {: .zh }
 
 !!! warning "Attention<br><span class='zh-title'>注意（Attention）</span>"
@@ -685,9 +680,9 @@ Dans la suite du chapitre, on considère seulement des <strong>suites réelles</
 
 !!! danger "Théorème 3.3 : unicité de la limite<br><span class='zh-title'>定理 3.3：极限的唯一性</span>"
 
-    Soit \((u_n)_{n\geqslant n_0}\) une suite convergente. Alors le nombre réel \(\ell\) de la définition 3.1 est unique. On l'appelle la <strong>limite</strong> de \((u_n)_{n\geqslant n_0}\). On dit aussi que \((u_n)_{n\geqslant n_0}\) <strong>converge vers</strong> \(\ell\) ou que \(u_n\) <strong>tend vers</strong> \(\ell\) quand \(n\) tend vers \(+\infty\), et on note :
+    Soit \((u_n)_{n\geqslant n_0}\) une suite convergente. Alors le nombre \(\ell\) de la définition 3.1 est unique. On l'appelle la <strong>limite</strong> de \((u_n)_{n\geqslant n_0}\). On dit aussi que \((u_n)_{n\geqslant n_0}\) <strong>converge vers</strong> \(\ell\) ou que \(u_n\) <strong>tend vers</strong> \(\ell\) quand \(n\) tend vers \(+\infty\), et on note :
 
-    设 \((u_n)_{n\geqslant n_0}\) 是收敛数列。则定义 3.1 中的实数 \(\ell\) 是唯一的，称它为 \((u_n)_{n\geqslant n_0}\) 的<strong>极限</strong>（limite）。也说 \((u_n)_{n\geqslant n_0}\) <strong>收敛于</strong> \(\ell\)，或当 \(n\) 趋于 \(+\infty\) 时 \(u_n\) <strong>趋于</strong> \(\ell\)，并记作：
+    设 \((u_n)_{n\geqslant n_0}\) 是收敛数列。则定义 3.1 中的数 \(\ell\) 是唯一的，称它为 \((u_n)_{n\geqslant n_0}\) 的<strong>极限</strong>（limite）。也说 \((u_n)_{n\geqslant n_0}\) <strong>收敛于</strong> \(\ell\)，或当 \(n\) 趋于 \(+\infty\) 时 \(u_n\) <strong>趋于</strong> \(\ell\)，并记作：
     {: .zh }
 
     \[
@@ -696,7 +691,7 @@ Dans la suite du chapitre, on considère seulement des <strong>suites réelles</
 
 !!! demo ""
 
-    <strong>Démonstration.</strong> Par l'absurde, on suppose qu'il existe deux nombres réels \(\ell_1 < \ell_2\) tels que :
+    <strong>Démonstration.</strong> Par l'absurde, on suppose qu'il existe deux nombres \(\ell_1 \neq \ell_2\) tels que :
 
     \[
     \begin{cases}
@@ -705,7 +700,7 @@ Dans la suite du chapitre, on considère seulement des <strong>suites réelles</
     \end{cases}
     \]
 
-    <strong>证明.</strong> 用反证法，假设存在两个实数 \(\ell_1 < \ell_2\) 使得：
+    <strong>证明.</strong> 用反证法，假设存在两个数 \(\ell_1 \neq \ell_2\) 使得：
     {: .zh }
 
     !!! warning "Attention<br><span class='zh-title'>注意（Attention）</span>"
@@ -715,29 +710,27 @@ Dans la suite du chapitre, on considère seulement des <strong>suites réelles</
         对应于 \(\ell_1\) 的序号 \(N\) 不一定等于对应于 \(\ell_2\) 的序号 \(N\)！
         {: .zh }
 
-    Il suffit de choisir \(\varepsilon > 0\) afin que \(\varepsilon < \frac{\ell_2-\ell_1}{2}\), par exemple \(\varepsilon = \frac{\ell_2-\ell_1}{3}\). En effet, on a alors pour tout \(n \geqslant \max\{N_1,N_2\}\), \(u_n \in\,]\ell_1-\varepsilon,\ell_1+\varepsilon[\,\cap\,]\ell_2-\varepsilon,\ell_2+\varepsilon[\). En particulier :
+    Il suffit de choisir \(\varepsilon > 0\) afin que \(\varepsilon < \frac{|\ell_2-\ell_1|}{2}\), par exemple \(\varepsilon = \frac{|\ell_2-\ell_1|}{3}\). En effet, on a alors, pour tout \(n \geqslant \max\{N_1,N_2\}\), d'après l'inégalité triangulaire :
 
-    只需选取 \(\varepsilon > 0\) 使 \(\varepsilon < \frac{\ell_2-\ell_1}{2}\)，例如取 \(\varepsilon = \frac{\ell_2-\ell_1}{3}\)。事实上，此时对一切 \(n \geqslant \max\{N_1,N_2\}\)，都有 \(u_n \in\,]\ell_1-\varepsilon,\ell_1+\varepsilon[\,\cap\,]\ell_2-\varepsilon,\ell_2+\varepsilon[\)。特别地：
+    只需选取 \(\varepsilon > 0\) 使 \(\varepsilon < \frac{|\ell_2-\ell_1|}{2}\)，例如取 \(\varepsilon = \frac{|\ell_2-\ell_1|}{3}\)。事实上，此时对一切 \(n \geqslant \max\{N_1,N_2\}\)，由三角不等式有：
     {: .zh }
 
     \[
-    \ell_2-\varepsilon < u_n < \ell_1+\varepsilon
-    \quad\text{donc}\quad
-    \ell_2-\ell_1 < 2\varepsilon = \frac{2}{3}(\ell_2-\ell_1)
+    |\ell_2-\ell_1| = \bigl|-(u_n-\ell_2)+u_n-\ell_1\bigr| \leqslant |u_n-\ell_2|+|u_n-\ell_1| < 2\varepsilon = \frac{2}{3}|\ell_2-\ell_1|
     \]
 
-    ce qui est absurde car \(\ell_2-\ell_1 > 0\).
+    ce qui est absurde car \(|\ell_2-\ell_1| > 0\).
 
-    这与 \(\ell_2-\ell_1 > 0\) 矛盾，故为荒谬。
+    这与 \(|\ell_2-\ell_1| > 0\) 矛盾，故为荒谬。
     {: .zh }
 
     <p class="cqfd">∎</p>
 
 !!! danger "Théorème 3.4<br><span class='zh-title'>定理 3.4</span>"
 
-    Soit \((u_n)_{n\geqslant n_0}\) une suite réelle. Alors :
+    Soit \((u_n)_{n\geqslant n_0}\) une suite. Alors :
 
-    设 \((u_n)_{n\geqslant n_0}\) 是实数列。则：
+    设 \((u_n)_{n\geqslant n_0}\) 是数列。则：
     {: .zh }
 
     \[
@@ -753,29 +746,33 @@ Dans la suite du chapitre, on considère seulement des <strong>suites réelles</
 
     !!! danger "Lemme 3.5<br><span class='zh-title'>引理 3.5</span>"
 
-        Soit \((a,b) \in \mathbb{R}^2\) tel que \(a < b\). Si \((u_n)_{n\geqslant n_0}\) est une suite réelle qui converge vers \(\ell \in\,]a,b[\), alors \(]a,b[\) contient tous les termes de \((u_n)_{n\geqslant n_0}\) à partir d'un certain rang :
+        Si \((u_n)_{n\geqslant n_0}\) est une suite qui converge vers \(\ell \in D(c,r) = \{x \in \mathbb{K} \mid |x-c| < r\}\) où \(c \in \mathbb{K}\) et \(r > 0\), alors \(D(c,r)\) contient tous les termes de \((u_n)_{n\geqslant n_0}\) à partir d'un certain rang :
 
-        设 \((a,b) \in \mathbb{R}^2\) 且 \(a < b\)。若实数列 \((u_n)_{n\geqslant n_0}\) 收敛于 \(\ell \in\,]a,b[\)，则 \(]a,b[\) 包含 \((u_n)_{n\geqslant n_0}\) 从某一项起的所有项：
+        若数列 \((u_n)_{n\geqslant n_0}\) 收敛于 \(\ell \in D(c,r) = \{x \in \mathbb{K} \mid |x-c| < r\}\)（其中 \(c \in \mathbb{K}\)，\(r > 0\)），则 \(D(c,r)\) 包含 \((u_n)_{n\geqslant n_0}\) 从某一项起的所有项：
         {: .zh }
 
         \[
-        \exists N \geqslant n_0,\ \forall n \geqslant N,\ u_n \in\,]a,b[.
+        \exists N \geqslant n_0,\ \forall n \geqslant N,\ u_n \in D(c,r).
         \]
 
-    <strong>Démonstration.</strong> Il suffit de poser \(\varepsilon = \min\{b-\ell,\ell-a\} > 0\) dans la définition.
+    <strong>Démonstration.</strong> Il suffit de poser \(\varepsilon = r-\lvert\ell-c\rvert > 0\) dans la définition 3.1, car on a alors, d'après l'inégalité triangulaire :
 
-    <strong>证明.</strong> 只需在定义中取 \(\varepsilon = \min\{b-\ell,\ell-a\} > 0\)。
-    {: .zh }
-
-    <p class="cqfd">∎</p>
-
-    On suppose que \((u_n)_{n\geqslant n_0}\) converge et on note \(\ell\) sa limite. Puisque \(\ell \in\,]-\lvert\ell\rvert-1,\lvert\ell\rvert+1[\), on sait d'après le lemme 3.5 que :
-
-    设 \((u_n)_{n\geqslant n_0}\) 收敛，记其极限为 \(\ell\)。因为 \(\ell \in\,]-\lvert\ell\rvert-1,\lvert\ell\rvert+1[\)，由引理 3.5 可知：
+    <strong>证明.</strong> 只需在定义 3.1 中取 \(\varepsilon = r-\lvert\ell-c\rvert > 0\)，因为此时由三角不等式有：
     {: .zh }
 
     \[
-    \exists N \geqslant n_0,\ \forall n \geqslant N,\ |u_n| < |\ell|+1.
+    \forall n \geqslant N,\quad |u_n-c| = |u_n-\ell+\ell-c| \leqslant |u_n-\ell|+|\ell-c| < \varepsilon+|\ell-c| = r.
+    \]
+
+    <p class="cqfd">∎</p>
+
+    On suppose que \((u_n)_{n\geqslant n_0}\) converge et on note \(\ell\) sa limite. On sait d'après le lemme 3.5 que :
+
+    设 \((u_n)_{n\geqslant n_0}\) 收敛，记其极限为 \(\ell\)。由引理 3.5 可知：
+    {: .zh }
+
+    \[
+    \exists N \geqslant n_0,\ \forall n \geqslant N,\ u_n \in D(0,|\ell|+1) \quad\text{donc}\quad |u_n| < |\ell|+1.
     \]
 
     Par conséquent :
@@ -804,9 +801,9 @@ Dans la suite du chapitre, on considère seulement des <strong>suites réelles</
 
 !!! demo ""
 
-    <strong>Démonstration.</strong> D'après le lemme 3.5, en posant \(a = 0\).
+    <strong>Démonstration.</strong> D'après le lemme 3.5, en posant \(c = r = \ell\) car \(D(\ell,\ell) =\,]0,2\ell[\).
 
-    <strong>证明.</strong> 由引理 3.5，取 \(a = 0\) 即可。
+    <strong>证明.</strong> 由引理 3.5，取 \(c = r = \ell\)，因为 \(D(\ell,\ell) =\,]0,2\ell[\)。
     {: .zh }
 
     <p class="cqfd">∎</p>
@@ -828,6 +825,11 @@ Dans la suite du chapitre, on considère seulement des <strong>suites réelles</
     - <strong>borne supérieure</strong>：上确界
 
 ## Suites réelles divergentes vers l'infini <span class="heading-zh">发散到无穷的实数列</span>
+
+Dans les sections suivantes, on considère seulement des suites réelles, c'est-à-dire \(\mathbb{K} = \mathbb{R}\).
+
+以下各节只考虑实数列，即 \(\mathbb{K} = \mathbb{R}\)。
+{: .zh }
 
 !!! success "Définition 4.1 : suite divergente vers l'infini<br><span class='zh-title'>定义 4.1：发散到无穷的数列</span>"
 
@@ -882,9 +884,9 @@ Dans la suite du chapitre, on considère seulement des <strong>suites réelles</
 
 !!! warning "Important<br><span class='zh-title'>重要（Important）</span>"
 
-    En général, \(N\) dépend de \(A\) : plus \(A\) est grand, plus le rang \(N\) à partir duquel tous les termes de la suite appartiennent à \(]A,+\infty[\) doit être grand.
+    En général, \(N\) dépend de \(A\) : plus \(A\) est grand, plus il faut aller loin dans la suite pour que tous les termes appartiennent à \(]A,+\infty[\).
 
-    一般来说，\(N\) 依赖于 \(A\)：\(A\) 越大，使数列从某一项起的所有项都落入 \(]A,+\infty[\) 所需的序号 \(N\) 就越大。
+    一般来说，\(N\) 依赖于 \(A\)：\(A\) 越大，就需要在数列中走得越远，才能使从某一项起的所有项都落入 \(]A,+\infty[\)。
     {: .zh }
 
 !!! danger "Propriété 4.3<br><span class='zh-title'>性质 4.3</span>"
@@ -962,6 +964,13 @@ Dans la suite du chapitre, on considère seulement des <strong>suites réelles</
     Dans ces tableaux, \(??\) indique une <strong>forme indéterminée</strong> : \(a\) et \(b\) ne suffisent pas à déterminer la limite considérée. Il faut alors utiliser d'autres méthodes.
 
     这些表中的 \(??\) 表示<strong>未定式</strong>（forme indéterminée）：仅凭 \(a\) 与 \(b\) 不足以确定所考虑的极限，此时必须使用其他方法。
+    {: .zh }
+
+!!! warning "Remarque<br><span class='zh-title'>注（Remarque）</span>"
+
+    Ces opérations restent valables pour les limites de suites complexes convergentes.
+
+    这些运算对收敛的复数列的极限仍然成立。
     {: .zh }
 
 !!! info "Exemple 4.6<br><span class='zh-title'>例 4.6</span>"
@@ -1435,7 +1444,7 @@ En particulier, toute suite monotone admet une limite (dans \(\overline{\mathbb{
     = \lim_{n\to+\infty}\sqrt{1+u_n}
     = \sqrt{1+\ell} = f(\ell)
     \quad\text{donc}\quad
-    \ell = \varphi \ \text{(voir l'exemple 2.5)}.
+    \ell = \phi \ \text{(voir l'exemple 2.5)}.
     \]
 
     Finalement, on a montré que :
@@ -1444,7 +1453,7 @@ En particulier, toute suite monotone admet une limite (dans \(\overline{\mathbb{
     {: .zh }
 
     \[
-    \varphi = \lim_{n\to+\infty} u_n = \sqrt{1+\sqrt{1+\sqrt{1+\dots}}}.
+    \phi = \lim_{n\to+\infty} u_n = \sqrt{1+\sqrt{1+\sqrt{1+\dots}}}.
     \]
 
 !!! danger "Théorème 6.3 : théorème des suites adjacentes<br><span class='zh-title'>定理 6.3：相邻数列定理</span>"
@@ -1538,7 +1547,7 @@ En particulier, toute suite monotone admet une limite (dans \(\overline{\mathbb{
 
     \[
     \forall k \geqslant 0,\quad
-    1 \leqslant u_{2k} < u_{2(k+1)} < \varphi < u_{2(k+1)+1} < u_{2k+1} \leqslant 2
+    1 \leqslant u_{2k} < u_{2(k+1)} < \phi < u_{2(k+1)+1} < u_{2k+1} \leqslant 2
     \]
 
     et on peut démontrer cette conjecture par récurrence comme dans l'exemple 2.5. En particulier, on obtient que \((u_{2k})_{k\geqslant 0}\) est croissante et que \((u_{2k+1})_{k\geqslant 0}\) est décroissante. De plus, on peut aussi montrer par récurrence que :
@@ -1581,13 +1590,13 @@ En particulier, toute suite monotone admet une limite (dans \(\overline{\mathbb{
         <u>结论.</u> 由归纳法原理，结论对一切 \(k \geqslant 0\) 成立。
         {: .zh }
 
-    D'après le théorème de limite par encadrement, on en déduit que \(\lim_{k\to+\infty}(u_{2k+1}-u_{2k}) = 0\). Puis, d'après le théorème des suites adjacentes, on en déduit que \((u_{2k})_{k\geqslant 0}\) et \((u_{2k+1})_{k\geqslant 0}\) convergent vers la même limite, qui est égale à \(\varphi\). Enfin, d'après le théorème des suites extraites, on en déduit que \((u_n)_{n\geqslant 0}\) converge vers \(\varphi\). Finalement, on a montré que :
+    D'après le théorème de limite par encadrement, on en déduit que \(\lim_{k\to+\infty}(u_{2k+1}-u_{2k}) = 0\). Puis, d'après le théorème des suites adjacentes, on en déduit que \((u_{2k})_{k\geqslant 0}\) et \((u_{2k+1})_{k\geqslant 0}\) convergent vers la même limite, qui est égale à \(\phi\). Enfin, d'après le théorème des suites extraites, on en déduit que \((u_n)_{n\geqslant 0}\) converge vers \(\phi\). Finalement, on a montré que :
 
-    由夹逼定理可得 \(\lim_{k\to+\infty}(u_{2k+1}-u_{2k}) = 0\)。再由相邻数列定理，\((u_{2k})_{k\geqslant 0}\) 与 \((u_{2k+1})_{k\geqslant 0}\) 收敛于同一极限，该极限等于 \(\varphi\)。最后由子列定理，\((u_n)_{n\geqslant 0}\) 收敛于 \(\varphi\)。最终，我们证明了：
+    由夹逼定理可得 \(\lim_{k\to+\infty}(u_{2k+1}-u_{2k}) = 0\)。再由相邻数列定理，\((u_{2k})_{k\geqslant 0}\) 与 \((u_{2k+1})_{k\geqslant 0}\) 收敛于同一极限，该极限等于 \(\phi\)。最后由子列定理，\((u_n)_{n\geqslant 0}\) 收敛于 \(\phi\)。最终，我们证明了：
     {: .zh }
 
     \[
-    \varphi = \lim_{n\to+\infty} u_n = 1+\frac{1}{1+\frac{1}{1+\frac{1}{\dots}}}.
+    \phi = \lim_{n\to+\infty} u_n = 1+\frac{1}{1+\frac{1}{1+\frac{1}{\dots}}}.
     \]
 
 !!! warning "Vocabulaire clé &nbsp;&nbsp; 重点词汇<br><span class='zh-title'>第六节核心术语</span>"
@@ -1603,3 +1612,239 @@ En particulier, toute suite monotone admet une limite (dans \(\overline{\mathbb{
     - <strong>converger vers</strong>：收敛于
     - <strong>on en déduit que</strong>：由此推出
     - <strong>montrer par récurrence</strong>：用归纳法证明
+
+## Comparaison de suites <span class="heading-zh">数列的比较</span>
+
+Dans cette section, on revient au cas général des suites numériques, c'est-à-dire \(\mathbb{K} = \mathbb{R}\) ou \(\mathbb{C}\).
+
+本节回到一般情形的数列，即 \(\mathbb{K} = \mathbb{R}\) 或 \(\mathbb{C}\)。
+{: .zh }
+
+!!! success "Définition 7.1 : suite négligeable par rapport à une autre<br><span class='zh-title'>定义 7.1：相对于另一数列可忽略的数列（négligeable）</span>"
+
+    Soient \((a_n)\) et \((b_n)\) deux suites telles que tous les termes de \((b_n)\) sont non nuls à partir d'un certain rang. On dit que \((a_n)\) est <strong>négligeable par rapport</strong> à \((b_n)\) lorsque \(a_n/b_n\) tend vers \(0\) quand \(n \to +\infty\). On note :
+
+    设 \((a_n)\) 与 \((b_n)\) 是两个数列，且 \((b_n)\) 从某一项起所有项都不为零。若当 \(n \to +\infty\) 时 \(a_n/b_n\) 趋于 \(0\)，则称 \((a_n)\) <strong>相对于</strong> \((b_n)\) <strong>可忽略</strong>（négligeable par rapport à \((b_n)\)）。记作：
+    {: .zh }
+
+    \[
+    a_n = \on (b_n) \iff \lim_{n\to+\infty} \frac{a_n}{b_n} = 0.
+    \]
+
+!!! info "Exemple 7.2<br><span class='zh-title'>例 7.2</span>"
+
+    - \(n = \on(n^2)\) car \(\lim_{n\to+\infty} \frac{n}{n^2} = \lim_{n\to+\infty} \frac{1}{n} = 0\). De même, \(\frac{1}{n^2} = \on\left(\frac{1}{n}\right)\). Plus généralement :
+
+        \(n = \on(n^2)\)，因为 \(\lim_{n\to+\infty} \frac{n}{n^2} = \lim_{n\to+\infty} \frac{1}{n} = 0\)。同样，\(\frac{1}{n^2} = \on\left(\frac{1}{n}\right)\)。更一般地：
+        {: .zh }
+
+        \[
+        \forall \alpha < \beta,\quad n^\alpha = \on \bigl(n^\beta\bigr).
+        \]
+
+    - \(2^n = \on(3^n)\) car \(\lim_{n\to+\infty} \frac{2^n}{3^n} = \lim_{n\to+\infty} \left(\frac{2}{3}\right)^n = 0\). Plus généralement :
+
+        \(2^n = \on(3^n)\)，因为 \(\lim_{n\to+\infty} \frac{2^n}{3^n} = \lim_{n\to+\infty} \left(\frac{2}{3}\right)^n = 0\)。更一般地：
+        {: .zh }
+
+        \[
+        \forall 0 < q < r,\quad q^n = \on(r^n) \quad\text{car}\quad \frac{q}{r} \in\,]0,1[.
+        \]
+
+!!! warning "Remarque<br><span class='zh-title'>注（Remarque）</span>"
+
+    La relation « être négligeable » est transitive :
+
+    “可忽略”关系具有传递性：
+    {: .zh }
+
+    \[
+    \Bigl(a_n = \on(b_n) \ \text{et}\ b_n = \on(c_n)\Bigr) \implies a_n = \on(c_n).
+    \]
+
+!!! danger "Théorème 7.3 : théorème des croissances comparées<br><span class='zh-title'>定理 7.3：增长比较定理</span>"
+
+    Soient \(\alpha > 0\) et \(q > 1\). Alors :
+
+    设 \(\alpha > 0\)，\(q > 1\)。则：
+    {: .zh }
+
+    \[
+    \ln(n) = \on(n^\alpha),\qquad n^\alpha = \on(q^n)\qquad\text{et}\qquad q^n = \on(n!).
+    \]
+
+!!! demo ""
+
+    <strong>Démonstration.</strong>
+
+    <strong>证明.</strong>
+    {: .zh }
+
+    !!! danger "Lemme 7.4<br><span class='zh-title'>引理 7.4</span>"
+
+        \[
+        \forall x \in \mathbb{R}_+^*,\quad \ln(x) < x.
+        \]
+
+    - En appliquant le lemme à \(x = n^{\alpha/2}\), on a :
+
+        将引理应用于 \(x = n^{\alpha/2}\)，得：
+        {: .zh }
+
+        \[
+        \forall n \geqslant 1,\quad 0 \leqslant \frac{\ln(n)}{n^\alpha} = \frac{2\ln\bigl(n^{\alpha/2}\bigr)}{\alpha n^\alpha} < \frac{2}{\alpha n^{\alpha/2}}.
+        \]
+
+        D'après le théorème de limite par encadrement, on en déduit que \(\ln(n) = \on(n^\alpha)\).
+
+        由夹逼定理可得 \(\ln(n) = \on(n^\alpha)\)。
+        {: .zh }
+
+    - On a :
+
+        有：
+        {: .zh }
+
+        \[
+        \lim_{n\to+\infty} \frac{n^\alpha}{q^n} = \lim_{n\to+\infty} e^{n\left(\alpha\frac{\ln(n)}{n}-\ln(q)\right)} = 0 \quad\text{car } \ln(n) = \on(n) \text{ et } \ln(q) > 0.
+        \]
+
+    - On pose \((u_n = q^n/n!)\) et \(N = \lfloor 2q \rfloor\). On a :
+
+        令 \((u_n = q^n/n!)\)，\(N = \lfloor 2q \rfloor\)。有：
+        {: .zh }
+
+        \[
+        \forall n \geqslant N,\quad \frac{u_{n+1}}{u_n} = \frac{q}{n+1} < \frac{1}{2}.
+        \]
+
+        On peut alors montrer par récurrence que :
+
+        于是可用归纳法证明：
+        {: .zh }
+
+        \[
+        \forall n \geqslant N,\quad 0 < u_n \leqslant u_N \left(\frac{1}{2}\right)^{n-N}.
+        \]
+
+        D'après le théorème de limite par encadrement, on en déduit que \(\lim_{n\to+\infty} u_n = 0\), donc que \(q^n = \on(n!)\).
+
+        由夹逼定理可得 \(\lim_{n\to+\infty} u_n = 0\)，因此 \(q^n = \on(n!)\)。
+        {: .zh }
+
+    <p class="cqfd">∎</p>
+
+!!! info "Exemple 7.5<br><span class='zh-title'>例 7.5</span>"
+
+    \[
+    \lim_{n\to+\infty} \frac{(\ln(n))^2}{n}
+    = \lim_{n\to+\infty} \left(\frac{\ln(n)}{n^{1/2}}\right)^2 = 0
+    \quad\text{d'après le théorème des croissances comparées.}
+    \]
+
+!!! success "Définition 7.6 : suites équivalentes<br><span class='zh-title'>定义 7.6：等价数列（suites équivalentes）</span>"
+
+    Soient \((a_n)\) et \((b_n)\) deux suites telles que tous leurs termes sont non nuls à partir d'un certain rang. On dit que \((a_n)\) et \((b_n)\) sont <strong>équivalentes</strong> lorsque \(a_n/b_n\) tend vers \(1\) quand \(n \to +\infty\). On note :
+
+    设 \((a_n)\) 与 \((b_n)\) 是两个数列，且二者从某一项起所有项都不为零。若当 \(n \to +\infty\) 时 \(a_n/b_n\) 趋于 \(1\)，则称 \((a_n)\) 与 \((b_n)\) <strong>等价</strong>（équivalentes）。记作：
+    {: .zh }
+
+    \[
+    a_n \simn b_n \iff \lim_{n\to+\infty} \frac{a_n}{b_n} = 1.
+    \]
+
+!!! danger "Propriété 7.7<br><span class='zh-title'>性质 7.7</span>"
+
+    Si deux suites sont équivalentes et si l'une converge, alors l'autre converge aussi vers la même limite. Deux suites réelles équivalentes ont même nature et même limite (quand les limites existent dans \(\overline{\mathbb{R}}\)).
+
+    若两个数列等价且其中一个收敛，则另一个也收敛于同一极限。两个等价实数列具有相同的性质与相同的极限（当极限在 \(\overline{\mathbb{R}}\) 中存在时）。
+    {: .zh }
+
+!!! warning "Attention<br><span class='zh-title'>注意（Attention）</span>"
+
+    La réciproque est fausse : deux suites qui convergent vers la même limite ne sont pas toujours équivalentes ! Par exemple, \((1/n)\) et \((1/n^2)\) convergent vers \(0\), mais ne sont pas équivalentes.
+
+    逆命题不成立：收敛于同一极限的两个数列不一定等价！例如 \((1/n)\) 与 \((1/n^2)\) 都收敛于 \(0\)，但它们并不等价。
+    {: .zh }
+
+!!! warning "Remarque<br><span class='zh-title'>注（Remarque）</span>"
+
+    Étant donnée une suite \((u_n)\), trouver une suite équivalente plus simple permet de décrire le <strong>comportement asymptotique</strong> de \((u_n)\), c'est-à-dire le comportement de \(u_n\) quand \(n \to +\infty\).
+
+    给定数列 \((u_n)\)，找到一个更简单的等价数列，可以描述 \((u_n)\) 的<strong>渐近行为</strong>（comportement asymptotique），即当 \(n \to +\infty\) 时 \(u_n\) 的行为。
+    {: .zh }
+
+!!! info "Exemple 7.8<br><span class='zh-title'>例 7.8</span>"
+
+    On a :
+
+    有：
+    {: .zh }
+
+    \[
+    u_n = \frac{\bigl(3n^2+n(\ln(n))^2+(-1)^n\bigr)\bigl(2^n+n^3\bigr)}{2^n(n+\sqrt{n})} \simn 3n
+    \]
+
+    car :
+
+    因为：
+    {: .zh }
+
+    \[
+    \begin{aligned}
+    \lim_{n\to+\infty} \frac{u_n}{3n}
+    &= \lim_{n\to+\infty} \frac{\left(1+\frac{(\ln(n))^2}{3n}+\frac{(-1)^n}{3n^2}\right)\left(1+\frac{n^3}{2^n}\right)}{1+\frac{1}{\sqrt{n}}}\\
+    &= 1 \qquad\text{d'après le théorème des croissances comparées.}
+    \end{aligned}
+    \]
+
+    Ainsi, \((u_n)\) a le même comportement asymptotique que la suite \((3n)\).
+
+    因此，\((u_n)\) 与数列 \((3n)\) 具有相同的渐近行为。
+    {: .zh }
+
+!!! danger "Propriété 7.9<br><span class='zh-title'>性质 7.9</span>"
+
+    Soient \((a_n)\) et \((b_n)\) deux suites telles que tous leurs termes sont non nuls à partir d'un certain rang. Alors :
+
+    设 \((a_n)\) 与 \((b_n)\) 是两个数列，且二者从某一项起所有项都不为零。则：
+    {: .zh }
+
+    \[
+    a_n \simn b_n \iff a_n = b_n + \on(b_n).
+    \]
+
+!!! demo ""
+
+    <strong>Démonstration.</strong>
+
+    <strong>证明.</strong>
+    {: .zh }
+
+    \[
+    \lim_{n\to+\infty}\frac{a_n}{b_n} = 1
+    \iff \lim_{n\to+\infty}\frac{a_n-b_n}{b_n}
+    = \lim_{n\to+\infty}\left(\frac{a_n}{b_n}-1\right) = 0.
+    \]
+
+    <p class="cqfd">∎</p>
+
+!!! info "Exemple 7.10<br><span class='zh-title'>例 7.10</span>"
+
+    \[
+    n-\sqrt{n} \simn n \quad\text{car}\quad \sqrt{n} = \on(n),
+    \quad\text{en particulier}\quad \lim_{n\to+\infty} n-\sqrt{n} = +\infty.
+    \]
+
+!!! warning "Vocabulaire clé &nbsp;&nbsp; 重点词汇<br><span class='zh-title'>第七节核心术语</span>"
+
+    - <strong>négligeable par rapport à</strong>：相对于……可忽略
+    - <strong>être négligeable</strong>：可忽略
+    - <strong>transitive</strong>：传递的
+    - <strong>théorème des croissances comparées</strong>：增长比较定理
+    - <strong>équivalent / suites équivalentes</strong>：等价的 / 等价数列
+    - <strong>comportement asymptotique</strong>：渐近行为
+    - <strong>suite équivalente plus simple</strong>：更简单的等价数列
+    - <strong>réciproque</strong>：逆命题
+    - <strong>en particulier</strong>：特别地
+    - <strong>on en déduit que</strong>：由此推出

@@ -22,6 +22,9 @@ window.MathJax = {
       IM: ["\\operatorname{Im}"],
       arccot: ["\\operatorname{arccot}"],
       lcm: ["\\operatorname{lcm}"],
+      // négligeable / équivalent：n→+∞ 写在 o 或 ∼ 正下方
+      on: ["\\mathop{o}\\limits_{n\\to+\\infty}"],
+      simn: ["\\mathop{\\sim}\\limits_{n\\to+\\infty}"],
     },
   },
   options: {
