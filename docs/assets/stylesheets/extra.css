@@ -1770,3 +1770,215 @@ html { scroll-behavior: smooth; }
   .quiz-item, .fill-item, .qa-item { padding: .75rem .85rem; }
   .material-item { padding: .7rem .8rem; }
 }
+
+/* ════════════════════════════════════════════════════════
+   党校学习资料 — 单页长文阅读优化
+   ════════════════════════════════════════════════════════ */
+body:has(.party-handout) .md-typeset {
+  font-size: .86rem;
+  line-height: 1.95;
+}
+
+body:has(.party-handout) .md-typeset p {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+/* 标题层级：部分用色带，专题用小字号侧条 */
+body:has(.party-handout) .md-typeset h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -.02em;
+  margin-bottom: 1.1rem;
+}
+
+body:has(.party-handout) .md-typeset h2 {
+  margin-top: 3.4rem;
+  padding: .6rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-left: 5px solid #1a48a8;
+  border-radius: 0 4px 4px 0;
+  background: linear-gradient(90deg, rgba(26, 72, 168, .075), transparent 72%);
+}
+
+body:has(.party-handout) .md-typeset h3 {
+  margin-top: 1.9rem;
+  padding-left: .55rem;
+  font-size: 1.02rem;
+  font-weight: 600;
+  border-left: 3px solid rgba(26, 72, 168, .32);
+}
+
+body:has(.party-handout) .md-typeset h2:hover,
+body:has(.party-handout) .md-typeset h3:hover {
+  transform: none;
+}
+
+body:has(.party-handout) .md-typeset h2,
+body:has(.party-handout) .md-typeset h3 {
+  scroll-margin-top: 5rem;
+}
+
+/* 紧致列表：避免每个条目之间出现大段空白 */
+body:has(.party-handout) .md-typeset ol,
+body:has(.party-handout) .md-typeset ul {
+  margin: .45em 0 .8em;
+}
+
+body:has(.party-handout) .md-typeset li {
+  margin-bottom: .18em;
+}
+
+body:has(.party-handout) .md-typeset li > p {
+  margin: 0 0 .25em;
+}
+
+body:has(.party-handout) .md-typeset li > ul,
+body:has(.party-handout) .md-typeset li > ol {
+  margin: .25em 0 .35em;
+}
+
+body:has(.party-handout) .md-typeset ol > li::marker {
+  color: #1a48a8;
+  font-weight: 600;
+}
+
+/* 标题后的首段不缩进，和标题左缘对齐 */
+body:has(.party-handout) .md-typeset h3 + p {
+  text-indent: 0;
+}
+
+/* 右侧目录：长目录独立滚动，避免撑满整屏 */
+body:has(.party-handout) .md-sidebar--secondary .md-nav--secondary {
+  max-height: calc(100vh - 6.5rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: .35rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, .18) transparent;
+}
+
+body:has(.party-handout) .md-sidebar--secondary .md-nav__link {
+  font-size: .68rem;
+  line-height: 1.5;
+}
+
+/* 选择题：更轻的卡片、更大的字号 */
+body:has(.party-handout) .quiz-item {
+  padding: .8rem 1rem .7rem;
+  margin-bottom: .55rem;
+  border-color: rgba(0, 0, 0, .07);
+  box-shadow: none;
+}
+
+body:has(.party-handout) .quiz-q {
+  font-size: .84rem;
+  line-height: 1.8;
+}
+
+body:has(.party-handout) .quiz-options {
+  gap: .25rem .55rem;
+  margin: .3rem 0 .45rem !important;
+}
+
+body:has(.party-handout) .quiz-options li {
+  padding: .28rem .5rem;
+  font-size: .82rem;
+  background: rgba(63, 81, 181, .04);
+}
+
+body:has(.party-handout) .quiz-answer {
+  display: inline-block;
+  margin-top: .3rem !important;
+  padding: .12rem .55rem;
+  border-radius: 999px;
+  background: rgba(46, 125, 50, .075);
+  font-size: .74rem;
+}
+
+/* 填空题：连续列表，不再做成 85 个独立盒子 */
+body:has(.party-handout) .fill-item {
+  padding: .6rem .15rem;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0;
+  background: transparent;
+}
+
+body:has(.party-handout) .fill-item:last-child {
+  border-bottom: none;
+}
+
+body:has(.party-handout) .fill-q {
+  font-size: .84rem;
+  line-height: 1.9;
+}
+
+/* 简答题：保留卡片，加强问答分隔 */
+body:has(.party-handout) .qa-item {
+  padding: .85rem 1rem;
+  margin-bottom: .6rem;
+  box-shadow: none;
+}
+
+body:has(.party-handout) .qa-q {
+  font-weight: 500;
+}
+
+body:has(.party-handout) .qa-answer {
+  margin-top: .45rem !important;
+  padding: .5rem .8rem;
+}
+
+/* 第三部分：材料标题与链接更紧凑 */
+body:has(.party-handout) .md-typeset h3 + p a {
+  font-weight: 500;
+}
+
+/* 暗色模式 */
+body[data-md-color-scheme="slate"]:has(.party-handout) .md-typeset h2 {
+  border-left-color: var(--night-accent);
+  background: linear-gradient(90deg, rgba(154, 172, 255, .10), transparent 72%);
+}
+
+body[data-md-color-scheme="slate"]:has(.party-handout) .md-typeset h3 {
+  border-left-color: rgba(154, 172, 255, .34);
+}
+
+body[data-md-color-scheme="slate"]:has(.party-handout) .md-typeset ol > li::marker {
+  color: var(--night-accent);
+}
+
+body[data-md-color-scheme="slate"]:has(.party-handout) .quiz-item {
+  border-color: var(--night-border);
+}
+
+body[data-md-color-scheme="slate"]:has(.party-handout) .quiz-options li {
+  background: rgba(154, 172, 255, .06);
+}
+
+body[data-md-color-scheme="slate"]:has(.party-handout) .quiz-answer {
+  background: rgba(143, 214, 148, .10);
+}
+
+body[data-md-color-scheme="slate"]:has(.party-handout) .fill-item {
+  border-bottom-color: var(--night-border);
+}
+
+/* 手机端：略小字号，缩小标题色带 */
+@media (max-width: 600px) {
+  body:has(.party-handout) .md-typeset {
+    font-size: .82rem;
+    line-height: 1.9;
+  }
+  body:has(.party-handout) .md-typeset h1 { font-size: 1.55rem; }
+  body:has(.party-handout) .md-typeset h2 {
+    margin-top: 2.6rem;
+    padding: .5rem .7rem;
+    font-size: 1.3rem;
+  }
+  body:has(.party-handout) .md-typeset h3 { font-size: 1rem; }
+}
