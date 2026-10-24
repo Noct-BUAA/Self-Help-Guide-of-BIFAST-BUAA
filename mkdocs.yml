@@ -156,18 +156,18 @@ nav:
             - TD1 拓扑学解答: courses/year2/semester1/实分析/习题课/td1-topologie.md
             - TD2 数列解答: courses/year2/semester1/实分析/习题课/td2-suites.md
             - TD3 数列极限解答: courses/year2/semester1/实分析/习题课/td3-limites-suites.md
-        - 工程师数学工具:
-          - 课程总览: courses/year2/semester1/工程师数学工具/index.md
+        - 工程数学:
+          - 课程总览: courses/year2/semester1/工程数学/index.md
           - 课程讲义:
-            - 第 1 章 复数: courses/year2/semester1/工程师数学工具/课程讲义/01-nombres-complexes.md
-            - 第 2 章 三角学: courses/year2/semester1/工程师数学工具/课程讲义/02-trigonometrie.md
-            - 第 3 章 多项式: courses/year2/semester1/工程师数学工具/课程讲义/03-polynomes.md
-            - Fiche 5 研究实数数列: courses/year2/semester1/工程师数学工具/课程讲义/04-fiche5-suites.md
+            - 第 1 章 复数: courses/year2/semester1/工程数学/课程讲义/01-nombres-complexes.md
+            - 第 2 章 三角学: courses/year2/semester1/工程数学/课程讲义/02-trigonometrie.md
+            - 第 3 章 多项式: courses/year2/semester1/工程数学/课程讲义/03-polynomes.md
+            - Fiche 5 研究实数数列: courses/year2/semester1/工程数学/课程讲义/04-fiche5-suites.md
           - 习题课讲义:
-            - TD1 复数解答: courses/year2/semester1/工程师数学工具/习题课/td1-nombres-complexes.md
-            - TD2 三角学解答: courses/year2/semester1/工程师数学工具/习题课/td2-trigonometrie.md
-            - TD3 反三角函数解答: courses/year2/semester1/工程师数学工具/习题课/td3-fonctions-reciproques.md
-            - TD4 多项式解答: courses/year2/semester1/工程师数学工具/习题课/td4-polynomes.md
+            - TD1 复数解答: courses/year2/semester1/工程数学/习题课/td1-nombres-complexes.md
+            - TD2 三角学解答: courses/year2/semester1/工程数学/习题课/td2-trigonometrie.md
+            - TD3 反三角函数解答: courses/year2/semester1/工程数学/习题课/td3-fonctions-reciproques.md
+            - TD4 多项式解答: courses/year2/semester1/工程数学/习题课/td4-polynomes.md
       - 大二下学期:
         - 学期概览: courses/year2/semester2/index.md
 

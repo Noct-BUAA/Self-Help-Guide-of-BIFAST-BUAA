@@ -35,7 +35,7 @@ comments: true
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
-    <a class="df-announce__item" href="courses/year2/semester1/工程师数学工具/习题课/td4-polynomes/">
+    <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td4-polynomes/">
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
         <strong>多项式讲义扩充，TD4 上线</strong>
@@ -46,14 +46,14 @@ comments: true
       <span class="df-announce__tag df-announce__tag--exam">考试</span>
       <span class="df-announce__body">
         <strong>数学期中考试通知</strong>
-        <span>10 月 28 日（周三）14:00–17:00，实分析与工程师数学工具</span>
+        <span>10 月 28 日（周三）14:00–17:00，实分析与工程数学</span>
       </span>
     </a>
     <a class="df-announce__item" href="courses/year2/semester1/">
       <span class="df-announce__tag df-announce__tag--new">新课</span>
       <span class="df-announce__body">
         <strong>大二上学期课程上线</strong>
-        <span>实分析、工程师数学工具 · 中法对照讲义与 TD 参考解答</span>
+        <span>实分析、工程数学 · 中法对照讲义与 TD 参考解答</span>
       </span>
     </a>
   </div>
@@ -90,7 +90,7 @@ comments: true
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
-    <a class="df-announce__item" href="courses/year2/semester1/工程师数学工具/习题课/td4-polynomes/">
+    <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td4-polynomes/">
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
         <strong>多项式讲义扩充，TD4 上线</strong>
@@ -101,14 +101,14 @@ comments: true
       <span class="df-announce__tag df-announce__tag--exam">考试</span>
       <span class="df-announce__body">
         <strong>数学期中考试通知</strong>
-        <span>10 月 28 日（周三）14:00–17:00，实分析与工程师数学工具</span>
+        <span>10 月 28 日（周三）14:00–17:00，实分析与工程数学</span>
       </span>
     </a>
     <a class="df-announce__item" href="courses/year2/semester1/">
       <span class="df-announce__tag df-announce__tag--new">新课</span>
       <span class="df-announce__body">
         <strong>大二上学期课程上线</strong>
-        <span>实分析、工程师数学工具 · 中法对照讲义与 TD 参考解答</span>
+        <span>实分析、工程数学 · 中法对照讲义与 TD 参考解答</span>
       </span>
     </a>
   </div>
