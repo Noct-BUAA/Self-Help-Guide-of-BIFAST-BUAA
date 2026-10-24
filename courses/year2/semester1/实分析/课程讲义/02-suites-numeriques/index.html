@@ -2727,10 +2727,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#suites-reelles-convergentes" class="md-nav__link">
+  <a href="#suites-convergentes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Suites réelles convergentes 收敛实数列
+        Suites convergentes 收敛数列
       
     </span>
   </a>
@@ -2764,6 +2764,17 @@
     <span class="md-ellipsis">
       
         Théorème de limite monotone 单调极限定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparaison-de-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparaison de suites 数列的比较
       
     </span>
   </a>
@@ -3939,10 +3950,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#suites-reelles-convergentes" class="md-nav__link">
+  <a href="#suites-convergentes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Suites réelles convergentes 收敛实数列
+        Suites convergentes 收敛数列
       
     </span>
   </a>
@@ -3976,6 +3987,17 @@
     <span class="md-ellipsis">
       
         Théorème de limite monotone 单调极限定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparaison-de-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparaison de suites 数列的比较
       
     </span>
   </a>
@@ -4030,15 +4052,13 @@
 <h3 id="notations">Notations <span class="heading-zh">记号</span><a class="headerlink" href="#notations" title="Permanent link">&para;</a></h3>
 <p>On rappelle que <span class="arithmatex">\(\mathbb{N}\)</span> désigne l'ensemble des entiers <strong>naturels</strong>, <span class="arithmatex">\(\mathbb{Z}\)</span> désigne l'ensemble des entiers <strong>relatifs</strong>, <span class="arithmatex">\(\mathbb{R}\)</span> désigne l'ensemble des nombres <strong>réels</strong> et <span class="arithmatex">\(\mathbb{C}\)</span> désigne l'ensemble des nombres <strong>complexes</strong>.</p>
 <p class="zh">回忆：<span class="arithmatex">\(\mathbb{N}\)</span> 表示<strong>自然数</strong>集，<span class="arithmatex">\(\mathbb{Z}\)</span> 表示<strong>整数</strong>集（entiers relatifs）， <span class="arithmatex">\(\mathbb{R}\)</span> 表示<strong>实数</strong>集，<span class="arithmatex">\(\mathbb{C}\)</span> 表示<strong>复数</strong>集。</p>
-<p>Pour tout ce chapitre on fixe un entier <span class="arithmatex">\(n_0 \in \mathbb{Z}\)</span>.</p>
-<p class="zh">本章自始至终固定一个整数 <span class="arithmatex">\(n_0 \in \mathbb{Z}\)</span>。</p>
+<p>Pour tout ce chapitre, <span class="arithmatex">\(\mathbb{K}\)</span> désigne <span class="arithmatex">\(\mathbb{R}\)</span> ou <span class="arithmatex">\(\mathbb{C}\)</span> et on fixe un entier <span class="arithmatex">\(n_0 \in \mathbb{Z}\)</span>.</p>
+<p class="zh">本章自始至终，<span class="arithmatex">\(\mathbb{K}\)</span> 表示 <span class="arithmatex">\(\mathbb{R}\)</span> 或 <span class="arithmatex">\(\mathbb{C}\)</span>，并固定一个整数 <span class="arithmatex">\(n_0 \in \mathbb{Z}\)</span>。</p>
 <h2 id="suites-usuelles">Suites usuelles <span class="heading-zh">常用数列</span><a class="headerlink" href="#suites-usuelles" title="Permanent link">&para;</a></h2>
-<p>Dans cette section, <span class="arithmatex">\(\mathbb{K}\)</span> désigne <span class="arithmatex">\(\mathbb{R}\)</span> ou <span class="arithmatex">\(\mathbb{C}\)</span>.</p>
-<p class="zh">本节中，<span class="arithmatex">\(\mathbb{K}\)</span> 表示 <span class="arithmatex">\(\mathbb{R}\)</span> 或 <span class="arithmatex">\(\mathbb{C}\)</span>。</p>
 <div class="admonition success">
 <p class="admonition-title">Définition 1.1 : suite numérique<br><span class='zh-title'>定义 1.1：数列（suite numérique）</span></p>
-<p>Une <strong>suite numérique</strong> est une liste infinie de nombres de <span class="arithmatex">\(\mathbb{K}\)</span> de la forme :</p>
-<p class="zh">一个<strong>数列</strong>是 <span class="arithmatex">\(\mathbb{K}\)</span> 中一列无穷多个数，形如：</p>
+<p>Une <strong>suite numérique</strong>, ou simplement <strong>suite</strong>, est une liste infinie de nombres de <span class="arithmatex">\(\mathbb{K}\)</span> de la forme :</p>
+<p class="zh">一个<strong>数列</strong>（suite numérique，或简称 suite）是 <span class="arithmatex">\(\mathbb{K}\)</span> 中一列无穷多个数，形如：</p>
 <div class="arithmatex">\[
 u = (u_n)_{n\geqslant n_0} = \bigl(u_{n_0},\ u_{n_0+1},\ u_{n_0+2},\ u_{n_0+3},\ u_{n_0+4},\ u_{n_0+5},\ \dots\bigr).
 \]</div>
@@ -4236,28 +4256,28 @@ R = \max\bigl\{|u_{n_0}|,\ |u_{n_0+1}|,\ |u_{n_0+2}|,\ \dots,\ |u_{n_0+p-1}|\big
 <p class="admonition-title">Exemple 1.10<br><span class='zh-title'>例 1.10</span></p>
 <ul>
 <li>
-<p>La suite de Fibonacci <span class="arithmatex">\((F_n)_{n\geqslant 1} = (1,1,2,3,5,8,13,21,\dots)\)</span> est définie par <span class="arithmatex">\(F_1 = F_2 = 1\)</span> et la relation de récurrence <span class="arithmatex">\(\forall n \geqslant 1\)</span>, <span class="arithmatex">\(F_{n+2} = F_{n+1}+F_n\)</span>. On reconnaît une suite réelle récurrente linéaire d'ordre 2. Son équation caractéristique <span class="arithmatex">\(q^2-q-1 = 0\)</span> admet deux solutions réelles : <span class="arithmatex">\(q_1 = \frac{1+\sqrt{5}}{2} = \varphi\)</span> (appelé le <strong>nombre d'or</strong>) et <span class="arithmatex">\(q_2 = \frac{1-\sqrt{5}}{2} = -1/\varphi\)</span>. Par conséquent, il existe deux constantes <span class="arithmatex">\((\lambda_1,\lambda_2) \in \mathbb{R}^2\)</span> telles que :</p>
-<p class="zh">斐波那契数列 <span class="arithmatex">\((F_n)_{n\geqslant 1} = (1,1,2,3,5,8,13,21,\dots)\)</span> 由 <span class="arithmatex">\(F_1 = F_2 = 1\)</span> 及递推关系 <span class="arithmatex">\(\forall n \geqslant 1\)</span>，<span class="arithmatex">\(F_{n+2} = F_{n+1}+F_n\)</span> 定义。可辨认出这是二阶线性递推实数列。其特征方程 <span class="arithmatex">\(q^2-q-1 = 0\)</span> 有两个实根：<span class="arithmatex">\(q_1 = \frac{1+\sqrt{5}}{2} = \varphi\)</span>（称为<strong>黄金数</strong>，nombre d'or）与 <span class="arithmatex">\(q_2 = \frac{1-\sqrt{5}}{2} = -1/\varphi\)</span>。因此，存在两个常数 <span class="arithmatex">\((\lambda_1,\lambda_2) \in \mathbb{R}^2\)</span> 使得：</p>
+<p>La suite de Fibonacci <span class="arithmatex">\((F_n)_{n\geqslant 1} = (1,1,2,3,5,8,13,21,\dots)\)</span> est définie par <span class="arithmatex">\(F_1 = F_2 = 1\)</span> et la relation de récurrence <span class="arithmatex">\(\forall n \geqslant 1\)</span>, <span class="arithmatex">\(F_{n+2} = F_{n+1}+F_n\)</span>. On reconnaît une suite réelle récurrente linéaire d'ordre 2. Son équation caractéristique <span class="arithmatex">\(q^2-q-1 = 0\)</span> admet deux solutions réelles : <span class="arithmatex">\(q_1 = \frac{1+\sqrt{5}}{2} = \phi\)</span> (appelé le <strong>nombre d'or</strong>) et <span class="arithmatex">\(q_2 = \frac{1-\sqrt{5}}{2} = -1/\phi\)</span>. Par conséquent, il existe deux constantes <span class="arithmatex">\((\lambda_1,\lambda_2) \in \mathbb{R}^2\)</span> telles que :</p>
+<p class="zh">斐波那契数列 <span class="arithmatex">\((F_n)_{n\geqslant 1} = (1,1,2,3,5,8,13,21,\dots)\)</span> 由 <span class="arithmatex">\(F_1 = F_2 = 1\)</span> 及递推关系 <span class="arithmatex">\(\forall n \geqslant 1\)</span>，<span class="arithmatex">\(F_{n+2} = F_{n+1}+F_n\)</span> 定义。可辨认出这是二阶线性递推实数列。其特征方程 <span class="arithmatex">\(q^2-q-1 = 0\)</span> 有两个实根：<span class="arithmatex">\(q_1 = \frac{1+\sqrt{5}}{2} = \phi\)</span>（称为<strong>黄金数</strong>，nombre d'or）与 <span class="arithmatex">\(q_2 = \frac{1-\sqrt{5}}{2} = -1/\phi\)</span>。因此，存在两个常数 <span class="arithmatex">\((\lambda_1,\lambda_2) \in \mathbb{R}^2\)</span> 使得：</p>
 <div class="arithmatex">\[
-\forall n \geqslant 1,\ F_n = \lambda_1\varphi^{n-1} + \frac{\lambda_2}{(-\varphi)^{n-1}}.
+\forall n \geqslant 1,\ F_n = \lambda_1\phi^{n-1} + \frac{\lambda_2}{(-\phi)^{n-1}}.
 \]</div>
 <p>En particulier, pour <span class="arithmatex">\(n = 1\)</span> et <span class="arithmatex">\(n = 2\)</span>, on obtient :</p>
 <p class="zh">特别地，取 <span class="arithmatex">\(n = 1\)</span> 与 <span class="arithmatex">\(n = 2\)</span>，得到：</p>
 <div class="arithmatex">\[
 \begin{cases}
 1 = \lambda_1 + \lambda_2 \\[2pt]
-1 = \varphi\lambda_1 - \dfrac{\lambda_2}{\varphi}
+1 = \phi\lambda_1 - \dfrac{\lambda_2}{\phi}
 \end{cases}
 \qquad\text{donc}\qquad
 \begin{cases}
-\lambda_1 = \dfrac{\frac{1}{\varphi}+1}{\frac{1}{\varphi}+\varphi} = \dfrac{\varphi}{\sqrt{5}} \\[10pt]
-\lambda_2 = \dfrac{\varphi-1}{\varphi+\frac{1}{\varphi}} = \dfrac{1}{\varphi\sqrt{5}}
+\lambda_1 = \dfrac{\frac{1}{\phi}+1}{\frac{1}{\phi}+\phi} = \dfrac{\phi}{\sqrt{5}} \\[10pt]
+\lambda_2 = \dfrac{\phi-1}{\phi+\frac{1}{\phi}} = \dfrac{1}{\phi\sqrt{5}}
 \end{cases}
 \]</div>
 <p>Finalement :</p>
 <p class="zh">最终：</p>
 <div class="arithmatex">\[
-\forall n \geqslant 1,\ F_n = \frac{\sqrt{5}}{5}\left(\varphi^n - \frac{1}{(-\varphi)^n}\right).
+\forall n \geqslant 1,\ F_n = \frac{\sqrt{5}}{5}\left(\phi^n - \frac{1}{(-\phi)^n}\right).
 \]</div>
 </li>
 <li>
@@ -4304,15 +4324,15 @@ B = \frac{2}{\sqrt{3}}\left(3 - \frac{2}{2}\right) = \frac{4\sqrt{3}}{3}.
 <li><strong>suite auxiliaire</strong>：辅助数列</li>
 <li><strong>équation caractéristique</strong>：特征方程</li>
 <li><strong>discriminant</strong>：判别式</li>
-<li><strong>nombre d'or <span class="arithmatex">\(\varphi\)</span></strong>：黄金数 <span class="arithmatex">\(\varphi\)</span></li>
+<li><strong>nombre d'or <span class="arithmatex">\(\phi\)</span></strong>：黄金数 <span class="arithmatex">\(\phi\)</span></li>
 <li><strong>vérifier</strong>：满足（方程、关系）；验证 —— 数学高频词</li>
 <li><strong>admettre une unique solution</strong>：有唯一解</li>
 <li><strong>on reconnaît…</strong>：可辨认出……（解题套语）</li>
 </ul>
 </div>
 <h2 id="suites-reelles">Suites réelles <span class="heading-zh">实数列</span><a class="headerlink" href="#suites-reelles" title="Permanent link">&para;</a></h2>
-<p>Dans la suite du chapitre, on considère seulement des <strong>suites réelles</strong>, c'est-à-dire <span class="arithmatex">\(\mathbb{K} = \mathbb{R}\)</span>.</p>
-<p class="zh">本章余下部分只考虑<strong>实数列</strong>，即 <span class="arithmatex">\(\mathbb{K} = \mathbb{R}\)</span>。</p>
+<p>Dans cette section, on considère seulement des <strong>suites réelles</strong>, c'est-à-dire <span class="arithmatex">\(\mathbb{K} = \mathbb{R}\)</span>.</p>
+<p class="zh">本节只考虑<strong>实数列</strong>，即 <span class="arithmatex">\(\mathbb{K} = \mathbb{R}\)</span>。</p>
 <div class="admonition success">
 <p class="admonition-title">Définition 2.1 : suite majorée, minorée<br><span class='zh-title'>定义 2.1：有上界的数列、有下界的数列</span></p>
 <p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite réelle.</p>
@@ -4408,11 +4428,11 @@ B = \frac{2}{\sqrt{3}}\left(3 - \frac{2}{2}\right) = \frac{4\sqrt{3}}{3}.
 <div class="arithmatex">\[
 \forall x \in [-1,+\infty[,\quad
 \begin{cases}
-f(x) &gt; x &amp; \text{si } x \in [-1,\varphi[,\\
-f(x) = x &amp; \text{si } x = \varphi,\\
-f(x) &lt; x &amp; \text{si } x &gt; \varphi,
+f(x) &gt; x &amp; \text{si } x \in [-1,\phi[,\\
+f(x) = x &amp; \text{si } x = \phi,\\
+f(x) &lt; x &amp; \text{si } x &gt; \phi,
 \end{cases}
-\qquad\text{où } \varphi = \frac{1+\sqrt{5}}{2} \text{ (le nombre d'or).}
+\qquad\text{où } \phi = \frac{1+\sqrt{5}}{2} \text{ (le nombre d'or).}
 \]</div>
 <p>On peut alors tracer sur un même graphique : la droite d'équation <span class="arithmatex">\(y = x\)</span>, la courbe représentative de <span class="arithmatex">\(f\)</span> et les premiers termes de <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span>.</p>
 <p class="zh">于是可以在同一张图上画出：直线 <span class="arithmatex">\(y = x\)</span>、<span class="arithmatex">\(f\)</span> 的图像以及 <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> 的前几项。</p>
@@ -4420,19 +4440,19 @@ f(x) &lt; x &amp; \text{si } x &gt; \varphi,
 <p>On conjecture que <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> est bornée et strictement croissante. Plus précisément, on va montrer par récurrence que :</p>
 <p class="zh">猜测 <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> 有界且严格递增。更确切地说，我们用归纳法证明：</p>
 <div class="arithmatex">\[
-\forall n \geqslant 0,\quad 1 \leqslant u_n &lt; u_{n+1} &lt; \varphi.
+\forall n \geqslant 0,\quad 1 \leqslant u_n &lt; u_{n+1} &lt; \phi.
 \]</div>
 <ul>
 <li>
-<p><u>Initialisation.</u> On a <span class="arithmatex">\(u_0 = 1\)</span> et <span class="arithmatex">\(u_1 = \sqrt{2}\)</span>. Or <span class="arithmatex">\(1 &lt; \sqrt{2}\)</span>, et <span class="arithmatex">\(\varphi = \frac{1+\sqrt{5}}{2} &gt; \frac{1+\sqrt{1}}{2} = 1\)</span> donc <span class="arithmatex">\(\varphi = \sqrt{1+\varphi} &gt; \sqrt{1+1} = \sqrt{2}\)</span>. Ainsi, le résultat est vrai pour <span class="arithmatex">\(n = 0\)</span> : <span class="arithmatex">\(1 \leqslant u_0 &lt; u_1 &lt; \varphi\)</span>.</p>
-<p class="zh"><u>初始步.</u> 有 <span class="arithmatex">\(u_0 = 1\)</span>，<span class="arithmatex">\(u_1 = \sqrt{2}\)</span>。因为 <span class="arithmatex">\(1 &lt; \sqrt{2}\)</span>，且 <span class="arithmatex">\(\varphi = \frac{1+\sqrt{5}}{2} &gt; \frac{1+\sqrt{1}}{2} = 1\)</span>，所以 <span class="arithmatex">\(\varphi = \sqrt{1+\varphi} &gt; \sqrt{1+1} = \sqrt{2}\)</span>。因此，结论对 <span class="arithmatex">\(n = 0\)</span> 成立：<span class="arithmatex">\(1 \leqslant u_0 &lt; u_1 &lt; \varphi\)</span>。</p>
+<p><u>Initialisation.</u> On a <span class="arithmatex">\(u_0 = 1\)</span> et <span class="arithmatex">\(u_1 = \sqrt{2}\)</span>. Or <span class="arithmatex">\(1 &lt; \sqrt{2}\)</span>, et <span class="arithmatex">\(\phi = \frac{1+\sqrt{5}}{2} &gt; \frac{1+\sqrt{1}}{2} = 1\)</span> donc <span class="arithmatex">\(\phi = \sqrt{1+\phi} &gt; \sqrt{1+1} = \sqrt{2}\)</span>. Ainsi, le résultat est vrai pour <span class="arithmatex">\(n = 0\)</span> : <span class="arithmatex">\(1 \leqslant u_0 &lt; u_1 &lt; \phi\)</span>.</p>
+<p class="zh"><u>初始步.</u> 有 <span class="arithmatex">\(u_0 = 1\)</span>，<span class="arithmatex">\(u_1 = \sqrt{2}\)</span>。因为 <span class="arithmatex">\(1 &lt; \sqrt{2}\)</span>，且 <span class="arithmatex">\(\phi = \frac{1+\sqrt{5}}{2} &gt; \frac{1+\sqrt{1}}{2} = 1\)</span>，所以 <span class="arithmatex">\(\phi = \sqrt{1+\phi} &gt; \sqrt{1+1} = \sqrt{2}\)</span>。因此，结论对 <span class="arithmatex">\(n = 0\)</span> 成立：<span class="arithmatex">\(1 \leqslant u_0 &lt; u_1 &lt; \phi\)</span>。</p>
 </li>
 <li>
-<p><u>Hérédité.</u> On suppose que <span class="arithmatex">\(1 \leqslant u_n &lt; u_{n+1} &lt; \varphi\)</span> est vrai pour un rang <span class="arithmatex">\(n \geqslant 0\)</span> fixé. Puisque <span class="arithmatex">\(f\)</span> est strictement croissante, on en déduit que :</p>
-<p class="zh"><u>归纳步.</u> 设结论对某个固定的 <span class="arithmatex">\(n \geqslant 0\)</span> 成立，即 <span class="arithmatex">\(1 \leqslant u_n &lt; u_{n+1} &lt; \varphi\)</span>。由于 <span class="arithmatex">\(f\)</span> 严格递增，可得：</p>
+<p><u>Hérédité.</u> On suppose que <span class="arithmatex">\(1 \leqslant u_n &lt; u_{n+1} &lt; \phi\)</span> est vrai pour un rang <span class="arithmatex">\(n \geqslant 0\)</span> fixé. Puisque <span class="arithmatex">\(f\)</span> est strictement croissante, on en déduit que :</p>
+<p class="zh"><u>归纳步.</u> 设结论对某个固定的 <span class="arithmatex">\(n \geqslant 0\)</span> 成立，即 <span class="arithmatex">\(1 \leqslant u_n &lt; u_{n+1} &lt; \phi\)</span>。由于 <span class="arithmatex">\(f\)</span> 严格递增，可得：</p>
 <div class="arithmatex">\[
 1 &lt; \underbrace{f(1)}_{=\sqrt{2}} \leqslant \underbrace{f(u_n)}_{=u_{n+1}}
-  &lt; \underbrace{f(u_{n+1})}_{=u_{n+2}} &lt; \underbrace{f(\varphi)}_{=\varphi}.
+  &lt; \underbrace{f(u_{n+1})}_{=u_{n+2}} &lt; \underbrace{f(\phi)}_{=\phi}.
 \]</div>
 <p>Ainsi, le résultat est vrai aussi au rang <span class="arithmatex">\(n+1\)</span>.</p>
 <p class="zh">因此，结论对 <span class="arithmatex">\(n+1\)</span> 也成立。</p>
@@ -4481,16 +4501,16 @@ f(x) &lt; x &amp; \text{si } x &gt; \varphi,
 <li><strong>étudier une suite</strong>：研究一个数列（单调性、有界性、极限）</li>
 </ul>
 </div>
-<h2 id="suites-reelles-convergentes">Suites réelles convergentes <span class="heading-zh">收敛实数列</span><a class="headerlink" href="#suites-reelles-convergentes" title="Permanent link">&para;</a></h2>
+<h2 id="suites-convergentes">Suites convergentes <span class="heading-zh">收敛数列</span><a class="headerlink" href="#suites-convergentes" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">Définition 3.1 : suite convergente<br><span class='zh-title'>定义 3.1：收敛数列（suite convergente）</span></p>
-<p>Une suite réelle <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est dite <strong>convergente</strong> lorsque :</p>
+<p>Une suite <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est dite <strong>convergente</strong> lorsque :</p>
 <div class="arithmatex">\[
-\exists \ell \in \mathbb{R},\ \forall \varepsilon &gt; 0,\ \exists N \geqslant n_0,\ \forall n \geqslant N,\ |u_n-\ell| &lt; \varepsilon.
+\exists \ell \in \mathbb{K},\ \forall \varepsilon &gt; 0,\ \exists N \geqslant n_0,\ \forall n \geqslant N,\ |u_n-\ell| &lt; \varepsilon.
 \]</div>
-<p class="zh">若存在 <span class="arithmatex">\(\ell \in \mathbb{R}\)</span>，使得对任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，都存在 <span class="arithmatex">\(N \geqslant n_0\)</span>，当 <span class="arithmatex">\(n \geqslant N\)</span> 时都有 <span class="arithmatex">\(|u_n-\ell| &lt; \varepsilon\)</span>，则称实数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是<strong>收敛的</strong>（convergente）。</p>
-<p>Autrement dit, <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est convergente s'il existe un nombre réel <span class="arithmatex">\(\ell\)</span> tel que tout voisinage de <span class="arithmatex">\(\ell\)</span> contient tous les termes de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> à partir d'un certain rang.</p>
-<p class="zh">换言之，若存在实数 <span class="arithmatex">\(\ell\)</span>，使得 <span class="arithmatex">\(\ell\)</span> 的每个<strong>邻域</strong>（voisinage）都包含 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 从某一项起的所有项，则 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛。</p>
+<p class="zh">若存在 <span class="arithmatex">\(\ell \in \mathbb{K}\)</span>，使得对任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，都存在 <span class="arithmatex">\(N \geqslant n_0\)</span>，当 <span class="arithmatex">\(n \geqslant N\)</span> 时都有 <span class="arithmatex">\(|u_n-\ell| &lt; \varepsilon\)</span>，则称数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是<strong>收敛的</strong>（convergente）。</p>
+<p>Autrement dit, <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est convergente s'il existe un nombre <span class="arithmatex">\(\ell\)</span> tel que tout voisinage de <span class="arithmatex">\(\ell\)</span> contient tous les termes de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> à partir d'un certain rang.</p>
+<p class="zh">换言之，若存在数 <span class="arithmatex">\(\ell\)</span>，使得 <span class="arithmatex">\(\ell\)</span> 的每个<strong>邻域</strong>（voisinage）都包含 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 从某一项起的所有项，则 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛。</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Exemple 3.2<br><span class='zh-title'>例 3.2</span></p>
@@ -4505,8 +4525,8 @@ f(x) &lt; x &amp; \text{si } x &gt; \varphi,
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Important<br><span class='zh-title'>重要（Important）</span></p>
-<p>En général, <span class="arithmatex">\(N\)</span> dépend de <span class="arithmatex">\(\varepsilon\)</span> : plus <span class="arithmatex">\(\varepsilon\)</span> est proche de <span class="arithmatex">\(0\)</span>, plus le rang <span class="arithmatex">\(N\)</span> à partir duquel tous les termes de la suite appartiennent au voisinage <span class="arithmatex">\(]\ell-\varepsilon,\ell+\varepsilon[\)</span> doit être grand.</p>
-<p class="zh">一般来说，<span class="arithmatex">\(N\)</span> 依赖于 <span class="arithmatex">\(\varepsilon\)</span>：<span class="arithmatex">\(\varepsilon\)</span> 越接近 <span class="arithmatex">\(0\)</span>，使数列从某一项起的所有项都落入邻域 <span class="arithmatex">\(]\ell-\varepsilon,\ell+\varepsilon[\)</span> 所需的序号 <span class="arithmatex">\(N\)</span> 就越大。</p>
+<p>En général, <span class="arithmatex">\(N\)</span> dépend de <span class="arithmatex">\(\varepsilon\)</span> : plus <span class="arithmatex">\(\varepsilon\)</span> est proche de <span class="arithmatex">\(0\)</span>, plus il faut aller loin dans la suite pour que tous les termes soient à une distance de <span class="arithmatex">\(\ell\)</span> inférieure à <span class="arithmatex">\(\varepsilon\)</span>.</p>
+<p class="zh">一般来说，<span class="arithmatex">\(N\)</span> 依赖于 <span class="arithmatex">\(\varepsilon\)</span>：<span class="arithmatex">\(\varepsilon\)</span> 越接近 <span class="arithmatex">\(0\)</span>，就需要在数列中走得越远，才能使从某一项起的所有项与 <span class="arithmatex">\(\ell\)</span> 的距离都小于 <span class="arithmatex">\(\varepsilon\)</span>。</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Attention<br><span class='zh-title'>注意（Attention）</span></p>
@@ -4515,41 +4535,39 @@ f(x) &lt; x &amp; \text{si } x &gt; \varphi,
 </div>
 <div class="admonition danger">
 <p class="admonition-title">Théorème 3.3 : unicité de la limite<br><span class='zh-title'>定理 3.3：极限的唯一性</span></p>
-<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite convergente. Alors le nombre réel <span class="arithmatex">\(\ell\)</span> de la définition 3.1 est unique. On l'appelle la <strong>limite</strong> de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span>. On dit aussi que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> <strong>converge vers</strong> <span class="arithmatex">\(\ell\)</span> ou que <span class="arithmatex">\(u_n\)</span> <strong>tend vers</strong> <span class="arithmatex">\(\ell\)</span> quand <span class="arithmatex">\(n\)</span> tend vers <span class="arithmatex">\(+\infty\)</span>, et on note :</p>
-<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是收敛数列。则定义 3.1 中的实数 <span class="arithmatex">\(\ell\)</span> 是唯一的，称它为 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 的<strong>极限</strong>（limite）。也说 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> <strong>收敛于</strong> <span class="arithmatex">\(\ell\)</span>，或当 <span class="arithmatex">\(n\)</span> 趋于 <span class="arithmatex">\(+\infty\)</span> 时 <span class="arithmatex">\(u_n\)</span> <strong>趋于</strong> <span class="arithmatex">\(\ell\)</span>，并记作：</p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite convergente. Alors le nombre <span class="arithmatex">\(\ell\)</span> de la définition 3.1 est unique. On l'appelle la <strong>limite</strong> de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span>. On dit aussi que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> <strong>converge vers</strong> <span class="arithmatex">\(\ell\)</span> ou que <span class="arithmatex">\(u_n\)</span> <strong>tend vers</strong> <span class="arithmatex">\(\ell\)</span> quand <span class="arithmatex">\(n\)</span> tend vers <span class="arithmatex">\(+\infty\)</span>, et on note :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是收敛数列。则定义 3.1 中的数 <span class="arithmatex">\(\ell\)</span> 是唯一的，称它为 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 的<strong>极限</strong>（limite）。也说 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> <strong>收敛于</strong> <span class="arithmatex">\(\ell\)</span>，或当 <span class="arithmatex">\(n\)</span> 趋于 <span class="arithmatex">\(+\infty\)</span> 时 <span class="arithmatex">\(u_n\)</span> <strong>趋于</strong> <span class="arithmatex">\(\ell\)</span>，并记作：</p>
 <div class="arithmatex">\[
 \ell = \lim_{n\to+\infty} u_n.
 \]</div>
 </div>
 <div class="admonition demo">
-<p><strong>Démonstration.</strong> Par l'absurde, on suppose qu'il existe deux nombres réels <span class="arithmatex">\(\ell_1 &lt; \ell_2\)</span> tels que :</p>
+<p><strong>Démonstration.</strong> Par l'absurde, on suppose qu'il existe deux nombres <span class="arithmatex">\(\ell_1 \neq \ell_2\)</span> tels que :</p>
 <div class="arithmatex">\[
 \begin{cases}
 \forall \varepsilon &gt; 0,\ \exists N_1 \geqslant n_0,\ \forall n \geqslant N_1,\ |u_n-\ell_1| &lt; \varepsilon,\\[2pt]
 \forall \varepsilon &gt; 0,\ \exists N_2 \geqslant n_0,\ \forall n \geqslant N_2,\ |u_n-\ell_2| &lt; \varepsilon.
 \end{cases}
 \]</div>
-<p class="zh"><strong>证明.</strong> 用反证法，假设存在两个实数 <span class="arithmatex">\(\ell_1 &lt; \ell_2\)</span> 使得：</p>
+<p class="zh"><strong>证明.</strong> 用反证法，假设存在两个数 <span class="arithmatex">\(\ell_1 \neq \ell_2\)</span> 使得：</p>
 <div class="admonition warning">
 <p class="admonition-title">Attention<br><span class='zh-title'>注意（Attention）</span></p>
 <p>Le rang <span class="arithmatex">\(N\)</span> pour <span class="arithmatex">\(\ell_1\)</span> n'est pas nécessairement égal au rang <span class="arithmatex">\(N\)</span> pour <span class="arithmatex">\(\ell_2\)</span> !</p>
 <p class="zh">对应于 <span class="arithmatex">\(\ell_1\)</span> 的序号 <span class="arithmatex">\(N\)</span> 不一定等于对应于 <span class="arithmatex">\(\ell_2\)</span> 的序号 <span class="arithmatex">\(N\)</span>！</p>
 </div>
-<p>Il suffit de choisir <span class="arithmatex">\(\varepsilon &gt; 0\)</span> afin que <span class="arithmatex">\(\varepsilon &lt; \frac{\ell_2-\ell_1}{2}\)</span>, par exemple <span class="arithmatex">\(\varepsilon = \frac{\ell_2-\ell_1}{3}\)</span>. En effet, on a alors pour tout <span class="arithmatex">\(n \geqslant \max\{N_1,N_2\}\)</span>, <span class="arithmatex">\(u_n \in\,]\ell_1-\varepsilon,\ell_1+\varepsilon[\,\cap\,]\ell_2-\varepsilon,\ell_2+\varepsilon[\)</span>. En particulier :</p>
-<p class="zh">只需选取 <span class="arithmatex">\(\varepsilon &gt; 0\)</span> 使 <span class="arithmatex">\(\varepsilon &lt; \frac{\ell_2-\ell_1}{2}\)</span>，例如取 <span class="arithmatex">\(\varepsilon = \frac{\ell_2-\ell_1}{3}\)</span>。事实上，此时对一切 <span class="arithmatex">\(n \geqslant \max\{N_1,N_2\}\)</span>，都有 <span class="arithmatex">\(u_n \in\,]\ell_1-\varepsilon,\ell_1+\varepsilon[\,\cap\,]\ell_2-\varepsilon,\ell_2+\varepsilon[\)</span>。特别地：</p>
+<p>Il suffit de choisir <span class="arithmatex">\(\varepsilon &gt; 0\)</span> afin que <span class="arithmatex">\(\varepsilon &lt; \frac{|\ell_2-\ell_1|}{2}\)</span>, par exemple <span class="arithmatex">\(\varepsilon = \frac{|\ell_2-\ell_1|}{3}\)</span>. En effet, on a alors, pour tout <span class="arithmatex">\(n \geqslant \max\{N_1,N_2\}\)</span>, d'après l'inégalité triangulaire :</p>
+<p class="zh">只需选取 <span class="arithmatex">\(\varepsilon &gt; 0\)</span> 使 <span class="arithmatex">\(\varepsilon &lt; \frac{|\ell_2-\ell_1|}{2}\)</span>，例如取 <span class="arithmatex">\(\varepsilon = \frac{|\ell_2-\ell_1|}{3}\)</span>。事实上，此时对一切 <span class="arithmatex">\(n \geqslant \max\{N_1,N_2\}\)</span>，由三角不等式有：</p>
 <div class="arithmatex">\[
-\ell_2-\varepsilon &lt; u_n &lt; \ell_1+\varepsilon
-\quad\text{donc}\quad
-\ell_2-\ell_1 &lt; 2\varepsilon = \frac{2}{3}(\ell_2-\ell_1)
+|\ell_2-\ell_1| = \bigl|-(u_n-\ell_2)+u_n-\ell_1\bigr| \leqslant |u_n-\ell_2|+|u_n-\ell_1| &lt; 2\varepsilon = \frac{2}{3}|\ell_2-\ell_1|
 \]</div>
-<p>ce qui est absurde car <span class="arithmatex">\(\ell_2-\ell_1 &gt; 0\)</span>.</p>
-<p class="zh">这与 <span class="arithmatex">\(\ell_2-\ell_1 &gt; 0\)</span> 矛盾，故为荒谬。</p>
+<p>ce qui est absurde car <span class="arithmatex">\(|\ell_2-\ell_1| &gt; 0\)</span>.</p>
+<p class="zh">这与 <span class="arithmatex">\(|\ell_2-\ell_1| &gt; 0\)</span> 矛盾，故为荒谬。</p>
 <p><p class="cqfd">∎</p></p>
 </div>
 <div class="admonition danger">
 <p class="admonition-title">Théorème 3.4<br><span class='zh-title'>定理 3.4</span></p>
-<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite réelle. Alors :</p>
-<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是实数列。则：</p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite. Alors :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是数列。则：</p>
 <div class="arithmatex">\[
 (u_n)_{n\geqslant n_0} \text{ est convergente} \implies (u_n)_{n\geqslant n_0} \text{ est bornée.}
 \]</div>
@@ -4559,19 +4577,22 @@ f(x) &lt; x &amp; \text{si } x &gt; \varphi,
 <p class="zh"><strong>证明.</strong></p>
 <div class="admonition danger">
 <p class="admonition-title">Lemme 3.5<br><span class='zh-title'>引理 3.5</span></p>
-<p>Soit <span class="arithmatex">\((a,b) \in \mathbb{R}^2\)</span> tel que <span class="arithmatex">\(a &lt; b\)</span>. Si <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est une suite réelle qui converge vers <span class="arithmatex">\(\ell \in\,]a,b[\)</span>, alors <span class="arithmatex">\(]a,b[\)</span> contient tous les termes de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> à partir d'un certain rang :</p>
-<p class="zh">设 <span class="arithmatex">\((a,b) \in \mathbb{R}^2\)</span> 且 <span class="arithmatex">\(a &lt; b\)</span>。若实数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛于 <span class="arithmatex">\(\ell \in\,]a,b[\)</span>，则 <span class="arithmatex">\(]a,b[\)</span> 包含 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 从某一项起的所有项：</p>
+<p>Si <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est une suite qui converge vers <span class="arithmatex">\(\ell \in D(c,r) = \{x \in \mathbb{K} \mid |x-c| &lt; r\}\)</span> où <span class="arithmatex">\(c \in \mathbb{K}\)</span> et <span class="arithmatex">\(r &gt; 0\)</span>, alors <span class="arithmatex">\(D(c,r)\)</span> contient tous les termes de <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> à partir d'un certain rang :</p>
+<p class="zh">若数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛于 <span class="arithmatex">\(\ell \in D(c,r) = \{x \in \mathbb{K} \mid |x-c| &lt; r\}\)</span>（其中 <span class="arithmatex">\(c \in \mathbb{K}\)</span>，<span class="arithmatex">\(r &gt; 0\)</span>），则 <span class="arithmatex">\(D(c,r)\)</span> 包含 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 从某一项起的所有项：</p>
 <div class="arithmatex">\[
-\exists N \geqslant n_0,\ \forall n \geqslant N,\ u_n \in\,]a,b[.
+\exists N \geqslant n_0,\ \forall n \geqslant N,\ u_n \in D(c,r).
 \]</div>
 </div>
-<p><strong>Démonstration.</strong> Il suffit de poser <span class="arithmatex">\(\varepsilon = \min\{b-\ell,\ell-a\} &gt; 0\)</span> dans la définition.</p>
-<p class="zh"><strong>证明.</strong> 只需在定义中取 <span class="arithmatex">\(\varepsilon = \min\{b-\ell,\ell-a\} &gt; 0\)</span>。</p>
-<p><p class="cqfd">∎</p></p>
-<p>On suppose que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> converge et on note <span class="arithmatex">\(\ell\)</span> sa limite. Puisque <span class="arithmatex">\(\ell \in\,]-\lvert\ell\rvert-1,\lvert\ell\rvert+1[\)</span>, on sait d'après le lemme 3.5 que :</p>
-<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛，记其极限为 <span class="arithmatex">\(\ell\)</span>。因为 <span class="arithmatex">\(\ell \in\,]-\lvert\ell\rvert-1,\lvert\ell\rvert+1[\)</span>，由引理 3.5 可知：</p>
+<p><strong>Démonstration.</strong> Il suffit de poser <span class="arithmatex">\(\varepsilon = r-\lvert\ell-c\rvert &gt; 0\)</span> dans la définition 3.1, car on a alors, d'après l'inégalité triangulaire :</p>
+<p class="zh"><strong>证明.</strong> 只需在定义 3.1 中取 <span class="arithmatex">\(\varepsilon = r-\lvert\ell-c\rvert &gt; 0\)</span>，因为此时由三角不等式有：</p>
 <div class="arithmatex">\[
-\exists N \geqslant n_0,\ \forall n \geqslant N,\ |u_n| &lt; |\ell|+1.
+\forall n \geqslant N,\quad |u_n-c| = |u_n-\ell+\ell-c| \leqslant |u_n-\ell|+|\ell-c| &lt; \varepsilon+|\ell-c| = r.
+\]</div>
+<p><p class="cqfd">∎</p></p>
+<p>On suppose que <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> converge et on note <span class="arithmatex">\(\ell\)</span> sa limite. On sait d'après le lemme 3.5 que :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛，记其极限为 <span class="arithmatex">\(\ell\)</span>。由引理 3.5 可知：</p>
+<div class="arithmatex">\[
+\exists N \geqslant n_0,\ \forall n \geqslant N,\ u_n \in D(0,|\ell|+1) \quad\text{donc}\quad |u_n| &lt; |\ell|+1.
 \]</div>
 <p>Par conséquent :</p>
 <p class="zh">因此：</p>
@@ -4591,8 +4612,8 @@ R = \max\bigl\{|u_{n_0}|,\ |u_{n_0+1}|,\ \dots,\ |u_{N-1}|,\ |\ell|+1\bigr\}.
 \]</div>
 </div>
 <div class="admonition demo">
-<p><strong>Démonstration.</strong> D'après le lemme 3.5, en posant <span class="arithmatex">\(a = 0\)</span>.</p>
-<p class="zh"><strong>证明.</strong> 由引理 3.5，取 <span class="arithmatex">\(a = 0\)</span> 即可。</p>
+<p><strong>Démonstration.</strong> D'après le lemme 3.5, en posant <span class="arithmatex">\(c = r = \ell\)</span> car <span class="arithmatex">\(D(\ell,\ell) =\,]0,2\ell[\)</span>.</p>
+<p class="zh"><strong>证明.</strong> 由引理 3.5，取 <span class="arithmatex">\(c = r = \ell\)</span>，因为 <span class="arithmatex">\(D(\ell,\ell) =\,]0,2\ell[\)</span>。</p>
 <p><p class="cqfd">∎</p></p>
 </div>
 <div class="admonition warning">
@@ -4614,6 +4635,8 @@ R = \max\bigl\{|u_{n_0}|,\ |u_{n_0+1}|,\ \dots,\ |u_{N-1}|,\ |\ell|+1\bigr\}.
 </ul>
 </div>
 <h2 id="suites-reelles-divergentes-vers-linfini">Suites réelles divergentes vers l'infini <span class="heading-zh">发散到无穷的实数列</span><a class="headerlink" href="#suites-reelles-divergentes-vers-linfini" title="Permanent link">&para;</a></h2>
+<p>Dans les sections suivantes, on considère seulement des suites réelles, c'est-à-dire <span class="arithmatex">\(\mathbb{K} = \mathbb{R}\)</span>.</p>
+<p class="zh">以下各节只考虑实数列，即 <span class="arithmatex">\(\mathbb{K} = \mathbb{R}\)</span>。</p>
 <div class="admonition success">
 <p class="admonition-title">Définition 4.1 : suite divergente vers l'infini<br><span class='zh-title'>定义 4.1：发散到无穷的数列</span></p>
 <p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite réelle.</p>
@@ -4651,8 +4674,8 @@ R = \max\bigl\{|u_{n_0}|,\ |u_{n_0+1}|,\ \dots,\ |u_{N-1}|,\ |\ell|+1\bigr\}.
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Important<br><span class='zh-title'>重要（Important）</span></p>
-<p>En général, <span class="arithmatex">\(N\)</span> dépend de <span class="arithmatex">\(A\)</span> : plus <span class="arithmatex">\(A\)</span> est grand, plus le rang <span class="arithmatex">\(N\)</span> à partir duquel tous les termes de la suite appartiennent à <span class="arithmatex">\(]A,+\infty[\)</span> doit être grand.</p>
-<p class="zh">一般来说，<span class="arithmatex">\(N\)</span> 依赖于 <span class="arithmatex">\(A\)</span>：<span class="arithmatex">\(A\)</span> 越大，使数列从某一项起的所有项都落入 <span class="arithmatex">\(]A,+\infty[\)</span> 所需的序号 <span class="arithmatex">\(N\)</span> 就越大。</p>
+<p>En général, <span class="arithmatex">\(N\)</span> dépend de <span class="arithmatex">\(A\)</span> : plus <span class="arithmatex">\(A\)</span> est grand, plus il faut aller loin dans la suite pour que tous les termes appartiennent à <span class="arithmatex">\(]A,+\infty[\)</span>.</p>
+<p class="zh">一般来说，<span class="arithmatex">\(N\)</span> 依赖于 <span class="arithmatex">\(A\)</span>：<span class="arithmatex">\(A\)</span> 越大，就需要在数列中走得越远，才能使从某一项起的所有项都落入 <span class="arithmatex">\(]A,+\infty[\)</span>。</p>
 </div>
 <div class="admonition danger">
 <p class="admonition-title">Propriété 4.3<br><span class='zh-title'>性质 4.3</span></p>
@@ -4839,6 +4862,11 @@ R = \max\bigl\{|u_{n_0}|,\ |u_{n_0+1}|,\ \dots,\ |u_{N-1}|,\ |\ell|+1\bigr\}.
 <p class="admonition-title">Important<br><span class='zh-title'>重要（Important）</span></p>
 <p>Dans ces tableaux, <span class="arithmatex">\(??\)</span> indique une <strong>forme indéterminée</strong> : <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(b\)</span> ne suffisent pas à déterminer la limite considérée. Il faut alors utiliser d'autres méthodes.</p>
 <p class="zh">这些表中的 <span class="arithmatex">\(??\)</span> 表示<strong>未定式</strong>（forme indéterminée）：仅凭 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(b\)</span> 不足以确定所考虑的极限，此时必须使用其他方法。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Remarque<br><span class='zh-title'>注（Remarque）</span></p>
+<p>Ces opérations restent valables pour les limites de suites complexes convergentes.</p>
+<p class="zh">这些运算对收敛的复数列的极限仍然成立。</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Exemple 4.6<br><span class='zh-title'>例 4.6</span></p>
@@ -5222,12 +5250,12 @@ R_n = \sum_{k=1}^{n}\frac{1}{\sqrt{n+k}}
 = \lim_{n\to+\infty}\sqrt{1+u_n}
 = \sqrt{1+\ell} = f(\ell)
 \quad\text{donc}\quad
-\ell = \varphi \ \text{(voir l'exemple 2.5)}.
+\ell = \phi \ \text{(voir l'exemple 2.5)}.
 \]</div>
 <p>Finalement, on a montré que :</p>
 <p class="zh">最终，我们证明了：</p>
 <div class="arithmatex">\[
-\varphi = \lim_{n\to+\infty} u_n = \sqrt{1+\sqrt{1+\sqrt{1+\dots}}}.
+\phi = \lim_{n\to+\infty} u_n = \sqrt{1+\sqrt{1+\sqrt{1+\dots}}}.
 \]</div>
 </div>
 <div class="admonition danger">
@@ -5290,7 +5318,7 @@ a_n \leqslant \lim_{k\to+\infty} a_{n+k} = \ell = \lim_{k\to+\infty} b_{n+k} \le
 <p class="zh">猜测：</p>
 <div class="arithmatex">\[
 \forall k \geqslant 0,\quad
-1 \leqslant u_{2k} &lt; u_{2(k+1)} &lt; \varphi &lt; u_{2(k+1)+1} &lt; u_{2k+1} \leqslant 2
+1 \leqslant u_{2k} &lt; u_{2(k+1)} &lt; \phi &lt; u_{2(k+1)+1} &lt; u_{2k+1} \leqslant 2
 \]</div>
 <p>et on peut démontrer cette conjecture par récurrence comme dans l'exemple 2.5. En particulier, on obtient que <span class="arithmatex">\((u_{2k})_{k\geqslant 0}\)</span> est croissante et que <span class="arithmatex">\((u_{2k+1})_{k\geqslant 0}\)</span> est décroissante. De plus, on peut aussi montrer par récurrence que :</p>
 <p class="zh">并且可以像例 2.5 那样用归纳法证明这一猜想。特别地，可得 <span class="arithmatex">\((u_{2k})_{k\geqslant 0}\)</span> 递增、<span class="arithmatex">\((u_{2k+1})_{k\geqslant 0}\)</span> 递减。此外，还可以用归纳法证明：</p>
@@ -5323,10 +5351,10 @@ a_n \leqslant \lim_{k\to+\infty} a_{n+k} = \ell = \lim_{k\to+\infty} b_{n+k} \le
 <p class="zh"><u>结论.</u> 由归纳法原理，结论对一切 <span class="arithmatex">\(k \geqslant 0\)</span> 成立。</p>
 </li>
 </ul>
-<p>D'après le théorème de limite par encadrement, on en déduit que <span class="arithmatex">\(\lim_{k\to+\infty}(u_{2k+1}-u_{2k}) = 0\)</span>. Puis, d'après le théorème des suites adjacentes, on en déduit que <span class="arithmatex">\((u_{2k})_{k\geqslant 0}\)</span> et <span class="arithmatex">\((u_{2k+1})_{k\geqslant 0}\)</span> convergent vers la même limite, qui est égale à <span class="arithmatex">\(\varphi\)</span>. Enfin, d'après le théorème des suites extraites, on en déduit que <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> converge vers <span class="arithmatex">\(\varphi\)</span>. Finalement, on a montré que :</p>
-<p class="zh">由夹逼定理可得 <span class="arithmatex">\(\lim_{k\to+\infty}(u_{2k+1}-u_{2k}) = 0\)</span>。再由相邻数列定理，<span class="arithmatex">\((u_{2k})_{k\geqslant 0}\)</span> 与 <span class="arithmatex">\((u_{2k+1})_{k\geqslant 0}\)</span> 收敛于同一极限，该极限等于 <span class="arithmatex">\(\varphi\)</span>。最后由子列定理，<span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> 收敛于 <span class="arithmatex">\(\varphi\)</span>。最终，我们证明了：</p>
+<p>D'après le théorème de limite par encadrement, on en déduit que <span class="arithmatex">\(\lim_{k\to+\infty}(u_{2k+1}-u_{2k}) = 0\)</span>. Puis, d'après le théorème des suites adjacentes, on en déduit que <span class="arithmatex">\((u_{2k})_{k\geqslant 0}\)</span> et <span class="arithmatex">\((u_{2k+1})_{k\geqslant 0}\)</span> convergent vers la même limite, qui est égale à <span class="arithmatex">\(\phi\)</span>. Enfin, d'après le théorème des suites extraites, on en déduit que <span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> converge vers <span class="arithmatex">\(\phi\)</span>. Finalement, on a montré que :</p>
+<p class="zh">由夹逼定理可得 <span class="arithmatex">\(\lim_{k\to+\infty}(u_{2k+1}-u_{2k}) = 0\)</span>。再由相邻数列定理，<span class="arithmatex">\((u_{2k})_{k\geqslant 0}\)</span> 与 <span class="arithmatex">\((u_{2k+1})_{k\geqslant 0}\)</span> 收敛于同一极限，该极限等于 <span class="arithmatex">\(\phi\)</span>。最后由子列定理，<span class="arithmatex">\((u_n)_{n\geqslant 0}\)</span> 收敛于 <span class="arithmatex">\(\phi\)</span>。最终，我们证明了：</p>
 <div class="arithmatex">\[
-\varphi = \lim_{n\to+\infty} u_n = 1+\frac{1}{1+\frac{1}{1+\frac{1}{\dots}}}.
+\phi = \lim_{n\to+\infty} u_n = 1+\frac{1}{1+\frac{1}{1+\frac{1}{\dots}}}.
 \]</div>
 </div>
 <div class="admonition warning">
@@ -5343,6 +5371,185 @@ a_n \leqslant \lim_{k\to+\infty} a_{n+k} = \ell = \lim_{k\to+\infty} b_{n+k} \le
 <li><strong>converger vers</strong>：收敛于</li>
 <li><strong>on en déduit que</strong>：由此推出</li>
 <li><strong>montrer par récurrence</strong>：用归纳法证明</li>
+</ul>
+</div>
+<h2 id="comparaison-de-suites">Comparaison de suites <span class="heading-zh">数列的比较</span><a class="headerlink" href="#comparaison-de-suites" title="Permanent link">&para;</a></h2>
+<p>Dans cette section, on revient au cas général des suites numériques, c'est-à-dire <span class="arithmatex">\(\mathbb{K} = \mathbb{R}\)</span> ou <span class="arithmatex">\(\mathbb{C}\)</span>.</p>
+<p class="zh">本节回到一般情形的数列，即 <span class="arithmatex">\(\mathbb{K} = \mathbb{R}\)</span> 或 <span class="arithmatex">\(\mathbb{C}\)</span>。</p>
+<div class="admonition success">
+<p class="admonition-title">Définition 7.1 : suite négligeable par rapport à une autre<br><span class='zh-title'>定义 7.1：相对于另一数列可忽略的数列（négligeable）</span></p>
+<p>Soient <span class="arithmatex">\((a_n)\)</span> et <span class="arithmatex">\((b_n)\)</span> deux suites telles que tous les termes de <span class="arithmatex">\((b_n)\)</span> sont non nuls à partir d'un certain rang. On dit que <span class="arithmatex">\((a_n)\)</span> est <strong>négligeable par rapport</strong> à <span class="arithmatex">\((b_n)\)</span> lorsque <span class="arithmatex">\(a_n/b_n\)</span> tend vers <span class="arithmatex">\(0\)</span> quand <span class="arithmatex">\(n \to +\infty\)</span>. On note :</p>
+<p class="zh">设 <span class="arithmatex">\((a_n)\)</span> 与 <span class="arithmatex">\((b_n)\)</span> 是两个数列，且 <span class="arithmatex">\((b_n)\)</span> 从某一项起所有项都不为零。若当 <span class="arithmatex">\(n \to +\infty\)</span> 时 <span class="arithmatex">\(a_n/b_n\)</span> 趋于 <span class="arithmatex">\(0\)</span>，则称 <span class="arithmatex">\((a_n)\)</span> <strong>相对于</strong> <span class="arithmatex">\((b_n)\)</span> <strong>可忽略</strong>（négligeable par rapport à <span class="arithmatex">\((b_n)\)</span>）。记作：</p>
+<div class="arithmatex">\[
+a_n = \on (b_n) \iff \lim_{n\to+\infty} \frac{a_n}{b_n} = 0.
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 7.2<br><span class='zh-title'>例 7.2</span></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(n = \on(n^2)\)</span> car <span class="arithmatex">\(\lim_{n\to+\infty} \frac{n}{n^2} = \lim_{n\to+\infty} \frac{1}{n} = 0\)</span>. De même, <span class="arithmatex">\(\frac{1}{n^2} = \on\left(\frac{1}{n}\right)\)</span>. Plus généralement :</p>
+<p class="zh"><span class="arithmatex">\(n = \on(n^2)\)</span>，因为 <span class="arithmatex">\(\lim_{n\to+\infty} \frac{n}{n^2} = \lim_{n\to+\infty} \frac{1}{n} = 0\)</span>。同样，<span class="arithmatex">\(\frac{1}{n^2} = \on\left(\frac{1}{n}\right)\)</span>。更一般地：</p>
+<div class="arithmatex">\[
+\forall \alpha &lt; \beta,\quad n^\alpha = \on \bigl(n^\beta\bigr).
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(2^n = \on(3^n)\)</span> car <span class="arithmatex">\(\lim_{n\to+\infty} \frac{2^n}{3^n} = \lim_{n\to+\infty} \left(\frac{2}{3}\right)^n = 0\)</span>. Plus généralement :</p>
+<p class="zh"><span class="arithmatex">\(2^n = \on(3^n)\)</span>，因为 <span class="arithmatex">\(\lim_{n\to+\infty} \frac{2^n}{3^n} = \lim_{n\to+\infty} \left(\frac{2}{3}\right)^n = 0\)</span>。更一般地：</p>
+<div class="arithmatex">\[
+\forall 0 &lt; q &lt; r,\quad q^n = \on(r^n) \quad\text{car}\quad \frac{q}{r} \in\,]0,1[.
+\]</div>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Remarque<br><span class='zh-title'>注（Remarque）</span></p>
+<p>La relation « être négligeable » est transitive :</p>
+<p class="zh">“可忽略”关系具有传递性：</p>
+<div class="arithmatex">\[
+\Bigl(a_n = \on(b_n) \ \text{et}\ b_n = \on(c_n)\Bigr) \implies a_n = \on(c_n).
+\]</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 7.3 : théorème des croissances comparées<br><span class='zh-title'>定理 7.3：增长比较定理</span></p>
+<p>Soient <span class="arithmatex">\(\alpha &gt; 0\)</span> et <span class="arithmatex">\(q &gt; 1\)</span>. Alors :</p>
+<p class="zh">设 <span class="arithmatex">\(\alpha &gt; 0\)</span>，<span class="arithmatex">\(q &gt; 1\)</span>。则：</p>
+<div class="arithmatex">\[
+\ln(n) = \on(n^\alpha),\qquad n^\alpha = \on(q^n)\qquad\text{et}\qquad q^n = \on(n!).
+\]</div>
+</div>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong></p>
+<p class="zh"><strong>证明.</strong></p>
+<div class="admonition danger">
+<p class="admonition-title">Lemme 7.4<br><span class='zh-title'>引理 7.4</span></p>
+<div class="arithmatex">\[
+\forall x \in \mathbb{R}_+^*,\quad \ln(x) &lt; x.
+\]</div>
+</div>
+<ul>
+<li>
+<p>En appliquant le lemme à <span class="arithmatex">\(x = n^{\alpha/2}\)</span>, on a :</p>
+<p class="zh">将引理应用于 <span class="arithmatex">\(x = n^{\alpha/2}\)</span>，得：</p>
+<div class="arithmatex">\[
+\forall n \geqslant 1,\quad 0 \leqslant \frac{\ln(n)}{n^\alpha} = \frac{2\ln\bigl(n^{\alpha/2}\bigr)}{\alpha n^\alpha} &lt; \frac{2}{\alpha n^{\alpha/2}}.
+\]</div>
+<p>D'après le théorème de limite par encadrement, on en déduit que <span class="arithmatex">\(\ln(n) = \on(n^\alpha)\)</span>.</p>
+<p class="zh">由夹逼定理可得 <span class="arithmatex">\(\ln(n) = \on(n^\alpha)\)</span>。</p>
+</li>
+<li>
+<p>On a :</p>
+<p class="zh">有：</p>
+<div class="arithmatex">\[
+\lim_{n\to+\infty} \frac{n^\alpha}{q^n} = \lim_{n\to+\infty} e^{n\left(\alpha\frac{\ln(n)}{n}-\ln(q)\right)} = 0 \quad\text{car } \ln(n) = \on(n) \text{ et } \ln(q) &gt; 0.
+\]</div>
+</li>
+<li>
+<p>On pose <span class="arithmatex">\((u_n = q^n/n!)\)</span> et <span class="arithmatex">\(N = \lfloor 2q \rfloor\)</span>. On a :</p>
+<p class="zh">令 <span class="arithmatex">\((u_n = q^n/n!)\)</span>，<span class="arithmatex">\(N = \lfloor 2q \rfloor\)</span>。有：</p>
+<div class="arithmatex">\[
+\forall n \geqslant N,\quad \frac{u_{n+1}}{u_n} = \frac{q}{n+1} &lt; \frac{1}{2}.
+\]</div>
+<p>On peut alors montrer par récurrence que :</p>
+<p class="zh">于是可用归纳法证明：</p>
+<div class="arithmatex">\[
+\forall n \geqslant N,\quad 0 &lt; u_n \leqslant u_N \left(\frac{1}{2}\right)^{n-N}.
+\]</div>
+<p>D'après le théorème de limite par encadrement, on en déduit que <span class="arithmatex">\(\lim_{n\to+\infty} u_n = 0\)</span>, donc que <span class="arithmatex">\(q^n = \on(n!)\)</span>.</p>
+<p class="zh">由夹逼定理可得 <span class="arithmatex">\(\lim_{n\to+\infty} u_n = 0\)</span>，因此 <span class="arithmatex">\(q^n = \on(n!)\)</span>。</p>
+</li>
+</ul>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 7.5<br><span class='zh-title'>例 7.5</span></p>
+<div class="arithmatex">\[
+\lim_{n\to+\infty} \frac{(\ln(n))^2}{n}
+= \lim_{n\to+\infty} \left(\frac{\ln(n)}{n^{1/2}}\right)^2 = 0
+\quad\text{d'après le théorème des croissances comparées.}
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Définition 7.6 : suites équivalentes<br><span class='zh-title'>定义 7.6：等价数列（suites équivalentes）</span></p>
+<p>Soient <span class="arithmatex">\((a_n)\)</span> et <span class="arithmatex">\((b_n)\)</span> deux suites telles que tous leurs termes sont non nuls à partir d'un certain rang. On dit que <span class="arithmatex">\((a_n)\)</span> et <span class="arithmatex">\((b_n)\)</span> sont <strong>équivalentes</strong> lorsque <span class="arithmatex">\(a_n/b_n\)</span> tend vers <span class="arithmatex">\(1\)</span> quand <span class="arithmatex">\(n \to +\infty\)</span>. On note :</p>
+<p class="zh">设 <span class="arithmatex">\((a_n)\)</span> 与 <span class="arithmatex">\((b_n)\)</span> 是两个数列，且二者从某一项起所有项都不为零。若当 <span class="arithmatex">\(n \to +\infty\)</span> 时 <span class="arithmatex">\(a_n/b_n\)</span> 趋于 <span class="arithmatex">\(1\)</span>，则称 <span class="arithmatex">\((a_n)\)</span> 与 <span class="arithmatex">\((b_n)\)</span> <strong>等价</strong>（équivalentes）。记作：</p>
+<div class="arithmatex">\[
+a_n \simn b_n \iff \lim_{n\to+\infty} \frac{a_n}{b_n} = 1.
+\]</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 7.7<br><span class='zh-title'>性质 7.7</span></p>
+<p>Si deux suites sont équivalentes et si l'une converge, alors l'autre converge aussi vers la même limite. Deux suites réelles équivalentes ont même nature et même limite (quand les limites existent dans <span class="arithmatex">\(\overline{\mathbb{R}}\)</span>).</p>
+<p class="zh">若两个数列等价且其中一个收敛，则另一个也收敛于同一极限。两个等价实数列具有相同的性质与相同的极限（当极限在 <span class="arithmatex">\(\overline{\mathbb{R}}\)</span> 中存在时）。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention<br><span class='zh-title'>注意（Attention）</span></p>
+<p>La réciproque est fausse : deux suites qui convergent vers la même limite ne sont pas toujours équivalentes ! Par exemple, <span class="arithmatex">\((1/n)\)</span> et <span class="arithmatex">\((1/n^2)\)</span> convergent vers <span class="arithmatex">\(0\)</span>, mais ne sont pas équivalentes.</p>
+<p class="zh">逆命题不成立：收敛于同一极限的两个数列不一定等价！例如 <span class="arithmatex">\((1/n)\)</span> 与 <span class="arithmatex">\((1/n^2)\)</span> 都收敛于 <span class="arithmatex">\(0\)</span>，但它们并不等价。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Remarque<br><span class='zh-title'>注（Remarque）</span></p>
+<p>Étant donnée une suite <span class="arithmatex">\((u_n)\)</span>, trouver une suite équivalente plus simple permet de décrire le <strong>comportement asymptotique</strong> de <span class="arithmatex">\((u_n)\)</span>, c'est-à-dire le comportement de <span class="arithmatex">\(u_n\)</span> quand <span class="arithmatex">\(n \to +\infty\)</span>.</p>
+<p class="zh">给定数列 <span class="arithmatex">\((u_n)\)</span>，找到一个更简单的等价数列，可以描述 <span class="arithmatex">\((u_n)\)</span> 的<strong>渐近行为</strong>（comportement asymptotique），即当 <span class="arithmatex">\(n \to +\infty\)</span> 时 <span class="arithmatex">\(u_n\)</span> 的行为。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 7.8<br><span class='zh-title'>例 7.8</span></p>
+<p>On a :</p>
+<p class="zh">有：</p>
+<div class="arithmatex">\[
+u_n = \frac{\bigl(3n^2+n(\ln(n))^2+(-1)^n\bigr)\bigl(2^n+n^3\bigr)}{2^n(n+\sqrt{n})} \simn 3n
+\]</div>
+<p>car :</p>
+<p class="zh">因为：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lim_{n\to+\infty} \frac{u_n}{3n}
+&amp;= \lim_{n\to+\infty} \frac{\left(1+\frac{(\ln(n))^2}{3n}+\frac{(-1)^n}{3n^2}\right)\left(1+\frac{n^3}{2^n}\right)}{1+\frac{1}{\sqrt{n}}}\\
+&amp;= 1 \qquad\text{d'après le théorème des croissances comparées.}
+\end{aligned}
+\]</div>
+<p>Ainsi, <span class="arithmatex">\((u_n)\)</span> a le même comportement asymptotique que la suite <span class="arithmatex">\((3n)\)</span>.</p>
+<p class="zh">因此，<span class="arithmatex">\((u_n)\)</span> 与数列 <span class="arithmatex">\((3n)\)</span> 具有相同的渐近行为。</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 7.9<br><span class='zh-title'>性质 7.9</span></p>
+<p>Soient <span class="arithmatex">\((a_n)\)</span> et <span class="arithmatex">\((b_n)\)</span> deux suites telles que tous leurs termes sont non nuls à partir d'un certain rang. Alors :</p>
+<p class="zh">设 <span class="arithmatex">\((a_n)\)</span> 与 <span class="arithmatex">\((b_n)\)</span> 是两个数列，且二者从某一项起所有项都不为零。则：</p>
+<div class="arithmatex">\[
+a_n \simn b_n \iff a_n = b_n + \on(b_n).
+\]</div>
+</div>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong></p>
+<p class="zh"><strong>证明.</strong></p>
+<div class="arithmatex">\[
+\lim_{n\to+\infty}\frac{a_n}{b_n} = 1
+\iff \lim_{n\to+\infty}\frac{a_n-b_n}{b_n}
+= \lim_{n\to+\infty}\left(\frac{a_n}{b_n}-1\right) = 0.
+\]</div>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 7.10<br><span class='zh-title'>例 7.10</span></p>
+<div class="arithmatex">\[
+n-\sqrt{n} \simn n \quad\text{car}\quad \sqrt{n} = \on(n),
+\quad\text{en particulier}\quad \lim_{n\to+\infty} n-\sqrt{n} = +\infty.
+\]</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Vocabulaire clé &nbsp;&nbsp; 重点词汇<br><span class='zh-title'>第七节核心术语</span></p>
+<ul>
+<li><strong>négligeable par rapport à</strong>：相对于……可忽略</li>
+<li><strong>être négligeable</strong>：可忽略</li>
+<li><strong>transitive</strong>：传递的</li>
+<li><strong>théorème des croissances comparées</strong>：增长比较定理</li>
+<li><strong>équivalent / suites équivalentes</strong>：等价的 / 等价数列</li>
+<li><strong>comportement asymptotique</strong>：渐近行为</li>
+<li><strong>suite équivalente plus simple</strong>：更简单的等价数列</li>
+<li><strong>réciproque</strong>：逆命题</li>
+<li><strong>en particulier</strong>：特别地</li>
+<li><strong>on en déduit que</strong>：由此推出</li>
 </ul>
 </div>
 
