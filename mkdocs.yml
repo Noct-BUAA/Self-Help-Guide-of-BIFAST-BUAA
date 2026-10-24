@@ -169,6 +169,15 @@ nav:
             - TD3 反三角函数解答: courses/year2/semester1/工程数学/习题课/td3-fonctions-reciproques.md
             - TD4 多项式解答: courses/year2/semester1/工程数学/习题课/td4-polynomes.md
             - TD5 多项式的根解答: courses/year2/semester1/工程数学/习题课/td5-racines-polynomes.md
+        - 党校学习资料:
+          - 学习指南: courses/year2/semester1/党校学习资料/index.md
+          - 党的基础知识: courses/year2/semester1/党校学习资料/01-党的基础知识.md
+          - 党章党规应知应会: courses/year2/semester1/党校学习资料/02-党章党规应知应会.md
+          - 新时代理论关键词: courses/year2/semester1/党校学习资料/03-新时代理论关键词.md
+          - 学习材料: courses/year2/semester1/党校学习资料/04-学习材料.md
+          - 选择题（101）: courses/year2/semester1/党校学习资料/05-选择题.md
+          - 填空题（85）: courses/year2/semester1/党校学习资料/06-填空题.md
+          - 简答题（15）: courses/year2/semester1/党校学习资料/07-简答题.md
       - 大二下学期:
         - 学期概览: courses/year2/semester2/index.md
 
