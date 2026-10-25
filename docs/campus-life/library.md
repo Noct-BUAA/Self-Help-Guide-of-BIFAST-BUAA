@@ -8,7 +8,7 @@
 | 座位 | 总座位 1,050 个（1–3 层） |
 | 开放时间 | 周一至周日 8:00 – 22:00 |
 | 服务电话 | `0571-28881180` |
-| 网站 | [http://hz.lib.buaa.edu.cn/space/index](http://hz.lib.buaa.edu.cn/space/index) |
+| 网站 | [http://hz.lib.buaa.edu.cn/space/index](http://hz.lib.buaa.edu.cn/space/index)（校园网访问） |
 
 ## 楼层分布
 
@@ -26,7 +26,7 @@
 - 数据库百余个（含 CNKI、万方、Wiley、Cairn 法语数据库等）
 - 电子图书一百余万册
 - 与北京校区图书馆百余个数据库互联，支持 IP 直接访问
-- 数据库访问入口：[http://hz.lib.buaa.edu.cn/space/database](http://hz.lib.buaa.edu.cn/space/database)
+- 数据库访问入口：[http://hz.lib.buaa.edu.cn/space/database](http://hz.lib.buaa.edu.cn/space/database)（校园网访问）
 
 ## 借阅服务
 
