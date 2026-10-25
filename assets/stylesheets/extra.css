@@ -1985,3 +1985,79 @@ body[data-md-color-scheme="slate"]:has(.party-handout) .fill-item {
   }
   body:has(.party-handout) .md-typeset h3 { font-size: 1rem; }
 }
+
+/* ─── 知识点卡片：仿法语讲义的框式呈现 ───────────────── */
+/* 标题栏与正文框首尾相接，视觉上是一个完整卡片；标题仍是 h3，保留右侧目录锚点 */
+body:has(.party-handout) .md-typeset h3:has(+ .admonition) {
+  margin: 2.2rem 0 0;
+  padding: .55rem .95rem .55rem .85rem;
+  font-size: .98rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .01em;
+  color: #fff;
+  background: linear-gradient(100deg, #8c1d1d 0%, #b23a31 100%);
+  border: none;
+  border-left: 4px solid #d4af37;
+  border-bottom: 2px solid #d4af37;
+  border-radius: 7px 7px 0 0;
+  box-shadow: 0 3px 10px rgba(140, 29, 29, .14);
+}
+
+body:has(.party-handout) .md-typeset h3:has(+ .admonition) .headerlink {
+  color: rgba(255, 255, 255, .55);
+}
+
+body:has(.party-handout) .md-typeset h3:has(+ .admonition) .headerlink:hover {
+  color: #fff;
+}
+
+body:has(.party-handout) .md-typeset h3 + .admonition {
+  margin: 0 0 1.15rem;
+  padding: .8rem 1.05rem .85rem;
+  border: 1px solid rgba(140, 29, 29, .20);
+  border-top: none;
+  border-radius: 0 0 7px 7px;
+  background: linear-gradient(180deg, rgba(140, 29, 29, .038), rgba(140, 29, 29, .012));
+  box-shadow: 0 6px 18px rgba(140, 29, 29, .055);
+}
+
+body:has(.party-handout) .md-typeset h3 + .admonition > .admonition-title {
+  display: none;
+}
+
+/* 框内正文：取消首行缩进，收紧段落与列表间距 */
+body:has(.party-handout) .md-typeset h3 + .admonition p {
+  margin: .35em 0;
+  text-indent: 0;
+}
+
+body:has(.party-handout) .md-typeset h3 + .admonition ol,
+body:has(.party-handout) .md-typeset h3 + .admonition ul {
+  margin: .3em 0 .45em;
+}
+
+/* 暗色模式 */
+body[data-md-color-scheme="slate"]:has(.party-handout) .md-typeset h3:has(+ .admonition) {
+  background: linear-gradient(100deg, #5e1616 0%, #7d2621 100%);
+  border-left-color: #c9a227;
+  border-bottom-color: #c9a227;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .35);
+}
+
+body[data-md-color-scheme="slate"]:has(.party-handout) .md-typeset h3 + .admonition {
+  border-color: rgba(255, 138, 128, .20);
+  background: rgba(255, 138, 128, .035);
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  body:has(.party-handout) .md-typeset h3:has(+ .admonition) {
+    margin-top: 1.8rem;
+    padding: .48rem .75rem .48rem .7rem;
+    font-size: .94rem;
+  }
+  body:has(.party-handout) .md-typeset h3 + .admonition {
+    padding: .7rem .8rem .75rem;
+  }
+}
