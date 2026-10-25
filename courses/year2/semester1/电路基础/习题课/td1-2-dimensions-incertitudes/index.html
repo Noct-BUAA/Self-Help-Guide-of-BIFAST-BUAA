@@ -1,0 +1,5477 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="北京航空航天大学中法未来科技学院（杭州）学习生活自助指南 — 汇集课程学习资料、重难点解析与校园生活实用信息
+">
+      
+      
+        <meta name="author" content="Noct-BUAA">
+      
+      
+        <link rel="canonical" href="https://noct-buaa.github.io/Self-Help-Guide-of-BIFAST-BUAA/courses/year2/semester1/%E7%94%B5%E8%B7%AF%E5%9F%BA%E7%A1%80/%E4%B9%A0%E9%A2%98%E8%AF%BE/td1-2-dimensions-incertitudes/">
+      
+      
+        <link rel="prev" href="../td2-gauss/">
+      
+      
+        <link rel="next" href="../../%E8%AF%8D%E6%B1%87%E8%A1%A8/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>TD1–TD2 量纲与不确定度 - 北航中法未来科技学院自助指南</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%20480c-35.3%200-64-28.7-64-64V96c0-35.3%2028.7-64%2064-64h320c35.3%200%2064%2028.7%2064%2064v213.5c0%2017-6.7%2033.3-18.7%2045.3L322.7%20461.3c-12%2012-28.3%2018.7-45.3%2018.7zm325.5-176H296c-13.3%200-24%2010.7-24%2024v93.5z%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M384%20512H96c-53%200-96-43-96-96V96C0%2043%2043%200%2096%200h304c26.5%200%2048%2021.5%2048%2048v288c0%2020.9-13.4%2038.7-32%2045.3V448c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032zM96%20384c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032h256v-64zm32-232c0%2013.3%2010.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24H152c-13.3%200-24%2010.7-24%2024m24%2072c-13.3%200-24%2010.7-24%2024s10.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24z%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-32-352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200m-8%2064h48c13.3%200%2024%2010.7%2024%2024v88h8c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-80c-13.3%200-24-10.7-24-24s10.7-24%2024-24h24v-64h-24c-13.3%200-24-10.7-24-24s10.7-24%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M461.2%2018.9C472.7%2024%20480%2035.4%20480%2048v416c0%2012.6-7.3%2024-18.8%2029.1s-24.8%203.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63V480c0%2017.7-14.3%2032-32%2032h-32c-17.7%200-32-14.3-32-32v-96C57.3%20384%200%20326.7%200%20256s57.3-128%20128-128h84.5c61.8-.2%20121.4-22.7%20167.9-63.3L427%2024c9.4-8.3%2022.9-10.2%2034.3-5.1zM224%20320v.2c70.3%202.7%20137.8%2028.5%20192%2073.4V118.3c-54.2%2044.9-121.7%2070.7-192%2073.4z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M434.8%2070.1c14.3%2010.4%2017.5%2030.4%207.1%2044.7l-256%20352c-5.5%207.6-14%2012.3-23.4%2013.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200l101.5%20101.5%20234-321.7c10.4-14.3%2030.4-17.5%2044.7-7.1z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m0-336c-17.7%200-32%2014.3-32%2032%200%2013.3-10.7%2024-24%2024s-24-10.7-24-24c0-44.2%2035.8-80%2080-80s80%2035.8%2080%2080c0%2047.2-36%2067.2-56%2074.5v3.8c0%2013.3-10.7%2024-24%2024s-24-10.7-24-24v-8.1c0-20.5%2014.8-35.2%2030.1-40.2%206.4-2.1%2013.2-5.5%2018.2-10.3%204.3-4.2%207.7-10%207.7-19.6%200-17.7-14.3-32-32-32zm-32%20192a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%200c14.7%200%2028.2%208.1%2035.2%2021l216%20400c6.7%2012.4%206.4%2027.4-.8%2039.5S486.1%20480%20472%20480H40c-14.1%200-27.2-7.4-34.4-19.5s-7.5-27.1-.8-39.5l216-400c7-12.9%2020.5-21%2035.2-21m0%20352a32%2032%200%201%200%200%2064%2032%2032%200%201%200%200-64m0-192c-18.2%200-32.7%2015.5-31.4%2033.7l7.4%20104c.9%2012.5%2011.4%2022.3%2023.9%2022.3%2012.6%200%2023-9.7%2023.9-22.3l7.4-104c1.3-18.2-13.1-33.7-31.4-33.7z%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M480-16c6.9%200%2013%204.4%2015.2%2010.9l13.5%2040.4%2040.4%2013.5C555.6%2051%20560%2057.1%20560%2064s-4.4%2013-10.9%2015.2l-40.4%2013.5-13.5%2040.4c-2.2%206.5-8.3%2010.9-15.2%2010.9s-13-4.4-15.2-10.9l-13.5-40.4-40.4-13.5C404.4%2077%20400%2070.9%20400%2064s4.4-13%2010.9-15.2l40.4-13.5%2013.5-40.4C467-11.6%20473.1-16%20480-16M321.4%2097.4c12.5-12.5%2032.8-12.5%2045.3%200l80%2080c12.5%2012.5%2012.5%2032.8%200%2045.3l-10.9%2010.9c7.9%2022%2012.2%2045.7%2012.2%2070.5%200%20114.9-93.1%20208-208%20208S32%20418.9%2032%20304%20125.1%2096%20240%2096c24.7%200%2048.5%204.3%2070.5%2012.3zM144%20304c0-53%2043-96%2096-96%2013.3%200%2024-10.7%2024-24s-10.7-24-24-24c-79.5%200-144%2064.5-144%20144%200%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M416%20427.4c58.5-44%2096-111.6%2096-187.4C512%20107.5%20397.4%200%20256%200S0%20107.5%200%20240c0%2075.8%2037.5%20143.4%2096%20187.4V464c0%2026.5%2021.5%2048%2048%2048h32v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h64v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h32c26.5%200%2048-21.5%2048-48zM96%20256a64%2064%200%201%201%20128%200%2064%2064%200%201%201-128%200m256-64a64%2064%200%201%201%200%20128%2064%2064%200%201%201%200-128%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M352%200c0-17.7-14.3-32-32-32s-32%2014.3-32%2032v64h-96c-53%200-96%2043-96%2096v224c0%2053%2043%2096%2096%2096h256c53%200%2096-43%2096-96V160c0-53-43-96-96-96h-96zM160%20368c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24M224%20176a48%2048%200%201%201%200%2096%2048%2048%200%201%201%200-96m144%2048a48%2048%200%201%201%2096%200%2048%2048%200%201%201-96%200m-304%200c0-17.7-14.3-32-32-32S0%20206.3%200%20224v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32zm544-32c-17.7%200-32%2014.3-32%2032v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32v-96c0-17.7-14.3-32-32-32%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M288%200H128c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032v151.5L7.5%20426.3C2.6%20435%200%20444.7%200%20454.7%200%20486.4%2025.6%20512%2057.3%20512h333.4c31.6%200%2057.3-25.6%2057.3-57.3%200-10-2.6-19.8-7.5-28.4L320%20215.5V64c17.7%200%2032-14.3%2032-32S337.7%200%20320%200zm-96%20215.5V64h64v151.5c0%2011.1%202.9%2022.1%208.4%2031.8L306%20320H142l41.6-72.7c5.5-9.7%208.4-20.6%208.4-31.8%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%20216C0%20149.7%2053.7%2096%20120%2096h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064H64c-35.3%200-64-28.7-64-64zm256%200c0-66.3%2053.7-120%20120-120h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064h-64c-35.3%200-64-28.7-64-64z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#td-1td-2" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../../.." title="北航中法未来科技学院自助指南" class="md-header__button md-logo" aria-label="北航中法未来科技学院自助指南" data-md-component="logo">
+      
+  <img src="../../../../../../assets/images/buaa-emblem-blue.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            北航中法未来科技学院自助指南
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TD1–TD2 量纲与不确定度
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../../year1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程学习资料
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../campus-life/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  校园生活指南
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../postscript/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  后记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="北航中法未来科技学院自助指南" class="md-nav__button md-logo" aria-label="北航中法未来科技学院自助指南" data-md-component="logo">
+      
+  <img src="../../../../../../assets/images/buaa-emblem-blue.png" alt="logo">
+
+    </a>
+    北航中法未来科技学院自助指南
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程学习资料
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程学习资料
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一学年
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一学年
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一上学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一上学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础数学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2_2" id="__nav_2_1_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    基础数学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2_2_2" id="__nav_2_1_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/01-logic-sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逻辑与集合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/02-maps-relations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    映射与等价关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/03-trig-complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    三角函数与复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/04-induction-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学归纳法与数列
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/05-sums-products-counting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    求和求积与计数原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/06-divisibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整除关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学计算机基础
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2_3" id="__nav_2_1_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大学计算机基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2_3_2" id="__nav_2_1_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程作业
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程作业
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E5%85%AD%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/%E7%AC%AC%E4%B8%83%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七次作业
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理基础法语（1）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester1/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    综合法语（1）
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2_5" id="__nav_2_1_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    综合法语（1）
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2_5_2" id="__nav_2_1_2_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_1_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/09-production-orale-a1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    口语考试指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%881%EF%BC%89/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/10-precis-grammatical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    语法概要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester1/%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9%E6%A6%82%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    航空航天概论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一下学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大一下学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E4%B8%AD%E5%9B%BD%E8%BF%91%E7%8E%B0%E4%BB%A3%E5%8F%B2%E7%BA%B2%E8%A6%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国近现代史纲要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    人工智能导论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%8A%9B%E5%AD%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    力学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%9F%BA%E7%A1%80%E8%8B%B1%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础英语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学化学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_3_6" id="__nav_2_1_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大学化学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/01-states-of-matter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 物质的状态与转化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/02-atomic-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章 原子结构和元素周期律
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/03-molecular-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第3章 分子结构和共价键理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/04-crystal-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第4章 晶体结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/05-thermodynamics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第5章 化学热力学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/06-reaction-rate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第6章 化学反应速率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/07-chemical-equilibrium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第7章 化学平衡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/08-acid-base/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第8章 酸碱平衡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/09-precipitation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第9章 沉淀溶解平衡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/chapters/10-redox-electrochemistry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第10章 氧化还原反应与电化学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%EF%BC%881%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学分析（1）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80%E6%B3%95%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理基础法语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../year1/semester2/%E7%BB%BC%E5%90%88%E6%B3%95%E8%AF%AD%EF%BC%882%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    综合法语（2）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二学年
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二学年
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二上学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二上学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%9F%E4%B8%AD%E8%80%83%E8%AF%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    期中考试信息与复习建议
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../%E5%AE%9E%E5%88%86%E6%9E%90/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实分析
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_2_3" id="__nav_2_2_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    实分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%9E%E5%88%86%E6%9E%90/%E5%AE%9A%E4%B9%89%E6%80%A7%E8%B4%A8%E5%AE%9A%E7%90%86%E5%90%88%E9%9B%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    定义·性质·定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_3_3" id="__nav_2_2_2_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%9E%E5%88%86%E6%9E%90/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/01-topologie-de-r/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 章 拓扑学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%9E%E5%88%86%E6%9E%90/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/02-suites-numeriques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 章 数列
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_3_4" id="__nav_2_2_2_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    习题课讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    习题课讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%9E%E5%88%86%E6%9E%90/%E4%B9%A0%E9%A2%98%E8%AF%BE/td1-topologie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD1 拓扑学解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%9E%E5%88%86%E6%9E%90/%E4%B9%A0%E9%A2%98%E8%AF%BE/td2-suites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD2 数列解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%9E%E5%88%86%E6%9E%90/%E4%B9%A0%E9%A2%98%E8%AF%BE/td3-limites-suites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD3 数列极限解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../%E5%B7%A5%E7%A8%8B%E6%95%B0%E5%AD%A6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工程数学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_2_4" id="__nav_2_2_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    工程数学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E6%95%B0%E5%AD%A6/%E5%AE%9A%E4%B9%89%E6%80%A7%E8%B4%A8%E5%AE%9A%E7%90%86%E5%90%88%E9%9B%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    定义·性质·定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_4_3" id="__nav_2_2_2_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/01-nombres-complexes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 章 复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/02-trigonometrie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 章 三角学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/03-polynomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 3 章 多项式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/04-fiche5-suites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 5 研究实数数列
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_4_4" id="__nav_2_2_2_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    习题课讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    习题课讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E6%95%B0%E5%AD%A6/%E4%B9%A0%E9%A2%98%E8%AF%BE/td1-nombres-complexes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD1 复数解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E6%95%B0%E5%AD%A6/%E4%B9%A0%E9%A2%98%E8%AF%BE/td2-trigonometrie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD2 三角学解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E6%95%B0%E5%AD%A6/%E4%B9%A0%E9%A2%98%E8%AF%BE/td3-fonctions-reciproques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD3 反三角函数解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E6%95%B0%E5%AD%A6/%E4%B9%A0%E9%A2%98%E8%AF%BE/td4-polynomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD4 多项式解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E7%A8%8B%E6%95%B0%E5%AD%A6/%E4%B9%A0%E9%A2%98%E8%AF%BE/td5-racines-polynomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD5 多项式的根解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    电路基础
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_2_5" id="__nav_2_2_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    电路基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9D%99%E7%94%B5%E5%AD%A6%C2%B7%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%85%AC%E5%BC%8F%E9%80%9F%E6%9F%A5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    静电学 · 定义与公式速查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%85%AC%E5%BC%8F%E9%80%9F%E6%9F%A5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    动电学与电路 · 定义与公式速查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_5_4" id="__nav_2_2_2_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_5_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_5_4_1" id="__nav_2_2_2_5_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一部分 静电学
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_2_2_2_5_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_5_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一部分 静电学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/es-01-force-champ-electrostatique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 章 力与静电场
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/es-02-theoreme-de-gauss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 章 高斯定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/es-03-conducteurs-condensateurs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 3 章 导体与电容器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/es-04-dipoles-electrostatiques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 4 章 电偶极子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_5_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_5_4_2" id="__nav_2_2_2_5_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二部分 动电学与电路
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_2_2_2_5_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_5_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二部分 动电学与电路
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/00-constantes-unites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    物理常量与单位
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/01-transport-de-charges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 章 电荷输运
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/02-fondements-des-circuits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 章 电路基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/03-dissipation-energie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 3 章 能量耗散
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/04-structure-des-circuits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 4 章 电路结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_5_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_5_5" id="__nav_2_2_2_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    习题课讲义
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_5_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_2_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    习题课讲义
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../td1-lignes-champ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD1 库仑力与静电场
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../td1-corrige/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD1 详细解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../td2-gauss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD2 高斯定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD1–TD2 量纲与不确定度
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD1–TD2 量纲与不确定度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="页面目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      页面目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#td-1-dimensions-et-homogeneite-en-physique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TD 1 Dimensions et homogénéité en physique 物理中的量纲与齐次性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TD 1 Dimensions et homogénéité en physique 物理中的量纲与齐次性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dimensions-de-quelques-grandeurs-physiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Dimensions de quelques grandeurs physiques 若干物理量的量纲
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dimension-de-grandeurs-electriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Dimension de grandeurs électriques 电学量的量纲
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-portee-dun-projectile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Portée d'un projectile 抛射体的射程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-periode-dun-pendule-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Période d'un pendule simple 单摆的周期
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-energie-dune-explosion-atomique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.* Énergie d'une explosion atomique 原子弹爆炸的能量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-equation-de-la-trajectoire-dun-projectile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.* Équation de la trajectoire d'un projectile 抛射体的轨迹方程
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-2-mesures-et-incertitudes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TD 2 Mesures et incertitudes 测量与不确定度
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TD 2 Mesures et incertitudes 测量与不确定度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-masses-de-differents-ordres-de-grandeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Masses de différents ordres de grandeur 不同数量级的质量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-somme-des-quantites-de-precisions-differentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Somme des quantités de précisions différentes 不同精度量之和
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-produit-des-quantites-de-precisions-differentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Produit des quantités de précisions différentes 不同精度量之积
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mesure-de-la-constante-de-gravitation-par-un-objet-en-chute-libre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Mesure de la constante de gravitation par un objet en chute libre 用自由落体的物体测量引力常数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%8D%E6%B1%87%E8%A1%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    动电学词汇表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%85%9A%E6%A0%A1%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    党校学习资料
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../semester2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大二下学期
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    大二下学期
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../campus-life/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    校园生活指南
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    校园生活指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/housing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    住宿
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/dining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    餐饮
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/transportation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    交通出行
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/campus-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    校园服务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/sports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    体育设施
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图书馆
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/daily-life/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生活便利
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../campus-life/contacts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常用信息
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../postscript/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    后记
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    后记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="页面目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      页面目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#td-1-dimensions-et-homogeneite-en-physique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TD 1 Dimensions et homogénéité en physique 物理中的量纲与齐次性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TD 1 Dimensions et homogénéité en physique 物理中的量纲与齐次性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dimensions-de-quelques-grandeurs-physiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Dimensions de quelques grandeurs physiques 若干物理量的量纲
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dimension-de-grandeurs-electriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Dimension de grandeurs électriques 电学量的量纲
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-portee-dun-projectile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Portée d'un projectile 抛射体的射程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-periode-dun-pendule-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Période d'un pendule simple 单摆的周期
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-energie-dune-explosion-atomique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.* Énergie d'une explosion atomique 原子弹爆炸的能量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-equation-de-la-trajectoire-dun-projectile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.* Équation de la trajectoire d'un projectile 抛射体的轨迹方程
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-2-mesures-et-incertitudes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TD 2 Mesures et incertitudes 测量与不确定度
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TD 2 Mesures et incertitudes 测量与不确定度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-masses-de-differents-ordres-de-grandeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Masses de différents ordres de grandeur 不同数量级的质量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-somme-des-quantites-de-precisions-differentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Somme des quantités de précisions différentes 不同精度量之和
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-produit-des-quantites-de-precisions-differentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Produit des quantités de précisions différentes 不同精度量之积
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mesure-de-la-constante-de-gravitation-par-un-objet-en-chute-libre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Mesure de la constante de gravitation par un objet en chute libre 用自由落体的物体测量引力常数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="td-1td-2">TD 1–TD 2　量纲与不确定度<a class="headerlink" href="#td-1td-2" title="Permanent link">&para;</a></h1>
+<div class="lecture-hero">
+<p class="lecture-hero__fr">TD 1 — Dimensions et homogénéité · TD 2 — Mesures et incertitudes</p>
+<p class="lecture-badge">CORRIGÉ · 参考解答</p>
+<p class="lecture-hero__meta">中法对照讲义 · 物理方法训练</p>
+</div>
+
+<div class="admonition info">
+<p class="admonition-title">阅读说明</p>
+<p>本页收录两份物理方法习题课：TD1 训练量纲分析与齐次性，TD2 训练测量、有效数字与不确定度。每题均附参考解答。</p>
+</div>
+<h2 id="td-1-dimensions-et-homogeneite-en-physique">TD 1　Dimensions et homogénéité en physique <span class="heading-zh">物理中的量纲与齐次性</span><a class="headerlink" href="#td-1-dimensions-et-homogeneite-en-physique" title="Permanent link">&para;</a></h2>
+<p>En mécanique et en électricité, les grandeurs fondamentales sont : le temps (<span class="arithmatex">\(t\)</span>), la longueur (<span class="arithmatex">\(l\)</span>), la masse (<span class="arithmatex">\(m\)</span>), l'intensité de courant (<span class="arithmatex">\(I\)</span>) et la température thermodynamique (<span class="arithmatex">\(\Theta\)</span>). Dans le Système International (SI), les unités associées sont respectivement la seconde, le mètre, le kilogramme, l'ampère et le kelvin (s, m, kg, A, K).</p>
+<p class="zh">在力学与电学中，基本物理量为：时间 (<span class="arithmatex">\(t\)</span>)、长度 (<span class="arithmatex">\(l\)</span>)、质量 (<span class="arithmatex">\(m\)</span>)、电流强度 (<span class="arithmatex">\(I\)</span>) 和热力学温度 (<span class="arithmatex">\(\Theta\)</span>)。在国际单位制（SI）中，对应的单位依次是秒、米、千克、安培和开尔文（s、m、kg、A、K）。</p>
+<p>L'équation aux dimensions est une relation symbolique <span class="arithmatex">\([G]=[t]^{\alpha}[l]^{\beta}[m]^{\gamma}\dots\)</span> qui relie une grandeur dérivée <span class="arithmatex">\(G\)</span> aux grandeurs fondamentales.</p>
+<p class="zh">量纲方程是一种符号关系，它把导出量 <span class="arithmatex">\(G\)</span> 与基本量 <span class="arithmatex">\(t\)</span>、<span class="arithmatex">\(l\)</span>、<span class="arithmatex">\(m\)</span> 等联系起来。</p>
+<h3 id="1-dimensions-de-quelques-grandeurs-physiques">1. Dimensions de quelques grandeurs physiques <span class="heading-zh">若干物理量的量纲</span><a class="headerlink" href="#1-dimensions-de-quelques-grandeurs-physiques" title="Permanent link">&para;</a></h3>
+<p>Donner les équations aux dimensions des grandeurs suivantes : (a) vitesse, (b) accélération, &copy; force, (d) travail, (e) puissance.</p>
+<p class="zh">给出下列物理量的量纲方程：（a）速度，（b）加速度，（c）力，（d）功，（e）功率。</p>
+<div class="admonition sol">
+<p>On part des relations de définition et on remplace chaque grandeur par sa dimension (M masse, L longueur, T temps) :</p>
+<p class="zh">从定义关系出发，把每个量换成它的量纲（M 质量、L 长度、T 时间）：</p>
+<div class="arithmatex">\[
+[v]=\frac{\mathrm{L}}{\mathrm{T}}=\mathrm{L}\,\mathrm{T}^{-1},
+\qquad
+[a]=\frac{\mathrm{L}}{\mathrm{T}^2}=\mathrm{L}\,\mathrm{T}^{-2},
+\]</div>
+<div class="arithmatex">\[
+[F]=[m][a]=\mathrm{M}\,\mathrm{L}\,\mathrm{T}^{-2},
+\qquad
+[W]=[F][l]=\mathrm{M}\,\mathrm{L}^2\,\mathrm{T}^{-2},
+\qquad
+[P]=\frac{[W]}{\mathrm{T}}=\mathrm{M}\,\mathrm{L}^2\,\mathrm{T}^{-3}.
+\]</div>
+<p>On retrouve les unités du SI : <span class="arithmatex">\(\mathrm{m\,s^{-1}}\)</span>, <span class="arithmatex">\(\mathrm{m\,s^{-2}}\)</span>, N = <span class="arithmatex">\(\mathrm{kg\,m\,s^{-2}}\)</span>, J = N·m, W = <span class="arithmatex">\(\mathrm{J\,s^{-1}}\)</span>.</p>
+<p class="zh">由此得到 SI 单位：<span class="arithmatex">\(\mathrm{m\,s^{-1}}\)</span>、<span class="arithmatex">\(\mathrm{m\,s^{-2}}\)</span>、N = <span class="arithmatex">\(\mathrm{kg\,m\,s^{-2}}\)</span>、J = N·m、W = <span class="arithmatex">\(\mathrm{J\,s^{-1}}\)</span>。</p>
+</div>
+<h3 id="2-dimension-de-grandeurs-electriques">2. Dimension de grandeurs électriques <span class="heading-zh">电学量的量纲</span><a class="headerlink" href="#2-dimension-de-grandeurs-electriques" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Donner la dimension d'une résistance (on pourra penser à la puissance dissipée par effet Joule).</p>
+<p class="zh">给出电阻的量纲（可以想一想焦耳效应所耗散的功率）。</p>
+</li>
+<li>
+<p>En déduire la dimension d'une tension.</p>
+<p class="zh">由此推出电压的量纲。</p>
+</li>
+</ol>
+<div class="admonition sol">
+<p><strong>(a)</strong> La puissance dissipée par effet Joule dans un conducteur ohmique est <span class="arithmatex">\(P=RI^2\)</span>. On en tire</p>
+<p class="zh"><strong>(a)</strong> 欧姆导体中焦耳效应耗散的功率为 <span class="arithmatex">\(P=RI^2\)</span>。由此得到</p>
+<div class="arithmatex">\[
+[R]=\frac{[P]}{[I]^2}=\frac{\mathrm{M}\,\mathrm{L}^2\,\mathrm{T}^{-3}}{\mathrm{I}^2}
+=\mathrm{M}\,\mathrm{L}^2\,\mathrm{T}^{-3}\,\mathrm{I}^{-2}.
+\]</div>
+<p><strong>(b)</strong> La loi d'Ohm s'écrit <span class="arithmatex">\(U=RI\)</span>, d'où</p>
+<p class="zh"><strong>(b)</strong> 欧姆定律为 <span class="arithmatex">\(U=RI\)</span>，故</p>
+<div class="arithmatex">\[
+[U]=[R][I]=\mathrm{M}\,\mathrm{L}^2\,\mathrm{T}^{-3}\,\mathrm{I}^{-1}.
+\]</div>
+<p>Vérification : <span class="arithmatex">\([U][I]=\mathrm{M}\,\mathrm{L}^2\,\mathrm{T}^{-3}=[P]\)</span>, ce qui est cohérent avec <span class="arithmatex">\(P=UI\)</span>.</p>
+<p class="zh">验证：<span class="arithmatex">\([U][I]=\mathrm{M}\,\mathrm{L}^2\,\mathrm{T}^{-3}=[P]\)</span>，与 <span class="arithmatex">\(P=UI\)</span> 相符。</p>
+</div>
+<h3 id="3-portee-dun-projectile">3. Portée d'un projectile <span class="heading-zh">抛射体的射程</span><a class="headerlink" href="#3-portee-dun-projectile" title="Permanent link">&para;</a></h3>
+<p>En faisant l'analyse dimensionnelle et en examinant les résultats dans les cas <span class="arithmatex">\(\alpha=0\)</span> et <span class="arithmatex">\(90^\circ\)</span>, trouver, parmi les trois relations suivantes, celle qui peut traduire la portée <span class="arithmatex">\(L\)</span> d'un projectile lancé avec une vitesse initiale <span class="arithmatex">\(V_0\)</span> sous un angle <span class="arithmatex">\(\alpha\)</span> :</p>
+<p class="zh">通过量纲分析，并考察 <span class="arithmatex">\(\alpha=0\)</span> 与 <span class="arithmatex">\(90^\circ\)</span> 两种情形下的结果，在下列三个关系中找出能够表示抛射体射程 <span class="arithmatex">\(L\)</span> 的那一个；该抛射体以初速度 <span class="arithmatex">\(V_0\)</span> 沿与水平方向成 <span class="arithmatex">\(\alpha\)</span> 角的方向抛出：</p>
+<div class="arithmatex">\[
+\text{a)}\quad L=\frac{V_0\sin(2\alpha)}{g},\qquad
+\text{b)}\quad L=\frac{V_0^2\sin(2\alpha)}{g},\qquad
+\text{c)}\quad L=\frac{V_0^2\sin(\alpha)}{g}.
+\]</div>
+<div class="admonition sol">
+<p>On calcule d'abord la dimension de chaque expression, sachant que <span class="arithmatex">\([V_0]=\mathrm{L}\,\mathrm{T}^{-1}\)</span> et <span class="arithmatex">\([g]=\mathrm{L}\,\mathrm{T}^{-2}\)</span> :</p>
+<p class="zh">先计算各表达式的量纲，已知 <span class="arithmatex">\([V_0]=\mathrm{L}\,\mathrm{T}^{-1}\)</span>、<span class="arithmatex">\([g]=\mathrm{L}\,\mathrm{T}^{-2}\)</span>：</p>
+<div class="arithmatex">\[
+\left[\frac{V_0}{g}\right]=\frac{\mathrm{L}\,\mathrm{T}^{-1}}{\mathrm{L}\,\mathrm{T}^{-2}}=\mathrm{T},
+\qquad
+\left[\frac{V_0^2}{g}\right]=\frac{\mathrm{L}^2\,\mathrm{T}^{-2}}{\mathrm{L}\,\mathrm{T}^{-2}}=\mathrm{L}.
+\]</div>
+<p>La relation (a) donne un temps, pas une longueur : elle est éliminée. Les relations (b) et &copy; sont toutes deux homogènes à une longueur. Pour <span class="arithmatex">\(\alpha=0\)</span>, les trois expressions s'annulent, ce qui ne permet pas de conclure. Pour <span class="arithmatex">\(\alpha=90^\circ\)</span>, <span class="arithmatex">\(\sin(2\alpha)=0\)</span>, donc (a) et (b) donnent <span class="arithmatex">\(L=0\)</span>, ce qui est correct, mais &copy; donne <span class="arithmatex">\(L=\dfrac{V_0^2}{g}\neq0\)</span>, ce qui est absurde.</p>
+<p class="zh">关系 (a) 给出的是时间而不是长度：被排除。关系 (b) 与 &copy; 的量纲都是长度。当 <span class="arithmatex">\(\alpha=0\)</span> 时，三个表达式都为零，无法据此区分。当 <span class="arithmatex">\(\alpha=90^\circ\)</span> 时，<span class="arithmatex">\(\sin(2\alpha)=0\)</span>，故 (a)、(b) 给出 <span class="arithmatex">\(L=0\)</span>（正确），而 &copy; 给出 <span class="arithmatex">\(L=\dfrac{V_0^2}{g}\neq0\)</span>，荒谬。</p>
+<p>Conclusion : seule la relation (b) est correcte.</p>
+<p class="zh">结论：只有关系 (b) 正确。</p>
+</div>
+<h3 id="4-periode-dun-pendule-simple">4. Période d'un pendule simple <span class="heading-zh">单摆的周期</span><a class="headerlink" href="#4-periode-dun-pendule-simple" title="Permanent link">&para;</a></h3>
+<p>La période d'un pendule simple de masse <span class="arithmatex">\(m\)</span> et de longueur <span class="arithmatex">\(l\)</span> peut s'écrire</p>
+<p class="zh">质量为 <span class="arithmatex">\(m\)</span>、长度为 <span class="arithmatex">\(l\)</span> 的单摆，其周期可以写成</p>
+<div class="arithmatex">\[
+[T]=2\pi\,[m]^{\alpha}[g]^{\beta}[l]^{\gamma}.
+\]</div>
+<p>En utilisant l'analyse dimensionnelle, calculer <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span>, <span class="arithmatex">\(\gamma\)</span>.</p>
+<p class="zh">利用量纲分析，计算 <span class="arithmatex">\(\alpha\)</span>、<span class="arithmatex">\(\beta\)</span>、<span class="arithmatex">\(\gamma\)</span>。</p>
+<div class="admonition sol">
+<p>Écrivons l'équation aux dimensions, avec <span class="arithmatex">\([T]=\mathrm{T}\)</span>, <span class="arithmatex">\([m]=\mathrm{M}\)</span>, <span class="arithmatex">\([g]=\mathrm{L}\,\mathrm{T}^{-2}\)</span> et <span class="arithmatex">\([l]=\mathrm{L}\)</span> :</p>
+<p class="zh">写出量纲方程，其中 <span class="arithmatex">\([T]=\mathrm{T}\)</span>、<span class="arithmatex">\([m]=\mathrm{M}\)</span>、<span class="arithmatex">\([g]=\mathrm{L}\,\mathrm{T}^{-2}\)</span>、<span class="arithmatex">\([l]=\mathrm{L}\)</span>：</p>
+<div class="arithmatex">\[
+\mathrm{T}=\mathrm{M}^{\alpha}\left(\mathrm{L}\,\mathrm{T}^{-2}\right)^{\beta}\mathrm{L}^{\gamma}
+=\mathrm{M}^{\alpha}\,\mathrm{L}^{\beta+\gamma}\,\mathrm{T}^{-2\beta}.
+\]</div>
+<p>Par identification des exposants : <span class="arithmatex">\(\alpha=0\)</span>, <span class="arithmatex">\(-2\beta=1\)</span>, <span class="arithmatex">\(\beta+\gamma=0\)</span>, d'où <span class="arithmatex">\(\alpha=0\)</span>, <span class="arithmatex">\(\beta=-\dfrac12\)</span>, <span class="arithmatex">\(\gamma=\dfrac12\)</span>, et</p>
+<p class="zh">比较指数得：<span class="arithmatex">\(\alpha=0\)</span>、<span class="arithmatex">\(-2\beta=1\)</span>、<span class="arithmatex">\(\beta+\gamma=0\)</span>，故 <span class="arithmatex">\(\alpha=0\)</span>、<span class="arithmatex">\(\beta=-\dfrac12\)</span>、<span class="arithmatex">\(\gamma=\dfrac12\)</span>，以及</p>
+<div class="arithmatex">\[
+T=2\pi\sqrt{\frac{l}{g}}.
+\]</div>
+<p>La masse n'intervient pas (principe d'équivalence). Le calcul exact des petites oscillations redonne cette forme avec exactement <span class="arithmatex">\(C=2\pi\)</span>.</p>
+<p class="zh">质量不出现（等效原理）。小振动的精确计算正好给出这一形式，且常数 <span class="arithmatex">\(C=2\pi\)</span>。</p>
+</div>
+<h3 id="5-energie-dune-explosion-atomique">5.* Énergie d'une explosion atomique <span class="heading-zh">原子弹爆炸的能量</span><a class="headerlink" href="#5-energie-dune-explosion-atomique" title="Permanent link">&para;</a></h3>
+<p>La légende raconte que le physicien Taylor aurait pu en 1950, à l'aide d'un film et de l'analyse dimensionnelle, estimer l'énergie <span class="arithmatex">\(E\)</span> dégagée par une explosion nucléaire.</p>
+<p class="zh">传说物理学家泰勒（Taylor）在 1950 年借助一段胶片并运用量纲分析，就能估算出一次核爆炸所释放的能量 <span class="arithmatex">\(E\)</span>。</p>
+<p>Le film permet d'accéder à l'évolution du rayon <span class="arithmatex">\(R(t)\)</span> du « nuage » formé par l'explosion. Les quantités physiques influant sur ce rayon sont le temps <span class="arithmatex">\(t\)</span>, l'énergie <span class="arithmatex">\(E\)</span> et la masse volumique <span class="arithmatex">\(\rho\)</span> de l'air. Dimensionnellement,</p>
+<p class="zh">影片使我们能够获得爆炸形成的「烟云」半径 <span class="arithmatex">\(R(t)\)</span> 随时间的变化。影响该半径的物理量为时间 <span class="arithmatex">\(t\)</span>、爆炸能量 <span class="arithmatex">\(E\)</span> 以及空气的质量体密度 <span class="arithmatex">\(\rho\)</span>。从量纲上看：</p>
+<div class="arithmatex">\[
+[R]=\mathrm{L}=[E]^{\alpha}[t]^{\beta}[\rho]^{\gamma}.
+\]</div>
+<p>Déterminer <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span>, <span class="arithmatex">\(\gamma\)</span>. On estime que <span class="arithmatex">\(R=70\)</span> m après <span class="arithmatex">\(t=1\)</span> ms, avec <span class="arithmatex">\(\rho=1\ \mathrm{kg\,m^{-3}}\)</span>. On obtient <span class="arithmatex">\(E\approx2\times10^{15}\)</span> J, soit environ 40 kilotonnes de TNT (la valeur correcte est plutôt de l'ordre de la vingtaine de kilotonnes).</p>
+<p class="zh">确定 <span class="arithmatex">\(\alpha\)</span>、<span class="arithmatex">\(\beta\)</span>、<span class="arithmatex">\(\gamma\)</span>。根据影片估计，<span class="arithmatex">\(t=1\)</span> ms 后半径 <span class="arithmatex">\(R=70\)</span> m；又知 <span class="arithmatex">\(\rho=1\ \mathrm{kg\,m^{-3}}\)</span>。由此得到 <span class="arithmatex">\(E\approx2\times10^{15}\)</span> J，即约 40 千吨 TNT（正确值大约在二十千吨的量级）。</p>
+<div class="admonition sol">
+<p>Avec <span class="arithmatex">\([E]=\mathrm{M}\,\mathrm{L}^2\,\mathrm{T}^{-2}\)</span>, <span class="arithmatex">\([t]=\mathrm{T}\)</span> et <span class="arithmatex">\([\rho]=\mathrm{M}\,\mathrm{L}^{-3}\)</span> :</p>
+<p class="zh">其中 <span class="arithmatex">\([E]=\mathrm{M}\,\mathrm{L}^2\,\mathrm{T}^{-2}\)</span>、<span class="arithmatex">\([t]=\mathrm{T}\)</span>、<span class="arithmatex">\([\rho]=\mathrm{M}\,\mathrm{L}^{-3}\)</span>：</p>
+<div class="arithmatex">\[
+\mathrm{L}=\mathrm{M}^{\alpha+\gamma}\,\mathrm{L}^{2\alpha-3\gamma}\,\mathrm{T}^{-2\alpha+\beta}.
+\]</div>
+<p>Par identification : <span class="arithmatex">\(\alpha+\gamma=0\)</span>, <span class="arithmatex">\(2\alpha-3\gamma=1\)</span>, <span class="arithmatex">\(-2\alpha+\beta=0\)</span>, d'où</p>
+<p class="zh">比较指数得：<span class="arithmatex">\(\alpha+\gamma=0\)</span>、<span class="arithmatex">\(2\alpha-3\gamma=1\)</span>、<span class="arithmatex">\(-2\alpha+\beta=0\)</span>，故</p>
+<div class="arithmatex">\[
+\alpha=\frac15,\qquad \beta=\frac25,\qquad \gamma=-\frac15,
+\qquad\text{soit}\qquad
+R=C\left(\frac{Et^2}{\rho}\right)^{1/5}.
+\]</div>
+<p>Numériquement, avec <span class="arithmatex">\(R=70\)</span> m, <span class="arithmatex">\(t=1\)</span> ms <span class="arithmatex">\(=10^{-3}\)</span> s et <span class="arithmatex">\(\rho=1\ \mathrm{kg\,m^{-3}}\)</span> :</p>
+<p class="zh">数值上，取 <span class="arithmatex">\(R=70\)</span> m、<span class="arithmatex">\(t=1\)</span> ms <span class="arithmatex">\(=10^{-3}\)</span> s、<span class="arithmatex">\(\rho=1\ \mathrm{kg\,m^{-3}}\)</span>：</p>
+<div class="arithmatex">\[
+E\simeq\frac{\rho R^5}{t^2}=\frac{(70)^5}{(10^{-3})^2}\approx1{,}7\times10^{15}\ \mathrm{J}.
+\]</div>
+<p><strong>Remarque sur les unités.</strong> Avec <span class="arithmatex">\(1\)</span> kt de TNT <span class="arithmatex">\(=4{,}18\times10^{12}\)</span> J, on obtient <span class="arithmatex">\(\approx4\times10^{2}\)</span> kt, alors que l'énoncé annonce <span class="arithmatex">\(40\)</span> kt (la valeur historique est <span class="arithmatex">\(\approx20\)</span> kt). L'essentiel est l'ordre de grandeur <span class="arithmatex">\(E\sim10^{15}\)</span> J, indépendant de cette conversion.</p>
+<p class="zh">**关于单位的注记。**取 1 千吨 TNT <span class="arithmatex">\(=4{,}18\times10^{12}\)</span> J，得到约 <span class="arithmatex">\(4\times10^{2}\)</span> 千吨，而题面给出 40 千吨（历史值约为 20 千吨）。要点是 <span class="arithmatex">\(E\sim10^{15}\)</span> J 这一数量级，它不依赖于该换算。</p>
+</div>
+<h3 id="6-equation-de-la-trajectoire-dun-projectile">6.* Équation de la trajectoire d'un projectile <span class="heading-zh">抛射体的轨迹方程</span><a class="headerlink" href="#6-equation-de-la-trajectoire-dun-projectile" title="Permanent link">&para;</a></h3>
+<p>On étudie le mouvement d'un projectile lancé depuis l'origine <span class="arithmatex">\(O\)</span> avec une vitesse initiale <span class="arithmatex">\(V_0\)</span> faisant un angle <span class="arithmatex">\(\alpha\)</span> avec l'horizontale. Le projectile n'est soumis qu'à son poids et la trajectoire est décrite dans un repère cartésien par <span class="arithmatex">\(y=f(x)\)</span>.</p>
+<p class="zh">研究一个从原点 <span class="arithmatex">\(O\)</span> 抛出、初速度 <span class="arithmatex">\(V_0\)</span> 与水平方向成 <span class="arithmatex">\(\alpha\)</span> 角的抛射体的运动。抛射体只受自身重力，其轨迹在笛卡儿坐标系中由 <span class="arithmatex">\(y=f(x)\)</span> 描述。</p>
+<p><span class="lecture-figure"><img class="fig-raster" src="../../../../../../assets/images/lectures/electrostatique/td12/p2_trajectoire.png" alt="抛射体轨迹"></span></p>
+<ol>
+<li>
+<p>Justifier par un raisonnement qualitatif que <span class="arithmatex">\(f(x)\)</span> ne peut être ni une fonction linéaire, ni une fonction cubique.</p>
+<p class="zh">用定性推理说明 <span class="arithmatex">\(f(x)\)</span> 既不能是一次函数，也不能是三次函数。</p>
+</li>
+<li>
+<p>En supposant que la fonction est donnée sous forme <span class="arithmatex">\(y=a+bx+cx^2\)</span>, déterminer les dimensions de <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span>, <span class="arithmatex">\(c\)</span>. Justifier que <span class="arithmatex">\(c\)</span> doit être négatif.</p>
+<p class="zh">假设该函数以 <span class="arithmatex">\(y=a+bx+cx^2\)</span> 的形式给出，确定常数 <span class="arithmatex">\(a\)</span>、<span class="arithmatex">\(b\)</span>、<span class="arithmatex">\(c\)</span> 的量纲。并通过物理推理说明系数 <span class="arithmatex">\(c\)</span> 必须为负。</p>
+</li>
+<li>
+<p>Sachant que la portée et la hauteur maximale sont <span class="arithmatex">\(L=\dfrac{V_0^2\sin(2\alpha)}{g}\)</span> et <span class="arithmatex">\(H=\dfrac{V_0^2\sin^2\alpha}{g}\)</span>, établir les expressions de <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span>, <span class="arithmatex">\(c\)</span> en fonction de <span class="arithmatex">\(V_0\)</span> et <span class="arithmatex">\(\alpha\)</span>.</p>
+<p class="zh">已知射程和最大高度分别由 <span class="arithmatex">\(L=\dfrac{V_0^2\sin(2\alpha)}{g}\)</span> 与 <span class="arithmatex">\(H=\dfrac{V_0^2\sin^2\alpha}{g}\)</span> 给出，建立 <span class="arithmatex">\(a\)</span>、<span class="arithmatex">\(b\)</span>、<span class="arithmatex">\(c\)</span> 作为 <span class="arithmatex">\(V_0\)</span> 与 <span class="arithmatex">\(\alpha\)</span> 的函数的表达式。</p>
+</li>
+</ol>
+<div class="admonition sol">
+<p><strong>(a)</strong> Le projectile n'est soumis qu'à son poids : son accélération est constante, verticale et dirigée vers le bas. La trajectoire est donc une parabole. Une fonction linéaire correspondrait à un mouvement rectiligne uniforme (accélération nulle) ; une fonction cubique donnerait une accélération variant avec <span class="arithmatex">\(x\)</span>, incompatible avec un poids constant.</p>
+<p class="zh"><strong>(a)</strong> 抛射体只受重力：加速度恒定、竖直向下。因此轨迹是抛物线。一次函数对应匀速直线运动（加速度为零）；三次函数则意味着加速度随 <span class="arithmatex">\(x\)</span> 变化，与恒定重力不符。</p>
+<p><strong>(b)</strong> Comme <span class="arithmatex">\(y\)</span>, <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(x\)</span> sont des longueurs, <span class="arithmatex">\([a]=\mathrm{L}\)</span>, <span class="arithmatex">\([b]=1\)</span> (sans dimension) et <span class="arithmatex">\([c]=\mathrm{L}^{-1}\)</span>. Le coefficient <span class="arithmatex">\(c\)</span> est négatif car la parabole est concave vers le bas : <span class="arithmatex">\(y''=2c&lt;0\)</span>.</p>
+<p class="zh"><strong>(b)</strong> 由于 <span class="arithmatex">\(y\)</span>、<span class="arithmatex">\(a\)</span>、<span class="arithmatex">\(x\)</span> 都是长度，故 <span class="arithmatex">\([a]=\mathrm{L}\)</span>，<span class="arithmatex">\([b]=1\)</span>（无量纲），<span class="arithmatex">\([c]=\mathrm{L}^{-1}\)</span>。系数 <span class="arithmatex">\(c\)</span> 为负，因为抛物线开口向下：<span class="arithmatex">\(y''=2c&lt;0\)</span>。</p>
+<p><strong>&copy;</strong> La trajectoire passe par <span class="arithmatex">\(O\)</span> : <span class="arithmatex">\(a=0\)</span>. La pente initiale vaut <span class="arithmatex">\(b=\tan\alpha\)</span>. La portée <span class="arithmatex">\(L\)</span> est l'abscisse où <span class="arithmatex">\(y\)</span> s'annule de nouveau :</p>
+<p class="zh"><strong>&copy;</strong> 轨迹经过 <span class="arithmatex">\(O\)</span>：<span class="arithmatex">\(a=0\)</span>。初始斜率为 <span class="arithmatex">\(b=\tan\alpha\)</span>。射程 <span class="arithmatex">\(L\)</span> 是 <span class="arithmatex">\(y\)</span> 再次为零的横坐标：</p>
+<div class="arithmatex">\[
+0=bL+cL^2\quad\Longrightarrow\quad c=-\frac{b}{L}=-\frac{\tan\alpha}{L}.
+\]</div>
+<p>Avec <span class="arithmatex">\(L=\dfrac{V_0^2\sin2\alpha}{g}=\dfrac{2V_0^2\sin\alpha\cos\alpha}{g}\)</span> :</p>
+<p class="zh">代入 <span class="arithmatex">\(L=\dfrac{V_0^2\sin2\alpha}{g}=\dfrac{2V_0^2\sin\alpha\cos\alpha}{g}\)</span>：</p>
+<div class="arithmatex">\[
+c=-\frac{\sin\alpha}{\cos\alpha}\cdot\frac{g}{2V_0^2\sin\alpha\cos\alpha}
+=-\frac{g}{2V_0^2\cos^2\alpha}.
+\]</div>
+<p><strong>Remarque.</strong> L'énoncé donne <span class="arithmatex">\(H=\dfrac{V_0^2\sin^2\alpha}{g}\)</span>, qui est le double de la valeur exacte : il manque un facteur <span class="arithmatex">\(\dfrac12\)</span>.</p>
+<p class="zh">**注记。**题面给出 <span class="arithmatex">\(H=\dfrac{V_0^2\sin^2\alpha}{g}\)</span>，它是精确值的两倍——漏掉了因子 <span class="arithmatex">\(\dfrac12\)</span>。</p>
+</div>
+<h2 id="td-2-mesures-et-incertitudes">TD 2　Mesures et incertitudes <span class="heading-zh">测量与不确定度</span><a class="headerlink" href="#td-2-mesures-et-incertitudes" title="Permanent link">&para;</a></h2>
+<h3 id="1-masses-de-differents-ordres-de-grandeur">1. Masses de différents ordres de grandeur <span class="heading-zh">不同数量级的质量</span><a class="headerlink" href="#1-masses-de-differents-ordres-de-grandeur" title="Permanent link">&para;</a></h3>
+<p>Exprimer chacune des masses suivantes en grammes sous forme décimale avec le bon nombre de chiffres significatifs : (a) <span class="arithmatex">\(1{,}00\ \mu\mathrm{g}\)</span>, (b) <span class="arithmatex">\(0{,}001\ \mathrm{ng}\)</span>, &copy; <span class="arithmatex">\(100{,}0\ \mathrm{mg}\)</span>, (d) <span class="arithmatex">\(10\,000\ \mu\mathrm{g}\)</span>, (e) <span class="arithmatex">\(10{,}000\ \mathrm{kg}\)</span>.</p>
+<p class="zh">把下列各质量用克表示成十进制形式，并保留正确的有效数字位数：（a）<span class="arithmatex">\(1{,}00\ \mu\mathrm{g}\)</span>，（b）<span class="arithmatex">\(0{,}001\ \mathrm{ng}\)</span>，（c）<span class="arithmatex">\(100{,}0\ \mathrm{mg}\)</span>，（d）<span class="arithmatex">\(10\,000\ \mu\mathrm{g}\)</span>，（e）<span class="arithmatex">\(10{,}000\ \mathrm{kg}\)</span>。</p>
+<div class="admonition sol">
+<div class="arithmatex">\[
+\begin{aligned}
+\text{(a)}\quad &amp;1{,}00\ \mu\mathrm{g}=1{,}00\cdot10^{-6}\ \mathrm{g}=0{,}00000100\ \mathrm{g},\\
+\text{(b)}\quad &amp;0{,}001\ \mathrm{ng}=1\cdot10^{-12}\ \mathrm{g}=0{,}000000000001\ \mathrm{g},\\
+\text{(c)}\quad &amp;100{,}0\ \mathrm{mg}=100{,}0\cdot10^{-3}\ \mathrm{g}=0{,}1000\ \mathrm{g},\\
+\text{(d)}\quad &amp;10\,000\ \mu\mathrm{g}=10\,000\cdot10^{-6}\ \mathrm{g}=0{,}01\ \mathrm{g},\\
+\text{(e)}\quad &amp;10{,}000\ \mathrm{kg}=10{,}000\cdot10^{3}\ \mathrm{g}=10\,000\ \mathrm{g}.
+\end{aligned}
+\]</div>
+<p>Les nombres de chiffres significatifs sont respectivement 3, 1, 4, 1 et 5. Pour (e), on peut écrire <span class="arithmatex">\(1{,}0000\cdot10^4\)</span> g pour lever l'ambiguïté des zéros terminaux.</p>
+<p class="zh">有效数字位数依次为 3、1、4、1、5。对 (e)，可写成 <span class="arithmatex">\(1{,}0000\cdot10^4\)</span> g，以消除末尾零的歧义。</p>
+</div>
+<h3 id="2-somme-des-quantites-de-precisions-differentes">2. Somme des quantités de précisions différentes <span class="heading-zh">不同精度量之和</span><a class="headerlink" href="#2-somme-des-quantites-de-precisions-differentes" title="Permanent link">&para;</a></h3>
+<p>Calculer la somme des quantités suivantes : <span class="arithmatex">\(0{,}066\)</span> m, <span class="arithmatex">\(1{,}132\)</span> m, <span class="arithmatex">\(200{,}1\)</span> m, <span class="arithmatex">\(5{,}3\)</span> m et <span class="arithmatex">\(1600{,}22\)</span> m.</p>
+<p class="zh">计算下列各量之和：<span class="arithmatex">\(0{,}066\)</span> m、<span class="arithmatex">\(1{,}132\)</span> m、<span class="arithmatex">\(200{,}1\)</span> m、<span class="arithmatex">\(5{,}3\)</span> m 和 <span class="arithmatex">\(1600{,}22\)</span> m。</p>
+<div class="admonition sol">
+<div class="arithmatex">\[
+0{,}066+1{,}132+200{,}1+5{,}3+1600{,}22=1806{,}818\ \mathrm{m}.
+\]</div>
+<p>La donnée la moins précise (200,1 et 5,3) est connue au dixième de mètre : le résultat doit être arrondi au dixième, soit <span class="arithmatex">\(1806{,}8\)</span> m.</p>
+<p class="zh">精度最低的数据（200,1 与 5,3）只精确到 0,1 m：结果应保留到十分位，即 <span class="arithmatex">\(1806{,}8\)</span> m。</p>
+</div>
+<h3 id="3-produit-des-quantites-de-precisions-differentes">3. Produit des quantités de précisions différentes <span class="heading-zh">不同精度量之积</span><a class="headerlink" href="#3-produit-des-quantites-de-precisions-differentes" title="Permanent link">&para;</a></h3>
+<p>Quel est le produit des trois quantités suivantes : <span class="arithmatex">\(0{,}0021\)</span> g, <span class="arithmatex">\(655{,}1\)</span> kg et <span class="arithmatex">\(4{,}41\ \mu\mathrm{g}\)</span> ?</p>
+<p class="zh">下列三个量的乘积是多少：<span class="arithmatex">\(0{,}0021\)</span> g、<span class="arithmatex">\(655{,}1\)</span> kg 和 <span class="arithmatex">\(4{,}41\ \mu\mathrm{g}\)</span>？</p>
+<div class="admonition sol">
+<p>On convertit tout en grammes : <span class="arithmatex">\(655{,}1\)</span> kg <span class="arithmatex">\(=6{,}551\cdot10^{5}\)</span> g et <span class="arithmatex">\(4{,}41\ \mu\mathrm{g}=4{,}41\cdot10^{-6}\)</span> g. Le produit vaut</p>
+<p class="zh">全部换算为克：<span class="arithmatex">\(655{,}1\)</span> kg <span class="arithmatex">\(=6{,}551\cdot10^{5}\)</span> g，<span class="arithmatex">\(4{,}41\ \mu\mathrm{g}=4{,}41\cdot10^{-6}\)</span> g。乘积为</p>
+<div class="arithmatex">\[
+0{,}0021\times6{,}551\cdot10^{5}\times4{,}41\cdot10^{-6}
+\approx6{,}07\cdot10^{-3}\ \mathrm{g}^3.
+\]</div>
+<p>Le facteur le moins précis, <span class="arithmatex">\(0{,}0021\)</span>, n'a que deux chiffres significatifs : on arrondit à <span class="arithmatex">\(6{,}1\cdot10^{-3}\ \mathrm{g}^3\)</span>.</p>
+<p class="zh">精度最低的因子 <span class="arithmatex">\(0{,}0021\)</span> 只有两位有效数字：结果保留两位有效数字，得 <span class="arithmatex">\(6{,}1\cdot10^{-3}\ \mathrm{g}^3\)</span>。</p>
+</div>
+<h3 id="4-mesure-de-la-constante-de-gravitation-par-un-objet-en-chute-libre">4. Mesure de la constante de gravitation par un objet en chute libre <span class="heading-zh">用自由落体的物体测量引力常数</span><a class="headerlink" href="#4-mesure-de-la-constante-de-gravitation-par-un-objet-en-chute-libre" title="Permanent link">&para;</a></h3>
+<p>On installe un détecteur en <span class="arithmatex">\(A\)</span> au-dessous du point <span class="arithmatex">\(O\)</span>. On lâche un objet de <span class="arithmatex">\(O\)</span> et on mesure le temps auquel l'objet passe par le détecteur. Une série de mesures est effectuée pour différentes positions <span class="arithmatex">\(z_A\)</span> de <span class="arithmatex">\(A\)</span>. L'incertitude de <span class="arithmatex">\(z_A\)</span> est de 0,1 cm et celle de <span class="arithmatex">\(t_A\)</span> est de 0,001 s. On peut déterminer <span class="arithmatex">\(g\)</span> par deux méthodes.</p>
+<p class="zh">在 <span class="arithmatex">\(O\)</span> 点下方 <span class="arithmatex">\(A\)</span> 处安装一个探测器。从 <span class="arithmatex">\(O\)</span> 点释放一个物体，并测量物体经过探测器的时刻。对 <span class="arithmatex">\(A\)</span> 的不同位置 <span class="arithmatex">\(z_A\)</span> 进行一系列测量。<span class="arithmatex">\(z_A\)</span> 的不确定度为 0,1 cm，<span class="arithmatex">\(t_A\)</span> 的不确定度为 0,001 s。可以用以下两种方法确定 <span class="arithmatex">\(g\)</span>。</p>
+<div class="lecture-figure lecture-figure--row">
+<img class="fig-raster" src="../../../../../../assets/images/lectures/electrostatique/td12/p2_chute.png" alt="自由落体装置">
+</div>
+
+<p class="lecture-caption arithmatex"><span class="caption-fr arithmatex">Tableau 1 — Résultats de mesure</span><br>表 1：测量结果</p>
+
+<table>
+<thead>
+<tr>
+<th>N°</th>
+<th><span class="arithmatex">\(z_A\)</span> (cm)</th>
+<th><span class="arithmatex">\(t_A\)</span> (s)</th>
+<th><span class="arithmatex">\(t_A^2\)</span> (s<span class="arithmatex">\(^2\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>20,0</td>
+<td>0,202</td>
+<td>0,0408</td>
+</tr>
+<tr>
+<td>2</td>
+<td>30,0</td>
+<td>0,247</td>
+<td>0,0610</td>
+</tr>
+<tr>
+<td>3</td>
+<td>40,0</td>
+<td>0,286</td>
+<td>0,0818</td>
+</tr>
+<tr>
+<td>4</td>
+<td>50,0</td>
+<td>0,319</td>
+<td>0,1018</td>
+</tr>
+<tr>
+<td>5</td>
+<td>60,0</td>
+<td>0,350</td>
+<td>0,1225</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A. Par les données d'une seule mesure :</strong> effectuer le calcul pour déterminer <span class="arithmatex">\(g\)</span> en utilisant les données de <span class="arithmatex">\(z_A\)</span> minimal et maximal. Étudier l'incertitude des résultats et commenter.</p>
+<p class="zh">**A. 用单次测量的数据：**利用 <span class="arithmatex">\(z_A\)</span> 最小和最大的两组数据进行计算，确定 <span class="arithmatex">\(g\)</span>。研究结果的不确定度并加以评论。</p>
+<p><strong>B.* Par la régression linéaire :</strong> tracer <span class="arithmatex">\(z_A=f(t_A^2)\)</span> ou utiliser un outil informatique, calculer la pente, puis en déduire <span class="arithmatex">\(g\)</span>.</p>
+<p class="zh">**B.* 用线性回归：**画出 <span class="arithmatex">\(z_A=f(t_A^2)\)</span> 的直线，或使用计算工具，计算斜率，并由此推出 <span class="arithmatex">\(g\)</span>。</p>
+<div class="admonition sol">
+<p><strong>A.</strong> La chute est libre : <span class="arithmatex">\(z_A=\dfrac12gt_A^2\)</span>, donc <span class="arithmatex">\(g=\dfrac{2z_A}{t_A^2}\)</span>.</p>
+<p class="zh"><strong>A.</strong> 自由落体：<span class="arithmatex">\(z_A=\dfrac12gt_A^2\)</span>，故 <span class="arithmatex">\(g=\dfrac{2z_A}{t_A^2}\)</span>。</p>
+<p>Pour <span class="arithmatex">\(z_A=20{,}0\)</span> cm <span class="arithmatex">\(=0{,}200\)</span> m et <span class="arithmatex">\(t_A^2=0{,}0408\ \mathrm{s^2}\)</span> :</p>
+<p class="zh">对 <span class="arithmatex">\(z_A=20{,}0\)</span> cm <span class="arithmatex">\(=0{,}200\)</span> m、<span class="arithmatex">\(t_A^2=0{,}0408\ \mathrm{s^2}\)</span>：</p>
+<div class="arithmatex">\[
+g=\frac{2\times0{,}200}{0{,}0408}=9{,}80\ \mathrm{m\,s^{-2}}.
+\]</div>
+<p>Pour <span class="arithmatex">\(z_A=60{,}0\)</span> cm <span class="arithmatex">\(=0{,}600\)</span> m et <span class="arithmatex">\(t_A^2=0{,}1225\ \mathrm{s^2}\)</span> :</p>
+<p class="zh">对 <span class="arithmatex">\(z_A=60{,}0\)</span> cm <span class="arithmatex">\(=0{,}600\)</span> m、<span class="arithmatex">\(t_A^2=0{,}1225\ \mathrm{s^2}\)</span>：</p>
+<div class="arithmatex">\[
+g=\frac{2\times0{,}600}{0{,}1225}=9{,}80\ \mathrm{m\,s^{-2}}.
+\]</div>
+<p><strong>Incertitudes.</strong> Pour la première mesure :</p>
+<p class="zh">**不确定度。**对第一次测量：</p>
+<div class="arithmatex">\[
+\frac{\Delta z}{z}=\frac{0{,}1}{20}=0{,}5\%,
+\qquad
+\frac{\Delta(t^2)}{t^2}=2\frac{\Delta t}{t}=2\frac{0{,}001}{0{,}202}\approx1{,}0\%.
+\]</div>
+<p>Pour la seconde :</p>
+<p class="zh">对第二次测量：</p>
+<div class="arithmatex">\[
+\frac{\Delta z}{z}=\frac{0{,}1}{60}\approx0{,}17\%,
+\qquad
+\frac{\Delta(t^2)}{t^2}=2\frac{0{,}001}{0{,}350}\approx0{,}57\%.
+\]</div>
+<p>En ajoutant les contributions (majoration) : <span class="arithmatex">\(\Delta g/g\approx1{,}5\%\)</span> puis <span class="arithmatex">\(0{,}74\%\)</span>, soit</p>
+<p class="zh">把各项贡献相加（取上界）：<span class="arithmatex">\(\Delta g/g\approx1{,}5\%\)</span> 与 <span class="arithmatex">\(0{,}74\%\)</span>，即</p>
+<div class="arithmatex">\[
+g=9{,}80\pm0{,}15\ \mathrm{m\,s^{-2}},
+\qquad
+g=9{,}80\pm0{,}07\ \mathrm{m\,s^{-2}}.
+\]</div>
+<p>Les deux valeurs sont compatibles avec <span class="arithmatex">\(9{,}81\ \mathrm{m\,s^{-2}}\)</span>. La mesure à <span class="arithmatex">\(z_A=60\)</span> cm est plus précise : le temps de chute est plus long, donc l'incertitude relative de chronométrage plus faible.</p>
+<p class="zh">两个值都与 <span class="arithmatex">\(9{,}81\ \mathrm{m\,s^{-2}}\)</span> 相容。<span class="arithmatex">\(z_A=60\)</span> cm 的测量更精确：下落时间更长，计时的相对不确定度更小。</p>
+<p><strong>B.</strong> En traçant <span class="arithmatex">\(z_A\)</span> en fonction de <span class="arithmatex">\(t_A^2\)</span>, on obtient une droite passant par l'origine, de pente <span class="arithmatex">\(p=g/2\)</span>. La régression linéaire sur les cinq points donne <span class="arithmatex">\(p\approx4{,}90\ \mathrm{m\,s^{-2}}\)</span>, soit <span class="arithmatex">\(g=2p\approx9{,}79\ \mathrm{m\,s^{-2}}\)</span>. Cette valeur est cohérente avec la méthode A et avec la valeur tabulée <span class="arithmatex">\(9{,}81\ \mathrm{m\,s^{-2}}\)</span>.</p>
+<p class="zh"><strong>B.</strong> 以 <span class="arithmatex">\(z_A\)</span> 对 <span class="arithmatex">\(t_A^2\)</span> 作图，得到一条过原点的直线，斜率为 <span class="arithmatex">\(p=g/2\)</span>。对五个点作线性回归得 <span class="arithmatex">\(p\approx4{,}90\ \mathrm{m\,s^{-2}}\)</span>，故 <span class="arithmatex">\(g=2p\approx9{,}79\ \mathrm{m\,s^{-2}}\)</span>。该值与 A 法及表列值 <span class="arithmatex">\(9{,}81\ \mathrm{m\,s^{-2}}\)</span> 一致。</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<h2 id="__comments">评论</h2>
+<script src="https://giscus.app/client.js"
+  data-repo="Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA"
+  data-repo-id="R_kgDOTFxXaw"
+  data-category="General"
+  data-category-id="DIC_kwDOTFxXa84DAMmT"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async>
+</script>
+<script>
+  var giscus = document.querySelector("script[src*='giscus']");
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+    giscus.setAttribute("data-theme", theme);
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+    var ref = document.querySelector("[data-md-component='palette']");
+    if (ref) {
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette");
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "transparent_dark" : "light";
+          var frame = document.querySelector(".giscus-frame");
+          if (frame && frame.contentWindow) {
+            frame.contentWindow.postMessage(
+              { giscus: { setConfig: { theme: theme } } },
+              "https://giscus.app"
+            );
+          }
+        }
+      });
+    }
+  });
+</script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Noct-BUAA
+
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["header.autohide", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.tracking", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight", "search.share"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/gsap.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/hero-scroll.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/extra.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/text-type.js"></script>
+      
+        <script src="../../../../../../assets/javascripts/party-quiz.js"></script>
+      
+    
+  </body>
+</html>

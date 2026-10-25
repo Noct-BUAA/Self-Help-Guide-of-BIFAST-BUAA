@@ -1276,6 +1276,37 @@ html { scroll-behavior: smooth; }
 [data-md-color-scheme="default"] .md-typeset .fig-dark { display: none !important; }
 [data-md-color-scheme="slate"]   .md-typeset .fig-light { display: none !important; }
 
+/* 对照表：缩小字号与内边距，尽量在正文宽度内放下 */
+.md-typeset .compare-table table {
+  font-size: .72rem;
+}
+.md-typeset .compare-table th,
+.md-typeset .compare-table td {
+  padding: .45rem .5rem;
+}
+
+/* 宽幅插图（三栏示意、宽曲线图） */
+.md-typeset .lecture-figure--wide img {
+  max-width: min(100%, 860px);
+}
+
+/* 并排插图（原文 minipage 两图对照） */
+.md-typeset .lecture-figure--row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.md-typeset .lecture-figure--row img {
+  max-width: min(46%, 520px);
+}
+@media (max-width: 700px) {
+  .md-typeset .lecture-figure--row img {
+    max-width: 100%;
+  }
+}
+
 /* 位图插图（白底 PNG）：暗色模式下加白底衬板，避免黑色线条融入背景 */
 [data-md-color-scheme="slate"] .md-typeset .lecture-figure img.fig-raster {
   padding: .45rem;
