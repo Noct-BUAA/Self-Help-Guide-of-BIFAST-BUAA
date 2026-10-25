@@ -1276,6 +1276,46 @@ html { scroll-behavior: smooth; }
 [data-md-color-scheme="default"] .md-typeset .fig-dark { display: none !important; }
 [data-md-color-scheme="slate"]   .md-typeset .fig-light { display: none !important; }
 
+/* 位图插图（白底 PNG）：暗色模式下加白底衬板，避免黑色线条融入背景 */
+[data-md-color-scheme="slate"] .md-typeset .lecture-figure img.fig-raster {
+  padding: .45rem;
+  border-radius: .35rem;
+  background: #fff;
+}
+
+/* MathJax 无障碍 MathML：屏幕阅读器副本不应撑宽页面 */
+html body mjx-assistive-mml {
+  position: absolute !important;
+  display: block !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
+
+/* 插图 / 表格题注 */
+.md-typeset p.lecture-caption {
+  margin: .55rem auto 1.25rem;
+  max-width: 42rem;
+  font-size: .78rem;
+  line-height: 1.65;
+  text-align: center;
+  text-indent: 0;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset p.lecture-caption em,
+.md-typeset p.lecture-caption .caption-fr {
+  font-style: italic;
+}
+.md-typeset .lecture-figure + p.lecture-caption {
+  margin-top: -.7rem;
+}
+.md-typeset p.lecture-caption + table {
+  margin-top: .2rem;
+}
+
 /* 右浮动插图（原文 minipage 排版） */
 .md-typeset .lecture-figure--float-right {
   float: right;
