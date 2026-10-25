@@ -2565,3 +2565,22 @@ body[data-md-color-scheme="slate"]:has(.party-handout) .md-typeset .party-quiz-t
     display: none !important;
   }
 }
+
+/* ════════════════════════════════════════════════════
+   填空题：填写内容高亮
+   ════════════════════════════════════════════════════ */
+body:has(.party-handout) .md-typeset .fill-q u {
+  padding: .04em .18em;
+  border-radius: 3px;
+  background: linear-gradient(180deg, transparent 55%, rgba(212, 175, 55, .42) 55%);
+  color: #7a4a00;
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+body[data-md-color-scheme="slate"]:has(.party-handout) .md-typeset .fill-q u {
+  background: linear-gradient(180deg, transparent 55%, rgba(255, 209, 102, .22) 55%);
+  color: #ffd166;
+}
