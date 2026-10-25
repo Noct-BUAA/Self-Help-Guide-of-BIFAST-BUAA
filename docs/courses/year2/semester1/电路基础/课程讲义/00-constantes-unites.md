@@ -24,9 +24,20 @@ comments: true
 | Masse de l'électron（电子质量） | \(m_e\) | \(9{,}109 \times 10^{-31}\) kilogramme (kg) |
 | Vitesse de la lumière dans le vide（真空中的光速） | \(c\) | \(3 \times 10^{8}\) mètres par seconde (\(m\,s^{-1}\)) |
 
+## Constantes de l'électrostatique et de la gravitation <span class="heading-zh">静电学与引力常量</span>
+
+<p class="lecture-caption arithmatex"><span class="caption-fr arithmatex">Tableau 2 — Constantes utiles en électrostatique</span><br>表 2：静电学常用常量</p>
+
+| Nom | Symbole | Valeur |
+|---|---|---|
+| Permittivité du vide（真空介电常数） | \(\varepsilon_0\) | \(8{,}85 \times 10^{-12}\ \mathrm{F\,m^{-1}}\)（即 \(\mathrm{C^2\,N^{-1}\,m^{-2}}\)） |
+| Constante de Coulomb（库仑常量） | \(k=\dfrac{1}{4\pi\varepsilon_0}\) | \(\approx 9{,}0 \times 10^{9}\ \mathrm{N\,m^2\,C^{-2}}\) |
+| Constante de gravitation（万有引力常量） | \(G\) | \(6{,}67 \times 10^{-11}\ \mathrm{N\,m^2\,kg^{-2}}\) |
+| Constante de Planck（普朗克常量） | \(h\) | \(6{,}63 \times 10^{-34}\ \mathrm{J\,s}\) |
+
 ## Unités <span class="heading-zh">单位</span>
 
-<p class="lecture-caption arithmatex"><span class="caption-fr arithmatex">Tableau 2 — Unités courantes en électrocinétique</span><br>表 2：动电学常用单位</p>
+<p class="lecture-caption arithmatex"><span class="caption-fr arithmatex">Tableau 3 — Unités courantes en électrocinétique</span><br>表 3：动电学常用单位</p>
 
 | Unité | Abréviation | Signification |
 |---|---|---|
@@ -51,6 +62,10 @@ comments: true
     - <strong>charge élémentaire</strong>：元电荷
     - <strong>masse de l'électron</strong>：电子质量
     - <strong>vitesse de la lumière dans le vide</strong>：真空中的光速
+    - <strong>permittivité du vide \(\varepsilon_0\)</strong>：真空介电常数
+    - <strong>constante de Coulomb \(k\)</strong>：库仑常量
+    - <strong>constante de gravitation \(G\)</strong>：万有引力常量
+    - <strong>constante de Planck \(h\)</strong>：普朗克常量
     - <strong>intensité du courant électrique</strong>：电流强度
     - <strong>charge électrique</strong>：电荷
     - <strong>température</strong>：温度

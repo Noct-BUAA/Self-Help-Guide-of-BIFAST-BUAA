@@ -18,10 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================================================
   // 1. CARD GRID — Scroll-triggered reveal
   // ============================================================
-  const cardGrids = document.querySelectorAll('.card-grid .card');
-  if (cardGrids.length) {
+  // 每个 .card-grid 单独绑定 ScrollTrigger；页面存在多个卡片网格时
+  // 只触发第一个会导致后续网格的卡片永远停留在 opacity: 0。
+  document.querySelectorAll('.card-grid').forEach((grid) => {
+    const cards = grid.querySelectorAll('.card');
+    if (!cards.length) return;
+
     gsap.fromTo(
-      cardGrids,
+      cards,
       { opacity: 0, y: 30 },
       {
         opacity: 1, y: 0,
@@ -29,13 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
         stagger: 0.1,
         ease: 'power2.out',
         scrollTrigger: {
-          trigger: '.card-grid',
+          trigger: grid,
           start: 'top 85%',
           once: true,
         },
       }
     );
-  }
+  });
 
   // ============================================================
   // 2. TABLES — Per-table scroll reveal

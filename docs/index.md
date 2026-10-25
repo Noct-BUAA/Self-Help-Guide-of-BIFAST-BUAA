@@ -31,7 +31,7 @@ comments: true
 <aside class="df-announce" aria-label="公告栏">
   <div class="df-announce__head">
     <span class="df-announce__kicker">公告栏 · ANNONCES</span>
-    <time class="df-announce__date" datetime="2026-10-25">2026-10-25</time>
+    <time class="df-announce__date" datetime="2026-10-26">2026-10-26</time>
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
@@ -39,7 +39,7 @@ comments: true
       <span class="df-announce__tag df-announce__tag--new">新课程</span>
       <span class="df-announce__body">
         <strong>电路基础课程上线</strong>
-        <span>四章中法对照讲义、定义公式速查、常量单位表与词汇表</span>
+        <span>静电学与动电学 8 章讲义、TD1–TD2 参考解答、定义公式速查与词汇表</span>
       </span>
     </a>
     <a class="df-announce__item" href="courses/year2/semester1/期中考试/">
@@ -93,7 +93,7 @@ comments: true
 <aside class="df-announce" aria-label="公告栏">
   <div class="df-announce__head">
     <span class="df-announce__kicker">公告栏 · ANNONCES</span>
-    <time class="df-announce__date" datetime="2026-10-25">2026-10-25</time>
+    <time class="df-announce__date" datetime="2026-10-26">2026-10-26</time>
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
@@ -101,7 +101,7 @@ comments: true
       <span class="df-announce__tag df-announce__tag--new">新课程</span>
       <span class="df-announce__body">
         <strong>电路基础课程上线</strong>
-        <span>四章中法对照讲义、定义公式速查、常量单位表与词汇表</span>
+        <span>静电学与动电学 8 章讲义、TD1–TD2 参考解答、定义公式速查与词汇表</span>
       </span>
     </a>
     <a class="df-announce__item" href="courses/year2/semester1/期中考试/">
