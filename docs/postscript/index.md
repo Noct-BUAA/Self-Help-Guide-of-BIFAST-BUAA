@@ -28,7 +28,7 @@ comments: true
 |------|------|
 | **网站框架** | MkDocs Material，支持亮暗切换、全站搜索、代码复制 |
 | **评论系统** | Giscus，基于 GitHub Discussions |
-| **部署** | GitHub Pages 主站 + Vercel 备用站点 |
+| **部署** | GitHub Pages |
 
 ## 致谢
 
