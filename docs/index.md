@@ -35,6 +35,13 @@ comments: true
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
+    <a class="df-announce__item" href="courses/year2/semester1/期中考试/">
+      <span class="df-announce__tag df-announce__tag--exam">考试</span>
+      <span class="df-announce__body">
+        <strong>数学考前合集上线</strong>
+        <span>10 月 28 日考试；两门课定义、性质、定理已按章节汇总</span>
+      </span>
+    </a>
     <a class="df-announce__item" href="courses/year2/semester1/党校学习资料/">
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
@@ -54,13 +61,6 @@ comments: true
       <span class="df-announce__body">
         <strong>多项式讲义扩充，TD4 上线</strong>
         <span>第 3 章新增根与重根、拉格朗日插值、代数基本定理</span>
-      </span>
-    </a>
-    <a class="df-announce__item" href="courses/year2/semester1/期中考试/">
-      <span class="df-announce__tag df-announce__tag--exam">考试</span>
-      <span class="df-announce__body">
-        <strong>数学期中考试通知</strong>
-        <span>10 月 28 日（周三）14:00–17:00，实分析与工程数学</span>
       </span>
     </a>
   </div>
@@ -97,6 +97,13 @@ comments: true
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
+    <a class="df-announce__item" href="courses/year2/semester1/期中考试/">
+      <span class="df-announce__tag df-announce__tag--exam">考试</span>
+      <span class="df-announce__body">
+        <strong>数学考前合集上线</strong>
+        <span>10 月 28 日考试；两门课定义、性质、定理已按章节汇总</span>
+      </span>
+    </a>
     <a class="df-announce__item" href="courses/year2/semester1/党校学习资料/">
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
@@ -116,13 +123,6 @@ comments: true
       <span class="df-announce__body">
         <strong>多项式讲义扩充，TD4 上线</strong>
         <span>第 3 章新增根与重根、拉格朗日插值、代数基本定理</span>
-      </span>
-    </a>
-    <a class="df-announce__item" href="courses/year2/semester1/期中考试/">
-      <span class="df-announce__tag df-announce__tag--exam">考试</span>
-      <span class="df-announce__body">
-        <strong>数学期中考试通知</strong>
-        <span>10 月 28 日（周三）14:00–17:00，实分析与工程数学</span>
       </span>
     </a>
   </div>
