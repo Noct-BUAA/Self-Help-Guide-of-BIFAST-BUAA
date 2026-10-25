@@ -171,6 +171,16 @@ nav:
             - TD3 反三角函数解答: courses/year2/semester1/工程数学/习题课/td3-fonctions-reciproques.md
             - TD4 多项式解答: courses/year2/semester1/工程数学/习题课/td4-polynomes.md
             - TD5 多项式的根解答: courses/year2/semester1/工程数学/习题课/td5-racines-polynomes.md
+        - 电路基础:
+          - 课程总览: courses/year2/semester1/电路基础/index.md
+          - 定义与公式速查: courses/year2/semester1/电路基础/定义与公式速查.md
+          - 课程讲义:
+            - 物理常量与单位: courses/year2/semester1/电路基础/课程讲义/00-constantes-unites.md
+            - 第 1 章 电荷输运: courses/year2/semester1/电路基础/课程讲义/01-transport-de-charges.md
+            - 第 2 章 电路基础: courses/year2/semester1/电路基础/课程讲义/02-fondements-des-circuits.md
+            - 第 3 章 能量耗散: courses/year2/semester1/电路基础/课程讲义/03-dissipation-energie.md
+            - 第 4 章 电路结构: courses/year2/semester1/电路基础/课程讲义/04-structure-des-circuits.md
+          - 词汇表: courses/year2/semester1/电路基础/词汇表.md
         - 党校学习资料: courses/year2/semester1/党校学习资料/index.md
       - 大二下学期:
         - 学期概览: courses/year2/semester2/index.md

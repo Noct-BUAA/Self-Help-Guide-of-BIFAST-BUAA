@@ -35,6 +35,13 @@ comments: true
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
+    <a class="df-announce__item" href="courses/year2/semester1/电路基础/">
+      <span class="df-announce__tag df-announce__tag--new">新课程</span>
+      <span class="df-announce__body">
+        <strong>电路基础课程上线</strong>
+        <span>四章中法对照讲义、定义公式速查、常量单位表与词汇表</span>
+      </span>
+    </a>
     <a class="df-announce__item" href="courses/year2/semester1/期中考试/">
       <span class="df-announce__tag df-announce__tag--exam">考试</span>
       <span class="df-announce__body">
@@ -54,13 +61,6 @@ comments: true
       <span class="df-announce__body">
         <strong>TD5 多项式的根上线</strong>
         <span>重数判别、拉格朗日插值、根与系数的关系、tan 七倍角</span>
-      </span>
-    </a>
-    <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td4-polynomes/">
-      <span class="df-announce__tag df-announce__tag--new">更新</span>
-      <span class="df-announce__body">
-        <strong>多项式讲义扩充，TD4 上线</strong>
-        <span>第 3 章新增根与重根、拉格朗日插值、代数基本定理</span>
       </span>
     </a>
   </div>
@@ -97,6 +97,13 @@ comments: true
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
+    <a class="df-announce__item" href="courses/year2/semester1/电路基础/">
+      <span class="df-announce__tag df-announce__tag--new">新课程</span>
+      <span class="df-announce__body">
+        <strong>电路基础课程上线</strong>
+        <span>四章中法对照讲义、定义公式速查、常量单位表与词汇表</span>
+      </span>
+    </a>
     <a class="df-announce__item" href="courses/year2/semester1/期中考试/">
       <span class="df-announce__tag df-announce__tag--exam">考试</span>
       <span class="df-announce__body">
@@ -116,13 +123,6 @@ comments: true
       <span class="df-announce__body">
         <strong>TD5 多项式的根上线</strong>
         <span>重数判别、拉格朗日插值、根与系数的关系、tan 七倍角</span>
-      </span>
-    </a>
-    <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td4-polynomes/">
-      <span class="df-announce__tag df-announce__tag--new">更新</span>
-      <span class="df-announce__body">
-        <strong>多项式讲义扩充，TD4 上线</strong>
-        <span>第 3 章新增根与重根、拉格朗日插值、代数基本定理</span>
       </span>
     </a>
   </div>

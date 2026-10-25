@@ -1,6 +1,6 @@
 # 大二上学期
 
-大二上学期开设两门数学课程，均为法语授课，讲义采用中法对照排版。网站收录的讲义由原始 LaTeX 源文件渲染为网页，包含完整公式、插图与习题课参考解答。
+大二上学期开设两门数学课程与一门电路基础课程，均为法语授课，讲义采用中法对照排版。网站收录的讲义由原始 LaTeX 源文件渲染为网页，包含完整公式与插图；数学课程另附习题课参考解答。
 
 本学期另收录党校学习资料，供入党积极分子培训与党校入学考试复习使用。
 
@@ -23,6 +23,12 @@
 <a class="card" href="工程数学/">
   <h3>工程数学</h3>
   <p>Outils mathématiques pour les ingénieurs · 复数、三角学与多项式。收录三章正课、Fiche 5 与 TD1–TD5 参考解答。</p>
+  <span class="card-arrow">浏览课程 &rarr;</span>
+</a>
+
+<a class="card" href="电路基础/">
+  <h3>电路基础</h3>
+  <p>Électrocinétique et circuits électriques · 电荷输运、电路基本量、能量耗散与基尔霍夫定律。收录四章正课讲义、常量单位表与词汇表。</p>
   <span class="card-arrow">浏览课程 &rarr;</span>
 </a>
 
