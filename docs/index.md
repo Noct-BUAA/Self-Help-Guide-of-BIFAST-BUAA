@@ -39,7 +39,7 @@ comments: true
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
         <strong>党校学习资料改版上线</strong>
-        <span>49 个知识点改为醒目卡片框，练习题移至页首</span>
+        <span>49 个知识点卡片化，练习题前置，选择题支持乱序自测</span>
       </span>
     </a>
     <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td5-racines-polynomes/">
@@ -101,7 +101,7 @@ comments: true
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
         <strong>党校学习资料改版上线</strong>
-        <span>49 个知识点改为醒目卡片框，练习题移至页首</span>
+        <span>49 个知识点卡片化，练习题前置，选择题支持乱序自测</span>
       </span>
     </a>
     <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td5-racines-polynomes/">
