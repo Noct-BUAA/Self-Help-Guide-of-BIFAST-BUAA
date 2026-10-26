@@ -2655,3 +2655,110 @@ body[data-md-color-scheme="slate"]:has(.party-handout) .md-typeset .fill-q u {
   background: linear-gradient(180deg, transparent 55%, rgba(255, 209, 102, .22) 55%);
   color: #ffd166;
 }
+
+/* ════════════════════════════════════════════════════
+   党校填空题 · 乱序默背
+   ════════════════════════════════════════════════════ */
+body.party-fill-open {
+  overflow: hidden;
+}
+
+.party-fill-foot__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+}
+
+.party-fill-reveal-all {
+  border-color: rgba(201, 162, 39, .45);
+  color: #8a6700;
+  font-weight: 600;
+}
+
+.party-fill-reveal-all:hover {
+  border-color: rgba(201, 162, 39, .75);
+  background: rgba(212, 175, 55, .08);
+  color: #7a4a00;
+}
+
+/* 挖空：答案默认隐藏，仍保留原文字宽度，点击揭示 */
+.party-fill-blank {
+  display: inline;
+  margin: 0 .1em;
+  padding: .04em .22em .02em;
+  border: 0;
+  border-bottom: 1.5px dashed rgba(140, 29, 29, .45);
+  border-radius: 3px;
+  background: rgba(212, 175, 55, .14);
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  line-height: inherit;
+  vertical-align: baseline;
+  cursor: pointer;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background .15s ease, border-color .15s ease;
+}
+
+.party-fill-blank:hover {
+  border-bottom-color: rgba(140, 29, 29, .75);
+  background: rgba(212, 175, 55, .3);
+}
+
+.party-fill-blank:focus-visible {
+  outline: 2px solid #c9a227;
+  outline-offset: 2px;
+}
+
+.party-fill-blank__text {
+  opacity: 0;
+  transition: opacity .18s ease;
+}
+
+.party-fill-blank.is-revealed {
+  border-bottom-color: transparent;
+  background: linear-gradient(180deg, transparent 55%, rgba(212, 175, 55, .42) 55%);
+}
+
+.party-fill-blank.is-revealed .party-fill-blank__text {
+  opacity: 1;
+  color: #7a4a00;
+}
+
+[data-md-color-scheme="slate"] .party-fill-blank {
+  border-bottom-color: rgba(255, 209, 102, .45);
+  background: rgba(255, 209, 102, .12);
+}
+
+[data-md-color-scheme="slate"] .party-fill-blank:hover {
+  border-bottom-color: rgba(255, 209, 102, .8);
+  background: rgba(255, 209, 102, .22);
+}
+
+[data-md-color-scheme="slate"] .party-fill-blank.is-revealed {
+  background: linear-gradient(180deg, transparent 55%, rgba(255, 209, 102, .22) 55%);
+}
+
+[data-md-color-scheme="slate"] .party-fill-blank.is-revealed .party-fill-blank__text {
+  color: #ffd166;
+}
+
+[data-md-color-scheme="slate"] .party-fill-reveal-all {
+  border-color: rgba(255, 209, 102, .35);
+  color: #ffd166;
+}
+
+[data-md-color-scheme="slate"] .party-fill-reveal-all:hover {
+  border-color: rgba(255, 209, 102, .6);
+  background: rgba(255, 209, 102, .08);
+  color: #ffe29a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .party-fill-blank,
+  .party-fill-blank__text {
+    transition: none;
+  }
+}
