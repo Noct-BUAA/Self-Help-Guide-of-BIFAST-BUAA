@@ -288,3 +288,4 @@ extra_javascript:
   - assets/javascripts/extra.js
   - assets/javascripts/text-type.js
   - assets/javascripts/party-quiz.js
+  - assets/javascripts/party-fill.js
