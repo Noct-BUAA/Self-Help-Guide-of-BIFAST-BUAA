@@ -21,12 +21,12 @@ comments: true
     熟练操作多项式。
     {: .zh }
 
-1. Factoriser des polynômes à l'aide de leurs racines.
+2. Factoriser des polynômes à l'aide de leurs racines.
 
     利用多项式的根对多项式进行因式分解。
     {: .zh }
 
-1. Décomposer des fractions rationnelles en éléments simples.
+3. Décomposer des fractions rationnelles en éléments simples.
 
     将有理分式分解为部分分式（éléments simples）。
     {: .zh }
@@ -123,18 +123,7 @@ On rappelle que \(\mathbb{N}\) désigne l'ensemble des entiers naturels, \(\math
 
 !!! info "Exemple 1.4<br><span class='zh-title'>例 1.4</span>"
 
-    - \(\displaystyle
-        (1+\sqrt{2}X+X^2)(1-\sqrt{2}X+X^2)
-        =
-        \left(
-        \begin{matrix}
-        1+(-\sqrt{2}+\sqrt{2})X\\
-        +(1-2+1)X^2\\
-        +(0+\sqrt{2}-\sqrt{2}+0)X^3\\
-        +(0+0+1+0+0)X^4
-        \end{matrix}
-        \right)
-        =1+X^4.\)
+    - \(\displaystyle (1+\sqrt{2}X+X^2)(1-\sqrt{2}X+X^2) = \left( \begin{matrix} 1+(-\sqrt{2}+\sqrt{2})X\\ +(1-2+1)X^2\\ +(0+\sqrt{2}-\sqrt{2}+0)X^3\\ +(0+0+1+0+0)X^4 \end{matrix} \right) =1+X^4.\)
 
     - Pour des polynômes constants \(P=a\in\mathbb{K}\) et \(Q=b\in\mathbb{K}\), on retrouve l'addition et la multiplication des nombres :
 
@@ -198,7 +187,7 @@ En particulier, on rappelle le résultat suivant qui se généralise aux polynô
     \quad\text{où}\quad \binom{n}{k}=\frac{n!}{k!(n-k)!}.
     \]
 
-<span class="lecture-figure lecture-figure--float-right"><img class="fig-light" src="../../../../../../assets/images/lectures/outils-mathematiques/03-polynomes/fig-01.svg" alt="讲义插图 1"><img class="fig-dark" src="../../../../../../assets/images/lectures/outils-mathematiques/03-polynomes/fig-01-dark.svg" alt="讲义插图 1"></span>
+<span class="lecture-figure lecture-figure--float-right"><img class="fig-light" src="../../../../../../assets/images/lectures/outils-mathematiques/03-polynomes/fig-01.svg" alt="帕斯卡三角形"><img class="fig-dark" src="../../../../../../assets/images/lectures/outils-mathematiques/03-polynomes/fig-01-dark.svg" alt="帕斯卡三角形"></span>
 
 On rappelle également que les <strong>coefficients binomiaux</strong> vérifient la relation de récurrence (avec la convention \(\binom{n}{k}=0\) si \(k>n\)) :
 
@@ -231,7 +220,7 @@ On peut donc les calculer à l'aide du <strong>triangle de Pascal</strong>.
 
     Une fonction \(f:\mathscr{D}\to\mathbb{K}\) définie sur \(\mathscr{D}\subset\mathbb{K}\) est dite <strong>polynomiale</strong> lorsqu'il existe un polynôme \(P=\sum_{n=0}^{N}a_nX^n\in\mathbb{K}[X]\) tel que :
 
-    定义在 \(\mathscr{D}\subset\mathbb{K}\) 上的函数 \(f:\mathscr{D}\to\mathbb{K}\) 称为<strong>多项式函数</strong>（fonction polynomiale），若存在多项式 \(P=\sum_{n=0}^{N}a_nX^n\in\mathbb{K}[X]\) 使得：
+    定义在 \(\mathscr{D}\subset\mathbb{K}\) 上的函数 \(f:\mathscr{D}\to\mathbb{K}\) 称为<strong>多项式函数</strong>（polynomiale），若存在多项式 \(P=\sum_{n=0}^{N}a_nX^n\in\mathbb{K}[X]\) 使得：
     {: .zh }
 
     \[
@@ -327,13 +316,13 @@ On peut exprimer les coefficients d'un polynôme à l'aide de ses dérivées en 
 
 !!! danger "Théorème 2.7 : formule de Taylor pour les polynômes<br><span class='zh-title'>定理 2.7：多项式的泰勒公式</span>"
 
-    Soient \(P=\sum_{n=0}^{N}a_nX^n\in\mathbb{K}[X]\) et \(a\in\mathbb{K}\). Alors :
+    Soient \(P=\sum_{n=0}^{N}a_nX^n\in\mathbb{K}[X]\) et \(\alpha\in\mathbb{K}\). Alors :
 
-    设 \(P=\sum_{n=0}^{N}a_nX^n\in\mathbb{K}[X]\) 且 \(a\in\mathbb{K}\)。则：
+    设 \(P=\sum_{n=0}^{N}a_nX^n\in\mathbb{K}[X]\) 且 \(\alpha\in\mathbb{K}\)。则：
     {: .zh }
 
     \[
-    P=\sum_{n=0}^{N}\frac{P^{(n)}(a)}{n!}(X-a)^n.
+    P=\sum_{n=0}^{N}\frac{P^{(n)}(\alpha)}{n!}(X-\alpha)^n.
     \]
 
     En particulier : \(\forall n\in\mathbb{N},\ a_n=\frac{P^{(n)}(0)}{n!}\).
@@ -343,15 +332,15 @@ On peut exprimer les coefficients d'un polynôme à l'aide de ses dérivées en 
 
 !!! demo ""
 
-    <strong>Démonstration.</strong> On pose \(Q=P(X+a)=\sum_{n=0}^{N}b_nX^n\). Ainsi :
+    <strong>Démonstration.</strong> On pose \(Q=P(X+\alpha)=\sum_{n=0}^{N}b_nX^n\). Ainsi :
 
     \[
-    P=Q(X-a)=\sum_{n=0}^{N}b_n(X-a)^n
+    P=Q(X-\alpha)=\sum_{n=0}^{N}b_n(X-\alpha)^n
     \qquad\text{et}\qquad
-    \forall n\in\mathbb{N},\quad Q^{(n)}(0)=P^{(n)}(a).
+    \forall n\in\mathbb{N},\quad P^{(n)}(\alpha)=Q^{(n)}(0).
     \]
 
-    <strong>证明.</strong> 令 \(Q=P(X+a)=\sum_{n=0}^{N}b_nX^n\)。于是：
+    <strong>证明.</strong> 令 \(Q=P(X+\alpha)=\sum_{n=0}^{N}b_nX^n\)。于是：
     {: .zh }
 
     !!! danger "Lemme 2.8<br><span class='zh-title'>引理 2.8</span>"
@@ -382,8 +371,9 @@ On peut exprimer les coefficients d'un polynôme à l'aide de ses dérivées en 
     Par conséquent :
 
     \[
-    P=Q(X-a)=\sum_{n=0}^{N}\frac{Q^{(n)}(0)}{n!}(X-a)^n
-    =\sum_{n=0}^{N}\frac{P^{(n)}(a)}{n!}(X-a)^n.
+    P=Q(X-\alpha)=\sum_{n=0}^{N}b_n(X-\alpha)^n
+    =\sum_{n=0}^{N}\frac{Q^{(n)}(0)}{n!}(X-\alpha)^n
+    =\sum_{n=0}^{N}\frac{P^{(n)}(\alpha)}{n!}(X-\alpha)^n.
     \]
 
     因此：
@@ -462,14 +452,14 @@ Autrement dit, si \(P\neq0\) alors \(\deg(P)=\max\{n\in\mathbb{N}\mid a_n\neq0\}
         对任意 \((P,Q)\in\mathbb{K}[X]^2\)，\(\deg(Q)\geqslant1\implies\deg(P\circ Q)=\deg(P)\deg(Q)\)，
         {: .zh }
 
-    - \(\forall(P,k)\in\mathbb{K}[X]\times\mathbb{N}\), \(\deg(P^{(k)})=\begin{cases}\deg(P)-k & \text{si } \deg(P)\geqslant k,\\ -\infty & \text{sinon}.\end{cases}\)
+    - \(\forall P\in\mathbb{K}[X]\), \(\forall k\in\mathbb{N}\), \(\deg(P^{(k)})=\begin{cases}\deg(P)-k & \text{si } \deg(P)\geqslant k,\\ -\infty & \text{sinon}.\end{cases}\)
 
-        对任意 \((P,k)\in\mathbb{K}[X]\times\mathbb{N}\)，\(\deg(P^{(k)})=\begin{cases}\deg(P)-k & \text{若 } \deg(P)\geqslant k,\\ -\infty & \text{否则}.\end{cases}\)
+        对任意 \(P\in\mathbb{K}[X]\) 与任意 \(k\in\mathbb{N}\)，\(\deg(P^{(k)})=\begin{cases}\deg(P)-k & \text{若 } \deg(P)\geqslant k,\\ -\infty & \text{否则}.\end{cases}\)
         {: .zh }
 
-- Si \(\deg(P)=\deg(Q)\in\mathbb{N}\) alors \(\deg(P+Q)=\deg(P)=\deg(Q)\) si et seulement si la somme des coefficients dominants de \(P\) et \(Q\) n'est pas égale à 0.
+- Si \(\deg(P)=\deg(Q)\geqslant0\) alors \(\deg(P+Q)=\deg(P)=\deg(Q)\) si et seulement si la somme des coefficients dominants de \(P\) et \(Q\) n'est pas égale à 0.
 
-    若 \(\deg(P)=\deg(Q)\in\mathbb{N}\)，则 \(\deg(P+Q)=\deg(P)=\deg(Q)\) 当且仅当 \(P\) 与 \(Q\) 的首项系数之和不等于 0。
+    若 \(\deg(P)=\deg(Q)\geqslant0\)，则 \(\deg(P+Q)=\deg(P)=\deg(Q)\) 当且仅当 \(P\) 与 \(Q\) 的首项系数之和不等于 0。
     {: .zh }
 
 - Si \(\deg(Q)<1\), donc \(Q=b\in\mathbb{K}\) est un polynôme constant, alors \(\deg(P\circ Q)=\deg(P(b))\) est égal à 0 si \(P(b)\neq0\) et à \(-\infty\) si \(P(b)=0\).
@@ -505,14 +495,14 @@ Autrement dit, si \(P\neq0\) alors \(\deg(P)=\max\{n\in\mathbb{N}\mid a_n\neq0\}
     \end{aligned}
     \]
 
-    <strong>证明.</strong> 即：若乘积为零，则其次数为 \(-\infty\)，故两个多项式的次数中至少一个为 \(-\infty\)，从而至少一个多项式为零。
+    <strong>证明.</strong> 若 \(PQ=0\)，则 \(\deg(PQ)=-\infty\)，即 \(\deg(P)+\deg(Q)=-\infty\)，故 \(\deg(P)=-\infty\) 或 \(\deg(Q)=-\infty\)，从而 \(P=0\) 或 \(Q=0\)。
     {: .zh }
 
     <p class="cqfd">∎</p>
 
 !!! warning "Remarque<br><span class='zh-title'>注</span>"
 
-    L'<strong>intégrité</strong> dans \(\mathbb{K}[X]\) est une propriété remarquable des polynômes. En effet, il n'y a pas d'intégrité dans l'ensemble des fonctions. Par exemple, \(f:x\mapsto|x|+x\) et \(g:x\mapsto|x|-x\) ne sont pas égales à la fonction constante égale à 0 (car \(f(1)=g(-1)=2\neq0\)) alors que&nbsp;:
+    L'<strong>intégrité</strong> dans \(\mathbb{K}[X]\) est une propriété remarquable des polynômes. En effet, il n'y a pas d'intégrité dans l'ensemble des fonctions. Par exemple, \(f:x\mapsto|x|+x\) et \(g:x\mapsto|x|-x\) ne sont pas égales à la fonction constante égale à 0 (car \(f(1)=g(-1)=2\neq0\)) alors que :
 
     \(\mathbb{K}[X]\) 中的<strong>整性</strong>（intégrité）是多项式的一个显著性质。事实上，函数集合中并不具有整性。例如，\(f:x\mapsto|x|+x\) 与 \(g:x\mapsto|x|-x\) 都不等于恒为零的常函数（因为 \(f(1)=g(-1)=2\neq0\)），然而：
     {: .zh }
@@ -575,15 +565,12 @@ On dit qu'un polynôme \(P\in\mathbb{K}[X]\) est <strong>factorisable</strong> p
 
 !!! demo ""
 
-    \(\Leftarrow\) S'il existe \(R\in\mathbb{K}[X]\) tel que \(P=(X-\alpha)R\), alors \(P(\alpha)=(\alpha-\alpha)R(\alpha)=0\).
+    <strong>Démonstration.</strong>　\(\Leftarrow\) S'il existe \(R\in\mathbb{K}[X]\) tel que \(P=(X-\alpha)R\), alors \(P(\alpha)=(\alpha-\alpha)R(\alpha)=0\).
 
     \(\Leftarrow\) 若存在 \(R\in\mathbb{K}[X]\) 使得 \(P=(X-\alpha)R\)，则 \(P(\alpha)=(\alpha-\alpha)R(\alpha)=0\)。
     {: .zh }
 
     \(\Rightarrow\) On note \(P=\sum_{n=0}^{N}a_nX^n\) et on suppose que \(P(\alpha)=0\). D'après la formule de Taylor pour les polynômes, on a :
-
-    \(\Rightarrow\) 记 \(P=\sum_{n=0}^{N}a_nX^n\)，并假设 \(P(\alpha)=0\)。根据多项式的泰勒公式，有：
-    {: .zh }
 
     \[
     \begin{aligned}
@@ -594,6 +581,9 @@ On dit qu'un polynôme \(P\in\mathbb{K}[X]\) est <strong>factorisable</strong> p
     &=(X-\alpha)\underbrace{\sum_{n=0}^{N-1}\frac{P^{(n+1)}(\alpha)}{(n+1)!}(X-\alpha)^{n}}_{=R\in\mathbb{K}[X]}.
     \end{aligned}
     \]
+
+    \(\Rightarrow\) 记 \(P=\sum_{n=0}^{N}a_nX^n\)，并假设 \(P(\alpha)=0\)。根据多项式的泰勒公式，有：
+    {: .zh }
 
     <p class="cqfd">∎</p>
 
@@ -641,7 +631,7 @@ On dit qu'un polynôme \(P\in\mathbb{K}[X]\) est <strong>factorisable</strong> p
 
 !!! demo ""
 
-    \(\Rightarrow\) On note \(P=\sum_{n=0}^{N}a_nX^n\) et on suppose que \(P(\alpha)=P'(\alpha)=\cdots=P^{(m-1)}(\alpha)=0\). D'après la formule de Taylor pour les polynômes, on a :
+    <strong>Démonstration.</strong>　\(\Rightarrow\) On note \(P=\sum_{n=0}^{N}a_nX^n\) et on suppose que \(P(\alpha)=P'(\alpha)=\cdots=P^{(m-1)}(\alpha)=0\). D'après la formule de Taylor pour les polynômes, on a :
 
     \[
     \begin{aligned}
@@ -674,7 +664,7 @@ On dit qu'un polynôme \(P\in\mathbb{K}[X]\) est <strong>factorisable</strong> p
     D'après la formule de Leibniz, on a pour tout \(k\in\llbracket0,m-1\rrbracket\) :
 
     \[
-    P^{(k)}(\alpha)=\sum_{j=0}^{k}\binom{k}{j}\frac{m!}{(m-j)!}(\alpha-\alpha)^{\overbrace{m-j}^{\geqslant1}}R^{(k-j)}(\alpha)=0
+    P^{(k)}(\alpha)=\sum_{j=0}^{k}\binom{k}{j}\frac{m!}{(m-j)!}(\alpha-\alpha)^{\overset{\geqslant1}{\overrightarrow{m-j}}}R^{(k-j)}(\alpha)=0
     \quad\text{car } j\leqslant k\leqslant m-1.
     \]
 
@@ -695,16 +685,16 @@ On dit qu'un polynôme \(P\in\mathbb{K}[X]\) est <strong>factorisable</strong> p
     \quad\text{et}\quad P^{(m)}(\alpha)\neq0,
     \]
 
-    Autrement dit, la <strong>multiplicité</strong> d'une racine \(\alpha\) de \(P\) est le plus grand entier \(m\in\mathbb{N}^*\) tel que \(P\) est factorisable par \((X-\alpha)^m\). Une racine de multiplicité 1 est dite <strong>simple</strong> alors qu'une racine de multiplicité au moins égale à 2 est dite <strong>multiple</strong>.
+    Autrement dit, la <strong>multiplicité</strong> d'une racine \(\alpha\) de \(P\) est le plus grand entier \(m\in\mathbb{N}^*\) tel que \(P\) est factorisable par \((X-\alpha)^m\). Une racine de multiplicité 1 est dite <strong>simple</strong> alors qu'une racine de multiplicité supérieure ou égale à 2 est dite <strong>multiple</strong>.
 
-    则称数 \(\alpha\in\mathbb{K}\) 是 \(P\) 的一个<strong>重数</strong>（multiplicité）为 \(m\in\mathbb{N}^*\) 的根。换言之，\(P\) 的根 \(\alpha\) 的<strong>重数</strong>是使得 \(P\) 可被 \((X-\alpha)^m\) 因式分解的最大整数 \(m\in\mathbb{N}^*\)。重数为 1 的根称为<strong>单根</strong>（simple），而重数至少为 2 的根称为<strong>重根</strong>（multiple）。
+    则称数 \(\alpha\in\mathbb{K}\) 是 \(P\) 的一个<strong>重数</strong>（multiplicité）为 \(m\in\mathbb{N}^*\) 的根。换言之，\(P\) 的根 \(\alpha\) 的<strong>重数</strong>是使得 \(P\) 可被 \((X-\alpha)^m\) 因式分解的最大整数 \(m\in\mathbb{N}^*\)。重数为 1 的根称为<strong>单根</strong>（simple），而重数大于或等于 2 的根称为<strong>重根</strong>（multiple）。
     {: .zh }
 
 !!! info "Exemple 4.8<br><span class='zh-title'>例 4.8</span>"
 
-    \(1\) est une racine de \(P=X^5-3X^4+4X^3-4X^2+3X-1\), de \(P'=5X^4-12X^3+12X^2-8X+3\), de \(P''=20X^3-36X^2+24X-8\), mais pas de \(P'''=60X^2-72X+24\). Donc \(1\) est une racine de multiplicité 3 de \(P\) et on sait qu'il existe \(R\in\mathbb{R}[X]\) tel que \(P=(X-1)^3R\). En particulier, \(5=\deg(P)=3+\deg(R)\), donc \(\deg(R)=2\). On pose \(R=aX^2+bX+c\) où \((a,b,c)\in\mathbb{R}^3\). Alors :
+    1 est une racine de \(P=X^5-3X^4+4X^3-4X^2+3X-1\), de \(P'=5X^4-12X^3+12X^2-8X+3\), de \(P''=20X^3-36X^2+24X-8\), mais pas de \(P'''=60X^2-72X+24\). Donc 1 est une racine de multiplicité 3 de \(P\) et on sait qu'il existe \(R\in\mathbb{R}[X]\) tel que \(P=(X-1)^3R\). En particulier, \(5=\deg(P)=3+\deg(R)\), donc \(\deg(R)=2\). On pose \(R=aX^2+bX+c\) où \((a,b,c)\in\mathbb{R}^3\). Alors :
 
-    \(1\) 是 \(P=X^5-3X^4+4X^3-4X^2+3X-1\) 的根，是 \(P'=5X^4-12X^3+12X^2-8X+3\) 的根，是 \(P''=20X^3-36X^2+24X-8\) 的根，但不是 \(P'''=60X^2-72X+24\) 的根。因此 \(1\) 是 \(P\) 的重数为 3 的根，且已知存在 \(R\in\mathbb{R}[X]\) 使得 \(P=(X-1)^3R\)。特别地，\(5=\deg(P)=3+\deg(R)\)，故 \(\deg(R)=2\)。令 \(R=aX^2+bX+c\)，其中 \((a,b,c)\in\mathbb{R}^3\)。则：
+    1 是 \(P=X^5-3X^4+4X^3-4X^2+3X-1\) 的根，是 \(P'=5X^4-12X^3+12X^2-8X+3\) 的根，是 \(P''=20X^3-36X^2+24X-8\) 的根，但不是 \(P'''=60X^2-72X+24\) 的根。因此 1 是 \(P\) 的重数为 3 的根，且已知存在 \(R\in\mathbb{R}[X]\) 使得 \(P=(X-1)^3R\)。特别地，\(5=\deg(P)=3+\deg(R)\)，故 \(\deg(R)=2\)。令 \(R=aX^2+bX+c\)，其中 \((a,b,c)\in\mathbb{R}^3\)。则：
     {: .zh }
 
     \[
@@ -724,9 +714,9 @@ On dit qu'un polynôme \(P\in\mathbb{K}[X]\) est <strong>factorisable</strong> p
     P=X^5-3X^4+4X^3-4X^2+3X-1=(X-1)^3(X^2+1)=(X-1)^3(X-i)(X+i).
     \]
 
-    Ainsi, \(P\) a 3 racines différentes : \(1\) de multiplicité 3, et \(i\) et \(-i\) qui sont des racines simples.
+    Ainsi, \(P\) a 3 racines différentes : 1 de multiplicité 3, et \(i\) et \(-i\) qui sont des racines simples.
 
-    于是，\(P\) 有 3 个不同的根：\(1\)（重数为 3），以及 \(i\) 与 \(-i\)（单根）。
+    于是，\(P\) 有 3 个不同的根：1（重数为 3），以及 \(i\) 与 \(-i\)（单根）。
     {: .zh }
 
 !!! danger "Théorème 4.9 : nombre de racines<br><span class='zh-title'>定理 4.9：根的个数</span>"
@@ -825,14 +815,16 @@ Le théorème suivant généralise ce résultat aux polynômes de degré supéri
 
 !!! demo ""
 
-    - <strong>Unicité.</strong> On suppose qu'il existe deux polynômes \((P,Q)\in\mathbb{R}_n[X]^2\) tels que :
+    <strong>Démonstration.</strong>
 
-        <strong>唯一性。</strong> 假设存在两个多项式 \((P,Q)\in\mathbb{R}_n[X]^2\) 使得：
-        {: .zh }
+    - <strong>Unicité.</strong> On suppose qu'il existe deux polynômes \((P,Q)\in\mathbb{R}_n[X]^2\) tels que :
 
         \[
         \forall i\in\llbracket0,n\rrbracket,\quad P(x_i)=Q(x_i)=y_i.
         \]
+
+        <strong>唯一性。</strong> 假设存在两个多项式 \((P,Q)\in\mathbb{R}_n[X]^2\) 使得：
+        {: .zh }
 
         Alors \(x_0,x_1,\dots,x_n\) sont \(n+1\) racines du polynôme \(P-Q\in\mathbb{R}_n[X]\). On en déduit que \(P-Q\) est le polynôme nul, donc que \(P=Q\).
 
@@ -855,15 +847,15 @@ Le théorème suivant généralise ce résultat aux polynômes de degré supéri
 
         Par conséquent :
 
-        因此：
-        {: .zh }
-
         \[
         \forall i\in\llbracket0,n\rrbracket,\quad P(x_i)=\sum_{j=0}^{n}y_jL_j(x_i)
         = \underbrace{y_iL_i(x_i)}_{=1}
         + \underbrace{\sum_{\substack{j=0\\j\neq i}}^{n}y_jL_j(x_i)}_{=0}
         = y_i.
         \]
+
+        因此：
+        {: .zh }
 
     <p class="cqfd">∎</p>
 
@@ -992,16 +984,16 @@ Le théorème suivant généralise ce résultat aux polynômes de degré supéri
 
     En appliquant le lemme à \(P\) et à ses dérivées, on en déduit que les racines complexes non réelles de \(P\) sont conjuguées deux à deux avec la même multiplicité. On peut donc regrouper deux à deux les facteurs associés aux racines complexes non réelles conjuguées. Pour chaque racine \(\alpha\in\mathbb{C}\setminus\mathbb{R}\), on obtient un facteur de la forme :
 
-    将该引理应用于 \(P\) 及其各阶导数，可推出 \(P\) 的非实复根两两共轭且重数相同。因此可以将与共轭非实复根相关联的因子两两合并。对每个根 \(\alpha\in\mathbb{C}\setminus\mathbb{R}\)，得到一个形如上的因子。
-    {: .zh }
-
     \[
     (X-\alpha)(X-\overline{\alpha})=X^2-2\operatorname{Re}(\alpha)X+|\alpha|^2.
     \]
 
-    Ce polynôme est bien unitaire, de degré 2, à coefficients réels, et de discriminant \(\Delta=4\operatorname{Re}(\alpha)^2-4|\alpha|^2=-4\operatorname{Im}(\alpha)^2<0\).
+    将该引理应用于 \(P\) 及其各阶导数，可推出 \(P\) 的非实复根两两共轭且重数相同。因此可以将与共轭非实复根相关联的因子两两合并。对每个根 \(\alpha\in\mathbb{C}\setminus\mathbb{R}\)，得到一个形如上的因子。
+    {: .zh }
 
-    这个多项式确实是首一的、次数为 2、系数为实数，且判别式 \(\Delta=4\operatorname{Re}(\alpha)^2-4|\alpha|^2=-4\operatorname{Im}(\alpha)^2<0\)。
+    Ce polynôme est bien unitaire, de degré 2, à coefficients réels, et de discriminant \(\Delta=(-2\operatorname{Re}(\alpha))^2-4\times1\times|\alpha|^2=4(\operatorname{Re}(\alpha)^2-|\alpha|^2)=-4\operatorname{Im}(\alpha)^2<0\).
+
+    这个多项式确实是首一的、次数为 2、系数为实数，且判别式 \(\Delta=(-2\operatorname{Re}(\alpha))^2-4\times1\times|\alpha|^2=4(\operatorname{Re}(\alpha)^2-|\alpha|^2)=-4\operatorname{Im}(\alpha)^2<0\)。
     {: .zh }
 
     <p class="cqfd">∎</p>
@@ -1047,3 +1039,262 @@ Le théorème suivant généralise ce résultat aux polynômes de degré supéri
     - <strong>on admet …</strong>：承认……（不加证明地接受）
     - <strong>d'autre part</strong>：另一方面
     - <strong>en identifiant les coefficients</strong>：比较系数
+
+## 7　Fractions rationnelles <span class="heading-zh">有理分式</span>
+
+On remarque que seuls les polynômes constants non nuls admettent un inverse pour la multiplication car si \(PQ=1\) alors \(\deg(P)=\deg(Q)=0\). Ainsi, le quotient de deux polynômes n'est en général pas défini.
+
+我们注意到，只有非零常数多项式才具有乘法逆元，因为若 \(PQ=1\)，则 \(\deg(P)=\deg(Q)=0\)。因此，两个多项式的商一般没有定义。
+{: .zh }
+
+!!! success "Définition 7.1 : fraction rationnelle<br><span class='zh-title'>定义 7.1：有理分式（fraction rationnelle）</span>"
+
+    Une fonction \(f:\mathscr{D}\to\mathbb{K}\) définie sur \(\mathscr{D}\subset\mathbb{K}\) est appelée une <strong>fraction rationnelle</strong> lorsqu'il existe deux polynômes \(A=\sum_{n=0}^{N_A}a_nX^n\in\mathbb{K}[X]\) et \(B=\sum_{n=0}^{N_B}b_nX^n\in\mathbb{K}[X]\setminus\{0\}\) tels que \(\mathscr{D}\subset\{x\in\mathbb{K}\mid B(x)\neq0\}\) et :
+
+    定义在 \(\mathscr{D}\subset\mathbb{K}\) 上的函数 \(f:\mathscr{D}\to\mathbb{K}\) 称为<strong>有理分式</strong>（fraction rationnelle），若存在两个多项式 \(A=\sum_{n=0}^{N_A}a_nX^n\in\mathbb{K}[X]\) 与 \(B=\sum_{n=0}^{N_B}b_nX^n\in\mathbb{K}[X]\setminus\{0\}\)，使得 \(\mathscr{D}\subset\{x\in\mathbb{K}\mid B(x)\neq0\}\)，且：
+    {: .zh }
+
+    \[
+    \forall x\in\mathscr{D},\quad f(x)=\frac{A(x)}{B(x)}
+    =\frac{a_0+a_1x+a_2x^2+\cdots+a_{N_A}x^{N_A}}{b_0+b_1x+b_2x^2+\cdots+b_{N_B}x^{N_B}}.
+    \]
+
+Le but de cette section est d'apprendre à simplifier les fractions rationnelles.
+
+本节的目标是学会化简有理分式。
+{: .zh }
+
+!!! danger "Théorème 7.2 : division euclidienne pour les polynômes<br><span class='zh-title'>定理 7.2：多项式的欧几里得除法</span>"
+
+    Soit \((A,B)\in\mathbb{K}[X]^2\) un couple de polynômes tel que \(\deg(B)\geqslant0\) (donc \(B\neq0\)). Alors il existe un unique couple de polynômes \((Q,R)\in\mathbb{K}[X]^2\) tel que :
+
+    设 \((A,B)\in\mathbb{K}[X]^2\) 是一对多项式，且 \(\deg(B)\geqslant0\)（故 \(B\neq0\)）。则存在唯一的一对多项式 \((Q,R)\in\mathbb{K}[X]^2\) 使得：
+    {: .zh }
+
+    \[
+    A=BQ+R\qquad\text{et}\qquad\deg(R)<\deg(B).
+    \]
+
+    \(Q\) et \(R\) sont appelés respectivement le <strong>quotient</strong> et le <strong>reste</strong> de la <strong>division euclidienne</strong> de \(A\) par \(B\).
+
+    \(Q\) 与 \(R\) 分别称为 \(A\) 除以 \(B\) 的<strong>欧几里得除法</strong>（division euclidienne）的<strong>商</strong>（quotient）与<strong>余式</strong>（reste）。
+    {: .zh }
+
+!!! demo ""
+
+    <strong>Démonstration.</strong>
+
+    - <strong>Unicité.</strong> On suppose qu'il existe deux couples de polynômes \((Q_1,R_1)\in\mathbb{K}[X]^2\) et \((Q_2,R_2)\in\mathbb{K}[X]^2\) tels que :
+
+        \[
+        A=BQ_1+R_1=BQ_2+R_2
+        \qquad\text{et}\qquad
+        \max\{\deg(R_1),\deg(R_2)\}<\deg(B).
+        \]
+
+        <strong>唯一性。</strong> 假设存在两对多项式 \((Q_1,R_1)\in\mathbb{K}[X]^2\) 与 \((Q_2,R_2)\in\mathbb{K}[X]^2\) 使得：
+        {: .zh }
+
+        On a :
+
+        \[
+        B(Q_1-Q_2)=R_2-R_1\qquad\text{donc}\qquad\deg(B)+\deg(Q_1-Q_2)<\deg(B).
+        \]
+
+        有：
+        {: .zh }
+
+        Puisque \(\deg(B)\geqslant0\), on en déduit que \(\deg(Q_1-Q_2)=-\infty\), donc \(Q_1-Q_2=0\), puis que \(R_2-R_1=B(Q_1-Q_2)=0\). Par conséquent, \((Q_1,R_1)=(Q_2,R_2)\).
+
+        由于 \(\deg(B)\geqslant0\)，可推出 \(\deg(Q_1-Q_2)=-\infty\)，故 \(Q_1-Q_2=0\)，进而 \(R_2-R_1=B(Q_1-Q_2)=0\)。因此 \((Q_1,R_1)=(Q_2,R_2)\)。
+        {: .zh }
+
+    - <strong>Existence.</strong> On construit \(Q\) et \(R\) à l'aide de l'algorithme suivant.
+
+        <strong>存在性。</strong> 我们借助以下算法构造 \(Q\) 与 \(R\)。
+        {: .zh }
+
+    1. On pose \(Q=0\) et \(R=A\).
+
+        令 \(Q=0\)，\(R=A\)。
+        {: .zh }
+
+    2. Tant que \(\deg(R)\geqslant\deg(B)\), on pose :
+
+        当 \(\deg(R)\geqslant\deg(B)\) 时，令：
+        {: .zh }
+
+        \[
+        P=\frac{a}{b}X^{\deg(R)-\deg(B)}
+        \qquad\text{où}\qquad
+        \begin{cases}
+        a\ \text{est le coefficient dominant de } R,\\
+        b\ \text{est le coefficient dominant de } B.
+        \end{cases}
+        \]
+
+    3. On remplace \(Q\) par \(Q+P\) et \(R\) par \(R-BP\).
+
+        将 \(Q\) 替换为 \(Q+P\)，将 \(R\) 替换为 \(R-BP\)。
+        {: .zh }
+
+    4. Lorsque \(\deg(R)<\deg(B)\), on arrête l'algorithme, sinon on reprend à l'étape 2.
+
+        当 \(\deg(R)<\deg(B)\) 时停止算法，否则回到第 2 步。
+        {: .zh }
+
+    On remarque qu'à chaque étape 2, on a \(\deg(R-BP)<\deg(R)\), donc l'algorithme s'arrête après un nombre fini d'étapes. De plus, l'égalité \(A=BQ+R\) est conservée à chaque étape car :
+
+    注意到在第 2 步的每一步都有 \(\deg(R-BP)<\deg(R)\)，因此算法在有限步之后停止。此外，等式 \(A=BQ+R\) 在每一步都保持成立，因为：
+    {: .zh }
+
+    \[
+    B(Q+P)+(R-BP)=BQ+R=A.
+    \]
+
+    À la fin de l'algorithme, on a donc bien \(A=BQ+R\) et \(\deg(R)<\deg(B)\).
+
+    算法结束时，确实有 \(A=BQ+R\) 且 \(\deg(R)<\deg(B)\)。
+    {: .zh }
+
+    <p class="cqfd">∎</p>
+
+!!! info "Exemple 7.3<br><span class='zh-title'>例 7.3</span>"
+
+    On a par division euclidienne :
+
+    由欧几里得除法，有：
+    {: .zh }
+
+    \[
+    \begin{aligned}
+    \underbrace{X^5-X^4-X-1}_{=A}
+    &=\bigl(\underbrace{X^2+X+1}_{=B}\bigr)\,0+X^5-X^4-X-1\\
+    &=(X^2+X+1)\,X^3-2X^4-X^3-X-1\\
+    &=(X^2+X+1)\,(X^3-2X^2)+X^3+2X^2-X-1\\
+    &=(X^2+X+1)\,(X^3-2X^2+X)+X^2-2X-1\\
+    &=(X^2+X+1)\,\bigl(\underbrace{X^3-2X^2+X+1}_{=Q}\bigr)
+      \underbrace{-3X-2}_{=R}.
+    \end{aligned}
+    \]
+
+    En particulier :
+
+    特别地：
+    {: .zh }
+
+    \[
+    \forall x\in\mathbb{R},\quad
+    \frac{x^5-x^4-x-1}{x^2+x+1}
+    =x^3-2x^2+x+1-\frac{3x+2}{x^2+x+1}.
+    \]
+
+!!! danger "Théorème 7.4 : décomposition en éléments simples sur \(\mathbb{C}\)<br><span class='zh-title'>定理 7.4：\(\mathbb{C}\) 上的部分分式分解</span>"
+
+    Soit \(f:\mathscr{D}\to\mathbb{C}\) une fraction rationnelle (où \(\mathscr{D}\subset\mathbb{C}\) est un ensemble infini) de la forme :
+
+    设 \(f:\mathscr{D}\to\mathbb{C}\) 是有理分式（其中 \(\mathscr{D}\subset\mathbb{C}\) 是无限集），其形式为：
+    {: .zh }
+
+    \[
+    \forall x\in\mathscr{D},\quad f(x)=\frac{A(x)}{B(x)}
+    \qquad\text{où}\qquad
+    (A,B)\in\mathbb{C}[X]^2\ \text{et}\ d=\deg(B)\geqslant0.
+    \]
+
+    On note \(\beta_1,\beta_2,\dots,\beta_r\) les racines complexes de \(B\), toutes différentes, et \(m_1,m_2,\dots,m_r\) leurs multiplicités respectives. Autrement dit, la factorisation de \(B\) dans \(\mathbb{C}[X]\) est :
+
+    记 \(\beta_1,\beta_2,\dots,\beta_r\) 为 \(B\) 的互不相同的复根，\(m_1,m_2,\dots,m_r\) 为它们各自的重数。换言之，\(B\) 在 \(\mathbb{C}[X]\) 中的因式分解为：
+    {: .zh }
+
+    \[
+    B=b_d(X-\beta_1)^{m_1}(X-\beta_2)^{m_2}\dots(X-\beta_r)^{m_r}
+    \qquad\text{où}\qquad b_d\in\mathbb{C}^*.
+    \]
+
+    Alors, \(f\) s'écrit de manière unique sous la forme :
+
+    则 \(f\) 可唯一地写成如下形式：
+    {: .zh }
+
+    \[
+    \begin{aligned}
+    \forall x\in\mathscr{D},\quad f(x)
+    &=Q(x)+\frac{\lambda_{1,1}}{x-\beta_1}+\frac{\lambda_{1,2}}{(x-\beta_1)^2}
+      +\cdots+\frac{\lambda_{1,m_1}}{(x-\beta_1)^{m_1}}\\
+    &\quad+\frac{\lambda_{2,1}}{x-\beta_2}+\cdots+\frac{\lambda_{2,m_2}}{(x-\beta_2)^{m_2}}
+      +\cdots+\frac{\lambda_{r,1}}{x-\beta_r}+\cdots+\frac{\lambda_{r,m_r}}{(x-\beta_r)^{m_r}}\\
+    &=Q(x)+\sum_{i=1}^{r}\sum_{j=1}^{m_i}\frac{\lambda_{i,j}}{(x-\beta_i)^j}
+    \end{aligned}
+    \]
+
+    où \(Q\in\mathbb{C}[X]\) est le quotient de la division euclidienne de \(A\) par \(B\), et \((\lambda_{i,j})\) sont des nombres complexes. Cette écriture est appelée la <strong>décomposition en éléments simples</strong> de \(f\).
+
+    其中 \(Q\in\mathbb{C}[X]\) 是 \(A\) 除以 \(B\) 的欧几里得除法的商，\((\lambda_{i,j})\) 为复数。这种写法称为 \(f\) 的<strong>部分分式分解</strong>（décomposition en éléments simples）。
+    {: .zh }
+
+!!! info "Exemple 7.5<br><span class='zh-title'>例 7.5</span>"
+
+    （原讲义此处留空，供课堂补充。）
+
+!!! danger "Théorème 7.6 : décomposition en éléments simples sur \(\mathbb{R}\)<br><span class='zh-title'>定理 7.6：\(\mathbb{R}\) 上的部分分式分解</span>"
+
+    Soit \(f:\mathscr{D}\to\mathbb{R}\) (où \(\mathscr{D}\subset\mathbb{R}\) est un ensemble infini) une fraction rationnelle de la forme :
+
+    设 \(f:\mathscr{D}\to\mathbb{R}\)（其中 \(\mathscr{D}\subset\mathbb{R}\) 是无限集）是有理分式，其形式为：
+    {: .zh }
+
+    \[
+    \forall x\in\mathscr{D},\quad f(x)=\frac{A(x)}{B(x)}
+    \qquad\text{où}\qquad
+    (A,B)\in\mathbb{R}[X]^2\ \text{et}\ d=\deg(B)\geqslant0.
+    \]
+
+    Alors il existe une unique décomposition de \(f\) en éléments simples, c'est-à-dire, pour tout \(x\in\mathscr{D}\), une écriture de \(f(x)\) sous la forme d'une somme :
+
+    则 \(f\) 存在唯一的部分分式分解，即对任意 \(x\in\mathscr{D}\)，可将 \(f(x)\) 写成以下各项之和：
+    {: .zh }
+
+    - de \(Q(x)\) où \(Q\in\mathbb{R}[X]\) est le quotient de la division euclidienne de \(A\) par \(B\),
+
+        其中 \(Q(x)\) 的 \(Q\in\mathbb{R}[X]\) 是 \(A\) 除以 \(B\) 的欧几里得除法的商，
+        {: .zh }
+
+    - pour chaque racine réelle \(\beta\) de multiplicité \(m\) de \(B\), de termes de la forme :
+
+        对 \(B\) 的每个重数为 \(m\) 的实根 \(\beta\)，形如以下各项：
+        {: .zh }
+
+        \[
+        \sum_{j=1}^{m}\frac{\lambda_j}{(x-\beta)^j}
+        \qquad\text{où}\qquad
+        (\lambda_j)\ \text{sont des nombres réels}
+        \]
+
+    - pour chaque paire \((\beta,\overline{\beta})\) de racines complexes non réelles conjuguées de multiplicité \(m\) de \(B\), de termes de la forme :
+
+        对 \(B\) 的每对重数为 \(m\) 的共轭非实复根 \((\beta,\overline{\beta})\)，形如以下各项：
+        {: .zh }
+
+        \[
+        \sum_{j=1}^{m}\frac{\mu_jx+\lambda_j}{\bigl(x^2-2\operatorname{Re}(\beta)x+|\beta|^2\bigr)^j}
+        \qquad\text{où}\qquad
+        (\lambda_j)\ \text{et}\ (\mu_j)\ \text{sont des nombres réels.}
+        \]
+
+!!! info "Exemple 7.7<br><span class='zh-title'>例 7.7</span>"
+
+    （原讲义此处留空，供课堂补充。）
+
+!!! warning "Vocabulaire clé<br><span class='zh-title'>重点词汇</span>"
+
+    - <strong>fraction rationnelle</strong>：有理分式
+    - <strong>division euclidienne</strong>：欧几里得除法
+    - <strong>quotient / reste</strong>：商 / 余式
+    - <strong>décomposition en éléments simples</strong>：部分分式分解
+    - <strong>coefficient dominant</strong>：首项系数
+    - <strong>algorithme / étape</strong>：算法 / 步骤
+    - <strong>tant que …</strong>：当……时（循环条件）
+    - <strong>on pose …</strong>：令……
+    - <strong>on remplace … par …</strong>：将……替换为……
+    - <strong>d'où</strong>：由此

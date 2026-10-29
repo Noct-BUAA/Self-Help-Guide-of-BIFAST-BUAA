@@ -31,36 +31,36 @@ comments: true
 <aside class="df-announce" aria-label="公告栏">
   <div class="df-announce__head">
     <span class="df-announce__kicker">公告栏 · ANNONCES</span>
-    <time class="df-announce__date" datetime="2026-10-26">2026-10-26</time>
+    <time class="df-announce__date" datetime="2026-10-29">2026-10-29</time>
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
-    <a class="df-announce__item" href="courses/year2/semester1/电路基础/">
-      <span class="df-announce__tag df-announce__tag--new">新课程</span>
+    <a class="df-announce__item" href="courses/year2/semester1/实分析/习题课/td4-suites-comparees/">
+      <span class="df-announce__tag df-announce__tag--new">新讲义</span>
       <span class="df-announce__body">
-        <strong>电路基础课程上线</strong>
-        <span>静电学与动电学 8 章讲义、TD1–TD2 参考解答、定义公式速查与词汇表</span>
+        <strong>实分析 TD4–TD5 上线</strong>
+        <span>数列比较与数列等价：夹逼与等价量运算、欧拉常数、收敛速度</span>
       </span>
     </a>
-    <a class="df-announce__item" href="courses/year2/semester1/期中考试/">
-      <span class="df-announce__tag df-announce__tag--exam">考试</span>
+    <a class="df-announce__item" href="courses/year2/semester1/电路基础/习题课/td3-conducteurs-condensateurs/">
+      <span class="df-announce__tag df-announce__tag--new">新讲义</span>
       <span class="df-announce__body">
-        <strong>数学考前合集上线</strong>
-        <span>10 月 28 日考试；两门课定义、性质、定理已按章节汇总</span>
+        <strong>电路基础 TD3 上线</strong>
+        <span>导体与电容器：尖端效应、表面电场通式、托马斯–费米屏蔽层</span>
       </span>
     </a>
-    <a class="df-announce__item" href="courses/year2/semester1/党校学习资料/">
+    <a class="df-announce__item" href="courses/year2/semester1/工程数学/课程讲义/03-polynomes/">
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
-        <strong>党校学习资料改版上线</strong>
-        <span>49 个知识点卡片化，练习题前置，选择题支持乱序自测</span>
+        <strong>工程数学第 3 章更新</strong>
+        <span>新增第 7 节有理分式：欧几里得除法与部分分式分解</span>
       </span>
     </a>
     <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td5-racines-polynomes/">
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
-        <strong>TD5 多项式的根上线</strong>
-        <span>重数判别、拉格朗日插值、根与系数的关系、tan 七倍角</span>
+        <strong>TD5 多项式的根更新</strong>
+        <span>重数判别、拉格朗日插值、tan 七倍角与单根证明</span>
       </span>
     </a>
   </div>
@@ -93,36 +93,36 @@ comments: true
 <aside class="df-announce" aria-label="公告栏">
   <div class="df-announce__head">
     <span class="df-announce__kicker">公告栏 · ANNONCES</span>
-    <time class="df-announce__date" datetime="2026-10-26">2026-10-26</time>
+    <time class="df-announce__date" datetime="2026-10-29">2026-10-29</time>
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
-    <a class="df-announce__item" href="courses/year2/semester1/电路基础/">
-      <span class="df-announce__tag df-announce__tag--new">新课程</span>
+    <a class="df-announce__item" href="courses/year2/semester1/实分析/习题课/td4-suites-comparees/">
+      <span class="df-announce__tag df-announce__tag--new">新讲义</span>
       <span class="df-announce__body">
-        <strong>电路基础课程上线</strong>
-        <span>静电学与动电学 8 章讲义、TD1–TD2 参考解答、定义公式速查与词汇表</span>
+        <strong>实分析 TD4–TD5 上线</strong>
+        <span>数列比较与数列等价：夹逼与等价量运算、欧拉常数、收敛速度</span>
       </span>
     </a>
-    <a class="df-announce__item" href="courses/year2/semester1/期中考试/">
-      <span class="df-announce__tag df-announce__tag--exam">考试</span>
+    <a class="df-announce__item" href="courses/year2/semester1/电路基础/习题课/td3-conducteurs-condensateurs/">
+      <span class="df-announce__tag df-announce__tag--new">新讲义</span>
       <span class="df-announce__body">
-        <strong>数学考前合集上线</strong>
-        <span>10 月 28 日考试；两门课定义、性质、定理已按章节汇总</span>
+        <strong>电路基础 TD3 上线</strong>
+        <span>导体与电容器：尖端效应、表面电场通式、托马斯–费米屏蔽层</span>
       </span>
     </a>
-    <a class="df-announce__item" href="courses/year2/semester1/党校学习资料/">
+    <a class="df-announce__item" href="courses/year2/semester1/工程数学/课程讲义/03-polynomes/">
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
-        <strong>党校学习资料改版上线</strong>
-        <span>49 个知识点卡片化，练习题前置，选择题支持乱序自测</span>
+        <strong>工程数学第 3 章更新</strong>
+        <span>新增第 7 节有理分式：欧几里得除法与部分分式分解</span>
       </span>
     </a>
     <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td5-racines-polynomes/">
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
-        <strong>TD5 多项式的根上线</strong>
-        <span>重数判别、拉格朗日插值、根与系数的关系、tan 七倍角</span>
+        <strong>TD5 多项式的根更新</strong>
+        <span>重数判别、拉格朗日插值、tan 七倍角与单根证明</span>
       </span>
     </a>
   </div>
