@@ -24,21 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = grid.querySelectorAll('.card');
     if (!cards.length) return;
 
-    gsap.fromTo(
-      cards,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1, y: 0,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: grid,
-          start: 'top 85%',
-          once: true,
-        },
-      }
-    );
+    // 只做位移动画，不改变 opacity：即使 ScrollTrigger 未触发，
+    // 卡片内容也始终可见（打印、无 JS、截图与锚点直达时尤为重要）。
+    gsap.from(cards, {
+      y: 24,
+      duration: 0.55,
+      stagger: 0.06,
+      ease: 'power2.out',
+      immediateRender: false,
+      scrollTrigger: {
+        trigger: grid,
+        start: 'top 90%',
+        once: true,
+      },
+    });
   });
 
   // ============================================================

@@ -588,6 +588,14 @@ body .md-typeset,
 /* ════════════════════════════════════════════════════════
    TABLES
    ════════════════════════════════════════════════════════ */
+/* Material 会把表格包进 inline-block 容器，导致表格按内容收缩。
+   这里改为块级满宽，宽表格在容器内横向滚动。 */
+.md-typeset .md-typeset__table {
+  display: block !important;
+  width: 100% !important;
+  overflow-x: auto;
+}
+
 .md-typeset table:not([class]) {
   display: table;
   width: 100%;
@@ -2805,5 +2813,489 @@ body.party-fill-open {
   .party-fill-blank,
   .party-fill-blank__text {
     transition: none;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CAMPUS GUIDE — 校园生活指南视觉系统
+   依据《校园服务手册》重新排版：章节题图、速查条、图集
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── 章节题图 ─────────────────────────────────────────── */
+.md-typeset .guide-hero {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0 0 var(--space-lg);
+  min-height: clamp(280px, 34vw, 400px);
+  border-radius: var(--radius-lg);
+  background: #0d1526;
+  color: #fff;
+  text-indent: 0;
+  box-shadow: 0 12px 40px rgba(13, 21, 38, .18);
+}
+
+.md-typeset .guide-hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  border-radius: 0;
+  z-index: 0;
+}
+
+.md-typeset .guide-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(8, 14, 30, .9) 0%, rgba(8, 14, 30, .62) 42%, rgba(8, 14, 30, .12) 100%),
+    linear-gradient(0deg, rgba(8, 14, 30, .68) 0%, rgba(8, 14, 30, 0) 58%);
+  pointer-events: none;
+}
+
+.md-typeset .guide-hero__body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: clamp(280px, 34vw, 400px);
+  padding: clamp(1.3rem, 4vw, 2.6rem);
+  box-sizing: border-box;
+}
+
+.md-typeset .guide-hero__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  font-family: "JetBrains Mono", "Noto Sans SC", monospace;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #ffd166;
+  margin-bottom: .55rem;
+}
+
+.md-typeset .guide-hero__kicker::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 2px;
+  background: #ffd166;
+}
+
+.md-typeset .guide-hero__title {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  font-size: clamp(2rem, 5.2vw, 3.35rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: .01em;
+  color: #fff !important;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .35);
+}
+
+.md-typeset .guide-hero__sub {
+  margin: .6rem 0 0 !important;
+  max-width: 40rem;
+  font-size: clamp(.86rem, 1.5vw, 1rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, .82);
+  text-indent: 0;
+}
+
+.md-typeset .guide-hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: 1rem;
+}
+
+.md-typeset .guide-hero__fact {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .32rem .7rem;
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-size: .74rem;
+  line-height: 1.4;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.md-typeset .guide-hero__fact b {
+  font-weight: 600;
+  color: #ffd166;
+}
+
+/* ─── 引导语 ───────────────────────────────────────────── */
+.md-typeset .guide-lead {
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: var(--md-default-fg-color--light);
+  text-indent: 0;
+  margin: .2rem 0 1.4rem;
+  padding-left: var(--space-md);
+  border-left: 3px solid rgba(63, 81, 181, .35);
+}
+
+/* ─── 数字速览 ─────────────────────────────────────────── */
+.md-typeset .guide-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: var(--space-sm);
+  margin: var(--space-md) 0 var(--space-xl);
+}
+
+.md-typeset .guide-stat {
+  padding: .85rem 1rem;
+  border: 1px solid rgba(0, 0, 0, .07);
+  border-radius: var(--radius-md);
+  background: var(--md-default-bg-color);
+  box-shadow: var(--card-shadow);
+}
+
+.md-typeset .guide-stat b {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  color: #3f51b5;
+}
+
+.md-typeset .guide-stat span {
+  display: block;
+  margin-top: .15rem;
+  font-size: .74rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ─── 速查信息条 ───────────────────────────────────────── */
+.md-typeset .fact-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-sm);
+  margin: var(--space-lg) 0 var(--space-xl);
+}
+
+.md-typeset .fact {
+  padding: .85rem 1rem;
+  border: 1px solid rgba(0, 0, 0, .07);
+  border-left: 3px solid #3f51b5;
+  border-radius: var(--radius-sm) var(--radius-md) var(--radius-md) var(--radius-sm);
+  background: var(--md-default-bg-color);
+  text-indent: 0;
+}
+
+.md-typeset .fact__k {
+  display: block;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .fact__v {
+  display: block;
+  margin-top: .2rem;
+  font-size: .95rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset .fact__v small {
+  font-weight: 400;
+  font-size: .76rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ─── 图集 ─────────────────────────────────────────────── */
+.md-typeset .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-sm);
+  margin: var(--space-md) 0 var(--space-xl);
+}
+
+.md-typeset .photo-grid--two { grid-template-columns: repeat(2, 1fr); }
+.md-typeset .photo-grid--three { grid-template-columns: repeat(3, 1fr); }
+
+.md-typeset .photo-grid figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, .07);
+  border-radius: var(--radius-md);
+  background: var(--md-default-bg-color);
+  box-shadow: var(--card-shadow);
+}
+
+.md-typeset .photo-grid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  margin: 0 !important;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform .45s cubic-bezier(.22, .61, .36, 1);
+}
+
+.md-typeset .photo-grid figure:hover img { transform: scale(1.035); }
+
+.md-typeset .photo-grid--wide img { aspect-ratio: 16 / 9; }
+.md-typeset .photo-grid--tall img { aspect-ratio: 3 / 4; }
+.md-typeset .photo-grid--natural img { aspect-ratio: auto; object-fit: contain; background: #f3f4f8; }
+
+.md-typeset .photo-grid figcaption {
+  padding: .55rem .75rem .62rem;
+  font-size: .74rem;
+  line-height: 1.55;
+  color: var(--md-default-fg-color--light);
+  text-indent: 0;
+}
+
+.md-typeset .photo-grid figcaption b {
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+
+/* ─── 地点卡片（商铺 / 周边） ─────────────────────────── */
+.md-typeset .spot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-md) 0 var(--space-xl);
+}
+
+.md-typeset .spot-grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1000px) {
+  .md-typeset .spot-grid--three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .md-typeset .spot-grid--three {
+    grid-template-columns: 1fr;
+  }
+}
+
+.md-typeset .spot {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, .08);
+  border-radius: var(--radius-md);
+  background: var(--md-default-bg-color);
+  box-shadow: var(--card-shadow);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.md-typeset .spot:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(63, 81, 181, .45);
+}
+
+.md-typeset .spot img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin: 0 !important;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.md-typeset .spot__body {
+  padding: .8rem 1rem .9rem;
+  text-indent: 0;
+}
+
+.md-typeset .spot__title {
+  font-size: .95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset .spot__meta {
+  margin-top: .3rem;
+  font-size: .76rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .spot__meta b {
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+
+/* ─── 电话卡片 ─────────────────────────────────────────── */
+.md-typeset .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-sm);
+  margin: var(--space-md) 0 var(--space-xl);
+}
+
+.md-typeset .contact-card {
+  padding: .8rem .95rem;
+  border: 1px solid rgba(0, 0, 0, .07);
+  border-radius: var(--radius-md);
+  background: var(--md-default-bg-color);
+  box-shadow: var(--card-shadow);
+  text-indent: 0;
+}
+
+.md-typeset .contact-card__label {
+  display: block;
+  font-size: .7rem;
+  letter-spacing: .06em;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .contact-card__value {
+  display: block;
+  margin-top: .15rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: .98rem;
+  font-weight: 600;
+  color: #3f51b5;
+  white-space: nowrap;
+}
+
+.md-typeset .contact-card__note {
+  display: block;
+  margin-top: .1rem;
+  font-size: .7rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ─── 地图 ─────────────────────────────────────────────── */
+.md-typeset .map-frame {
+  max-width: 680px;
+  margin: var(--space-md) auto var(--space-xl);
+  padding: .6rem;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, .1);
+  text-indent: 0;
+}
+
+.md-typeset .map-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 !important;
+  border-radius: var(--radius-sm);
+}
+
+.md-typeset .map-frame figcaption {
+  padding: .55rem .3rem .2rem;
+  font-size: .72rem;
+  color: #6a7180;
+  text-align: center;
+}
+
+/* ─── 二维码卡 ─────────────────────────────────────────── */
+.md-typeset .qr-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  max-width: 430px;
+  margin: var(--space-md) 0 var(--space-xl);
+  padding: .8rem 1rem .8rem .8rem;
+  border: 1px solid rgba(0, 0, 0, .08);
+  border-radius: var(--radius-md);
+  background: var(--md-default-bg-color);
+  box-shadow: var(--card-shadow);
+  text-indent: 0;
+}
+
+.md-typeset .qr-card img {
+  width: 108px;
+  height: 108px;
+  margin: 0 !important;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+}
+
+.md-typeset .qr-card__body { min-width: 0; }
+
+.md-typeset .qr-card__title {
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.md-typeset .qr-card__text {
+  margin-top: .2rem;
+  font-size: .76rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ─── 深色模式 ─────────────────────────────────────────── */
+[data-md-color-scheme="slate"] .md-typeset .guide-stat,
+[data-md-color-scheme="slate"] .md-typeset .fact,
+[data-md-color-scheme="slate"] .md-typeset .photo-grid figure,
+[data-md-color-scheme="slate"] .md-typeset .spot,
+[data-md-color-scheme="slate"] .md-typeset .contact-card,
+[data-md-color-scheme="slate"] .md-typeset .qr-card {
+  background: var(--night-surface);
+  border-color: var(--night-border);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .guide-stat b,
+[data-md-color-scheme="slate"] .md-typeset .contact-card__value {
+  color: var(--night-accent);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .fact { border-left-color: var(--night-accent); }
+
+[data-md-color-scheme="slate"] .md-typeset .photo-grid--natural img {
+  background: #e9ecf3;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .guide-lead {
+  border-left-color: rgba(154, 172, 255, .45);
+}
+
+/* ─── 响应式 ───────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .md-typeset .photo-grid--two,
+  .md-typeset .photo-grid--three {
+    grid-template-columns: 1fr;
+  }
+
+  .md-typeset .guide-hero,
+  .md-typeset .guide-hero__body {
+    min-height: 300px;
+  }
+
+  .md-typeset .guide-hero::after {
+    background:
+      linear-gradient(0deg, rgba(8, 14, 30, .92) 0%, rgba(8, 14, 30, .55) 52%, rgba(8, 14, 30, .18) 100%);
+  }
+
+  .md-typeset .qr-card {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
