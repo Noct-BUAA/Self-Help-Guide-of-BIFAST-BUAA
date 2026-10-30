@@ -22,7 +22,7 @@ comments: true
 </div>
 <nav class="df-lnav">
 <div class="df-lnav-inner">
-<a href="courses/year1/" class="df-lnc"><span class="df-lnc-n">01</span><span class="df-lnc-t">课程学习资料</span><span class="df-lnc-sub">大一 · 大二学年课程目录</span></a>
+<a href="courses/year1/" class="df-lnc"><span class="df-lnc-n">01</span><span class="df-lnc-t">课程学习资料</span><span class="df-lnc-sub">课程目录 · 专题资料</span></a>
 <a href="campus-life/" class="df-lnc"><span class="df-lnc-n">02</span><span class="df-lnc-t">校园生活指南</span><span class="df-lnc-sub">住宿 · 餐饮 · 交通 · 文化活动</span></a>
 <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA" class="df-lnc" target="_blank" rel="noopener"><span class="df-lnc-n">03</span><span class="df-lnc-t">参与建设</span><span class="df-lnc-sub">GitHub 开源协作</span></a>
 <a href="postscript/" class="df-lnc"><span class="df-lnc-n">04</span><span class="df-lnc-t">后记</span><span class="df-lnc-sub">项目总结 · 致谢 · 展望</span></a>
@@ -91,7 +91,7 @@ comments: true
 </div>
 <nav class="df-lnav">
 <div class="df-lnav-inner">
-<a href="courses/year1/" class="df-lnc"><span class="df-lnc-n">01</span><span class="df-lnc-t">课程学习资料</span><span class="df-lnc-sub">大一 · 大二学年课程目录</span></a>
+<a href="courses/year1/" class="df-lnc"><span class="df-lnc-n">01</span><span class="df-lnc-t">课程学习资料</span><span class="df-lnc-sub">课程目录 · 专题资料</span></a>
 <a href="campus-life/" class="df-lnc"><span class="df-lnc-n">02</span><span class="df-lnc-t">校园生活指南</span><span class="df-lnc-sub">住宿 · 餐饮 · 交通 · 文化活动</span></a>
 <a href="https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA" class="df-lnc" target="_blank" rel="noopener"><span class="df-lnc-n">03</span><span class="df-lnc-t">参与建设</span><span class="df-lnc-sub">GitHub 开源协作</span></a>
 <a href="postscript/" class="df-lnc"><span class="df-lnc-n">04</span><span class="df-lnc-t">后记</span><span class="df-lnc-sub">项目总结 · 致谢 · 展望</span></a>

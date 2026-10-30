@@ -199,9 +199,11 @@ nav:
             - TD3 导体与电容器: courses/year2/semester1/电路基础/习题课/td3-conducteurs-condensateurs.md
             - TD1–TD2 量纲与不确定度: courses/year2/semester1/电路基础/习题课/td1-2-dimensions-incertitudes.md
           - 动电学词汇表: courses/year2/semester1/电路基础/词汇表.md
-        - 党校学习资料: courses/year2/semester1/党校学习资料/index.md
       - 大二下学期:
         - 学期概览: courses/year2/semester2/index.md
+    - 专题资料:
+      - 概览: resources/index.md
+      - 党校学习资料: resources/party-school/index.md
 
   - 校园生活指南:
     - 生活指南概览: campus-life/index.md
