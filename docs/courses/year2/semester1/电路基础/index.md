@@ -90,7 +90,7 @@ title: 电路基础
 
 ## 习题课讲义
 
-习题课（TD）提供配套训练与完整参考解答。静电学部分收录 TD1、TD2、TD3，以及一份量纲与不确定度的方法训练；TD1 另有详细解答版。
+习题课（TD）提供配套训练与完整参考解答。静电学部分收录 TD1、TD2、TD3，以及一份量纲与不确定度的方法训练；TD1、TD2 另有详细解答版。
 
 <div class="card-grid card-grid--three">
 
@@ -110,6 +110,12 @@ title: 电路基础
     <div class="card-num">TD2</div>
     <h3>高斯定理</h3>
     <p>判断正误、表面带电球面、圆柱形电容器、星体空腔、引力隧道</p>
+  </a>
+
+  <a class="card" href="习题课/td2-corrige">
+    <div class="card-num">TD2+</div>
+    <h3>TD2 详细解答</h3>
+    <p>教师版五题全解：对称性与不变性分析、逐步推导、三幅示意图与读者注</p>
   </a>
 
   <a class="card" href="习题课/td3-conducteurs-condensateurs">

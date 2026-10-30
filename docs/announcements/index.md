@@ -15,6 +15,7 @@ title: 公告归档
 
 ## 2026 年 10 月 30 日
 
+- **新讲义** · [电路基础 · TD2 详细解答](../courses/year2/semester1/电路基础/习题课/td2-corrige.md) — 高斯定理五道练习的教师版全解，含对称性与不变性分析、三幅示意图与笔误读者注
 - **调整** · [党校学习资料迁移至「专题资料」板块](../resources/party-school/index.md) — 新地址 `resources/party-school`，旧链接自动跳转
 - **新讲义** · [实分析第 3 章 数项级数](../courses/year2/semester1/实分析/课程讲义/03-series-numeriques.md) — 部分和与余项、正项级数、比较判别法、等价量求和、级数与积分比较、黎曼级数
 - **新页面** · [实分析 · 期中考试参考解答](../courses/year2/semester1/实分析/期中考试参考解答.md) — 2026-10-28 试卷逐题解答，含变化表与迭代示意图
