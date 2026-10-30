@@ -1,122 +1,171 @@
-# 生活便利
-
-本页汇总校内商贸、医疗服务和 15 分钟生活圈信息。
-
+---
+title: 商贸与生活服务
+description: 校内超市、便利店、洗衣理发、快递、自助设备、失物招领与电动汽车充电
 ---
 
-## 校内商贸
+<div class="guide-hero">
+  <img class="guide-hero__img" src="../../assets/images/campus-life/overview/campus-lake.jpg" alt="校园水系" loading="eager">
+  <div class="guide-hero__body">
+    <span class="guide-hero__kicker">09 · 11 · Shops &amp; Services</span>
+    <h1 class="guide-hero__title">商贸与生活服务</h1>
+    <p class="guide-hero__sub">超市、便利店、水果、咖啡、奶茶、洗衣、理发与快递都集中在 D8–D12 学生公寓架空层；自助售卖机、咖啡机与打印机分布在各科研楼与教学楼。</p>
+    <div class="guide-hero__facts">
+      <span class="guide-hero__fact"><b>9</b> 家校内商铺</span>
+      <span class="guide-hero__fact"><b>24h</b> 便利店 / 洗衣 / 快递</span>
+      <span class="guide-hero__fact">充电桩 <b>111</b> 台</span>
+    </div>
+  </div>
+</div>
 
-### 餐饮零售
+<p class="guide-lead">校内商贸围绕学生公寓架空层展开，日常采购、打印、洗衣、理发、取快递基本可以在 D8–D12 之间解决；失物招领柜分布在游泳馆、健身房与教学一号楼。</p>
 
-| 店铺 | 位置 | 营业时间 | 电话 |
-|------|------|----------|------|
-| 灵峰超市 | D11 学生公寓架空层 | 7:30 – 22:00 | `135-8803-7594` |
-| 美宜佳便利店 | D8 学生公寓架空层 | 24 小时 | `189-6959-9199` |
-| 鲜丰水果 | D8 学生公寓架空层 | 7:30 – 22:00 | `155-5698-9271` |
-| 屋里咖啡 | 图书馆二层 | 8:00 – 17:00（周一至周六） | `183-0626-1627` |
-| 一点点奶茶 | D8 学生公寓架空层 | 10:00 – 22:00 | `135-8880-8584` |
+<div class="fact-row">
+  <div class="fact"><span class="fact__k">商铺集中区</span><span class="fact__v">D8 / D11 / D12 架空层</span></div>
+  <div class="fact"><span class="fact__k">24 小时</span><span class="fact__v">美宜佳 · 佰途洗衣 · 菜鸟驿站自助取件</span></div>
+  <div class="fact"><span class="fact__k">失物招领</span><span class="fact__v">190-1120-8691</span></div>
+  <div class="fact"><span class="fact__k">充电桩报修</span><span class="fact__v">152-6708-9300 <small>24h</small></span></div>
+</div>
 
-### 生活服务
+## 校内商贸 {#shops}
 
-| 店铺 | 位置 | 营业时间 | 电话 |
-|------|------|----------|------|
-| 业雄图文 | D12 学生公寓架空层 | 9:00 – 20:30 | `137-5819-1578` |
-| 佰途洗衣 | D12 学生公寓架空层 | 24 小时（自助） | `137-5086-1384` |
-| 理发店 | D12 学生公寓架空层 | 10:30 – 21:00 | `182-7985-7079` |
-| 菜鸟驿站 | D11 学生公寓架空层 | 24h 自助取件；9:00–19:00 人工 | `182-0194-7721` |
+<div class="spot-grid spot-grid--three">
 
-### 自助设备分布
+<div class="spot">
+  <img src="../../assets/images/campus-life/daily/shop-lingfeng.jpg" alt="灵峰超市" loading="lazy">
+  <div class="spot__body">
+    <div class="spot__title">灵峰超市</div>
+    <div class="spot__meta"><b>位置</b> D11 学生公寓架空层<br><b>营业</b> 7:30 – 22:00<br><b>电话</b> 135-8803-7594</div>
+  </div>
+</div>
 
-自助售卖机：北食堂东门门口 / D11 灵峰超市门外 / 科研三南区一楼 / 科研二南区一楼 / 科研一南区一楼 / 教学一号楼二楼大厅
+<div class="spot">
+  <img src="../../assets/images/campus-life/daily/shop-meiyijia.jpg" alt="美宜佳便利店" loading="lazy">
+  <div class="spot__body">
+    <div class="spot__title">美宜佳便利店</div>
+    <div class="spot__meta"><b>位置</b> D8 学生公寓架空层<br><b>营业</b> 24 小时<br><b>电话</b> 189-6959-9199</div>
+  </div>
+</div>
 
-自助咖啡机：科研一北区/南区一楼、科研二北区一楼、科研三南区一楼（教师之家）/ 会议中心二楼南侧
+<div class="spot">
+  <img src="../../assets/images/campus-life/daily/shop-fruit.jpg" alt="鲜丰水果" loading="lazy">
+  <div class="spot__body">
+    <div class="spot__title">鲜丰水果</div>
+    <div class="spot__meta"><b>位置</b> D8 学生公寓架空层<br><b>营业</b> 7:30 – 22:00<br><b>电话</b> 155-5698-9271</div>
+  </div>
+</div>
 
-自助打印机：科研一中区西大厅 / 科研二南区中庭 / 科研三北区西大厅 / 教学一号楼师生服务大厅 / 图书馆二层大厅
+<div class="spot">
+  <img src="../../assets/images/campus-life/daily/shop-coffee.jpg" alt="屋里咖啡" loading="lazy">
+  <div class="spot__body">
+    <div class="spot__title">屋里咖啡</div>
+    <div class="spot__meta"><b>位置</b> 图书馆二层<br><b>营业</b> 8:00 – 17:00（周一至周六）<br><b>电话</b> 183-0626-1627</div>
+  </div>
+</div>
 
----
+<div class="spot">
+  <img src="../../assets/images/campus-life/daily/shop-tea.jpg" alt="一点点奶茶" loading="lazy">
+  <div class="spot__body">
+    <div class="spot__title">一点点奶茶</div>
+    <div class="spot__meta"><b>位置</b> D8 学生公寓架空层<br><b>营业</b> 10:00 – 22:00<br><b>电话</b> 135-8880-8584</div>
+  </div>
+</div>
 
-## 医疗服务
+<div class="spot">
+  <img src="../../assets/images/campus-life/daily/shop-yexiong.jpg" alt="业雄图文" loading="lazy">
+  <div class="spot__body">
+    <div class="spot__title">业雄图文</div>
+    <div class="spot__meta"><b>位置</b> D12 学生公寓架空层<br><b>营业</b> 9:00 – 20:30<br><b>电话</b> 137-5819-1578</div>
+  </div>
+</div>
 
-### 校医务中心
+<div class="spot">
+  <img src="../../assets/images/campus-life/daily/shop-laundry.jpg" alt="佰途洗衣" loading="lazy">
+  <div class="spot__body">
+    <div class="spot__title">佰途洗衣</div>
+    <div class="spot__meta"><b>位置</b> D12 学生公寓架空层<br><b>营业</b> 24 小时（自助）<br><b>电话</b> 137-5086-1384</div>
+  </div>
+</div>
+
+<div class="spot">
+  <img src="../../assets/images/campus-life/daily/shop-barber.jpg" alt="理发店" loading="lazy">
+  <div class="spot__body">
+    <div class="spot__title">理发店</div>
+    <div class="spot__meta"><b>位置</b> D12 学生公寓架空层<br><b>营业</b> 10:30 – 21:00<br><b>电话</b> 182-7985-7079</div>
+  </div>
+</div>
+
+<div class="spot">
+  <img src="../../assets/images/campus-life/daily/shop-cainiao.jpg" alt="菜鸟驿站" loading="lazy">
+  <div class="spot__body">
+    <div class="spot__title">菜鸟驿站</div>
+    <div class="spot__meta"><b>位置</b> D11 学生公寓架空层<br><b>自助取件</b> 24 小时<br><b>人工服务</b> 9:00 – 19:00<br><b>电话</b> 182-0194-7721</div>
+  </div>
+</div>
+
+</div>
+
+## 自助设备 {#devices}
+
+<div class="photo-grid photo-grid--two">
+  <figure>
+    <img src="../../assets/images/campus-life/daily/vending-machine.jpg" alt="自助售卖机" loading="lazy">
+    <figcaption><b>自助售卖机</b> · 饮料与零食</figcaption>
+  </figure>
+  <figure>
+    <img src="../../assets/images/campus-life/daily/coffee-machine.jpg" alt="自助咖啡机" loading="lazy">
+    <figcaption><b>自助咖啡机</b> · 现磨咖啡与饮品</figcaption>
+  </figure>
+  <figure>
+    <img src="../../assets/images/campus-life/daily/printer.jpg" alt="自助打印机" loading="lazy">
+    <figcaption><b>自助打印机</b> · 立等可取，即印即有</figcaption>
+  </figure>
+  <figure>
+    <img src="../../assets/images/campus-life/daily/nursing-room.jpg" alt="母婴室" loading="lazy">
+    <figcaption><b>母婴室</b> · 行政会议中心 3028 室</figcaption>
+  </figure>
+</div>
+
+<strong>自助售卖机</strong>：北食堂东门门口；D11 学生公寓架空层灵峰超市门外；科研三南区一楼教师之家；科研二南区一楼大厅；科研一南区一楼教师之家；教学一号楼二楼大厅。
+
+<strong>自助咖啡机</strong>：科研一北区一楼教师之家；科研一南区一楼教师之家；科研二北区一楼教师之家；科研三南区一楼教师之家；会议中心二楼南侧。
+
+<strong>自助打印机</strong>：科研一中区西大厅；科研二南区中庭；科研三北区西大厅；教学一号楼师生服务大厅；图书馆二层大厅。
+
+<strong>母婴室</strong>：行政会议中心 3028 室；科研一 2051 室；科研二 4029 室。
+
+## 失物招领 {#lost}
+
+失物招领柜设在以下三处，服务热线 `190-1120-8691`：
+
+- 游泳馆大厅（体育馆北侧）
+- 健身房大厅（中心组团北区 C8 负一层）
+- 教学一号楼 2 楼大厅
+
+<div class="photo-grid photo-grid--two">
+  <figure>
+    <img src="../../assets/images/campus-life/daily/lost-found.jpg" alt="失物招领柜" loading="lazy">
+    <figcaption><b>失物招领柜</b> · 教学一号楼 2 楼大厅</figcaption>
+  </figure>
+  <figure>
+    <img src="../../assets/images/campus-life/daily/shop-cainiao.jpg" alt="菜鸟驿站" loading="lazy">
+    <figcaption><b>快递收取</b> · D11 菜鸟驿站，24 小时自助取件</figcaption>
+  </figure>
+</div>
+
+## 电动汽车充电 {#ev}
 
 | 项目 | 详情 |
 |------|------|
-| 位置 | 中心组团北区一楼 C9 |
-| 开放时间 | 24 小时 |
-| 服务热线 | `191-5768-8238`（24h）/ `0571-28881120` |
+| 快充桩 | 11 台，单桩功率 30 kW |
+| 慢充桩 | 100 台，单桩功率 7 kW |
+| 位置 | 中心组团南区：教学一号楼 B2F 13 区、图书馆 B2F 12 区；中心组团北区：教学三号楼 B2F 3 区；体育馆 B1F 2 区 |
+| 故障报修 | `152-6708-9300`（24 小时） |
 
-### 心理咨询
+如遇充电设备异常、充电过程中断电或订单无法正常结束，请立即拨打物业 24 小时服务专线。具体操作指引见充电桩上张贴的使用说明，收费标准见学院规定。
 
-面向全体北航在籍在读学生，可选择线下或线上视频咨询。需提前至少 24 小时预约。
-
-预约方式：
-
-| 方式 | 操作 |
-|------|------|
-| 线上 | 公众号"微言航语"或"知心助航" → 【我航有约】/【知心】→ 心理服务预约平台 |
-| 杭州校园 | `0571-28881135`（周一至周五 8:00–12:00 / 13:30–17:00） |
-| 学院路校区 | `010-82317668` |
-| 沙河校区 | `010-61716882` |
-
-### 公费医疗报销
-
-杭州异地合同医院：余杭区第三人民医院、浙江大学医学院附属第一医院。
-
-报销资料投递：
-- 杭州国际校园行政中心 4008 门口医疗报销箱
-- 校医院学院路/沙河院区大厅
-
-关注"北京航空航天大学校医院"公众号办理挂号和查询报销细则。
-
-### AED 急救
-
-校园各区域配置 200 余台 AED。紧急时就近取用，同时拨打 `0571-28881110` 或 120。
-
-### 校外医院
-
-杭州市余杭区第三人民医院：
-
-| 项目 | 详情 |
-|------|------|
-| 地址 | 余杭区瓶窑镇羊山湾街 8 号 |
-| 门诊时间 | 8:00 – 11:30，13:00 – 16:00 |
-| 电话 | `0571-88549071` |
-
----
-
-## 生活服务
-
-### 失物招领
-
-| 位置 |
-|------|
-| 游泳馆大厅（体育馆北侧） |
-| 健身房大厅（C8 负一层） |
-| 教学一号楼 2 楼大厅 |
-
-服务热线：`190-1120-8691`
-
-### 电动汽车充电
-
-| 项目 | 详情 |
-|------|------|
-| 快充桩 | 11 台，单桩 30KW |
-| 慢充桩 | 100 台，单桩 7KW |
-| 位置 | 教学一号楼 B2F 13 区 / 图书馆 B2F 12 区 / 教学三号楼 B2F 3 区 / 体育馆 B1F 2 区 |
-| 故障报修 | `152-6708-9300`（24h） |
-
----
-
-## 15 分钟生活圈
-
-| 地点 | 地址 |
-|------|------|
-| 余杭区政务服务中心（瓶窑分中心） | 瓶窑镇前程路 20 号（8:30–12:00 / 13:30–17:00） |
-| 良渚古城遗址公园 | 瓶窑镇凤都路与 104 国道辅路交叉口西北 200 米 |
-| 杭州国家版本馆 | 瓶窑镇文润路 1 号 |
-| 瓶窑老街 | 余杭区外窑街 14 号（24h 开园，免费） |
-| 玉鸟集 | 良渚文化村玉鸟街与荀甫路交叉口向西 300 米（10:00–22:00） |
-
----
-
-*数据来源：《校园服务手册》（第一版）2026 年 6 月*
+<div class="photo-grid">
+  <figure>
+    <img src="../../assets/images/campus-life/transport/ev-charger.jpg" alt="地下车库电动汽车充电桩" loading="lazy">
+    <figcaption><b>电动汽车充电桩</b> · 地下车库，快充 11 台、慢充 100 台</figcaption>
+  </figure>
+</div>

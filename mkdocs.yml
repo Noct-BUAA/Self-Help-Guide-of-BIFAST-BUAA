@@ -207,14 +207,16 @@ nav:
 
   - 校园生活指南:
     - 生活指南概览: campus-life/index.md
-    - 住宿: campus-life/housing.md
-    - 餐饮: campus-life/dining.md
-    - 交通出行: campus-life/transportation.md
     - 校园服务: campus-life/campus-services.md
+    - 餐饮指南: campus-life/dining.md
+    - 住宿指南: campus-life/housing.md
     - 体育设施: campus-life/sports.md
     - 图书馆: campus-life/library.md
-    - 生活便利: campus-life/daily-life.md
-    - 常用信息: campus-life/contacts.md
+    - 商贸与生活服务: campus-life/daily-life.md
+    - 医疗服务: campus-life/medical.md
+    - 交通出行: campus-life/transportation.md
+    - 15 分钟生活圈: campus-life/neighborhood.md
+    - 常用信息与地图: campus-life/contacts.md
 
   - 后记:
     - postscript/index.md
