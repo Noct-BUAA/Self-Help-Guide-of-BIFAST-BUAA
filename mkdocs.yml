@@ -218,6 +218,7 @@ nav:
 
   - 后记:
     - postscript/index.md
+    - 公告归档: announcements/index.md
 
 not_in_nav: |
   includes/*
@@ -255,6 +256,8 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets:
+      base_path:
+        - docs
       auto_append:
         - includes/abbreviations.md
   - pymdownx.superfences:
