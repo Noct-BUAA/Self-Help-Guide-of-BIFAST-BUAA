@@ -31,36 +31,43 @@ comments: true
 <aside class="df-announce" aria-label="公告栏">
   <div class="df-announce__head">
     <span class="df-announce__kicker">公告栏 · ANNONCES</span>
-    <time class="df-announce__date" datetime="2026-10-29">2026-10-29</time>
+    <time class="df-announce__date" datetime="2026-10-30">2026-10-30</time>
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
-    <a class="df-announce__item" href="courses/year2/semester1/实分析/习题课/td4-suites-comparees/">
+    <a class="df-announce__item" href="courses/year2/semester1/实分析/课程讲义/03-series-numeriques/">
       <span class="df-announce__tag df-announce__tag--new">新讲义</span>
       <span class="df-announce__body">
-        <strong>实分析 TD4–TD5 上线</strong>
-        <span>数列比较与数列等价：夹逼与等价量运算、欧拉常数、收敛速度</span>
+        <strong>实分析第 3 章 数项级数上线</strong>
+        <span>部分和与余项、正项级数、比较判别法、等价量求和、级数与积分比较、黎曼级数</span>
       </span>
     </a>
-    <a class="df-announce__item" href="courses/year2/semester1/电路基础/习题课/td3-conducteurs-condensateurs/">
-      <span class="df-announce__tag df-announce__tag--new">新讲义</span>
+    <a class="df-announce__item" href="courses/year2/semester1/实分析/期中考试参考解答/">
+      <span class="df-announce__tag df-announce__tag--new">新页面</span>
       <span class="df-announce__body">
-        <strong>电路基础 TD3 上线</strong>
-        <span>导体与电容器：尖端效应、表面电场通式、托马斯–费米屏蔽层</span>
+        <strong>数学期中考试参考解答上线</strong>
+        <span>实分析与工程数学两门试卷逐题解答，法文原题 + 中文对照</span>
+      </span>
+    </a>
+    <a class="df-announce__item" href="courses/year2/semester1/工程数学/期中考试参考解答/">
+      <span class="df-announce__tag df-announce__tag--new">新页面</span>
+      <span class="df-announce__body">
+        <strong>工程数学期中考试参考解答</strong>
+        <span>复数方程、反三角恒等式、二项式求和与重根参数：完整解答</span>
       </span>
     </a>
     <a class="df-announce__item" href="courses/year2/semester1/工程数学/课程讲义/03-polynomes/">
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
         <strong>工程数学第 3 章更新</strong>
-        <span>新增第 7 节有理分式：欧几里得除法与部分分式分解</span>
+        <span>第 7 节补全部分分式分解例 7.5、例 7.7，拉格朗日插值推广到 K</span>
       </span>
     </a>
-    <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td5-racines-polynomes/">
-      <span class="df-announce__tag df-announce__tag--new">更新</span>
+    <a class="df-announce__item" href="courses/year2/semester1/实分析/习题课/td4-suites-comparees/">
+      <span class="df-announce__tag df-announce__tag--new">新讲义</span>
       <span class="df-announce__body">
-        <strong>TD5 多项式的根更新</strong>
-        <span>重数判别、拉格朗日插值、tan 七倍角与单根证明</span>
+        <strong>实分析 TD4–TD5 上线</strong>
+        <span>数列比较与数列等价：夹逼与等价量运算、欧拉常数、收敛速度</span>
       </span>
     </a>
   </div>
@@ -93,36 +100,43 @@ comments: true
 <aside class="df-announce" aria-label="公告栏">
   <div class="df-announce__head">
     <span class="df-announce__kicker">公告栏 · ANNONCES</span>
-    <time class="df-announce__date" datetime="2026-10-29">2026-10-29</time>
+    <time class="df-announce__date" datetime="2026-10-30">2026-10-30</time>
   </div>
   <h2 class="df-announce__title">最新更新</h2>
   <div class="df-announce__items">
-    <a class="df-announce__item" href="courses/year2/semester1/实分析/习题课/td4-suites-comparees/">
+    <a class="df-announce__item" href="courses/year2/semester1/实分析/课程讲义/03-series-numeriques/">
       <span class="df-announce__tag df-announce__tag--new">新讲义</span>
       <span class="df-announce__body">
-        <strong>实分析 TD4–TD5 上线</strong>
-        <span>数列比较与数列等价：夹逼与等价量运算、欧拉常数、收敛速度</span>
+        <strong>实分析第 3 章 数项级数上线</strong>
+        <span>部分和与余项、正项级数、比较判别法、等价量求和、级数与积分比较、黎曼级数</span>
       </span>
     </a>
-    <a class="df-announce__item" href="courses/year2/semester1/电路基础/习题课/td3-conducteurs-condensateurs/">
-      <span class="df-announce__tag df-announce__tag--new">新讲义</span>
+    <a class="df-announce__item" href="courses/year2/semester1/实分析/期中考试参考解答/">
+      <span class="df-announce__tag df-announce__tag--new">新页面</span>
       <span class="df-announce__body">
-        <strong>电路基础 TD3 上线</strong>
-        <span>导体与电容器：尖端效应、表面电场通式、托马斯–费米屏蔽层</span>
+        <strong>数学期中考试参考解答上线</strong>
+        <span>实分析与工程数学两门试卷逐题解答，法文原题 + 中文对照</span>
+      </span>
+    </a>
+    <a class="df-announce__item" href="courses/year2/semester1/工程数学/期中考试参考解答/">
+      <span class="df-announce__tag df-announce__tag--new">新页面</span>
+      <span class="df-announce__body">
+        <strong>工程数学期中考试参考解答</strong>
+        <span>复数方程、反三角恒等式、二项式求和与重根参数：完整解答</span>
       </span>
     </a>
     <a class="df-announce__item" href="courses/year2/semester1/工程数学/课程讲义/03-polynomes/">
       <span class="df-announce__tag df-announce__tag--new">更新</span>
       <span class="df-announce__body">
         <strong>工程数学第 3 章更新</strong>
-        <span>新增第 7 节有理分式：欧几里得除法与部分分式分解</span>
+        <span>第 7 节补全部分分式分解例 7.5、例 7.7，拉格朗日插值推广到 K</span>
       </span>
     </a>
-    <a class="df-announce__item" href="courses/year2/semester1/工程数学/习题课/td5-racines-polynomes/">
-      <span class="df-announce__tag df-announce__tag--new">更新</span>
+    <a class="df-announce__item" href="courses/year2/semester1/实分析/习题课/td4-suites-comparees/">
+      <span class="df-announce__tag df-announce__tag--new">新讲义</span>
       <span class="df-announce__body">
-        <strong>TD5 多项式的根更新</strong>
-        <span>重数判别、拉格朗日插值、tan 七倍角与单根证明</span>
+        <strong>实分析 TD4–TD5 上线</strong>
+        <span>数列比较与数列等价：夹逼与等价量运算、欧拉常数、收敛速度</span>
       </span>
     </a>
   </div>

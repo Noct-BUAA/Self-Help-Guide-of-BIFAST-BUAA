@@ -788,9 +788,9 @@ Le théorème suivant généralise ce résultat aux polynômes de degré supéri
 
 !!! danger "Théorème 5.1 : interpolation de Lagrange<br><span class='zh-title'>定理 5.1：拉格朗日插值</span>"
 
-    Soit \(n\in\mathbb{N}\). On considère \(n+1\) points \((x_0,y_0),(x_1,y_1),\dots,(x_n,y_n)\) dans le plan \(\mathbb{R}^2\), tels que \(x_0<x_1<\cdots<x_n\). Alors il existe un unique polynôme \(P\in\mathbb{R}_n[X]\) de degré inférieur ou égal à \(n\) dont la courbe représentative passe par ces points, c'est-à-dire tel que :
+    Soit \(n\in\mathbb{N}\). On considère \(n+1\) points \((x_0,y_0),(x_1,y_1),\dots,(x_n,y_n)\) dans \(\mathbb{K}^2\), tels que \(x_0,x_1,\dots,x_n\) sont tous différents. Alors il existe un unique polynôme \(P\in\mathbb{K}_n[X]\) de degré inférieur ou égal à \(n\) qui passe par ces points, c'est-à-dire tel que :
 
-    设 \(n\in\mathbb{N}\)。考虑平面 \(\mathbb{R}^2\) 中 \(n+1\) 个点 \((x_0,y_0),(x_1,y_1),\dots,(x_n,y_n)\)，满足 \(x_0<x_1<\cdots<x_n\)。则存在唯一的次数小于或等于 \(n\) 的多项式 \(P\in\mathbb{R}_n[X]\)，其图像经过这些点，即满足：
+    设 \(n\in\mathbb{N}\)。在 \(\mathbb{K}^2\) 中考虑 \(n+1\) 个点 \((x_0,y_0),(x_1,y_1),\dots,(x_n,y_n)\)，且 \(x_0,x_1,\dots,x_n\) 两两不同。则存在唯一的次数小于或等于 \(n\) 的多项式 \(P\in\mathbb{K}_n[X]\) 经过这些点，即满足：
     {: .zh }
 
     \[
@@ -817,18 +817,18 @@ Le théorème suivant généralise ce résultat aux polynômes de degré supéri
 
     <strong>Démonstration.</strong>
 
-    - <strong>Unicité.</strong> On suppose qu'il existe deux polynômes \((P,Q)\in\mathbb{R}_n[X]^2\) tels que :
+    - <strong>Unicité.</strong> On suppose qu'il existe deux polynômes \((P,Q)\in\mathbb{K}_n[X]^2\) tels que :
 
         \[
         \forall i\in\llbracket0,n\rrbracket,\quad P(x_i)=Q(x_i)=y_i.
         \]
 
-        <strong>唯一性。</strong> 假设存在两个多项式 \((P,Q)\in\mathbb{R}_n[X]^2\) 使得：
+        <strong>唯一性。</strong> 假设存在两个多项式 \((P,Q)\in\mathbb{K}_n[X]^2\) 使得：
         {: .zh }
 
-        Alors \(x_0,x_1,\dots,x_n\) sont \(n+1\) racines du polynôme \(P-Q\in\mathbb{R}_n[X]\). On en déduit que \(P-Q\) est le polynôme nul, donc que \(P=Q\).
+        Alors \(x_0,x_1,\dots,x_n\) sont \(n+1\) racines du polynôme \(P-Q\in\mathbb{K}_n[X]\). On en déduit que \(P-Q\) est le polynôme nul, donc que \(P=Q\).
 
-        则 \(x_0,x_1,\dots,x_n\) 是多项式 \(P-Q\in\mathbb{R}_n[X]\) 的 \(n+1\) 个根。由此推出 \(P-Q\) 是零多项式，故 \(P=Q\)。
+        则 \(x_0,x_1,\dots,x_n\) 是多项式 \(P-Q\in\mathbb{K}_n[X]\) 的 \(n+1\) 个根。由此推出 \(P-Q\) 是零多项式，故 \(P=Q\)。
         {: .zh }
 
     - <strong>Existence.</strong> Puisque les polynômes \(L_0,L_1,\dots,L_n\) sont tous de degré \(n\), \(P=\sum_{j=0}^{n}y_jL_j\) est bien de degré inférieur ou égal à \(n\). On remarque que pour tout \((i,j)\in\llbracket0,n\rrbracket^2\) :
@@ -1042,9 +1042,9 @@ Le théorème suivant généralise ce résultat aux polynômes de degré supéri
 
 ## 7　Fractions rationnelles <span class="heading-zh">有理分式</span>
 
-On remarque que seuls les polynômes constants non nuls admettent un inverse pour la multiplication car si \(PQ=1\) alors \(\deg(P)=\deg(Q)=0\). Ainsi, le quotient de deux polynômes n'est en général pas défini.
+On remarque que seuls les polynômes constants non nuls admettent un inverse pour la multiplication car si \(PQ=1\) alors \(\deg(P)=\deg(Q)=0\). Ainsi, la division de deux polynômes (c'est-à-dire la multiplication d'un polynôme par l'inverse d'un autre polynôme) n'est en général pas définie. Par contre, on peut considérer la division de deux fonctions polynomiales.
 
-我们注意到，只有非零常数多项式才具有乘法逆元，因为若 \(PQ=1\)，则 \(\deg(P)=\deg(Q)=0\)。因此，两个多项式的商一般没有定义。
+我们注意到，只有非零常数多项式才具有乘法逆元，因为若 \(PQ=1\)，则 \(\deg(P)=\deg(Q)=0\)。因此，两个多项式的除法（即把一个多项式乘以另一个多项式的逆元）一般没有定义。但是，我们可以考虑两个多项式函数的除法。
 {: .zh }
 
 !!! success "Définition 7.1 : fraction rationnelle<br><span class='zh-title'>定义 7.1：有理分式（fraction rationnelle）</span>"
@@ -1119,9 +1119,9 @@ Le but de cette section est d'apprendre à simplifier les fractions rationnelles
         令 \(Q=0\)，\(R=A\)。
         {: .zh }
 
-    2. Tant que \(\deg(R)\geqslant\deg(B)\), on pose :
+    2. Si \(\deg(R)<\deg(B)\), on arrête l'algorithme. Sinon, on pose :
 
-        当 \(\deg(R)\geqslant\deg(B)\) 时，令：
+        若 \(\deg(R)<\deg(B)\)，则停止算法。否则，令：
         {: .zh }
 
         \[
@@ -1138,14 +1138,14 @@ Le but de cette section est d'apprendre à simplifier les fractions rationnelles
         将 \(Q\) 替换为 \(Q+P\)，将 \(R\) 替换为 \(R-BP\)。
         {: .zh }
 
-    4. Lorsque \(\deg(R)<\deg(B)\), on arrête l'algorithme, sinon on reprend à l'étape 2.
+    4. On retourne à 2.
 
-        当 \(\deg(R)<\deg(B)\) 时停止算法，否则回到第 2 步。
+        返回第 2 步。
         {: .zh }
 
-    On remarque qu'à chaque étape 2, on a \(\deg(R-BP)<\deg(R)\), donc l'algorithme s'arrête après un nombre fini d'étapes. De plus, l'égalité \(A=BQ+R\) est conservée à chaque étape car :
+    À chaque étape, on remarque que \(\deg(R-BP)<\deg(R)\), donc l'algorithme s'arrête après un nombre fini d'étapes. De plus, l'égalité \(A=BQ+R\) est conservée à chaque étape car :
 
-    注意到在第 2 步的每一步都有 \(\deg(R-BP)<\deg(R)\)，因此算法在有限步之后停止。此外，等式 \(A=BQ+R\) 在每一步都保持成立，因为：
+    每一步都注意到 \(\deg(R-BP)<\deg(R)\)，因此算法在有限步之后停止。此外，等式 \(A=BQ+R\) 在每一步都保持成立，因为：
     {: .zh }
 
     \[
@@ -1161,20 +1161,19 @@ Le but de cette section est d'apprendre à simplifier les fractions rationnelles
 
 !!! info "Exemple 7.3<br><span class='zh-title'>例 7.3</span>"
 
-    On a par division euclidienne :
+    On a d'après l'algorithme de division euclidienne :
 
-    由欧几里得除法，有：
+    根据欧几里得除法算法，有：
     {: .zh }
 
     \[
     \begin{aligned}
-    \underbrace{X^5-X^4-X-1}_{=A}
-    &=\bigl(\underbrace{X^2+X+1}_{=B}\bigr)\,0+X^5-X^4-X-1\\
-    &=(X^2+X+1)\,X^3-2X^4-X^3-X-1\\
-    &=(X^2+X+1)\,(X^3-2X^2)+X^3+2X^2-X-1\\
-    &=(X^2+X+1)\,(X^3-2X^2+X)+X^2-2X-1\\
-    &=(X^2+X+1)\,\bigl(\underbrace{X^3-2X^2+X+1}_{=Q}\bigr)
-      \underbrace{-3X-2}_{=R}.
+    \underbrace{2X^5+2X^4-X^3+X^2+2X+3}_{=A}
+    &=\bigl(\underbrace{X^2+X+1}_{=B}\bigr)\,0+2X^5+2X^4-X^3+X^2+2X+3\\
+    &=(X^2+X+1)\,(2X^3)-3X^3+X^2+2X+3\\
+    &=(X^2+X+1)\,(2X^3-3X)+4X^2+5X+3\\
+    &=(X^2+X+1)\,\bigl(\underbrace{2X^3-3X+4}_{=Q}\bigr)
+      +\underbrace{X-1}_{=R}.
     \end{aligned}
     \]
 
@@ -1185,8 +1184,8 @@ Le but de cette section est d'apprendre à simplifier les fractions rationnelles
 
     \[
     \forall x\in\mathbb{R},\quad
-    \frac{x^5-x^4-x-1}{x^2+x+1}
-    =x^3-2x^2+x+1-\frac{3x+2}{x^2+x+1}.
+    \frac{2x^5+2x^4-x^3+x^2+2x+3}{x^2+x+1}
+    =2x^3-3x+4+\frac{x-1}{x^2+x+1}.
     \]
 
 !!! danger "Théorème 7.4 : décomposition en éléments simples sur \(\mathbb{C}\)<br><span class='zh-title'>定理 7.4：\(\mathbb{C}\) 上的部分分式分解</span>"
@@ -1197,7 +1196,7 @@ Le but de cette section est d'apprendre à simplifier les fractions rationnelles
     {: .zh }
 
     \[
-    \forall x\in\mathscr{D},\quad f(x)=\frac{A(x)}{B(x)}
+    \forall z\in\mathscr{D},\quad f(z)=\frac{A(z)}{B(z)}
     \qquad\text{où}\qquad
     (A,B)\in\mathbb{C}[X]^2\ \text{et}\ d=\deg(B)\geqslant0.
     \]
@@ -1219,12 +1218,12 @@ Le but de cette section est d'apprendre à simplifier les fractions rationnelles
 
     \[
     \begin{aligned}
-    \forall x\in\mathscr{D},\quad f(x)
-    &=Q(x)+\frac{\lambda_{1,1}}{x-\beta_1}+\frac{\lambda_{1,2}}{(x-\beta_1)^2}
-      +\cdots+\frac{\lambda_{1,m_1}}{(x-\beta_1)^{m_1}}\\
-    &\quad+\frac{\lambda_{2,1}}{x-\beta_2}+\cdots+\frac{\lambda_{2,m_2}}{(x-\beta_2)^{m_2}}
-      +\cdots+\frac{\lambda_{r,1}}{x-\beta_r}+\cdots+\frac{\lambda_{r,m_r}}{(x-\beta_r)^{m_r}}\\
-    &=Q(x)+\sum_{i=1}^{r}\sum_{j=1}^{m_i}\frac{\lambda_{i,j}}{(x-\beta_i)^j}
+    \forall z\in\mathscr{D},\quad f(z)
+    &=Q(z)+\frac{\lambda_{1,1}}{z-\beta_1}+\frac{\lambda_{1,2}}{(z-\beta_1)^2}
+      +\cdots+\frac{\lambda_{1,m_1}}{(z-\beta_1)^{m_1}}\\
+    &\quad+\frac{\lambda_{2,1}}{z-\beta_2}+\cdots+\frac{\lambda_{2,m_2}}{(z-\beta_2)^{m_2}}
+      +\cdots+\frac{\lambda_{r,1}}{z-\beta_r}+\cdots+\frac{\lambda_{r,m_r}}{(z-\beta_r)^{m_r}}\\
+    &=Q(z)+\sum_{i=1}^{r}\sum_{j=1}^{m_i}\frac{\lambda_{i,j}}{(z-\beta_i)^j}
     \end{aligned}
     \]
 
@@ -1235,7 +1234,122 @@ Le but de cette section est d'apprendre à simplifier les fractions rationnelles
 
 !!! info "Exemple 7.5<br><span class='zh-title'>例 7.5</span>"
 
-    （原讲义此处留空，供课堂补充。）
+    On considère la fraction rationnelle \(f\) définie par :
+
+    考虑由下式定义的有理分式 \(f\)：
+    {: .zh }
+
+    \[
+    \forall z\in\mathbb{C}\setminus\{-1,i\},\quad
+    f(z)=\frac{z^2+2z-1}{(z+1)^3(z-i)}.
+    \]
+
+    Puisque \(\deg(X^2+2X-1)=2<4=\deg\bigl((X+1)^3(X-i)\bigr)\), le quotient de la division euclidienne de \(X^2+2X-1\) par \((X+1)^3(X-i)\) est nul. D'après la décomposition en éléments simples, on sait donc qu'il existe \((a,b,c,d)\in\mathbb{C}^4\) tels que :
+
+    由于 \(\deg(X^2+2X-1)=2<4=\deg\bigl((X+1)^3(X-i)\bigr)\)，\(X^2+2X-1\) 除以 \((X+1)^3(X-i)\) 的欧几里得除法的商为零。因此，根据部分分式分解，存在 \((a,b,c,d)\in\mathbb{C}^4\) 使得：
+    {: .zh }
+
+    \[
+    \forall z\in\mathbb{C}\setminus\{-1,i\},\quad
+    f(z)=\frac{a}{z+1}+\frac{b}{(z+1)^2}+\frac{c}{(z+1)^3}+\frac{d}{z-i}.
+    \]
+
+    Pour déterminer les valeurs de \((a,b,c,d)\), on peut utiliser des méthodes différentes.
+
+    为确定 \((a,b,c,d)\) 的值，可以使用不同的方法。
+    {: .zh }
+
+    - <strong>Méthode par identification des coefficients.</strong> En mettant au même dénominateur, on a :
+
+        <strong>比较系数法。</strong> 通分后有：
+        {: .zh }
+
+        \[
+        \begin{aligned}
+        X^2+2X-1
+        &=a(X+1)^2(X-i)+b(X+1)(X-i)+c(X-i)+d(X+1)^3\\
+        &=(a+d)X^3+\bigl[(2-i)a+b+3d\bigr]X^2\\
+        &\quad+\bigl[(1-2i)a+(1-i)b+c+3d\bigr]X+\bigl[-ia-ib-ic+d\bigr].
+        \end{aligned}
+        \]
+
+        On en déduit les valeurs de \((a,b,c,d)\) en identifiant les coefficients.
+
+        通过比较系数即可推出 \((a,b,c,d)\) 的值。
+        {: .zh }
+
+    - <strong>Méthode par calcul astucieux de chaque coefficient.</strong>
+
+        <strong>逐个系数的巧妙计算法。</strong>
+        {: .zh }
+
+        - Pour \(c\), on obtient en développant \((z+1)^3f(z)\) :
+
+            对于 \(c\)，展开 \((z+1)^3f(z)\) 得到：
+            {: .zh }
+
+            \[
+            \forall z\in\mathbb{C}\setminus\{i\},\quad
+            \frac{z^2+2z-1}{z-i}=a(z+1)^2+b(z+1)+c+\frac{d(z+1)^3}{z-i}.
+            \]
+
+            Puis \(z=-1\) donne \(c=\frac{1-2-1}{-1-i}=1-i\).
+
+            再令 \(z=-1\)，得 \(c=\frac{1-2-1}{-1-i}=1-i\)。
+            {: .zh }
+
+        - De même pour \(d\), on obtient en développant \((z-i)f(z)\) :
+
+            同理，对于 \(d\)，展开 \((z-i)f(z)\) 得到：
+            {: .zh }
+
+            \[
+            \forall z\in\mathbb{C}\setminus\{-1\},\quad
+            \frac{z^2+2z-1}{(z+1)^3}
+            =\frac{a(z-i)}{z+1}+\frac{b(z-i)}{(z+1)^2}+\frac{c(z-i)}{(z+1)^3}+d.
+            \]
+
+            Puis \(z=i\) donne \(d=\frac{-1+2i-1}{(1+i)^3}=1\).
+
+            再令 \(z=i\)，得 \(d=\frac{-1+2i-1}{(1+i)^3}=1\)。
+            {: .zh }
+
+        - Pour \(a\), on obtient en développant \(xf(x)\) :
+
+            对于 \(a\)，展开 \(xf(x)\) 得到：
+            {: .zh }
+
+            \[
+            \begin{aligned}
+            \forall x\in\mathbb{R}\setminus\{-1\},\quad
+            \frac{x^3+2x^2-x}{(x+1)^3(x-i)}
+            &=a\frac{x}{x+1}+b\frac{x}{(x+1)^2}\\
+            &\quad+c\frac{x}{(x+1)^3}+d\frac{x}{x-i}.
+            \end{aligned}
+            \]
+
+            Puis \(x\to+\infty\) donne \(a+d=0\), donc \(a=-1\).
+
+            再令 \(x\to+\infty\)，得 \(a+d=0\)，故 \(a=-1\)。
+            {: .zh }
+
+        - Pour \(b\) : \(f(0)=a+b+c+id=-i\), donc \(b=-i\).
+
+            对于 \(b\)：\(f(0)=a+b+c+id=-i\)，故 \(b=-i\)。
+            {: .zh }
+
+    Finalement :
+
+    最终：
+    {: .zh }
+
+    \[
+    \begin{aligned}
+    \forall z\in\mathbb{C}\setminus\{-1,i\},\quad
+    f(z)&=\frac{z^2+2z-1}{(z+1)^3(z-i)}\\
+    &=\frac{-1}{z+1}+\frac{-i}{(z+1)^2}+\frac{1-i}{(z+1)^3}+\frac{1}{z-i}.
+    \end{aligned}
+    \]
 
 !!! danger "Théorème 7.6 : décomposition en éléments simples sur \(\mathbb{R}\)<br><span class='zh-title'>定理 7.6：\(\mathbb{R}\) 上的部分分式分解</span>"
 
@@ -1284,7 +1398,75 @@ Le but de cette section est d'apprendre à simplifier les fractions rationnelles
 
 !!! info "Exemple 7.7<br><span class='zh-title'>例 7.7</span>"
 
-    （原讲义此处留空，供课堂补充。）
+    On considère la fraction rationnelle \(f\) définie par :
+
+    考虑由下式定义的有理分式 \(f\)：
+    {: .zh }
+
+    \[
+    \forall x\in\mathbb{R}\setminus\{1\},\quad
+    f(x)=\frac{9}{(x^3-1)^2}.
+    \]
+
+    Puisque \(\deg(9)=0<6=\deg\bigl((X^3-1)^2\bigr)\), le quotient de la division euclidienne de \(9\) par \((X^3-1)^2\) est nul. On a :
+
+    由于 \(\deg(9)=0<6=\deg\bigl((X^3-1)^2\bigr)\)，\(9\) 除以 \((X^3-1)^2\) 的欧几里得除法的商为零。又有：
+    {: .zh }
+
+    \[
+    \begin{aligned}
+    (X^3-1)^2&=(X-1)^2(X-j)^2(X-\overline{j})^2 &&\text{dans }\mathbb{C}[X]\\
+    &=(X-1)^2(X^2+X+1)^2 &&\text{dans }\mathbb{R}[X].
+    \end{aligned}
+    \]
+
+    D'après la décomposition en éléments simples, on sait donc qu'il existe \((a,b,c,d,e,g)\in\mathbb{R}^6\) tels que :
+
+    因此，根据部分分式分解，存在 \((a,b,c,d,e,g)\in\mathbb{R}^6\) 使得：
+    {: .zh }
+
+    \[
+    \forall x\in\mathbb{R}\setminus\{1\},\quad
+    f(x)=\frac{a}{x-1}+\frac{b}{(x-1)^2}+\frac{cx+d}{x^2+x+1}+\frac{ex+g}{(x^2+x+1)^2}.
+    \]
+
+    - \(x=1\) dans \((x-1)^2f(x)\) donne \(b=\frac{9}{(1+1+1)^2}=1\).
+
+        在 \((x-1)^2f(x)\) 中令 \(x=1\)，得 \(b=\frac{9}{(1+1+1)^2}=1\)。
+        {: .zh }
+
+    - \(z=j\) dans \((z^2+z+1)^2f(z)\) donne \(je+g=\frac{9}{(j-1)^2}=-3\overline{j}\), donc \(e=g=3\).
+
+        在 \((z^2+z+1)^2f(z)\) 中令 \(z=j\)，得 \(je+g=\frac{9}{(j-1)^2}=-3\overline{j}\)，故 \(e=g=3\)。
+        {: .zh }
+
+    - \(x\to+\infty\) dans \(xf(x)\) donne \(a+c=0\).
+
+        在 \(xf(x)\) 中令 \(x\to+\infty\)，得 \(a+c=0\)。
+        {: .zh }
+
+    - \(f(0)=-a+b+d+g=9\), donc \(-a+d=5\).
+
+        \(f(0)=-a+b+d+g=9\)，故 \(-a+d=5\)。
+        {: .zh }
+
+    - \(f(-1)=-\frac{a}{2}+\frac{b}{4}-c+d-e+g=\frac{9}{4}\), donc \(-\frac{a}{2}-c+d=2\).
+
+        \(f(-1)=-\frac{a}{2}+\frac{b}{4}-c+d-e+g=\frac{9}{4}\)，故 \(-\frac{a}{2}-c+d=2\)。
+        {: .zh }
+
+    On en déduit que \((a,c,d)=(-2,2,3)\). Finalement :
+
+    由此推出 \((a,c,d)=(-2,2,3)\)。最终：
+    {: .zh }
+
+    \[
+    \begin{aligned}
+    \forall x\in\mathbb{R}\setminus\{1\},\quad
+    f(x)&=\frac{9}{(x^3-1)^2}\\
+    &=\frac{-2}{x-1}+\frac{1}{(x-1)^2}+\frac{2x+3}{x^2+x+1}+\frac{3x+3}{(x^2+x+1)^2}.
+    \end{aligned}
+    \]
 
 !!! warning "Vocabulaire clé<br><span class='zh-title'>重点词汇</span>"
 
@@ -1294,7 +1476,11 @@ Le but de cette section est d'apprendre à simplifier les fractions rationnelles
     - <strong>décomposition en éléments simples</strong>：部分分式分解
     - <strong>coefficient dominant</strong>：首项系数
     - <strong>algorithme / étape</strong>：算法 / 步骤
-    - <strong>tant que …</strong>：当……时（循环条件）
+    - <strong>si … sinon …</strong>：若……否则……
+    - <strong>on retourne à …</strong>：返回……
     - <strong>on pose …</strong>：令……
     - <strong>on remplace … par …</strong>：将……替换为……
+    - <strong>mettre au même dénominateur</strong>：通分
+    - <strong>par identification des coefficients</strong>：通过比较系数
+    - <strong>calcul astucieux</strong>：巧妙计算
     - <strong>d'où</strong>：由此
