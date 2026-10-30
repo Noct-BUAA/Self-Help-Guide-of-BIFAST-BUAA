@@ -297,6 +297,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js
   - assets/javascripts/hero-scroll.js
   - assets/javascripts/extra.js
+  - assets/javascripts/announcement-scroll.js
   - assets/javascripts/text-type.js
   - assets/javascripts/party-quiz.js
   - assets/javascripts/party-fill.js
