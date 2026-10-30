@@ -1441,14 +1441,14 @@ html body mjx-assistive-mml {
   gap: .15rem .5rem;
 }
 .df-announce__kicker {
-  font-size: .70rem;
+  font-size: .68rem;
   font-weight: 700;
   letter-spacing: .10em;
   color: rgba(26, 72, 168, .78);
   text-transform: uppercase;
 }
 .df-announce__date {
-  font-size: .66rem;
+  font-size: .64rem;
   color: rgba(13, 27, 62, .62);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -1462,6 +1462,34 @@ html body mjx-assistive-mml {
   letter-spacing: -.02em !important;
   line-height: 1.25 !important;
   color: #0D1B3E !important;
+}
+.df-announce__scroll {
+  --announce-fade-top: 0rem;
+  --announce-fade-bottom: 3rem;
+  max-height: clamp(24rem, 52vh, 32rem);
+  overflow-y: auto;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(to bottom,
+    transparent 0,
+    #000 var(--announce-fade-top),
+    #000 calc(100% - var(--announce-fade-bottom)),
+    transparent 100%);
+  mask-image: linear-gradient(to bottom,
+    transparent 0,
+    #000 var(--announce-fade-top),
+    #000 calc(100% - var(--announce-fade-bottom)),
+    transparent 100%);
+}
+.df-announce__scroll::-webkit-scrollbar { display: none; }
+.df-announce__scroll:focus-visible {
+  outline: 2px solid #1a48a8;
+  outline-offset: -2px;
+}
+.df-announce__scroll.is-scrolled { --announce-fade-top: 1.2rem; }
+.df-announce__scroll.is-at-bottom { --announce-fade-bottom: 0rem; }
+.df-announce__scroll.is-at-top.is-at-bottom {
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 .df-announce__items {
   display: flex;
@@ -1483,7 +1511,7 @@ html body mjx-assistive-mml {
   gap: .5rem;
 }
 .df-announce__tag {
-  font-size: .66rem;
+  font-size: .64rem;
   font-weight: 700;
   letter-spacing: .10em;
   line-height: 1.4;
@@ -1492,7 +1520,7 @@ html body mjx-assistive-mml {
 .df-announce__tag--exam { color: #C81919; }
 .df-announce__tag--new  { color: rgba(26, 72, 168, .78); }
 .df-announce__time {
-  font-size: .64rem;
+  font-size: .60rem;
   color: rgba(13, 27, 62, .62);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -1516,8 +1544,8 @@ html body mjx-assistive-mml {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  font-size: .74rem;
-  line-height: 1.55;
+  font-size: .70rem;
+  line-height: 1.5;
   color: rgba(13, 27, 62, .62);
 }
 .md-typeset .df-announce__all {
