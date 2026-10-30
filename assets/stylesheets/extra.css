@@ -1441,15 +1441,15 @@ html body mjx-assistive-mml {
   gap: .15rem .5rem;
 }
 .df-announce__kicker {
-  font-size: .68rem;
+  font-size: .70rem;
   font-weight: 700;
   letter-spacing: .10em;
-  color: rgba(26, 72, 168, .42);
+  color: rgba(26, 72, 168, .78);
   text-transform: uppercase;
 }
 .df-announce__date {
-  font-size: .62rem;
-  color: rgba(13, 27, 62, .34);
+  font-size: .66rem;
+  color: rgba(13, 27, 62, .62);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
@@ -1476,15 +1476,27 @@ html body mjx-assistive-mml {
   text-decoration: none;
   color: inherit;
 }
+.df-announce__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .5rem;
+}
 .df-announce__tag {
-  font-size: .62rem;
+  font-size: .66rem;
   font-weight: 700;
   letter-spacing: .10em;
   line-height: 1.4;
-  color: rgba(26, 72, 168, .42);
+  color: rgba(26, 72, 168, .78);
 }
 .df-announce__tag--exam { color: #C81919; }
-.df-announce__tag--new  { color: rgba(26, 72, 168, .42); }
+.df-announce__tag--new  { color: rgba(26, 72, 168, .78); }
+.df-announce__time {
+  font-size: .64rem;
+  color: rgba(13, 27, 62, .62);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
 .df-announce__body {
   display: flex;
   flex-direction: column;
@@ -1500,14 +1512,18 @@ html body mjx-assistive-mml {
   transition: color .15s ease;
 }
 .df-announce__body span {
-  font-size: .68rem;
-  line-height: 1.5;
-  color: rgba(13, 27, 62, .38);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: .74rem;
+  line-height: 1.55;
+  color: rgba(13, 27, 62, .62);
 }
 .md-typeset .df-announce__all {
   display: inline-block;
   margin-top: .55rem;
-  font-size: .66rem;
+  font-size: .72rem;
   font-weight: 600;
   color: #1a48a8;
   text-decoration: none;
@@ -1521,8 +1537,9 @@ html body mjx-assistive-mml {
   border-left-color: var(--night-border);
 }
 [data-md-color-scheme="slate"] .df-announce__kicker,
-[data-md-color-scheme="slate"] .df-announce__tag--new { color: var(--night-text-faint); }
-[data-md-color-scheme="slate"] .df-announce__date { color: var(--night-text-faint); }
+[data-md-color-scheme="slate"] .df-announce__tag--new { color: var(--night-text-muted); }
+[data-md-color-scheme="slate"] .df-announce__date,
+[data-md-color-scheme="slate"] .df-announce__time { color: var(--night-text-muted); }
 [data-md-color-scheme="slate"] .md-typeset .df-announce__title,
 [data-md-color-scheme="slate"] .df-announce__body strong { color: var(--night-text) !important; }
 [data-md-color-scheme="slate"] .df-announce__body span { color: var(--night-text-muted); }
