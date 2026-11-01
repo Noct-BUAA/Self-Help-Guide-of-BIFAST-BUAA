@@ -24,7 +24,7 @@
 
 <a class="card" href="工程数学/">
   <h3>工程数学</h3>
-  <p>Outils mathématiques pour les ingénieurs · 复数、三角学与多项式。收录三章正课、Fiche 5、TD1–TD5 及期中考试参考解答。</p>
+  <p>Outils mathématiques pour les ingénieurs · 复数、三角学与多项式。收录三章正课、Fiche 5、TD1–TD6 及期中考试参考解答。</p>
   <span class="card-arrow">浏览课程 &rarr;</span>
 </a>
 
