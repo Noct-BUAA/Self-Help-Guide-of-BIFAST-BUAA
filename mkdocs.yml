@@ -182,6 +182,7 @@ nav:
           - 静电学 · 定义与公式速查: courses/year2/semester1/电路基础/静电学·定义与公式速查.md
           - 动电学与电路 · 定义与公式速查: courses/year2/semester1/电路基础/定义与公式速查.md
           - 课程讲义:
+            - 绪论 物理课程基础: courses/year2/semester1/电路基础/课程讲义/00-fondements-de-la-physique.md
             - 第一部分 静电学:
               - 第 1 章 力与静电场: courses/year2/semester1/电路基础/课程讲义/es-01-force-champ-electrostatique.md
               - 第 2 章 高斯定理: courses/year2/semester1/电路基础/课程讲义/es-02-theoreme-de-gauss.md
