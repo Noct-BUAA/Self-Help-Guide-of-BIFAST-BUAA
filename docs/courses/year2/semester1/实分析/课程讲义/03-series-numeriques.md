@@ -74,9 +74,9 @@ Pour tout ce chapitre, \(\mathbb{K}\) désigne \(\mathbb{R}\) ou \(\mathbb{C}\) 
 
 !!! warning "Attention<br><span class='zh-title'>注意（Attention）</span>"
 
-    Ne pas confondre la <u>série</u> \(\sum u_n\), la <u>suite</u> \((u_n)\) et le <u>nombre</u> \(u_n\).
+    Ne pas confondre la <u>série</u> \(\sum u_n = (S_n)\), la <u>somme partielle</u> \(S_n\), la <u>suite</u> \((u_n)\) et le <u>nombre</u> \(u_n\).
 
-    不要把<u>级数</u> \(\sum u_n\)、<u>数列</u> \((u_n)\) 与<u>数</u> \(u_n\) 混为一谈。
+    不要把<u>级数</u> \(\sum u_n = (S_n)\)、<u>部分和</u> \(S_n\)、<u>数列</u> \((u_n)\) 与<u>数</u> \(u_n\) 混为一谈。
     {: .zh }
 
 Puisqu'une série est une suite particulière, on retrouve toutes les définitions et tous les résultats sur les suites numériques.
@@ -86,16 +86,16 @@ Puisqu'une série est une suite particulière, on retrouve toutes les définitio
 
 !!! success "Définition 1.2 : somme et reste d'une série convergente<br><span class='zh-title'>定义 1.2：收敛级数的和与余项</span>"
 
-    Soit \(\sum\limits_{n\geqslant n_0} u_n\) une série numérique. On dit que \(\sum\limits_{n\geqslant n_0} u_n\) est <strong>convergente</strong> lorsque la suite \((S_n)_{n\geqslant n_0}\) de ses sommes partielles converge vers une limite finie. Cette limite est appelée la <strong>somme</strong> de \(\sum\limits_{n\geqslant n_0} u_n\) et on note :
+    Soit \(\sum\limits_{n\geqslant n_0} u_n\) une série numérique. On dit que \(\sum\limits_{n\geqslant n_0} u_n\) est <strong>convergente</strong> lorsque la suite \((S_n)_{n\geqslant n_0}\) de ses sommes partielles converge. Sa limite est appelée la <strong>somme</strong> de \(\sum\limits_{n\geqslant n_0} u_n\) et on note :
 
-    设 \(\sum\limits_{n\geqslant n_0} u_n\) 为一个数项级数。若其部分和所成的数列 \((S_n)_{n\geqslant n_0}\) 收敛于一个有限极限，则称 \(\sum\limits_{n\geqslant n_0} u_n\) 是<strong>收敛的</strong>（convergente）。这个极限称为 \(\sum\limits_{n\geqslant n_0} u_n\) 的<strong>和</strong>（somme），并记作：
+    设 \(\sum\limits_{n\geqslant n_0} u_n\) 为一个数项级数。若其部分和所成的数列 \((S_n)_{n\geqslant n_0}\) 收敛，则称 \(\sum\limits_{n\geqslant n_0} u_n\) 是<strong>收敛的</strong>（convergente）。其极限称为 \(\sum\limits_{n\geqslant n_0} u_n\) 的<strong>和</strong>（somme），并记作：
     {: .zh }
 
     \[
     \sum_{n=n_0}^{+\infty} u_n = \lim_{n\to+\infty} S_n.
     \]
 
-    De plus, lorsque \(\sum\limits_{n\geqslant n_0} u_n\) est convergente, on définit la suite \((R_n)_{n\geqslant n_0}\) de ses <strong>restes</strong> par :
+    De plus, lorsque \(\sum\limits_{n\geqslant n_0} u_n\) converge, on définit la suite \((R_n)_{n\geqslant n_0}\) de ses <strong>restes</strong> par :
 
     此外，当 \(\sum\limits_{n\geqslant n_0} u_n\) 收敛时，定义其<strong>余项</strong>（restes）所成的数列 \((R_n)_{n\geqslant n_0}\) 为：
     {: .zh }
@@ -103,6 +103,18 @@ Puisqu'une série est une suite particulière, on retrouve toutes les définitio
     \[
     \forall n \geqslant n_0,\ R_n = \sum_{k=n_0}^{+\infty} u_k - S_n = \sum_{k=n+1}^{+\infty} u_k.
     \]
+
+Autrement dit, lorsque \(\sum\limits_{n\geqslant n_0} u_n\) converge, on a :
+
+换言之，当级数收敛时，有（式中标注：<em>la somme</em> 为「和」，<em>somme partielle</em> 为「部分和」，<em>reste</em> 为「余项」）：
+{: .zh }
+
+\[
+\forall n \geqslant n_0,\quad
+\underbrace{\sum_{k=n_0}^{+\infty} u_k}_{\text{la somme}} =
+\underbrace{\sum_{k=n_0}^{n} u_k}_{\text{somme partielle}} +
+\underbrace{\sum_{k=n+1}^{+\infty} u_k}_{\text{reste}}.
+\]
 
 !!! warning "Remarque<br><span class='zh-title'>注（Remarque）</span>"
 
@@ -144,42 +156,39 @@ Puisqu'une série est une suite particulière, on retrouve toutes les définitio
         \forall n \geqslant n_0,\quad \sum_{k=n_0}^{n} (u_{k+1} - u_k) = u_{n+1} - u_{n_0}.
         \]
 
-        Ainsi, la <strong>série télescopique</strong> \(\sum\limits_{n\geqslant n_0}(u_{n+1} - u_n)\) converge si et seulement si la suite \((u_n)_{n\geqslant n_0}\) converge.
+        Ainsi, la <strong>série télescopique</strong> \(\sum\limits_{n\geqslant n_0}(u_{n+1} - u_n)\) est convergente si et seulement si la suite \((u_n)_{n\geqslant n_0}\) est convergente.
 
         因此，<strong>裂项级数</strong>（série télescopique）\(\sum\limits_{n\geqslant n_0}(u_{n+1} - u_n)\) 收敛当且仅当数列 \((u_n)_{n\geqslant n_0}\) 收敛。
         {: .zh }
 
-!!! success "Définition 1.4 : nature de séries numériques<br><span class='zh-title'>定义 1.4：级数的性质（nature）</span>"
-
-    À faire en cours.
-
-    课上完成。
-    {: .zh }
-
 !!! warning "Important<br><span class='zh-title'>重要（Important）</span>"
 
-    La nature d'une série ne dépend pas de ses premiers termes : pour tout \(n_1 \geqslant n_0\), les séries \(\sum\limits_{n\geqslant n_0} u_n\) et \(\sum\limits_{n\geqslant n_1} u_n\) ont même nature. Par contre, dans le cas où ces séries convergent, leurs sommes sont différentes en général :
+    Comme pour les suites, la nature d'une série ne dépend pas de ses premiers termes : pour tout \(n_1 \geqslant n_0\), les séries \(\sum\limits_{n\geqslant n_0} u_n\) et \(\sum\limits_{n\geqslant n_1} u_n\) ont même nature. Par contre, dans le cas où ces séries convergent, leurs sommes sont différentes en général :
 
-    级数的性质（nature，即收敛或发散）与它的最初几项无关：对任意 \(n_1 \geqslant n_0\)，级数 \(\sum\limits_{n\geqslant n_0} u_n\) 与 \(\sum\limits_{n\geqslant n_1} u_n\) 同性质。但反过来，当这两个级数都收敛时，它们的和一般并不相同：
+    与数列一样，级数的性质（nature，即收敛或发散）与它的最初几项无关：对任意 \(n_1 \geqslant n_0\)，级数 \(\sum\limits_{n\geqslant n_0} u_n\) 与 \(\sum\limits_{n\geqslant n_1} u_n\) 同性质。但反过来，当这两个级数都收敛时，它们的和一般并不相同：
     {: .zh }
 
     \[
     \sum_{n=n_0}^{+\infty} u_n = \sum_{n=n_0}^{n_1-1} u_n + \sum_{n=n_1}^{+\infty} u_n.
     \]
 
-!!! danger "Propriété 1.5 : divergence grossière<br><span class='zh-title'>性质 1.5：粗略发散（divergence grossière）</span>"
+!!! danger "Propriété 1.4 : divergence grossière<br><span class='zh-title'>性质 1.4：粗略发散（divergence grossière）</span>"
 
-    À faire en cours.
+    Soit \(\sum u_n\) une série numérique. Si \(\sum u_n\) est convergente, alors \((u_n)\) converge vers 0. Si \((u_n)\) ne converge pas vers 0, alors on dit que \(\sum u_n\) <strong>diverge grossièrement</strong>.
 
-    课上完成。
+    设 \(\sum u_n\) 为数项级数。若 \(\sum u_n\) 收敛，则 \((u_n)\) 收敛于 0。若 \((u_n)\) 不收敛于 0，则称 \(\sum u_n\) <strong>粗略发散</strong>（diverge grossièrement）。
     {: .zh }
 
 !!! demo ""
 
-    <strong>Démonstration.</strong> À faire en cours.
+    <strong>Démonstration.</strong> Si \((S_n)\) converge vers \(\ell = \lim\limits_{n\to+\infty} S_n \in \mathbb{K}\), alors :
 
-    <strong>证明.</strong> 课上完成。
+    <strong>证明.</strong> 若 \((S_n)\) 收敛于 \(\ell = \lim\limits_{n\to+\infty} S_n \in \mathbb{K}\)，则：
     {: .zh }
+
+    \[
+    \lim_{n\to+\infty} u_n = \lim_{n\to+\infty} S_n - S_{n-1} = \ell - \ell = 0.
+    \]
 
     <p class="cqfd">∎</p>
 
@@ -190,35 +199,48 @@ Puisqu'une série est une suite particulière, on retrouve toutes les définitio
     存在并非粗略发散的级数，即通项趋于 0 却仍然发散的级数。
     {: .zh }
 
-!!! info "Exemple 1.6<br><span class='zh-title'>例 1.6</span>"
+!!! info "Exemple 1.5<br><span class='zh-title'>例 1.5</span>"
 
-    La <strong>série harmonique</strong> à faire en cours.
+    On considère la <strong>série harmonique</strong> \(\sum\limits_{n\geqslant 1}\dfrac{1}{n}\) dont la suite des sommes partielles est notée \((H_n = \sum\limits_{k=1}^{n}\frac{1}{k})_{n\geqslant 1}\). On remarque que :
 
-    <strong>调和级数</strong>（série harmonique）——课上完成。
+    考虑<strong>调和级数</strong>（série harmonique）\(\sum\limits_{n\geqslant 1}\dfrac{1}{n}\)，其部分和数列记为 \((H_n = \sum\limits_{k=1}^{n}\frac{1}{k})_{n\geqslant 1}\)。注意到：
     {: .zh }
 
-!!! danger "Propriété 1.7 : linéarité de la somme<br><span class='zh-title'>性质 1.7：和（somme）的线性性</span>"
+    \[
+    \forall n \in \mathbb{N}^*,\quad H_{2n} - H_n = \sum_{k=n+1}^{2n} \frac{1}{k} \geqslant \sum_{k=n+1}^{2n} \frac{1}{2n} = \frac{n}{2n} = \frac{1}{2}.
+    \]
 
-    À faire en cours.
+    Si \(\ell = \lim\limits_{n\to+\infty} H_n\) existe et est finie, alors on en déduit que \(0 = \ell - \ell \geqslant \frac{1}{2}\) ce qui est absurde. Par conséquent, la série harmonique \(\sum\limits_{n\geqslant 1}\dfrac{1}{n}\) est divergente, mais ne diverge pas grossièrement car \(\dfrac{1}{n}\) tend vers 0 quand \(n \to +\infty\).
 
-    课上完成。
+    若 \(\ell = \lim\limits_{n\to+\infty} H_n\) 存在且有限，则由此推出 \(0 = \ell - \ell \geqslant \frac{1}{2}\)，矛盾。因此调和级数 \(\sum\limits_{n\geqslant 1}\dfrac{1}{n}\) 发散；但它并非粗略发散，因为 \(\dfrac{1}{n}\) 当 \(n \to +\infty\) 时趋于 0。
     {: .zh }
+
+!!! danger "Propriété 1.6 : linéarité de la somme<br><span class='zh-title'>性质 1.6：和（somme）的线性性</span>"
+
+    Soient \(\sum\limits_{n\geqslant n_0} a_n\) et \(\sum\limits_{n\geqslant n_0} b_n\) deux séries convergentes. Alors, pour tout \(\lambda \in \mathbb{K}\), la série \(\sum\limits_{n\geqslant n_0}(a_n + \lambda b_n)\) est convergente et :
+
+    设 \(\sum\limits_{n\geqslant n_0} a_n\) 与 \(\sum\limits_{n\geqslant n_0} b_n\) 是两个收敛级数。则对任意 \(\lambda \in \mathbb{K}\)，级数 \(\sum\limits_{n\geqslant n_0}(a_n + \lambda b_n)\) 收敛，且：
+    {: .zh }
+
+    \[
+    \sum_{n=n_0}^{+\infty} (a_n + \lambda b_n) = \sum_{n=n_0}^{+\infty} a_n + \lambda \sum_{n=n_0}^{+\infty} b_n.
+    \]
 
 !!! warning "Vocabulaire clé<br><span class='zh-title'>第 1 节核心术语</span>"
 
     - <strong>série numérique</strong>：数项级数
     - <strong>terme général \(u_n\)</strong>：通项 \(u_n\)
     - <strong>somme partielle</strong>：部分和
-    - <strong>série convergente / divergente</strong>：收敛级数 / 发散级数
     - <strong>somme d'une série convergente</strong>：收敛级数的和
     - <strong>reste d'une série convergente</strong>：收敛级数的余项
+    - <strong>série convergente / divergente</strong>：收敛级数 / 发散级数
     - <strong>vitesse de convergence</strong>：收敛速度
     - <strong>série géométrique；raison</strong>：几何级数；公比
     - <strong>série télescopique</strong>：裂项级数（télescopique）
-    - <strong>nature d'une série</strong>：级数的性质（敛散性）
+    - <strong>série harmonique</strong>：调和级数
     - <strong>divergence grossière</strong>：粗略发散（通项不趋于 0）
     - <strong>linéarité de la somme</strong>：和的线性性
-    - <strong>à faire en cours</strong>：课上完成
+    - <strong>nature d'une série</strong>：级数的性质（敛散性）
 
 ## 2　Séries à termes positifs <span class="heading-zh">正项级数</span>
 
@@ -227,28 +249,76 @@ Dans cette section, on considère seulement des séries à termes positifs, en p
 本节只考虑正项级数（séries à termes positifs），特别地取 \(\mathbb{K} = \mathbb{R}\)。
 {: .zh }
 
+Si \(\sum\limits_{n\geqslant n_0} u_n\) diverge vers \(+\infty\), on note \(\sum\limits_{n=n_0}^{+\infty} u_n = +\infty\).
+
+若 \(\sum\limits_{n\geqslant n_0} u_n\) 发散到 \(+\infty\)，记 \(\sum\limits_{n=n_0}^{+\infty} u_n = +\infty\)。
+{: .zh }
+
 !!! danger "Théorème 2.1 : nature des séries à termes positifs<br><span class='zh-title'>定理 2.1：正项级数的性质</span>"
 
-    À faire en cours.
+    Soit \(\sum u_n\) une série à termes positifs (à partir d'un certain rang). On note \((S_n)\) la suite des sommes partielles de \(\sum u_n\).
 
-    课上完成。
+    设 \(\sum u_n\) 为（从某一项起）正项的级数。记 \((S_n)\) 为 \(\sum u_n\) 的部分和数列。
     {: .zh }
+
+    - Si \((S_n)\) est majorée, alors \(\sum u_n\) converge.
+
+        若 \((S_n)\) 有上界，则 \(\sum u_n\) 收敛。
+        {: .zh }
+
+    - Si \((S_n)\) n'est pas majorée, alors \(\sum u_n\) diverge vers \(+\infty\).
+
+        若 \((S_n)\) 无上界，则 \(\sum u_n\) 发散到 \(+\infty\)。
+        {: .zh }
+
+En particulier, toute série à termes positifs admet une limite (dans \(\mathbb{R}_+ \cup \{+\infty\}\)).
+
+特别地，任何正项级数都有极限（在 \(\mathbb{R}_+ \cup \{+\infty\}\) 中）。
+{: .zh }
 
 !!! demo ""
 
-    <strong>Démonstration.</strong> À faire en cours.
+    <strong>Démonstration.</strong> Puisque la nature de \(\sum u_n\) ne dépend pas de ses premiers termes, on peut supposer que \(\sum\limits_{n\geqslant n_0} u_n\) est à termes positifs. On a :
 
-    <strong>证明.</strong> 课上完成。
+    <strong>证明.</strong> 由于 \(\sum u_n\) 的性质不依赖于最初几项，可设 \(\sum\limits_{n\geqslant n_0} u_n\) 为正项级数。有：
+    {: .zh }
+
+    \[
+    \forall n \geqslant n_0,\quad S_{n+1} - S_n = \sum_{k=n_0}^{n+1} u_k - \sum_{k=n_0}^{n} u_k = u_{n+1} \geqslant 0.
+    \]
+
+    Donc \((S_n)_{n\geqslant n_0}\) est croissante et on peut appliquer le théorème de limite monotone.
+
+    因此 \((S_n)_{n\geqslant n_0}\) 递增，可以应用单调极限定理。
     {: .zh }
 
     <p class="cqfd">∎</p>
 
 !!! info "Exemple 2.2<br><span class='zh-title'>例 2.2</span>"
 
-    Retour sur la série harmonique et nature de la <strong>série d'Euler</strong> \(\sum\limits_{n\geqslant 1}\frac{1}{n^2}\) à faire en cours.
+    - On a montré dans l'exemple 1.5 que la série harmonique \(\sum\limits_{n\geqslant 1}\dfrac{1}{n}\) diverge. Puisque la série harmonique est à termes positifs, on en déduit qu'elle diverge vers \(+\infty\) :
 
-    回顾调和级数，并判断<strong>欧拉级数</strong>（série d'Euler）\(\sum\limits_{n\geqslant 1}\frac{1}{n^2}\) 的性质——课上完成。
-    {: .zh }
+        我们在例 1.5 中已证明调和级数 \(\sum\limits_{n\geqslant 1}\dfrac{1}{n}\) 发散。由于调和级数是正项级数，由此推出它发散到 \(+\infty\)：
+        {: .zh }
+
+        \[
+        \sum_{n=1}^{+\infty} \frac{1}{n} = +\infty.
+        \]
+
+    - On considère la <strong>série d'Euler</strong> \(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\) qui est à termes positifs. On a :
+
+        考虑<strong>欧拉级数</strong>（série d'Euler）\(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\)，它是正项级数。有：
+        {: .zh }
+
+        \[
+        \forall n \geqslant 2,\quad \sum_{k=2}^{n} \frac{1}{k^2} \leqslant \sum_{k=2}^{n} \frac{1}{k(k-1)}
+        = \sum_{k=2}^{n} \left(\frac{1}{k-1} - \frac{1}{k}\right) = \frac{1}{2-1} - \frac{1}{n} \leqslant 1.
+        \]
+
+        Ainsi, la suite des sommes partielles de \(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\) est majorée par 2. D'après la nature des séries à termes positifs, on en déduit que la série d'Euler est convergente.
+
+        因此，\(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\) 的部分和数列以 2 为上界。由正项级数的性质，推出欧拉级数收敛。
+        {: .zh }
 
 !!! warning "Remarque<br><span class='zh-title'>注（Remarque）</span>"
 
@@ -263,41 +333,202 @@ Dans cette section, on considère seulement des séries à termes positifs, en p
 
 !!! danger "Théorème 2.3 : théorème de comparaison des séries à termes positifs<br><span class='zh-title'>定理 2.3：正项级数的比较判别法</span>"
 
-    À faire en cours.
+    Soient \(\sum a_n\) et \(\sum b_n\) deux séries à termes positifs telles qu'à partir d'un certain rang \(N\) :
 
-    课上完成。
+    设 \(\sum a_n\) 与 \(\sum b_n\) 是两个正项级数，且从某一项 \(N\) 起：
     {: .zh }
+
+    \[
+    \forall n \geqslant N,\quad a_n \leqslant b_n.
+    \]
+
+    - Si \(\sum b_n\) est convergente, alors \(\sum a_n\) est convergente.
+
+        若 \(\sum b_n\) 收敛，则 \(\sum a_n\) 收敛。
+        {: .zh }
+
+    - Si \(\sum a_n\) est divergente, alors \(\sum b_n\) est divergente.
+
+        若 \(\sum a_n\) 发散，则 \(\sum b_n\) 发散。
+        {: .zh }
 
 !!! info "Exemple 2.4<br><span class='zh-title'>例 2.4</span>"
 
-    Nature de \(\sum\limits_{n\geqslant 0}\frac{1}{2^n+1}\) et de \(\sum\limits_{n\geqslant 0}\frac{n}{2^n}\) à faire en cours.
+    - On a :
 
-    判断 \(\sum\limits_{n\geqslant 0}\frac{1}{2^n+1}\) 与 \(\sum\limits_{n\geqslant 0}\frac{n}{2^n}\) 的性质——课上完成。
-    {: .zh }
+        有：
+        {: .zh }
 
-!!! danger "Théorème 2.5 : sommation des équivalents<br><span class='zh-title'>定理 2.5：等价量求和（sommation des équivalents）</span>"
+        \[
+        \forall n \geqslant 1,\quad 0 \leqslant \frac{1}{2n+2} \leqslant \frac{1}{2n+1}
+        \quad \text{et} \quad
+        \sum_{n\geqslant 0} \frac{1}{2n+2} = \frac{1}{2}\sum_{n\geqslant 1}\frac{1}{n}.
+        \]
+
+        Puisque la série harmonique \(\sum\limits_{n\geqslant 1}\dfrac{1}{n}\) est divergente (voir l'exemple 1.5), on en déduit que \(\sum\limits_{n\geqslant 0}\dfrac{1}{2n+1}\) est divergente d'après le théorème de comparaison des séries à termes positifs.
+
+        由于调和级数 \(\sum\limits_{n\geqslant 1}\dfrac{1}{n}\) 发散（见例 1.5），由正项级数的比较判别法推出 \(\sum\limits_{n\geqslant 0}\dfrac{1}{2n+1}\) 发散。
+        {: .zh }
+
+    - Pour montrer que \(\sum\limits_{n\geqslant 1}\dfrac{n}{2^n}\) est convergente d'après le théorème de comparaison des séries à termes positifs, il suffit de trouver \(q \in \,]0,1[\) tel qu'à partir d'un certain rang \(N\) :
+
+        为了用正项级数的比较判别法证明 \(\sum\limits_{n\geqslant 1}\dfrac{n}{2^n}\) 收敛，只需找到一个 \(q \in \,]0,1[\)，使得从某一项 \(N\) 起：
+        {: .zh }
+
+        \[
+        \forall n \geqslant N,\quad \frac{n}{2^n} \leqslant q^n
+        \qquad \text{c'est-à-dire} \qquad \frac{n}{(2q)^n} \leqslant 1.
+        \]
+
+        Or on sait que si \(2q > 1\), alors \(n = \on((2q)^n)\) quand \(n \to +\infty\) d'après le théorème des croissances comparées. Par exemple, on choisit \(q = \frac{3}{4}\). Puisque \(2q = \frac{3}{2} > 1\), on a :
+
+        而我们知道，若 \(2q > 1\)，则由增长比较定理，当 \(n \to +\infty\) 时 \(n = \on((2q)^n)\)。例如取 \(q = \frac{3}{4}\)。由于 \(2q = \frac{3}{2} > 1\)，有：
+        {: .zh }
+
+        \[
+        \lim_{n\to+\infty} \frac{n}{(2q)^n} = 0
+        \quad \text{donc} \quad
+        \exists N \in \mathbb{N},\ \forall n \geqslant N,\ \frac{n}{(2q)^n} \leqslant 1.
+        \]
+
+        On en déduit que pour tout \(n \geqslant N\), \(\frac{n}{2^n} \leqslant q^n = \left(\frac{3}{4}\right)^n\). Or la série géométrique \(\sum \left(\frac{3}{4}\right)^n\) est convergente car \(q = \frac{3}{4} \in \,]0,1[\). Par conséquent, \(\sum\limits_{n\geqslant 1}\dfrac{n}{2^n}\) est convergente d'après le théorème de comparaison des séries à termes positifs.
+
+        由此，对一切 \(n \geqslant N\)，\(\frac{n}{2^n} \leqslant q^n = \left(\frac{3}{4}\right)^n\)。而几何级数 \(\sum \left(\frac{3}{4}\right)^n\) 收敛，因为 \(q = \frac{3}{4} \in \,]0,1[\)。因此由正项级数的比较判别法，\(\sum\limits_{n\geqslant 1}\dfrac{n}{2^n}\) 收敛。
+        {: .zh }
+
+!!! danger "Théorème 2.5 : sommation des équivalents positifs<br><span class='zh-title'>定理 2.5：正项级数的等价量求和（sommation des équivalents positifs）</span>"
 
     Soient \((a_n)_{n\geqslant n_0}\) et \((b_n)_{n\geqslant n_0}\) deux suites réelles positives telles que \(a_n \simn b_n\). Alors \(\sum\limits_{n\geqslant n_0} a_n\) et \(\sum\limits_{n\geqslant n_0} b_n\) ont même nature. De plus :
 
     设 \((a_n)_{n\geqslant n_0}\) 与 \((b_n)_{n\geqslant n_0}\) 是两个非负实数列，且 \(a_n \simn b_n\)。则 \(\sum\limits_{n\geqslant n_0} a_n\) 与 \(\sum\limits_{n\geqslant n_0} b_n\) 同性质。此外：
     {: .zh }
 
-    - si \(\sum\limits_{n\geqslant n_0} a_n\) et \(\sum\limits_{n\geqslant n_0} b_n\) convergent, alors \(\sum\limits_{k=n+1}^{+\infty} a_k \simn \sum\limits_{k=n+1}^{+\infty} b_k\),
+    - si \(\sum\limits_{n\geqslant n_0} a_n\) et \(\sum\limits_{n\geqslant n_0} b_n\) sont convergentes, alors \(\sum\limits_{k=n+1}^{+\infty} a_k \simn \sum\limits_{k=n+1}^{+\infty} b_k\),
 
         若 \(\sum\limits_{n\geqslant n_0} a_n\) 与 \(\sum\limits_{n\geqslant n_0} b_n\) 都收敛，则 \(\sum\limits_{k=n+1}^{+\infty} a_k \simn \sum\limits_{k=n+1}^{+\infty} b_k\)；
         {: .zh }
 
-    - si \(\sum\limits_{n\geqslant n_0} a_n\) et \(\sum\limits_{n\geqslant n_0} b_n\) divergent, alors \(\sum\limits_{k=n_0}^{n} a_k \simn \sum\limits_{k=n_0}^{n} b_k\).
+    - si \(\sum\limits_{n\geqslant n_0} a_n\) et \(\sum\limits_{n\geqslant n_0} b_n\) sont divergentes, alors \(\sum\limits_{k=n_0}^{n} a_k \simn \sum\limits_{k=n_0}^{n} b_k\).
 
         若 \(\sum\limits_{n\geqslant n_0} a_n\) 与 \(\sum\limits_{n\geqslant n_0} b_n\) 都发散，则 \(\sum\limits_{k=n_0}^{n} a_k \simn \sum\limits_{k=n_0}^{n} b_k\)。
         {: .zh }
 
+!!! demo ""
+
+    <strong>Démonstration.</strong> Soit \(\varepsilon \in \,]0,1[\). Puisque \(\frac{a_n}{b_n} \to 1\) quand \(n \to +\infty\), on sait qu'il existe un rang \(N \geqslant n_0\) tel que :
+
+    <strong>证明.</strong> 设 \(\varepsilon \in \,]0,1[\)。由于当 \(n \to +\infty\) 时 \(\frac{a_n}{b_n} \to 1\)，存在某一项 \(N \geqslant n_0\) 使得：
+    {: .zh }
+
+    \[
+    \forall n \geqslant N,\quad \left|\frac{a_n}{b_n} - 1\right| < \varepsilon
+    \quad \text{donc} \quad
+    (1-\varepsilon)b_n < a_n < (1+\varepsilon)b_n.
+    \]
+
+    D'après le théorème de comparaison des séries à termes positifs, on en déduit que \(\sum\limits_{n\geqslant n_0} a_n\) et \(\sum\limits_{n\geqslant n_0} b_n\) ont même nature.
+
+    由正项级数的比较判别法，推出 \(\sum\limits_{n\geqslant n_0} a_n\) 与 \(\sum\limits_{n\geqslant n_0} b_n\) 同性质。
+    {: .zh }
+
+    - Si \(\sum\limits_{n\geqslant n_0} a_n\) et \(\sum\limits_{n\geqslant n_0} b_n\) sont convergentes, alors on a par linéarité de la somme :
+
+        若 \(\sum\limits_{n\geqslant n_0} a_n\) 与 \(\sum\limits_{n\geqslant n_0} b_n\) 都收敛，则由和的线性性：
+        {: .zh }
+
+        \[
+        \forall n \geqslant N,\quad
+        (1-\varepsilon)\sum_{k=n+1}^{+\infty} b_k
+        < \sum_{k=n+1}^{+\infty} a_k
+        < (1+\varepsilon)\sum_{k=n+1}^{+\infty} b_k
+        \quad \text{donc} \quad
+        \left|\frac{\sum_{k=n+1}^{+\infty} a_k}{\sum_{k=n+1}^{+\infty} b_k} - 1\right| < \varepsilon.
+        \]
+
+        On en déduit bien que \(\sum\limits_{k=n+1}^{+\infty} a_k \simn \sum\limits_{k=n+1}^{+\infty} b_k\) quand \(n \to +\infty\).
+
+        由此确实得到：当 \(n \to +\infty\) 时 \(\sum\limits_{k=n+1}^{+\infty} a_k \simn \sum\limits_{k=n+1}^{+\infty} b_k\)。
+        {: .zh }
+
+    - Si \(\sum\limits_{n\geqslant n_0} a_n\) et \(\sum\limits_{n\geqslant n_0} b_n\) sont divergentes, alors on a d'après l'inégalité triangulaire :
+
+        若 \(\sum\limits_{n\geqslant n_0} a_n\) 与 \(\sum\limits_{n\geqslant n_0} b_n\) 都发散，则由三角不等式：
+        {: .zh }
+
+        \[
+        \forall n \geqslant N,\quad
+        \left|\frac{\sum_{k=n_0}^{n} a_k}{\sum_{k=n_0}^{n} b_k} - 1\right|
+        \leqslant
+        \frac{\overbrace{\sum_{k=n_0}^{N-1} |a_k - b_k|}^{\text{constante}}}{\sum_{k=n_0}^{n} b_k}
+        +
+        \frac{\overbrace{\sum_{k=N}^{n} \left|\frac{a_k}{b_k} - 1\right| b_k}^{<\,\varepsilon}}{\underbrace{\sum_{k=n_0}^{n} b_k}_{\geqslant\, \sum_{k=N}^{n} b_k}}.
+        \]
+
+        Par conséquent, il existe un rang \(N' \geqslant N\) tel que :
+
+        因此，存在某一项 \(N' \geqslant N\) 使得：
+        {: .zh }
+
+        \[
+        \forall n \geqslant N',\quad
+        \left|\frac{\sum_{k=n_0}^{n} a_k}{\sum_{k=n_0}^{n} b_k} - 1\right| < \varepsilon + \varepsilon = 2\varepsilon.
+        \]
+
+        Finalement, on en déduit bien que \(\sum\limits_{k=n_0}^{n} a_k \simn \sum\limits_{k=n_0}^{n} b_k\) quand \(n \to +\infty\).
+
+        最终确实得到：当 \(n \to +\infty\) 时 \(\sum\limits_{k=n_0}^{n} a_k \simn \sum\limits_{k=n_0}^{n} b_k\)。
+        {: .zh }
+
+    <p class="cqfd">∎</p>
+
 !!! info "Exemple 2.6<br><span class='zh-title'>例 2.6</span>"
 
-    Retour sur la série d'Euler \(\sum\limits_{n\geqslant 1}\frac{1}{n^2}\) et équivalent des sommes partielles de \(\sum\limits_{n\geqslant 1}\frac{1}{\sqrt{n}}\) à faire en cours.
+    - On a :
 
-    回顾欧拉级数 \(\sum\limits_{n\geqslant 1}\frac{1}{n^2}\)，并求 \(\sum\limits_{n\geqslant 1}\frac{1}{\sqrt{n}}\) 部分和的等价——课上完成。
-    {: .zh }
+        有：
+        {: .zh }
+
+        \[
+        \frac{1}{n(n+1)} \simn \frac{1}{n^2}
+        \quad \text{et} \quad
+        \forall n \geqslant 1,\quad \sum_{k=1}^{n} \frac{1}{k(k+1)}
+        = \sum_{k=1}^{n}\left(\frac{1}{k} - \frac{1}{k+1}\right)
+        = 1 - \underbrace{\frac{1}{n+1}}_{\to\,0}.
+        \]
+
+        D'après la sommation des équivalents positifs, on retrouve que la série d'Euler \(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\) est convergente. De plus :
+
+        由正项级数的等价量求和，重新得到欧拉级数 \(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\) 收敛。此外：
+        {: .zh }
+
+        \[
+        \sum_{k=n+1}^{+\infty} \frac{1}{k^2} \simn \sum_{k=n+1}^{+\infty} \frac{1}{k(k+1)}
+        = 1 - \left(1 - \frac{1}{n+1}\right) = \frac{1}{n+1} \simn \frac{1}{n}.
+        \]
+
+        Ainsi, la vitesse de convergence de la série d'Euler \(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\) vers sa somme est de l'ordre de \(\frac{1}{n}\) quand \(n \to +\infty\).
+
+        因此，欧拉级数 \(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\) 收敛到其和的速度，当 \(n \to +\infty\) 时是 \(\frac{1}{n}\) 的量级。
+        {: .zh }
+
+    - On a :
+
+        有：
+        {: .zh }
+
+        \[
+        \sqrt{n+1} - \sqrt{n} = \frac{1}{\sqrt{n+1} + \sqrt{n}} \simn \frac{1}{2\sqrt{n}}.
+        \]
+
+        Puisque \(\sum\limits_{k=0}^{n}\left(\sqrt{k+1} - \sqrt{k}\right) = \sqrt{n+1} \to +\infty\) quand \(n \to +\infty\), on en déduit que \(\sum\limits_{n\geqslant 1}\dfrac{1}{\sqrt{n}}\) est divergente d'après la sommation des équivalents positifs. De plus :
+
+        由于当 \(n \to +\infty\) 时 \(\sum\limits_{k=0}^{n}\left(\sqrt{k+1} - \sqrt{k}\right) = \sqrt{n+1} \to +\infty\)，由等价量求和推出 \(\sum\limits_{n\geqslant 1}\dfrac{1}{\sqrt{n}}\) 发散。此外：
+        {: .zh }
+
+        \[
+        \sum_{k=1}^{n} \frac{1}{\sqrt{k}} \simn 2\sum_{k=1}^{n}\left(\sqrt{k+1} - \sqrt{k}\right)
+        = 2\left(\sqrt{n+1} - 1\right) \simn 2\sqrt{n}.
+        \]
 
 !!! warning "Attention<br><span class='zh-title'>注意（Attention）</span>"
 
@@ -313,7 +544,9 @@ Dans cette section, on considère seulement des séries à termes positifs, en p
     - <strong>série d'Euler</strong>：欧拉级数（\(\sum 1/n^2\)）
     - <strong>théorème de comparaison</strong>：比较判别法
     - <strong>équivalent</strong>：等价
-    - <strong>sommation des équivalents</strong>：等价量求和
+    - <strong>sommation des équivalents positifs</strong>：正项级数的等价量求和
+    - <strong>majorée / non majorée</strong>：有上界的 / 无上界的
+    - <strong>théorème des croissances comparées</strong>：增长比较定理
     - <strong>de signe constant</strong>：符号恒定的
     - <strong>à partir d'un certain rang</strong>：从某一项起
     - <strong>avoir même nature</strong>：同性质（同时收敛或同时发散）
