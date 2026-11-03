@@ -30,7 +30,7 @@
     
     
       
-        <title>TD6 级数引论题目 - 北航中法未来科技学院自助指南</title>
+        <title>TD6 级数引论解答 - 北航中法未来科技学院自助指南</title>
       
     
     
@@ -177,7 +177,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TD6 级数引论题目
+              TD6 级数引论解答
             
           </span>
         </div>
@@ -2973,7 +2973,7 @@
   <span class="md-ellipsis">
     
   
-    TD6 级数引论题目
+    TD6 级数引论解答
   
 
     
@@ -2991,7 +2991,7 @@
   <span class="md-ellipsis">
     
   
-    TD6 级数引论题目
+    TD6 级数引论解答
   
 
     
@@ -5451,14 +5451,14 @@
 <h1 id="6">第 6 次习题课　级数引论<a class="headerlink" href="#6" title="Permanent link">&para;</a></h1>
 <div class="lecture-hero">
 <p class="lecture-hero__fr">TD n°6 — Introduction aux séries</p>
-<p class="lecture-badge">ÉNONCÉ · 题目</p>
+<p class="lecture-badge">ÉNONCÉ &amp; CORRIGÉ · 题目与参考解答</p>
 <p class="lecture-hero__meta">中法对照讲义 · 由 LaTeX 源文件渲染</p>
 </div>
 
 <div class="admonition info">
 <p class="admonition-title">阅读说明</p>
-<p>每段先列法语原文；其下缩进、带深蓝竖条的小字号段落为中文翻译。<strong>加粗</strong>为关键词，括号内为中文释义。</p>
-<p>本页为第 6 次习题课的题目，与第 3 章「数项级数」配套。</p>
+<p>每段先列法语原文；其下缩进、带深蓝竖条的小字号段落为中文翻译。<strong>加粗</strong>为关键词，括号内为中文释义。方框内为按法国习题课标准方式撰写的参考解答：先引用定理，再逐步推导，最后框出结论。</p>
+<p>本页为第 6 次习题课的题目与参考解答，与第 3 章「数项级数」配套。</p>
 </div>
 <h2 id="exercices-a-preparer">Exercices à préparer <span class="heading-zh">课前准备练习</span><a class="headerlink" href="#exercices-a-preparer" title="Permanent link">&para;</a></h2>
 <h3 id="exercice-1-1">Exercice 1 <span class="heading-zh">练习 1</span><a class="headerlink" href="#exercice-1-1" title="Permanent link">&para;</a></h3>
@@ -5472,6 +5472,59 @@
 <li><span class="arithmatex">\(\displaystyle \forall n\in\mathbb{N}^*,\quad S_n=\arctan n\)</span></li>
 <li><span class="arithmatex">\(\displaystyle \forall n\in\mathbb{N}^*,\quad S_n=\frac{(-1)^n}{n}\)</span></li>
 </ol>
+<div class="admonition sol">
+<p class="fr-exo"><strong>Solution.</strong> Pour une série <span class="arithmatex">\(\sum u_n\)</span> de somme partielle <span class="arithmatex">\(S_n\)</span>, on a <span class="arithmatex">\(u_1=S_1\)</span> et, pour tout <span class="arithmatex">\(n\geqslant2\)</span>, <span class="arithmatex">\(u_n=S_n-S_{n-1}\)</span> : le terme général s'obtient par différence de deux sommes partielles consécutives, et la somme de la série vaut <span class="arithmatex">\(\lim\limits_{n\to+\infty}S_n\)</span>.</p>
+<p class="zh"><strong>解.</strong> 对级数 <span class="arithmatex">\(\sum u_n\)</span> 及其部分和 <span class="arithmatex">\(S_n\)</span>，有 <span class="arithmatex">\(u_1=S_1\)</span>，且对任意 <span class="arithmatex">\(n\geqslant2\)</span>，<span class="arithmatex">\(u_n=S_n-S_{n-1}\)</span>：通项由相邻两个部分和之差得到，而级数之和为 <span class="arithmatex">\(\lim\limits_{n\to+\infty}S_n\)</span>。</p>
+<p class="fr-exo"><strong>1.</strong> Pour <span class="arithmatex">\(n\geqslant2\)</span>,</p>
+<p class="zh"><strong>1.</strong> 当 <span class="arithmatex">\(n\geqslant2\)</span> 时，</p>
+<div class="arithmatex">\[
+u_n=S_n-S_{n-1}=\frac{n}{n+1}-\frac{n-1}{n}
+=\frac{n^2-(n-1)(n+1)}{n(n+1)}=\frac{1}{n(n+1)}.
+\]</div>
+<p class="fr-exo">Cette formule vaut encore pour <span class="arithmatex">\(n=1\)</span> puisque <span class="arithmatex">\(S_1=\frac12=\frac{1}{1\cdot2}\)</span>. Comme <span class="arithmatex">\(\frac{1}{n(n+1)}=\frac1n-\frac1{n+1}\)</span>, la série est <strong>télescopique</strong> et</p>
+<p class="zh">该式对 <span class="arithmatex">\(n=1\)</span> 仍成立，因为 <span class="arithmatex">\(S_1=\frac12=\frac{1}{1\cdot2}\)</span>。又 <span class="arithmatex">\(\frac{1}{n(n+1)}=\frac1n-\frac1{n+1}\)</span>，故级数可<strong>裂项相消</strong>（télescopique），</p>
+<div class="arithmatex">\[
+\boxed{\forall n\geqslant1,\ u_n=\frac{1}{n(n+1)};
+\qquad \sum_{n=1}^{+\infty}u_n=\lim_{n\to+\infty}S_n=1.}
+\]</div>
+<p class="fr-exo"><strong>2.</strong> On écrit <span class="arithmatex">\(S_n=1-2^{-n}\)</span>. Pour <span class="arithmatex">\(n\geqslant2\)</span>,</p>
+<p class="zh"><strong>2.</strong> 将 <span class="arithmatex">\(S_n\)</span> 写成 <span class="arithmatex">\(S_n=1-2^{-n}\)</span>。当 <span class="arithmatex">\(n\geqslant2\)</span> 时，</p>
+<div class="arithmatex">\[
+u_n=\left(1-2^{-n}\right)-\left(1-2^{-(n-1)}\right)
+=2^{-(n-1)}-2^{-n}=2^{-n},
+\]</div>
+<p class="fr-exo">formule encore valable en <span class="arithmatex">\(n=1\)</span> car <span class="arithmatex">\(S_1=\frac12\)</span>. La série est donc <strong>géométrique</strong> de raison <span class="arithmatex">\(\frac12\)</span> et de premier terme <span class="arithmatex">\(\frac12\)</span>; d'où</p>
+<p class="zh">该式在 <span class="arithmatex">\(n=1\)</span> 时仍成立，因为 <span class="arithmatex">\(S_1=\frac12\)</span>。因此级数为<strong>等比级数</strong>（série géométrique），公比 <span class="arithmatex">\(\frac12\)</span>、首项 <span class="arithmatex">\(\frac12\)</span>；故</p>
+<div class="arithmatex">\[
+\boxed{\forall n\geqslant1,\ u_n=2^{-n};
+\qquad \sum_{n=1}^{+\infty}u_n=\lim_{n\to+\infty}S_n=1.}
+\]</div>
+<p class="fr-exo"><strong>3.</strong> Ici <span class="arithmatex">\(u_1=S_1=\arctan1=\frac{\pi}{4}\)</span> et, pour <span class="arithmatex">\(n\geqslant2\)</span>,</p>
+<p class="zh"><strong>3.</strong> 此处 <span class="arithmatex">\(u_1=S_1=\arctan1=\frac{\pi}{4}\)</span>，且当 <span class="arithmatex">\(n\geqslant2\)</span> 时，</p>
+<div class="arithmatex">\[
+u_n=\arctan n-\arctan(n-1)
+=\arctan\frac{n-(n-1)}{1+n(n-1)}
+=\arctan\frac{1}{n^2-n+1},
+\]</div>
+<p class="fr-exo">la formule d'addition de <span class="arithmatex">\(\arctan\)</span> s'appliquant car <span class="arithmatex">\(n(n-1)&gt;-1\)</span>. La somme de la série est la limite des sommes partielles :</p>
+<p class="zh">此处用到 <span class="arithmatex">\(\arctan\)</span> 的加法公式，因为 <span class="arithmatex">\(n(n-1)&gt;-1\)</span>。级数之和为部分和的极限：</p>
+<div class="arithmatex">\[
+\boxed{\sum_{n=1}^{+\infty}u_n=\lim_{n\to+\infty}\arctan n=\frac{\pi}{2}.}
+\]</div>
+<p class="fr-exo"><strong>4.</strong> On a <span class="arithmatex">\(u_1=S_1=-1\)</span> et, pour <span class="arithmatex">\(n\geqslant2\)</span>,</p>
+<p class="zh"><strong>4.</strong> 有 <span class="arithmatex">\(u_1=S_1=-1\)</span>，且当 <span class="arithmatex">\(n\geqslant2\)</span> 时，</p>
+<div class="arithmatex">\[
+u_n=\frac{(-1)^n}{n}-\frac{(-1)^{n-1}}{n-1}
+=(-1)^n\left(\frac1n+\frac1{n-1}\right)
+=(-1)^n\frac{2n-1}{n(n-1)}.
+\]</div>
+<p class="fr-exo">La somme de la série est encore la limite des sommes partielles :</p>
+<p class="zh">级数之和仍为部分和的极限：</p>
+<div class="arithmatex">\[
+\boxed{\sum_{n=1}^{+\infty}u_n=\lim_{n\to+\infty}\frac{(-1)^n}{n}=0.}
+\]</div>
+<p><p class="cqfd">∎</p></p>
+</div>
 <h3 id="exercice-2-2">Exercice 2 <span class="heading-zh">练习 2</span><a class="headerlink" href="#exercice-2-2" title="Permanent link">&para;</a></h3>
 <p class="exo-type">Somme de séries　级数求和</p>
 
@@ -5484,6 +5537,103 @@
 <li><span class="arithmatex">\(\displaystyle \sum_{n=1}^{+\infty}\frac{1}{4n^2-1}\)</span></li>
 <li><span class="arithmatex">\(\displaystyle \sum_{n=1}^{+\infty}\frac{1}{(\sqrt{n}+\sqrt{n+1})\sqrt{n(n+1)}}\)</span></li>
 </ol>
+<div class="admonition sol">
+<p class="fr-exo"><strong>Solution.</strong> On cherche pour chaque terme une écriture <strong>télescopique</strong>, c'est-à-dire une différence <span class="arithmatex">\(v_n-v_{n+1}\)</span> dont la somme partielle se simplifie.</p>
+<p class="zh"><strong>解.</strong> 我们对每一项寻找<strong>裂项</strong>（télescopique）写法，即写成差 <span class="arithmatex">\(v_n-v_{n+1}\)</span>，使部分和化简。</p>
+<p class="fr-exo"><strong>1.</strong> On remarque que</p>
+<p class="zh"><strong>1.</strong> 注意到</p>
+<div class="arithmatex">\[
+\frac{1}{n^2}-\frac{1}{(n+1)^2}
+=\frac{(n+1)^2-n^2}{n^2(n+1)^2}=\frac{2n+1}{n^2(n+1)^2}.
+\]</div>
+<p class="fr-exo">La somme partielle d'ordre <span class="arithmatex">\(N\)</span> se télescope :</p>
+<p class="zh">第 <span class="arithmatex">\(N\)</span> 个部分和裂项相消：</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{N}\frac{2n+1}{n^2(n+1)^2}
+=\sum_{n=1}^{N}\left(\frac{1}{n^2}-\frac{1}{(n+1)^2}\right)
+=1-\frac{1}{(N+1)^2}\longrightarrow1.
+\]</div>
+<div class="arithmatex">\[
+\boxed{\sum_{n=1}^{+\infty}\frac{2n+1}{n^2(n+1)^2}=1.}
+\]</div>
+<p class="fr-exo"><strong>2.</strong> De même,</p>
+<p class="zh"><strong>2.</strong> 同理，</p>
+<div class="arithmatex">\[
+\frac{1}{(2n-1)^2}-\frac{1}{(2n+1)^2}
+=\frac{(2n+1)^2-(2n-1)^2}{(2n-1)^2(2n+1)^2}
+=\frac{8n}{(2n-1)^2(2n+1)^2},
+\]</div>
+<p class="fr-exo">donc</p>
+<p class="zh">因此</p>
+<div class="arithmatex">\[
+\frac{n}{(2n-1)^2(2n+1)^2}
+=\frac18\left(\frac{1}{(2n-1)^2}-\frac{1}{(2n+1)^2}\right),
+\]</div>
+<p class="fr-exo">et, par télescopage,</p>
+<p class="zh">裂项相消得</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{N}\frac{n}{(2n-1)^2(2n+1)^2}
+=\frac18\left(1-\frac{1}{(2N+1)^2}\right)\longrightarrow\frac18.
+\]</div>
+<div class="arithmatex">\[
+\boxed{\sum_{n=1}^{+\infty}\frac{n}{(2n-1)^2(2n+1)^2}=\frac18.}
+\]</div>
+<p class="fr-exo"><strong>3.</strong> En multipliant par la <strong>quantité conjuguée</strong>,</p>
+<p class="zh"><strong>3.</strong> 乘以<strong>共轭量</strong>（quantité conjuguée）有理化，</p>
+<div class="arithmatex">\[
+n-\sqrt{n^2-1}=\frac{n^2-(n^2-1)}{n+\sqrt{n^2-1}}
+=\frac{1}{n+\sqrt{n^2-1}}.
+\]</div>
+<p class="fr-exo">Or, en réduisant au même dénominateur,</p>
+<p class="zh">而通分可得</p>
+<div class="arithmatex">\[
+\sqrt{\frac{n}{n+1}}-\sqrt{\frac{n-1}{n}}
+=\frac{n-\sqrt{(n-1)(n+1)}}{\sqrt{n(n+1)}}
+=\frac{n-\sqrt{n^2-1}}{\sqrt{n(n+1)}}.
+\]</div>
+<p class="fr-exo">La somme partielle se télescope donc :</p>
+<p class="zh">因此部分和裂项相消：</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{N}\frac{n-\sqrt{n^2-1}}{\sqrt{n(n+1)}}
+=\sqrt{\frac{N}{N+1}}-\sqrt{\frac{0}{1}}
+=\sqrt{\frac{N}{N+1}}\longrightarrow1.
+\]</div>
+<div class="arithmatex">\[
+\boxed{\sum_{n=1}^{+\infty}\frac{n-\sqrt{n^2-1}}{\sqrt{n(n+1)}}=1.}
+\]</div>
+<p class="fr-exo"><strong>4.</strong> On décompose en éléments simples :</p>
+<p class="zh"><strong>4.</strong> 作部分分式分解：</p>
+<div class="arithmatex">\[
+\frac{1}{4n^2-1}=\frac{1}{(2n-1)(2n+1)}
+=\frac12\left(\frac{1}{2n-1}-\frac{1}{2n+1}\right).
+\]</div>
+<p class="fr-exo">Par télescopage,</p>
+<p class="zh">裂项相消得</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{N}\frac{1}{4n^2-1}
+=\frac12\left(1-\frac{1}{2N+1}\right)\longrightarrow\frac12.
+\]</div>
+<div class="arithmatex">\[
+\boxed{\sum_{n=1}^{+\infty}\frac{1}{4n^2-1}=\frac12.}
+\]</div>
+<p class="fr-exo"><strong>5.</strong> On rationalise : <span class="arithmatex">\(\dfrac{1}{\sqrt n+\sqrt{n+1}}=\sqrt{n+1}-\sqrt n\)</span>. Ainsi</p>
+<p class="zh"><strong>5.</strong> 有理化：<span class="arithmatex">\(\dfrac{1}{\sqrt n+\sqrt{n+1}}=\sqrt{n+1}-\sqrt n\)</span>。于是</p>
+<div class="arithmatex">\[
+\frac{1}{(\sqrt n+\sqrt{n+1})\sqrt{n(n+1)}}
+=\frac{\sqrt{n+1}-\sqrt n}{\sqrt n\,\sqrt{n+1}}
+=\frac{1}{\sqrt n}-\frac{1}{\sqrt{n+1}},
+\]</div>
+<p class="fr-exo">puis, par télescopage,</p>
+<p class="zh">再裂项相消，</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{N}\frac{1}{(\sqrt n+\sqrt{n+1})\sqrt{n(n+1)}}
+=1-\frac{1}{\sqrt{N+1}}\longrightarrow1.
+\]</div>
+<div class="arithmatex">\[
+\boxed{\sum_{n=1}^{+\infty}\frac{1}{(\sqrt n+\sqrt{n+1})\sqrt{n(n+1)}}=1.}
+\]</div>
+<p><p class="cqfd">∎</p></p>
+</div>
 <h3 id="exercice-3-3">Exercice 3 <span class="heading-zh">练习 3</span><a class="headerlink" href="#exercice-3-3" title="Permanent link">&para;</a></h3>
 <p class="exo-type">Somme des 1/n²　1/n² 之和</p>
 
@@ -5493,6 +5643,29 @@
 \sum_{n=1}^{+\infty}\frac{1}{(2n-1)^2}
 =\frac{3}{4}\sum_{n=1}^{+\infty}\frac{1}{n^2}.
 \]</div>
+<div class="admonition sol">
+<p class="fr-exo"><strong>Solution.</strong> On sait que la série <span class="arithmatex">\(\sum\frac{1}{n^2}\)</span> converge (série de Riemann <span class="arithmatex">\(\sum\frac{1}{n^\alpha}\)</span> avec <span class="arithmatex">\(\alpha=2&gt;1\)</span>). On regroupe les termes selon la parité de l'indice :</p>
+<p class="zh"><strong>解.</strong> 已知级数 <span class="arithmatex">\(\sum\frac{1}{n^2}\)</span> 收敛（黎曼级数 <span class="arithmatex">\(\sum\frac{1}{n^\alpha}\)</span>，<span class="arithmatex">\(\alpha=2&gt;1\)</span>）。按指标 <span class="arithmatex">\(n\)</span> 的奇偶性将项分组：</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{+\infty}\frac{1}{n^2}
+=\sum_{k=1}^{+\infty}\frac{1}{(2k-1)^2}
++\sum_{k=1}^{+\infty}\frac{1}{(2k)^2}.
+\]</div>
+<p class="fr-exo">Cette scission est licite car les séries sont à termes positifs convergentes (associativité des familles sommables). Or</p>
+<p class="zh">该拆分是合法的，因为级数均为收敛的正项级数（可和族的结合律）。而</p>
+<div class="arithmatex">\[
+\sum_{k=1}^{+\infty}\frac{1}{(2k)^2}
+=\frac14\sum_{k=1}^{+\infty}\frac{1}{k^2},
+\]</div>
+<p class="fr-exo">d'où, en isolant la somme sur les indices impairs,</p>
+<p class="zh">因此，分离出奇数项之和，</p>
+<div class="arithmatex">\[
+\sum_{k=1}^{+\infty}\frac{1}{(2k-1)^2}
+=\left(1-\frac14\right)\sum_{k=1}^{+\infty}\frac{1}{k^2}
+=\boxed{\frac34\sum_{k=1}^{+\infty}\frac{1}{k^2}}.
+\]</div>
+<p><p class="cqfd">∎</p></p>
+</div>
 <h3 id="exercice-4-4">Exercice 4 <span class="heading-zh">练习 4</span><a class="headerlink" href="#exercice-4-4" title="Permanent link">&para;</a></h3>
 <p class="exo-type">Somme de séries factorielles　阶乘级数求和</p>
 
@@ -5505,6 +5678,51 @@
 \]</div>
 <p class="fr-exo"><strong>2.</strong> En déduire <span class="arithmatex">\(S\)</span>.</p>
 <p class="zh"><strong>2.</strong> 由此推出 <span class="arithmatex">\(S\)</span>。</p>
+<div class="admonition sol">
+<p class="fr-exo"><strong>Solution.</strong> <strong>1.</strong> On développe et on identifie les coefficients. D'une part,</p>
+<p class="zh"><strong>解.</strong> <strong>1.</strong> 展开并比较系数。一方面，</p>
+<div class="arithmatex">\[
+AX(X-1)(X-2)=A(X^3-3X^2+2X),\qquad BX(X-1)=B(X^2-X),
+\]</div>
+<p class="fr-exo">donc</p>
+<p class="zh">因此</p>
+<div class="arithmatex">\[
+AX(X-1)(X-2)+BX(X-1)+CX+D
+=A X^3+(-3A+B)X^2+(2A-B+C)X+D.
+\]</div>
+<p class="fr-exo">Par identification avec <span class="arithmatex">\(2X^3+1\)</span>, il vient</p>
+<p class="zh">与 <span class="arithmatex">\(2X^3+1\)</span> 比较系数，得</p>
+<div class="arithmatex">\[
+A=2,\qquad -3A+B=0,\qquad 2A-B+C=0,\qquad D=1,
+\]</div>
+<p class="fr-exo">c'est-à-dire</p>
+<p class="zh">即</p>
+<div class="arithmatex">\[
+\boxed{A=2,\quad B=6,\quad C=2,\quad D=1.}
+\]</div>
+<p class="fr-exo"><strong>2.</strong> En divisant l'identité par <span class="arithmatex">\(n!\)</span>, on obtient</p>
+<p class="zh"><strong>2.</strong> 将恒等式除以 <span class="arithmatex">\(n!\)</span>，得</p>
+<div class="arithmatex">\[
+\frac{2n^3+1}{n!}
+=2\,\frac{n(n-1)(n-2)}{n!}
++6\,\frac{n(n-1)}{n!}
++2\,\frac{n}{n!}
++\frac{1}{n!}.
+\]</div>
+<p class="fr-exo">Pour <span class="arithmatex">\(n\geqslant3\)</span>, <span class="arithmatex">\(\dfrac{n(n-1)(n-2)}{n!}=\dfrac{1}{(n-3)!}\)</span>; de même <span class="arithmatex">\(\dfrac{n(n-1)}{n!}=\dfrac{1}{(n-2)!}\)</span> pour <span class="arithmatex">\(n\geqslant2\)</span> et <span class="arithmatex">\(\dfrac{n}{n!}=\dfrac{1}{(n-1)!}\)</span> pour <span class="arithmatex">\(n\geqslant1\)</span>. Les termes manquants sont nuls; toutes les séries obtenues sont à termes positifs convergentes, donc, en sommant et en décalant les indices,</p>
+<p class="zh">当 <span class="arithmatex">\(n\geqslant3\)</span> 时 <span class="arithmatex">\(\dfrac{n(n-1)(n-2)}{n!}=\dfrac{1}{(n-3)!}\)</span>；同理，当 <span class="arithmatex">\(n\geqslant2\)</span> 时 <span class="arithmatex">\(\dfrac{n(n-1)}{n!}=\dfrac{1}{(n-2)!}\)</span>，当 <span class="arithmatex">\(n\geqslant1\)</span> 时 <span class="arithmatex">\(\dfrac{n}{n!}=\dfrac{1}{(n-1)!}\)</span>。缺失的项为零；所得级数均为收敛的正项级数，故求和并平移指标得</p>
+<div class="arithmatex">\[
+S=2\sum_{m=0}^{+\infty}\frac{1}{m!}
++6\sum_{m=0}^{+\infty}\frac{1}{m!}
++2\sum_{m=0}^{+\infty}\frac{1}{m!}
++\sum_{m=0}^{+\infty}\frac{1}{m!}
+=(2+6+2+1)e.
+\]</div>
+<div class="arithmatex">\[
+\boxed{S=11e.}
+\]</div>
+<p><p class="cqfd">∎</p></p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Vocabulaire clé&nbsp;&nbsp;重点词汇<br><span class='zh-title'>第一部分（Exercices à préparer）核心术语</span></p>
 <ul>
@@ -5552,6 +5770,51 @@
 <p class="zh"><strong>3.</strong> 我们要说明其<strong>逆命题</strong>（réciproque）是假的：即「若 <span class="arithmatex">\((na_n)\)</span> 趋于 <span class="arithmatex">\(0\)</span>，则 <span class="arithmatex">\(\sum a_n\)</span> 收敛」。考虑级数 <span class="arithmatex">\(\displaystyle\sum\frac{1}{n\ln n}\)</span>。</p>
 <p class="fr-exo">&emsp;&emsp;Montrer que la série de terme général <span class="arithmatex">\(\left(\displaystyle\sum_{k=2^n+1}^{2^{n+1}}\frac{1}{k\ln k}\right)_{n\in\mathbb{N}}\)</span> diverge et conclure.</p>
 <p class="zh">&emsp;&emsp;证明通项为 <span class="arithmatex">\(\left(\displaystyle\sum_{k=2^n+1}^{2^{n+1}}\frac{1}{k\ln k}\right)_{n\in\mathbb{N}}\)</span> 的级数<strong>发散</strong>，并得出结论。</p>
+<div class="admonition sol">
+<p class="fr-exo"><strong>Solution.</strong> <strong>1.</strong> Notons <span class="arithmatex">\(R_n=\sum_{k=n+1}^{+\infty}a_k\)</span> le reste d'ordre <span class="arithmatex">\(n\)</span> de la série convergente <span class="arithmatex">\(\sum a_k\)</span>. Par définition de la convergence, <span class="arithmatex">\(R_n\to0\)</span>. Comme les <span class="arithmatex">\(a_k\)</span> sont positifs,</p>
+<p class="zh"><strong>解.</strong> <strong>1.</strong> 记 <span class="arithmatex">\(R_n=\sum_{k=n+1}^{+\infty}a_k\)</span> 为收敛级数 <span class="arithmatex">\(\sum a_k\)</span> 的第 <span class="arithmatex">\(n\)</span> 个余项。按收敛的定义，<span class="arithmatex">\(R_n\to0\)</span>。由于 <span class="arithmatex">\(a_k\geqslant0\)</span>，</p>
+<div class="arithmatex">\[
+0\leqslant S_{2n}-S_n=\sum_{k=n+1}^{2n}a_k
+\leqslant\sum_{k=n+1}^{+\infty}a_k=R_n.
+\]</div>
+<p class="fr-exo">Par le <strong>théorème de la limite par encadrement</strong>, <span class="arithmatex">\(S_{2n}-S_n\to0\)</span>.</p>
+<p class="zh">由<strong>夹逼定理</strong>（théorème de la limite par encadrement），<span class="arithmatex">\(S_{2n}-S_n\to0\)</span>。</p>
+<p class="fr-exo"><strong>2.</strong> La suite <span class="arithmatex">\((a_n)\)</span> étant décroissante et positive, pour <span class="arithmatex">\(n+1\leqslant k\leqslant2n\)</span> on a <span class="arithmatex">\(a_{2n}\leqslant a_k\leqslant a_n\)</span>. En sommant ces inégalités sur les <span class="arithmatex">\(n\)</span> indices <span class="arithmatex">\(k=n+1,\dots,2n\)</span>,</p>
+<p class="zh"><strong>2.</strong> 由于数列 <span class="arithmatex">\((a_n)\)</span> 递减且非负，对 <span class="arithmatex">\(n+1\leqslant k\leqslant2n\)</span> 有 <span class="arithmatex">\(a_{2n}\leqslant a_k\leqslant a_n\)</span>。对 <span class="arithmatex">\(n\)</span> 个指标 <span class="arithmatex">\(k=n+1,\dots,2n\)</span> 求和，</p>
+<div class="arithmatex">\[
+n\,a_{2n}\leqslant S_{2n}-S_n\leqslant n\,a_n.
+\]</div>
+<p class="fr-exo">La minoration <span class="arithmatex">\(0\leqslant n a_{2n}\leqslant S_{2n}-S_n\)</span> et le résultat de la question 1 donnent <span class="arithmatex">\(n a_{2n}\to0\)</span>, donc <span class="arithmatex">\(2n\,a_{2n}\to0\)</span>. D'autre part, <span class="arithmatex">\(a_{2n+1}\leqslant a_{2n}\)</span> entraîne</p>
+<p class="zh">由下界估计 <span class="arithmatex">\(0\leqslant n a_{2n}\leqslant S_{2n}-S_n\)</span> 及第 1 问的结果得 <span class="arithmatex">\(n a_{2n}\to0\)</span>，故 <span class="arithmatex">\(2n\,a_{2n}\to0\)</span>。另一方面，<span class="arithmatex">\(a_{2n+1}\leqslant a_{2n}\)</span> 推出</p>
+<div class="arithmatex">\[
+0\leqslant(2n+1)a_{2n+1}\leqslant(2n+1)a_{2n}
+=\frac{2n+1}{2n}\cdot2n\,a_{2n}\longrightarrow0.
+\]</div>
+<p class="fr-exo">Ainsi les sous-suites paire et impaire de <span class="arithmatex">\((n a_n)\)</span> tendent vers <span class="arithmatex">\(0\)</span>; par conséquent</p>
+<p class="zh">因此 <span class="arithmatex">\((n a_n)\)</span> 的偶数项子列与奇数项子列都趋于 <span class="arithmatex">\(0\)</span>；从而</p>
+<div class="arithmatex">\[
+\boxed{n\,a_n\longrightarrow0.}
+\]</div>
+<p class="fr-exo"><strong>3.</strong> Posons <span class="arithmatex">\(a_n=\dfrac{1}{n\ln n}\)</span> pour <span class="arithmatex">\(n\geqslant2\)</span>. La suite <span class="arithmatex">\((a_n)\)</span> est décroissante et positive à partir du rang <span class="arithmatex">\(2\)</span>, et</p>
+<p class="zh"><strong>3.</strong> 令 <span class="arithmatex">\(n\geqslant2\)</span> 时 <span class="arithmatex">\(a_n=\dfrac{1}{n\ln n}\)</span>。数列 <span class="arithmatex">\((a_n)\)</span> 从第 <span class="arithmatex">\(2\)</span> 项起递减且为正，且</p>
+<div class="arithmatex">\[
+n\,a_n=\frac{1}{\ln n}\longrightarrow0.
+\]</div>
+<p class="fr-exo">Pour <span class="arithmatex">\(n\in\mathbb{N}\)</span>, posons <span class="arithmatex">\(b_n=\sum_{k=2^n+1}^{2^{n+1}}\frac{1}{k\ln k}\)</span>. Dans chaque bloc, <span class="arithmatex">\(k\leqslant2^{n+1}\)</span>, donc <span class="arithmatex">\(\frac{1}{k\ln k}\geqslant\frac{1}{2^{n+1}\ln 2^{n+1}}\)</span>; le bloc contient <span class="arithmatex">\(2^n\)</span> termes, d'où</p>
+<p class="zh">对 <span class="arithmatex">\(n\in\mathbb{N}\)</span>，令 <span class="arithmatex">\(b_n=\sum_{k=2^n+1}^{2^{n+1}}\frac{1}{k\ln k}\)</span>。在每个区块内 <span class="arithmatex">\(k\leqslant2^{n+1}\)</span>，故 <span class="arithmatex">\(\frac{1}{k\ln k}\geqslant\frac{1}{2^{n+1}\ln 2^{n+1}}\)</span>；区块含 <span class="arithmatex">\(2^n\)</span> 项，因此</p>
+<div class="arithmatex">\[
+b_n\geqslant\frac{2^n}{2^{n+1}\ln 2^{n+1}}
+=\frac{1}{2(n+1)\ln2}.
+\]</div>
+<p class="fr-exo">Comme la série harmonique <span class="arithmatex">\(\sum\frac{1}{n+1}\)</span> diverge, le <strong>théorème de comparaison</strong> pour les séries à termes positifs montre que <span class="arithmatex">\(\sum b_n\)</span> diverge. Or les sommes partielles de <span class="arithmatex">\(\sum b_n\)</span> sont exactement les sommes de <span class="arithmatex">\(\sum\frac{1}{n\ln n}\)</span> sur les blocs <span class="arithmatex">\([\![2^n+1,2^{n+1}]\!]\)</span> :</p>
+<p class="zh">由于调和级数 <span class="arithmatex">\(\sum\frac{1}{n+1}\)</span> 发散，正项级数的<strong>比较判别法</strong>表明 <span class="arithmatex">\(\sum b_n\)</span> 发散。而 <span class="arithmatex">\(\sum b_n\)</span> 的部分和恰为 <span class="arithmatex">\(\sum\frac{1}{n\ln n}\)</span> 在各区块 <span class="arithmatex">\([\![2^n+1,2^{n+1}]\!]\)</span> 上的和：</p>
+<div class="arithmatex">\[
+\sum_{n=0}^{N}b_n=\sum_{k=2}^{2^{N+1}}\frac{1}{k\ln k}\longrightarrow+\infty,
+\]</div>
+<p class="fr-exo">donc la série <span class="arithmatex">\(\sum\frac{1}{n\ln n}\)</span> diverge. On a ainsi exhibé une suite décroissante positive <span class="arithmatex">\((a_n)\)</span> telle que <span class="arithmatex">\(n a_n\to0\)</span> et <span class="arithmatex">\(\sum a_n\)</span> diverge : la réciproque est fausse.</p>
+<p class="zh">故级数 <span class="arithmatex">\(\sum\frac{1}{n\ln n}\)</span> 发散。这样便给出了一个递减正数列 <span class="arithmatex">\((a_n)\)</span>，满足 <span class="arithmatex">\(n a_n\to0\)</span> 却使 <span class="arithmatex">\(\sum a_n\)</span> 发散：逆命题不成立。</p>
+<p><p class="cqfd">∎</p></p>
+</div>
 <h3 id="exercice-6-6">Exercice 6 <span class="heading-zh">练习 6</span><a class="headerlink" href="#exercice-6-6" title="Permanent link">&para;</a></h3>
 <p class="exo-type">Perturbation par permutation　置换扰动</p>
 
@@ -5563,6 +5826,53 @@
 <p class="zh"><strong>2.</strong> 证明 <span class="arithmatex">\(\forall x,y\in\mathbb{R},\ |xy|\leqslant\frac12(x^2+y^2)\)</span>。由此推出级数 <span class="arithmatex">\(\sum a_n a_{\sigma(n)}\)</span> 收敛。</p>
 <p class="fr-exo"><strong>3.</strong> Montrer que <span class="arithmatex">\(\displaystyle\sum_{n=1}^{+\infty}a_n a_{\sigma(n)}\leqslant\sum_{n=1}^{+\infty}a_n^2\)</span>. Dans quel cas y a-t-il égalité ?</p>
 <p class="zh"><strong>3.</strong> 证明 <span class="arithmatex">\(\displaystyle\sum_{n=1}^{+\infty}a_n a_{\sigma(n)}\leqslant\sum_{n=1}^{+\infty}a_n^2\)</span>。在什么情况下取等号？</p>
+<div class="admonition sol">
+<p class="fr-exo"><strong>Solution.</strong> <strong>1.</strong> Les termes étant positifs, la somme d'une série convergente à termes positifs est la borne supérieure des sommes finies :</p>
+<p class="zh"><strong>解.</strong> <strong>1.</strong> 由于各项非负，收敛正项级数之和等于所有有限和的上确界：</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{+\infty}a_n^2
+=\sup_{F\subset\mathbb{N}^*,\ F\ \text{fini}}\ \sum_{n\in F}a_n^2.
+\]</div>
+<p class="fr-exo">Comme <span class="arithmatex">\(\sigma\)</span> est une bijection de <span class="arithmatex">\(\mathbb{N}^*\)</span> sur lui-même, l'application <span class="arithmatex">\(F\mapsto\sigma(F)\)</span> permute les parties finies de <span class="arithmatex">\(\mathbb{N}^*\)</span>. Par suite</p>
+<p class="zh">由于 <span class="arithmatex">\(\sigma\)</span> 是 <span class="arithmatex">\(\mathbb{N}^*\)</span> 到自身的双射，映射 <span class="arithmatex">\(F\mapsto\sigma(F)\)</span> 置换 <span class="arithmatex">\(\mathbb{N}^*\)</span> 的有限子集。因此</p>
+<div class="arithmatex">\[
+\sup_{F\ \text{fini}}\sum_{n\in F}a_{\sigma(n)}^2
+=\sup_{G\ \text{fini}}\sum_{k\in G}a_k^2
+=\sum_{n=1}^{+\infty}a_n^2,
+\]</div>
+<p class="fr-exo">ce qui prouve que <span class="arithmatex">\(\sum a_{\sigma(n)}^2\)</span> converge et a même somme que <span class="arithmatex">\(\sum a_n^2\)</span>.</p>
+<p class="zh">这证明了 <span class="arithmatex">\(\sum a_{\sigma(n)}^2\)</span> 收敛，且与 <span class="arithmatex">\(\sum a_n^2\)</span> 有相同的和。</p>
+<p class="fr-exo"><strong>2.</strong> Pour tous réels <span class="arithmatex">\(x,y\)</span>,</p>
+<p class="zh"><strong>2.</strong> 对任意实数 <span class="arithmatex">\(x,y\)</span>，</p>
+<div class="arithmatex">\[
+0\leqslant(|x|-|y|)^2=x^2+y^2-2|xy|,
+\]</div>
+<p class="fr-exo">d'où <span class="arithmatex">\(|xy|\leqslant\frac12(x^2+y^2)\)</span>. En appliquant cette inégalité à <span class="arithmatex">\(x=a_n\)</span> et <span class="arithmatex">\(y=a_{\sigma(n)}\)</span>, il vient</p>
+<p class="zh">故 <span class="arithmatex">\(|xy|\leqslant\frac12(x^2+y^2)\)</span>。将该不等式用于 <span class="arithmatex">\(x=a_n\)</span>、<span class="arithmatex">\(y=a_{\sigma(n)}\)</span>，得</p>
+<div class="arithmatex">\[
+0\leqslant a_n a_{\sigma(n)}
+\leqslant\frac12\left(a_n^2+a_{\sigma(n)}^2\right).
+\]</div>
+<p class="fr-exo">Or <span class="arithmatex">\(\sum\left(a_n^2+a_{\sigma(n)}^2\right)\)</span> converge, comme somme de deux séries convergentes. Par le <strong>théorème de comparaison</strong> pour les séries à termes positifs, <span class="arithmatex">\(\sum a_n a_{\sigma(n)}\)</span> converge.</p>
+<p class="zh">而 <span class="arithmatex">\(\sum\left(a_n^2+a_{\sigma(n)}^2\right)\)</span> 作为两个收敛级数之和收敛。由正项级数的<strong>比较判别法</strong>，<span class="arithmatex">\(\sum a_n a_{\sigma(n)}\)</span> 收敛。</p>
+<p class="fr-exo"><strong>3.</strong> D'après l'<strong>inégalité de Cauchy--Schwarz</strong> pour les séries,</p>
+<p class="zh"><strong>3.</strong> 由级数的<strong>柯西–施瓦茨不等式</strong>（inégalité de Cauchy--Schwarz），</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{+\infty}a_n a_{\sigma(n)}
+\leqslant\left(\sum_{n=1}^{+\infty}a_n^2\right)^{1/2}
+\left(\sum_{n=1}^{+\infty}a_{\sigma(n)}^2\right)^{1/2}
+=\sum_{n=1}^{+\infty}a_n^2.
+\]</div>
+<p class="fr-exo">Il y a égalité si et seulement si les suites <span class="arithmatex">\((a_n)\)</span> et <span class="arithmatex">\((a_{\sigma(n)})\)</span> sont proportionnelles. Si <span class="arithmatex">\(a\)</span> n'est pas la suite nulle, il existe alors <span class="arithmatex">\(\lambda&gt;0\)</span> tel que <span class="arithmatex">\(a_{\sigma(n)}=\lambda a_n\)</span> pour tout <span class="arithmatex">\(n\)</span>; en sommant les carrés,</p>
+<p class="zh">等号成立当且仅当数列 <span class="arithmatex">\((a_n)\)</span> 与 <span class="arithmatex">\((a_{\sigma(n)})\)</span> 成比例。若 <span class="arithmatex">\(a\)</span> 不是零数列，则存在 <span class="arithmatex">\(\lambda&gt;0\)</span> 使对任意 <span class="arithmatex">\(n\)</span> 有 <span class="arithmatex">\(a_{\sigma(n)}=\lambda a_n\)</span>；对平方求和，</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{+\infty}a_{\sigma(n)}^2
+=\lambda^2\sum_{n=1}^{+\infty}a_n^2,
+\]</div>
+<p class="fr-exo">d'où <span class="arithmatex">\(\lambda^2=1\)</span>, puis <span class="arithmatex">\(\lambda=1\)</span> car <span class="arithmatex">\(\lambda&gt;0\)</span>. Ainsi <span class="arithmatex">\(a_{\sigma(n)}=a_n\)</span> pour tout <span class="arithmatex">\(n\)</span>. Réciproquement, cette condition donne évidemment l'égalité. En conclusion, il y a égalité si et seulement si <span class="arithmatex">\(\sigma\)</span> laisse la suite <span class="arithmatex">\((a_n)\)</span> invariante.</p>
+<p class="zh">于是 <span class="arithmatex">\(\lambda^2=1\)</span>，再由 <span class="arithmatex">\(\lambda&gt;0\)</span> 得 <span class="arithmatex">\(\lambda=1\)</span>。因此对任意 <span class="arithmatex">\(n\)</span> 有 <span class="arithmatex">\(a_{\sigma(n)}=a_n\)</span>。反之，该条件显然使等号成立。综上，等号成立当且仅当 <span class="arithmatex">\(\sigma\)</span> 使数列 <span class="arithmatex">\((a_n)\)</span> 保持不变。</p>
+<p><p class="cqfd">∎</p></p>
+</div>
 <h3 id="exercice-7-7">Exercice 7 <span class="heading-zh">练习 7</span><a class="headerlink" href="#exercice-7-7" title="Permanent link">&para;</a></h3>
 <p class="exo-type">Séries géométriques　几何级数</p>
 
@@ -5580,11 +5890,71 @@
 \]</div>
 <p class="fr-exo">(On pourra multiplier par <span class="arithmatex">\(1-a\)</span> et simplifier.)</p>
 <p class="zh">（可将等式乘以 <span class="arithmatex">\(1-a\)</span> 后化简。）</p>
+<div class="admonition sol">
+<p class="fr-exo"><strong>Solution.</strong> <strong>Cas <span class="arithmatex">\(a\neq b\)</span>.</strong> Pour tout <span class="arithmatex">\(n\in\mathbb{N}\)</span>, l'identité <span class="arithmatex">\(a^{n+1}-b^{n+1}=(a-b)(a^n+a^{n-1}b+\cdots+b^n)\)</span> donne</p>
+<p class="zh"><strong>解.</strong> <strong>情形 <span class="arithmatex">\(a\neq b\)</span>.</strong> 对任意 <span class="arithmatex">\(n\in\mathbb{N}\)</span>，恒等式 <span class="arithmatex">\(a^{n+1}-b^{n+1}=(a-b)(a^n+a^{n-1}b+\cdots+b^n)\)</span> 给出</p>
+<div class="arithmatex">\[
+\frac{a^{n+1}-b^{n+1}}{a-b}=\sum_{k=0}^{n}a^{n-k}b^k.
+\]</div>
+<p class="fr-exo">En multipliant la somme par <span class="arithmatex">\(1-a\)</span> (opération licite, la série étant absolument convergente car <span class="arithmatex">\(|a|&lt;1\)</span> et <span class="arithmatex">\(|b|&lt;1\)</span>),</p>
+<p class="zh">将和式乘以 <span class="arithmatex">\(1-a\)</span>（该运算合法，因为 <span class="arithmatex">\(|a|&lt;1\)</span>、<span class="arithmatex">\(|b|&lt;1\)</span> 保证级数绝对收敛），</p>
+<div class="arithmatex">\[
+(1-a)\sum_{n=0}^{+\infty}\frac{a^{n+1}-b^{n+1}}{a-b}
+=\frac{\displaystyle\sum_{n=0}^{+\infty}(a^{n+1}-a^{n+2})
+-(1-a)\sum_{n=0}^{+\infty}b^{n+1}}{a-b}.
+\]</div>
+<p class="fr-exo">Or <span class="arithmatex">\(\sum_{n=0}^{+\infty}(a^{n+1}-a^{n+2})=a\)</span> (somme télescopique) et <span class="arithmatex">\(\sum_{n=0}^{+\infty}b^{n+1}=\frac{b}{1-b}\)</span>; donc</p>
+<p class="zh">而 <span class="arithmatex">\(\sum_{n=0}^{+\infty}(a^{n+1}-a^{n+2})=a\)</span>（裂项相消），且 <span class="arithmatex">\(\sum_{n=0}^{+\infty}b^{n+1}=\frac{b}{1-b}\)</span>；因此</p>
+<div class="arithmatex">\[
+(1-a)\sum_{n=0}^{+\infty}\frac{a^{n+1}-b^{n+1}}{a-b}
+=\frac{a-\frac{(1-a)b}{1-b}}{a-b}
+=\frac{a(1-b)-b(1-a)}{(1-b)(a-b)}
+=\frac{1}{1-b}.
+\]</div>
+<p class="fr-exo">En divisant par <span class="arithmatex">\(1-a\neq0\)</span>, on obtient</p>
+<p class="zh">除以 <span class="arithmatex">\(1-a\neq0\)</span>，得</p>
+<div class="arithmatex">\[
+\boxed{\frac{1}{(1-a)(1-b)}
+=\sum_{n=0}^{+\infty}\frac{a^{n+1}-b^{n+1}}{a-b}.}
+\]</div>
+<p class="fr-exo"><strong>Cas <span class="arithmatex">\(a=b\)</span>.</strong> La série <span class="arithmatex">\(\sum(n+1)a^n\)</span> est absolument convergente car <span class="arithmatex">\(|a|&lt;1\)</span>. En multipliant par <span class="arithmatex">\(1-a\)</span>,</p>
+<p class="zh"><strong>情形 <span class="arithmatex">\(a=b\)</span>.</strong> 由于 <span class="arithmatex">\(|a|&lt;1\)</span>，级数 <span class="arithmatex">\(\sum(n+1)a^n\)</span> 绝对收敛。乘以 <span class="arithmatex">\(1-a\)</span>，</p>
+<div class="arithmatex">\[
+(1-a)\sum_{n=0}^{+\infty}(n+1)a^n
+=\sum_{n=0}^{+\infty}(n+1)a^n-\sum_{n=1}^{+\infty}n\,a^n
+=1+\sum_{n=1}^{+\infty}a^n
+=\frac{1}{1-a},
+\]</div>
+<p class="fr-exo">après décalage d'indice dans la seconde somme. En divisant par <span class="arithmatex">\(1-a\)</span>,</p>
+<p class="zh">其中第二个和式已平移指标。除以 <span class="arithmatex">\(1-a\)</span>，</p>
+<div class="arithmatex">\[
+\boxed{\frac{1}{(1-a)^2}=\sum_{n=0}^{+\infty}(n+1)a^n.}
+\]</div>
+<p><p class="cqfd">∎</p></p>
+</div>
 <h3 id="exercice-8-8">Exercice 8 <span class="heading-zh">练习 8</span><a class="headerlink" href="#exercice-8-8" title="Permanent link">&para;</a></h3>
 <p class="exo-type">Série à termes positifs　正项级数</p>
 
 <p class="fr-exo">Prouver que si une série à termes positifs <span class="arithmatex">\(\displaystyle\sum_{n=1}^{+\infty}a_n\)</span> converge, alors <span class="arithmatex">\(\displaystyle\sum_{n=1}^{+\infty}(\alpha^{a_n}-1)\)</span>, où <span class="arithmatex">\(\alpha&gt;1\)</span>, converge aussi.</p>
 <p class="zh">证明：若<strong>正项级数</strong>（série à termes positifs）<span class="arithmatex">\(\displaystyle\sum_{n=1}^{+\infty}a_n\)</span> 收敛，则 <span class="arithmatex">\(\displaystyle\sum_{n=1}^{+\infty}(\alpha^{a_n}-1)\)</span>（其中 <span class="arithmatex">\(\alpha&gt;1\)</span>）也收敛。</p>
+<div class="admonition sol">
+<p class="fr-exo"><strong>Solution.</strong> La série <span class="arithmatex">\(\sum a_n\)</span> converge et est à termes positifs, donc <span class="arithmatex">\(a_n\to0\)</span>. Pour <span class="arithmatex">\(\alpha&gt;1\)</span>, on a <span class="arithmatex">\(\ln\alpha&gt;0\)</span> et</p>
+<p class="zh"><strong>解.</strong> 级数 <span class="arithmatex">\(\sum a_n\)</span> 收敛且各项非负，故 <span class="arithmatex">\(a_n\to0\)</span>。对 <span class="arithmatex">\(\alpha&gt;1\)</span>，有 <span class="arithmatex">\(\ln\alpha&gt;0\)</span>，且</p>
+<div class="arithmatex">\[
+\alpha^{a_n}-1=e^{a_n\ln\alpha}-1.
+\]</div>
+<p class="fr-exo">Comme <span class="arithmatex">\(a_n\ln\alpha\to0\)</span> et que <span class="arithmatex">\(e^u-1\sim u\)</span> au voisinage de <span class="arithmatex">\(0\)</span>,</p>
+<p class="zh">由于 <span class="arithmatex">\(a_n\ln\alpha\to0\)</span>，且当 <span class="arithmatex">\(u\to0\)</span> 时 <span class="arithmatex">\(e^u-1\sim u\)</span>，</p>
+<div class="arithmatex">\[
+\alpha^{a_n}-1\sim a_n\ln\alpha\qquad(n\to+\infty).
+\]</div>
+<p class="fr-exo">Les deux séries sont à termes positifs (car <span class="arithmatex">\(a_n\geqslant0\)</span> et <span class="arithmatex">\(\alpha&gt;1\)</span> entraînent <span class="arithmatex">\(\alpha^{a_n}-1\geqslant0\)</span>). D'après le <strong>critère d'équivalence</strong> pour les séries à termes positifs, la série <span class="arithmatex">\(\sum(\alpha^{a_n}-1)\)</span> converge si et seulement si <span class="arithmatex">\(\sum a_n\ln\alpha\)</span> converge. Or <span class="arithmatex">\(\ln\alpha\)</span> est une constante et <span class="arithmatex">\(\sum a_n\)</span> converge; donc</p>
+<p class="zh">两个级数均为正项级数（因为 <span class="arithmatex">\(a_n\geqslant0\)</span> 且 <span class="arithmatex">\(\alpha&gt;1\)</span> 推出 <span class="arithmatex">\(\alpha^{a_n}-1\geqslant0\)</span>）。由正项级数的<strong>等价判别法</strong>（critère d'équivalence），<span class="arithmatex">\(\sum(\alpha^{a_n}-1)\)</span> 收敛当且仅当 <span class="arithmatex">\(\sum a_n\ln\alpha\)</span> 收敛。而 <span class="arithmatex">\(\ln\alpha\)</span> 为常数且 <span class="arithmatex">\(\sum a_n\)</span> 收敛；故</p>
+<div class="arithmatex">\[
+\boxed{\sum_{n=1}^{+\infty}\left(\alpha^{a_n}-1\right)\ \text{converge}.}
+\]</div>
+<p><p class="cqfd">∎</p></p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Vocabulaire clé&nbsp;&nbsp;重点词汇<br><span class='zh-title'>第二部分（Exercices supplémentaires）核心术语</span></p>
 <ul>
