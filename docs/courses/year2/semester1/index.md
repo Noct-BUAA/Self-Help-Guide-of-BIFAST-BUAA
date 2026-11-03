@@ -18,7 +18,7 @@
 
 <a class="card" href="实分析/">
   <h3>实分析</h3>
-  <p>Analyse réelle · 实数拓扑、数列理论与数项级数。收录第 1–3 章正课讲义、TD1–TD5 及期中考试参考解答。</p>
+  <p>Analyse réelle · 实数拓扑、数列理论与数项级数。收录第 1–3 章正课讲义、TD1–TD6 及期中考试参考解答。</p>
   <span class="card-arrow">浏览课程 &rarr;</span>
 </a>
 
