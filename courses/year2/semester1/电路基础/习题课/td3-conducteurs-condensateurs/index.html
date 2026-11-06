@@ -5537,8 +5537,10 @@ V(A)-V(B)=-\int_{B}^{A}\vec{E}(M)\cdot\mathrm{d}\vec{l},
 <p>On sait que</p>
 <p class="zh">已知</p>
 <div class="arithmatex">\[
-\mathrm{d}V=-\vec{E}\cdot\mathrm{d}\vec{l}=\frac{Q}{\varepsilon_0\,4\pi r}\,\mathrm{d}r
+\mathrm{d}V=-\vec{E}\cdot\mathrm{d}\vec{l}=-\frac{Q}{\varepsilon_0\,4\pi r^2}\,\mathrm{d}r
 \]</div>
+<p><strong>Note de lecture.</strong> Dans le document source, le membre de droite de cette égalité est écrit <span class="arithmatex">\(\frac{Q}{\varepsilon_0\,4\pi r}\,\mathrm{d}r\)</span> : il manque un facteur <span class="arithmatex">\(1/r\)</span> et le signe est faux. Avec <span class="arithmatex">\(\vec{E}=\frac{Q}{\varepsilon_0\,4\pi r^2}\,\vec{e}_r\)</span>, on a bien <span class="arithmatex">\(\mathrm{d}V=-\frac{Q}{\varepsilon_0\,4\pi r^2}\,\mathrm{d}r\)</span>. Le résultat final <span class="arithmatex">\(V(r&gt;R)=\frac{Q}{\varepsilon_0\,4\pi r}\)</span> reste correct.</p>
+<p class="zh"><strong>读者注。</strong>源文件此处将右端写作 <span class="arithmatex">\(\frac{Q}{\varepsilon_0\,4\pi r}\,\mathrm{d}r\)</span>：缺少 <span class="arithmatex">\(1/r\)</span> 因子且符号有误。由 <span class="arithmatex">\(\vec{E}=\frac{Q}{\varepsilon_0\,4\pi r^2}\,\vec{e}_r\)</span>，应为 <span class="arithmatex">\(\mathrm{d}V=-\frac{Q}{\varepsilon_0\,4\pi r^2}\,\mathrm{d}r\)</span>。最终结果 <span class="arithmatex">\(V(r&gt;R)=\frac{Q}{\varepsilon_0\,4\pi r}\)</span> 仍然正确。</p>
 <p>Donc <span class="arithmatex">\(V(r&gt;R)=\dfrac{Q}{\varepsilon_0\,4\pi r}+A\)</span> avec <span class="arithmatex">\(A\)</span> une constante. On prend le potentiel nul à l'infini donc <span class="arithmatex">\(A=0\)</span>.</p>
 <p class="zh">因此 <span class="arithmatex">\(V(r&gt;R)=\dfrac{Q}{\varepsilon_0\,4\pi r}+A\)</span>，其中 <span class="arithmatex">\(A\)</span> 为常数。取无穷远处电势为零，故 <span class="arithmatex">\(A=0\)</span>。</p>
 <p>Par continuité de <span class="arithmatex">\(V\)</span> en <span class="arithmatex">\(R\)</span> on a</p>
@@ -5632,15 +5634,15 @@ m\ddot{x}=q\,\vec{E}\cdot\vec{x}
 <p><strong>5. Champ au voisinage de chaque surface.</strong> Le champ au voisinage immédiat est <span class="arithmatex">\(E=\sigma/\varepsilon_0=V/R\)</span>.</p>
 <p class="zh"><strong>5. 每个表面附近紧邻处的电场。</strong>紧邻处的场为 <span class="arithmatex">\(E=\sigma/\varepsilon_0=V/R\)</span>。</p>
 <p>Pour la sphère 1 :</p>
+<p class="zh">对球 1：</p>
 <div class="arithmatex">\[
 E_1=\frac{10^{4}}{0{,}1}=10^{5}\ \mathrm{V\cdot m^{-1}}.
 \]</div>
-<p class="zh">对球 1：</p>
 <p>Pour la sphère 2 (la pointe) :</p>
+<p class="zh">对球 2（尖端）：</p>
 <div class="arithmatex">\[
 E_2=\frac{10^{4}}{10^{-3}}=10^{7}\ \mathrm{V\cdot m^{-1}}.
 \]</div>
-<p class="zh">对球 2（尖端）：</p>
 <p>Le champ de claquage (rigidité diélectrique) de l'air étant d'environ <span class="arithmatex">\(3\times10^{6}\)</span> V·m<span class="arithmatex">\(^{-1}\)</span>, l'air devient conducteur au voisinage de la pointe (claquage, décharges, amorçage d'éclairs), tandis qu'il reste isolant autour de la grande sphère.</p>
 <p class="zh">空气的击穿场强（介电强度）约为 <span class="arithmatex">\(3\times10^{6}\)</span> V·m<span class="arithmatex">\(^{-1}\)</span>，因此在尖端附近空气变成导体（击穿、放电、闪电的引发），而在大球周围空气仍保持绝缘。</p>
 </div>
@@ -5748,8 +5750,11 @@ V=\frac{Q}{4\pi\varepsilon_0 r}
 \]</div>
 <p>Or il n'y a pas de charge à l'intérieur de la surface de Gauss donc <span class="arithmatex">\(Q=0\)</span> et <span class="arithmatex">\(E(r)=0\)</span>.</p>
 <p class="zh">但高斯面内没有电荷，因此 <span class="arithmatex">\(Q=0\)</span>，<span class="arithmatex">\(E(r)=0\)</span>。</p>
-<p><strong>A.4. Différence de potentiel du modèle idéal.</strong> Dans le modèle idéal, seul le champ est discontinu entre les surfaces interne et externe du conducteur. Le potentiel est continu et supposé constant en traversant une surface infiniment fine.</p>
-<p class="zh"><strong>A.4. 理想模型的电位差。</strong>在理想模型中，只有场在导体内外表面之间不连续。电势是连续的，并假定在穿过无限薄表面时保持常数。</p>
+<p><strong>A.4. Différence de potentiel du modèle idéal.</strong> Dans le modèle idéal, seul le champ est discontinu entre les surfaces interne et externe du conducteur. Le potentiel est continu et supposé constant en traversant une surface infiniment fine. Autrement dit :</p>
+<p class="zh"><strong>A.4. 理想模型的电位差。</strong>在理想模型中，只有场在导体内外表面之间不连续。电势是连续的，并假定在穿过无限薄表面时保持常数。换言之：</p>
+<div class="arithmatex">\[
+\Delta V_{\text{modèle}}=V_{surface}-V_{intérieur}=0.
+\]</div>
 </div>
 <h3 id="partie-b-le-modele-reel-b">Partie B : Le modèle réel <span class="heading-zh">B 部分：真实模型</span><a class="headerlink" href="#partie-b-le-modele-reel-b" title="Permanent link">&para;</a></h3>
 <p>On s'intéresse maintenant à l'extrême surface. Soit <span class="arithmatex">\(x\)</span> la coordonnée locale perpendiculaire à la surface, orientée de l'intérieur vers l'extérieur. On pose <span class="arithmatex">\(x=0\)</span> à la limite « interne » du nuage d'électrons (où <span class="arithmatex">\(E=0\)</span>) et <span class="arithmatex">\(x=d\)</span> à la limite « externe » du nuage (où <span class="arithmatex">\(E=E_{ext}\)</span>).</p>
