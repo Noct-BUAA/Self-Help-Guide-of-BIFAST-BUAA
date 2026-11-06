@@ -120,9 +120,9 @@ title: 电路基础
   </a>
 
   <a class="card" href="习题课/td3-conducteurs-condensateurs">
-    <div class="card-num">TD3</div>
-    <h3>导体与电容器</h3>
-    <p>判断正误、空腔中的电荷、尖端效应、表面电场通式、托马斯–费米屏蔽层</p>
+    <div class="card-num">TD3+</div>
+    <h3>TD3 详细解答</h3>
+    <p>教授版官方解答：空腔电荷、尖端效应、表面电场通式（反证法）与托马斯–费米屏蔽层</p>
   </a>
 
   <a class="card" href="习题课/td1-2-dimensions-incertitudes">

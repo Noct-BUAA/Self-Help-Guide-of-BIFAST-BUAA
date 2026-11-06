@@ -15,6 +15,7 @@ title: 公告归档
 
 ## 2026 年 11 月 6 日
 
+- **更新** · [电路基础 · TD3 详细解答](../courses/year2/semester1/电路基础/习题课/td3-conducteurs-condensateurs.md) — 改用教授版官方解答（version professeur），重写判断正误、空腔电荷、尖端效应与托马斯–费米屏蔽层四道练习，新增反证法证明与表面场插图
 - **更新** · [实分析第 3 章 数项级数](../courses/year2/semester1/实分析/课程讲义/03-series-numeriques.md) — 补全级数与积分比较（含示意图与黎曼级数证明），新增绝对收敛、达朗贝尔判别法、小 \(o\) 求和与黎曼判别法；第 5–6 节按讲义框架收录
 
 ## 2026 年 11 月 4 日
