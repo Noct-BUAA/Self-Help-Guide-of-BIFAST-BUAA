@@ -263,8 +263,13 @@ Elles sont reliées par un fil conducteur infiniment fin (dont on néglige la ca
     {: .zh }
 
     \[
-    \mathrm{d}V=-\vec{E}\cdot\mathrm{d}\vec{l}=\frac{Q}{\varepsilon_0\,4\pi r}\,\mathrm{d}r
+    \mathrm{d}V=-\vec{E}\cdot\mathrm{d}\vec{l}=-\frac{Q}{\varepsilon_0\,4\pi r^2}\,\mathrm{d}r
     \]
+
+    <strong>Note de lecture.</strong> Dans le document source, le membre de droite de cette égalité est écrit \(\frac{Q}{\varepsilon_0\,4\pi r}\,\mathrm{d}r\) : il manque un facteur \(1/r\) et le signe est faux. Avec \(\vec{E}=\frac{Q}{\varepsilon_0\,4\pi r^2}\,\vec{e}_r\), on a bien \(\mathrm{d}V=-\frac{Q}{\varepsilon_0\,4\pi r^2}\,\mathrm{d}r\). Le résultat final \(V(r>R)=\frac{Q}{\varepsilon_0\,4\pi r}\) reste correct.
+
+    <strong>读者注。</strong>源文件此处将右端写作 \(\frac{Q}{\varepsilon_0\,4\pi r}\,\mathrm{d}r\)：缺少 \(1/r\) 因子且符号有误。由 \(\vec{E}=\frac{Q}{\varepsilon_0\,4\pi r^2}\,\vec{e}_r\)，应为 \(\mathrm{d}V=-\frac{Q}{\varepsilon_0\,4\pi r^2}\,\mathrm{d}r\)。最终结果 \(V(r>R)=\frac{Q}{\varepsilon_0\,4\pi r}\) 仍然正确。
+    {: .zh }
 
     Donc \(V(r>R)=\dfrac{Q}{\varepsilon_0\,4\pi r}+A\) avec \(A\) une constante. On prend le potentiel nul à l'infini donc \(A=0\).
 
@@ -442,21 +447,21 @@ Elles sont reliées par un fil conducteur infiniment fin (dont on néglige la ca
 
     Pour la sphère 1 :
 
+    对球 1：
+    {: .zh }
+
     \[
     E_1=\frac{10^{4}}{0{,}1}=10^{5}\ \mathrm{V\cdot m^{-1}}.
     \]
 
-    对球 1：
-    {: .zh }
-
     Pour la sphère 2 (la pointe) :
+
+    对球 2（尖端）：
+    {: .zh }
 
     \[
     E_2=\frac{10^{4}}{10^{-3}}=10^{7}\ \mathrm{V\cdot m^{-1}}.
     \]
-
-    对球 2（尖端）：
-    {: .zh }
 
     Le champ de claquage (rigidité diélectrique) de l'air étant d'environ \(3\times10^{6}\) V·m\(^{-1}\), l'air devient conducteur au voisinage de la pointe (claquage, décharges, amorçage d'éclairs), tandis qu'il reste isolant autour de la grande sphère.
 
@@ -631,10 +636,14 @@ d=10^{-10}\ \mathrm{m},\quad
     但高斯面内没有电荷，因此 \(Q=0\)，\(E(r)=0\)。
     {: .zh }
 
-    <strong>A.4. Différence de potentiel du modèle idéal.</strong> Dans le modèle idéal, seul le champ est discontinu entre les surfaces interne et externe du conducteur. Le potentiel est continu et supposé constant en traversant une surface infiniment fine.
+    <strong>A.4. Différence de potentiel du modèle idéal.</strong> Dans le modèle idéal, seul le champ est discontinu entre les surfaces interne et externe du conducteur. Le potentiel est continu et supposé constant en traversant une surface infiniment fine. Autrement dit :
 
-    <strong>A.4. 理想模型的电位差。</strong>在理想模型中，只有场在导体内外表面之间不连续。电势是连续的，并假定在穿过无限薄表面时保持常数。
+    <strong>A.4. 理想模型的电位差。</strong>在理想模型中，只有场在导体内外表面之间不连续。电势是连续的，并假定在穿过无限薄表面时保持常数。换言之：
     {: .zh }
+
+    \[
+    \Delta V_{\text{modèle}}=V_{surface}-V_{intérieur}=0.
+    \]
 
 ### Partie B : Le modèle réel <span class="heading-zh">B 部分：真实模型</span>
 
