@@ -6525,16 +6525,33 @@
 <style>
 .md-typeset table th:first-child,
 .md-typeset table td:first-child { white-space: normal; }
+.md-typeset .md-typeset__table { overflow-y: hidden; }
+.md-content__inner, .md-typeset { min-width: 0; max-width: 100%; }
+.md-typeset .exam-map table { table-layout: fixed; }
+.md-typeset .exam-map th:nth-child(1), .md-typeset .exam-map td:nth-child(1) { width: 14%; }
+.md-typeset .exam-map th:nth-child(2), .md-typeset .exam-map td:nth-child(2) { width: 27%; }
+.md-typeset .exam-map th:nth-child(3), .md-typeset .exam-map td:nth-child(3) { width: 43%; }
+.md-typeset .exam-map th:nth-child(4), .md-typeset .exam-map td:nth-child(4) { width: 16%; white-space: nowrap; }
+@media screen and (max-width: 760px) {
+  .md-typeset .md-typeset__table {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .md-typeset table:not([class]) {
+    min-width: 620px;
+  }
+}
 </style>
 
 <h2 id="0">0　考点地图与命题风格<a class="headerlink" href="#0" title="Permanent link">&para;</a></h2>
 <h3 id="01">0.1　考试范围<a class="headerlink" href="#01" title="Permanent link">&para;</a></h3>
+<div class="exam-map">
 <table>
 <thead>
 <tr>
 <th>模块</th>
-<th>对应讲义</th>
-<th>对应 <abbr title="Travaux Dirigés — 习题课 / 辅导课">TD</abbr></th>
+<th>对应讲义 / <abbr title="Travaux Dirigés — 习题课 / 辅导课">TD</abbr></th>
 <th>典型考法</th>
 <th>优先级</th>
 </tr>
@@ -6542,41 +6559,37 @@
 <tbody>
 <tr>
 <td>物理课程基础</td>
-<td>00-fondements §0.2–0.4</td>
-<td>TD1–TD2</td>
-<td>量纲分析、量纲检验、有效数字、不确定度、线性回归</td>
+<td>00-fondements §0.2–0.4；TD1–TD2</td>
+<td>量纲分析、有效数字、不确定度、线性回归</td>
 <td>★★★★★</td>
 </tr>
 <tr>
 <td>静电场</td>
-<td>ES01 第 1 章</td>
-<td>TD1</td>
+<td>ES01 第 1 章；TD1</td>
 <td>场线方程、库仑力叠加、连续分布积分、电势、带电粒子偏转</td>
 <td>★★★★★</td>
 </tr>
 <tr>
 <td>高斯定理</td>
-<td>ES02 第 2 章</td>
-<td>TD2</td>
-<td>对称性/不变性、选高斯面、球/柱/面求 <span class="arithmatex">\(E(r)\)</span> 与 <span class="arithmatex">\(V(r)\)</span>、画曲线</td>
+<td>ES02 第 2 章；TD2</td>
+<td>对称性、高斯面、球/柱/面求 <span class="arithmatex">\(E(r),V(r)\)</span>、画曲线</td>
 <td>★★★★★</td>
 </tr>
 <tr>
 <td>导体与电容器</td>
-<td>ES03 第 3 章</td>
-<td>TD3</td>
-<td>判断正误、空腔电荷、库仑定理证明、尖端效应、电容与储能</td>
+<td>ES03 第 3 章；TD3</td>
+<td>判断正误、空腔、库仑定理、尖端效应、电容与储能</td>
 <td>★★★★★</td>
 </tr>
 <tr>
 <td>引力类比</td>
-<td>ES02 §2.3</td>
-<td>TD1-4、TD2-&#8536;</td>
+<td>ES02 §2.3；TD1-4、TD2-4 与 TD2-5</td>
 <td>引力高斯定理、空腔均匀场、隧道简谐振动</td>
 <td>★★★☆☆</td>
 </tr>
 </tbody>
 </table>
+</div>
 <h3 id="02-td">0.2　从 <abbr title="Travaux Dirigés — 习题课 / 辅导课">TD</abbr> 反推命题风格<a class="headerlink" href="#02-td" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Vrai/Faux + 说明理由</strong>（TD2 练习 1、TD3 练习 1）。只写“对/错”不给分，必须给条件或反例。</li>
@@ -6647,34 +6660,44 @@
 <thead>
 <tr>
 <th>基本量</th>
-<th>时间</th>
-<th>长度</th>
-<th>质量</th>
-<th>电流</th>
-<th>温度</th>
-<th>物质的量</th>
-<th>发光强度</th>
+<th>量纲</th>
+<th>单位</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>量纲</td>
+<td>时间</td>
 <td>T</td>
-<td>L</td>
-<td>M</td>
-<td>I</td>
-<td>Θ</td>
-<td>N</td>
-<td>J</td>
+<td>s</td>
 </tr>
 <tr>
-<td>单位</td>
-<td>s</td>
+<td>长度</td>
+<td>L</td>
 <td>m</td>
+</tr>
+<tr>
+<td>质量</td>
+<td>M</td>
 <td>kg</td>
+</tr>
+<tr>
+<td>电流</td>
+<td>I</td>
 <td>A</td>
+</tr>
+<tr>
+<td>温度</td>
+<td>Θ</td>
 <td>K</td>
+</tr>
+<tr>
+<td>物质的量</td>
+<td>N</td>
 <td>mol</td>
+</tr>
+<tr>
+<td>发光强度</td>
+<td>J</td>
 <td>cd</td>
 </tr>
 </tbody>
@@ -6958,12 +6981,14 @@ u=\sqrt{\left(\frac{\Delta z}{z}\right)^2+4\left(\frac{\Delta t}{t}\right)^2}.
 </table>
 <p><strong>场线（lignes de champ）</strong></p>
 <ul>
-<li>定义：处处与场相切、并沿场方向定向的曲线；方程为
-[
+<li>定义：处处与场相切、并沿场方向定向的曲线；方程为</li>
+</ul>
+<div class="arithmatex">\[
 \vec A\wedge \mathrm d\overrightarrow{OM}=\vec 0,
 \qquad
 \vec A\cdot \mathrm d\overrightarrow{OM}\gt0.
-]</li>
+\]</div>
+<ul>
 <li>性质：场线不相交，除非在<strong>奇点</strong>（场未定义或为零）；场线密处场强，疏处场弱；场线垂直于等势面。</li>
 <li>二维笛卡尔坐标下，若 <span class="arithmatex">\(\vec A=A_x\vec e_x+A_y\vec e_y\)</span>，则场线满足 <span class="arithmatex">\(\dfrac{\mathrm dy}{\mathrm dx}=\dfrac{A_y}{A_x}\)</span>。</li>
 </ul>
@@ -7490,7 +7515,7 @@ v_0=\sqrt{\frac{eEa}{md}\left(D+\frac a2\right)}
 <h3 id="33-t11">3.3　T11　引力类比模板<a class="headerlink" href="#33-t11" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">适用</p>
-<p>把静电学结果迁移到引力：星体空腔、引力隧道、双星平衡点。对应 TD1-4、TD2-&#8536;。</p>
+<p>把静电学结果迁移到引力：星体空腔、引力隧道、双星平衡点。对应 TD1-4、TD2-4 与 TD2-5。</p>
 </div>
 <ol>
 <li><strong>替换常数</strong>：<span class="arithmatex">\(\dfrac{1}{4\pi\varepsilon_0}q_1q_2\to-Gm_1m_2\)</span>；电场 <span class="arithmatex">\(\vec E\to\)</span> 引力场 <span class="arithmatex">\(\vec A\)</span>。</li>
@@ -7683,7 +7708,7 @@ x_B=\frac{d\sqrt{M_T}}{\sqrt{M_T}+\sqrt{M_L}}.
 <ol>
 <li><strong>设电荷</strong>：设极板带 <span class="arithmatex">\(\pm Q\)</span>，面密度 <span class="arithmatex">\(\sigma=Q/S\)</span>（或线电荷 <span class="arithmatex">\(\lambda\)</span>）。</li>
 <li><strong>求板间场</strong>：用叠加原理或高斯定理。平行板：两板各贡献 <span class="arithmatex">\(\sigma/(2\varepsilon_0)\)</span>，板间同向叠加 → <span class="arithmatex">\(E=\sigma/\varepsilon_0\)</span>；板外反向抵消 → <span class="arithmatex">\(E=0\)</span>。</li>
-<li><strong>求电压</strong>：<span class="arithmatex">\(U=\displaystyle\int_-^+\vec E\cdot\mathrm d\vec l\)</span>（沿从负板到正板）。平行板 <span class="arithmatex">\(U=Ee=\sigma e/\varepsilon_0\)</span>；圆柱 <span class="arithmatex">\(U=\dfrac{q}{2\pi H\varepsilon_0}\ln\dfrac{R_2}{R_1}\)</span>。</li>
+<li><strong>求电压</strong>：<span class="arithmatex">\(U=\displaystyle\int_-^+\vec E\cdot\mathrm d\vec l\)</span>（沿从负板到正板）。平行板 <span class="arithmatex">\(U=Ee=\sigma e/\varepsilon_0\)</span>；圆柱 <span class="arithmatex">\(U=\dfrac{q}{2\pi H\varepsilon_0}\ln\dfrac{R_2}{R_1}\)</span></li>
 <li><strong>求电容</strong>：<span class="arithmatex">\(C=\dfrac Q U\)</span>。平行板 <span class="arithmatex">\(C=\dfrac{\varepsilon_0S}{e}\)</span>；圆柱 <span class="arithmatex">\(C=\dfrac{2\pi H\varepsilon_0}{\ln(R_2/R_1)}\)</span>；球形 <span class="arithmatex">\(C=\dfrac{4\pi\varepsilon_0R_1R_2}{R_2-R_1}\)</span>。</li>
 <li><strong>求储能</strong>：<span class="arithmatex">\(E=\dfrac{Q^2}{2C}=\dfrac12CU^2=\dfrac12QU\)</span>。</li>
 <li><strong>介质替换</strong>：有介质时 <span class="arithmatex">\(\varepsilon_0\to\varepsilon=\varepsilon_r\varepsilon_0\)</span>。</li>
