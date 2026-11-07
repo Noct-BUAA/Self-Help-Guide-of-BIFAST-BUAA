@@ -13,6 +13,10 @@ title: 公告归档
 
     本页汇总首页公告栏的历史条目。最新内容请回到[首页](../index.md)查看。
 
+## 2026 年 11 月 7 日
+
+- **更新** · [实分析第 3 章 数项级数](../courses/year2/semester1/实分析/课程讲义/03-series-numeriques.md) — 新增小 \(o\) 求和定理、Riemann 判别法与级数—积分比较新例；补全交错级数判别法与 Abel 判别法（第 5–6 节）
+
 ## 2026 年 11 月 6 日
 
 - **更新** · [电路基础 · TD3 详细解答](../courses/year2/semester1/电路基础/习题课/td3-conducteurs-condensateurs.md) — 改用教授版官方解答（version professeur），重写判断正误、空腔电荷、尖端效应与托马斯–费米屏蔽层四道练习，新增反证法证明与表面场插图

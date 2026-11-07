@@ -263,11 +263,6 @@ Dans cette section, on considère seulement des séries à termes positifs, c'es
 本节只考虑正项级数（séries à termes positifs），即 \(\mathbb{K} = \mathbb{R}\)，且对一切 \(n \geqslant n_0\)，\(u_n \geqslant 0\)。
 {: .zh }
 
-Si \(\sum\limits_{n\geqslant n_0} u_n\) diverge vers \(+\infty\), on note \(\sum\limits_{n=n_0}^{+\infty} u_n = +\infty\).
-
-若 \(\sum\limits_{n\geqslant n_0} u_n\) 发散到 \(+\infty\)，记 \(\sum\limits_{n=n_0}^{+\infty} u_n = +\infty\)。
-{: .zh }
-
 !!! danger "Théorème 2.1 : nature des séries à termes positifs<br><span class='zh-title'>定理 2.1：正项级数的性质</span>"
 
     Soit \(\sum u_n\) une série à termes positifs (à partir d'un certain rang). On note \((S_n)\) la suite des sommes partielles de \(\sum u_n\).
@@ -280,14 +275,14 @@ Si \(\sum\limits_{n\geqslant n_0} u_n\) diverge vers \(+\infty\), on note \(\sum
         若 \((S_n)\) 有上界，则 \(\sum u_n\) 收敛。
         {: .zh }
 
-    - Si \((S_n)\) n'est pas majorée, alors \(\sum u_n\) diverge vers \(+\infty\).
+    - Si \((S_n)\) n'est pas majorée, alors \(\sum u_n\) diverge vers \(+\infty\) et on note \(\sum\limits_{n=n_0}^{+\infty} u_n = +\infty\).
 
-        若 \((S_n)\) 无上界，则 \(\sum u_n\) 发散到 \(+\infty\)。
+        若 \((S_n)\) 无上界，则 \(\sum u_n\) 发散到 \(+\infty\)，并记 \(\sum\limits_{n=n_0}^{+\infty} u_n = +\infty\)。
         {: .zh }
 
-En particulier, toute série à termes positifs admet une limite (dans \(\mathbb{R}_+ \cup \{+\infty\}\)).
+En particulier, la somme d'une série à termes positifs existe toujours (dans \(\mathbb{R}_+ \cup \{+\infty\}\)).
 
-特别地，任何正项级数都有极限（在 \(\mathbb{R}_+ \cup \{+\infty\}\) 中）。
+特别地，正项级数的和总是存在的（在 \(\mathbb{R}_+ \cup \{+\infty\}\) 中）。
 {: .zh }
 
 !!! demo ""
@@ -336,9 +331,9 @@ En particulier, toute série à termes positifs admet une limite (dans \(\mathbb
 
 !!! warning "Remarque<br><span class='zh-title'>注（Remarque）</span>"
 
-    On peut montrer (mais c'est un problème difficile) que la somme de la série d'Euler est égale à :
+    On peut montrer que la somme de la série d'Euler est égale à :
 
-    可以证明（但这是一个困难的问题）欧拉级数的和等于：
+    可以证明欧拉级数的和等于：
     {: .zh }
 
     \[
@@ -391,23 +386,23 @@ En particulier, toute série à termes positifs admet une limite (dans \(\mathbb
 
         \[
         \forall n \geqslant N,\quad \frac{n}{2^n} \leqslant q^n
-        \qquad \text{c'est-à-dire} \qquad \frac{n}{(2q)^n} \leqslant 1.
+        \qquad \text{c'est-à-dire} \qquad \frac{n}{(2q)^n} < 1.
         \]
 
-        Or on sait que si \(2q > 1\), alors \(n = \on((2q)^n)\) quand \(n \to +\infty\) d'après le théorème des croissances comparées. Par exemple, on choisit \(q = \frac{3}{4}\). Puisque \(2q = \frac{3}{2} > 1\), on a :
+        Or on sait que si \(2q > 1\), alors \(n = \on((2q)^n)\) quand \(n \to +\infty\) par croissances comparées. Par exemple, on choisit \(q = \frac{3}{4}\). Puisque \(2q = \frac{3}{2} > 1\), on a :
 
-        而我们知道，若 \(2q > 1\)，则由增长比较定理，当 \(n \to +\infty\) 时 \(n = \on((2q)^n)\)。例如取 \(q = \frac{3}{4}\)。由于 \(2q = \frac{3}{2} > 1\)，有：
+        而我们知道，若 \(2q > 1\)，则由增长比较，当 \(n \to +\infty\) 时 \(n = \on((2q)^n)\)。例如取 \(q = \frac{3}{4}\)。由于 \(2q = \frac{3}{2} > 1\)，有：
         {: .zh }
 
         \[
         \lim_{n\to+\infty} \frac{n}{(2q)^n} = 0
         \quad \text{donc} \quad
-        \exists N \in \mathbb{N},\ \forall n \geqslant N,\ \frac{n}{(2q)^n} \leqslant 1.
+        \exists N \in \mathbb{N},\ \forall n \geqslant N,\ \frac{n}{(2q)^n} < 1.
         \]
 
-        On en déduit que pour tout \(n \geqslant N\), \(\frac{n}{2^n} \leqslant q^n = \left(\frac{3}{4}\right)^n\). Or la série géométrique \(\sum \left(\frac{3}{4}\right)^n\) est convergente car \(q = \frac{3}{4} \in \,]0,1[\). Par conséquent, \(\sum\limits_{n\geqslant 1}\dfrac{n}{2^n}\) est convergente d'après le théorème de comparaison des séries à termes positifs.
+        On en déduit que pour tout \(n \geqslant N\), \(0 \leqslant \frac{n}{2^n} \leqslant q^n = \left(\frac{3}{4}\right)^n\). Or la série géométrique \(\sum \left(\frac{3}{4}\right)^n\) est convergente car \(q = \frac{3}{4} \in \,]0,1[\). Par conséquent, \(\sum\limits_{n\geqslant 1}\dfrac{n}{2^n}\) est convergente d'après le théorème de comparaison des séries à termes positifs.
 
-        由此，对一切 \(n \geqslant N\)，\(\frac{n}{2^n} \leqslant q^n = \left(\frac{3}{4}\right)^n\)。而几何级数 \(\sum \left(\frac{3}{4}\right)^n\) 收敛，因为 \(q = \frac{3}{4} \in \,]0,1[\)。因此由正项级数的比较判别法，\(\sum\limits_{n\geqslant 1}\dfrac{n}{2^n}\) 收敛。
+        由此，对一切 \(n \geqslant N\)，\(0 \leqslant \frac{n}{2^n} \leqslant q^n = \left(\frac{3}{4}\right)^n\)。而几何级数 \(\sum \left(\frac{3}{4}\right)^n\) 收敛，因为 \(q = \frac{3}{4} \in \,]0,1[\)。因此由正项级数的比较判别法，\(\sum\limits_{n\geqslant 1}\dfrac{n}{2^n}\) 收敛。
         {: .zh }
 
 !!! danger "Théorème 2.5 : sommation des équivalents<br><span class='zh-title'>定理 2.5：等价量求和（sommation des équivalents）</span>"
@@ -510,7 +505,7 @@ En particulier, toute série à termes positifs admet une limite (dans \(\mathbb
         = 1 - \underbrace{\frac{1}{n+1}}_{\to\,0}.
         \]
 
-        D'après la sommation des équivalents, on retrouve que la série d'Euler \(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\) est convergente. De plus :
+        Par sommation des équivalents, on retrouve que la série d'Euler \(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\) est convergente. De plus :
 
         由正项级数的等价量求和，重新得到欧拉级数 \(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\) 收敛。此外：
         {: .zh }
@@ -534,7 +529,7 @@ En particulier, toute série à termes positifs admet une limite (dans \(\mathbb
         \sqrt{n+1} - \sqrt{n} = \frac{1}{\sqrt{n+1} + \sqrt{n}} \simn \frac{1}{2\sqrt{n}}.
         \]
 
-        Puisque \(\sum\limits_{k=0}^{n}\left(\sqrt{k+1} - \sqrt{k}\right) = \sqrt{n+1} \to +\infty\) quand \(n \to +\infty\), on en déduit que \(\sum\limits_{n\geqslant 1}\dfrac{1}{\sqrt{n}}\) est divergente d'après la sommation des équivalents. De plus :
+        Puisque \(\sum\limits_{k=0}^{n}\left(\sqrt{k+1} - \sqrt{k}\right) = \sqrt{n+1} \to +\infty\) quand \(n \to +\infty\), on en déduit que \(\sum\limits_{n\geqslant 1}\dfrac{1}{\sqrt{n}}\) est divergente par sommation des équivalents. De plus :
 
         由于当 \(n \to +\infty\) 时 \(\sum\limits_{k=0}^{n}\left(\sqrt{k+1} - \sqrt{k}\right) = \sqrt{n+1} \to +\infty\)，由等价量求和推出 \(\sum\limits_{n\geqslant 1}\dfrac{1}{\sqrt{n}}\) 发散。此外：
         {: .zh }
@@ -550,6 +545,32 @@ En particulier, toute série à termes positifs admet une limite (dans \(\mathbb
 
     当两个数列从某一项起不保持符号恒定（de signe constant）时，等价量求和定理一般不再成立。参见例 5.3。
     {: .zh }
+
+!!! danger "Théorème 2.7 : sommation des petits o<br><span class='zh-title'>定理 2.7：小 \(o\) 的求和（sommation des petits o）</span>"
+
+    Soient \((a_n)_{n\geqslant n_0}\) et \((b_n)_{n\geqslant n_0}\) deux suites réelles positives telles que \(a_n = \on(b_n)\).
+
+    设 \((a_n)_{n\geqslant n_0}\) 与 \((b_n)_{n\geqslant n_0}\) 是两个非负实数列，且 \(a_n = \on(b_n)\)。
+    {: .zh }
+
+    - Si \(\sum\limits_{n\geqslant n_0} b_n\) est convergente, alors \(\sum\limits_{n\geqslant n_0} a_n\) est convergente et \(\sum\limits_{k=n+1}^{+\infty} a_k = \on\left(\sum\limits_{k=n+1}^{+\infty} b_k\right)\).
+
+        若 \(\sum\limits_{n\geqslant n_0} b_n\) 收敛，则 \(\sum\limits_{n\geqslant n_0} a_n\) 收敛，且 \(\sum\limits_{k=n+1}^{+\infty} a_k = \on\left(\sum\limits_{k=n+1}^{+\infty} b_k\right)\)。
+        {: .zh }
+
+    - Si \(\sum\limits_{n\geqslant n_0} a_n\) est divergente, alors \(\sum\limits_{n\geqslant n_0} b_n\) est divergente et \(\sum\limits_{k=n_0}^{n} a_k = \on\left(\sum\limits_{k=n_0}^{n} b_k\right)\).
+
+        若 \(\sum\limits_{n\geqslant n_0} a_n\) 发散，则 \(\sum\limits_{n\geqslant n_0} b_n\) 发散，且 \(\sum\limits_{k=n_0}^{n} a_k = \on\left(\sum\limits_{k=n_0}^{n} b_k\right)\)。
+        {: .zh }
+
+!!! demo ""
+
+    <strong>Démonstration.</strong> Il suffit de remarquer que \(a_n + b_n \simn b_n\) quand \(n \to +\infty\), puis d'utiliser le théorème de sommation des équivalents.
+
+    <strong>证明.</strong> 只需注意到当 \(n \to +\infty\) 时 \(a_n + b_n \simn b_n\)，然后使用等价量求和定理即可。
+    {: .zh }
+
+    <p class="cqfd">∎</p>
 
 !!! warning "Vocabulaire clé<br><span class='zh-title'>第 2 节核心术语</span>"
 
@@ -567,27 +588,30 @@ En particulier, toute série à termes positifs admet une limite (dans \(\mathbb
 
 ## 3　Comparaison série-intégrale <span class="heading-zh">级数与积分的比较</span>
 
-Le but de cette section est de présenter une méthode efficace pour calculer des approximations d'une série à termes positifs (c'est-à-dire de ses sommes partielles et de ses restes dans le cas convergent) : la <strong>comparaison série-intégrale</strong>.
+Le but de cette section est de présenter une méthode efficace pour étudier la nature d'une série à termes positifs : la <strong>comparaison série-intégrale</strong>.
 
-本节的目的是介绍一种计算正项级数近似值（即收敛情形下其部分和与余项的近似值）的有效方法：<strong>级数与积分的比较</strong>（comparaison série-intégrale）。
+本节的目的是介绍一种研究正项级数性质的有效方法：<strong>级数与积分的比较</strong>（comparaison série-intégrale）。
 {: .zh }
 
 !!! danger "Théorème 3.1 : comparaison série-intégrale<br><span class='zh-title'>定理 3.1：级数与积分的比较</span>"
 
-    Soit \(f : [n_0, +\infty[\, \to \mathbb{R}_+\) une fonction réelle continue et décroissante. La série \(\sum\limits_{n\geqslant n_0} f(n)\) est convergente si et seulement si la suite \((\int_{n_0}^{n} f(t)\,\mathrm{d}t)_{n\geqslant n_0}\) est convergente.
+    Soit \(f : [n_0, +\infty[\, \to \mathbb{R}_+\) une fonction réelle continue et décroissante. La série \(\sum\limits_{n\geqslant n_0} f(n)\) et la suite \((\int_{n_0}^{n} f(t)\,\mathrm{d}t)_{n\geqslant n_0}\) ont même nature.
 
-    设 \(f : [n_0, +\infty[\, \to \mathbb{R}_+\) 是连续、递减的实函数。级数 \(\sum\limits_{n\geqslant n_0} f(n)\) 收敛当且仅当数列 \((\int_{n_0}^{n} f(t)\,\mathrm{d}t)_{n\geqslant n_0}\) 收敛。
+    设 \(f : [n_0, +\infty[\, \to \mathbb{R}_+\) 是连续、递减的实函数。级数 \(\sum\limits_{n\geqslant n_0} f(n)\) 与数列 \((\int_{n_0}^{n} f(t)\,\mathrm{d}t)_{n\geqslant n_0}\) 同性质。
     {: .zh }
 
 !!! demo ""
 
-    <strong>Démonstration.</strong> Puisque \(f\) est continue et décroissante, on a par monotonie de l'intégrale pour tout \(k \geqslant n_0\) :
+    <strong>Démonstration.</strong> Puisque \(f\) est continue et décroissante, on a par monotonie de l'intégrale :
 
-    <strong>证明.</strong> 由于 \(f\) 连续且递减，由积分的单调性，对一切 \(k \geqslant n_0\) 有：
+    <strong>证明.</strong> 由于 \(f\) 连续且递减，由积分的单调性有：
     {: .zh }
 
     \[
-    f(k+1) = \int_{k}^{k+1} f(k+1)\,\mathrm{d}t \leqslant \int_{k}^{k+1} f(t)\,\mathrm{d}t \leqslant \int_{k}^{k+1} f(k)\,\mathrm{d}t = f(k).
+    \forall k \geqslant n_0,\quad
+    \underbrace{\int_{k}^{k+1} f(k+1)\,\mathrm{d}t}_{=\,f(k+1)}
+    \leqslant \int_{k}^{k+1} f(t)\,\mathrm{d}t
+    \leqslant \underbrace{\int_{k}^{k+1} f(k)\,\mathrm{d}t}_{=\,f(k)}.
     \]
 
     Par conséquent, on obtient d'après la relation de Chasles :
@@ -599,18 +623,18 @@ Le but de cette section est de présenter une méthode efficace pour calculer de
     \forall n \geqslant n_0 + 1,\quad \int_{n_0+1}^{n+1} f(t)\,\mathrm{d}t \leqslant \sum_{k=n_0+1}^{n} f(k) \leqslant \int_{n_0}^{n} f(t)\,\mathrm{d}t.
     \]
 
-    D'où le résultat d'après la nature des séries à termes positifs et le théorème de limite monotone, car \((\int_{n_0}^{n} f(t)\,\mathrm{d}t)_{n\geqslant n_0}\) est croissante (puisque \(f\) est positive).
+    D'où le résultat d'après la nature des séries à termes positifs et le théorème de limite monotone, car \(f\) est positive (donc \((\int_{n_0}^{n} f(t)\,\mathrm{d}t)_{n\geqslant n_0}\) est croissante).
 
-    再根据正项级数的性质与单调极限定理即得结论，因为 \((\int_{n_0}^{n} f(t)\,\mathrm{d}t)_{n\geqslant n_0}\) 递增（由于 \(f\) 非负）。
+    再根据正项级数的性质与单调极限定理即得结论，因为 \(f\) 非负（因此 \((\int_{n_0}^{n} f(t)\,\mathrm{d}t)_{n\geqslant n_0}\) 递增）。
     {: .zh }
 
     <p class="cqfd">∎</p>
 
 !!! warning "Important<br><span class='zh-title'>重要（Important）</span>"
 
-    La méthode de comparaison série-intégrale utilisée dans cette démonstration est plus importante que le résultat, car elle permet d'obtenir des approximations plus précises.
+    La méthode utilisée dans cette démonstration est plus importante que le résultat. En effet, elle peut aussi permettre de trouver un équivalent des restes dans le cas convergent, donc de décrire la <strong>vitesse de convergence</strong>, ou des sommes partielles dans le cas divergent, donc de décrire la <strong>vitesse de divergence</strong>.
 
-    这个证明中所用的级数与积分比较方法比结论本身更重要，因为它能给出更精确的近似。
+    这个证明中所用的方法比结论本身更重要。事实上，它还可以在收敛情形下求出余项的等价量，从而刻画<strong>收敛速度</strong>（vitesse de convergence）；或在发散情形下求出部分和的等价量，从而刻画<strong>发散速度</strong>（vitesse de divergence）。
     {: .zh }
 
     <span class="lecture-figure lecture-figure--wide"><img class="fig-light" src="../../../../../../assets/images/lectures/analyse-reelle/03-series-numeriques/fig-01.svg" alt="级数与积分比较示意图"><img class="fig-dark" src="../../../../../../assets/images/lectures/analyse-reelle/03-series-numeriques/fig-01-dark.svg" alt="级数与积分比较示意图"></span>
@@ -633,9 +657,9 @@ Le but de cette section est de présenter une méthode efficace pour calculer de
         = \lim_{n\to+\infty} \bigl[\ln(\ln(t))\bigr]_2^n = +\infty.
         \]
 
-        On en déduit que \(\sum\limits_{n\geqslant 2}\frac{1}{n\ln(n)}\) diverge vers \(+\infty\) par comparaison série-intégrale. Plus précisément, on peut même obtenir un équivalent des sommes partielles :
+        On en déduit que \(\sum\limits_{n\geqslant 2}\frac{1}{n\ln(n)}\) diverge vers \(+\infty\) par comparaison série-intégrale. Plus précisément, on peut aussi obtenir un équivalent des sommes partielles :
 
-        由此，由级数与积分的比较推出 \(\sum\limits_{n\geqslant 2}\frac{1}{n\ln(n)}\) 发散到 \(+\infty\)。更精确地说，甚至可以求出部分和的等价量：
+        由此，由级数与积分的比较推出 \(\sum\limits_{n\geqslant 2}\frac{1}{n\ln(n)}\) 发散到 \(+\infty\)。更精确地说，也可以求出部分和的等价量：
         {: .zh }
 
         \[
@@ -657,9 +681,9 @@ Le but de cette section est de présenter une méthode efficace pour calculer de
         = \lim_{n\to+\infty} \left[\frac{-1}{\ln(t)}\right]_2^n = \frac{1}{\ln(2)}.
         \]
 
-        On en déduit que \(\sum\limits_{n\geqslant 2}\frac{1}{n(\ln(n))^2}\) est convergente par comparaison série-intégrale. De plus, on peut même obtenir un équivalent des restes :
+        On en déduit que \(\sum\limits_{n\geqslant 2}\frac{1}{n(\ln(n))^2}\) est convergente par comparaison série-intégrale. De plus, on peut aussi obtenir un équivalent des restes :
 
-        由此，由级数与积分的比较推出 \(\sum\limits_{n\geqslant 2}\frac{1}{n(\ln(n))^2}\) 收敛。此外，甚至可以求出余项的等价量：
+        由此，由级数与积分的比较推出 \(\sum\limits_{n\geqslant 2}\frac{1}{n(\ln(n))^2}\) 收敛。此外，也可以求出余项的等价量：
         {: .zh }
 
         \[
@@ -720,9 +744,9 @@ Le but de cette section est de présenter une méthode efficace pour calculer de
 
     <p class="cqfd">∎</p>
 
-En particulier, on retrouve que la série harmonique \(\sum\limits_{n\geqslant 1}\frac{1}{n}\) diverge vers \(+\infty\) et que la série d'Euler \(\sum\limits_{n\geqslant 1}\frac{1}{n^2}\) est convergente. Plus précisément, on peut même obtenir un équivalent des sommes partielles de la série harmonique par comparaison série-intégrale :
+En particulier, on retrouve que la série harmonique \(\sum\limits_{n\geqslant 1}\frac{1}{n}\) diverge vers \(+\infty\) et que la série d'Euler \(\sum\limits_{n\geqslant 1}\frac{1}{n^2}\) est convergente. Plus précisément, on obtient aussi que :
 
-特别地，由此重新得到：调和级数 \(\sum\limits_{n\geqslant 1}\frac{1}{n}\) 发散到 \(+\infty\)，而欧拉级数 \(\sum\limits_{n\geqslant 1}\frac{1}{n^2}\) 收敛。更精确地说，通过级数与积分的比较，甚至可以求出调和级数部分和的等价量：
+特别地，由此重新得到：调和级数 \(\sum\limits_{n\geqslant 1}\frac{1}{n}\) 发散到 \(+\infty\)，而欧拉级数 \(\sum\limits_{n\geqslant 1}\frac{1}{n^2}\) 收敛。更精确地说，还可以得到：
 {: .zh }
 
 \[
@@ -734,27 +758,133 @@ En particulier, on retrouve que la série harmonique \(\sum\limits_{n\geqslant 1
 \sum_{k=1}^{n}\frac{1}{k} \simn \ln(n).
 \]
 
-De même, on peut retrouver que \(\sum\limits_{k=n+1}^{+\infty}\frac{1}{k^2} \sim \frac{1}{n}\) quand \(n \to +\infty\).
+et :
 
-同样可以重新得到：当 \(n \to +\infty\) 时 \(\sum\limits_{k=n+1}^{+\infty}\frac{1}{k^2} \sim \frac{1}{n}\)。
+以及：
 {: .zh }
+
+\[
+\forall N \geqslant n+1 \geqslant 2,\quad
+\underbrace{\int_{n+1}^{N+1}\frac{\mathrm{d}t}{t^2}}_{=\,\frac{1}{n+1}-\frac{1}{N+1}}
+\leqslant \sum_{k=n+1}^{N}\frac{1}{k^2}
+\leqslant \underbrace{\int_n^{N}\frac{\mathrm{d}t}{t^2}}_{=\,\frac{1}{n}-\frac{1}{N}}
+\quad\text{donc}\quad
+\sum_{k=n+1}^{+\infty}\frac{1}{k^2} \simn \frac{1}{n}.
+\]
+
+!!! danger "Corollaire 3.4 : critère de Riemann<br><span class='zh-title'>推论 3.4：黎曼判别法（critère de Riemann）</span>"
+
+    Soit \(\sum u_n\) une série à termes positifs (à partir d'un certain rang).
+
+    设 \(\sum u_n\) 为（从某一项起）正项的级数。
+    {: .zh }
+
+    - S'il existe \(\alpha > 1\) tel que \(\lim\limits_{n\to+\infty} n^\alpha u_n = 0\), alors \(\sum u_n\) est convergente.
+
+        若存在 \(\alpha > 1\) 使得 \(\lim\limits_{n\to+\infty} n^\alpha u_n = 0\)，则 \(\sum u_n\) 收敛。
+        {: .zh }
+
+    - S'il existe \(\alpha \leqslant 1\) tel que \(\lim\limits_{n\to+\infty} n^\alpha u_n = +\infty\), alors \(\sum u_n\) diverge vers \(+\infty\).
+
+        若存在 \(\alpha \leqslant 1\) 使得 \(\lim\limits_{n\to+\infty} n^\alpha u_n = +\infty\)，则 \(\sum u_n\) 发散到 \(+\infty\)。
+        {: .zh }
+
+!!! demo ""
+
+    <strong>Démonstration.</strong>
+
+    <strong>证明.</strong>
+    {: .zh }
+
+    - Si \(\lim\limits_{n\to+\infty} n^\alpha u_n = 0\), alors \(u_n = \on\left(\frac{1}{n^\alpha}\right)\) quand \(n \to +\infty\), d'où le résultat par sommation des petits o car la série de Riemann \(\sum\limits_{n\geqslant 1}\frac{1}{n^\alpha}\) est convergente si \(\alpha > 1\).
+
+        若 \(\lim\limits_{n\to+\infty} n^\alpha u_n = 0\)，则当 \(n \to +\infty\) 时 \(u_n = \on\left(\frac{1}{n^\alpha}\right)\)；由于当 \(\alpha > 1\) 时黎曼级数 \(\sum\limits_{n\geqslant 1}\frac{1}{n^\alpha}\) 收敛，由小 \(o\) 的求和即得结论。
+        {: .zh }
+
+    - Si \(\lim\limits_{n\to+\infty} n^\alpha u_n = +\infty\), alors \(\frac{1}{n^\alpha} = \on(u_n)\) quand \(n \to +\infty\), d'où le résultat par sommation des petits o car la série de Riemann \(\sum\limits_{n\geqslant 1}\frac{1}{n^\alpha}\) est divergente si \(\alpha \leqslant 1\).
+
+        若 \(\lim\limits_{n\to+\infty} n^\alpha u_n = +\infty\)，则当 \(n \to +\infty\) 时 \(\frac{1}{n^\alpha} = \on(u_n)\)；由于当 \(\alpha \leqslant 1\) 时黎曼级数 \(\sum\limits_{n\geqslant 1}\frac{1}{n^\alpha}\) 发散，由小 \(o\) 的求和即得结论。
+        {: .zh }
+
+    <p class="cqfd">∎</p>
+
+!!! info "Exemple 3.5<br><span class='zh-title'>例 3.5</span>"
+
+    - \(\sum\limits_{n\geqslant 2}\frac{\ln(n)}{n^2}\) est convergente d'après le critère de Riemann car :
+
+        由黎曼判别法，\(\sum\limits_{n\geqslant 2}\frac{\ln(n)}{n^2}\) 收敛，因为：
+        {: .zh }
+
+        \[
+        \lim_{n\to+\infty} n^{3/2}\frac{\ln(n)}{n^2}
+        = \lim_{n\to+\infty}\frac{\ln(n)}{n^{1/2}} = 0
+        \qquad\text{par croissances comparées.}
+        \]
+
+        Plus généralement, pour tout \(\alpha > 1\) et tout \(\beta \in \mathbb{R}\), \(\sum\limits_{n\geqslant 2}\frac{(\ln(n))^\beta}{n^\alpha}\) est convergente d'après le critère de Riemann car :
+
+        更一般地，对任意 \(\alpha > 1\) 与 \(\beta \in \mathbb{R}\)，由黎曼判别法，\(\sum\limits_{n\geqslant 2}\frac{(\ln(n))^\beta}{n^\alpha}\) 收敛，因为：
+        {: .zh }
+
+        \[
+        \begin{aligned}
+        \lim_{n\to+\infty} \underbrace{n^{(1+\alpha)/2}}_{\geqslant 1}\frac{(\ln(n))^\beta}{n^\alpha}
+        &= \lim_{n\to+\infty}\frac{(\ln(n))^\beta}{n^{(\alpha-1)/2}}\\
+        &= \begin{cases}
+        0 & \text{si } \beta \leqslant 0 \text{ car } \frac{\alpha-1}{2} > 0,\\[4pt]
+        \lim\limits_{n\to+\infty}\left(\frac{\ln(n)}{n^{(\alpha-1)/(2\beta)}}\right)^\beta = 0 & \text{si } \beta > 0.
+        \end{cases}
+        \end{aligned}
+        \]
+
+    - \(\sum\limits_{n\geqslant 2}\frac{1}{\sqrt{n}\ln(n)}\) diverge vers \(+\infty\) d'après le critère de Riemann car :
+
+        由黎曼判别法，\(\sum\limits_{n\geqslant 2}\frac{1}{\sqrt{n}\ln(n)}\) 发散到 \(+\infty\)，因为：
+        {: .zh }
+
+        \[
+        \lim_{n\to+\infty} n^{3/4}\frac{1}{\sqrt{n}\ln(n)}
+        = \lim_{n\to+\infty}\frac{n^{1/4}}{\ln(n)} = +\infty.
+        \]
+
+        Plus généralement, pour tout \(\alpha < 1\) et tout \(\beta \in \mathbb{R}\), \(\sum\limits_{n\geqslant 2}\frac{(\ln(n))^\beta}{n^\alpha}\) diverge vers \(+\infty\) d'après le critère de Riemann car :
+
+        更一般地，对任意 \(\alpha < 1\) 与 \(\beta \in \mathbb{R}\)，由黎曼判别法，\(\sum\limits_{n\geqslant 2}\frac{(\ln(n))^\beta}{n^\alpha}\) 发散到 \(+\infty\)，因为：
+        {: .zh }
+
+        \[
+        \begin{aligned}
+        \lim_{n\to+\infty} \underbrace{n^{(\alpha+1)/2}}_{<\,1}\frac{(\ln(n))^\beta}{n^\alpha}
+        &= \lim_{n\to+\infty} n^{(1-\alpha)/2}(\ln(n))^\beta\\
+        &= \begin{cases}
+        +\infty & \text{si } \beta \geqslant 0 \text{ car } \frac{1-\alpha}{2} > 0,\\[4pt]
+        \lim\limits_{n\to+\infty}\left(\frac{n^{(1-\alpha)/(-2\beta)}}{\ln(n)}\right)^{-\beta} = +\infty & \text{si } \beta < 0.
+        \end{cases}
+        \end{aligned}
+        \]
+
+    Le cas \(\alpha = 1\) dépend de \(\beta\), voir l'exemple 3.2.
+
+    \(\alpha = 1\) 的情形取决于 \(\beta\)，见例 3.2。
+    {: .zh }
 
 La méthode de comparaison série-intégrale peut aussi s'adapter aux fonctions croissantes.
 
 级数与积分比较的方法也可以推广到递增函数。
 {: .zh }
 
-!!! info "Exemple 3.4<br><span class='zh-title'>例 3.4</span>"
+!!! info "Exemple 3.6<br><span class='zh-title'>例 3.6</span>"
 
-    Puisque la fonction \(t \mapsto \ln(t)\) est continue et croissante sur \(]0,+\infty[\), on a par monotonie de l'intégrale pour tout \(k \geqslant 1\) :
+    Puisque la fonction \(t \mapsto \ln(t)\) est continue et croissante sur \(]0,+\infty[\), on a par monotonie de l'intégrale :
 
-    由于函数 \(t \mapsto \ln(t)\) 在 \(]0,+\infty[\) 上连续且递增，由积分的单调性，对一切 \(k \geqslant 1\) 有：
+    由于函数 \(t \mapsto \ln(t)\) 在 \(]0,+\infty[\) 上连续且递增，由积分的单调性有：
     {: .zh }
 
     \[
-    \ln(k) = \int_{k}^{k+1} \ln(k)\,\mathrm{d}t
+    \forall k \geqslant 1,\quad
+    \underbrace{\int_{k}^{k+1} \ln(k)\,\mathrm{d}t}_{=\,\ln(k)}
     \leqslant \int_{k}^{k+1} \ln(t)\,\mathrm{d}t
-    \leqslant \int_{k}^{k+1} \ln(k+1)\,\mathrm{d}t = \ln(k+1).
+    \leqslant \underbrace{\int_{k}^{k+1} \ln(k+1)\,\mathrm{d}t}_{=\,\ln(k+1)}.
     \]
 
     Par conséquent, on obtient d'après la relation de Chasles :
@@ -789,6 +919,9 @@ La méthode de comparaison série-intégrale peut aussi s'adapter aux fonctions 
     - <strong>primitive</strong>：原函数
     - <strong>équivalent des sommes partielles</strong>：部分和的等价量
     - <strong>équivalent des restes</strong>：余项的等价量
+    - <strong>vitesse de convergence / de divergence</strong>：收敛速度 / 发散速度
+    - <strong>sommation des petits o</strong>：小 \(o\) 的求和
+    - <strong>critère de Riemann</strong>：黎曼判别法
     - <strong>fonction croissante</strong>：递增函数
 
 ## 4　Convergence absolue <span class="heading-zh">绝对收敛</span>
@@ -984,102 +1117,6 @@ Dans cette section, on revient au cas général des séries numériques, c'est-�
     \forall z \in \mathbb{C},\quad \sum_{n=0}^{+\infty}\frac{z^n}{n!} = e^z.
     \]
 
-!!! danger "Théorème 4.6 : sommation des petits o<br><span class='zh-title'>定理 4.6：小 o 的求和（sommation des petits o）</span>"
-
-    Soient \((u_n)_{n\geqslant n_0}\) une suite de nombres de \(\mathbb{K}\) et \((b_n)_{n\geqslant n_0}\) une suite réelle positive telles que \(u_n = \on(b_n)\).
-
-    设 \((u_n)_{n\geqslant n_0}\) 为取值于 \(\mathbb{K}\) 的数列，\((b_n)_{n\geqslant n_0}\) 为非负实数列，且 \(u_n = \on(b_n)\)。
-    {: .zh }
-
-    - Si \(\sum b_n\) est convergente, alors \(\sum u_n\) converge absolument et \(\sum\limits_{k=n+1}^{+\infty} u_k = \on\left(\sum\limits_{k=n+1}^{+\infty} b_k\right)\).
-
-        若 \(\sum b_n\) 收敛，则 \(\sum u_n\) 绝对收敛，且 \(\sum\limits_{k=n+1}^{+\infty} u_k = \on\left(\sum\limits_{k=n+1}^{+\infty} b_k\right)\)。
-        {: .zh }
-
-    - Si \(\sum b_n\) est divergente, alors \(\sum\limits_{k=n_0}^{n} u_k = \on\left(\sum\limits_{k=n_0}^{n} b_k\right)\).
-
-        若 \(\sum b_n\) 发散，则 \(\sum\limits_{k=n_0}^{n} u_k = \on\left(\sum\limits_{k=n_0}^{n} b_k\right)\)。
-        {: .zh }
-
-!!! demo ""
-
-    <strong>Démonstration.</strong> On peut utiliser une démonstration similaire à celle du théorème de sommation des équivalents.
-
-    <strong>证明.</strong> 可以采用与等价量求和定理类似的证明。
-    {: .zh }
-
-    <p class="cqfd">∎</p>
-
-!!! danger "Corollaire 4.7 : critère de Riemann<br><span class='zh-title'>推论 4.7：黎曼判别法（critère de Riemann）</span>"
-
-    Soit \(\sum u_n\) une série.
-
-    设 \(\sum u_n\) 为一个级数。
-    {: .zh }
-
-    - S'il existe \(\alpha > 1\) tel que \(\lim\limits_{n\to+\infty} n^\alpha u_n = 0\), alors \(\sum u_n\) converge absolument.
-
-        若存在 \(\alpha > 1\) 使得 \(\lim\limits_{n\to+\infty} n^\alpha u_n = 0\)，则 \(\sum u_n\) 绝对收敛。
-        {: .zh }
-
-    - Si \((u_n)\) est positive (à partir d'un certain rang) et s'il existe \(\alpha \leqslant 1\) tel que \(\lim\limits_{n\to+\infty} n^\alpha u_n = +\infty\), alors \(\sum u_n\) diverge vers \(+\infty\).
-
-        若 \((u_n)\)（从某一项起）非负，且存在 \(\alpha \leqslant 1\) 使得 \(\lim\limits_{n\to+\infty} n^\alpha u_n = +\infty\)，则 \(\sum u_n\) 发散到 \(+\infty\)。
-        {: .zh }
-
-!!! demo ""
-
-    <strong>Démonstration.</strong> D'après la nature de la série de Riemann \(\sum\limits_{n\geqslant 1}\frac{1}{n^\alpha}\).
-
-    <strong>证明.</strong> 根据黎曼级数 \(\sum\limits_{n\geqslant 1}\frac{1}{n^\alpha}\) 的性质。
-    {: .zh }
-
-    <p class="cqfd">∎</p>
-
-!!! info "Exemple 4.8<br><span class='zh-title'>例 4.8</span>"
-
-    - \(\sum\limits_{n\geqslant 2}\frac{\ln(n)}{n^2}\) est convergente d'après le critère de Riemann car :
-
-        由黎曼判别法，\(\sum\limits_{n\geqslant 2}\frac{\ln(n)}{n^2}\) 收敛，因为：
-        {: .zh }
-
-        \[
-        \lim_{n\to+\infty} n^{3/2}\frac{\ln(n)}{n^2}
-        = \lim_{n\to+\infty}\frac{\ln(n)}{n^{1/2}} = 0
-        \qquad\text{d'après le théorème des croissances comparées.}
-        \]
-
-        Plus généralement, pour tout \(\alpha > 1\) et tout \(\beta \in \mathbb{R}\), \(\sum\limits_{n\geqslant 2}\frac{(\ln(n))^\beta}{n^\alpha}\) est convergente d'après le critère de Riemann car :
-
-        更一般地，对任意 \(\alpha > 1\) 与 \(\beta \in \mathbb{R}\)，由黎曼判别法，\(\sum\limits_{n\geqslant 2}\frac{(\ln(n))^\beta}{n^\alpha}\) 收敛，因为：
-        {: .zh }
-
-        \[
-        \begin{aligned}
-        \lim_{n\to+\infty} \underbrace{n^{(\alpha+1)/2}}_{\geqslant 1}\frac{(\ln(n))^\beta}{n^\alpha}
-        &= \lim_{n\to+\infty}\frac{(\ln(n))^\beta}{n^{(\alpha-1)/2}}\\
-        &= \begin{cases}
-        0 & \text{si } \beta \leqslant 0 \text{ car } \frac{\alpha-1}{2} > 0,\\[4pt]
-        \lim\limits_{n\to+\infty}\left(\frac{\ln(n)}{n^{(\alpha-1)/(2\beta)}}\right)^\beta = 0 & \text{si } \beta > 0.
-        \end{cases}
-        \end{aligned}
-        \]
-
-    - \(\sum\limits_{n\geqslant 2}\frac{1}{\sqrt{n}\ln(n)}\) diverge vers \(+\infty\) d'après le critère de Riemann car :
-
-        由黎曼判别法，\(\sum\limits_{n\geqslant 2}\frac{1}{\sqrt{n}\ln(n)}\) 发散到 \(+\infty\)，因为：
-        {: .zh }
-
-        \[
-        \lim_{n\to+\infty} n^{3/4}\frac{1}{\sqrt{n}\ln(n)}
-        = \lim_{n\to+\infty}\frac{n^{1/4}}{\ln(n)} = +\infty.
-        \]
-
-        Plus généralement, pour tout \(\alpha < 1\) et tout \(\beta \in \mathbb{R}\), on peut montrer que \(\sum\limits_{n\geqslant 2}\frac{(\ln(n))^\beta}{n^\alpha}\) diverge vers \(+\infty\) d'après le critère de Riemann.
-
-        更一般地，对任意 \(\alpha < 1\) 与 \(\beta \in \mathbb{R}\)，可以证明由黎曼判别法，\(\sum\limits_{n\geqslant 2}\frac{(\ln(n))^\beta}{n^\alpha}\) 发散到 \(+\infty\)。
-        {: .zh }
-
 !!! warning "Vocabulaire clé<br><span class='zh-title'>第 4 节核心术语</span>"
 
     - <strong>convergence absolue</strong>：绝对收敛
@@ -1087,8 +1124,6 @@ Dans cette section, on revient au cas général des séries numériques, c'est-�
     - <strong>semi-convergente</strong>：半收敛（收敛但不绝对收敛）
     - <strong>inégalité triangulaire</strong>：三角不等式
     - <strong>critère de d'Alembert</strong>：达朗贝尔判别法（比值判别法）
-    - <strong>sommation des petits o</strong>：小 \(o\) 的求和
-    - <strong>critère de Riemann</strong>：黎曼判别法
     - <strong>partie positive / partie négative</strong>：正部 / 负部
     - <strong>partie réelle / partie imaginaire</strong>：实部 / 虚部
     - <strong>théorème de limite par comparaison</strong>：比较极限定理
@@ -1097,46 +1132,70 @@ Dans cette section, on revient au cas général des séries numériques, c'est-�
 
 Dans cette section, on considère seulement des séries réelles, c'est-à-dire \(\mathbb{K} = \mathbb{R}\).
 
-本节只考虑实级数，即 \(\mathbb{K} = \mathbb{R}\)。本节内容在原讲义中仍为课堂框架，定理与证明待课上补充。
+本节只考虑实级数，即 \(\mathbb{K} = \mathbb{R}\)。
 {: .zh }
 
 !!! danger "Théorème 5.1 : critère des séries alternées<br><span class='zh-title'>定理 5.1：交错级数判别法（critère des séries alternées）</span>"
 
-    <em>(Énoncé et démonstration à compléter en cours.)</em>
+    Soit \(\sum\limits_{n\geqslant n_0}(-1)^n u_n\) une <strong>série alternée</strong>, c'est-à-dire telle que \((u_n)_{n\geqslant n_0}\) est une suite réelle positive. Si \((u_n)_{n\geqslant n_0}\) est décroissante et converge vers 0, alors \(\sum\limits_{n\geqslant n_0}(-1)^n u_n\) est convergente. De plus :
 
-    <em>（陈述与证明待课堂上补充。）</em>
+    设 \(\sum\limits_{n\geqslant n_0}(-1)^n u_n\) 为<strong>交错级数</strong>（série alternée），即 \((u_n)_{n\geqslant n_0}\) 是非负实数列。若 \((u_n)_{n\geqslant n_0}\) 递减且收敛于 0，则 \(\sum\limits_{n\geqslant n_0}(-1)^n u_n\) 收敛。此外：
     {: .zh }
+
+    - \(\sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\) est du signe de \((-1)^{n_0}\),
+
+        \(\sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\) 的符号与 \((-1)^{n_0}\) 相同；
+        {: .zh }
+
+    - pour tout \(n \geqslant n_0\), \(R_n = \sum\limits_{k=n+1}^{+\infty}(-1)^k u_k\) est du signe de \((-1)^{n+1}\) et \(|R_n| \leqslant u_{n+1}\).
+
+        对一切 \(n \geqslant n_0\)，\(R_n = \sum\limits_{k=n+1}^{+\infty}(-1)^k u_k\) 的符号与 \((-1)^{n+1}\) 相同，且 \(|R_n| \leqslant u_{n+1}\)。
+        {: .zh }
+
+!!! demo ""
+
+    <strong>Démonstration.</strong> À faire en cours.
+
+    <strong>证明.</strong> 课上完成。
+    {: .zh }
+
+    <p class="cqfd">∎</p>
 
 !!! info "Exemple 5.2<br><span class='zh-title'>例 5.2</span>"
 
-    \[
-    \sum \frac{(-1)^n}{n^\alpha}
-    \]
+    - Discuter de \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\).
 
-    考察级数 \(\sum \frac{(-1)^n}{n^\alpha}\) 的敛散性（详见课堂）。
-    {: .zh }
+        讨论 \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\)。
+        {: .zh }
+
+    - Soit \(\alpha \in \mathbb{R}\). Plus généralement, discuter de \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n^\alpha}\).
+
+        设 \(\alpha \in \mathbb{R}\)。更一般地，讨论 \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n^\alpha}\)。
+        {: .zh }
 
 !!! warning "Remarque<br><span class='zh-title'>注（Remarque）</span>"
 
-    \[
-    \sum \frac{(-1)^{n+1}}{n} = \ln(2).
-    \]
+    On peut montrer que :
 
-    该交错级数收敛，且其和为 \(\ln(2)\)。
+    可以证明：
     {: .zh }
+
+    \[
+    \sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n} = \ln(2).
+    \]
 
 !!! warning "Attention<br><span class='zh-title'>注意（Attention）</span>"
 
-    Ne pas oublier l'hypothèse de décroissance. Contre-exemple : \(\displaystyle\sum \frac{(-1)^n}{\sqrt{n}+(-1)^n}\).
+    Le critère des séries alternées est en général faux lorsque \((u_n)_{n\geqslant n_0}\) n'est pas décroissante.
 
-    不要忘记递减假设。反例：\(\displaystyle\sum \frac{(-1)^n}{\sqrt{n}+(-1)^n}\)。
+    当 \((u_n)_{n\geqslant n_0}\) 不递减时，交错级数判别法一般不再成立。
     {: .zh }
 
 !!! info "Exemple 5.3<br><span class='zh-title'>例 5.3</span>"
 
-    \(\displaystyle\sum \frac{(-1)^n}{\sqrt{n}}\) et \(\displaystyle\sum\left(\frac{(-1)^n}{\sqrt{n}}+\frac{1}{n}\right)\) ou \(\displaystyle\sum \frac{(-1)^n}{\sqrt{n}+(-1)^n}\) pour un contre-exemple de la sommation des équivalents.
+    Discuter de \(\displaystyle\sum_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}+(-1)^n}\) comme contre-exemple du critère des séries alternées avec \((u_n)_{n\geqslant n_0}\) non décroissante et comme contre-exemple du théorème de sommation des équivalents avec une suite de signe non constant.
 
-    \(\displaystyle\sum \frac{(-1)^n}{\sqrt{n}}\) 与 \(\displaystyle\sum\left(\frac{(-1)^n}{\sqrt{n}}+\frac{1}{n}\right)\)，或 \(\displaystyle\sum \frac{(-1)^n}{\sqrt{n}+(-1)^n}\)，可作为等价量求和的反例。
+    讨论 \(\displaystyle\sum_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}+(-1)^n}\)：它既是交错级数判别法在 \((u_n)_{n\geqslant n_0}\) 不递减时的反例，也是等价量求和定理在数列符号不恒定时的一个反例。
     {: .zh }
 
 !!! warning "Vocabulaire clé<br><span class='zh-title'>第 5 节核心术语</span>"
@@ -1144,39 +1203,110 @@ Dans cette section, on considère seulement des séries réelles, c'est-à-dire 
     - <strong>série alternée</strong>：交错级数
     - <strong>critère des séries alternées</strong>：交错级数判别法
     - <strong>hypothèse de décroissance</strong>：递减假设
+    - <strong>du signe de</strong>：与……同号
+    - <strong>reste \(R_n\)</strong>：余项 \(R_n\)
     - <strong>contre-exemple</strong>：反例
     - <strong>semi-convergente</strong>：半收敛
 
-## 6　Transformation d'Abel <span class="heading-zh">阿贝尔变换</span>
+## 6　Critère d'Abel <span class="heading-zh">阿贝尔判别法</span>
 
-On revient au cas général.
+Le but de cette section est de présenter le <strong>critère d'Abel</strong> qui généralise le critère des séries alternées en remplaçant par exemple le signe \((-1)^n\) par un facteur de la forme \(\cos(n)\), \(\sin(n)\) ou même une exponentielle complexe \(e^{i\theta n}\) avec \(\theta \in \mathbb{R} \setminus 2\pi\mathbb{Z}\).
 
-回到一般情形。本节内容在原讲义中仍为课堂框架，定理与例子待课上补充。
+本节介绍<strong>阿贝尔判别法</strong>（critère d'Abel）：它把交错级数判别法中的符号 \((-1)^n\) 换成 \(\cos(n)\)、\(\sin(n)\) 乃至复指数 \(e^{i\theta n}\)（\(\theta \in \mathbb{R} \setminus 2\pi\mathbb{Z}\)）之类的因子，从而推广交错级数判别法。
 {: .zh }
 
-!!! danger "Théorème 6.1 : transformation d'Abel<br><span class='zh-title'>定理 6.1：阿贝尔变换（transformation d'Abel）</span>"
+!!! danger "Théorème 6.1 : formule de sommation par parties<br><span class='zh-title'>定理 6.1：分部求和公式（formule de sommation par parties）</span>"
 
-    <em>(Énoncé et démonstration à compléter en cours.)</em>
+    Soient \((a_n)_{n\geqslant n_0}\) et \((b_n)_{n\geqslant n_0}\) deux suites de nombres de \(\mathbb{K}\). On a pour tout \(n \geqslant n_0 + 1\) :
 
-    <em>（陈述与证明待课堂上补充。）</em>
+    设 \((a_n)_{n\geqslant n_0}\) 与 \((b_n)_{n\geqslant n_0}\) 为取值于 \(\mathbb{K}\) 的两个数列。对一切 \(n \geqslant n_0 + 1\)，有：
     {: .zh }
 
-!!! danger "Corollaire 6.2 : théorème d'Abel<br><span class='zh-title'>推论 6.2：阿贝尔定理（théorème d'Abel）</span>"
+    \[
+    \sum_{k=n_0}^{n-1} (a_{k+1} - a_k) b_k
+    = [a_n b_n - a_{n_0} b_{n_0}] - \sum_{k=n_0}^{n-1} a_{k+1}(b_{k+1} - b_k).
+    \]
 
-    <em>(Énoncé et démonstration à compléter en cours.)</em>
+!!! demo ""
 
-    <em>（陈述与证明待课堂上补充。）</em>
+    <strong>Démonstration.</strong> À faire en cours.
+
+    <strong>证明.</strong> 课上完成。
+    {: .zh }
+
+    <p class="cqfd">∎</p>
+
+!!! danger "Corollaire 6.2 : critère d'Abel<br><span class='zh-title'>推论 6.2：阿贝尔判别法（critère d'Abel）</span>"
+
+    Soit \(\sum\limits_{n\geqslant n_0} s_n u_n\) une série telle que :
+
+    设 \(\sum\limits_{n\geqslant n_0} s_n u_n\) 为一个级数，满足：
+    {: .zh }
+
+    - \((u_n)_{n\geqslant n_0}\) est une suite réelle, positive, décroissante et qui converge vers 0,
+
+        \((u_n)_{n\geqslant n_0}\) 是非负、递减且收敛于 0 的实数列；
+        {: .zh }
+
+    - \((s_n)_{n\geqslant n_0}\) est une suite de nombres de \(\mathbb{K}\) telle que \((S_n = \sum\limits_{k=n_0}^{n} s_k)_{n\geqslant n_0}\) est bornée.
+
+        \((s_n)_{n\geqslant n_0}\) 是取值于 \(\mathbb{K}\) 的数列，且 \((S_n = \sum\limits_{k=n_0}^{n} s_k)_{n\geqslant n_0}\) 有界。
+        {: .zh }
+
+    Alors \(\sum\limits_{n\geqslant n_0} s_n u_n\) est convergente.
+
+    则 \(\sum\limits_{n\geqslant n_0} s_n u_n\) 收敛。
+    {: .zh }
+
+!!! demo ""
+
+    <strong>Démonstration.</strong> À faire en cours.
+
+    <strong>证明.</strong> 课上完成。
+    {: .zh }
+
+    <p class="cqfd">∎</p>
+
+!!! warning "Remarque<br><span class='zh-title'>注（Remarque）</span>"
+
+    Pour \((s_n = (-1)^n)_{n\geqslant n_0}\), on retrouve le critère des séries alternées. En effet :
+
+    取 \((s_n = (-1)^n)_{n\geqslant n_0}\) 时，便重新得到交错级数判别法。事实上：
+    {: .zh }
+
+    \[
+    \forall n \in \mathbb{N},\quad
+    \sum_{k=0}^{n} (-1)^k = \frac{1 - (-1)^{n+1}}{1 - (-1)}
+    = \begin{cases}
+    1 & \text{si } n \text{ pair},\\
+    0 & \text{si } n \text{ impair},
+    \end{cases}
+    \]
+
+    donc \((S_n = \sum\limits_{k=n_0}^{n} s_k)_{n\geqslant n_0}\) est bornée.
+
+    因此 \((S_n = \sum\limits_{k=n_0}^{n} s_k)_{n\geqslant n_0}\) 有界。
     {: .zh }
 
 !!! info "Exemple 6.3<br><span class='zh-title'>例 6.3</span>"
 
-    \(\displaystyle\sum \frac{e^{in\theta}}{n^\alpha}\), en particulier \(\displaystyle\sum \frac{\cos(n)}{n}\) et \(\displaystyle\sum \frac{\sin(n)}{n}\).
+    Soient \(\alpha > 0\) et \(\theta \in \mathbb{R} \setminus 2\pi\mathbb{Z}\). Discuter de \(\sum\limits_{n\geqslant 1}\frac{e^{in\theta}}{n^\alpha}\). Puis, en particulier, de \(\sum\limits_{n\geqslant 1}\frac{\cos(n)}{n}\) et \(\sum\limits_{n\geqslant 1}\frac{\sin(n)}{n}\).
 
-    考察 \(\displaystyle\sum \frac{e^{in\theta}}{n^\alpha}\)，特别地考察 \(\displaystyle\sum \frac{\cos(n)}{n}\) 与 \(\displaystyle\sum \frac{\sin(n)}{n}\)。
+    设 \(\alpha > 0\)、\(\theta \in \mathbb{R} \setminus 2\pi\mathbb{Z}\)。讨论 \(\sum\limits_{n\geqslant 1}\frac{e^{in\theta}}{n^\alpha}\)；然后特别讨论 \(\sum\limits_{n\geqslant 1}\frac{\cos(n)}{n}\) 与 \(\sum\limits_{n\geqslant 1}\frac{\sin(n)}{n}\)。
+    {: .zh }
+
+!!! warning "Remarque<br><span class='zh-title'>注（Remarque）</span>"
+
+    On peut montrer que \(\sum\limits_{n\geqslant 1}\frac{\cos(n)}{n}\) et \(\sum\limits_{n\geqslant 1}\frac{\sin(n)}{n}\) sont semi-convergentes, comme \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\).
+
+    可以证明 \(\sum\limits_{n\geqslant 1}\frac{\cos(n)}{n}\) 与 \(\sum\limits_{n\geqslant 1}\frac{\sin(n)}{n}\) 是半收敛的，与 \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\) 类似。
     {: .zh }
 
 !!! warning "Vocabulaire clé<br><span class='zh-title'>第 6 节核心术语</span>"
 
     - <strong>transformation d'Abel</strong>：阿贝尔变换
-    - <strong>théorème d'Abel</strong>：阿贝尔定理
+    - <strong>sommation par parties</strong>：分部求和
+    - <strong>critère d'Abel</strong>：阿贝尔判别法
+    - <strong>suite bornée</strong>：有界数列
     - <strong>série trigonométrique</strong>：三角级数
+    - <strong>semi-convergente</strong>：半收敛
