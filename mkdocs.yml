@@ -206,6 +206,16 @@ nav:
         - 学术英语阅读与写作:
           - 课程总览: courses/year2/semester1/学术英语阅读与写作/index.md
           - Unit 1 期中复习讲义: courses/year2/semester1/学术英语阅读与写作/期中复习讲义.md
+        - 综合法语实训:
+          - 课程总览: courses/year2/semester1/综合法语实训/index.md
+          - 课程讲义:
+            - 第 1 课 电动汽车: courses/year2/semester1/综合法语实训/课程讲义/01-voitures-electriques.md
+            - 第 2 课 电动汽车真的更环保吗: courses/year2/semester1/综合法语实训/课程讲义/02-voiture-electrique-ecologique.md
+            - 第 3 课 自动驾驶汽车: courses/year2/semester1/综合法语实训/课程讲义/03-vehicules-autonomes.md
+            - 第 4 课 自动驾驶汽车，该害怕吗: courses/year2/semester1/综合法语实训/课程讲义/04-voiture-autonome-peur.md
+            - 第 5 课 中国与低空经济: courses/year2/semester1/综合法语实训/课程讲义/05-economie-basse-altitude.md
+            - 第 6 课 服务日常生活的无人机: courses/year2/semester1/综合法语实训/课程讲义/06-drones-quotidien.md
+          - Échanger 写作备考手册: courses/year2/semester1/综合法语实训/写作备考手册.md
       - 大二下学期:
         - 学期概览: courses/year2/semester2/index.md
     - 专题资料:
