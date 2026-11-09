@@ -13,6 +13,10 @@ title: 公告归档
 
     本页汇总首页公告栏的历史条目。最新内容请回到[首页](../index.md)查看。
 
+## 2026 年 11 月 10 日
+
+- **新讲义** · [电路基础 动电学 TD1 电荷输运解答](../courses/year2/semester1/电路基础/习题课/td-electrocinetique-1-transport.md) — 电荷载流子与电流密度、漂移速度、德鲁德模型、Tolman–Stewart 实验与 Drude 模型的概率推导，五道练习全解
+
 ## 2026 年 11 月 8 日
 
 - **新讲义** · [工程数学 TD7 矩阵初步（题目与参考解答）](../courses/year2/semester1/工程数学/习题课/td7-introduction-matrices.md) — 矩形矩阵的乘积、转置与 \(AA^T\)、矩阵的幂、零化多项式与欧几里得除法、循环矩阵、交换性与幂零矩阵，八道练习全解
