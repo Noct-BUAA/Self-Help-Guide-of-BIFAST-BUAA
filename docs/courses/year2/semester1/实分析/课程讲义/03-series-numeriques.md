@@ -130,16 +130,36 @@ Autrement dit, lorsque \(\sum\limits_{n\geqslant n_0} u_n\) converge, on a :
 
 !!! info "Exemple 1.3<br><span class='zh-title'>例 1.3</span>"
 
-    - Soit \(q \in \mathbb{C}\). On a :
+    - Soit \((u_n)_{n\geqslant n_0}\) une suite numérique. On a pour tout \(n \geqslant n_0\) :
 
-        设 \(q \in \mathbb{C}\)。有：
+        设 \((u_n)_{n\geqslant n_0}\) 为一个数列。对一切 \(n \geqslant n_0\)，有：
         {: .zh }
 
         \[
-        \forall n \in \mathbb{N},\quad \sum_{k=0}^{n} q^k =
+        \sum_{k=n_0}^{n} (u_{k+1} - u_k)
+        = (u_{n_0+1} - u_{n_0}) + (u_{n_0+2} - u_{n_0+1}) + \cdots + (u_{n+1} - u_n)
+        = u_{n+1} - u_{n_0}.
+        \]
+
+        Ainsi, la <strong>série télescopique</strong> \(\sum\limits_{n\geqslant n_0}(u_{n+1} - u_n)\) est convergente si et seulement si la suite \((u_n)_{n\geqslant n_0}\) est convergente.
+
+        因此，<strong>裂项级数</strong>（série télescopique）\(\sum\limits_{n\geqslant n_0}(u_{n+1} - u_n)\) 收敛当且仅当数列 \((u_n)_{n\geqslant n_0}\) 收敛。
+        {: .zh }
+
+    - Soit \(q \in \mathbb{C}\). On a pour tout \(n \in \mathbb{N}\) :
+
+        设 \(q \in \mathbb{C}\)。对一切 \(n \in \mathbb{N}\)，有：
+        {: .zh }
+
+        \[
+        (1 - q)\sum_{k=0}^{n} q^k
+        = \sum_{k=0}^{n}\left(q^k - q^{k+1}\right)
+        = 1 - q^{n+1}
+        \quad\text{donc}\quad
+        \sum_{k=0}^{n} q^k =
         \begin{cases}
         n + 1 & \text{si } q = 1, \\[4pt]
-        \dfrac{1 - q^{n+1}}{1 - q} & \text{sinon.}
+        \dfrac{1 - q^{n+1}}{1 - q} & \text{si } q \neq 1.
         \end{cases}
         \]
 
@@ -149,22 +169,10 @@ Autrement dit, lorsque \(\sum\limits_{n\geqslant n_0} u_n\) converge, on a :
         {: .zh }
 
         \[
-        \sum_{n=0}^{+\infty} q^n = \frac{1}{1 - q}.
+        \sum_{n=0}^{+\infty} q^n
+        = \lim_{n\to+\infty}\frac{1 - q^{n+1}}{1 - q}
+        = \frac{1}{1 - q}.
         \]
-
-    - Soit \((u_n)_{n\geqslant n_0}\) une suite numérique. On a :
-
-        设 \((u_n)_{n\geqslant n_0}\) 为一个数列。有：
-        {: .zh }
-
-        \[
-        \forall n \geqslant n_0,\quad \sum_{k=n_0}^{n} (u_{k+1} - u_k) = u_{n+1} - u_{n_0}.
-        \]
-
-        Ainsi, la <strong>série télescopique</strong> \(\sum\limits_{n\geqslant n_0}(u_{n+1} - u_n)\) est convergente si et seulement si la suite \((u_n)_{n\geqslant n_0}\) est convergente.
-
-        因此，<strong>裂项级数</strong>（série télescopique）\(\sum\limits_{n\geqslant n_0}(u_{n+1} - u_n)\) 收敛当且仅当数列 \((u_n)_{n\geqslant n_0}\) 收敛。
-        {: .zh }
 
 !!! warning "Important<br><span class='zh-title'>重要（Important）</span>"
 
@@ -515,11 +523,6 @@ En particulier, la somme d'une série à termes positifs existe toujours (dans \
         = 1 - \left(1 - \frac{1}{n+1}\right) = \frac{1}{n+1} \simn \frac{1}{n}.
         \]
 
-        Ainsi, la vitesse de convergence de la série d'Euler \(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\) vers sa somme est de l'ordre de \(\frac{1}{n}\) quand \(n \to +\infty\).
-
-        因此，欧拉级数 \(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\) 收敛到其和的速度，当 \(n \to +\infty\) 时是 \(\frac{1}{n}\) 的量级。
-        {: .zh }
-
     - On a :
 
         有：
@@ -701,13 +704,6 @@ Le but de cette section est de présenter une méthode efficace pour étudier la
         \[
         \sum_{k=n+1}^{+\infty}\frac{1}{k(\ln k)^2} \simn \frac{1}{\ln(n)}.
         \]
-
-!!! warning "Attention<br><span class='zh-title'>注意（Attention）</span>"
-
-    La somme de \(\sum\limits_{n\geqslant 2}\frac{1}{n(\ln(n))^2}\) n'est pas égale à \(\frac{1}{\ln(2)}\). La comparaison série-intégrale ne permet en général pas de calculer directement la somme d'une série convergente. Les calculs de somme sont souvent difficiles.
-
-    \(\sum\limits_{n\geqslant 2}\frac{1}{n(\ln(n))^2}\) 的和并不等于 \(\frac{1}{\ln(2)}\)。级数与积分的比较一般不能直接用来计算收敛级数的和。求和计算往往很困难。
-    {: .zh }
 
 !!! danger "Théorème 3.3 : séries de Riemann<br><span class='zh-title'>定理 3.3：黎曼级数（séries de Riemann）</span>"
 
@@ -1142,9 +1138,9 @@ Dans cette section, on considère seulement des séries réelles, c'est-à-dire 
     设 \(\sum\limits_{n\geqslant n_0}(-1)^n u_n\) 为<strong>交错级数</strong>（série alternée），即 \((u_n)_{n\geqslant n_0}\) 是非负实数列。若 \((u_n)_{n\geqslant n_0}\) 递减且收敛于 0，则 \(\sum\limits_{n\geqslant n_0}(-1)^n u_n\) 收敛。此外：
     {: .zh }
 
-    - \(\sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\) est du signe de \((-1)^{n_0}\),
+    - \(\sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\) est du signe de \((-1)^{n_0}\) (ou égal à 0),
 
-        \(\sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\) 的符号与 \((-1)^{n_0}\) 相同；
+        \(\sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\) 的符号与 \((-1)^{n_0}\) 相同（或等于 0）；
         {: .zh }
 
     - pour tout \(n \geqslant n_0\), \(R_n = \sum\limits_{k=n+1}^{+\infty}(-1)^k u_k\) est du signe de \((-1)^{n+1}\) et \(|R_n| \leqslant u_{n+1}\).
@@ -1154,35 +1150,76 @@ Dans cette section, on considère seulement des séries réelles, c'est-à-dire 
 
 !!! demo ""
 
-    <strong>Démonstration.</strong> À faire en cours.
+    <strong>Démonstration.</strong> Pour tout \(n \geqslant n_0\), on pose \(S_n = \sum\limits_{k=n_0}^{n}(-1)^k u_k\). Alors, pour tout \(n\) tel que \(2n \geqslant n_0\), on a :
 
-    <strong>证明.</strong> 课上完成。
+    <strong>证明.</strong> 对一切 \(n \geqslant n_0\)，令 \(S_n = \sum\limits_{k=n_0}^{n}(-1)^k u_k\)。则对一切满足 \(2n \geqslant n_0\) 的 \(n\)，有：
+    {: .zh }
+
+    - \(S_{2(n+1)} - S_{2n} = (-1)^{2n+2}u_{2n+2} + (-1)^{2n+1}u_{2n+1} = u_{2n+2} - u_{2n+1} \leqslant 0\),
+
+        \(S_{2(n+1)} - S_{2n} = (-1)^{2n+2}u_{2n+2} + (-1)^{2n+1}u_{2n+1} = u_{2n+2} - u_{2n+1} \leqslant 0\)，
+        {: .zh }
+
+    - \(S_{2(n+1)+1} - S_{2n+1} = (-1)^{2n+3}u_{2n+3} + (-1)^{2n+2}u_{2n+2} = u_{2n+2} - u_{2n+3} \geqslant 0\),
+
+        \(S_{2(n+1)+1} - S_{2n+1} = (-1)^{2n+3}u_{2n+3} + (-1)^{2n+2}u_{2n+2} = u_{2n+2} - u_{2n+3} \geqslant 0\)，
+        {: .zh }
+
+    - et \(S_{2n} - S_{2n+1} = -(-1)^{2n+1}u_{2n+1} = u_{2n+1} \to 0\) quand \(n \to +\infty\).
+
+        以及当 \(n \to +\infty\) 时 \(S_{2n} - S_{2n+1} = -(-1)^{2n+1}u_{2n+1} = u_{2n+1} \to 0\)。
+        {: .zh }
+
+    D'après le théorème des suites adjacentes, on en déduit que \((S_{2n})\) et \((S_{2n+1})\) convergent vers une même limite \(S \in \mathbb{R}\) et, pour tout \(n\) tel que \(2n \geqslant n_0\), \(S_{2n+1} \leqslant S \leqslant S_{2n}\). D'après le théorème des suites extraites, on en déduit que \(\sum\limits_{n\geqslant n_0}(-1)^n u_n\) converge vers \(S = \sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\). De plus, puisque \(S\) est compris entre \(S_{n_0} = (-1)^{n_0}u_{n_0}\) et \(S_{n_0+1} = (-1)^{n_0}(u_{n_0} - u_{n_0+1})\), \(S\) est du signe de \((-1)^{n_0}\) et \(u_{n_0} - u_{n_0+1} \leqslant |S| \leqslant u_{n_0}\). On raisonne de même pour le reste \(R_n = \sum\limits_{k=n+1}^{+\infty}(-1)^k u_k\) en remplaçant \(n_0\) par \(n+1\).
+
+    由相邻数列定理（théorème des suites adjacentes）推出 \((S_{2n})\) 与 \((S_{2n+1})\) 收敛于同一极限 \(S \in \mathbb{R}\)，且对一切满足 \(2n \geqslant n_0\) 的 \(n\)，\(S_{2n+1} \leqslant S \leqslant S_{2n}\)。由子列定理（théorème des suites extraites）推出 \(\sum\limits_{n\geqslant n_0}(-1)^n u_n\) 收敛于 \(S = \sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\)。此外，由于 \(S\) 介于 \(S_{n_0} = (-1)^{n_0}u_{n_0}\) 与 \(S_{n_0+1} = (-1)^{n_0}(u_{n_0} - u_{n_0+1})\) 之间，故 \(S\) 与 \((-1)^{n_0}\) 同号，且 \(u_{n_0} - u_{n_0+1} \leqslant |S| \leqslant u_{n_0}\)。对余项 \(R_n = \sum\limits_{k=n+1}^{+\infty}(-1)^k u_k\)，把 \(n_0\) 换成 \(n+1\) 同理可证。
     {: .zh }
 
     <p class="cqfd">∎</p>
 
 !!! info "Exemple 5.2<br><span class='zh-title'>例 5.2</span>"
 
-    - Discuter de \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\).
+    - \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\) est convergente d'après le critère des séries alternées. De plus :
 
-        讨论 \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\)。
+        由交错级数判别法，\(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\) 收敛。此外：
         {: .zh }
 
-    - Soit \(\alpha \in \mathbb{R}\). Plus généralement, discuter de \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n^\alpha}\).
+        \[
+        \sum_{n=1}^{+\infty}\frac{(-1)^n}{n} \leqslant 0
+        \quad\text{et}\quad
+        \forall n \geqslant 1,\quad
+        \left|\sum_{k=n+1}^{+\infty}\frac{(-1)^k}{k}\right| \leqslant \frac{1}{n+1}.
+        \]
 
-        设 \(\alpha \in \mathbb{R}\)。更一般地，讨论 \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n^\alpha}\)。
+        Mais \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\) ne converge pas absolument car la série harmonique \(\sum\limits_{n\geqslant 1}\frac{1}{n}\) est divergente. On dit que \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\) est <strong>semi-convergente</strong>.
+
+        但 \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\) 不绝对收敛，因为调和级数 \(\sum\limits_{n\geqslant 1}\frac{1}{n}\) 发散。此时称 \(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\) 是<strong>半收敛的</strong>（semi-convergente）。
         {: .zh }
 
-!!! warning "Remarque<br><span class='zh-title'>注（Remarque）</span>"
+        !!! warning "Remarque<br><span class='zh-title'>注（Remarque）</span>"
 
-    On peut montrer que :
+            On peut montrer que :
 
-    可以证明：
-    {: .zh }
+            可以证明：
+            {: .zh }
 
-    \[
-    \sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n} = \ln(2).
-    \]
+            \[
+            \sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n} = \ln(2).
+            \]
+
+    - Plus généralement, pour tout \(\alpha \in \mathbb{R}\) :
+
+        更一般地，对任意 \(\alpha \in \mathbb{R}\)：
+        {: .zh }
+
+        \[
+        \sum_{n\geqslant 1}\frac{(-1)^n}{n^\alpha}
+        \begin{cases}
+        \text{diverge grossièrement} & \text{si } \alpha \leqslant 0,\\[2pt]
+        \text{est semi-convergente} & \text{si } \alpha \in \,]0,1],\\[2pt]
+        \text{converge absolument} & \text{si } \alpha > 1.
+        \end{cases}
+        \]
 
 !!! warning "Attention<br><span class='zh-title'>注意（Attention）</span>"
 
@@ -1193,10 +1230,47 @@ Dans cette section, on considère seulement des séries réelles, c'est-à-dire 
 
 !!! info "Exemple 5.3<br><span class='zh-title'>例 5.3</span>"
 
-    Discuter de \(\displaystyle\sum_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}+(-1)^n}\) comme contre-exemple du critère des séries alternées avec \((u_n)_{n\geqslant n_0}\) non décroissante et comme contre-exemple du théorème de sommation des équivalents avec une suite de signe non constant.
+    On a :
 
-    讨论 \(\displaystyle\sum_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}+(-1)^n}\)：它既是交错级数判别法在 \((u_n)_{n\geqslant n_0}\) 不递减时的反例，也是等价量求和定理在数列符号不恒定时的一个反例。
+    有：
     {: .zh }
+
+    \[
+    \forall n \geqslant 2,\quad
+    \frac{(-1)^n}{\sqrt{n}} - \frac{1}{n + (-1)^n\sqrt{n}}
+    = \frac{(-1)^n\sqrt{n} + 1 - 1}{\sqrt{n}\left(\sqrt{n} + (-1)^n\right)}
+    = \frac{(-1)^n}{\sqrt{n} + (-1)^n}.
+    \]
+
+    Or :
+
+    而：
+    {: .zh }
+
+    - \(\sum\limits_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}}\) est convergente d'après le critère des séries alternées,
+
+        由交错级数判别法，\(\sum\limits_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}}\) 收敛；
+        {: .zh }
+
+    - \(0 \leqslant \sqrt{n}(\sqrt{n} - 1) \leqslant n + (-1)^n\sqrt{n} \sim n\) quand \(n \to +\infty\), donc \(\sum\limits_{n\geqslant 2}\frac{1}{n+(-1)^n\sqrt{n}}\) est divergente par sommation des équivalents car \(\sum\limits_{n\geqslant 1}\frac{1}{n}\) est divergente.
+
+        当 \(n \to +\infty\) 时 \(0 \leqslant \sqrt{n}(\sqrt{n} - 1) \leqslant n + (-1)^n\sqrt{n} \sim n\)，故由等价量求和，\(\sum\limits_{n\geqslant 2}\frac{1}{n+(-1)^n\sqrt{n}}\) 发散，因为 \(\sum\limits_{n\geqslant 1}\frac{1}{n}\) 发散。
+        {: .zh }
+
+    On en déduit que \(\sum\limits_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}+(-1)^n}\) diverge vers \(-\infty\). En particulier :
+
+    由此推出 \(\sum\limits_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}+(-1)^n}\) 发散到 \(-\infty\)。特别地：
+    {: .zh }
+
+    - on ne peut pas utiliser le critère des séries alternées car la suite \((u_n = \frac{1}{\sqrt{n}+(-1)^n})_{n\geqslant 2}\) n'est pas décroissante (car pour tout \(k \geqslant 1\), \(u_{2k} = \frac{1}{\sqrt{2k}+1} < \frac{1}{\sqrt{2k+1}-1} = u_{2k+1}\)),
+
+        不能使用交错级数判别法，因为数列 \((u_n = \frac{1}{\sqrt{n}+(-1)^n})_{n\geqslant 2}\) 不递减（因为对一切 \(k \geqslant 1\)，\(u_{2k} = \frac{1}{\sqrt{2k}+1} < \frac{1}{\sqrt{2k+1}-1} = u_{2k+1}\)）；
+        {: .zh }
+
+    - même si \(\frac{(-1)^n}{\sqrt{n}+(-1)^n} \sim \frac{(-1)^n}{\sqrt{n}}\) quand \(n \to +\infty\), on ne peut pas utiliser le théorème de sommation des équivalents car les deux suites ne sont pas de signe constant.
+
+        即使当 \(n \to +\infty\) 时 \(\frac{(-1)^n}{\sqrt{n}+(-1)^n} \sim \frac{(-1)^n}{\sqrt{n}}\)，也不能使用等价量求和定理，因为两个数列不保持符号恒定。
+        {: .zh }
 
 !!! warning "Vocabulaire clé<br><span class='zh-title'>第 5 节核心术语</span>"
 
@@ -1229,10 +1303,16 @@ Le but de cette section est de présenter le <strong>critère d'Abel</strong> qu
 
 !!! demo ""
 
-    <strong>Démonstration.</strong> À faire en cours.
+    <strong>Démonstration.</strong>
 
-    <strong>证明.</strong> 课上完成。
+    <strong>证明.</strong> 将下列两式相加，中间项逐项相消：
     {: .zh }
+
+    \[
+    \sum_{k=n_0}^{n-1}(a_{k+1} - a_k)b_k + \sum_{k=n_0}^{n-1}a_{k+1}(b_{k+1} - b_k)
+    = \sum_{k=n_0}^{n-1}\left(a_{k+1}b_{k+1} - a_kb_k\right)
+    = a_nb_n - a_{n_0}b_{n_0}.
+    \]
 
     <p class="cqfd">∎</p>
 
@@ -1260,9 +1340,38 @@ Le but de cette section est de présenter le <strong>critère d'Abel</strong> qu
 
 !!! demo ""
 
-    <strong>Démonstration.</strong> À faire en cours.
+    <strong>Démonstration.</strong> Par sommation par parties, on a pour tout \(n \geqslant n_0 + 1\) :
 
-    <strong>证明.</strong> 课上完成。
+    <strong>证明.</strong> 由分部求和，对一切 \(n \geqslant n_0 + 1\) 有：
+    {: .zh }
+
+    \[
+    \sum_{k=n_0+1}^{n} s_k u_k
+    = \sum_{k=n_0+1}^{n}(S_k - S_{k-1})u_k
+    = \left[S_n u_{n+1} - S_{n_0}u_{n_0+1}\right] - \sum_{k=n_0+1}^{n} S_k(u_{k+1} - u_k).
+    \]
+
+    Puisque \((S_n)_{n\geqslant n_0}\) est bornée et que \(u_{n+1}\) tend vers 0 quand \(n \to +\infty\), on en déduit que \(\lim\limits_{n\to+\infty} S_n u_{n+1} = 0\), donc que \(\sum\limits_{n\geqslant n_0} s_n u_n\) et \(\sum\limits_{n\geqslant n_0} S_n(u_{n+1} - u_n)\) ont même nature.
+
+    由于 \((S_n)_{n\geqslant n_0}\) 有界，且当 \(n \to +\infty\) 时 \(u_{n+1}\) 趋于 0，推出 \(\lim\limits_{n\to+\infty} S_n u_{n+1} = 0\)，因此 \(\sum\limits_{n\geqslant n_0} s_n u_n\) 与 \(\sum\limits_{n\geqslant n_0} S_n(u_{n+1} - u_n)\) 同性质。
+    {: .zh }
+
+    De plus, on sait qu'il existe \(R \in \mathbb{R}_+\) tel que pour tout \(n \geqslant n_0\), \(|S_n| \leqslant R\). Puisque \((u_n)_{n\geqslant n_0}\) est positive et décroissante, on a :
+
+    此外，存在 \(R \in \mathbb{R}_+\) 使得对一切 \(n \geqslant n_0\)，\(|S_n| \leqslant R\)。由于 \((u_n)_{n\geqslant n_0}\) 非负且递减，有：
+    {: .zh }
+
+    \[
+    \forall n \geqslant n_0,\quad
+    \sum_{k=n_0}^{n}\left|S_k(u_{k+1} - u_k)\right|
+    \leqslant R\sum_{k=n_0}^{n}(u_k - u_{k+1})
+    = R(u_{n_0} - u_{n+1})
+    \leqslant R u_{n_0}.
+    \]
+
+    Par conséquent, \(\sum\limits_{n\geqslant n_0} S_n(u_{n+1} - u_n)\) converge absolument, donc \(\sum\limits_{n\geqslant n_0} s_n u_n\) est convergente.
+
+    因此，\(\sum\limits_{n\geqslant n_0} S_n(u_{n+1} - u_n)\) 绝对收敛，故 \(\sum\limits_{n\geqslant n_0} s_n u_n\) 收敛。
     {: .zh }
 
     <p class="cqfd">∎</p>
@@ -1290,9 +1399,35 @@ Le but de cette section est de présenter le <strong>critère d'Abel</strong> qu
 
 !!! info "Exemple 6.3<br><span class='zh-title'>例 6.3</span>"
 
-    Soient \(\alpha > 0\) et \(\theta \in \mathbb{R} \setminus 2\pi\mathbb{Z}\). Discuter de \(\sum\limits_{n\geqslant 1}\frac{e^{in\theta}}{n^\alpha}\). Puis, en particulier, de \(\sum\limits_{n\geqslant 1}\frac{\cos(n)}{n}\) et \(\sum\limits_{n\geqslant 1}\frac{\sin(n)}{n}\).
+    Soit \(\theta \in \mathbb{R} \setminus 2\pi\mathbb{Z}\). Puisque \(e^{in\theta} \neq 1\), on a d'après les formules d'Euler :
 
-    设 \(\alpha > 0\)、\(\theta \in \mathbb{R} \setminus 2\pi\mathbb{Z}\)。讨论 \(\sum\limits_{n\geqslant 1}\frac{e^{in\theta}}{n^\alpha}\)；然后特别讨论 \(\sum\limits_{n\geqslant 1}\frac{\cos(n)}{n}\) 与 \(\sum\limits_{n\geqslant 1}\frac{\sin(n)}{n}\)。
+    设 \(\theta \in \mathbb{R} \setminus 2\pi\mathbb{Z}\)。由于 \(e^{in\theta} \neq 1\)，由欧拉公式（formules d'Euler）有：
+    {: .zh }
+
+    \[
+    \forall n \in \mathbb{N},\quad
+    \sum_{k=0}^{n} e^{ik\theta}
+    = \frac{1 - e^{i(n+1)\theta}}{1 - e^{i\theta}}
+    = \frac{e^{i(n+1)\theta/2}\,2i\sin\left(\frac{(n+1)\theta}{2}\right)}{e^{i\theta/2}\,2i\sin\left(\frac{\theta}{2}\right)}
+    = \frac{\sin\left(\frac{(n+1)\theta}{2}\right)}{\sin\left(\frac{\theta}{2}\right)}\,e^{in\theta/2}.
+    \]
+
+    Donc :
+
+    因此：
+    {: .zh }
+
+    \[
+    \forall n \in \mathbb{N},\quad
+    \left|\sum_{k=0}^{n} e^{ik\theta}\right|
+    = \left|\frac{1 - e^{i(n+1)\theta}}{1 - e^{i\theta}}\right|
+    = \frac{\left|\sin\left(\frac{(n+1)\theta}{2}\right)\right|}{\left|\sin\left(\frac{\theta}{2}\right)\right|}
+    \leqslant \frac{1}{\left|\sin\left(\frac{\theta}{2}\right)\right|}.
+    \]
+
+    Ainsi, \((S_n = \sum\limits_{k=1}^{n} e^{ik\theta})_{n\geqslant 1}\) est bornée. D'après le critère d'Abel, on en déduit que pour tout \(\alpha > 0\), \(\sum\limits_{n\geqslant 1}\frac{e^{in\theta}}{n^\alpha}\) est convergente. En particulier, en prenant les parties réelle et imaginaire pour \(\alpha = 1\), on obtient que \(\sum\limits_{n\geqslant 1}\frac{\cos(n)}{n}\) et \(\sum\limits_{n\geqslant 1}\frac{\sin(n)}{n}\) sont convergentes.
+
+    于是，\((S_n = \sum\limits_{k=1}^{n} e^{ik\theta})_{n\geqslant 1}\) 有界。由阿贝尔判别法推出，对任意 \(\alpha > 0\)，\(\sum\limits_{n\geqslant 1}\frac{e^{in\theta}}{n^\alpha}\) 收敛。特别地，取 \(\alpha = 1\) 并分离实部与虚部，得到 \(\sum\limits_{n\geqslant 1}\frac{\cos(n)}{n}\) 与 \(\sum\limits_{n\geqslant 1}\frac{\sin(n)}{n}\) 都收敛。
     {: .zh }
 
 !!! warning "Remarque<br><span class='zh-title'>注（Remarque）</span>"
