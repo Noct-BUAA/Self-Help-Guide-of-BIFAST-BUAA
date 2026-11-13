@@ -6082,29 +6082,37 @@ u_{n_0} = S_{n_0} \quad \text{et} \quad \forall n \geqslant n_0 + 1,\ u_n = S_n 
 <p class="admonition-title">Exemple 1.3<br><span class='zh-title'>例 1.3</span></p>
 <ul>
 <li>
-<p>Soit <span class="arithmatex">\(q \in \mathbb{C}\)</span>. On a :</p>
-<p class="zh">设 <span class="arithmatex">\(q \in \mathbb{C}\)</span>。有：</p>
+<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite numérique. On a pour tout <span class="arithmatex">\(n \geqslant n_0\)</span> :</p>
+<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 为一个数列。对一切 <span class="arithmatex">\(n \geqslant n_0\)</span>，有：</p>
 <div class="arithmatex">\[
-\forall n \in \mathbb{N},\quad \sum_{k=0}^{n} q^k =
+\sum_{k=n_0}^{n} (u_{k+1} - u_k)
+= (u_{n_0+1} - u_{n_0}) + (u_{n_0+2} - u_{n_0+1}) + \cdots + (u_{n+1} - u_n)
+= u_{n+1} - u_{n_0}.
+\]</div>
+<p>Ainsi, la <strong>série télescopique</strong> <span class="arithmatex">\(\sum\limits_{n\geqslant n_0}(u_{n+1} - u_n)\)</span> est convergente si et seulement si la suite <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est convergente.</p>
+<p class="zh">因此，<strong>裂项级数</strong>（série télescopique）<span class="arithmatex">\(\sum\limits_{n\geqslant n_0}(u_{n+1} - u_n)\)</span> 收敛当且仅当数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛。</p>
+</li>
+<li>
+<p>Soit <span class="arithmatex">\(q \in \mathbb{C}\)</span>. On a pour tout <span class="arithmatex">\(n \in \mathbb{N}\)</span> :</p>
+<p class="zh">设 <span class="arithmatex">\(q \in \mathbb{C}\)</span>。对一切 <span class="arithmatex">\(n \in \mathbb{N}\)</span>，有：</p>
+<div class="arithmatex">\[
+(1 - q)\sum_{k=0}^{n} q^k
+= \sum_{k=0}^{n}\left(q^k - q^{k+1}\right)
+= 1 - q^{n+1}
+\quad\text{donc}\quad
+\sum_{k=0}^{n} q^k =
 \begin{cases}
 n + 1 &amp; \text{si } q = 1, \\[4pt]
-\dfrac{1 - q^{n+1}}{1 - q} &amp; \text{sinon.}
+\dfrac{1 - q^{n+1}}{1 - q} &amp; \text{si } q \neq 1.
 \end{cases}
 \]</div>
 <p>Ainsi, la <strong>série géométrique</strong> <span class="arithmatex">\(\sum\limits_{n\geqslant 0} q^n\)</span> est convergente si et seulement si <span class="arithmatex">\(|q| &lt; 1\)</span>. Dans ce cas, sa somme est égale à :</p>
 <p class="zh">因此，<strong>几何级数</strong>（série géométrique）<span class="arithmatex">\(\sum\limits_{n\geqslant 0} q^n\)</span> 收敛当且仅当 <span class="arithmatex">\(|q| &lt; 1\)</span>。此时其和等于：</p>
 <div class="arithmatex">\[
-\sum_{n=0}^{+\infty} q^n = \frac{1}{1 - q}.
+\sum_{n=0}^{+\infty} q^n
+= \lim_{n\to+\infty}\frac{1 - q^{n+1}}{1 - q}
+= \frac{1}{1 - q}.
 \]</div>
-</li>
-<li>
-<p>Soit <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> une suite numérique. On a :</p>
-<p class="zh">设 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 为一个数列。有：</p>
-<div class="arithmatex">\[
-\forall n \geqslant n_0,\quad \sum_{k=n_0}^{n} (u_{k+1} - u_k) = u_{n+1} - u_{n_0}.
-\]</div>
-<p>Ainsi, la <strong>série télescopique</strong> <span class="arithmatex">\(\sum\limits_{n\geqslant n_0}(u_{n+1} - u_n)\)</span> est convergente si et seulement si la suite <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est convergente.</p>
-<p class="zh">因此，<strong>裂项级数</strong>（série télescopique）<span class="arithmatex">\(\sum\limits_{n\geqslant n_0}(u_{n+1} - u_n)\)</span> 收敛当且仅当数列 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 收敛。</p>
 </li>
 </ul>
 </div>
@@ -6368,8 +6376,6 @@ n + 1 &amp; \text{si } q = 1, \\[4pt]
 \sum_{k=n+1}^{+\infty} \frac{1}{k^2} \simn \sum_{k=n+1}^{+\infty} \frac{1}{k(k+1)}
 = 1 - \left(1 - \frac{1}{n+1}\right) = \frac{1}{n+1} \simn \frac{1}{n}.
 \]</div>
-<p>Ainsi, la vitesse de convergence de la série d'Euler <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\)</span> vers sa somme est de l'ordre de <span class="arithmatex">\(\frac{1}{n}\)</span> quand <span class="arithmatex">\(n \to +\infty\)</span>.</p>
-<p class="zh">因此，欧拉级数 <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\dfrac{1}{n^2}\)</span> 收敛到其和的速度，当 <span class="arithmatex">\(n \to +\infty\)</span> 时是 <span class="arithmatex">\(\frac{1}{n}\)</span> 的量级。</p>
 </li>
 <li>
 <p>On a :</p>
@@ -6507,11 +6513,6 @@ n + 1 &amp; \text{si } q = 1, \\[4pt]
 \]</div>
 </li>
 </ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Attention<br><span class='zh-title'>注意（Attention）</span></p>
-<p>La somme de <span class="arithmatex">\(\sum\limits_{n\geqslant 2}\frac{1}{n(\ln(n))^2}\)</span> n'est pas égale à <span class="arithmatex">\(\frac{1}{\ln(2)}\)</span>. La comparaison série-intégrale ne permet en général pas de calculer directement la somme d'une série convergente. Les calculs de somme sont souvent difficiles.</p>
-<p class="zh"><span class="arithmatex">\(\sum\limits_{n\geqslant 2}\frac{1}{n(\ln(n))^2}\)</span> 的和并不等于 <span class="arithmatex">\(\frac{1}{\ln(2)}\)</span>。级数与积分的比较一般不能直接用来计算收敛级数的和。求和计算往往很困难。</p>
 </div>
 <div class="admonition danger">
 <p class="admonition-title">Théorème 3.3 : séries de Riemann<br><span class='zh-title'>定理 3.3：黎曼级数（séries de Riemann）</span></p>
@@ -6850,8 +6851,8 @@ u_n^- = \max\{0,-u_n\} =
 <p class="zh">设 <span class="arithmatex">\(\sum\limits_{n\geqslant n_0}(-1)^n u_n\)</span> 为<strong>交错级数</strong>（série alternée），即 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 是非负实数列。若 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 递减且收敛于 0，则 <span class="arithmatex">\(\sum\limits_{n\geqslant n_0}(-1)^n u_n\)</span> 收敛。此外：</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(\sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\)</span> est du signe de <span class="arithmatex">\((-1)^{n_0}\)</span>,</p>
-<p class="zh"><span class="arithmatex">\(\sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\)</span> 的符号与 <span class="arithmatex">\((-1)^{n_0}\)</span> 相同；</p>
+<p><span class="arithmatex">\(\sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\)</span> est du signe de <span class="arithmatex">\((-1)^{n_0}\)</span> (ou égal à 0),</p>
+<p class="zh"><span class="arithmatex">\(\sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\)</span> 的符号与 <span class="arithmatex">\((-1)^{n_0}\)</span> 相同（或等于 0）；</p>
 </li>
 <li>
 <p>pour tout <span class="arithmatex">\(n \geqslant n_0\)</span>, <span class="arithmatex">\(R_n = \sum\limits_{k=n+1}^{+\infty}(-1)^k u_k\)</span> est du signe de <span class="arithmatex">\((-1)^{n+1}\)</span> et <span class="arithmatex">\(|R_n| \leqslant u_{n+1}\)</span>.</p>
@@ -6860,23 +6861,40 @@ u_n^- = \max\{0,-u_n\} =
 </ul>
 </div>
 <div class="admonition demo">
-<p><strong>Démonstration.</strong> À faire en cours.</p>
-<p class="zh"><strong>证明.</strong> 课上完成。</p>
+<p><strong>Démonstration.</strong> Pour tout <span class="arithmatex">\(n \geqslant n_0\)</span>, on pose <span class="arithmatex">\(S_n = \sum\limits_{k=n_0}^{n}(-1)^k u_k\)</span>. Alors, pour tout <span class="arithmatex">\(n\)</span> tel que <span class="arithmatex">\(2n \geqslant n_0\)</span>, on a :</p>
+<p class="zh"><strong>证明.</strong> 对一切 <span class="arithmatex">\(n \geqslant n_0\)</span>，令 <span class="arithmatex">\(S_n = \sum\limits_{k=n_0}^{n}(-1)^k u_k\)</span>。则对一切满足 <span class="arithmatex">\(2n \geqslant n_0\)</span> 的 <span class="arithmatex">\(n\)</span>，有：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(S_{2(n+1)} - S_{2n} = (-1)^{2n+2}u_{2n+2} + (-1)^{2n+1}u_{2n+1} = u_{2n+2} - u_{2n+1} \leqslant 0\)</span>,</p>
+<p class="zh"><span class="arithmatex">\(S_{2(n+1)} - S_{2n} = (-1)^{2n+2}u_{2n+2} + (-1)^{2n+1}u_{2n+1} = u_{2n+2} - u_{2n+1} \leqslant 0\)</span>，</p>
+</li>
+<li>
+<p><span class="arithmatex">\(S_{2(n+1)+1} - S_{2n+1} = (-1)^{2n+3}u_{2n+3} + (-1)^{2n+2}u_{2n+2} = u_{2n+2} - u_{2n+3} \geqslant 0\)</span>,</p>
+<p class="zh"><span class="arithmatex">\(S_{2(n+1)+1} - S_{2n+1} = (-1)^{2n+3}u_{2n+3} + (-1)^{2n+2}u_{2n+2} = u_{2n+2} - u_{2n+3} \geqslant 0\)</span>，</p>
+</li>
+<li>
+<p>et <span class="arithmatex">\(S_{2n} - S_{2n+1} = -(-1)^{2n+1}u_{2n+1} = u_{2n+1} \to 0\)</span> quand <span class="arithmatex">\(n \to +\infty\)</span>.</p>
+<p class="zh">以及当 <span class="arithmatex">\(n \to +\infty\)</span> 时 <span class="arithmatex">\(S_{2n} - S_{2n+1} = -(-1)^{2n+1}u_{2n+1} = u_{2n+1} \to 0\)</span>。</p>
+</li>
+</ul>
+<p>D'après le théorème des suites adjacentes, on en déduit que <span class="arithmatex">\((S_{2n})\)</span> et <span class="arithmatex">\((S_{2n+1})\)</span> convergent vers une même limite <span class="arithmatex">\(S \in \mathbb{R}\)</span> et, pour tout <span class="arithmatex">\(n\)</span> tel que <span class="arithmatex">\(2n \geqslant n_0\)</span>, <span class="arithmatex">\(S_{2n+1} \leqslant S \leqslant S_{2n}\)</span>. D'après le théorème des suites extraites, on en déduit que <span class="arithmatex">\(\sum\limits_{n\geqslant n_0}(-1)^n u_n\)</span> converge vers <span class="arithmatex">\(S = \sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\)</span>. De plus, puisque <span class="arithmatex">\(S\)</span> est compris entre <span class="arithmatex">\(S_{n_0} = (-1)^{n_0}u_{n_0}\)</span> et <span class="arithmatex">\(S_{n_0+1} = (-1)^{n_0}(u_{n_0} - u_{n_0+1})\)</span>, <span class="arithmatex">\(S\)</span> est du signe de <span class="arithmatex">\((-1)^{n_0}\)</span> et <span class="arithmatex">\(u_{n_0} - u_{n_0+1} \leqslant |S| \leqslant u_{n_0}\)</span>. On raisonne de même pour le reste <span class="arithmatex">\(R_n = \sum\limits_{k=n+1}^{+\infty}(-1)^k u_k\)</span> en remplaçant <span class="arithmatex">\(n_0\)</span> par <span class="arithmatex">\(n+1\)</span>.</p>
+<p class="zh">由相邻数列定理（théorème des suites adjacentes）推出 <span class="arithmatex">\((S_{2n})\)</span> 与 <span class="arithmatex">\((S_{2n+1})\)</span> 收敛于同一极限 <span class="arithmatex">\(S \in \mathbb{R}\)</span>，且对一切满足 <span class="arithmatex">\(2n \geqslant n_0\)</span> 的 <span class="arithmatex">\(n\)</span>，<span class="arithmatex">\(S_{2n+1} \leqslant S \leqslant S_{2n}\)</span>。由子列定理（théorème des suites extraites）推出 <span class="arithmatex">\(\sum\limits_{n\geqslant n_0}(-1)^n u_n\)</span> 收敛于 <span class="arithmatex">\(S = \sum\limits_{k=n_0}^{+\infty}(-1)^k u_k\)</span>。此外，由于 <span class="arithmatex">\(S\)</span> 介于 <span class="arithmatex">\(S_{n_0} = (-1)^{n_0}u_{n_0}\)</span> 与 <span class="arithmatex">\(S_{n_0+1} = (-1)^{n_0}(u_{n_0} - u_{n_0+1})\)</span> 之间，故 <span class="arithmatex">\(S\)</span> 与 <span class="arithmatex">\((-1)^{n_0}\)</span> 同号，且 <span class="arithmatex">\(u_{n_0} - u_{n_0+1} \leqslant |S| \leqslant u_{n_0}\)</span>。对余项 <span class="arithmatex">\(R_n = \sum\limits_{k=n+1}^{+\infty}(-1)^k u_k\)</span>，把 <span class="arithmatex">\(n_0\)</span> 换成 <span class="arithmatex">\(n+1\)</span> 同理可证。</p>
 <p><p class="cqfd">∎</p></p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Exemple 5.2<br><span class='zh-title'>例 5.2</span></p>
 <ul>
 <li>
-<p>Discuter de <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\)</span>.</p>
-<p class="zh">讨论 <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\)</span>。</p>
-</li>
-<li>
-<p>Soit <span class="arithmatex">\(\alpha \in \mathbb{R}\)</span>. Plus généralement, discuter de <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n^\alpha}\)</span>.</p>
-<p class="zh">设 <span class="arithmatex">\(\alpha \in \mathbb{R}\)</span>。更一般地，讨论 <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n^\alpha}\)</span>。</p>
-</li>
-</ul>
-</div>
+<p><span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\)</span> est convergente d'après le critère des séries alternées. De plus :</p>
+<p class="zh">由交错级数判别法，<span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\)</span> 收敛。此外：</p>
+<div class="arithmatex">\[
+\sum_{n=1}^{+\infty}\frac{(-1)^n}{n} \leqslant 0
+\quad\text{et}\quad
+\forall n \geqslant 1,\quad
+\left|\sum_{k=n+1}^{+\infty}\frac{(-1)^k}{k}\right| \leqslant \frac{1}{n+1}.
+\]</div>
+<p>Mais <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\)</span> ne converge pas absolument car la série harmonique <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{1}{n}\)</span> est divergente. On dit que <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\)</span> est <strong>semi-convergente</strong>.</p>
+<p class="zh">但 <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\)</span> 不绝对收敛，因为调和级数 <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{1}{n}\)</span> 发散。此时称 <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{(-1)^n}{n}\)</span> 是<strong>半收敛的</strong>（semi-convergente）。</p>
 <div class="admonition warning">
 <p class="admonition-title">Remarque<br><span class='zh-title'>注（Remarque）</span></p>
 <p>On peut montrer que :</p>
@@ -6885,6 +6903,21 @@ u_n^- = \max\{0,-u_n\} =
 \sum_{n=1}^{+\infty}\frac{(-1)^{n+1}}{n} = \ln(2).
 \]</div>
 </div>
+</li>
+<li>
+<p>Plus généralement, pour tout <span class="arithmatex">\(\alpha \in \mathbb{R}\)</span> :</p>
+<p class="zh">更一般地，对任意 <span class="arithmatex">\(\alpha \in \mathbb{R}\)</span>：</p>
+<div class="arithmatex">\[
+\sum_{n\geqslant 1}\frac{(-1)^n}{n^\alpha}
+\begin{cases}
+\text{diverge grossièrement} &amp; \text{si } \alpha \leqslant 0,\\[2pt]
+\text{est semi-convergente} &amp; \text{si } \alpha \in \,]0,1],\\[2pt]
+\text{converge absolument} &amp; \text{si } \alpha &gt; 1.
+\end{cases}
+\]</div>
+</li>
+</ul>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Attention<br><span class='zh-title'>注意（Attention）</span></p>
 <p>Le critère des séries alternées est en général faux lorsque <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> n'est pas décroissante.</p>
@@ -6892,8 +6925,38 @@ u_n^- = \max\{0,-u_n\} =
 </div>
 <div class="admonition info">
 <p class="admonition-title">Exemple 5.3<br><span class='zh-title'>例 5.3</span></p>
-<p>Discuter de <span class="arithmatex">\(\displaystyle\sum_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}+(-1)^n}\)</span> comme contre-exemple du critère des séries alternées avec <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> non décroissante et comme contre-exemple du théorème de sommation des équivalents avec une suite de signe non constant.</p>
-<p class="zh">讨论 <span class="arithmatex">\(\displaystyle\sum_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}+(-1)^n}\)</span>：它既是交错级数判别法在 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 不递减时的反例，也是等价量求和定理在数列符号不恒定时的一个反例。</p>
+<p>On a :</p>
+<p class="zh">有：</p>
+<div class="arithmatex">\[
+\forall n \geqslant 2,\quad
+\frac{(-1)^n}{\sqrt{n}} - \frac{1}{n + (-1)^n\sqrt{n}}
+= \frac{(-1)^n\sqrt{n} + 1 - 1}{\sqrt{n}\left(\sqrt{n} + (-1)^n\right)}
+= \frac{(-1)^n}{\sqrt{n} + (-1)^n}.
+\]</div>
+<p>Or :</p>
+<p class="zh">而：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\sum\limits_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}}\)</span> est convergente d'après le critère des séries alternées,</p>
+<p class="zh">由交错级数判别法，<span class="arithmatex">\(\sum\limits_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}}\)</span> 收敛；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(0 \leqslant \sqrt{n}(\sqrt{n} - 1) \leqslant n + (-1)^n\sqrt{n} \sim n\)</span> quand <span class="arithmatex">\(n \to +\infty\)</span>, donc <span class="arithmatex">\(\sum\limits_{n\geqslant 2}\frac{1}{n+(-1)^n\sqrt{n}}\)</span> est divergente par sommation des équivalents car <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{1}{n}\)</span> est divergente.</p>
+<p class="zh">当 <span class="arithmatex">\(n \to +\infty\)</span> 时 <span class="arithmatex">\(0 \leqslant \sqrt{n}(\sqrt{n} - 1) \leqslant n + (-1)^n\sqrt{n} \sim n\)</span>，故由等价量求和，<span class="arithmatex">\(\sum\limits_{n\geqslant 2}\frac{1}{n+(-1)^n\sqrt{n}}\)</span> 发散，因为 <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{1}{n}\)</span> 发散。</p>
+</li>
+</ul>
+<p>On en déduit que <span class="arithmatex">\(\sum\limits_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}+(-1)^n}\)</span> diverge vers <span class="arithmatex">\(-\infty\)</span>. En particulier :</p>
+<p class="zh">由此推出 <span class="arithmatex">\(\sum\limits_{n\geqslant 2}\frac{(-1)^n}{\sqrt{n}+(-1)^n}\)</span> 发散到 <span class="arithmatex">\(-\infty\)</span>。特别地：</p>
+<ul>
+<li>
+<p>on ne peut pas utiliser le critère des séries alternées car la suite <span class="arithmatex">\((u_n = \frac{1}{\sqrt{n}+(-1)^n})_{n\geqslant 2}\)</span> n'est pas décroissante (car pour tout <span class="arithmatex">\(k \geqslant 1\)</span>, <span class="arithmatex">\(u_{2k} = \frac{1}{\sqrt{2k}+1} &lt; \frac{1}{\sqrt{2k+1}-1} = u_{2k+1}\)</span>),</p>
+<p class="zh">不能使用交错级数判别法，因为数列 <span class="arithmatex">\((u_n = \frac{1}{\sqrt{n}+(-1)^n})_{n\geqslant 2}\)</span> 不递减（因为对一切 <span class="arithmatex">\(k \geqslant 1\)</span>，<span class="arithmatex">\(u_{2k} = \frac{1}{\sqrt{2k}+1} &lt; \frac{1}{\sqrt{2k+1}-1} = u_{2k+1}\)</span>）；</p>
+</li>
+<li>
+<p>même si <span class="arithmatex">\(\frac{(-1)^n}{\sqrt{n}+(-1)^n} \sim \frac{(-1)^n}{\sqrt{n}}\)</span> quand <span class="arithmatex">\(n \to +\infty\)</span>, on ne peut pas utiliser le théorème de sommation des équivalents car les deux suites ne sont pas de signe constant.</p>
+<p class="zh">即使当 <span class="arithmatex">\(n \to +\infty\)</span> 时 <span class="arithmatex">\(\frac{(-1)^n}{\sqrt{n}+(-1)^n} \sim \frac{(-1)^n}{\sqrt{n}}\)</span>，也不能使用等价量求和定理，因为两个数列不保持符号恒定。</p>
+</li>
+</ul>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Vocabulaire clé<br><span class='zh-title'>第 5 节核心术语</span></p>
@@ -6920,8 +6983,13 @@ u_n^- = \max\{0,-u_n\} =
 \]</div>
 </div>
 <div class="admonition demo">
-<p><strong>Démonstration.</strong> À faire en cours.</p>
-<p class="zh"><strong>证明.</strong> 课上完成。</p>
+<p><strong>Démonstration.</strong></p>
+<p class="zh"><strong>证明.</strong> 将下列两式相加，中间项逐项相消：</p>
+<div class="arithmatex">\[
+\sum_{k=n_0}^{n-1}(a_{k+1} - a_k)b_k + \sum_{k=n_0}^{n-1}a_{k+1}(b_{k+1} - b_k)
+= \sum_{k=n_0}^{n-1}\left(a_{k+1}b_{k+1} - a_kb_k\right)
+= a_nb_n - a_{n_0}b_{n_0}.
+\]</div>
 <p><p class="cqfd">∎</p></p>
 </div>
 <div class="admonition danger">
@@ -6942,8 +7010,26 @@ u_n^- = \max\{0,-u_n\} =
 <p class="zh">则 <span class="arithmatex">\(\sum\limits_{n\geqslant n_0} s_n u_n\)</span> 收敛。</p>
 </div>
 <div class="admonition demo">
-<p><strong>Démonstration.</strong> À faire en cours.</p>
-<p class="zh"><strong>证明.</strong> 课上完成。</p>
+<p><strong>Démonstration.</strong> Par sommation par parties, on a pour tout <span class="arithmatex">\(n \geqslant n_0 + 1\)</span> :</p>
+<p class="zh"><strong>证明.</strong> 由分部求和，对一切 <span class="arithmatex">\(n \geqslant n_0 + 1\)</span> 有：</p>
+<div class="arithmatex">\[
+\sum_{k=n_0+1}^{n} s_k u_k
+= \sum_{k=n_0+1}^{n}(S_k - S_{k-1})u_k
+= \left[S_n u_{n+1} - S_{n_0}u_{n_0+1}\right] - \sum_{k=n_0+1}^{n} S_k(u_{k+1} - u_k).
+\]</div>
+<p>Puisque <span class="arithmatex">\((S_n)_{n\geqslant n_0}\)</span> est bornée et que <span class="arithmatex">\(u_{n+1}\)</span> tend vers 0 quand <span class="arithmatex">\(n \to +\infty\)</span>, on en déduit que <span class="arithmatex">\(\lim\limits_{n\to+\infty} S_n u_{n+1} = 0\)</span>, donc que <span class="arithmatex">\(\sum\limits_{n\geqslant n_0} s_n u_n\)</span> et <span class="arithmatex">\(\sum\limits_{n\geqslant n_0} S_n(u_{n+1} - u_n)\)</span> ont même nature.</p>
+<p class="zh">由于 <span class="arithmatex">\((S_n)_{n\geqslant n_0}\)</span> 有界，且当 <span class="arithmatex">\(n \to +\infty\)</span> 时 <span class="arithmatex">\(u_{n+1}\)</span> 趋于 0，推出 <span class="arithmatex">\(\lim\limits_{n\to+\infty} S_n u_{n+1} = 0\)</span>，因此 <span class="arithmatex">\(\sum\limits_{n\geqslant n_0} s_n u_n\)</span> 与 <span class="arithmatex">\(\sum\limits_{n\geqslant n_0} S_n(u_{n+1} - u_n)\)</span> 同性质。</p>
+<p>De plus, on sait qu'il existe <span class="arithmatex">\(R \in \mathbb{R}_+\)</span> tel que pour tout <span class="arithmatex">\(n \geqslant n_0\)</span>, <span class="arithmatex">\(|S_n| \leqslant R\)</span>. Puisque <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> est positive et décroissante, on a :</p>
+<p class="zh">此外，存在 <span class="arithmatex">\(R \in \mathbb{R}_+\)</span> 使得对一切 <span class="arithmatex">\(n \geqslant n_0\)</span>，<span class="arithmatex">\(|S_n| \leqslant R\)</span>。由于 <span class="arithmatex">\((u_n)_{n\geqslant n_0}\)</span> 非负且递减，有：</p>
+<div class="arithmatex">\[
+\forall n \geqslant n_0,\quad
+\sum_{k=n_0}^{n}\left|S_k(u_{k+1} - u_k)\right|
+\leqslant R\sum_{k=n_0}^{n}(u_k - u_{k+1})
+= R(u_{n_0} - u_{n+1})
+\leqslant R u_{n_0}.
+\]</div>
+<p>Par conséquent, <span class="arithmatex">\(\sum\limits_{n\geqslant n_0} S_n(u_{n+1} - u_n)\)</span> converge absolument, donc <span class="arithmatex">\(\sum\limits_{n\geqslant n_0} s_n u_n\)</span> est convergente.</p>
+<p class="zh">因此，<span class="arithmatex">\(\sum\limits_{n\geqslant n_0} S_n(u_{n+1} - u_n)\)</span> 绝对收敛，故 <span class="arithmatex">\(\sum\limits_{n\geqslant n_0} s_n u_n\)</span> 收敛。</p>
 <p><p class="cqfd">∎</p></p>
 </div>
 <div class="admonition warning">
@@ -6963,8 +7049,26 @@ u_n^- = \max\{0,-u_n\} =
 </div>
 <div class="admonition info">
 <p class="admonition-title">Exemple 6.3<br><span class='zh-title'>例 6.3</span></p>
-<p>Soient <span class="arithmatex">\(\alpha &gt; 0\)</span> et <span class="arithmatex">\(\theta \in \mathbb{R} \setminus 2\pi\mathbb{Z}\)</span>. Discuter de <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{e^{in\theta}}{n^\alpha}\)</span>. Puis, en particulier, de <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{\cos(n)}{n}\)</span> et <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{\sin(n)}{n}\)</span>.</p>
-<p class="zh">设 <span class="arithmatex">\(\alpha &gt; 0\)</span>、<span class="arithmatex">\(\theta \in \mathbb{R} \setminus 2\pi\mathbb{Z}\)</span>。讨论 <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{e^{in\theta}}{n^\alpha}\)</span>；然后特别讨论 <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{\cos(n)}{n}\)</span> 与 <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{\sin(n)}{n}\)</span>。</p>
+<p>Soit <span class="arithmatex">\(\theta \in \mathbb{R} \setminus 2\pi\mathbb{Z}\)</span>. Puisque <span class="arithmatex">\(e^{in\theta} \neq 1\)</span>, on a d'après les formules d'Euler :</p>
+<p class="zh">设 <span class="arithmatex">\(\theta \in \mathbb{R} \setminus 2\pi\mathbb{Z}\)</span>。由于 <span class="arithmatex">\(e^{in\theta} \neq 1\)</span>，由欧拉公式（formules d'Euler）有：</p>
+<div class="arithmatex">\[
+\forall n \in \mathbb{N},\quad
+\sum_{k=0}^{n} e^{ik\theta}
+= \frac{1 - e^{i(n+1)\theta}}{1 - e^{i\theta}}
+= \frac{e^{i(n+1)\theta/2}\,2i\sin\left(\frac{(n+1)\theta}{2}\right)}{e^{i\theta/2}\,2i\sin\left(\frac{\theta}{2}\right)}
+= \frac{\sin\left(\frac{(n+1)\theta}{2}\right)}{\sin\left(\frac{\theta}{2}\right)}\,e^{in\theta/2}.
+\]</div>
+<p>Donc :</p>
+<p class="zh">因此：</p>
+<div class="arithmatex">\[
+\forall n \in \mathbb{N},\quad
+\left|\sum_{k=0}^{n} e^{ik\theta}\right|
+= \left|\frac{1 - e^{i(n+1)\theta}}{1 - e^{i\theta}}\right|
+= \frac{\left|\sin\left(\frac{(n+1)\theta}{2}\right)\right|}{\left|\sin\left(\frac{\theta}{2}\right)\right|}
+\leqslant \frac{1}{\left|\sin\left(\frac{\theta}{2}\right)\right|}.
+\]</div>
+<p>Ainsi, <span class="arithmatex">\((S_n = \sum\limits_{k=1}^{n} e^{ik\theta})_{n\geqslant 1}\)</span> est bornée. D'après le critère d'Abel, on en déduit que pour tout <span class="arithmatex">\(\alpha &gt; 0\)</span>, <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{e^{in\theta}}{n^\alpha}\)</span> est convergente. En particulier, en prenant les parties réelle et imaginaire pour <span class="arithmatex">\(\alpha = 1\)</span>, on obtient que <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{\cos(n)}{n}\)</span> et <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{\sin(n)}{n}\)</span> sont convergentes.</p>
+<p class="zh">于是，<span class="arithmatex">\((S_n = \sum\limits_{k=1}^{n} e^{ik\theta})_{n\geqslant 1}\)</span> 有界。由阿贝尔判别法推出，对任意 <span class="arithmatex">\(\alpha &gt; 0\)</span>，<span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{e^{in\theta}}{n^\alpha}\)</span> 收敛。特别地，取 <span class="arithmatex">\(\alpha = 1\)</span> 并分离实部与虚部，得到 <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{\cos(n)}{n}\)</span> 与 <span class="arithmatex">\(\sum\limits_{n\geqslant 1}\frac{\sin(n)}{n}\)</span> 都收敛。</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Remarque<br><span class='zh-title'>注（Remarque）</span></p>
