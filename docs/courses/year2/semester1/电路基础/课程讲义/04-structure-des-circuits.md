@@ -403,6 +403,118 @@ Selon le principe de conservation de l'énergie, lorsqu'une charge effectue un p
     \end{aligned}
     \]
 
+## 4.A　Sources de tension réelles <span class="heading-zh">实际电压源</span>
+
+<span class="lecture-figure"><img class="fig-raster" src="../../../../../../assets/images/lectures/electrocinetique/04-structure-des-circuits/fig-08.png" alt="实际电压源与内阻"></span>
+
+<p class="lecture-caption arithmatex"><span class="caption-fr arithmatex">Figure 4.8 — Source de tension réelle avec une résistance interne \(r_{in}\), alimentant un dipôle quelconque \(D\) traversé par un courant d'intensité \(I_D\).</span><br>图 4.8：实际电压源带有内阻 \(r_{in}\)，为任一流过电流强度 \(I_D\) 的二端元件 \(D\) 供电。</p>
+
+!!! info "Exercice 4.1<br><span class='zh-title'>练习 4.1</span>"
+
+    Une source de tension réelle est constituée d'une source de tension idéale, fournissant une tension \(E\), et d'une résistance interne \(r_{in}\) connectée en série (figure 4.8).
+
+    实际电压源由提供电压 \(E\) 的理想电压源与串联的内阻 \(r_{in}\) 构成（图 4.8）。
+    {: .zh }
+
+    Quelle est la tension \(U_D\) aux bornes du dipôle \(D\) lorsqu'il est traversé par un courant d'intensité \(I_D\) ?
+
+    当二端元件 \(D\) 中流过强度为 \(I_D\) 的电流时，它两端的电压 \(U_D\) 是多少？
+    {: .zh }
+
+## 4.B　Sources de courant réelles <span class="heading-zh">实际电流源</span>
+
+<span class="lecture-figure"><img class="fig-raster" src="../../../../../../assets/images/lectures/electrocinetique/04-structure-des-circuits/fig-09.png" alt="实际电流源与内阻"></span>
+
+<p class="lecture-caption arithmatex"><span class="caption-fr arithmatex">Figure 4.9 — Source de courant réelle avec une résistance interne \(r_{in}\), alimentant un dipôle quelconque \(D\) avec une tension \(U_D\) à ses bornes.</span><br>图 4.9：实际电流源带有内阻 \(r_{in}\)，为任一二端元件 \(D\) 供电，其两端电压为 \(U_D\)。</p>
+
+!!! info "Exercice 4.2<br><span class='zh-title'>练习 4.2</span>"
+
+    Une source de courant réelle est constituée d'une source de courant idéale, fournissant un courant d'intensité \(I\), et d'une résistance interne \(r_{in}\) connectée en parallèle (figure 4.9).
+
+    实际电流源由提供电流强度 \(I\) 的理想电流源与并联的内阻 \(r_{in}\) 构成（图 4.9）。
+    {: .zh }
+
+    Quelle est l'intensité du courant \(I_D\) aux bornes du dipôle \(D\) lorsqu'il a une tension \(U_D\) à ses bornes ?
+
+    当二端元件 \(D\) 两端的电压为 \(U_D\) 时，流过它的电流强度 \(I_D\) 是多少？
+    {: .zh }
+
+## 4.C　Diviseur de tension <span class="heading-zh">分压器</span>
+
+<span class="lecture-figure"><img class="fig-raster" src="../../../../../../assets/images/lectures/electrocinetique/04-structure-des-circuits/fig-10.png" alt="空载分压器"></span>
+
+<p class="lecture-caption arithmatex"><span class="caption-fr arithmatex">Figure 4.10 — Exemple d'un diviseur de tension sans charge, constitué d'une source de tension \(E\) et de deux résistances \(R_1\) et \(R_2\).</span><br>图 4.10：空载分压器示例，由一个电压源 \(E\) 和两个电阻 \(R_1\)、\(R_2\) 构成。</p>
+
+!!! info "Exercice 4.3<br><span class='zh-title'>练习 4.3</span>"
+
+    Considérons un circuit composé d'une source de tension \(E\) et de deux résistances \(R_1\) et \(R_2\) en série (figure 4.10).
+
+    考虑一个由电压源 \(E\) 和两个串联电阻 \(R_1\)、\(R_2\) 构成的电路（图 4.10）。
+    {: .zh }
+
+    1. Déterminer la tension \(U_2\) aux bornes de la résistance \(R_2\) en fonction de \(E\), \(R_1\) et \(R_2\).
+
+        求电阻 \(R_2\) 两端的电压 \(U_2\)（用 \(E\)、\(R_1\)、\(R_2\) 表示）。
+        {: .zh }
+
+    2. Pourquoi appelle-t-on ce circuit ”diviseur de tension” ?
+
+        为什么把这个电路称为「分压器」？
+        {: .zh }
+
+## 4.D　Diviseur de courant <span class="heading-zh">分流器</span>
+
+!!! info "Exercice 4.4<br><span class='zh-title'>练习 4.4</span>"
+
+    Considérons un circuit composé d'une source de courant \(I\) et de deux résistances \(R_1\) et \(R_2\) en parallèle (figure 4.11).
+
+    考虑一个由电流源 \(I\) 和两个并联电阻 \(R_1\)、\(R_2\) 构成的电路（图 4.11）。
+    {: .zh }
+
+    1. Déterminer l'intensité du courant \(I_2\) traversant la résistance \(R_2\) en fonction de \(I\), \(R_1\) et \(R_2\).
+
+        求通过电阻 \(R_2\) 的电流强度 \(I_2\)（用 \(I\)、\(R_1\)、\(R_2\) 表示）。
+        {: .zh }
+
+    2. Pourquoi appelle-t-on ce circuit ”diviseur de courant” ?
+
+        为什么把这个电路称为「分流器」？
+        {: .zh }
+
+<span class="lecture-figure"><img class="fig-raster" src="../../../../../../assets/images/lectures/electrocinetique/04-structure-des-circuits/fig-11.png" alt="空载分流器"></span>
+
+<p class="lecture-caption arithmatex"><span class="caption-fr arithmatex">Figure 4.11 — Exemple d'un diviseur de courant sans charge, constitué d'une source de courant \(I\) et de deux résistances \(R_1\) et \(R_2\).</span><br>图 4.11：空载分流器示例，由一个电流源 \(I\) 和两个电阻 \(R_1\)、\(R_2\) 构成。</p>
+
+## 4.E　Influence d'une charge <span class="heading-zh">负载的影响</span>
+
+<span class="lecture-figure"><img class="fig-raster" src="../../../../../../assets/images/lectures/electrocinetique/04-structure-des-circuits/fig-12.png" alt="带负载的分压器"></span>
+
+<p class="lecture-caption arithmatex"><span class="caption-fr arithmatex">Figure 4.12 — Exemple d'un diviseur de tension avec une charge \(R_L\), constitué d'une source de tension \(E\) réelle (de résistance interne \(r_{in}\)) et de deux résistances \(R_1\) et \(R_2\).</span><br>图 4.12：带负载 \(R_L\) 的分压器示例，由一个实际电压源 \(E\)（内阻为 \(r_{in}\)）和两个电阻 \(R_1\)、\(R_2\) 构成。</p>
+
+!!! info "Exercice 4.5<br><span class='zh-title'>练习 4.5</span>"
+
+    Considérons maintenant un diviseur de tension connecté à une source de tension \(E\) réelle de résistance interne \(r_{in}\). Une résistance \(R_L\) est connectée en parallèle à la résistance \(R_2\) (figure 4.10).
+
+    现在考虑一个连接到内阻为 \(r_{in}\) 的实际电压源 \(E\) 的分压器。一个电阻 \(R_L\) 与电阻 \(R_2\) 并联（图 4.10）。
+    {: .zh }
+
+    <i>注.</i> 原文此处写作「图 4.10」，按上下文应为图 4.12。
+
+    1. Déterminer la tension \(U_L\) aux bornes de la résistance \(R_L\).
+
+        求电阻 \(R_L\) 两端的电压 \(U_L\)。
+        {: .zh }
+
+    2. Comment faut-il dimensionner les résistances \(R_1\), \(R_2\) et \(R_L\) afin de négliger l'influence de la résistance interne \(r_{in}\) du générateur ?
+
+        应如何确定电阻 \(R_1\)、\(R_2\) 和 \(R_L\) 的阻值，才能忽略电源内阻 \(r_{in}\) 的影响？
+        {: .zh }
+
+    3. Peut-on utiliser un diviseur de tension pour créer une source de tension ?
+
+        能否利用分压器来产生一个电压源？
+        {: .zh }
+
 !!! warning "Vocabulaire clé &nbsp;&nbsp; 重点词汇<br><span class='zh-title'>第四章核心术语</span>"
 
     - <strong>nœud</strong>：节点
@@ -424,3 +536,15 @@ Selon le principe de conservation de l'énergie, lorsqu'une charge effectue un p
     - <strong>convention de signe</strong>：符号约定
     - <strong>être relié à</strong>：与……相连
     - <strong>être traversé par un courant</strong>：有电流通过
+    - <strong>source de tension réelle / idéale</strong>：实际电压源 / 理想电压源
+    - <strong>source de courant réelle / idéale</strong>：实际电流源 / 理想电流源
+    - <strong>résistance interne \(r_{in}\)</strong>：内阻
+    - <strong>dipôle</strong>：二端元件
+    - <strong>aux bornes de</strong>：在……两端
+    - <strong>diviseur de tension</strong>：分压器
+    - <strong>diviseur de courant</strong>：分流器
+    - <strong>sans charge</strong>：空载、无负载
+    - <strong>charge \(R_L\)</strong>：负载
+    - <strong>alimenter</strong>：为……供电
+    - <strong>dimensionner</strong>：确定元件参数
+    - <strong>négliger</strong>：忽略
