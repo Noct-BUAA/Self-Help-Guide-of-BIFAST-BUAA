@@ -209,7 +209,21 @@ nav:
           - 动电学词汇表: courses/year2/semester1/电路基础/词汇表.md
         - 学术英语阅读与写作:
           - 课程总览: courses/year2/semester1/学术英语阅读与写作/index.md
+          - 课程讲义:
+            - Lecture 0 学术英语写作: courses/year2/semester1/学术英语阅读与写作/课程讲义/00-academic-english-writing.md
+            - Lecture 1 数据与数据分析: courses/year2/semester1/学术英语阅读与写作/课程讲义/01-what-is-data.md
+            - Lecture 2 Python 数据框: courses/year2/semester1/学术英语阅读与写作/课程讲义/02-python-dataframes.md
+            - Lecture 3 数据可视化: courses/year2/semester1/学术英语阅读与写作/课程讲义/03-data-visualization.md
+            - Lecture 4 基本数据分析技术: courses/year2/semester1/学术英语阅读与写作/课程讲义/04-basic-techniques.md
+            - Lecture 5 回归: courses/year2/semester1/学术英语阅读与写作/课程讲义/05-regression.md
+            - Lecture 6 查找与使用文献: courses/year2/semester1/学术英语阅读与写作/课程讲义/06-finding-and-using-sources.md
+            - Lecture 7 分类: courses/year2/semester1/学术英语阅读与写作/课程讲义/07-classification.md
           - Unit 1 期中复习讲义: courses/year2/semester1/学术英语阅读与写作/期中复习讲义.md
+          - 期中复习:
+            - Part 1 词汇填空与释义: courses/year2/semester1/学术英语阅读与写作/期中复习/01-vocabulary-cloze.md
+            - Part 2 Reading 1 对照翻译: courses/year2/semester1/学术英语阅读与写作/期中复习/02-reading1-sustainable-ai.md
+            - Part 3 Reading 2 对照翻译: courses/year2/semester1/学术英语阅读与写作/期中复习/03-reading2-ai-writing.md
+            - Part 4 Section C 学术写作: courses/year2/semester1/学术英语阅读与写作/期中复习/04-section-c-academic-writing.md
         - 综合法语实训:
           - 课程总览: courses/year2/semester1/综合法语实训/index.md
           - 课程讲义:

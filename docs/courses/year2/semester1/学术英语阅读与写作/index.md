@@ -6,7 +6,7 @@ title: 学术英语阅读与写作
 
 ## 课程简介
 
-学术英语阅读与写作（Academic Reading and Writing）是北航中法未来科技学院大二上学期的英语课程，以英语授课，围绕人工智能（Artificial Intelligence）主题训练学术阅读、术语辨析与学术写作能力。课程不只讨论“AI 好不好”，而是要求用学术英语分析 AI 治理、可持续性、研究伦理与学术发表问题。
+学术英语阅读与写作（Academic Reading and Writing）是北航中法未来科技学院大二上学期的英语课程，以英语授课，围绕人工智能（Artificial Intelligence）主题训练学术阅读、术语辨析与学术写作能力。课程不只讨论“AI 好不好”，而是要求用学术英语分析 AI 治理、可持续性、研究伦理与学术发表问题，并通过 Lecture 0–7 训练研究问题、文献查找、数据分析与结果解释。
 
 课程由四个板块组成：
 
@@ -17,23 +17,99 @@ title: 学术英语阅读与写作
 
 !!! tip "期中复习讲义"
 
-    针对 Unit 1 期中考试整理的<strong>知识点、术语、句型与研究方法补充</strong>，覆盖教材三个板块与 Lecture 0 的研究方法框架：
+    新版 Unit 1 期中复习讲义依据教材与 Lecture 0–7 重新整理，包含<strong>词汇填空与释义、两篇课文逐段对照翻译、Section C 学术写作</strong>三部分：
 
-    - [学术英语阅读与写作 · Unit 1 期中复习讲义](期中复习讲义.md)
+    - [Unit 1 期中复习讲义总览](期中复习讲义.md)
+    - [Part 1 词汇填空与释义](期中复习/01-vocabulary-cloze.md)
+    - [Part 2 Reading 1 对照翻译](期中复习/02-reading1-sustainable-ai.md)
+    - [Part 3 Reading 2 对照翻译](期中复习/03-reading2-ai-writing.md)
+    - [Part 4 Section C 学术写作](期中复习/04-section-c-academic-writing.md)
     - [打印版 PDF](../../../../assets/files/学术英语阅读与写作_Unit1_期中复习讲义.pdf)
 
 !!! warning "期中考试"
 
-    预计 2026 年 11 月 16 日所在周。复习重点是教材 Unit 1 的课文理解、术语辨析、引用规范与 250 词议论文结构。
+    预计 2026 年 11 月 16 日所在周。复习重点是教材 Unit 1 的课文理解、词汇填空、引用规范与 250 词议论文结构。
 
-## 课程讲义
+## 课程讲义（中英对照）
 
 <div class="card-grid card-grid--three">
 
-  <a class="card" href="期中复习讲义">
-    <div class="card-num">UNIT 1</div>
-    <h3>Unit 1 期中复习讲义</h3>
-    <p>AI 治理、Sustainable AI、AI 与人类写作辨别、引用与论文结构、词汇句型语法总复习，附研究方法补充与自测</p>
+  <a class="card" href="课程讲义/00-academic-english-writing">
+    <div class="card-num">LECTURE 0</div>
+    <h3>学术英语写作</h3>
+    <p>研究是什么、文献来源、研究问题、阅读与提问策略、研究决策链</p>
+  </a>
+
+  <a class="card" href="课程讲义/01-what-is-data">
+    <div class="card-num">LECTURE 1</div>
+    <h3>数据与数据分析</h3>
+    <p>数据的定义、数据分析四阶段、个人/教育/新闻案例、课程技术地图</p>
+  </a>
+
+  <a class="card" href="课程讲义/02-python-dataframes">
+    <div class="card-num">LECTURE 2</div>
+    <h3>Python 数据框</h3>
+    <p>Spyder、Excel 与 Python、pandas、数据“脏”与缺失值</p>
+  </a>
+
+  <a class="card" href="课程讲义/03-data-visualization">
+    <div class="card-num">LECTURE 3</div>
+    <h3>数据可视化</h3>
+    <p>matplotlib/seaborn、分布图、关系图与六个图表报告提示词</p>
+  </a>
+
+  <a class="card" href="课程讲义/04-basic-techniques">
+    <div class="card-num">LECTURE 4</div>
+    <h3>基本数据分析技术</h3>
+    <p>回归、分类、聚类与监督/无监督学习的方法地图</p>
+  </a>
+
+  <a class="card" href="课程讲义/05-regression">
+    <div class="card-num">LECTURE 5</div>
+    <h3>回归</h3>
+    <p>简单/多元回归、R²、交互效应、预测与残差诊断</p>
+  </a>
+
+  <a class="card" href="课程讲义/06-finding-and-using-sources">
+    <div class="card-num">LECTURE 6</div>
+    <h3>查找与使用文献</h3>
+    <p>来源类型与可靠性、网络来源评价、数据库检索、带注释书目与引用</p>
+  </a>
+
+  <a class="card" href="课程讲义/07-classification">
+    <div class="card-num">LECTURE 7</div>
+    <h3>分类</h3>
+    <p>k-NN、偏差—方差权衡、混淆矩阵与批判性解释</p>
+  </a>
+
+</div>
+
+## 期中复习
+
+<div class="card-grid card-grid--three">
+
+  <a class="card" href="期中复习/01-vocabulary-cloze">
+    <div class="card-num">PART 1</div>
+    <h3>词汇填空与释义</h3>
+    <p>Reading 1 Task 3、Reading 2 Summary Completion、Reading 2 Task 2，含词框、释义表与答案</p>
+  </a>
+
+  <a class="card" href="期中复习/02-reading1-sustainable-ai">
+    <div class="card-num">PART 2</div>
+    <h3>Reading 1 对照翻译</h3>
+    <p><em>Sustainable AI</em> 全文逐段英中对照，含 Figure 1</p>
+  </a>
+
+  <a class="card" href="期中复习/03-reading2-ai-writing">
+    <div class="card-num">PART 3</div>
+    <h3>Reading 2 对照翻译</h3>
+    <p>AI 与人类写作辨别研究全文对照，含 Table 1–5、Figure 1–2</p>
+  </a>
+
+  <a class="card" href="期中复习/04-section-c-academic-writing">
+    <div class="card-num">PART 4</div>
+    <h3>Section C 学术写作</h3>
+    <p>抄袭与引用、APA 格式、两类研究论文结构、250 词作文与检查表</p>
   </a>
 
 </div>
