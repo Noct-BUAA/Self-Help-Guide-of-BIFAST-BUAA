@@ -146,10 +146,10 @@ Pour la suite de l'exercice, on fixe \(N\in\mathbb{N}\) suffisamment grand pour 
     \boxed{R_n\sim\frac1n.}
     \]
 
-    <strong>(c\)</strong> De même, pour \(\sum\dfrac{1}{n^3}\),
+    <strong>(c)</strong> De même, pour \(\sum\dfrac{1}{n^3}\),
     {: .fr-exo }
 
-    <strong>(c\)</strong> 同理，对 \(\sum\dfrac{1}{n^3}\) 有
+    <strong>(c)</strong> 同理，对 \(\sum\dfrac{1}{n^3}\) 有
     {: .zh }
 
     \[

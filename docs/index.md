@@ -95,18 +95,19 @@ comments: true
 
 ### 关于本指南
 
-本指南目前涵盖以下四大板块：
+本指南由以下板块组成：
 
 - [课程学习资料](courses/year1/index.md) — 大一、大二学年各门课程的学习资料、重难点解析与学习建议
-- [校园生活指南](campus-life/index.md) — 杭州国际校园的住宿、餐饮、交通出行、文化活动等实用信息
-- [前言](#_1) — 项目背景、学院介绍与使用说明（即本页）
+- [校园生活指南](campus-life/index.md) — 杭州国际校园的住宿、餐饮、交通出行、校园服务等实用信息
 - [后记](postscript/index.md) — 项目总结、致谢与未来展望
+
+本页（前言）介绍项目背景、学院情况与使用说明。
 
 本指南使用 [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) 构建，
 采用 [Creative Commons BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 许可证开源。
 欢迎通过 [GitHub](https://github.com/Noct-BUAA/Self-Help-Guide-of-BIFAST-BUAA) 参与贡献。
 
 ---
-*最后更新：2026年6月*
+*最后更新：2026年11月*
 
 </div>

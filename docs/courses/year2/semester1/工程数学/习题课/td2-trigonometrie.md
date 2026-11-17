@@ -109,7 +109,7 @@ z=(\cos\alpha+\sin\beta)+i(\sin\alpha+\cos\beta).
     <strong>解.</strong> 利用 \(\sin(\pi/2-\beta)=\cos\beta\) 可写出
     {: .zh }
 
-    Par ailleur, on a \(\cos\theta\leqslant0\iff
+    Par ailleurs, on a \(\cos\theta\leqslant0\iff
      \theta\in\bigcup_{k\in\mathbb{Z}}\left[\frac{\pi}{2}+2k\pi,\frac{3\pi}{2}+2k\pi\right]\), donc
 
     \[

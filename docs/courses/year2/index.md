@@ -12,7 +12,7 @@
 
 <a class="card" href="semester2/">
   <h3>大二下学期</h3>
-  <p>待补充</p>
+  <p>课程资料整理中，欢迎贡献</p>
   <span class="card-arrow">浏览课程 &rarr;</span>
 </a>
 

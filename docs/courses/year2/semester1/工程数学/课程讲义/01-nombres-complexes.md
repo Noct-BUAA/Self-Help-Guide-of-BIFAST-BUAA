@@ -14,7 +14,7 @@ comments: true
 
     每段先列法语原文；其下缩进、带深蓝竖条的小字号段落为中文翻译。<strong>加粗</strong>为关键词，括号内为中文释义。
 
-### Objectifs <span class="heading-zh">学习目标</span>
+## Objectifs <span class="heading-zh">学习目标</span>
 
 1. Manipuler des nombres complexes sous forme algébrique ou exponentielle.
 
@@ -31,7 +31,7 @@ comments: true
     求解未知量为复数的方程。
     {: .zh }
 
-### Notations <span class="heading-zh">记号</span>
+## Notations <span class="heading-zh">记号</span>
 
 On rappelle que \(\mathbb{R}\) désigne l'ensemble des nombres <strong>réels</strong>, \(\mathbb{Z}\) désigne l'ensemble des entiers <strong>relatifs</strong> et \(\mathbb{N}\) désigne l'ensemble des entiers <strong>naturels</strong>.
 

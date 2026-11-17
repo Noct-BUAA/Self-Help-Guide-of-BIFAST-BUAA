@@ -60,9 +60,9 @@ title: 工程数学
     <p>矩形矩阵与运算、转置、方阵的幂与幂零矩阵、牛顿二项式公式、特殊方阵、可逆方阵与相似矩阵</p>
   </a>
 
-  <a class="card" href="课程讲义/04-fiche5-suites">
+  <a class="card" href="课程讲义/05-fiche5-suites">
     <div class="card-num">05</div>
-    <h3>Fiche 5 研究实数数列</h3>
+    <h3>Fiche 5 研究实数列</h3>
     <p>数列的单调性、有界性、收敛判定与常用极限技巧</p>
   </a>
 

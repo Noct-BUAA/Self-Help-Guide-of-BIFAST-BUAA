@@ -340,7 +340,7 @@ Dans un métal réel, les électrons subissent des collisions avec le noyau des 
 **（b）** 方程右端 \(b(t)\) 为线性函数。给出形如 \(v_p(t)=A+Bt\) 的线性特解，用于求解该方程。
 {: .zh }
 
-<strong>(c\)</strong> Utiliser les conditions initiales pour déterminer la constante indéterminée, et donner la forme générale de la solution \(v(t)\).
+<strong>(c)</strong> Utiliser les conditions initiales pour déterminer la constante indéterminée, et donner la forme générale de la solution \(v(t)\).
 
 **（c）** 利用初始条件确定待定常数，并给出通解 \(v(t)\)。
 {: .zh }
@@ -430,7 +430,7 @@ Dans un métal réel, les électrons subissent des collisions avec le noyau des 
     v_p(t)=\frac{qE_0\tau}{m_eT}\,(t-\tau).
     \]
 
-    <strong>(c\)</strong> La solution générale est \(v=v_h+v_p\) :
+    <strong>(c)</strong> La solution générale est \(v=v_h+v_p\) :
 
     **（c）** 通解为 \(v=v_h+v_p\)：
     {: .zh }

@@ -428,7 +428,7 @@ x \in \underbrace{[-1,3] \cap [0,+\infty[}_{=[0,3]}.
 <strong>结论</strong>。\(f\) 的曲线在 \(\left[-\frac{3}{2},0\right[ \cup [0,3] = \left[-\frac{3}{2},3\right]\) 上位于直线 \(y = x\) 的上方，因此在 \([3,+\infty[\) 上位于其下方。现在可以把 \((u_n)_{n\in\mathbb{N}}\) 的前几项作图表示出来（见下图）。
 {: .zh }
 
-<span class="lecture-figure"><img class="fig-light" src="../../../../../../assets/images/lectures/outils-mathematiques/04-fiche5-suites/fig-01.svg" alt="讲义插图 1"><img class="fig-dark" src="../../../../../../assets/images/lectures/outils-mathematiques/04-fiche5-suites/fig-01-dark.svg" alt="讲义插图 1"></span>
+<span class="lecture-figure"><img class="fig-light" src="../../../../../../assets/images/lectures/outils-mathematiques/05-fiche5-suites/fig-01.svg" alt="讲义插图 1"><img class="fig-dark" src="../../../../../../assets/images/lectures/outils-mathematiques/05-fiche5-suites/fig-01-dark.svg" alt="讲义插图 1"></span>
 
 On conjecture que la suite \((u_n)_{n\in\mathbb{N}}\) est majorée par 3, minorée par \(u_0 = 1\) et strictement croissante. Pour tout \(n \in \mathbb{N}\), on pose l'assertion \(P(n)\) : «\(1 \leqslant u_n < u_{n+1} < 3\)» et on raisonne par récurrence.
 
