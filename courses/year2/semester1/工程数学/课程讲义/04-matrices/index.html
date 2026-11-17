@@ -6493,7 +6493,8 @@
 <div class="admonition info">
 <p class="admonition-title">阅读说明</p>
 <p>每段先列法语原文；其下缩进、带深蓝竖条的小字号段落为中文翻译。<strong>加粗</strong>为关键词，括号内为中文释义。</p>
-<p>原讲义中第 3–5 节尚为提纲，本站按源文件如实收录，待课程推进后随新版源文件补充。</p>
+<p>Convention : les paragraphes en retrait, en bleu foncé et en corps réduit sont la traduction chinoise.</p>
+<p class="zh">缩进、深蓝色、小字号的段落为中文翻译。</p>
 </div>
 <h2 id="objectifs">Objectifs <span class="heading-zh">学习目标</span><a class="headerlink" href="#objectifs" title="Permanent link">&para;</a></h2>
 <ol>
@@ -6502,20 +6503,20 @@
 <p class="zh">熟练操作矩阵。</p>
 </li>
 <li>
-<p>Mener des calculs matriciels à l'aide des coefficients.</p>
+<p>Effectuer des calculs matriciels à l'aide des coefficients.</p>
 <p class="zh">利用系数进行矩阵计算。</p>
 </li>
 <li>
-<p>Calculer des puissances de matrices.</p>
-<p class="zh">计算矩阵的幂。</p>
+<p>Effectuer des calculs matriciels à l'aide des propriétés des opérations.</p>
+<p class="zh">利用运算性质进行矩阵计算。</p>
 </li>
 </ol>
 <h2 id="notations">Notations <span class="heading-zh">记号</span><a class="headerlink" href="#notations" title="Permanent link">&para;</a></h2>
-<p>On rappelle que <span class="arithmatex">\(\mathbb{N}\)</span> désigne l'ensemble des entiers naturels, <span class="arithmatex">\(\mathbb{R}\)</span> désigne l'ensemble des nombres réels et <span class="arithmatex">\(\mathbb{C}\)</span> désigne l'ensemble des nombres complexes.</p>
-<p class="zh">回忆：<span class="arithmatex">\(\mathbb{N}\)</span> 表示自然数集，<span class="arithmatex">\(\mathbb{R}\)</span> 表示实数集，<span class="arithmatex">\(\mathbb{C}\)</span> 表示复数集。</p>
-<p>Pour tout ce chapitre, <span class="arithmatex">\(\mathbb{K}\)</span> désigne <span class="arithmatex">\(\mathbb{R}\)</span> ou <span class="arithmatex">\(\mathbb{C}\)</span> et on fixe deux entiers non nuls <span class="arithmatex">\((n,p)\in(\mathbb{N}^*)^2\)</span>.</p>
-<p class="zh">本章中，<span class="arithmatex">\(\mathbb{K}\)</span> 表示 <span class="arithmatex">\(\mathbb{R}\)</span> 或 <span class="arithmatex">\(\mathbb{C}\)</span>，并固定两个非零整数 <span class="arithmatex">\((n,p)\in(\mathbb{N}^*)^2\)</span>。</p>
+<p>On rappelle que <span class="arithmatex">\(\mathbb{N}\)</span> désigne l'ensemble des entiers naturels, <span class="arithmatex">\(\mathbb{R}\)</span> désigne l'ensemble des nombres réels et <span class="arithmatex">\(\mathbb{C}\)</span> désigne l'ensemble des nombres complexes. Dans ce chapitre, <span class="arithmatex">\(\mathbb{K}\)</span> désigne <span class="arithmatex">\(\mathbb{R}\)</span> ou <span class="arithmatex">\(\mathbb{C}\)</span>.</p>
+<p class="zh">回忆：<span class="arithmatex">\(\mathbb{N}\)</span> 表示自然数集，<span class="arithmatex">\(\mathbb{R}\)</span> 表示实数集，<span class="arithmatex">\(\mathbb{C}\)</span> 表示复数集。本章中，<span class="arithmatex">\(\mathbb{K}\)</span> 表示 <span class="arithmatex">\(\mathbb{R}\)</span> 或 <span class="arithmatex">\(\mathbb{C}\)</span>。</p>
 <h2 id="1-matrices-rectangulaires">1　Matrices rectangulaires <span class="heading-zh">矩形矩阵</span><a class="headerlink" href="#1-matrices-rectangulaires" title="Permanent link">&para;</a></h2>
+<p>Dans cette section, on fixe deux entiers <span class="arithmatex">\((n,p)\in(\mathbb{N}^*)^2\)</span>.</p>
+<p class="zh">本节固定两个整数 <span class="arithmatex">\((n,p)\in(\mathbb{N}^*)^2\)</span>。</p>
 <div class="admonition success">
 <p class="admonition-title">Définition 1.1 : matrice<br><span class='zh-title'>定义 1.1：矩阵（matrice）</span></p>
 <p>Une <strong>matrice</strong> est un tableau de nombres de <span class="arithmatex">\(\mathbb{K}\)</span> de la forme :</p>
@@ -6571,12 +6572,12 @@ m_{n,1} &amp; m_{n,2} &amp; \cdots &amp; m_{n,p}
   \]</div>
 </li>
 <li>
-<p><span class="arithmatex">\(L=\begin{pmatrix}l_1 &amp; l_2 &amp; \dots &amp; l_p\end{pmatrix}\)</span> est une matrice <span class="arithmatex">\(1\times p\)</span> appelée une <strong>matrice ligne</strong>.</p>
-<p class="zh"><span class="arithmatex">\(L=\begin{pmatrix}l_1 &amp; l_2 &amp; \dots &amp; l_p\end{pmatrix}\)</span> 是一个 <span class="arithmatex">\(1\times p\)</span> 矩阵，称为<strong>行矩阵</strong>（matrice ligne）。</p>
+<p>Une <strong>matrice ligne</strong> est une matrice <span class="arithmatex">\(1\times p\)</span> de la forme <span class="arithmatex">\(L=\begin{pmatrix}l_1 &amp; l_2 &amp; \dots &amp; l_p\end{pmatrix}\)</span>.</p>
+<p class="zh"><strong>行矩阵</strong>（matrice ligne）是形如 <span class="arithmatex">\(L=\begin{pmatrix}l_1 &amp; l_2 &amp; \dots &amp; l_p\end{pmatrix}\)</span> 的 <span class="arithmatex">\(1\times p\)</span> 矩阵。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(C=\begin{pmatrix}c_1\\c_2\\\vdots\\c_n\end{pmatrix}\)</span> est une matrice <span class="arithmatex">\(n\times 1\)</span> appelée une <strong>matrice colonne</strong>.</p>
-<p class="zh"><span class="arithmatex">\(C=\begin{pmatrix}c_1\\c_2\\\vdots\\c_n\end{pmatrix}\)</span> 是一个 <span class="arithmatex">\(n\times 1\)</span> 矩阵，称为<strong>列矩阵</strong>（matrice colonne）。</p>
+<p>Une <strong>matrice colonne</strong> est une matrice <span class="arithmatex">\(n\times 1\)</span> de la forme <span class="arithmatex">\(C=\begin{pmatrix}c_1\\c_2\\\vdots\\c_n\end{pmatrix}\)</span>.</p>
+<p class="zh"><strong>列矩阵</strong>（matrice colonne）是形如 <span class="arithmatex">\(C=\begin{pmatrix}c_1\\c_2\\\vdots\\c_n\end{pmatrix}\)</span> 的 <span class="arithmatex">\(n\times 1\)</span> 矩阵。</p>
 </li>
 <li>
 <p>On note <span class="arithmatex">\(0_{n,p}\)</span> la matrice de <span class="arithmatex">\(\mathscr{M}_{n,p}(\mathbb{K})\)</span> dont tous les coefficients sont nuls, appelée la <strong>matrice nulle</strong>.</p>
@@ -6585,46 +6586,194 @@ m_{n,1} &amp; m_{n,2} &amp; \cdots &amp; m_{n,p}
 </ul>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Définition 1.3 : produit d'une matrice par un scalaire<br><span class='zh-title'>定义 1.3：矩阵与标量的乘积</span></p>
-<p>Si <span class="arithmatex">\(\lambda\in\mathbb{K}\)</span> et <span class="arithmatex">\(M=(m_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span>, alors :</p>
-<p class="zh">若 <span class="arithmatex">\(\lambda\in\mathbb{K}\)</span> 且 <span class="arithmatex">\(M=(m_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span>，则：</p>
+<p class="admonition-title">Définition 1.3 : opérations avec les matrices<br><span class='zh-title'>定义 1.3：矩阵的运算</span></p>
+<p>On définit trois opérations avec les matrices.</p>
+<p class="zh">定义矩阵的三种运算。</p>
+<ul>
+<li>
+<p>La <strong>multiplication par un scalaire</strong> définie pour tout nombre <span class="arithmatex">\(\lambda\in\mathbb{K}\)</span> et toute matrice <span class="arithmatex">\(M=(m_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span> par :</p>
+<p class="zh"><strong>标量乘法</strong>（multiplication par un scalaire）：对任意数 <span class="arithmatex">\(\lambda\in\mathbb{K}\)</span> 与任意矩阵 <span class="arithmatex">\(M=(m_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span>，定义为：</p>
 <div class="arithmatex">\[
 \lambda M=(\lambda m_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K}).
 \]</div>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Définition 1.4 : addition de matrices<br><span class='zh-title'>定义 1.4：矩阵加法</span></p>
-<p>Si <span class="arithmatex">\(A=(a_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span> et <span class="arithmatex">\(B=(b_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span>, alors :</p>
-<p class="zh">若 <span class="arithmatex">\(A=(a_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span> 且 <span class="arithmatex">\(B=(b_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span>，则：</p>
+</li>
+<li>
+<p>L'<strong>addition de matrices</strong> définie pour toutes matrices <span class="arithmatex">\(A=(a_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span> et <span class="arithmatex">\(B=(b_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span> telles que <u><span class="arithmatex">\(A\)</span> et <span class="arithmatex">\(B\)</span> ont la même taille</u> par :</p>
+<p class="zh"><strong>矩阵加法</strong>（addition de matrices）：对任意矩阵 <span class="arithmatex">\(A=(a_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span> 与 <span class="arithmatex">\(B=(b_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span>，且 <u><span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 尺寸相同</u>，定义为：</p>
 <div class="arithmatex">\[
 A+B=(a_{i,j}+b_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K}).
 \]</div>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Définition 1.5 : multiplication de matrices<br><span class='zh-title'>定义 1.5：矩阵乘法</span></p>
-<p>Si <span class="arithmatex">\(A=(a_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span> et <span class="arithmatex">\(B=(b_{i,j})\in\mathscr{M}_{p,q}(\mathbb{K})\)</span>, alors :</p>
-<p class="zh">若 <span class="arithmatex">\(A=(a_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span> 且 <span class="arithmatex">\(B=(b_{i,j})\in\mathscr{M}_{p,q}(\mathbb{K})\)</span>，则：</p>
+</li>
+<li>
+<p>La <strong>multiplication de matrices</strong> définie pour toutes matrices <span class="arithmatex">\(A=(a_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span> et <span class="arithmatex">\(B=(b_{i,j})\in\mathscr{M}_{p,q}(\mathbb{K})\)</span> (où <span class="arithmatex">\(q\in\mathbb{N}^*\)</span>) telles que <u>le nombre de colonnes de <span class="arithmatex">\(A\)</span> est égal au nombre de lignes de <span class="arithmatex">\(B\)</span></u> par :</p>
+<p class="zh"><strong>矩阵乘法</strong>（multiplication de matrices）：对任意矩阵 <span class="arithmatex">\(A=(a_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span> 与 <span class="arithmatex">\(B=(b_{i,j})\in\mathscr{M}_{p,q}(\mathbb{K})\)</span>（其中 <span class="arithmatex">\(q\in\mathbb{N}^*\)</span>），且 <u><span class="arithmatex">\(A\)</span> 的列数等于 <span class="arithmatex">\(B\)</span> 的行数</u>，定义为：</p>
 <div class="arithmatex">\[
 AB=\left(\sum_{k=1}^{p}a_{i,k}b_{k,j}\right)\in\mathscr{M}_{n,q}(\mathbb{K}).
 \]</div>
+</li>
+</ul>
 </div>
 <div class="admonition info">
-<p class="admonition-title">Exemple 1.6<br><span class='zh-title'>例 1.6</span></p>
-<p>（原讲义此处为空白例题，待课上补充。）</p>
+<p class="admonition-title">Exemple 1.4<br><span class='zh-title'>例 1.4</span></p>
+<ul>
+<li>
+<div class="arithmatex">\[
+  \begin{aligned}
+  7\begin{pmatrix}1 &amp; 2 &amp; 3\\4 &amp; 5 &amp; 6\end{pmatrix}
+  -\begin{pmatrix}8 &amp; 9 &amp; 10\\11 &amp; 12 &amp; 13\end{pmatrix}
+  &amp;=
+  \begin{pmatrix}7 &amp; 14 &amp; 21\\28 &amp; 35 &amp; 42\end{pmatrix}
+  +
+  \begin{pmatrix}-8 &amp; -9 &amp; -10\\-11 &amp; -12 &amp; -13\end{pmatrix}\\
+  &amp;=
+  \begin{pmatrix}-1 &amp; 5 &amp; 11\\17 &amp; 23 &amp; 29\end{pmatrix}.
+  \end{aligned}
+  \]</div>
+</li>
+<li>
+<p>Pour calculer le produit de deux matrices, on peut organiser les calculs dans un tableau. Par exemple, si on considère les matrices :</p>
+<p class="zh">计算两个矩阵的乘积时，可以把计算过程组织成表格。例如，考虑矩阵：</p>
+<div class="arithmatex">\[
+A=\begin{pmatrix}1 &amp; 2 &amp; 3\\4 &amp; 5 &amp; 6\end{pmatrix}\in\mathscr{M}_{2,3}(\mathbb{R}),
+\qquad\text{et}\qquad
+B=\begin{pmatrix}
+7 &amp; 8 &amp; 9 &amp; 10\\
+11 &amp; 12 &amp; 13 &amp; 14\\
+15 &amp; 16 &amp; 17 &amp; 18
+\end{pmatrix}\in\mathscr{M}_{3,4}(\mathbb{R}),
+\]</div>
+<p>alors on peut calculer le produit <span class="arithmatex">\(AB=(m_{i,j})\in\mathscr{M}_{2,4}(\mathbb{R})\)</span> de la façon suivante :</p>
+<p class="zh">则可以按如下方式计算乘积 <span class="arithmatex">\(AB=(m_{i,j})\in\mathscr{M}_{2,4}(\mathbb{R})\)</span>：</p>
+<div class="arithmatex">\[
+\begin{array}{c|c|c|c|c}
+\hline
+&amp; 7 &amp; 8 &amp; 9 &amp; 10\\
+\hline
+&amp; 11 &amp; 12 &amp; 13 &amp; 14\\
+\hline
+&amp; 15 &amp; 16 &amp; 17 &amp; 18\\
+\hline
+1\quad 2\quad 3 &amp; m_{1,1} &amp; &amp; &amp; \\
+\hline
+4\quad 5\quad 6 &amp; &amp; &amp; m_{2,3} &amp; \\
+\hline
+\end{array}
+\]</div>
+<div class="arithmatex">\[
+m_{1,1}=1\times7+2\times11+3\times15=74
+\qquad\text{et}\qquad
+m_{2,3}=4\times9+5\times13+6\times17=203.
+\]</div>
+<p>En procédant de même pour les autres coefficients, on obtient :</p>
+<p class="zh">对其余系数作同样的计算，得到：</p>
+<div class="arithmatex">\[
+AB=\begin{pmatrix}74 &amp; 80 &amp; 86 &amp; 92\\173 &amp; 188 &amp; 203 &amp; 218\end{pmatrix}\in\mathscr{M}_{2,4}(\mathbb{R}).
+\]</div>
+<p>Par contre, le produit <span class="arithmatex">\(BA\)</span> n'est pas défini car le nombre de colonnes de <span class="arithmatex">\(B\)</span> n'est pas égal au nombre de lignes de <span class="arithmatex">\(A\)</span>.</p>
+<p class="zh">另一方面，乘积 <span class="arithmatex">\(BA\)</span> 无定义，因为 <span class="arithmatex">\(B\)</span> 的列数不等于 <span class="arithmatex">\(A\)</span> 的行数。</p>
+</li>
+<li>
+<p>Pour <span class="arithmatex">\(n=p=1\)</span>, on retrouve l'addition et la multiplication des nombres. Autrement dit, l'ensemble <span class="arithmatex">\(\mathscr{M}_{1,1}(\mathbb{K})\)</span> des matrices <span class="arithmatex">\(1\times1\)</span> peut être vu comme l'ensemble <span class="arithmatex">\(\mathbb{K}\)</span>.</p>
+<p class="zh">当 <span class="arithmatex">\(n=p=1\)</span> 时，重新得到数的加法与乘法。换言之，<span class="arithmatex">\(1\times1\)</span> 矩阵的集合 <span class="arithmatex">\(\mathscr{M}_{1,1}(\mathbb{K})\)</span> 可视为集合 <span class="arithmatex">\(\mathbb{K}\)</span>。</p>
+</li>
+<li>
+<p>Pour tout <span class="arithmatex">\(\lambda\in\mathbb{K}\)</span> et tout <span class="arithmatex">\(M\in\mathscr{M}_{n,p}(\mathbb{K})\)</span>, on a :</p>
+<p class="zh">对任意 <span class="arithmatex">\(\lambda\in\mathbb{K}\)</span> 与任意 <span class="arithmatex">\(M\in\mathscr{M}_{n,p}(\mathbb{K})\)</span>，有：</p>
+<div class="arithmatex">\[
+\lambda 0_{n,p}=0_{n,p},\qquad
+M+0_{n,p}=0_{n,p}+M=M,\qquad
+M0_{p,q}=0_{n,q}
+\qquad\text{et}\qquad
+0_{q,n}M=0_{q,p}.
+\]</div>
+</li>
+</ul>
 </div>
 <div class="admonition danger">
-<p class="admonition-title">Propriété 1.7<br><span class='zh-title'>性质 1.7</span></p>
-<p>associativité, distributivité et compatibilité.</p>
-<p class="zh"><strong>结合律</strong>（associativité）、<strong>分配律</strong>（distributivité）与<strong>相容性</strong>（compatibilité）。</p>
+<p class="admonition-title">Propriété 1.5<br><span class='zh-title'>性质 1.5</span></p>
+<p>Les opérations avec les matrices vérifient les propriétés suivantes :</p>
+<p class="zh">矩阵运算满足以下性质：</p>
+<ul>
+<li>
+<p><strong>associativité</strong>（结合律）：</p>
+<div class="arithmatex">\[
+\left\{
+\begin{aligned}
+&amp;\forall(A,B,C)\in\mathscr{M}_{n,p}(\mathbb{K})^3,\quad (A+B)+C=A+(B+C)\\
+&amp;\forall(A,B,C)\in\mathscr{M}_{n,p}(\mathbb{K})\times\mathscr{M}_{p,q}(\mathbb{K})\times\mathscr{M}_{q,r}(\mathbb{K}),\quad (AB)C=A(BC)
+\end{aligned}
+\right.
+\]</div>
+</li>
+<li>
+<p><strong>distributivité</strong>（分配律）：</p>
+<div class="arithmatex">\[
+\left\{
+\begin{aligned}
+&amp;\forall(A,(B,C))\in\mathscr{M}_{n,p}(\mathbb{K})\times\mathscr{M}_{p,q}(\mathbb{K})^2,\quad A(B+C)=AB+AC\\
+&amp;\forall((A,B),C)\in\mathscr{M}_{n,p}(\mathbb{K})^2\times\mathscr{M}_{p,q}(\mathbb{K}),\quad (A+B)C=AC+BC
+\end{aligned}
+\right.
+\]</div>
+</li>
+<li>
+<p><strong>linéarité</strong>（线性性）：</p>
+<div class="arithmatex">\[
+\left\{
+\begin{aligned}
+&amp;\forall((\lambda,\mu),A)\in\mathbb{K}^2\times\mathscr{M}_{n,p}(\mathbb{K}),\quad (\lambda+\mu)A=\lambda A+\mu A\\
+&amp;\forall(\lambda,(A,B))\in\mathbb{K}\times\mathscr{M}_{n,p}(\mathbb{K})^2,\quad \lambda(A+B)=\lambda A+\lambda B
+\end{aligned}
+\right.
+\]</div>
+</li>
+<li>
+<p><strong>compatibilité</strong>（相容性）：</p>
+<div class="arithmatex">\[
+\left\{
+\begin{aligned}
+&amp;\forall((\lambda,\mu),A)\in\mathbb{K}^2\times\mathscr{M}_{n,p}(\mathbb{K}),\quad \lambda(\mu A)=(\lambda\mu)A\\
+&amp;\forall(\lambda,A,B)\in\mathbb{K}\times\mathscr{M}_{n,p}(\mathbb{K})\times\mathscr{M}_{p,q}(\mathbb{K}),\quad \lambda(AB)=(\lambda A)B=A(\lambda B)
+\end{aligned}
+\right.
+\]</div>
+</li>
+</ul>
 </div>
 <div class="admonition demo">
-<p><strong>Démonstration.</strong> faire l'associativité en cours.</p>
-<p class="zh"><strong>证明.</strong> 结合律留作课上完成。</p>
+<p><strong>Démonstration.</strong> Par exemple, pour l'associativité de la multiplication de matrices, on pose : <span class="arithmatex">\(A=(a_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span>, <span class="arithmatex">\(B=(b_{i,j})\in\mathscr{M}_{p,q}(\mathbb{K})\)</span> et <span class="arithmatex">\(C=(c_{i,j})\in\mathscr{M}_{q,r}(\mathbb{K})\)</span>. Alors :</p>
+<p class="zh"><strong>证明.</strong> 例如，对矩阵乘法的结合律，令 <span class="arithmatex">\(A=(a_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span>、<span class="arithmatex">\(B=(b_{i,j})\in\mathscr{M}_{p,q}(\mathbb{K})\)</span>、<span class="arithmatex">\(C=(c_{i,j})\in\mathscr{M}_{q,r}(\mathbb{K})\)</span>。则：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+AB&amp;=\left(\sum_{k=1}^{p}a_{i,k}b_{k,j}\right)\in\mathscr{M}_{n,q}(\mathbb{K}),\\
+\text{donc}\quad (AB)C&amp;=\left(\sum_{\ell=1}^{q}\left(\sum_{k=1}^{p}a_{i,k}b_{k,\ell}\right)c_{\ell,j}\right)\in\mathscr{M}_{n,r}(\mathbb{K}),
+\end{aligned}
+\]</div>
+<p>et de même :</p>
+<p class="zh">同样地：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+BC&amp;=\left(\sum_{\ell=1}^{q}b_{i,\ell}c_{\ell,j}\right)\in\mathscr{M}_{p,r}(\mathbb{K}),\\
+\text{donc}\quad A(BC)&amp;=\left(\sum_{k=1}^{p}a_{i,k}\left(\sum_{\ell=1}^{q}b_{k,\ell}c_{\ell,j}\right)\right)\in\mathscr{M}_{n,r}(\mathbb{K}).
+\end{aligned}
+\]</div>
+<p>On en déduit que <span class="arithmatex">\((AB)C=A(BC)\)</span> car pour tout <span class="arithmatex">\(i\in\llbracket 1,n\rrbracket\)</span> et tout <span class="arithmatex">\(j\in\llbracket 1,r\rrbracket\)</span> :</p>
+<p class="zh">由此可知 <span class="arithmatex">\((AB)C=A(BC)\)</span>，因为对任意 <span class="arithmatex">\(i\in\llbracket 1,n\rrbracket\)</span> 与 <span class="arithmatex">\(j\in\llbracket 1,r\rrbracket\)</span>：</p>
+<div class="arithmatex">\[
+\sum_{\ell=1}^{q}\left(\sum_{k=1}^{p}a_{i,k}b_{k,\ell}\right)c_{\ell,j}
+=
+\sum_{\substack{1\leqslant k\leqslant p\\1\leqslant\ell\leqslant q}}a_{i,k}b_{k,\ell}c_{\ell,j}
+=
+\sum_{k=1}^{p}a_{i,k}\left(\sum_{\ell=1}^{q}b_{k,\ell}c_{\ell,j}\right).
+\]</div>
+<p>On montre de même les autres propriétés.</p>
+<p class="zh">其余性质同理可证。</p>
+<p><p class="cqfd">∎</p></p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Attention<br><span class='zh-title'>注意</span></p>
-<p>La multiplication de matrices n'est pas commutative !</p>
-<p class="zh">矩阵乘法不满足交换律！</p>
+<p>L'addition des matrices est commutative : <span class="arithmatex">\(\forall(A,B)\in\mathscr{M}_{n,p}(\mathbb{K})^2,\ A+B=B+A\)</span>. Par contre, la multiplication de matrices n'est pas commutative !</p>
+<p class="zh">矩阵加法满足交换律：<span class="arithmatex">\(\forall(A,B)\in\mathscr{M}_{n,p}(\mathbb{K})^2,\ A+B=B+A\)</span>。但矩阵乘法不满足交换律！</p>
 <ul>
 <li>
 <p>En effet, les multiplications <span class="arithmatex">\(AB\)</span> et <span class="arithmatex">\(BA\)</span> ne sont pas toujours définies. Par exemple, si <span class="arithmatex">\(A\)</span> est une matrice <span class="arithmatex">\(2\times 3\)</span> et <span class="arithmatex">\(B\)</span> est une matrice <span class="arithmatex">\(3\times 4\)</span>, alors <span class="arithmatex">\(AB\)</span> est une matrice <span class="arithmatex">\(2\times 4\)</span> mais la multiplication <span class="arithmatex">\(BA\)</span> n'est pas définie.</p>
@@ -6667,28 +6816,22 @@ AB=\left(\sum_{k=1}^{p}a_{i,k}b_{k,j}\right)\in\mathscr{M}_{n,q}(\mathbb{K}).
 <p>Il n'y a pas d'intégrité dans l'ensemble des matrices ! Par exemple :</p>
 <p class="zh">矩阵集合中不存在<strong>整性</strong>（intégrité）！例如：</p>
 <div class="arithmatex">\[
-\begin{pmatrix}2 &amp; -3\\-4 &amp; 6\end{pmatrix}\neq\begin{pmatrix}0 &amp; 0\\0 &amp; 0\end{pmatrix}
-\qquad\text{et}\qquad
-\begin{pmatrix}3 &amp; -6\\2 &amp; -4\end{pmatrix}\neq\begin{pmatrix}0 &amp; 0\\0 &amp; 0\end{pmatrix}
-\]</div>
-<div class="arithmatex">\[
-\text{mais}\qquad
-\begin{pmatrix}2 &amp; -3\\-4 &amp; 6\end{pmatrix}
-\begin{pmatrix}3 &amp; -6\\2 &amp; -4\end{pmatrix}
+\underbrace{\begin{pmatrix}2 &amp; -3\\-4 &amp; 6\end{pmatrix}}_{\neq 0_{2,2}}
+\underbrace{\begin{pmatrix}3 &amp; -6\\2 &amp; -4\end{pmatrix}}_{\neq 0_{2,2}}
 =
 \begin{pmatrix}0 &amp; 0\\0 &amp; 0\end{pmatrix}.
 \]</div>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Définition 1.8 : transposition<br><span class='zh-title'>定义 1.8：转置（transposition）</span></p>
-<p>Si <span class="arithmatex">\(M=(m_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span>, alors :</p>
-<p class="zh">若 <span class="arithmatex">\(M=(m_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span>，则：</p>
+<p class="admonition-title">Définition 1.6 : transposition<br><span class='zh-title'>定义 1.6：转置（transposition）</span></p>
+<p>La <strong>transposée</strong> d'une matrice <span class="arithmatex">\(M=(m_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span> est la matrice :</p>
+<p class="zh">矩阵 <span class="arithmatex">\(M=(m_{i,j})\in\mathscr{M}_{n,p}(\mathbb{K})\)</span> 的<strong>转置</strong>（transposée）是矩阵：</p>
 <div class="arithmatex">\[
 M^{\mathrm{T}}=(m_{j,i})\in\mathscr{M}_{p,n}(\mathbb{K}).
 \]</div>
 </div>
 <div class="admonition info">
-<p class="admonition-title">Exemple 1.9<br><span class='zh-title'>例 1.9</span></p>
+<p class="admonition-title">Exemple 1.7<br><span class='zh-title'>例 1.7</span></p>
 <div class="arithmatex">\[
 \begin{pmatrix}1 &amp; 2 &amp; 3\\4 &amp; 5 &amp; 6\end{pmatrix}^{\mathrm{T}}
 =
@@ -6696,16 +6839,27 @@ M^{\mathrm{T}}=(m_{j,i})\in\mathscr{M}_{p,n}(\mathbb{K}).
 \]</div>
 </div>
 <div class="admonition danger">
-<p class="admonition-title">Propriété 1.10<br><span class='zh-title'>性质 1.10</span></p>
+<p class="admonition-title">Propriété 1.8<br><span class='zh-title'>性质 1.8</span></p>
 <ul>
-<li><span class="arithmatex">\((M^{\mathrm{T}})^{\mathrm{T}}=M\)</span>,</li>
-<li><span class="arithmatex">\((\lambda M)^{\mathrm{T}}=\lambda M^{\mathrm{T}}\)</span>,</li>
-<li><span class="arithmatex">\((A+B)^{\mathrm{T}}=A^{\mathrm{T}}+B^{\mathrm{T}}\)</span>,</li>
-<li><span class="arithmatex">\((AB)^{\mathrm{T}}=B^{\mathrm{T}}A^{\mathrm{T}}\)</span>.</li>
+<li>
+<p><span class="arithmatex">\(\forall M\in\mathscr{M}_{n,p}(\mathbb{K}),\quad (M^{\mathrm{T}})^{\mathrm{T}}=M\)</span>,</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall(\lambda,M)\in\mathbb{K}\times\mathscr{M}_{n,p}(\mathbb{K}),\quad (\lambda M)^{\mathrm{T}}=\lambda M^{\mathrm{T}}\)</span>,</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall(A,B)\in\mathscr{M}_{n,p}(\mathbb{K})^2,\quad (A+B)^{\mathrm{T}}=A^{\mathrm{T}}+B^{\mathrm{T}}\)</span>,</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall(A,B)\in\mathscr{M}_{n,p}(\mathbb{K})\times\mathscr{M}_{p,q}(\mathbb{K}),\quad (AB)^{\mathrm{T}}=B^{\mathrm{T}}A^{\mathrm{T}}\)</span>.</p>
+</li>
 </ul>
 </div>
-<p>Attention aux tailles : si <span class="arithmatex">\(A\)</span> est une matrice <span class="arithmatex">\(n\times p\)</span> et <span class="arithmatex">\(B\)</span> est une matrice <span class="arithmatex">\(p\times q\)</span>, alors <span class="arithmatex">\(A^{\mathrm{T}}\)</span> est une matrice <span class="arithmatex">\(p\times n\)</span> et <span class="arithmatex">\(B^{\mathrm{T}}\)</span> est une matrice <span class="arithmatex">\(q\times p\)</span>, donc la multiplication <span class="arithmatex">\(A^{\mathrm{T}}B^{\mathrm{T}}\)</span> n'est en général pas définie alors que <span class="arithmatex">\(B^{\mathrm{T}}A^{\mathrm{T}}\)</span> est une matrice <span class="arithmatex">\(q\times n\)</span> bien définie.</p>
-<p class="zh">注意尺寸：若 <span class="arithmatex">\(A\)</span> 是 <span class="arithmatex">\(n\times p\)</span> 矩阵、<span class="arithmatex">\(B\)</span> 是 <span class="arithmatex">\(p\times q\)</span> 矩阵，则 <span class="arithmatex">\(A^{\mathrm{T}}\)</span> 是 <span class="arithmatex">\(p\times n\)</span> 矩阵，<span class="arithmatex">\(B^{\mathrm{T}}\)</span> 是 <span class="arithmatex">\(q\times p\)</span> 矩阵；因此乘积 <span class="arithmatex">\(A^{\mathrm{T}}B^{\mathrm{T}}\)</span> 一般无定义，而 <span class="arithmatex">\(B^{\mathrm{T}}A^{\mathrm{T}}\)</span> 是定义良好的 <span class="arithmatex">\(q\times n\)</span> 矩阵。</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention<br><span class='zh-title'>注意</span></p>
+<p>Attention aux tailles : si <span class="arithmatex">\(A\)</span> est une matrice <span class="arithmatex">\(n\times p\)</span> et <span class="arithmatex">\(B\)</span> est une matrice <span class="arithmatex">\(p\times q\)</span>, alors <span class="arithmatex">\(B^{\mathrm{T}}A^{\mathrm{T}}\)</span> est une matrice <span class="arithmatex">\(q\times n\)</span> mais la multiplication <span class="arithmatex">\(A^{\mathrm{T}}B^{\mathrm{T}}\)</span> n'est en général pas définie.</p>
+<p class="zh">注意尺寸：若 <span class="arithmatex">\(A\)</span> 是 <span class="arithmatex">\(n\times p\)</span> 矩阵、<span class="arithmatex">\(B\)</span> 是 <span class="arithmatex">\(p\times q\)</span> 矩阵，则 <span class="arithmatex">\(B^{\mathrm{T}}A^{\mathrm{T}}\)</span> 是 <span class="arithmatex">\(q\times n\)</span> 矩阵，而乘积 <span class="arithmatex">\(A^{\mathrm{T}}B^{\mathrm{T}}\)</span> 一般无定义。</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Vocabulaire clé<br><span class='zh-title'>重点词汇</span></p>
 <ul>
@@ -6715,88 +6869,227 @@ M^{\mathrm{T}}=(m_{j,i})\in\mathscr{M}_{p,n}(\mathbb{K}).
 <li><strong>coefficient</strong>：系数</li>
 <li><strong>matrice ligne / matrice colonne</strong>：行矩阵 / 列矩阵</li>
 <li><strong>matrice nulle</strong>：零矩阵</li>
-<li><strong>produit d'une matrice par un scalaire</strong>：矩阵与标量的乘积</li>
+<li><strong>multiplication par un scalaire</strong>：标量乘法</li>
 <li><strong>addition de matrices</strong>：矩阵加法</li>
 <li><strong>multiplication de matrices</strong>：矩阵乘法</li>
+<li><strong>associativité / distributivité</strong>：结合律 / 分配律</li>
+<li><strong>linéarité / compatibilité</strong>：线性性 / 相容性</li>
 <li><strong>transposition</strong>：转置</li>
 <li><strong>commutativité</strong>：交换律</li>
 <li><strong>intégrité</strong>：整性</li>
 <li><strong>être bien définie</strong>：有定义 / 定义良好</li>
-<li><strong>en général</strong>：一般地</li>
 </ul>
 </div>
 <h2 id="2-matrices-carrees">2　Matrices carrées <span class="heading-zh">方阵</span><a class="headerlink" href="#2-matrices-carrees" title="Permanent link">&para;</a></h2>
+<p>Dans cette section, on fixe un entier <span class="arithmatex">\(n\in\mathbb{N}^*\)</span>.</p>
+<p class="zh">本节固定一个整数 <span class="arithmatex">\(n\in\mathbb{N}^*\)</span>。</p>
 <div class="admonition success">
 <p class="admonition-title">Définition 2.1 : matrice carrée<br><span class='zh-title'>定义 2.1：方阵（matrice carrée）</span></p>
-<p>matrice carrée d'ordre <span class="arithmatex">\(n\)</span>, notation <span class="arithmatex">\(\mathscr{M}_n(\mathbb{K})\)</span>, matrice nulle <span class="arithmatex">\(0_n\)</span>, et matrice identité <span class="arithmatex">\(I_n\)</span>.</p>
-<p class="zh"><span class="arithmatex">\(n\)</span> 阶<strong>方阵</strong>（matrice carrée d'ordre <span class="arithmatex">\(n\)</span>）、记号 <span class="arithmatex">\(\mathscr{M}_n(\mathbb{K})\)</span>、零矩阵 <span class="arithmatex">\(0_n\)</span> 以及<strong>单位矩阵</strong>（matrice identité）<span class="arithmatex">\(I_n\)</span>。</p>
+<p>Une matrice qui a le même nombre de lignes et de colonnes est dite <strong>matrice carrée</strong>. On note <span class="arithmatex">\(\mathscr{M}_n(\mathbb{K})\)</span> l'ensemble des matrices carrées <span class="arithmatex">\(n\times n\)</span>, <span class="arithmatex">\(0_n\)</span> la matrice de <span class="arithmatex">\(\mathscr{M}_n(\mathbb{K})\)</span> dont tous les coefficients sont nuls, appelée la <strong>matrice nulle</strong>, et <span class="arithmatex">\(I_n\)</span> la matrice suivante appelée la <strong>matrice identité</strong> :</p>
+<p class="zh">行数与列数相同的矩阵称为<strong>方阵</strong>（matrice carrée）。记 <span class="arithmatex">\(\mathscr{M}_n(\mathbb{K})\)</span> 为所有 <span class="arithmatex">\(n\times n\)</span> 方阵的集合，<span class="arithmatex">\(0_n\)</span> 为 <span class="arithmatex">\(\mathscr{M}_n(\mathbb{K})\)</span> 中所有系数全为零的矩阵，称为<strong>零矩阵</strong>（matrice nulle）；并记 <span class="arithmatex">\(I_n\)</span> 为如下矩阵，称为<strong>单位矩阵</strong>（matrice identité）：</p>
+<div class="arithmatex">\[
+I_n=
+\begin{pmatrix}
+1 &amp; 0 &amp; \cdots &amp; 0\\
+0 &amp; \ddots &amp; \ddots &amp; \vdots\\
+\vdots &amp; \ddots &amp; \ddots &amp; 0\\
+0 &amp; \cdots &amp; 0 &amp; 1
+\end{pmatrix}\in\mathscr{M}_n(\mathbb{K}).
+\]</div>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Exemple 2.2<br><span class='zh-title'>例 2.2</span></p>
-<p>identification de <span class="arithmatex">\(\mathbb{K}\)</span> avec les matrices carrées d'ordre 1, addition et multiplication par <span class="arithmatex">\(0_n\)</span>, multiplication par <span class="arithmatex">\(I_n\)</span>.</p>
-<p class="zh">将 <span class="arithmatex">\(\mathbb{K}\)</span> 与一阶方阵等同；与 <span class="arithmatex">\(0_n\)</span> 的加法及乘法；与 <span class="arithmatex">\(I_n\)</span> 的乘法。</p>
+<ul>
+<li>
+<p>Si <span class="arithmatex">\(A\)</span> et <span class="arithmatex">\(B\)</span> sont des matrices carrées <span class="arithmatex">\(n\times n\)</span>, alors <span class="arithmatex">\(AB\)</span> et <span class="arithmatex">\(BA\)</span> sont aussi des matrices carrées <span class="arithmatex">\(n\times n\)</span> (mais <span class="arithmatex">\(AB\neq BA\)</span> en général).</p>
+<p class="zh">若 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 都是 <span class="arithmatex">\(n\times n\)</span> 方阵，则 <span class="arithmatex">\(AB\)</span> 与 <span class="arithmatex">\(BA\)</span> 也是 <span class="arithmatex">\(n\times n\)</span> 方阵（但一般 <span class="arithmatex">\(AB\neq BA\)</span>）。</p>
+</li>
+<li>
+<p>Pour tout <span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span>, on a : <span class="arithmatex">\(MI_n=I_nM=M\)</span>.</p>
+<p class="zh">对任意 <span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span>，有 <span class="arithmatex">\(MI_n=I_nM=M\)</span>。</p>
+</li>
+</ul>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Attention<br><span class='zh-title'>注意</span></p>
-<p>attention à la factorisation de <span class="arithmatex">\(AB+A\)</span>.</p>
-<p class="zh">注意 <span class="arithmatex">\(AB+A\)</span> 的因式分解。</p>
+<p>Ne pas confondre la matrice identité <span class="arithmatex">\(I_n\)</span> et le nombre 1 ! Par exemple, pour tout <span class="arithmatex">\((A,B)\in\mathscr{M}_n(\mathbb{K})^2\)</span>, on a : <span class="arithmatex">\(AB+A=AB+AI_n=A(B+I_n)\)</span>, mais l'addition <span class="arithmatex">\(B+1\)</span> n'est pas définie.</p>
+<p class="zh">不要把单位矩阵 <span class="arithmatex">\(I_n\)</span> 与数 <span class="arithmatex">\(1\)</span> 混淆！例如，对任意 <span class="arithmatex">\((A,B)\in\mathscr{M}_n(\mathbb{K})^2\)</span>，有 <span class="arithmatex">\(AB+A=AB+AI_n=A(B+I_n)\)</span>，但加法 <span class="arithmatex">\(B+1\)</span> 无定义。</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Définition 2.3 : puissances d'une matrice carrée<br><span class='zh-title'>定义 2.3：方阵的幂</span></p>
-<p>à faire en cours.</p>
-<p class="zh">课上完成。</p>
+<p>Pour toute matrice carrée <span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span> et tout <span class="arithmatex">\(k\in\mathbb{N}\)</span>, on définit <span class="arithmatex">\(M^k\)</span> par <span class="arithmatex">\(M^0=I_n\)</span> et la relation de récurrence <span class="arithmatex">\(M^{k+1}=MM^k=M^kM\)</span>.</p>
+<p class="zh">对任意方阵 <span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span> 与任意 <span class="arithmatex">\(k\in\mathbb{N}\)</span>，定义 <span class="arithmatex">\(M^k\)</span> 为 <span class="arithmatex">\(M^0=I_n\)</span> 及递推关系 <span class="arithmatex">\(M^{k+1}=MM^k=M^kM\)</span>。</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Exemple 2.4<br><span class='zh-title'>例 2.4</span></p>
 <ul>
 <li>
-<p>Calculer les puissances de</p>
-<p class="zh">计算该矩阵的各次幂。</p>
+<p>On considère la matrice carrée <span class="arithmatex">\(U_n=\begin{pmatrix}1 &amp; \cdots &amp; 1\\ \vdots &amp; &amp; \vdots\\ 1 &amp; \cdots &amp; 1\end{pmatrix}\in\mathscr{M}_n(\mathbb{R})\)</span>. On a :</p>
+<p class="zh">考虑方阵 <span class="arithmatex">\(U_n=\begin{pmatrix}1 &amp; \cdots &amp; 1\\ \vdots &amp; &amp; \vdots\\ 1 &amp; \cdots &amp; 1\end{pmatrix}\in\mathscr{M}_n(\mathbb{R})\)</span>。有：</p>
 <div class="arithmatex">\[
-\begin{pmatrix}1 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 0\\1 &amp; 0 &amp; 1\end{pmatrix}\in\mathscr{M}_3(\mathbb{R}).
+U_n^0=I_n=
+\begin{pmatrix}
+1 &amp; 0 &amp; \cdots &amp; 0\\
+0 &amp; \ddots &amp; \ddots &amp; \vdots\\
+\vdots &amp; \ddots &amp; \ddots &amp; 0\\
+0 &amp; \cdots &amp; 0 &amp; 1
+\end{pmatrix},
+\qquad
+U_n^1=U_n=
+\begin{pmatrix}
+1 &amp; \cdots &amp; 1\\
+\vdots &amp; &amp; \vdots\\
+1 &amp; \cdots &amp; 1
+\end{pmatrix},
 \]</div>
+<div class="arithmatex">\[
+U_n^2=U_nU_n=
+\begin{pmatrix}
+n &amp; \cdots &amp; n\\
+\vdots &amp; &amp; \vdots\\
+n &amp; \cdots &amp; n
+\end{pmatrix}
+=nU_n,
+\qquad
+U_n^3=U_nU_n^2=U_n\,nU_n=nU_n^2=n^2U_n,
+\]</div>
+<div class="arithmatex">\[
+U_n^4=U_nU_n^3=U_n\,n^2U_n=n^2U_n^2=n^3U_n,\quad\dots
+\]</div>
+<p>On conjecture que, pour tout <span class="arithmatex">\(k\in\mathbb{N}^*\)</span>, <span class="arithmatex">\(U_n^k=n^{k-1}U_n\)</span>. On peut montrer cette conjecture par récurrence.</p>
+<p class="zh">猜测：对任意 <span class="arithmatex">\(k\in\mathbb{N}^*\)</span>，<span class="arithmatex">\(U_n^k=n^{k-1}U_n\)</span>。可用归纳法证明这一猜测。</p>
+<ul>
+<li>
+<p><strong>Initialisation.</strong> On a <span class="arithmatex">\(U_n^1=U_n=n^{1-1}U_n\)</span> donc le résultat est vrai pour <span class="arithmatex">\(k=1\)</span>.</p>
+<p class="zh"><strong>初始化.</strong> 有 <span class="arithmatex">\(U_n^1=U_n=n^{1-1}U_n\)</span>，故 <span class="arithmatex">\(k=1\)</span> 时结论成立。</p>
 </li>
 <li>
-<p>Calculer les puissances de</p>
-<p class="zh">计算该矩阵的各次幂。</p>
+<p><strong>Hérédité.</strong> On suppose que <span class="arithmatex">\(U_n^k=n^{k-1}U_n\)</span> pour une puissance <span class="arithmatex">\(k\in\mathbb{N}^*\)</span> fixée. Alors :</p>
+<p class="zh"><strong>归纳递推.</strong> 设对某个固定的幂次 <span class="arithmatex">\(k\in\mathbb{N}^*\)</span> 有 <span class="arithmatex">\(U_n^k=n^{k-1}U_n\)</span>。则：</p>
 <div class="arithmatex">\[
-\begin{pmatrix}
-2 &amp; -2 &amp; -1 &amp; 1\\
-1 &amp; -1 &amp; 0 &amp; 0\\
-1 &amp; -1 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 1 &amp; -1
-\end{pmatrix}\in\mathscr{M}_4(\mathbb{R}).
+U_n^{k+1}=U_nU_n^k=n^{k-1}U_n^2=n^{k+1-1}U_n.
 \]</div>
+<p>Ainsi, le résultat est vrai aussi pour la puissance <span class="arithmatex">\(k+1\)</span>.</p>
+<p class="zh">因此，对幂次 <span class="arithmatex">\(k+1\)</span> 结论也成立。</p>
+</li>
+<li>
+<p><strong>Conclusion.</strong> D'après le principe de récurrence, le résultat est vrai pour toute puissance <span class="arithmatex">\(k\in\mathbb{N}^*\)</span>.</p>
+<p class="zh"><strong>结论.</strong> 由归纳原理，结论对所有幂次 <span class="arithmatex">\(k\in\mathbb{N}^*\)</span> 成立。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Soit <span class="arithmatex">\(M=\begin{pmatrix}-1 &amp; 2 &amp; 1 &amp; 1\\-1 &amp; 3 &amp; 3 &amp; 1\\1 &amp; -2 &amp; -1 &amp; -1\\1 &amp; -3 &amp; -3 &amp; -1\end{pmatrix}\in\mathscr{M}_4(\mathbb{R})\)</span>. On a :</p>
+<p class="zh">设 <span class="arithmatex">\(M=\begin{pmatrix}-1 &amp; 2 &amp; 1 &amp; 1\\-1 &amp; 3 &amp; 3 &amp; 1\\1 &amp; -2 &amp; -1 &amp; -1\\1 &amp; -3 &amp; -3 &amp; -1\end{pmatrix}\in\mathscr{M}_4(\mathbb{R})\)</span>。有：</p>
+<div class="arithmatex">\[
+M^2=MM=
+\begin{pmatrix}-1 &amp; 2 &amp; 1 &amp; 1\\-1 &amp; 3 &amp; 3 &amp; 1\\1 &amp; -2 &amp; -1 &amp; -1\\1 &amp; -3 &amp; -3 &amp; -1\end{pmatrix}
+\begin{pmatrix}-1 &amp; 2 &amp; 1 &amp; 1\\-1 &amp; 3 &amp; 3 &amp; 1\\1 &amp; -2 &amp; -1 &amp; -1\\1 &amp; -3 &amp; -3 &amp; -1\end{pmatrix}
+=
+\begin{pmatrix}1 &amp; -1 &amp; 1 &amp; -1\\2 &amp; -2 &amp; 2 &amp; -2\\-1 &amp; 1 &amp; -1 &amp; 1\\-2 &amp; 2 &amp; -2 &amp; 2\end{pmatrix},
+\]</div>
+<div class="arithmatex">\[
+M^3=MM^2=
+\begin{pmatrix}-1 &amp; 2 &amp; 1 &amp; 1\\-1 &amp; 3 &amp; 3 &amp; 1\\1 &amp; -2 &amp; -1 &amp; -1\\1 &amp; -3 &amp; -3 &amp; -1\end{pmatrix}
+\begin{pmatrix}1 &amp; -1 &amp; 1 &amp; -1\\2 &amp; -2 &amp; 2 &amp; -2\\-1 &amp; 1 &amp; -1 &amp; 1\\-2 &amp; 2 &amp; -2 &amp; 2\end{pmatrix}
+=
+\begin{pmatrix}0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0\end{pmatrix}=0_4.
+\]</div>
+<p>On en déduit que, pour tout <span class="arithmatex">\(k\geqslant3\)</span>, <span class="arithmatex">\(M^k=0_4\)</span>.</p>
+<p class="zh">由此可知，对任意 <span class="arithmatex">\(k\geqslant3\)</span>，<span class="arithmatex">\(M^k=0_4\)</span>。</p>
 </li>
 </ul>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Définition 2.5 : matrice nilpotente<br><span class='zh-title'>定义 2.5：幂零矩阵（matrice nilpotente）</span></p>
-<p>à faire en cours.</p>
-<p class="zh">课上完成。</p>
+<p>On dit qu'une matrice carrée <span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span> est <strong>nilpotente</strong> lorsque :</p>
+<p class="zh">若存在 <span class="arithmatex">\(k\in\mathbb{N}^*\)</span> 使 <span class="arithmatex">\(M^k=0_n\)</span>，则称方阵 <span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span> 是<strong>幂零的</strong>（nilpotente）：</p>
+<div class="arithmatex">\[
+\exists k\in\mathbb{N}^*,\quad M^k=0_n.
+\]</div>
+<p>Le plus petit entier <span class="arithmatex">\(k\in\mathbb{N}^*\)</span> vérifiant cette propriété est appelé l'<strong>indice de nilpotence</strong>.</p>
+<p class="zh">满足该性质的最小整数 <span class="arithmatex">\(k\in\mathbb{N}^*\)</span> 称为<strong>幂零指数</strong>（indice de nilpotence）。</p>
 </div>
+<p>On peut montrer que l'indice de nilpotence est inférieur ou égal à <span class="arithmatex">\(n\)</span>. Ainsi, <span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span> est nilpotente si et seulement si <span class="arithmatex">\(M^n=0_n\)</span>, et dans ce cas : <span class="arithmatex">\(\forall k\geqslant n,\ M^k=0_n\)</span>.</p>
+<p class="zh">可以证明幂零指数小于或等于 <span class="arithmatex">\(n\)</span>。因此，<span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span> 幂零当且仅当 <span class="arithmatex">\(M^n=0_n\)</span>；此时对任意 <span class="arithmatex">\(k\geqslant n\)</span>，有 <span class="arithmatex">\(M^k=0_n\)</span>。</p>
 <div class="admonition success">
 <p class="admonition-title">Définition 2.6 : polynôme de matrice<br><span class='zh-title'>定义 2.6：矩阵多项式（polynôme de matrice）</span></p>
-<p>à faire en cours.</p>
-<p class="zh">课上完成。</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Exemple 2.7<br><span class='zh-title'>例 2.7</span></p>
-<p><span class="arithmatex">\(M=\begin{pmatrix}0 &amp; 1 &amp; 0\\-1 &amp; -1 &amp; 1\\1 &amp; 0 &amp; -2\end{pmatrix}\)</span> et <span class="arithmatex">\(P=X^3+3X^2+3X+2\)</span>.</p>
-<p class="zh">其中 <span class="arithmatex">\(M\)</span> 为上述矩阵，<span class="arithmatex">\(P=X^3+3X^2+3X+2\)</span>。</p>
+<p>Soient <span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span> et <span class="arithmatex">\(P=\sum_{k=0}^{N}a_kX^k\in\mathbb{K}[X]\)</span>. On définit :</p>
+<p class="zh">设 <span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span>，<span class="arithmatex">\(P=\sum_{k=0}^{N}a_kX^k\in\mathbb{K}[X]\)</span>。定义：</p>
+<div class="arithmatex">\[
+P(M)=\sum_{k=0}^{N}a_kM^k=a_0I_n+a_1M+a_2M^2+\cdots+a_NM^N\in\mathscr{M}_n(\mathbb{K}).
+\]</div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Attention<br><span class='zh-title'>注意</span></p>
-<p>attention à l'absence de commutativité :</p>
-<p class="zh">注意非交换性：</p>
+<p>Ne pas oublier <span class="arithmatex">\(M^0=I_n\)</span> ! L'addition d'une matrice et d'un nombre n'est pas définie.</p>
+<p class="zh">不要忘记 <span class="arithmatex">\(M^0=I_n\)</span>！矩阵与数的加法没有定义。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 2.7<br><span class='zh-title'>例 2.7</span></p>
+<p>Soient <span class="arithmatex">\(P=X^2-3X+2\in\mathbb{R}[X]\)</span> et <span class="arithmatex">\(M=\begin{pmatrix}2 &amp; 1 &amp; -1\\1 &amp; 2 &amp; -1\\1 &amp; 1 &amp; 0\end{pmatrix}\)</span>. On a :</p>
+<p class="zh">设 <span class="arithmatex">\(P=X^2-3X+2\in\mathbb{R}[X]\)</span>，<span class="arithmatex">\(M=\begin{pmatrix}2 &amp; 1 &amp; -1\\1 &amp; 2 &amp; -1\\1 &amp; 1 &amp; 0\end{pmatrix}\)</span>。有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P(M)&amp;=M^2-3M+2I_3\\
+&amp;=
+\begin{pmatrix}4 &amp; 3 &amp; -3\\3 &amp; 4 &amp; -3\\3 &amp; 3 &amp; -2\end{pmatrix}
++\begin{pmatrix}-6 &amp; -3 &amp; 3\\-3 &amp; -6 &amp; 3\\-3 &amp; -3 &amp; 0\end{pmatrix}
++\begin{pmatrix}2 &amp; 0 &amp; 0\\0 &amp; 2 &amp; 0\\0 &amp; 0 &amp; 2\end{pmatrix}
+=
+\begin{pmatrix}0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0\end{pmatrix}
+=0_3.
+\end{aligned}
+\]</div>
+<p>On dit que <span class="arithmatex">\(P\)</span> est un <strong>polynôme annulateur</strong> de <span class="arithmatex">\(M\)</span>. En particulier :</p>
+<p class="zh">称 <span class="arithmatex">\(P\)</span> 为 <span class="arithmatex">\(M\)</span> 的<strong>零化多项式</strong>（polynôme annulateur）。特别地：</p>
+<div class="arithmatex">\[
+M^2=3M-2I_3,\qquad
+M^3=MM^2=3M^2-2M=9M-6I_3-2M=7M-6I_3,
+\]</div>
+<div class="arithmatex">\[
+M^4=MM^3=7M^2-6M=21M-14I_3-6M=15M-14I_3,\quad\dots
+\]</div>
+<p>On peut montrer par récurrence que, pour tout <span class="arithmatex">\(k\in\mathbb{N}\)</span>, il existe <span class="arithmatex">\((a_k,b_k)\in\mathbb{R}^2\)</span> tels que <span class="arithmatex">\(M^k=a_kM+b_kI_3\)</span>. De plus, les suites <span class="arithmatex">\((a_k)_{k\geqslant0}\)</span> et <span class="arithmatex">\((b_k)_{k\geqslant0}\)</span> vérifient :</p>
+<p class="zh">可以用归纳法证明：对任意 <span class="arithmatex">\(k\in\mathbb{N}\)</span>，存在 <span class="arithmatex">\((a_k,b_k)\in\mathbb{R}^2\)</span> 使 <span class="arithmatex">\(M^k=a_kM+b_kI_3\)</span>。此外，数列 <span class="arithmatex">\((a_k)_{k\geqslant0}\)</span> 与 <span class="arithmatex">\((b_k)_{k\geqslant0}\)</span> 满足：</p>
+<div class="arithmatex">\[
+(a_0,b_0)=(0,1),\quad (a_1,b_1)=(1,0)
+\qquad\text{et}\qquad
+\forall k\geqslant0,\quad
+\begin{cases}
+a_{k+1}=3a_k+b_k,\\
+b_{k+1}=-2a_k,
+\end{cases}
+\]</div>
+<p>donc :</p>
+<p class="zh">因此：</p>
+<div class="arithmatex">\[
+\forall k\geqslant0,\quad
+\begin{cases}
+a_{k+2}=3a_{k+1}+b_{k+1}=3a_{k+1}-2a_k\\
+b_{k+2}=-2a_{k+1}=-6a_k-2b_k=3b_{k+1}-2b_k
+\end{cases}
+\]</div>
+<p>On reconnaît des suites récurrentes linéaires d'ordre 2. On sait calculer le terme général à l'aide de l'équation caractéristique <span class="arithmatex">\(q^2=3q-2\)</span> d'inconnue <span class="arithmatex">\(q\in\mathbb{C}\)</span>. On obtient :</p>
+<p class="zh">可辨认出这是二阶线性递推数列。借助特征方程 <span class="arithmatex">\(q^2=3q-2\)</span>（未知量 <span class="arithmatex">\(q\in\mathbb{C}\)</span>）可求出通项。得到：</p>
+<div class="arithmatex">\[
+\forall k\geqslant0,\quad (a_k,b_k)=(2^k-1,\,2-2^k)
+\qquad\text{donc}\qquad
+M^k=(2^k-1)M+(2-2^k)I_3.
+\]</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention<br><span class='zh-title'>注意</span></p>
+<p>Puisque la multiplication de matrices n'est pas commutative, certaines propriétés des puissances de nombres ne se généralisent pas aux puissances de matrices. En particulier :</p>
+<p class="zh">由于矩阵乘法不满足交换律，某些关于数的幂的性质不能推广到矩阵的幂。特别地：</p>
 <ul>
 <li>
-<p><span class="arithmatex">\((AB)^p\neq A^pB^p\)</span> en général,</p>
-<p class="zh">一般地，<span class="arithmatex">\((AB)^p\neq A^pB^p\)</span>，</p>
+<p><span class="arithmatex">\((AB)^2=ABAB\neq AABB=A^2B^2\)</span> en général,</p>
+<p class="zh">一般地，<span class="arithmatex">\((AB)^2=ABAB\neq AABB=A^2B^2\)</span>，</p>
 </li>
 <li>
-<p><span class="arithmatex">\((A+B)^2\neq A^2+2AB+B^2\)</span> en général.</p>
-<p class="zh">一般地，<span class="arithmatex">\((A+B)^2\neq A^2+2AB+B^2\)</span>。</p>
+<p><span class="arithmatex">\((A+B)^2=A^2+AB+BA+B^2\neq A^2+2AB+B^2\)</span> en général.</p>
+<p class="zh">一般地，<span class="arithmatex">\((A+B)^2=A^2+AB+BA+B^2\neq A^2+2AB+B^2\)</span>。</p>
 </li>
 </ul>
 </div>
@@ -6812,15 +7105,30 @@ AB=BA\implies (A+B)^p=\sum_{k=0}^{p}\binom{p}{k}A^kB^{p-k}.
 </div>
 <div class="admonition info">
 <p class="admonition-title">Exemple 2.9<br><span class='zh-title'>例 2.9</span></p>
-<p>Calculer les puissances de</p>
-<p class="zh">计算该矩阵的各次幂。</p>
+<p>Soit <span class="arithmatex">\(M=\begin{pmatrix}2 &amp; 1 &amp; \cdots &amp; 1\\1 &amp; \ddots &amp; \ddots &amp; \vdots\\\vdots &amp; \ddots &amp; \ddots &amp; 1\\1 &amp; \cdots &amp; 1 &amp; 2\end{pmatrix}\in\mathscr{M}_n(\mathbb{R})\)</span>. On pose <span class="arithmatex">\(U_n=M-I_n\)</span>, donc :</p>
+<p class="zh">设 <span class="arithmatex">\(M=\begin{pmatrix}2 &amp; 1 &amp; \cdots &amp; 1\\1 &amp; \ddots &amp; \ddots &amp; \vdots\\\vdots &amp; \ddots &amp; \ddots &amp; 1\\1 &amp; \cdots &amp; 1 &amp; 2\end{pmatrix}\in\mathscr{M}_n(\mathbb{R})\)</span>。令 <span class="arithmatex">\(U_n=M-I_n\)</span>，则：</p>
 <div class="arithmatex">\[
-\begin{pmatrix}
-2 &amp; 1 &amp; \cdots &amp; 1\\
-1 &amp; 2 &amp; \ddots &amp; \vdots\\
-\vdots &amp; \ddots &amp; \ddots &amp; 1\\
-1 &amp; \cdots &amp; 1 &amp; 2
-\end{pmatrix}\in\mathscr{M}_n(\mathbb{R}).
+M=U_n+I_n
+\qquad\text{et}\qquad
+U_nI_n=U_n=I_nU_n.
+\]</div>
+<p>Puisque <span class="arithmatex">\(U_n\)</span> et <span class="arithmatex">\(I_n\)</span> commutent, on a d'après la formule du binôme de Newton :</p>
+<p class="zh">由于 <span class="arithmatex">\(U_n\)</span> 与 <span class="arithmatex">\(I_n\)</span> 可交换，根据牛顿二项式公式有：</p>
+<div class="arithmatex">\[
+\forall p\in\mathbb{N},\quad
+M^p=(U_n+I_n)^p=\sum_{k=0}^{p}\binom{p}{k}U_n^kI_n^{p-k}=\sum_{k=0}^{p}\binom{p}{k}U_n^k.
+\]</div>
+<p>Or on a vu dans l'exemple 2.4 que, pour tout <span class="arithmatex">\(k\in\mathbb{N}^*\)</span>, <span class="arithmatex">\(U_n^k=n^{k-1}U_n\)</span>. Par conséquent :</p>
+<p class="zh">而由例 2.4 已证：对任意 <span class="arithmatex">\(k\in\mathbb{N}^*\)</span>，<span class="arithmatex">\(U_n^k=n^{k-1}U_n\)</span>。因此：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\forall p\in\mathbb{N},\quad
+M^p
+&amp;=\binom{p}{0}U_n^0+\sum_{k=1}^{p}\binom{p}{k}n^{k-1}U_n
+=I_n+\frac{1}{n}\left(\sum_{k=0}^{p}\binom{p}{k}n^k-\binom{p}{0}n^0\right)U_n\\
+&amp;=I_n+\frac{1}{n}\bigl((n+1)^p-1\bigr)U_n
+\qquad\text{d'après la formule du binôme de Newton.}
+\end{aligned}
 \]</div>
 </div>
 <div class="admonition warning">
@@ -6828,61 +7136,448 @@ AB=BA\implies (A+B)^p=\sum_{k=0}^{p}\binom{p}{k}A^kB^{p-k}.
 <ul>
 <li><strong>matrice carrée d'ordre <span class="arithmatex">\(n\)</span></strong>：<span class="arithmatex">\(n\)</span> 阶方阵</li>
 <li><strong>matrice identité</strong>：单位矩阵</li>
-<li><strong>matrice nilpotente</strong>：幂零矩阵</li>
-<li><strong>polynôme de matrice</strong>：矩阵多项式</li>
 <li><strong>puissance d'une matrice</strong>：矩阵的幂</li>
-<li><strong>commutent</strong>：可交换</li>
+<li><strong>démonstration par récurrence</strong>：归纳法证明</li>
+<li><strong>matrice nilpotente / indice de nilpotence</strong>：幂零矩阵 / 幂零指数</li>
+<li><strong>polynôme de matrice</strong>：矩阵多项式</li>
+<li><strong>polynôme annulateur</strong>：零化多项式</li>
+<li><strong>commuter</strong>：交换</li>
 <li><strong>formule du binôme de Newton</strong>：牛顿二项式公式</li>
-<li><strong>absence de commutativité</strong>：非交换性</li>
-<li><strong>factorisation</strong>：因式分解</li>
 </ul>
 </div>
 <h2 id="3-matrices-carrees-particulieres">3　Matrices carrées particulières <span class="heading-zh">特殊方阵</span><a class="headerlink" href="#3-matrices-carrees-particulieres" title="Permanent link">&para;</a></h2>
-<p>matrices diagonales</p>
-<p class="zh">对角矩阵（matrices diagonales）。</p>
-<p>triangulaire supérieure et inférieure</p>
-<p class="zh">上三角矩阵与下三角矩阵（triangulaire supérieure et inférieure）。</p>
-<p>matrices symétriques et antisymétriques</p>
-<p class="zh">对称矩阵与反对称矩阵（matrices symétriques et antisymétriques）。</p>
+<div class="admonition success">
+<p class="admonition-title">Définition 3.1 : matrice diagonale, triangulaire<br><span class='zh-title'>定义 3.1：对角矩阵与三角矩阵</span></p>
+<p>Soit <span class="arithmatex">\(M=(m_{i,j})\in\mathscr{M}_n(\mathbb{K})\)</span> une matrice carrée.</p>
+<p class="zh">设 <span class="arithmatex">\(M=(m_{i,j})\in\mathscr{M}_n(\mathbb{K})\)</span> 为方阵。</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(M\)</span> est dite <strong>diagonale</strong> lorsque :</p>
+<p class="zh">若满足下式，则称 <span class="arithmatex">\(M\)</span> 为<strong>对角矩阵</strong>（diagonale）：</p>
+<div class="arithmatex">\[
+\forall(i,j)\in\llbracket1,n\rrbracket^2,\quad i\neq j\implies m_{i,j}=0.
+\]</div>
+<p>Dans ce cas, on note <span class="arithmatex">\(M=\operatorname{Diag}(m_{1,1},m_{2,2},\dots,m_{n,n})\)</span>.</p>
+<p class="zh">此时记 <span class="arithmatex">\(M=\operatorname{Diag}(m_{1,1},m_{2,2},\dots,m_{n,n})\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(M\)</span> est dite <strong>triangulaire supérieure</strong> lorsque :</p>
+<p class="zh">若满足下式，则称 <span class="arithmatex">\(M\)</span> 为<strong>上三角矩阵</strong>（triangulaire supérieure）：</p>
+<div class="arithmatex">\[
+\forall(i,j)\in\llbracket1,n\rrbracket^2,\quad i&gt;j\implies m_{i,j}=0.
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(M\)</span> est dite <strong>triangulaire inférieure</strong> lorsque :</p>
+<p class="zh">若满足下式，则称 <span class="arithmatex">\(M\)</span> 为<strong>下三角矩阵</strong>（triangulaire inférieure）：</p>
+<div class="arithmatex">\[
+\forall(i,j)\in\llbracket1,n\rrbracket^2,\quad i&lt;j\implies m_{i,j}=0.
+\]</div>
+</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 3.2<br><span class='zh-title'>例 3.2</span></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(0_n=\operatorname{Diag}(\underbrace{0,0,\dots,0}_{n\text{ fois}})\)</span> et <span class="arithmatex">\(I_n=\operatorname{Diag}(\underbrace{1,1,\dots,1}_{n\text{ fois}})\)</span>.</p>
+<p class="zh">即对角线上分别为 <span class="arithmatex">\(n\)</span> 个 <span class="arithmatex">\(0\)</span> 与 <span class="arithmatex">\(n\)</span> 个 <span class="arithmatex">\(1\)</span> 的对角矩阵。</p>
+</li>
+<li>
+<p>La somme et le produit de matrices triangulaires supérieures sont des matrices triangulaires supérieures, et de même pour les matrices triangulaires inférieures. Par exemple si <span class="arithmatex">\(A=(a_{i,j})\in\mathscr{M}_n(\mathbb{K})\)</span> et <span class="arithmatex">\(B=(b_{i,j})\in\mathscr{M}_n(\mathbb{K})\)</span> sont triangulaires supérieures alors pour tout <span class="arithmatex">\((i,j)\in\llbracket1,n\rrbracket^2\)</span> tel que <span class="arithmatex">\(i&gt;j\)</span>, on a :</p>
+<p class="zh">上三角矩阵的和与积仍是上三角矩阵，下三角矩阵亦然。例如，若 <span class="arithmatex">\(A=(a_{i,j})\in\mathscr{M}_n(\mathbb{K})\)</span> 与 <span class="arithmatex">\(B=(b_{i,j})\in\mathscr{M}_n(\mathbb{K})\)</span> 为上三角矩阵，则对任意满足 <span class="arithmatex">\(i&gt;j\)</span> 的 <span class="arithmatex">\((i,j)\in\llbracket1,n\rrbracket^2\)</span>，有：</p>
+<div class="arithmatex">\[
+\sum_{k=1}^{n}a_{i,k}b_{k,j}
+=
+\sum_{k=1}^{i-1}\underbrace{a_{i,k}}_{=0}b_{k,j}
++
+\sum_{k=i}^{n}a_{i,k}\underbrace{b_{k,j}}_{=0}
+=0.
+\]</div>
+</li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 3.3<br><span class='zh-title'>性质 3.3</span></p>
+<p>Soient <span class="arithmatex">\(\operatorname{Diag}(a_1,a_2,\dots,a_n)\in\mathscr{M}_n(\mathbb{K})\)</span> et <span class="arithmatex">\(\operatorname{Diag}(b_1,b_2,\dots,b_n)\in\mathscr{M}_n(\mathbb{K})\)</span> deux matrices diagonales. Alors :</p>
+<p class="zh">设 <span class="arithmatex">\(\operatorname{Diag}(a_1,a_2,\dots,a_n)\in\mathscr{M}_n(\mathbb{K})\)</span> 与 <span class="arithmatex">\(\operatorname{Diag}(b_1,b_2,\dots,b_n)\in\mathscr{M}_n(\mathbb{K})\)</span> 为两个对角矩阵。则：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\forall\lambda\in\mathbb{K},\quad \lambda\operatorname{Diag}(a_1,a_2,\dots,a_n)=\operatorname{Diag}(\lambda a_1,\lambda a_2,\dots,\lambda a_n)\)</span>,</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\operatorname{Diag}(a_1,a_2,\dots,a_n)+\operatorname{Diag}(b_1,b_2,\dots,b_n)=\operatorname{Diag}(a_1+b_1,a_2+b_2,\dots,a_n+b_n)\)</span>,</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\operatorname{Diag}(a_1,a_2,\dots,a_n)\operatorname{Diag}(b_1,b_2,\dots,b_n)=\operatorname{Diag}(a_1b_1,a_2b_2,\dots,a_nb_n)\)</span>,</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\operatorname{Diag}(a_1,a_2,\dots,a_n)^{\mathrm{T}}=\operatorname{Diag}(a_1,a_2,\dots,a_n)\)</span>.</p>
+</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Définition 3.4 : matrice symétrique, antisymétrique<br><span class='zh-title'>定义 3.4：对称矩阵与反对称矩阵</span></p>
+<p>Soit <span class="arithmatex">\(M=(m_{i,j})\in\mathscr{M}_n(\mathbb{K})\)</span> une matrice carrée.</p>
+<p class="zh">设 <span class="arithmatex">\(M=(m_{i,j})\in\mathscr{M}_n(\mathbb{K})\)</span> 为方阵。</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(M\)</span> est dite <strong>symétrique</strong> lorsque <span class="arithmatex">\(M^{\mathrm{T}}=M\)</span>, c'est-à-dire :</p>
+<p class="zh">若 <span class="arithmatex">\(M^{\mathrm{T}}=M\)</span>，则称 <span class="arithmatex">\(M\)</span> 为<strong>对称矩阵</strong>（symétrique），即：</p>
+<div class="arithmatex">\[
+\forall(i,j)\in\llbracket1,n\rrbracket^2,\quad m_{i,j}=m_{j,i}.
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(M\)</span> est dite <strong>antisymétrique</strong> lorsque <span class="arithmatex">\(M^{\mathrm{T}}=-M\)</span>, c'est-à-dire :</p>
+<p class="zh">若 <span class="arithmatex">\(M^{\mathrm{T}}=-M\)</span>，则称 <span class="arithmatex">\(M\)</span> 为<strong>反对称矩阵</strong>（antisymétrique），即：</p>
+<div class="arithmatex">\[
+\forall(i,j)\in\llbracket1,n\rrbracket^2,\quad m_{i,j}=-m_{j,i}.
+\]</div>
+</li>
+</ul>
+</div>
+<p>En particulier, si <span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span> est antisymétrique alors ses <strong>coefficients diagonaux</strong> sont nuls.</p>
+<p class="zh">特别地，若 <span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span> 反对称，则其<strong>对角系数</strong>（coefficients diagonaux）为零。</p>
+<div class="admonition info">
+<p class="admonition-title">Exemple 3.5<br><span class='zh-title'>例 3.5</span></p>
+<ul>
+<li>
+<p>Les matrices diagonales sont symétriques.</p>
+<p class="zh">对角矩阵都是对称矩阵。</p>
+</li>
+<li>
+<p>La seule matrice symétrique et antisymétrique est la matrice nulle <span class="arithmatex">\(0_n\)</span>.</p>
+<p class="zh">唯一同时为对称与反对称的矩阵是零矩阵 <span class="arithmatex">\(0_n\)</span>。</p>
+</li>
+<li>
+<p>Toute matrice <span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span> peut s'écrire de manière unique comme somme <span class="arithmatex">\(M=S+A\)</span> d'une matrice <span class="arithmatex">\(S\)</span> symétrique et d'une matrice <span class="arithmatex">\(A\)</span> antisymétrique. En effet :</p>
+<p class="zh">任意矩阵 <span class="arithmatex">\(M\in\mathscr{M}_n(\mathbb{K})\)</span> 都可唯一地写成 <span class="arithmatex">\(M=S+A\)</span>，其中 <span class="arithmatex">\(S\)</span> 为对称矩阵、<span class="arithmatex">\(A\)</span> 为反对称矩阵。事实上：</p>
+<ul>
+<li>
+<p><strong>Unicité.</strong> Si <span class="arithmatex">\(M=S+A\)</span> avec <span class="arithmatex">\(S^{\mathrm{T}}=S\)</span> et <span class="arithmatex">\(A^{\mathrm{T}}=-A\)</span>, alors <span class="arithmatex">\(M^{\mathrm{T}}=S^{\mathrm{T}}+A^{\mathrm{T}}=S-A\)</span> donc <span class="arithmatex">\(S=\frac{1}{2}(M+M^{\mathrm{T}})\)</span> et <span class="arithmatex">\(A=\frac{1}{2}(M-M^{\mathrm{T}})\)</span>.</p>
+<p class="zh"><strong>唯一性.</strong> 若 <span class="arithmatex">\(M=S+A\)</span> 且 <span class="arithmatex">\(S^{\mathrm{T}}=S\)</span>、<span class="arithmatex">\(A^{\mathrm{T}}=-A\)</span>，则 <span class="arithmatex">\(M^{\mathrm{T}}=S^{\mathrm{T}}+A^{\mathrm{T}}=S-A\)</span>，故 <span class="arithmatex">\(S=\frac{1}{2}(M+M^{\mathrm{T}})\)</span>，<span class="arithmatex">\(A=\frac{1}{2}(M-M^{\mathrm{T}})\)</span>。</p>
+</li>
+<li>
+<p><strong>Existence.</strong> Si <span class="arithmatex">\(S=\frac{1}{2}(M+M^{\mathrm{T}})\)</span> et <span class="arithmatex">\(A=\frac{1}{2}(M-M^{\mathrm{T}})\)</span>, alors <span class="arithmatex">\(S^{\mathrm{T}}=S\)</span>, <span class="arithmatex">\(A^{\mathrm{T}}=-A\)</span> et <span class="arithmatex">\(M=S+A\)</span>.</p>
+<p class="zh"><strong>存在性.</strong> 若 <span class="arithmatex">\(S=\frac{1}{2}(M+M^{\mathrm{T}})\)</span>、<span class="arithmatex">\(A=\frac{1}{2}(M-M^{\mathrm{T}})\)</span>，则 <span class="arithmatex">\(S^{\mathrm{T}}=S\)</span>、<span class="arithmatex">\(A^{\mathrm{T}}=-A\)</span> 且 <span class="arithmatex">\(M=S+A\)</span>。</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Vocabulaire clé<br><span class='zh-title'>重点词汇</span></p>
 <ul>
 <li><strong>matrice diagonale</strong>：对角矩阵</li>
 <li><strong>matrice triangulaire supérieure / inférieure</strong>：上三角 / 下三角矩阵</li>
 <li><strong>matrice symétrique / antisymétrique</strong>：对称 / 反对称矩阵</li>
+<li><strong>coefficients diagonaux</strong>：对角系数</li>
+<li><strong>unicité / existence</strong>：唯一性 / 存在性</li>
 </ul>
 </div>
 <h2 id="4-matrices-carrees-inversibles">4　Matrices carrées inversibles <span class="heading-zh">可逆方阵</span><a class="headerlink" href="#4-matrices-carrees-inversibles" title="Permanent link">&para;</a></h2>
-<p>matrices inversibles, unicité, notation <span class="arithmatex">\(\mathscr{G}\ell_n(\mathbb{K})\)</span></p>
-<p class="zh">可逆矩阵、唯一性、记号 <span class="arithmatex">\(\mathscr{G}\ell_n(\mathbb{K})\)</span>。</p>
-<p>exemple de simplification</p>
-<p class="zh">化简示例。</p>
-<p>exemple de calcul de l'inverse par polynôme annulateur</p>
-<p class="zh">用零化多项式计算逆矩阵的示例。</p>
-<p>propriétés de l'inverse</p>
-<p class="zh">逆矩阵的性质。</p>
-<p>théorème de l'inverse d'une matrice carrée d'ordre 2</p>
-<p class="zh">二阶方阵的求逆定理。</p>
+<div class="admonition success">
+<p class="admonition-title">Définition 4.1 : matrice inversible<br><span class='zh-title'>定义 4.1：可逆矩阵（matrice inversible）</span></p>
+<p>On dit qu'une matrice carrée <span class="arithmatex">\(A\in\mathscr{M}_n(\mathbb{K})\)</span> est <strong>inversible</strong> s'il existe <span class="arithmatex">\(B\in\mathscr{M}_n(\mathbb{K})\)</span> telle que <span class="arithmatex">\(AB=BA=I_n\)</span>. On note <span class="arithmatex">\(\mathscr{G}\ell_n(\mathbb{K})\)</span> l'ensemble des matrices inversibles <span class="arithmatex">\(n\times n\)</span>.</p>
+<p class="zh">若存在 <span class="arithmatex">\(B\in\mathscr{M}_n(\mathbb{K})\)</span> 使 <span class="arithmatex">\(AB=BA=I_n\)</span>，则称方阵 <span class="arithmatex">\(A\in\mathscr{M}_n(\mathbb{K})\)</span> 是<strong>可逆的</strong>（inversible）。记 <span class="arithmatex">\(\mathscr{G}\ell_n(\mathbb{K})\)</span> 为所有 <span class="arithmatex">\(n\times n\)</span> 可逆矩阵的集合。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 4.2<br><span class='zh-title'>例 4.2</span></p>
+<ul>
+<li>
+<p>La matrice identité <span class="arithmatex">\(I_n\)</span> est inversible car <span class="arithmatex">\(I_nI_n=I_n\)</span>.</p>
+<p class="zh">单位矩阵 <span class="arithmatex">\(I_n\)</span> 可逆，因为 <span class="arithmatex">\(I_nI_n=I_n\)</span>。</p>
+</li>
+<li>
+<p>La matrice nulle <span class="arithmatex">\(0_n\)</span> n'est pas inversible car <span class="arithmatex">\(\forall B\in\mathscr{M}_n(\mathbb{K}),\ 0_nB=B0_n=0_n\neq I_n\)</span>.</p>
+<p class="zh">零矩阵 <span class="arithmatex">\(0_n\)</span> 不可逆，因为 <span class="arithmatex">\(\forall B\in\mathscr{M}_n(\mathbb{K}),\ 0_nB=B0_n=0_n\neq I_n\)</span>。</p>
+</li>
+<li>
+<p>Soient <span class="arithmatex">\((A,B)\in\mathscr{M}_n(\mathbb{K})^2\)</span> telles que <span class="arithmatex">\(A\neq0_n\)</span>, <span class="arithmatex">\(B\neq0_n\)</span> et <span class="arithmatex">\(AB=0_n\)</span>. Alors <span class="arithmatex">\(A\)</span> et <span class="arithmatex">\(B\)</span> ne sont pas inversibles. En effet, si on suppose par l'absurde que <span class="arithmatex">\(A\in\mathscr{G}\ell_n(\mathbb{K})\)</span>, alors il existe <span class="arithmatex">\(C\in\mathscr{M}_n(\mathbb{K})\)</span> telle que <span class="arithmatex">\(AC=CA=I_n\)</span>, donc <span class="arithmatex">\(B=CAB=0_n\)</span> ce qui est absurde.</p>
+<p class="zh">设 <span class="arithmatex">\((A,B)\in\mathscr{M}_n(\mathbb{K})^2\)</span> 满足 <span class="arithmatex">\(A\neq0_n\)</span>、<span class="arithmatex">\(B\neq0_n\)</span> 且 <span class="arithmatex">\(AB=0_n\)</span>。则 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 都不可逆。事实上，反设 <span class="arithmatex">\(A\in\mathscr{G}\ell_n(\mathbb{K})\)</span>，则存在 <span class="arithmatex">\(C\in\mathscr{M}_n(\mathbb{K})\)</span> 使 <span class="arithmatex">\(AC=CA=I_n\)</span>，于是 <span class="arithmatex">\(B=CAB=0_n\)</span>，矛盾。</p>
+</li>
+<li>
+<p>En particulier, les matrices nilpotentes ne sont pas inversibles.</p>
+<p class="zh">特别地，幂零矩阵都不可逆。</p>
+</li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 4.3 : unicité de l'inverse<br><span class='zh-title'>性质 4.3：逆矩阵的唯一性</span></p>
+<p>Soit <span class="arithmatex">\(A\in\mathscr{G}\ell_n(\mathbb{K})\)</span>. Alors la matrice <span class="arithmatex">\(B\in\mathscr{M}_n(\mathbb{K})\)</span> de la définition 4.1 est unique. On l'appelle la <strong>matrice inverse</strong> de <span class="arithmatex">\(A\)</span> et on note <span class="arithmatex">\(B=A^{-1}\)</span>.</p>
+<p class="zh">设 <span class="arithmatex">\(A\in\mathscr{G}\ell_n(\mathbb{K})\)</span>。则定义 4.1 中的矩阵 <span class="arithmatex">\(B\in\mathscr{M}_n(\mathbb{K})\)</span> 唯一。称其为 <span class="arithmatex">\(A\)</span> 的<strong>逆矩阵</strong>（matrice inverse），记作 <span class="arithmatex">\(B=A^{-1}\)</span>。</p>
+</div>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong> Par l'absurde, on suppose qu'il existe deux matrices <span class="arithmatex">\(B_1\neq B_2\)</span> telles que <span class="arithmatex">\(AB_1=B_1A=I_n=AB_2=B_2A\)</span>. Alors on a par associativité :</p>
+<p class="zh"><strong>证明.</strong> 反设存在两个矩阵 <span class="arithmatex">\(B_1\neq B_2\)</span> 使 <span class="arithmatex">\(AB_1=B_1A=I_n=AB_2=B_2A\)</span>。则由结合律：</p>
+<div class="arithmatex">\[
+B_1=B_1(AB_2)=(B_1A)B_2=B_2
+\qquad\text{ce qui est absurde.}
+\]</div>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 4.4<br><span class='zh-title'>例 4.4</span></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(I_n^{-1}=I_n\)</span>.</p>
+<p class="zh"><span class="arithmatex">\(I_n^{-1}=I_n\)</span>。</p>
+</li>
+<li>
+<p>Soit <span class="arithmatex">\(A=\operatorname{Diag}(a_1,a_2,\dots,a_n)\in\mathscr{M}_n(\mathbb{K})\)</span>. Alors <span class="arithmatex">\(A\)</span> est inversible si et seulement si ses coefficients diagonaux sont tous non nuls, c'est-à-dire <span class="arithmatex">\(a_1a_2\dots a_n\neq0\)</span>, et dans ce cas :</p>
+<p class="zh">设 <span class="arithmatex">\(A=\operatorname{Diag}(a_1,a_2,\dots,a_n)\in\mathscr{M}_n(\mathbb{K})\)</span>。则 <span class="arithmatex">\(A\)</span> 可逆当且仅当其对角系数全不为零，即 <span class="arithmatex">\(a_1a_2\dots a_n\neq0\)</span>；此时：</p>
+<div class="arithmatex">\[
+\operatorname{Diag}(a_1,a_2,\dots,a_n)^{-1}
+=
+\operatorname{Diag}\left(\frac{1}{a_1},\frac{1}{a_2},\dots,\frac{1}{a_n}\right).
+\]</div>
+</li>
+<li>
+<p>Dans l'exemple 2.7, on a vu que <span class="arithmatex">\(P=X^2-3X+2\)</span> est un polynôme annulateur de la matrice :</p>
+<p class="zh">在例 2.7 中已见 <span class="arithmatex">\(P=X^2-3X+2\)</span> 是矩阵的零化多项式：</p>
+<div class="arithmatex">\[
+M=\begin{pmatrix}2 &amp; 1 &amp; -1\\1 &amp; 2 &amp; -1\\1 &amp; 1 &amp; 0\end{pmatrix}.
+\]</div>
+<p>Autrement dit, <span class="arithmatex">\(M^2-3M+2I_3=0_3\)</span>, donc :</p>
+<p class="zh">换言之，<span class="arithmatex">\(M^2-3M+2I_3=0_3\)</span>，因此：</p>
+<div class="arithmatex">\[
+I_3=\frac{-1}{2}M^2+\frac{3}{2}M
+=M\left(\frac{-1}{2}M+\frac{3}{2}I_3\right)
+=\left(\frac{-1}{2}M+\frac{3}{2}I_3\right)M.
+\]</div>
+<p>Par conséquent, <span class="arithmatex">\(M\)</span> est inversible et :</p>
+<p class="zh">从而 <span class="arithmatex">\(M\)</span> 可逆，且：</p>
+<div class="arithmatex">\[
+M^{-1}
+=
+\frac{-1}{2}M+\frac{3}{2}I_3
+=
+\frac{1}{2}(-M+3I_3)
+=
+\frac{1}{2}
+\begin{pmatrix}
+1 &amp; -1 &amp; 1\\
+-1 &amp; 1 &amp; 1\\
+-1 &amp; -1 &amp; 3
+\end{pmatrix}.
+\]</div>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Remarque<br><span class='zh-title'>注</span></p>
+<p>Plus généralement, si une matrice admet un polynôme annulateur dont le coefficient constant est non nul, alors cette matrice est inversible.</p>
+<p class="zh">更一般地，若一个矩阵存在常数项非零的零化多项式，则该矩阵可逆。</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 4.5<br><span class='zh-title'>性质 4.5</span></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\forall M\in\mathscr{G}\ell_n(\mathbb{K}),\quad M^{-1}\in\mathscr{G}\ell_n(\mathbb{K})\quad\text{et}\quad (M^{-1})^{-1}=M\)</span>,</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall(\lambda,M)\in\mathbb{K}^*\times\mathscr{G}\ell_n(\mathbb{K}),\quad \lambda M\in\mathscr{G}\ell_n(\mathbb{K})\quad\text{et}\quad (\lambda M)^{-1}=\frac{1}{\lambda}M^{-1}\)</span>,</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall(A,B)\in\mathscr{G}\ell_n(\mathbb{K})^2,\quad AB\in\mathscr{G}\ell_n(\mathbb{K})\quad\text{et}\quad (AB)^{-1}=B^{-1}A^{-1}\)</span>,</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall M\in\mathscr{G}\ell_n(\mathbb{K}),\quad M^{\mathrm{T}}\in\mathscr{G}\ell_n(\mathbb{K})\quad\text{et}\quad (M^{\mathrm{T}})^{-1}=(M^{-1})^{\mathrm{T}}\)</span>.</p>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention<br><span class='zh-title'>注意</span></p>
+<p>Attention à l'ordre : si <span class="arithmatex">\((A,B)\in\mathscr{G}\ell_n(\mathbb{K})^2\)</span> alors <span class="arithmatex">\(ABB^{-1}A^{-1}=B^{-1}A^{-1}AB=I_n\)</span>, mais <span class="arithmatex">\(ABA^{-1}B^{-1}\neq I_n\)</span> et <span class="arithmatex">\(A^{-1}B^{-1}AB\neq I_n\)</span> en général.</p>
+<p class="zh">注意顺序：若 <span class="arithmatex">\((A,B)\in\mathscr{G}\ell_n(\mathbb{K})^2\)</span>，则 <span class="arithmatex">\(ABB^{-1}A^{-1}=B^{-1}A^{-1}AB=I_n\)</span>，但一般 <span class="arithmatex">\(ABA^{-1}B^{-1}\neq I_n\)</span> 且 <span class="arithmatex">\(A^{-1}B^{-1}AB\neq I_n\)</span>。</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Propriété 4.6 : simplification par une matrice inversible<br><span class='zh-title'>性质 4.6：用可逆矩阵消去</span></p>
+<p>Soit <span class="arithmatex">\((A,B,C)\in\mathscr{M}_n(\mathbb{K})^3\)</span>. Si <span class="arithmatex">\(A\)</span> est inversible alors :</p>
+<p class="zh">设 <span class="arithmatex">\((A,B,C)\in\mathscr{M}_n(\mathbb{K})^3\)</span>。若 <span class="arithmatex">\(A\)</span> 可逆，则：</p>
+<div class="arithmatex">\[
+AB=AC\implies B=C
+\qquad\text{et}\qquad
+BA=CA\implies B=C.
+\]</div>
+</div>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong> Si <span class="arithmatex">\(AB=AC\)</span> alors <span class="arithmatex">\(B=A^{-1}AB=A^{-1}AC=C\)</span> par associativité. De même, si <span class="arithmatex">\(BA=CA\)</span> alors <span class="arithmatex">\(B=BAA^{-1}=CAA^{-1}=C\)</span>.</p>
+<p class="zh"><strong>证明.</strong> 若 <span class="arithmatex">\(AB=AC\)</span>，则由结合律 <span class="arithmatex">\(B=A^{-1}AB=A^{-1}AC=C\)</span>。同样地，若 <span class="arithmatex">\(BA=CA\)</span>，则 <span class="arithmatex">\(B=BAA^{-1}=CAA^{-1}=C\)</span>。</p>
+<p><p class="cqfd">∎</p></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention<br><span class='zh-title'>注意</span></p>
+<p>En général, on ne peut pas simplifier par une matrice non inversible. Par exemple :</p>
+<p class="zh">一般地，不能用不可逆矩阵消去。例如：</p>
+<div class="arithmatex">\[
+\begin{pmatrix}1 &amp; 2\\2 &amp; 4\end{pmatrix}
+\begin{pmatrix}5 &amp; 0\\3 &amp; 4\end{pmatrix}
+=
+\begin{pmatrix}11 &amp; 8\\22 &amp; 16\end{pmatrix}
+=
+\begin{pmatrix}1 &amp; 2\\2 &amp; 4\end{pmatrix}
+\begin{pmatrix}3 &amp; 2\\4 &amp; 3\end{pmatrix}
+\qquad\text{mais}\qquad
+\begin{pmatrix}5 &amp; 0\\3 &amp; 4\end{pmatrix}\neq\begin{pmatrix}3 &amp; 2\\4 &amp; 3\end{pmatrix}.
+\]</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Théorème 4.7 : inverse d'une matrice <span class="arithmatex">\(2\times2\)</span><br><span class='zh-title'>定理 4.7：<span class="arithmatex">\(2\times2\)</span> 矩阵的逆</span></p>
+<p>Soit <span class="arithmatex">\(M=\begin{pmatrix}a &amp; b\\c &amp; d\end{pmatrix}\in\mathscr{M}_2(\mathbb{K})\)</span>. On définit le <strong>déterminant</strong> de <span class="arithmatex">\(M\)</span> par <span class="arithmatex">\(\det(M)=ad-bc\)</span>.</p>
+<p class="zh">设 <span class="arithmatex">\(M=\begin{pmatrix}a &amp; b\\c &amp; d\end{pmatrix}\in\mathscr{M}_2(\mathbb{K})\)</span>。定义 <span class="arithmatex">\(M\)</span> 的<strong>行列式</strong>（déterminant）为 <span class="arithmatex">\(\det(M)=ad-bc\)</span>。</p>
+<div class="arithmatex">\[
+M\ \text{est inversible}\iff \det(M)\neq0.
+\]</div>
+<p>Et dans ce cas, on a :</p>
+<p class="zh">此时有：</p>
+<div class="arithmatex">\[
+M^{-1}=\frac{1}{\det(M)}
+\begin{pmatrix}
+d &amp; -b\\
+-c &amp; a
+\end{pmatrix}.
+\]</div>
+</div>
+<div class="admonition demo">
+<p><strong>Démonstration.</strong> On a :</p>
+<p class="zh"><strong>证明.</strong> 有：</p>
+<div class="arithmatex">\[
+\begin{pmatrix}a &amp; b\\c &amp; d\end{pmatrix}
+\begin{pmatrix}d &amp; -b\\-c &amp; a\end{pmatrix}
+=
+\begin{pmatrix}ad-bc &amp; -ab+ba\\cd-dc &amp; -cb+da\end{pmatrix}
+=\det(M)I_2
+\]</div>
+<div class="arithmatex">\[
+\text{et de même}\qquad
+\begin{pmatrix}d &amp; -b\\-c &amp; a\end{pmatrix}
+\begin{pmatrix}a &amp; b\\c &amp; d\end{pmatrix}
+=\det(M)I_2.
+\]</div>
+<p><span class="arithmatex">\(\Leftarrow\)</span> Si <span class="arithmatex">\(\det(M)\neq0\)</span>, on en déduit que <span class="arithmatex">\(M\in\mathscr{G}\ell_2(\mathbb{K})\)</span> et <span class="arithmatex">\(M^{-1}=\frac{1}{\det(M)}\begin{pmatrix}d &amp; -b\\-c &amp; a\end{pmatrix}\)</span>.</p>
+<p class="zh"><span class="arithmatex">\(\Leftarrow\)</span> 若 <span class="arithmatex">\(\det(M)\neq0\)</span>，由此可知 <span class="arithmatex">\(M\in\mathscr{G}\ell_2(\mathbb{K})\)</span> 且 <span class="arithmatex">\(M^{-1}=\frac{1}{\det(M)}\begin{pmatrix}d &amp; -b\\-c &amp; a\end{pmatrix}\)</span>。</p>
+<p><span class="arithmatex">\(\Rightarrow\)</span> Si <span class="arithmatex">\(M\in\mathscr{G}\ell_2(\mathbb{K})\)</span>, on en déduit que <span class="arithmatex">\(\begin{pmatrix}d &amp; -b\\-c &amp; a\end{pmatrix}=\det(M)M^{-1}\)</span>. Par l'absurde, si <span class="arithmatex">\(\det(M)=0\)</span>, alors <span class="arithmatex">\(a=b=c=d=0\)</span>, donc <span class="arithmatex">\(M=0_2\)</span> ce qui est absurde.</p>
+<p class="zh"><span class="arithmatex">\(\Rightarrow\)</span> 若 <span class="arithmatex">\(M\in\mathscr{G}\ell_2(\mathbb{K})\)</span>，由此可知 <span class="arithmatex">\(\begin{pmatrix}d &amp; -b\\-c &amp; a\end{pmatrix}=\det(M)M^{-1}\)</span>。反设 <span class="arithmatex">\(\det(M)=0\)</span>，则 <span class="arithmatex">\(a=b=c=d=0\)</span>，于是 <span class="arithmatex">\(M=0_2\)</span>，矛盾。</p>
+<p><p class="cqfd">∎</p></p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Vocabulaire clé<br><span class='zh-title'>重点词汇</span></p>
 <ul>
 <li><strong>matrice inversible</strong>：可逆矩阵</li>
-<li><strong>unicité</strong>：唯一性</li>
+<li><strong>matrice inverse</strong>：逆矩阵</li>
+<li><strong>unicité de l'inverse</strong>：逆矩阵的唯一性</li>
+<li><strong>simplification par une matrice inversible</strong>：用可逆矩阵消去</li>
+<li><strong>déterminant</strong>：行列式</li>
 <li><strong>polynôme annulateur</strong>：零化多项式</li>
-<li><strong>inverse d'une matrice</strong>：逆矩阵</li>
-<li><strong>matrice carrée d'ordre 2</strong>：二阶方阵</li>
+<li><strong>coefficient constant</strong>：常数项</li>
 </ul>
 </div>
 <h2 id="5-matrices-semblables">5　Matrices semblables <span class="heading-zh">相似矩阵</span><a class="headerlink" href="#5-matrices-semblables" title="Permanent link">&para;</a></h2>
-<p>matrices semblables</p>
-<p class="zh">相似矩阵（matrices semblables）。</p>
-<p>propriétés des matrices semblables</p>
-<p class="zh">相似矩阵的性质。</p>
+<div class="admonition success">
+<p class="admonition-title">Définition 5.1 : matrices semblables<br><span class='zh-title'>定义 5.1：相似矩阵（matrices semblables）</span></p>
+<p>Soit <span class="arithmatex">\((A,B)\in\mathscr{M}_n(\mathbb{K})^2\)</span>. On dit que <span class="arithmatex">\(A\)</span> et <span class="arithmatex">\(B\)</span> sont <strong>semblables</strong> lorsque :</p>
+<p class="zh">设 <span class="arithmatex">\((A,B)\in\mathscr{M}_n(\mathbb{K})^2\)</span>。若满足下式，则称 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> <strong>相似</strong>（semblables）：</p>
+<div class="arithmatex">\[
+\exists P\in\mathscr{G}\ell_n(\mathbb{K}),\quad B=P^{-1}AP.
+\]</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Important<br><span class='zh-title'>要点</span></p>
+<p><span class="arithmatex">\(B=P^{-1}AP\iff A=PBP^{-1}=Q^{-1}BQ\)</span> où <span class="arithmatex">\(Q=P^{-1}\)</span>.</p>
+<p class="zh">相似关系是对称的：<span class="arithmatex">\(B=P^{-1}AP\)</span> 当且仅当 <span class="arithmatex">\(A=PBP^{-1}=Q^{-1}BQ\)</span>（其中 <span class="arithmatex">\(Q=P^{-1}\)</span>）。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exemple 5.2<br><span class='zh-title'>例 5.2</span></p>
+<ul>
+<li>
+<p>On considère les matrices <span class="arithmatex">\(A=\begin{pmatrix}5 &amp; -1\\6 &amp; 0\end{pmatrix}\)</span> et <span class="arithmatex">\(P=\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}\)</span>. Puisque <span class="arithmatex">\(\det(P)=-2\neq0\)</span>, <span class="arithmatex">\(P\)</span> est inversible. De plus :</p>
+<p class="zh">考虑矩阵 <span class="arithmatex">\(A=\begin{pmatrix}5 &amp; -1\\6 &amp; 0\end{pmatrix}\)</span> 与 <span class="arithmatex">\(P=\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}\)</span>。由于 <span class="arithmatex">\(\det(P)=-2\neq0\)</span>，<span class="arithmatex">\(P\)</span> 可逆。此外：</p>
+<div class="arithmatex">\[
+P^{-1}AP
+=
+\frac{1}{-2}
+\begin{pmatrix}4 &amp; -2\\-3 &amp; 1\end{pmatrix}
+\begin{pmatrix}5 &amp; -1\\6 &amp; 0\end{pmatrix}
+\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}
+=
+\begin{pmatrix}2 &amp; 0\\0 &amp; 3\end{pmatrix}
+=\operatorname{Diag}(2,3).
+\]</div>
+<p>Ainsi, <span class="arithmatex">\(A\)</span> et <span class="arithmatex">\(\operatorname{Diag}(2,3)\)</span> sont semblables. En particulier, on a pour tout <span class="arithmatex">\(n\in\mathbb{N}\)</span> :</p>
+<p class="zh">因此，<span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(\operatorname{Diag}(2,3)\)</span> 相似。特别地，对任意 <span class="arithmatex">\(n\in\mathbb{N}\)</span>，有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A^n
+&amp;=\left(P\operatorname{Diag}(2,3)P^{-1}\right)^n\\
+&amp;=\underbrace{\left(P\operatorname{Diag}(2,3)P^{-1}\right)\left(P\operatorname{Diag}(2,3)P^{-1}\right)\cdots\left(P\operatorname{Diag}(2,3)P^{-1}\right)}_{n\text{ fois}}\\
+&amp;=P\operatorname{Diag}(2,3)\left(P^{-1}P\right)\operatorname{Diag}(2,3)\cdots\\
+&amp;\qquad\cdots\left(P^{-1}P\right)\operatorname{Diag}(2,3)P^{-1}
+\qquad\text{par associativité}\\
+&amp;=P\operatorname{Diag}(2,3)^nP^{-1}=P\operatorname{Diag}\left(2^n,3^n\right)P^{-1}\\
+&amp;=
+\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}
+\begin{pmatrix}2^n &amp; 0\\0 &amp; 3^n\end{pmatrix}
+\frac{1}{-2}
+\begin{pmatrix}4 &amp; -2\\-3 &amp; 1\end{pmatrix}
+=
+\begin{pmatrix}
+-2^{n+1}+3^{n+1} &amp; 2^n-3^n\\
+6\left(-2^n+3^n\right) &amp; 3\times2^n-2\times3^n
+\end{pmatrix}.
+\end{aligned}
+\]</div>
+</li>
+<li>
+<p>On considère les matrices :</p>
+<p class="zh">考虑矩阵：</p>
+<div class="arithmatex">\[
+A=\begin{pmatrix}2 &amp; 1 &amp; -2\\1 &amp; 2 &amp; -2\\1 &amp; 1 &amp; -1\end{pmatrix},
+\qquad
+P=\begin{pmatrix}1 &amp; 1 &amp; 1\\1 &amp; -1 &amp; 0\\1 &amp; 0 &amp; 0\end{pmatrix}
+\qquad\text{et}\qquad
+Q=\begin{pmatrix}0 &amp; 0 &amp; 1\\0 &amp; -1 &amp; 1\\1 &amp; 1 &amp; -2\end{pmatrix}.
+\]</div>
+<p>On peut vérifier que <span class="arithmatex">\(PQ=QP=I_3\)</span>, donc <span class="arithmatex">\(P\)</span> est inversible avec <span class="arithmatex">\(P^{-1}=Q\)</span>, et que :</p>
+<p class="zh">可以验证 <span class="arithmatex">\(PQ=QP=I_3\)</span>，故 <span class="arithmatex">\(P\)</span> 可逆且 <span class="arithmatex">\(P^{-1}=Q\)</span>，并且：</p>
+<div class="arithmatex">\[
+P^{-1}AP=QAP=
+\begin{pmatrix}1 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\end{pmatrix}
+=I_3+N
+\qquad\text{où}\qquad
+N=\begin{pmatrix}0 &amp; 0 &amp; 1\\0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0\end{pmatrix}.
+\]</div>
+<p>Puisque <span class="arithmatex">\(I_3\)</span> et <span class="arithmatex">\(N\)</span> commutent, on a d'après la formule du binôme de Newton :</p>
+<p class="zh">由于 <span class="arithmatex">\(I_3\)</span> 与 <span class="arithmatex">\(N\)</span> 可交换，根据牛顿二项式公式有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\forall n\in\mathbb{N},\quad
+A^n
+&amp;=P(I_3+N)^nP^{-1}
+=P\left(\sum_{k=0}^{n}\binom{n}{k}N^kI_3^{n-k}\right)Q\\
+&amp;=P\left(\binom{n}{0}N^0+\binom{n}{1}N^1+0_3\right)Q
+\qquad\text{car }N^2=0_3\ (N\text{ est nilpotente})\\
+&amp;=P(I_3+nN)Q=P(I_3+N)Q+(n-1)PNQ\\
+&amp;=A+(n-1)
+\begin{pmatrix}1 &amp; 1 &amp; -2\\1 &amp; 1 &amp; -2\\1 &amp; 1 &amp; -2\end{pmatrix}
+=
+\begin{pmatrix}
+n+1 &amp; n &amp; -2n\\
+n &amp; n+1 &amp; -2n\\
+n &amp; n &amp; -2n+1
+\end{pmatrix}.
+\end{aligned}
+\]</div>
+</li>
+</ul>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Vocabulaire clé<br><span class='zh-title'>重点词汇</span></p>
 <ul>
 <li><strong>matrices semblables</strong>：相似矩阵</li>
-<li><strong>propriétés</strong>：性质</li>
+<li><strong>relation symétrique</strong>：对称关系</li>
+<li><strong>par associativité</strong>：由结合律</li>
 </ul>
 </div>
 

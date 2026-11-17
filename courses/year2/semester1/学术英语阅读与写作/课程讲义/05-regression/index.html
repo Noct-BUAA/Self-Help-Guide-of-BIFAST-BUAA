@@ -7116,7 +7116,7 @@
 <li><strong>Scikit-learn：</strong>一个机器学习库，为回归、分类与聚类提供一致的 API</li>
 </ul>
 <h3 id="slide-9-does-life-expectancy-predict-happiness">Slide 9 · Does life expectancy predict happiness?<a class="headerlink" href="#slide-9-does-life-expectancy-predict-happiness" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">model1</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">'Happiness ~ Life_exp'</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">model1</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;Happiness ~ Life_exp&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 </span></code></pre></div>
 <ul>
 <li><span class="arithmatex">\(R^2\)</span>: A model-fit measure (0 to 1)<ul>
@@ -7171,7 +7171,7 @@
 <p class="lecture-caption">原课件第 11 页：回归直线的截距与斜率</p>
 
 <h3 id="slide-12-does-regime-type-predict-happiness">Slide 12 · Does regime type predict happiness?<a class="headerlink" href="#slide-12-does-regime-type-predict-happiness" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">model2</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">'Happiness ~ Democracy'</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">model2</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;Happiness ~ Democracy&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 </span></code></pre></div>
 <ul>
 <li><span class="arithmatex">\(R^2 = 0.329\)</span>. Poorer fit compared to model1.</li>
@@ -7240,7 +7240,7 @@
 </ul>
 <h2 id="4-multiple-regression">4. Multiple regression　多元回归<a class="headerlink" href="#4-multiple-regression" title="Permanent link">&para;</a></h2>
 <h3 id="slide-15-visualize-the-data-again">Slide 15 · Visualize the data again<a class="headerlink" href="#slide-15-visualize-the-data-again" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'Happiness'</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'Life_exp'</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">'Democracy'</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Happiness&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Life_exp&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Democracy&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 <ul>
 <li>Is there likely to be an interaction effect?</li>
@@ -7263,7 +7263,7 @@
 <p class="lecture-caption">原课件第 15 页：按民主类型分组的回归线</p>
 
 <h3 id="slide-16-option-1-dont-model-the-interaction">Slide 16 · Option 1: Don't model the interaction<a class="headerlink" href="#slide-16-option-1-dont-model-the-interaction" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">model3</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">'Happiness ~ Life_exp + Democracy'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">model3</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;Happiness ~ Life_exp + Democracy&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 </span></code></pre></div>
 <ul>
 <li><span class="arithmatex">\(R^2 = 0.644\)</span>. The best fit so far.</li>
@@ -7279,7 +7279,7 @@
 <li>Life_exp 的效应（保持 Democracy 不变）：在政体类型相同的国家中，life_exp 每增加 1 个单位，幸福度预计增加 0.0935 个单位，仅略低于 model 1 中的 0.1079。</li>
 </ul>
 <h3 id="slide-17-option-2-model-the-interaction">Slide 17 · Option 2: Model the interaction<a class="headerlink" href="#slide-17-option-2-model-the-interaction" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">model4</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">'Happiness ~ Life_exp * Democracy'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">model4</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;Happiness ~ Life_exp * Democracy&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 </span></code></pre></div>
 <ul>
 <li><span class="arithmatex">\(R^2 = 0.662\)</span>. The best model. Our visual inspection of an interaction is confirmed.</li>
