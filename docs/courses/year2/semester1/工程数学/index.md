@@ -57,7 +57,7 @@ title: 工程数学
   <a class="card" href="课程讲义/04-matrices">
     <div class="card-num">04</div>
     <h3>第 4 章 矩阵</h3>
-    <p>矩形矩阵与运算、转置、方阵与矩阵的幂、幂零矩阵、牛顿二项式公式、可逆方阵与相似矩阵</p>
+    <p>矩形矩阵与运算、转置、方阵的幂与幂零矩阵、牛顿二项式公式、特殊方阵、可逆方阵与相似矩阵</p>
   </a>
 
   <a class="card" href="课程讲义/04-fiche5-suites">
