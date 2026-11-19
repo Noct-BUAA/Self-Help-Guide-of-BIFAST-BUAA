@@ -110,7 +110,7 @@ title: 电路基础
 
 ## 习题课讲义
 
-习题课（TD）提供配套训练与完整参考解答。静电学部分收录 TD1、TD2、TD3 的教师版详细解答，以及与绪论配套的 TD1–TD2 量纲与不确定度方法训练；动电学部分收录 TD1 电荷输运的完整解答。
+习题课（TD）提供配套训练与完整参考解答。静电学部分收录 TD1、TD2、TD3 的教师版详细解答，以及与绪论配套的 TD1–TD2 量纲与不确定度方法训练；动电学部分收录 TD1 电荷输运与 TD2 电路基础的完整解答。
 
 <div class="card-grid card-grid--three">
 
@@ -142,6 +142,12 @@ title: 电路基础
     <div class="card-num">TD É1</div>
     <h3>动电学 TD1 详细解答</h3>
     <p>电荷输运五题全解：载流子与电流密度、漂移速度、德鲁德模型、Tolman–Stewart 实验与概率方法</p>
+  </a>
+
+  <a class="card" href="习题课/td-electrocinetique-2-circuits">
+    <div class="card-num">TD É2</div>
+    <h3>动电学 TD2 详细解答</h3>
+    <p>电路基础三题全解：圆柱管电阻、变截面导体中的电场与漂移速度、电动汽车续航</p>
   </a>
 
 </div>
