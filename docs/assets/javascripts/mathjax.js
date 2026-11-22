@@ -25,6 +25,12 @@ window.MathJax = {
       // négligeable / équivalent：n→+∞ 写在 o 或 ∼ 正下方
       on: ["\\mathop{o}\\limits_{n\\to+\\infty}"],
       simn: ["\\mathop{\\sim}\\limits_{n\\to+\\infty}"],
+      // 函数版：x→a、x→+∞、x→0 写在 o 或 ∼ 正下方
+      oa: ["\\mathop{o}\\limits_{x\\to a}"],
+      oinf: ["\\mathop{o}\\limits_{x\\to+\\infty}"],
+      oz: ["\\mathop{o}\\limits_{x\\to 0}"],
+      sia: ["\\mathop{\\sim}\\limits_{x\\to a}"],
+      siz: ["\\mathop{\\sim}\\limits_{x\\to 0}"],
     },
   },
   options: {
