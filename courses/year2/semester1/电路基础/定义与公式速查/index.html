@@ -4068,6 +4068,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5-methodes-danalyse-des-circuits-lineaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 5 章 线性电路的分析方法 Méthodes d'analyse des circuits linéaires
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 5 章 线性电路的分析方法 Méthodes d&#39;analyse des circuits linéaires">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4366,6 +4405,8 @@
       
         
       
+        
+      
     
     
     
@@ -4538,6 +4579,34 @@
     
   
     第 4 章 电路结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AF%BE%E7%A8%8B%E8%AE%B2%E4%B9%89/05-methodes-analyse-circuits-lineaires/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 5 章 线性电路的分析方法
   
 
     
@@ -6680,6 +6749,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5-methodes-danalyse-des-circuits-lineaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 5 章 线性电路的分析方法 Méthodes d'analyse des circuits linéaires
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 5 章 线性电路的分析方法 Méthodes d&#39;analyse des circuits linéaires">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7100,12 +7208,83 @@
 </tr>
 </tbody>
 </table>
+<h2 id="5-methodes-danalyse-des-circuits-lineaires">第 5 章　线性电路的分析方法 <span class="heading-zh">Méthodes d'analyse des circuits linéaires</span><a class="headerlink" href="#5-methodes-danalyse-des-circuits-lineaires" title="Permanent link">&para;</a></h2>
+<h3 id="_10">定理<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>法文术语</th>
+<th>中文</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.1</td>
+<td>théorème de superposition</td>
+<td>叠加定理</td>
+<td>每个二端元件的电压与电流，等于各独立源单独作用（其余电源置零）时所得结果的代数和</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>théorème de Thévenin</td>
+<td>戴维宁定理</td>
+<td>任一线性一端口网络可等效为电压源 <span class="arithmatex">\(U_{Th}\)</span> 与电阻 <span class="arithmatex">\(R_{Th}\)</span> 串联</td>
+</tr>
+<tr>
+<td>5.5</td>
+<td>théorème de Norton</td>
+<td>诺顿定理</td>
+<td>任一线性一端口网络可等效为电流源 <span class="arithmatex">\(I_N\)</span> 与电阻 <span class="arithmatex">\(R_N\)</span> 并联</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_11">核心公式<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>法文表述</th>
+<th>中文</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.1</td>
+<td>équivalent de Thévenin</td>
+<td>戴维宁等效</td>
+<td><span class="arithmatex">\(U = U_{Th} - R_{Th} I\)</span>，其中 <span class="arithmatex">\(U_{Th} = U_{AB,\text{vide}}\)</span>，<span class="arithmatex">\(R_{Th} = R_{eq}\)</span></td>
+</tr>
+<tr>
+<td>5.2</td>
+<td>équivalent de Norton</td>
+<td>诺顿等效</td>
+<td><span class="arithmatex">\(I = I_N - \dfrac{U}{R_N}\)</span>，其中 <span class="arithmatex">\(I_N = I_{cc}\)</span>，<span class="arithmatex">\(R_N = R_{eq}\)</span></td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>conversion Thévenin–Norton</td>
+<td>戴维宁—诺顿变换</td>
+<td><span class="arithmatex">\(U_{Th} = R_N I_N\)</span></td>
+</tr>
+<tr>
+<td>5.4</td>
+<td>résistances équivalentes</td>
+<td>等效电阻</td>
+<td><span class="arithmatex">\(R_{Th} = R_N\)</span></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition tip">
 <p class="admonition-title">记忆要点</p>
 <ul>
 <li><strong>串联</strong>：电阻相加，电容倒数相加；同一支路电流相同。</li>
 <li><strong>并联</strong>：电导相加（电阻倒数相加），电容相加；同一节点电压相同。</li>
 <li>**符号约定**先定，再列基尔霍夫方程；负号只表示实际方向与所选方向相反。</li>
+<li><strong>叠加定理</strong>：每次只保留一个独立源，电压源置零用短路、电流源置零用开路，最后取代数和。</li>
+<li><strong>戴维宁 / 诺顿</strong>：先求开路电压 <span class="arithmatex">\(U_{Th}\)</span>（或短路电流 <span class="arithmatex">\(I_N\)</span>），再把独立源置零求等效电阻 <span class="arithmatex">\(R_{eq}\)</span>；两种等效电路可互换，<span class="arithmatex">\(U_{Th} = R_N I_N\)</span>、<span class="arithmatex">\(R_{Th} = R_N\)</span>。</li>
 </ul>
 </div>
 
