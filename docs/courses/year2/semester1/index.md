@@ -30,7 +30,7 @@
 
 <a class="card" href="电路基础/">
   <h3>电路基础</h3>
-  <p>Électrostatique et électrocinétique · 静电学与电路两部分。收录绪论与 8 章正课讲义、静电学 TD1–TD3 解答、TD1–TD2 量纲与不确定度、动电学 TD1–TD2、期中冲刺讲义、定义公式速查与词汇表。</p>
+  <p>Électrostatique et électrocinétique · 静电学与电路两部分。收录绪论与 9 章正课讲义、静电学 TD1–TD3 解答、TD1–TD2 量纲与不确定度、动电学 TD1–TD2、期中冲刺讲义、定义公式速查与词汇表。</p>
   <span class="card-arrow">浏览课程 &rarr;</span>
 </a>
 
