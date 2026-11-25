@@ -165,6 +165,7 @@ nav:
             - TD6 级数引论解答: courses/year2/semester1/实分析/习题课/td6-intro-series.md
             - TD7 级数收敛解答: courses/year2/semester1/实分析/习题课/td7-convergence-series.md
             - TD8 级数判别法解答: courses/year2/semester1/实分析/习题课/td8-criteres-series.md
+            - TD9 函数的极限解答: courses/year2/semester1/实分析/习题课/td9-limites-fonctions.md
         - 工程数学:
           - 课程总览: courses/year2/semester1/工程数学/index.md
           - 定义·性质·定理: courses/year2/semester1/工程数学/定义性质定理合集.md
